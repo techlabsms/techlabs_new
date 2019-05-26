@@ -1,12 +1,13 @@
 import React from "react"
 import '../styles/_main.scss';
+import logo from '../assets/tl-logo.svg';
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-add">
         <a className="navbar-brand" href="#">
-          Pied Piper
+          <img src={logo} className="tl-logo" alt="tl-logo"/>
         </a>
         <button
           className="navbar-toggler"
@@ -23,17 +24,17 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link active" href="#">
-                Features<span className="sr-only">(current)</span>
+                Locations<span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Enterprise
+                Programs
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Support
+                Blog
               </a>
             </li>
             <li className="nav-item dropdown">
