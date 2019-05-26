@@ -2,8 +2,6 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "../components/Navbar"
 import "bootstrap/dist/js/bootstrap.js"
-import $ from "jquery"
-import Popper from "popper.js"
 import Footer from "../components/Footer";
 
 const index = () => {
@@ -19,10 +17,10 @@ const index = () => {
                 We've built a decentralized internet where information is
                 totally free in every sense of the word.
               </p>
-              <a class="btn btn-primary" href="#">
+              <a class="btn btn-primary" href="/">
                 Sign up for free
               </a>
-              <a class="btn btn-link" href="#">
+              <a class="btn btn-link" href="/">
                 Read more
               </a>
             </div>
@@ -63,7 +61,7 @@ const index = () => {
               <div class="d-flex flex-column bg-light h-100 p-4">
                 <h2>Great Companies that already use PiperNet.</h2>
                 <div class="d-flex flex-column mt-auto">
-                  <p class="col-sm-8 px-0">We are constantly looking for new partners to migrate onto the Piper Net. The future of the internet ishere - venture towards it with Pied Piper!</p><a class="ml-auto" href="#">View all PiperNet clients</a>
+                  <p class="col-sm-8 px-0">We are constantly looking for new partners to migrate onto the Piper Net. The future of the internet ishere - venture towards it with Pied Piper!</p><a class="ml-auto" href="/">View all PiperNet clients</a>
                 </div>
               </div>
             </div>
@@ -177,14 +175,14 @@ const index = () => {
               <h5 class="card-title">Videos</h5>
               <p class="card-text">Stop watching boring YouTube videos, and check out Dinesh's extremely interesting series about the features of PiperNet.</p>
             </div>
-            <div class="card-footer bg-transparent border-0 mb-3"><a class="btn btn-primary" href="#">Watch Now</a></div>
+            <div class="card-footer bg-transparent border-0 mb-3"><a class="btn btn-primary" href="/">Watch Now</a></div>
           </div>
           <div class="card">
             <div class="card-body mt-3">
               <h5 class="card-title">Articles</h5>
               <p class="card-text">Let Gilfoyle take you on a journey into the futuristic world of computing and data security in the decentralized age.</p>
             </div>
-            <div class="card-footer bg-transparent border-0 mb-3"><a class="btn btn-primary" href="#">Read Now</a></div>
+            <div class="card-footer bg-transparent border-0 mb-3"><a class="btn btn-primary" href="/">Read Now</a></div>
           </div>
         </div>
       </div>

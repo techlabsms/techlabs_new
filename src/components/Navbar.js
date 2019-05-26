@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           Pied Piper
         </a>
         <button
@@ -22,39 +22,39 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navigations-08">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="#">
+              <a className="nav-link active" href="/">
                 Features<span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Enterprise
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Support
               </a>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="/"
                 data-toggle="dropdown"
               >
                 ICO
               </a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Whitepaper
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Token
                 </a>
               </div>
             </li>
           </ul>
-          <a className="btn btn-outline-primary mt-2 mt-md-0 ml-lg-3" href="#">
+          <a className="btn btn-outline-primary mt-2 mt-md-0 ml-lg-3" href="/">
             Sign up
           </a>
         </div>
