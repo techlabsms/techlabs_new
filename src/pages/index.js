@@ -3,51 +3,78 @@ import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "../components/Navbar"
 import "bootstrap/dist/js/bootstrap.js"
 import Footer from "../components/Footer";
+import MCK from "../assets/partner-mck.png";
+import ACN from "../assets/partner-acn.png";
+import WF from "../assets/partner-wf.png";
+import EY from "../assets/partner-ey.png";
+import SOPRA from "../assets/partner-sopra.png";
+import GIC from "../assets/gic.svg";
+import COMMUNITY from "../assets/community.png";
 
 const index = () => {
   return (
     <div className="container-fluid">
-      <Navbar />
-      <section class="py-5">
+
+
+    <Navbar />
+
+
+    <section class="promo">
+        <div class="container center">
+
+          🔥 You can currently apply for a spot in the next starting batch in <a class="" href="/copenhagen">Copenhagen</a> & <a href="/barcelona">Barcelona</a> 🔥
+
+        </div>
+      </section>
+
+
+      <section class="py-5 padding-top-15">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 my-auto">
-              <h1 class="display-4">The New Internet</h1>
-              <p class="lead text-muted mb-4">
-                We've built a decentralized internet where information is
-                totally free in every sense of the word.
+            <div class="col-md-5 my-auto xs-margin-right">
+              <h1 class="display-4">We Build. Digital. Shapers.</h1>
+              <p class="lead text-muted mb-4 margin-top-15 margin-bottom-2">
+              TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now.
               </p>
               <a class="btn btn-primary" href="/">
-                Sign up for free
+                Locations
               </a>
-              <a class="btn btn-link" href="/">
-                Read more
+              <a class="btn btn-secondary" href="/">
+                Program
               </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
               <img
                 class="img-fluid mt-4 mt-md-0"
-                src="https://bootstrapshuffle.com/placeholder/pictures/bg_4-3.svg"
-                alt=""
+                src={COMMUNITY}
+                alt="commmunity"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="py-5">
+
+
+      <section class="gic">
+        <div class="container center">
+            <img className="gic-badge" src={GIC} alt="gic"/>
+        </div>
+      </section>
+
+
+      <section class="py-5 padding-top-1">
         <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-md-2 mb-4">
-              <h5 class="text-center">Thousands of happy companies</h5>
+          <div class="row justify-content-center align-items-center partner-palette">
+            <div class="col-md-2 mb-4 trusted">
+              <h5 class="text-center trusted2">trusted by our renowned partners</h5>
             </div>
             <div class="col-md-10">
-              <div class="row">
-                <div class="col-4 col-md-2 mb-4"><img class="img-fluid" src="https://bootstrapshuffle.com/placeholder/logos/gitscape.svg" alt=""/></div>
-                <div class="col-4 col-md-2 mb-4"><img class="img-fluid" src="https://bootstrapshuffle.com/placeholder/logos/k-hole.svg" alt=""/></div>
-                <div class="col-4 col-md-2 mb-4"><img class="img-fluid" src="https://bootstrapshuffle.com/placeholder/logos/tholio.svg" alt=""/></div>
-                <div class="col-4 col-md-2 mb-0 mb-md-4"><img class="img-fluid" src="https://bootstrapshuffle.com/placeholder/logos/plucky.svg" alt=""/></div>
-                <div class="col-4 col-md-2 mb-0 mb-md-4"><img class="img-fluid" src="https://bootstrapshuffle.com/placeholder/logos/1stsight.svg" alt=""/></div>
+              <div class="row xs-margin-left">
+                <div class="col-6 col-sm-3"><img class="img-fluid partner-logo" src={ACN} alt="acn"/></div>
+                <div class="col-6 col-sm-3"><img class="img-fluid partner-logo" src={WF} alt="wf"/></div>
+                <div class="col-6 col-sm-3"><img class="img-fluid partner-logo" src={EY} alt="ey"/></div>
+                <div class="col-6 col-sm-3"><img class="img-fluid partner-logo" src={SOPRA} alt="sopra"/></div>
               </div>
             </div>
           </div>

@@ -1,17 +1,19 @@
 //colors
-$color-p: #FB1D5C !important;
+$color-p: #fb1d5c !important;
 $color-g: #303030 !important;
 
 //fonts
 @font-face {
-    font-family: "Proxima Nova Regular";
-    src: url("/src/assets/Proxima-nova-reg.otf") format("otf");
-  }
+  font-family: "ProximaNova-Regular";
+  src: url("/src/assets/ProximaNova-Regular.otf") format("otf");
+}
 
 @font-face {
-    font-family: "Gilroy Extrabold";
-    src: url("/src/assets/Gilroy-ExtraBold.otf") format("otf");
-  }
+  font-family: "Gilroy-Extrabold";
+  src: url("/src/assets/Gilroy-ExtraBold.otf") format("otf");
+}
 
-$font-h: "Gilroy Extrabold" !important;
-$font-p: "Proxima Nova Regular" !important;
+
+$font-h: "Gilroy-Extrabold" !important;
+$font-p: "ProximaNova-Regular" !important;
+

@@ -20,7 +20,8 @@
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-headroom": "^2.2.8"
   },
   "devDependencies": {
     "prettier": "^1.17.1"

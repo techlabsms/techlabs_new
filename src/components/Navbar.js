@@ -1,13 +1,22 @@
 import React from "react"
-import '../styles/_main.scss';
-import logo from '../assets/tl-logo.svg';
+import "../styles/_main.scss"
+import logo from "../assets/tl-logo.svg"
+import MS from '../assets/loc-ms.svg';
+import CPH from '../assets/loc-cph.svg';
+import BCN from '../assets/loc-bcn.svg';
+import SLACK from '../assets/slack-icon.svg';
+import Headroom from "react-headroom";
 
 const Navbar = () => {
   return (
     <>
+    <Headroom>
       <nav className="navbar navbar-expand-lg navbar-light navbar-add">
         <a className="navbar-brand" href="#">
-          <img src={logo} className="tl-logo" alt="tl-logo"/>
+          <img src={logo} className="tl-logo" alt="tl-logo" />
+        </a>
+        <a href="/career/" className="hire-button">
+          👋 we're hiring
         </a>
         <button
           className="navbar-toggler"
@@ -22,44 +31,93 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navigations-08">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link active" href="#">
+
+            <li className="nav-item dropdown d-none d-sm-block">
+              <a
+                className="nav-link active dropdown-toggle"
+                href="/"
+                data-toggle="dropdown"
+              >
                 Locations<span className="sr-only">(current)</span>
               </a>
+              <div className="dropdown-menu">
+                <a className="dropdown-item dropdown-item-corr" href="/">
+                  <img src={MS} className="nav-loc-icon" alt="loc-ms"/>
+                  Muenster
+                </a>
+                <a className="dropdown-item dropdown-item-corr" href="/">
+                  <img src={BCN} className="nav-loc-icon" alt="loc-bcn"/>
+                  Barcelona
+                </a>
+                <a className="dropdown-item dropdown-item-corr" href="/">
+                  <img src={CPH} className="nav-loc-icon" alt="loc-cph"/>
+                  Copenhagen
+                </a>
+                <div class="dropdown-divider"></div>
+                <a className="dropdown-item" href="/">
+                  
+                  branch it 🔥
+                </a>
+                </div>
             </li>
-            <li className="nav-item">
+
+            <li className="nav-item d-block d-sm-none">
               <a className="nav-link" href="#">
-                Programs
+                Program
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Blog
-              </a>
-            </li>
-            <li className="nav-item dropdown">
+
+            <li className="nav-item dropdown d-none d-sm-block">
               <a
                 className="nav-link dropdown-toggle"
                 href="/"
                 data-toggle="dropdown"
               >
-                ICO
+                Program
               </a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="/">
-                  Whitepaper
+                <a className="dropdown-item " href="/">
+                  Your Journey
                 </a>
                 <a className="dropdown-item" href="/">
-                  Token
+                  Web Development
+                </a>
+                <a className="dropdown-item" href="/">
+                  Data Science
+                </a>
+                <a className="dropdown-item" href="/">
+                  Artificial Intelligence
+                </a>
+                <a className="dropdown-item" href="/">
+                  UX Design
                 </a>
               </div>
             </li>
+
+            <li className="nav-item d-block d-sm-none">
+              <a className="nav-link" href="#">
+                Program
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Blog
+              </a>
+            </li>
+
+            <li className="nav-item">
+            <a className="nav-link">
+            <button className="btn-slack">
+               <img src={SLACK} className="slack-icon" alt="slack"/>
+            </button>
+              </a>
+            </li>
+
           </ul>
-          <a className="btn btn-outline-primary mt-2 mt-md-0 ml-lg-3" href="/">
-            Sign up
-          </a>
         </div>
       </nav>
+      </Headroom>
     </>
   )
 }
