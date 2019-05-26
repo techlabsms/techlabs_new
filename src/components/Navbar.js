@@ -40,22 +40,22 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="/"
                 data-toggle="dropdown"
               >
                 ICO
               </a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Whitepaper
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/">
                   Token
                 </a>
               </div>
             </li>
           </ul>
-          <a className="btn btn-outline-primary mt-2 mt-md-0 ml-lg-3" href="#">
+          <a className="btn btn-outline-primary mt-2 mt-md-0 ml-lg-3" href="/">
             Sign up
           </a>
         </div>
