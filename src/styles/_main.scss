@@ -15,6 +15,7 @@ h6 {
 body {
   color: $color-g;
   font-family: $font-p;
+  font-size: 17px;
 }
 
 .tl-logo {
@@ -41,7 +42,7 @@ body {
 }
 
 .headroom {
-    box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.15) !important;
+  box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.15) !important;
 }
 
 //dropdown
@@ -62,12 +63,12 @@ body {
 }
 
 .dropdown-item {
-    font-size: 15px !important;
-    padding: 1rem 2rem 1rem 2rem;
+  font-size: 15px !important;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .dropdown-item-corr {
-    padding: 0.25rem 1.5rem !important;
+  padding: 0.25rem 1.5rem !important;
 }
 
 .navbar-brand {
@@ -153,153 +154,220 @@ body {
 }
 
 .arrow {
-    width: 13px;
-    opacity: 0.7;
+  width: 13px;
+  opacity: 0.7;
 }
 
 .center {
-    display: table;
-    margin: 0 auto;
-    text-align: center!important;
+  display: table;
+  margin: 0 auto;
+  text-align: center !important;
 }
 
 .promo {
-    font-size: 16px;
-    padding-bottom: 1.7rem !important;
-    padding-top: 1.7rem !important;
-    background-color: rgb(250, 250, 250);
+  font-size: 16px;
+  padding-bottom: 1.7rem !important;
+  padding-top: 1.7rem !important;
+  background-color: rgb(250, 250, 250);
+  font-weight: 600;
 }
 
 .slack-icon {
-    width: 30px;
+  width: 30px;
 }
 
 .btn-slack {
-    height: 46px !important;
-    width: 46px !important;
-    border-radius: 100px;
-    background: #ffffff;
-    border: 0;
-    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.10);
-    transition: .3s ease-in-out;
+  height: 46px !important;
+  width: 46px !important;
+  border-radius: 100px;
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
 }
 
 .btn-slack:hover {
-    transform: scale(1.11);
-    cursor: pointer;
+  transform: scale(1.11);
+  cursor: pointer;
 }
 
 .partner-palette {
-    box-shadow: 0 15px 40px -13px rgba(15, 18, 63, 0.2) !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    border-radius: 8px;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+  box-shadow: 0 15px 40px -13px rgba(15, 18, 63, 0.2) !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  border-radius: 8px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .gic {
-    padding-bottom: 0.5rem !important;
-    padding-top: 3.5rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-top: 3.5rem !important;
 }
 
-
 .padding-top-1 {
-    padding-top: 1rem !important;
+  padding-top: 1rem !important;
 }
 
 .gic-badge {
-    max-height: 25px;
-    max-width: 100%;
+  max-height: 25px;
+  max-width: 100%;
 }
 
 .partner-logo {
-    max-height:150px;
+  max-height: 150px;
 }
 
 .trusted {
-    font-size: 17px;
-    margin-bottom: 0px !important;
-
+  font-size: 17px;
+  margin-bottom: 0px !important;
 }
 
 @media (max-width: 767px) {
-    .trusted {
-        margin-top:3rem !important;
-    }
+  .trusted {
+    margin-top: 3rem !important;
+  }
 
-    .nav-link {
-        margin-top:1.8rem;
-    }
-
+  .nav-link {
+    margin-top: 1.8rem;
+  }
 }
 
-@media (min-width: 992px) { 
-    .xs-margin-left {
-        padding-left: 50px;
-    }
+@media (min-width: 992px) {
+  .xs-margin-left {
+    padding-left: 50px;
+  }
 }
 
 .margin-top-15 {
-    margin-top: 1.5rem !important;
+  margin-top: 1.5rem !important;
 }
 
 .margin-bottom-2 {
-    margin-bottom: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .padding-top-15 {
-    padding-top: 1.5rem !important;
+  padding-top: 1.5rem !important;
 }
 
 .xs-margin-right {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
 .trusted2 {
-    font-family: $font-p;
-    font-size: 17px;
-    margin-bottom: 0px !important;
+  font-family: $font-p;
+  font-size: 17px;
+  margin-bottom: 0px !important;
 }
 
 .headroom-wrapper {
-    height:100% !important;
+  height: 100% !important;
 }
-
 
 .btn {
-    font-size: 17px;
-    font-family: $font-h;
-    padding-left: 2.4em;
-    padding-right: 2.4em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-right: 1.5rem;
+  font-size: 17px;
+  font-family: $font-h;
+  padding-left: 2.4em;
+  padding-right: 2.4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-right: 1.5rem;
 }
 
-
 .btn-primary {
-    background: $color-p;
-    box-shadow: 0 10px 30px -15px rgba(30,49,71,0.66);
-    border-radius: 5px;
-    border: 0px solid;
-    transition: .3s ease-in-out;
+  background: $color-p;
+  box-shadow: 0 10px 30px -15px rgba(30, 49, 71, 0.66);
+  border-radius: 5px;
+  border: 0px solid;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-secondary {
-    background: #ffffff;
-    color: $color-p;
-    box-shadow: 0 10px 30px -15px rgba(30,49,71,0.5);
-    border-radius: 5px;
-    border: 0px solid;
-    transition: .3s ease-in-out;
+  background: #ffffff;
+  color: $color-p;
+  box-shadow: 0 10px 30px -15px rgba(30, 49, 71, 0.5);
+  border-radius: 5px;
+  border: 0px solid;
+  transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
-    transform: scale(1.11);
+  transform: scale(1.11);
 }
 
 .btn-secondary:hover {
-    transform: scale(1.11);
-    background: #ffffff !important;
+  transform: scale(1.11);
+  background: #ffffff !important;
+}
+
+.hashtag {
+  color: #303030;
+  background: #fff19b;
+  padding: 2px 2px 2px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.no-margin-block {
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
+  border-radius: 7px;
+  border: 0px solid;
+  padding: 2em;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transform-origin: bottom;
+}
+
+.card:hover {
+  -webkit-transform: translate(0,-0.5em);
+  -moz-transform: translate(0,-0.5em);
+  -o-transform: translate(0,-0.5em);
+  -ms-transform: translate(0,-0.5em);
+  transform: translate(0,-0.5em);
+  cursor: pointer;
+}
+
+.lead {
+  font-size: 17px !important;
+}
+
+.card-a {
+  text-decoration: none !important;
+  color: $color-g;
+}
+
+.card-discover {
+  color: $color-p;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.card-title {
+  font-size:4rem;
+  line-height: 0px;
+  color: $color-p;
+  margin-top: 1rem;
+}
+
+.card-subtitle {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.center-me {
+  display: table;
+  margin: auto 0;
 }
