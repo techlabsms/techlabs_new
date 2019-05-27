@@ -202,7 +202,7 @@ body {
 
 .gic {
   padding-bottom: 0.5rem !important;
-  padding-top: 3.5rem !important;
+  padding-top: 6.5rem !important;
 }
 
 .padding-top-1 {
@@ -368,6 +368,31 @@ body {
 }
 
 .center-me {
-  display: table;
-  margin: auto 0;
+  display: table !important;
+  margin: auto 0 !important;
+}
+
+.center-padding {
+  display: table !important;
+  padding: auto 0 !important;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.section-divider {
+  height: 0.3rem;
+  width: 3.5rem;
+  background-color: $color-p;
+}
+
+.display-4 {
+  font-size: 4rem !important;
+  margin-bottom: 0.3rem;
+}
+
+.img-shadow {
+  box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
 }
