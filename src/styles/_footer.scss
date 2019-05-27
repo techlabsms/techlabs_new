@@ -1,0 +1,30 @@
+footer {
+  background-image: url("../assets/footer-tl-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fb1d5c;
+  height: 90vh;
+  .footer-content {
+    margin-top: 25%;
+  }
+  a {
+    color: white;
+  }
+  h6 {
+    font-family: Helvetica;
+    font-size: 24px;
+    color: #ffffff !important;
+  }
+  p {
+    color: white;
+  }
+  .footer-img{
+      width: 60%;
+  }
+  li{
+      color: white;
+  }
+  .footer-paypal{
+      float: right;
+  }
+}

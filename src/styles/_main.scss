@@ -1,5 +1,6 @@
 // Utilities
 @import "./variables";
+@import './footer';
 
 h1,
 h2,
@@ -332,11 +333,11 @@ body {
 }
 
 .card:hover {
-  -webkit-transform: translate(0,-0.5em);
-  -moz-transform: translate(0,-0.5em);
-  -o-transform: translate(0,-0.5em);
-  -ms-transform: translate(0,-0.5em);
-  transform: translate(0,-0.5em);
+  -webkit-transform: translate(0, -0.5em);
+  -moz-transform: translate(0, -0.5em);
+  -o-transform: translate(0, -0.5em);
+  -ms-transform: translate(0, -0.5em);
+  transform: translate(0, -0.5em);
   cursor: pointer;
 }
 
@@ -356,7 +357,7 @@ body {
 }
 
 .card-title {
-  font-size:4rem;
+  font-size: 4rem;
   line-height: 0px;
   color: $color-p;
   margin-top: 1rem;
@@ -365,6 +366,21 @@ body {
 .card-subtitle {
   font-weight: 600;
   margin-bottom: 1.5rem;
+}
+
+.card-leftArrow {
+  transform: rotate(180deg);
+  width: 35%;
+  margin-right: 30%;
+}
+
+.card-rightArrow {
+  width: 35%;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .center-me {
@@ -396,3 +412,4 @@ body {
 .img-shadow {
   box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
 }
+
