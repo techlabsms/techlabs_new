@@ -1,7 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "../components/Navbar"
-import "bootstrap/dist/js/bootstrap.js"
 import Footer from "../components/Footer"
 import MCK from "../assets/partner-mck.png"
 import ACN from "../assets/partner-acn.png"
