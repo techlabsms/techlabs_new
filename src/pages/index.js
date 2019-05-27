@@ -12,6 +12,9 @@ import COMMUNITY from "../assets/community.png"
 import sittingagent from "../assets/sitting-agent.svg"
 import Arrow from "../assets/arrow.svg"
 import Simon from "../assets/simon.png"
+import Hümeyra from "../assets/hümeyra.png";
+import Clara from "../assets/clara.png";
+
 
 class index extends React.Component {
   state = {
@@ -23,16 +26,16 @@ class index extends React.Component {
         image: Simon,
       },
       {
-        name: "Richard, IT-Admin",
+        name: "Hümeyra, IT-Admin",
         text:
-          "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
+          "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit nisi mollit ad magna nisi nulla voluptate. Commodo enim tempor dolor pariatur enim eu magna.",
+        image: Hümeyra,
       },
       {
-        name: "Jonas, IT-Admin",
+        name: "Clara, IT-Admin",
         text:
           "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
+        image: Clara,
       },
     ],
     number: 0,
