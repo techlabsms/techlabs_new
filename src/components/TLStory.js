@@ -25,7 +25,7 @@ const stories = [
       heading: "TechLabs",
       subheading: "@Google Hamburg",
       profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
-      seeMore: "",
+      // seeMore: "",
     },
   },
   {
@@ -35,8 +35,8 @@ const stories = [
       heading: "TechLabs",
       subheading: "TechLabs class trip",
       profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
-      seeMore: "",
-      styles: {transform: 'scale(1.5)'}, //This is not working
+      // seeMore: "",
+      // styles: {transform: 'scale(1.5)'}, //This is not working
     },
   },
   {
@@ -46,7 +46,7 @@ const stories = [
       heading: "TechLabs",
       subheading: "Prototyping Workshop",
       profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
-      seeMore: "",
+      // seeMore: "",
     },
   },
 
