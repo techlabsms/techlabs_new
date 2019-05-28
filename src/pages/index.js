@@ -341,7 +341,7 @@ class index extends React.Component {
                         <h3>Socials</h3>
                         <p>
                           As with all innovative technologies, sometimes
-                          unpredictable things will happen, and you can always
+                          unpredictable things willl happen, and you can always
                           count on our support to solve issues for you.
                         </p>
                       </div>
