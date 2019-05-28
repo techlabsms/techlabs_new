@@ -8,13 +8,13 @@ import WF from "../assets/partner-wf.png"
 import EY from "../assets/partner-ey.png"
 import SOPRA from "../assets/partner-sopra.png"
 import GIC from "../assets/gic.svg"
-import COMMUNITY from "../assets/community.png"
+import COMMUNITY from "../assets/photos/IMG_4072-1.jpg"
 import sittingagent from "../assets/sitting-agent.svg"
 import Arrow from "../assets/arrow.svg"
 import Simon from "../assets/simon.png"
-import Hümeyra from "../assets/hümeyra.png";
-import Clara from "../assets/clara.png";
-
+import Hümeyra from "../assets/hümeyra.png"
+import Clara from "../assets/clara.png"
+import TLStory from "../components/TLStory"
 
 class index extends React.Component {
   state = {
@@ -218,11 +218,11 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">TechLabs locations</p>
                         <p className="text-muted">
-                          Currently we have an offline community in
+                          Currently we have an offline community in {" "}
                           <span className="hashtag">
-                            Münster, Copenhagen and Barcelona
-                          </span>
-                          and many more to come.
+                            Münster, Copenhagen & Barcelona
+                          </span> 
+                          {" "}and many more to come.
                         </p>
                         <span className="card-discover">
                           > Discover our locations
@@ -360,11 +360,15 @@ class index extends React.Component {
                   </ul>
                 </div>
                 <div className="col-md-6 mt-auto pl-5 d-none d-md-block">
-                  <img
+                   {/* <img
                     src="https://bootstrapshuffle.com/placeholder/pictures/bg_9-16.svg"
                     alt=""
                     height="600"
-                  />
+                    className="center-padding"
+                  /> */}
+                  <TLStory>
+
+                  </TLStory>
                 </div>
               </div>
             </div>
