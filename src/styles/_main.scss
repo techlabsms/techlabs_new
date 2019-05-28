@@ -1,5 +1,7 @@
 // Utilities
 @import "./variables";
+@import "./animations";
+@import "./footer";
 
 h1,
 h2,
@@ -116,29 +118,6 @@ body {
   background-color: #fb1d5c;
   perspective: 1000px;
   text-decoration: none;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
 }
 
 .container-fluid {
@@ -332,11 +311,11 @@ body {
 }
 
 .card:hover {
-  -webkit-transform: translate(0,-0.5em);
-  -moz-transform: translate(0,-0.5em);
-  -o-transform: translate(0,-0.5em);
-  -ms-transform: translate(0,-0.5em);
-  transform: translate(0,-0.5em);
+  -webkit-transform: translate(0, -0.5em);
+  -moz-transform: translate(0, -0.5em);
+  -o-transform: translate(0, -0.5em);
+  -ms-transform: translate(0, -0.5em);
+  transform: translate(0, -0.5em);
   cursor: pointer;
 }
 
@@ -356,7 +335,7 @@ body {
 }
 
 .card-title {
-  font-size:4rem;
+  font-size: 4rem;
   line-height: 0px;
   color: $color-p;
   margin-top: 1rem;
@@ -365,6 +344,21 @@ body {
 .card-subtitle {
   font-weight: 600;
   margin-bottom: 1.5rem;
+}
+
+.card-leftArrow {
+  transform: rotate(180deg);
+  width: 35%;
+  margin-right: 30%;
+}
+
+.card-rightArrow {
+  width: 35%;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .center-me {

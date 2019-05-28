@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="503px" viewBox="0 0 1440 503" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>footer-tl-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer-tl-2">
+            <g id="footer-social" transform="translate(260.000000, 405.000000)">
+                <g id="instagram" transform="translate(138.000000, 0.000000)">
+                    <g id="Oval-4">
+                        <g id="path-1-link" fill="#000000" fill-rule="nonzero">
+                            <circle id="path-1" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                        <g id="path-1-link" fill="#FFFFFF" stroke="#FFFFFF">
+                            <circle id="path-1" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                    </g>
+                    <path d="M19.509557,5.58 L11.490443,5.58 C8.23141098,5.58 5.58,8.23141098 5.58,11.490443 L5.58,19.509557 C5.58,22.768589 8.23141098,25.42 11.490443,25.42 L19.509557,25.42 C22.768589,25.42 25.42,22.768589 25.42,19.509557 L25.42,11.490443 C25.419964,8.23141098 22.768553,5.58 19.509557,5.58 Z M23.4240967,19.509557 C23.4240967,21.6714795 21.6714795,23.4240967 19.509557,23.4240967 L11.490443,23.4240967 C9.32852049,23.4240967 7.57590327,21.6714795 7.57590327,19.509557 L7.57590327,11.490443 C7.57590327,9.32848449 9.32852049,7.57590327 11.490443,7.57590327 L19.509557,7.57590327 C21.6714795,7.57590327 23.4240967,9.32848449 23.4240967,11.490443 L23.4240967,19.509557 Z" id="Shape" fill="#C22E58" fill-rule="nonzero"></path>
+                    <path d="M15.655,10.54 C12.8345845,10.54 10.54,12.8345925 10.54,15.6549821 C10.54,18.4753716 12.8345845,20.77 15.655,20.77 C18.4754155,20.77 20.77,18.4754075 20.77,15.6549821 C20.77,12.8345566 18.4754155,10.54 15.655,10.54 Z M15.655,18.7804774 C13.9288486,18.7804774 12.5295515,17.3811754 12.5295515,15.6550179 C12.5295515,13.9288604 13.9288844,12.5295585 15.655,12.5295585 C17.3811514,12.5295585 18.7804485,13.9288604 18.7804485,15.6550179 C18.7804485,17.3811396 17.3811156,18.7804774 15.655,18.7804774 Z" id="Shape" fill="#C22E58" fill-rule="nonzero"></path>
+                    <circle id="Oval" fill="#C22E58" fill-rule="nonzero" cx="20.77" cy="10.54" r="1.24"></circle>
+                </g>
+                <g id="Group-17" transform="translate(92.000000, 0.000000)">
+                    <g id="Oval-4">
+                        <g id="path-3-link" fill="#000000" fill-rule="nonzero">
+                            <circle id="path-3" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                        <g id="path-3-link" fill="#FFFFFF" stroke="#FFFFFF">
+                            <circle id="path-3" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                    </g>
+                    <g id="Group-20" transform="translate(7.130000, 6.510000)" fill="#2186FF" fill-rule="nonzero">
+                        <g id="linkedin">
+                            <g id="Group-21">
+                                <path d="M2.17035381,0 C3.34816977,0 4.34,0.991825217 4.34,2.16963522 C4.34,3.40941674 3.28616282,4.37027375 2.17035381,4.33927043 C1.02354133,4.37027375 0.000707624482,3.40941674 0.000707624482,2.16963522 C-0.0302958481,0.960821901 0.961569495,0 2.17035381,0" id="Shape"></path>
+                                <path d="M3.41003512,17.36 L0.93,17.36 C0.589008779,17.36 0.31,17.0881473 0.31,16.7559018 L0.31,6.18409818 C0.31,5.85185273 0.558,5.58 0.898991221,5.58 L3.41,5.58 C3.75099122,5.58 4.03,5.85185273 4.03,6.18409818 L4.03,16.7861153 C4.03003512,17.0881473 3.75102634,17.36 3.41003512,17.36" id="Shape"></path>
+                                <path d="M17.639108,9.25968904 C17.639108,7.02304726 15.9385783,5.27 13.6506107,5.27 L13.0013188,5.27 C11.764589,5.27 10.5587512,5.84425993 9.90945934,6.78125 C9.69304039,6.99281404 9.60025939,7.0835137 9.60025939,7.0835137 L9.60025939,5.87452739 C9.60025939,5.75362876 9.41473241,5.5722637 9.29105943,5.5722637 L6.19919996,5.5722637 C6.07552698,5.5722637 5.89,5.69316233 5.89,5.84429417 L5.89,17.1182027 C5.89,17.2391014 6.07552698,17.36 6.19919996,17.36 L9.60022436,17.36 C9.72389734,17.36 9.90942432,17.2391014 9.90942432,17.1182027 L9.90942432,10.589574 C9.90942432,9.47125309 10.7751352,8.53426302 11.919119,8.50406404 C12.5065569,8.50406404 13.0321758,8.71562809 13.4341217,9.1085572 C13.8051406,9.47125309 13.9597406,9.98508083 13.9597406,10.5593408 L13.9597406,17.0577021 C13.9597406,17.1786007 14.1452676,17.3599658 14.2689406,17.3599658 L17.3608,17.3599658 C17.484473,17.3599658 17.67,17.1786007 17.67,17.0577021 L17.67,9.25968904 L17.639108,9.25968904 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="medium">
+                    <g id="Oval-4">
+                        <g id="path-5-link" fill="#000000" fill-rule="nonzero">
+                            <circle id="path-5" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                        <g id="path-5-link" fill="#FFFFFF" stroke="#FFFFFF">
+                            <circle id="path-5" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                    </g>
+                    <path d="M24.8069907,23.8371206 L18.8569278,20.9459893 L18.8121078,7.8401095 C18.8110769,7.53416075 19.127075,7.33256008 19.3998732,7.46514118 L25.0408107,10.2068707 C25.1828306,10.2758902 25.2731579,10.4211241 25.2731579,10.5804 L25.2731579,23.5408475 C25.2731088,23.7830362 25.0228925,23.9420641 24.8069907,23.8371206 Z" id="Shape" fill="#00FD8D" fill-rule="nonzero"></path>
+                    <path d="M18.9137537,20.9331579 L12.3510526,17.7675026 L18.6690156,7.33166135 C18.7806286,7.14730931 19.0135099,7.07799535 19.2072692,7.17145124 L25.0362564,9.98361037 C25.2590821,10.0911198 25.3406781,10.3681247 25.2118555,10.5798309 L18.9137537,20.9331579 Z" id="Shape" fill="#00E470" fill-rule="nonzero"></path>
+                    <path d="M18.8121053,20.9331579 L12.2487719,17.7617818 L6.23285005,7.91669834 C6.06523939,7.64241091 6.35688194,7.31764052 6.64552251,7.45712234 L12.2487719,10.1649502 L18.8121053,20.9331579 Z" id="Shape" fill="#00C967" fill-rule="nonzero"></path>
+                    <path d="M11.8850481,23.8372355 L6.07422293,21.0218224 C5.96159863,20.9672348 5.89,20.8524724 5.89,20.7265847 L5.89,7.74132001 C5.89,7.50764171 6.13227721,7.35411418 6.34133147,7.45542752 L12.3510526,10.3672094 L12.3510526,23.5419978 C12.3510526,23.7833401 12.1008745,23.9418122 11.8850481,23.8372355 Z" id="Shape" fill="#00AD6C" fill-rule="nonzero"></path>
+                </g>
+                <g id="facebook" transform="translate(46.000000, 0.000000)">
+                    <g id="Oval-4">
+                        <g id="path-7-link" fill="#000000" fill-rule="nonzero">
+                            <circle id="path-7" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                        <g id="path-7-link" fill="#FFFFFF" stroke="#FFFFFF">
+                            <circle id="path-7" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                    </g>
+                    <path d="M10.8567757,16.2916704 L13.0093852,16.2916704 L13.0093852,25.1050025 C13.0093852,25.2790178 13.1511461,25.42 13.3261225,25.42 L16.9759661,25.42 C17.1509425,25.42 17.2927034,25.2790178 17.2927034,25.1050025 L17.2927034,16.3332098 L19.7673432,16.3332098 C19.9282434,16.3332098 20.0636372,16.2131308 20.0820094,16.0541825 L20.4578521,12.8095705 C20.4681697,12.7203123 20.4397484,12.6309016 20.3796842,12.5639198 C20.3195816,12.4968998 20.2335508,12.4585264 20.1432627,12.4585264 L17.2928568,12.4585264 L17.2928568,10.4246219 C17.2928568,9.81152482 17.6247828,9.50060875 18.279583,9.50060875 C18.3729012,9.50060875 20.1432627,9.50060875 20.1432627,9.50060875 C20.3182391,9.50060875 20.46,9.35955027 20.46,9.18561121 L20.46,6.20732436 C20.46,6.033309 20.3182391,5.89232682 20.1432627,5.89232682 L17.574806,5.89232682 C17.5567023,5.89144949 17.5164677,5.89 17.4571705,5.89 C17.0115213,5.89 15.4624694,5.97700768 14.2388231,7.09651152 C12.8830431,8.33712426 13.0715206,9.82251045 13.1165497,10.0800623 L13.1165497,12.4584501 L10.8567373,12.4584501 C10.6817609,12.4584501 10.54,12.5994323 10.54,12.7734477 L10.54,15.9766347 C10.5400384,16.1506119 10.6817992,16.2916704 10.8567757,16.2916704 Z" id="Shape" fill="#2A1EBD" fill-rule="nonzero"></path>
+                </g>
+                <g id="youtube" transform="translate(184.000000, 0.000000)">
+                    <g id="Oval-4">
+                        <g id="path-9-link" fill="#000000" fill-rule="nonzero">
+                            <circle id="path-9" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                        <g id="path-9-link" fill="#FFFFFF" stroke="#FFFFFF">
+                            <circle id="path-9" cx="15.5" cy="15.5" r="15.5"></circle>
+                        </g>
+                    </g>
+                    <path d="M21.9075711,8.06 L9.40242889,8.06 C6.94894089,8.06 4.96,10.0560227 4.96,12.5182466 L4.96,18.7917534 C4.96,21.2539773 6.94894089,23.25 9.40242889,23.25 L21.9075711,23.25 C24.3610591,23.25 26.35,21.2539773 26.35,18.7917534 L26.35,12.5182466 C26.35,10.0560227 24.3610591,8.06 21.9075711,8.06 Z M18.9031874,15.9602286 L13.0541255,18.7598104 C12.8982711,18.8344063 12.7182429,18.7203705 12.7182429,18.5471049 L12.7182429,12.772953 C12.7182429,12.5972195 12.9030038,12.4833234 13.059183,12.562762 L18.9082449,15.5373322 C19.0821485,15.6257577 19.0791325,15.8760404 18.9031874,15.9602286 Z" id="Shape" fill="#FB1D5C" fill-rule="nonzero"></path>
+                </g>
+            </g>
+            <g id="footer-04" transform="translate(1054.000000, 275.000000)" fill="#FFFFFF">
+                <g id="footer-04-details" transform="translate(0.000000, 34.000000)" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal">
+                    <g id="Terms-and-Conditions" transform="translate(0.000000, 23.000000)">
+                        <text>
+                            <tspan x="0" y="15">Terms and Conditions</tspan>
+                        </text>
+                    </g>
+                    <g id="Privacy-Policy">
+                        <text>
+                            <tspan x="0" y="15">Privacy Policy</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Terms" font-family="NexaBold-Regular, Nexa" font-size="20" font-weight="bold">
+                    <text>
+                        <tspan x="0" y="19">Terms</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="footer-03" transform="translate(867.000000, 276.000000)" fill="#FFFFFF">
+                <g id="footer-03-details" transform="translate(0.000000, 33.000000)" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal">
+                    <g id="TechLabs-Team">
+                        <text>
+                            <tspan x="0" y="15">TechLabs Team</tspan>
+                        </text>
+                    </g>
+                    <g id="TechLabs-Insights-Bl" transform="translate(0.000000, 23.000000)">
+                        <text id="TechLabs-Insights-Blog">
+                            <tspan x="0" y="15">TechLabs Insights Blog</tspan>
+                        </text>
+                    </g>
+                    <g id="Our-Partnerships" transform="translate(0.000000, 46.000000)">
+                        <text>
+                            <tspan x="0" y="15">Our Partnerships</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="About" font-family="NexaBold-Regular, Nexa" font-size="20" font-weight="bold">
+                    <text>
+                        <tspan x="0" y="19">About</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="footer-02" transform="translate(663.000000, 277.000000)" fill="#FFFFFF">
+                <g id="footer-02-details" transform="translate(0.000000, 32.000000)" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal">
+                    <g id="Data-Science">
+                        <text>
+                            <tspan x="0" y="15">Data Science</tspan>
+                        </text>
+                    </g>
+                    <g id="Web-Development" transform="translate(0.000000, 23.000000)">
+                        <text>
+                            <tspan x="0" y="15">Web Development</tspan>
+                        </text>
+                    </g>
+                    <g id="Artificial-Intellige" transform="translate(0.000000, 46.000000)">
+                        <text id="Artificial-Intelligence">
+                            <tspan x="0" y="15">Artificial Intelligence</tspan>
+                        </text>
+                    </g>
+                    <g id="Digital-Marketing" transform="translate(0.000000, 69.000000)">
+                        <text>
+                            <tspan x="0" y="15">Digital Marketing</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Academy" font-family="NexaBold-Regular, Nexa" font-size="20" font-weight="bold">
+                    <text>
+                        <tspan x="0" y="19">Academy</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="footer-01" transform="translate(260.000000, 280.000000)" fill="#FFFFFF">
+                <g id="footer-01-adress" transform="translate(0.000000, 29.000000)" font-family="OpenSans, Open Sans" font-size="14" font-weight="normal">
+                    <g id="Universitätsstraße-9">
+                        <text>
+                            <tspan x="0" y="15">Universitätsstraße 9</tspan>
+                        </text>
+                    </g>
+                    <g id="48149-Münster" transform="translate(0.000000, 23.000000)">
+                        <text>
+                            <tspan x="0" y="15">48149 Münster</tspan>
+                        </text>
+                    </g>
+                    <g id="Deutschland" transform="translate(0.000000, 46.000000)">
+                        <text>
+                            <tspan x="0" y="15">Deutschland</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="TechLabs-e.-V." font-family="NexaBold-Regular, Nexa" font-size="20" font-weight="bold">
+                    <text>
+                        <tspan x="0" y="19">TechLabs e. V.</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-14">
+                <rect id="Rectangle-13" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="1440" height="503"></rect>
+                <g id="footer-vector" transform="translate(0.000000, 38.000000)">
+                    <g id="path-11-link" fill="#000000" fill-rule="nonzero">
+                        <path d="M0,81.340869 C91.171875,161.469511 225.520833,199.462083 403.046875,195.318585 C669.335938,189.103338 841.019531,64.046445 1063.19922,13.2182931 C1211.31901,-20.6671413 1336.91927,10.5970613 1440,107.010901 L1440,465 L0,465 L0,81.340869 Z" id="path-11"></path>
+                    </g>
+                    <g id="path-11-link" fill="#FB1D5C">
+                        <path d="M0,81.340869 C91.171875,161.469511 225.520833,199.462083 403.046875,195.318585 C669.335938,189.103338 841.019531,64.046445 1063.19922,13.2182931 C1211.31901,-20.6671413 1336.91927,10.5970613 1440,107.010901 L1440,465 L0,465 L0,81.340869 Z" id="path-11"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
