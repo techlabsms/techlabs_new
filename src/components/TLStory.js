@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Stories from "react-insta-stories"
 
 
-
 class TLStory extends Component {
   render() {
     return (
@@ -17,27 +16,39 @@ class TLStory extends Component {
   }
 }
 
+
 const stories = [
   {
-    url: 'https://lh5.googleusercontent.com/ZKUuaru0vmTvQv6uOasA5AGR7XUSfi_3tXwgviTQGjrxbydwFFI68EQ4tMycVVahBJRP-a-ptr9dGoMVPko7=w1380-h945-rw',
+    url:
+      "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/photos/IMG_4012-1.jpg?token=AI46U4UD7QLWBLOD57FDS2C46YRSU",
     header: {
       heading: "TechLabs",
       subheading: "@Google Hamburg",
-      profileImage: "https://lh3.google.com/u/1/d/1oY-ye1dVydnBvU6vMbC2rP-EaGwFEmmv=w1380-h681-iv1",
+      profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
       seeMore: "",
     },
   },
   {
     url:
-      "https://lh3.google.com/u/1/d/1JyZDWFa0sYPYiUWExAasJ9KwWeXejEsJ=w1380-h945-iv1",
+      "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/photos/IMG_4014-1.jpg?token=AI46U4XBXY7TNPZL3ZWF5LC46YRTQ",
     header: {
       heading: "TechLabs",
-      subheading: "TechLabs Klassenfahrt",
-      profileImage: "https://lh3.google.com/u/1/d/1oY-ye1dVydnBvU6vMbC2rP-EaGwFEmmv=w1380-h681-iv1",
+      subheading: "TechLabs class trip",
+      profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
+      seeMore: "",
+      styles: {transform: 'scale(1.5)'}, //This is not working
+    },
+  },
+  {
+    url:
+      "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/photos/IMG_4079-1.jpg?token=AI46U4R5COAORHHYGFD7A6S46YSG6",
+    header: {
+      heading: "TechLabs",
+      subheading: "Prototyping Workshop",
+      profileImage: "https://raw.githubusercontent.com/techlabsms/techlabs_new/master/src/assets/tl-icon-whitebg.jpg?token=AI46U4XH7CVZHPBDHLLA7OK46YRZY",
       seeMore: "",
     },
   },
-
 
   // {
   //   url: "https://storage.googleapis.com/coverr-main/mp4/Footboys.mp4",
@@ -56,8 +67,6 @@ const stories = [
   //   type: "video",
   // },
   // "https://images.unsplash.com/photo-1534856966153-c86d43d53fe0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80",
-
-
 ]
 
 export default TLStory

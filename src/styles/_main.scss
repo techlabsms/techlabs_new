@@ -1,3 +1,4 @@
+
 // Utilities
 @import "./variables";
 @import "./animations";
@@ -148,7 +149,7 @@ body {
   padding-bottom: 1.7rem !important;
   padding-top: 1.7rem !important;
   background-color: rgb(250, 250, 250);
-  font-weight: 600;
+  font-family: $font-pp;
 }
 
 .slack-icon {
@@ -285,7 +286,7 @@ body {
   background: #fff19b;
   padding: 2px 2px 2px;
   border-radius: 5px;
-  font-weight: 600;
+  font-family: $font-pp;
 }
 
 .no-margin-block {
@@ -330,7 +331,7 @@ body {
 
 .card-discover {
   color: $color-p;
-  font-weight: 600;
+  font-family: $font-pp;
   margin-top: 1rem;
 }
 
@@ -342,7 +343,7 @@ body {
 }
 
 .card-subtitle {
-  font-weight: 600;
+  font-family: $font-pp;
   margin-bottom: 1.5rem;
 }
 
@@ -390,4 +391,17 @@ body {
 .img-shadow {
   box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
   border-radius: 8px;
+}
+
+.story-text {
+  padding-bottom: 0 !important;
+  padding-left: 6em;
+}
+
+.margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
+.margin-top-4 {
+  margin-top: 4rem;
 }

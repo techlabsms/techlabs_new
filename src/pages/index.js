@@ -44,6 +44,7 @@ class index extends React.Component {
     const { testimonials, number } = this.state
     return (
       <>
+      <link href='../styles/fonts.css' rel='stylesheet' type='text/css'></link>
         <div className="container-fluid">
           <Navbar />
 
@@ -308,23 +309,15 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="pt-5">
+          <section className="pt-5 margin-bottom-8 margin-top-4">
             <div className="container">
               <div className="row mt-5 pr-5">
-                <div className="col-md-6 pb-5">
-                  <h2 className="mb-3">PiperNet Setup</h2>
-                  <p>
-                    Let's get you connected! We've designed a simple, efficient
-                    process for companies migrating to PiperNet. Here's how it
-                    works.
-                  </p>
+                <div className="col-md-6 pb-5 center-me story-text">
                   <ul className="list-inline ml-4 mt-5">
                     <li className="d-flex mb-4">
-                      <span className="mb-auto mr-3 rounded-circle px-3 py-2 bg-primary">
-                        1
-                      </span>
+                      
                       <div>
-                        <h3>Move Data</h3>
+                        <h3>Meetups</h3>
                         <p>
                           Using our Piper Assistant application, you can move
                           your data to be stored our decentralized network with
@@ -333,11 +326,9 @@ class index extends React.Component {
                       </div>
                     </li>
                     <li className="d-flex mb-4">
-                      <span className="mb-auto mr-3 rounded-circle px-3 py-2 bg-primary">
-                        2
-                      </span>
+                      
                       <div>
-                        <h3>Integrate Software</h3>
+                        <h3>Workshops</h3>
                         <p>
                           We want to make sure that you can keep using the
                           software that you use to manage your business.
@@ -345,11 +336,9 @@ class index extends React.Component {
                       </div>
                     </li>
                     <li className="d-flex mb-4">
-                      <span className="mb-auto mr-3 rounded-circle px-3 py-2 bg-primary">
-                        3
-                      </span>
+                      
                       <div>
-                        <h3>Ongoing Support</h3>
+                        <h3>Socials</h3>
                         <p>
                           As with all innovative technologies, sometimes
                           unpredictable things will happen, and you can always
@@ -360,13 +349,8 @@ class index extends React.Component {
                   </ul>
                 </div>
                 <div className="col-md-6 mt-auto pl-5 d-none d-md-block">
-                   {/* <img
-                    src="https://bootstrapshuffle.com/placeholder/pictures/bg_9-16.svg"
-                    alt=""
-                    height="600"
-                    className="center-padding"
-                  /> */}
-                  <TLStory>
+
+                  <TLStory className="center-padding">
 
                   </TLStory>
                 </div>
