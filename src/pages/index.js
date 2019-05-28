@@ -12,7 +12,7 @@ import COMMUNITY from "../assets/photos/IMG_4072-1.jpg"
 import sittingagent from "../assets/sitting-agent.svg"
 import Arrow from "../assets/arrow.svg"
 import Simon from "../assets/simon.png"
-import Hümeyra from "../assets/hümeyra.png"
+import Huemeyra from "../assets/huemeyra.png"
 import Clara from "../assets/clara.png"
 import TLStory from "../components/TLStory"
 
@@ -29,7 +29,7 @@ class index extends React.Component {
         name: "Hümeyra, IT-Admin",
         text:
           "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit nisi mollit ad magna nisi nulla voluptate. Commodo enim tempor dolor pariatur enim eu magna.",
-        image: Hümeyra,
+        image: Huemeyra,
       },
       {
         name: "Clara, IT-Admin",
