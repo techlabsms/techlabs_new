@@ -2,7 +2,6 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import MCK from "../assets/partner-mck.png"
 import ACN from "../assets/partner-acn.png"
 import WF from "../assets/partner-wf.png"
 import EY from "../assets/partner-ey.png"
@@ -15,6 +14,10 @@ import Simon from "../assets/simon.png"
 import Huemeyra from "../assets/huemeyra.png"
 import Clara from "../assets/clara.png"
 import TLStory from "../components/TLStory"
+import expect00 from "../assets/photos/code-img.jpg"
+import expect01 from "../assets/photos/IMG_4068-1.jpg"
+import expect02 from "../assets/photos/IMG_4081-1.jpg"
+import expect03 from "../assets/photos/IMG_4119-1.jpg"
 
 class index extends React.Component {
   state = {
@@ -44,7 +47,7 @@ class index extends React.Component {
     const { testimonials, number } = this.state
     return (
       <>
-      <link href='../styles/fonts.css' rel='stylesheet' type='text/css'></link>
+        <link href="../styles/fonts.css" rel="stylesheet" type="text/css" />
         <div className="container-fluid">
           <Navbar />
 
@@ -219,11 +222,11 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">TechLabs locations</p>
                         <p className="text-muted">
-                          Currently we have an offline community in {" "}
+                          Currently we have an offline community in{" "}
                           <span className="hashtag">
                             Münster, Copenhagen & Barcelona
-                          </span> 
-                          {" "}and many more to come.
+                          </span>{" "}
+                          and many more to come.
                         </p>
                         <span className="card-discover">
                           > Discover our locations
@@ -290,11 +293,16 @@ class index extends React.Component {
                 </div>
                 <div className="col-md-6 my-auto">
                   <div className="ml-5">
-                    <h3 className="community-title">
+                    <h3 className="community-title review">
                       Our community is one of the key parts of our digital
                       education concept
                     </h3>
-                    <p className="community-text">
+                    <p className="community-text review">
+                      <p>
+                        {" "} <br/>
+                        HIER MUSS EIN COMMUNITY TEXT HIN, DER BESCHREIBT, WARUM
+                        COMMUNITY KEY IST
+                      </p> <br/>
                       TechLabs Digital Shaper Journey: Get up to speed learning
                       tech skills in one semester by means of our
                       blended-learning concept that combines Online Learning,
@@ -315,10 +323,9 @@ class index extends React.Component {
                 <div className="col-md-6 pb-5 center-me story-text">
                   <ul className="list-inline ml-4 mt-5">
                     <li className="d-flex mb-4">
-                      
                       <div>
-                        <h3>Meetups</h3>
-                        <p>
+                        <h3>📍 Meetups</h3>
+                        <p className="review">
                           Using our Piper Assistant application, you can move
                           your data to be stored our decentralized network with
                           simple drag & drop.
@@ -326,20 +333,21 @@ class index extends React.Component {
                       </div>
                     </li>
                     <li className="d-flex mb-4">
-                      
                       <div>
-                        <h3>Workshops</h3>
+                        <h3>🌟 Workshops</h3>
                         <p>
-                          We want to make sure that you can keep using the
-                          software that you use to manage your business.
+                          TechLabs helps to spur innovation by organizing
+                          workshops with our renowned partners. In these
+                          workshops we are bringing students together with
+                          subject matter experts and focus on engaging tech
+                          topics.
                         </p>
                       </div>
                     </li>
                     <li className="d-flex mb-4">
-                      
                       <div>
-                        <h3>Socials</h3>
-                        <p>
+                        <h3>✨ Socials</h3>
+                        <p className="review">
                           As with all innovative technologies, sometimes
                           unpredictable things willl happen, and you can always
                           count on our support to solve issues for you.
@@ -349,73 +357,104 @@ class index extends React.Component {
                   </ul>
                 </div>
                 <div className="col-md-6 mt-auto pl-5 d-none d-md-block">
-
-                  <TLStory className="center-padding">
-
-                  </TLStory>
+                  <TLStory className="center-padding" />
                 </div>
               </div>
             </div>
           </section>
 
           <section className="py-5">
-            <div className="container text-center">
-              <h2 className="mb-4">PiperNet Setup</h2>
-              <p className="lead mb-5">
-                We've designed a simple, efficient process for companies
-                migrating to PiperNet. Here's how it works.
-              </p>
+            <div className="container review">
+              <h1 className="section-title">Why you should start now</h1>
+              <div className="section-divider" />
+
               <div>
                 <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0">
+                  <div className="col-md-6 order-1 order-md-0 zoom-outer">
                     <img
-                      className="img-fluid"
-                      src="https://bootstrapshuffle.com/placeholder/pictures/bg_16-9.svg"
+                      className="img-fluid img-shadow zoom-in-left-bottom"
+                      src={expect00}
                       alt=""
                     />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0">
-                    <span className="display-3 mb-2">01</span>
-                    <h3 className="mb-4">Move Data</h3>
+                  <div className="col-md-6 mb-4 mb-md-0 max-lengther">
+                    <h1 className="mb-4">
+                      👋 Get a personal <br /> learning path
+                    </h1>
                     <p>
-                      Using our Piper Assistant application, you can move your
-                      data to be stored our decentralized network with simple
-                      drag & drop.
+                      <span className="hashtag">
+                        {" "}
+                        Start to code - independent of your prior knowledge.
+                      </span>{" "}
+                      Learn tech skills in the tracks Data Science, Artitificial
+                      Intelligence or Web Development by means of the best
+                      online resources available.
                     </p>
                   </div>
                 </div>
                 <div className="row align-items-center text-md-right mb-5">
-                  <div className="col-md-6 order-1">
+                  <div className="col-md-6 order-1 zoom-outer">
                     <img
-                      className="img-fluid"
-                      src="https://bootstrapshuffle.com/placeholder/pictures/bg_16-9.svg"
+                      className="img-fluid img-shadow zoom-in-right-bottom "
+                      src={expect01}
                       alt=""
                     />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0 order-0">
-                    <span className="display-3 mb-2">02</span>
-                    <h3 className="mb-4">Integrate Software</h3>
+                  <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
+                    <h1 className="mb-4">
+                      💪 Build your own <br /> tech project
+                    </h1>
                     <p>
-                      We want to make sure that you can keep using the software
-                      that you use to manage your business.
+                      Choose a project idea that you find interesting and work
+                      on it in an interdisciplinary group of 3-4 fellow TechLabs
+                      participants.{" "}
+                      <span className="hashtag">
+                        {" "}
+                        Build up a tech project portfolio.{" "}
+                      </span>
                     </p>
                   </div>
                 </div>
                 <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0">
+                  <div className="col-md-6 order-1 order-md-0 zoom-outer">
                     <img
-                      className="img-fluid"
-                      src="https://bootstrapshuffle.com/placeholder/pictures/bg_16-9.svg"
+                      className="img-fluid img-shadow zoom-in-left-top"
+                      src={expect02}
                       alt=""
                     />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0">
-                    <span className="display-3 mb-2">03</span>
-                    <h3 className="mb-4">Ongoing Support</h3>
+                  <div className="col-md-6 mb-4 mb-md-0 max-lengther">
+                    <h1 className="mb-4">🔥 Shape your career path</h1>
                     <p>
-                      As with all innovative technologies, sometimes
-                      unpredictable things will happen, and you can always count
-                      on our support to solve issues for you.
+                      If you want to{" "}
+                      <span className="hashtag">
+                        {" "}
+                        learn state-of-the-art tech skills
+                      </span>{" "}
+                      that will enable you to quickly create stunning tech
+                      projects, join a tech startup or get in touch with our
+                      renowned partners. TechLabs is the right way to go for.
+                    </p>
+                  </div>
+                </div>
+                <div className="row align-items-center text-md-right mb-5">
+                  <div className="col-md-6 order-1 zoom-outer">
+                    <img
+                      className="img-fluid img-shadow zoom-in"
+                      src={expect03}
+                      alt=""
+                    />
+                  </div>
+                  <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
+                    <h1 className="mb-4">👨‍💻 Learn with the community </h1>
+                    <p>
+                      In case you have any question during your learning journey
+                      or project work,{" "}
+                      <span className="hashtag">
+                        our community is always interested in discussing tech
+                        and solving problems
+                      </span>{" "}
+                      and our mentors are happy to help you out! <span>🙌</span>
                     </p>
                   </div>
                 </div>
