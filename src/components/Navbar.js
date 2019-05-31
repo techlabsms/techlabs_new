@@ -33,18 +33,18 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navigations-08">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item dropdown d-none d-sm-block">
-                <a
-                  className="nav-link active dropdown-toggle"
-                  href="/"
+                <Link
+                  className="nav-link active"
+                  to="/locations"
                   data-toggle="dropdown"
                 >
                   Locations<span className="sr-only">(current)</span>
-                </a>
+                </Link>
                 <div className="dropdown-menu">
-                  <a className="dropdown-item dropdown-item-corr" href="/">
+                  <Link className="dropdown-item dropdown-item-corr" to="/muenster">
                     <img src={MS} className="nav-loc-icon" alt="loc-ms" />
                     Muenster
-                  </a>
+                  </Link>
                   <a className="dropdown-item dropdown-item-corr" href="/">
                     <img src={BCN} className="nav-loc-icon" alt="loc-bcn" />
                     Barcelona
