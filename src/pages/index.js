@@ -245,7 +245,7 @@ class index extends React.Component {
 
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
-                  <div className="card">
+                  <div className="testimonial-card">
                     <img
                       className="card-img"
                       src={testimonials[number].image}
