@@ -65,7 +65,7 @@ const Navbar = () => {
                   </Link>
                   <div class="dropdown-divider" />
                   <Link className="dropdown-item dropdown-item-corr" to="/locations">
-                    Overview
+                    Discover our Locations
                   </Link>
                   <Link className="dropdown-item dropdown-item-corr" to="/">
                     branch it 🔥

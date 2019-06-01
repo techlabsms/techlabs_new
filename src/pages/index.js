@@ -18,6 +18,7 @@ import expect01 from "../assets/photos/IMG_4068-1.jpg"
 import expect02 from "../assets/photos/IMG_4081-1.jpg"
 import expect03 from "../assets/photos/IMG_4119-1.jpg"
 import { Link } from "gatsby"
+import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 
 

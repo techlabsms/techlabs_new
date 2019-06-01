@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer";
 import { Link } from "gatsby"
+import "../styles/_main.scss"
 
 class locations extends Component {
   render() {
@@ -13,7 +14,7 @@ class locations extends Component {
           <div className="container-fluid">
             <section className="section-picture">
               <div className="container py-5">
-                <div className="row margin-top-bot">
+                <div className="row margin-top-bot padding-location">
                   <div className="col-md-9 col-lg-6 card border-0 my-5 p-5 ml-auto text-center">
                     <h1 className="mt-4 mb-3">
                       Discover our locations
