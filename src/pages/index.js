@@ -249,60 +249,62 @@ class index extends React.Component {
                     <img
                       className="card-img"
                       src={testimonials[number].image}
-                      alt=""
+                      alt="testimonial-image"
                     />
-                    <p className="text-muted mt-3">
+                    <p className="text-muted mt-3 pl-3 pr-3">
                       {testimonials[number].text}
                     </p>
-                    <div className="row align-content-end">
-                      <div className="col-md-9">
-                        <span className="card-discover">
+                    <div className="row align-content-end mt-3">
+                      <div className="col-md-6 col-5 col-lg-5 col-sm-5">
+                        <span className="card-discover pl-3">
                           {testimonials[number].name}
                         </span>
                       </div>
-                      <div className="col-md-3">
-                        <img
-                          src={Arrow}
-                          alt="leftArrow"
-                          className="card-leftArrow"
-                          onClick={() =>
-                            this.setState({
-                              number:
-                                number <= 0
-                                  ? testimonials.length - 1
-                                  : number - 1,
-                            })
-                          }
-                        />
-                        <img
-                          src={Arrow}
-                          alt="RightArrow"
-                          className="card-rightArrow"
-                          onClick={() =>
-                            this.setState({
-                              number:
-                                number >= testimonials.length - 1
-                                  ? 0
-                                  : number + 1,
-                            })
-                          }
-                        />
+                      <div className="col-md-6 text-right col-6 col-lg-6 col-sm-7">
+                          <img
+                            src={Arrow}
+                            alt="leftArrow"
+                            className="card-leftArrow"
+                            onClick={() =>
+                              this.setState({
+                                number:
+                                  number <= 0
+                                    ? testimonials.length - 1
+                                    : number - 1,
+                              })
+                            }
+                          />
+                          <img
+                            src={Arrow}
+                            alt="RightArrow"
+                            className="card-rightArrow"
+                            onClick={() =>
+                              this.setState({
+                                number:
+                                  number >= testimonials.length - 1
+                                    ? 0
+                                    : number + 1,
+                              })
+                            }
+                          />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 my-auto">
-                  <div className="ml-5">
-                    <h3 className="community-title review">
+                  <div className="ml-md-5">
+                    <h3 className="community-title review mt-5">
                       Our community is one of the key parts of our digital
                       education concept
                     </h3>
                     <p className="community-text review">
                       <p>
-                        {" "} <br/>
+                        {" "}
+                        <br />
                         HIER MUSS EIN COMMUNITY TEXT HIN, DER BESCHREIBT, WARUM
                         COMMUNITY KEY IST
-                      </p> <br/>
+                      </p>{" "}
+                      <br />
                       TechLabs Digital Shaper Journey: Get up to speed learning
                       tech skills in one semester by means of our
                       blended-learning concept that combines Online Learning,
