@@ -7,12 +7,7 @@ import BCN from "../assets/loc-bcn.svg"
 import SLACK from "../assets/slack-icon.svg"
 import Headroom from "react-headroom"
 import { Link } from "gatsby"
-import $ from "jquery"
-window.jQuery = $
-window.$ = $
-global.jQuery = $
-const bootstrap = require("bootstrap")
-console.log(bootstrap)
+import 'jquery'
 
 const Navbar = () => {
   return (
@@ -86,16 +81,16 @@ const Navbar = () => {
                   Program
                 </Link>
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item-corr " to="/journey">
+                  <Link className="dropdown-item-corr dropdown-item" to="/journey">
                     Your Journey
                   </Link>
-                  <Link className="dropdown-item-corr" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/">
                     Web Development
                   </Link>
-                  <Link className="dropdown-item-corr" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/">
                     Data Science
                   </Link>
-                  <Link className="dropdown-item-corr" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/">
                     Artificial Intelligence
                   </Link>
                 </div>
