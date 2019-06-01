@@ -18,7 +18,7 @@ h6 {
 body {
   color: $color-g;
   font-family: $font-p;
-  font-size: 17px;
+  font-size: 17px !important;
 }
 
 .tl-logo {
@@ -248,10 +248,10 @@ body {
 .btn {
   font-size: 17px;
   font-family: $font-h;
-  padding-left: 2.4em;
-  padding-right: 2.4em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-left: 2.4em !important;
+  padding-right: 2.4em !important;
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
   margin-right: 1.5rem;
 }
 
@@ -259,16 +259,16 @@ body {
   background: $color-p;
   box-shadow: 0 10px 30px -15px rgba(30, 49, 71, 0.66);
   border-radius: 5px;
-  border: 0px solid;
+  border: 0px solid !important;
   transition: 0.3s ease-in-out;
 }
 
 .btn-secondary {
-  background: #ffffff;
+  background: #ffffff !important;
   color: $color-p;
   box-shadow: 0 10px 30px -15px rgba(30, 49, 71, 0.5);
   border-radius: 5px;
-  border: 0px solid;
+  border: 0px solid !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -302,7 +302,7 @@ body {
   background: #ffffff;
   box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
   border-radius: 7px;
-  border: 0px solid;
+  border: 0px solid !important;
   padding: 2em;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -408,9 +408,9 @@ body {
 }
 
 .max-lengther {
-  max-width: 480px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 500px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
 .mb-5 {
@@ -443,8 +443,8 @@ body {
 .zoom-outer {
   overflow: hidden;
   border-radius: 8px;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding: 0 !important;
 }
 
