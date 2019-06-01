@@ -55,7 +55,7 @@ const Navbar = () => {
                   </a>
                   <div class="dropdown-divider" />
                   <a className="dropdown-item" href="/">
-                    branch it 🔥
+                    branch it <span role="img">🔥</span>
                   </a>
                 </div>
               </li>
