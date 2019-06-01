@@ -3,25 +3,38 @@ import NavBar from '../components/Navbar';
 import "../styles/_location.scss"
 import "../styles/_location_muenster.scss"
 import Footer from '../components/Footer'
+import MS from '../assets/loc-ms.svg'
+import {Helmet} from "react-helmet"
+
+
+
 
 class muenster extends Component {
     render() {
         return (
             <>
                 <NavBar />
+                
+                <Helmet>
+                <script src="https://embed.small.chat/TG9SCN33JGHR17BPSR.js" async></script>
+            </Helmet>
 
                 <body>
     <div className="container-fluid">
                 
       <section>
       <div className="location-hero-ms location-hero">
-        <div className="container py-5 text-center">
-          <div className="row">
-            <div className="col-md-9 col-lg-6 card border-0 my-5 p-5 location-card">
-              <h2 className="mt-4 mb-3">Bringing the Internet to the People.</h2>
-              <p>Our mission is not to outsell Hooli with a product like their latest Box 3. We are not in it for the money - we are in it to make the whole world decentralized.</p><a className="btn btn-primary" href="#">Learn more</a>
-            </div>
-          </div>
+      <div>
+
+            <div className="col-md-7 col-lg-5 border-0 my-5 p-5 location-card">
+
+              <h1 className="location-title"> <img src={MS} alt=""/> Muenster</h1>
+              <p className="text-muted batch-text">Next Batch 01.10.2019
+              </p>
+              
+              <a className="btn btn-primary" href="#">Apply now</a>
+              <a className="btn btn-secondary" href="#">Contact us</a>
+              </div>
         </div>
         </div>
       </section>
