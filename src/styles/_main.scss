@@ -45,7 +45,7 @@ body {
 .headroom {
   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.15) !important;
   background-color: #ffffff !important;
-  z-index: 10;
+  z-index: 100 !important;
 }
 
 //dropdown
