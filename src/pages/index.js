@@ -1,5 +1,4 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import ACN from "../assets/partner-acn.png"
@@ -18,6 +17,9 @@ import expect00 from "../assets/photos/code-img.jpg"
 import expect01 from "../assets/photos/IMG_4068-1.jpg"
 import expect02 from "../assets/photos/IMG_4081-1.jpg"
 import expect03 from "../assets/photos/IMG_4119-1.jpg"
+import { Link } from "gatsby"
+import "../styles/bootstrap.min.css"
+
 
 class index extends React.Component {
   state = {
@@ -47,7 +49,7 @@ class index extends React.Component {
     const { testimonials, number } = this.state
     return (
       <>
-        <link href="../styles/fonts.css" rel="stylesheet" type="text/css" />
+
         <div className="container-fluid">
           <Navbar />
 
@@ -79,12 +81,12 @@ class index extends React.Component {
                     , you will learn code and become a Digital Shaper yourself.
                     Discover TechLabs now.
                   </p>
-                  <a className="btn btn-primary" href="/">
+                  <Link className="btn btn-primary" to="/locations">
                     Locations
-                  </a>
-                  <a className="btn btn-secondary" href="/">
+                  </Link>
+                  <Link className="btn btn-secondary" to="/program">
                     Program
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-md-7">
                   <img
@@ -217,7 +219,7 @@ class index extends React.Component {
                     </a>
                   </div>
                   <div className="p-2 col-sm-6">
-                    <a href="" className="card-a">
+                    <Link to="/locations" className="card-a">
                       <div className="card">
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">TechLabs locations</p>
@@ -232,7 +234,7 @@ class index extends React.Component {
                           > Discover our locations
                         </span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -372,9 +374,9 @@ class index extends React.Component {
 
               <div>
                 <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0 zoom-outer">
+                  <div className="col-md-6 order-1 order-md-0">
                     <img
-                      className="img-fluid img-shadow zoom-in-left-bottom"
+                      className="img-fluid img-shadow"
                       src={expect00}
                       alt=""
                     />
@@ -395,9 +397,9 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="row align-items-center text-md-right mb-5">
-                  <div className="col-md-6 order-1 zoom-outer">
+                  <div className="col-md-6 order-1">
                     <img
-                      className="img-fluid img-shadow zoom-in-right-bottom "
+                      className="img-fluid img-shadow"
                       src={expect01}
                       alt=""
                     />
@@ -418,9 +420,9 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0 zoom-outer">
+                  <div className="col-md-6 order-1 order-md-0">
                     <img
-                      className="img-fluid img-shadow zoom-in-left-top"
+                      className="img-fluid img-shadow"
                       src={expect02}
                       alt=""
                     />
@@ -440,9 +442,9 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="row align-items-center text-md-right mb-5">
-                  <div className="col-md-6 order-1 zoom-outer">
+                  <div className="col-md-6 order-1">
                     <img
-                      className="img-fluid img-shadow zoom-in"
+                      className="img-fluid img-shadow"
                       src={expect03}
                       alt=""
                     />

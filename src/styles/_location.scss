@@ -1,0 +1,37 @@
+.location-hero {
+    position: relative;
+    padding-top: 130px;
+    height: 700px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.location-hero:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.2) 90%);
+    z-index: 0;
+}
+
+.location-card {
+    z-index: 1;
+    position: relative;
+}
+
+.btn-link {
+    white-space:normal !important; 
+    word-wrap: break-word
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
