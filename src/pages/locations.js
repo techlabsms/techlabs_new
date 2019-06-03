@@ -4,13 +4,13 @@ import Footer from "../components/Footer"
 import locationsImg from "../assets/locations.png"
 import arrowDown from "../assets/arrowDown.svg"
 import "../styles/_main.scss"
-import LocationCard from "../components/locationCard"
+import LocationCard from "../components/LocationCard"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
 import muenster from "../assets/muenster.jpg"
 
-class locations extends Component {
+class Locations extends Component {
   constructor(){
     super();
     this.state = {
@@ -117,4 +117,4 @@ class locations extends Component {
   }
 }
 
-export default locations
+export default Locations
