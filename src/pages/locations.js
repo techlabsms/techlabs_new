@@ -33,7 +33,7 @@ class locations extends Component {
         {
           city: "Munich",
           imgTop: muenster,
-          icon: CPH,
+          icon: MS,
         },
       ],
       search: "",
