@@ -1,13 +1,15 @@
+@import "./variables";
+
 .location-hero {
-    position: relative;
-    height: 700px;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    max-width: 1300px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.2);
+  position: relative;
+  height: 700px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.2);
 }
 
 // .location-hero:after {
@@ -25,29 +27,68 @@
 // }
 
 .location-card {
-    z-index: 1;
-    position: absolute;
-    bottom: 0px;
-   margin-bottom: 0px !important;
-   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0)!important;
-   background-color: #ffffff;
-   padding-left: 6rem !important;
-   padding-top: 2rem !important;
+  z-index: 1;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px !important;
+  box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0) !important;
+  background-color: #ffffff;
+  padding-left: 6rem !important;
+  padding-top: 2rem !important;
 }
 
 .btn-link {
-    white-space:normal !important; 
-    word-wrap: break-word
+  white-space: normal !important;
+  word-wrap: break-word;
 }
 
 .card-title {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .location-title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .batch-text {
-    margin-bottom: 1.8rem !important;
+  margin-bottom: 1.8rem !important;
+}
+
+.locations {
+  &--hero-img {
+    width: 95%;
+  }
+
+  &--hero-btn {
+    border-radius: 60px;
+    background: $color-p;
+    border: 0px solid !important;
+    transition: 0.3s ease-in-out !important;
+    font-size: 17px !important;
+    font-family: $font-h;
+    text-align: center;
+    padding: 0.7em 0.6em !important;
+    :hover {
+      transform: translateY(4px);
+    }
+  }
+
+  &--search {
+    background: #ffffff;
+    box-shadow: 0 12px 42px -10px rgba(30, 49, 71, 0.2);
+    font-size: 20px;
+    padding: 0.5em 3em;
+    border: none;
+    color: #969696;
+    background: url(../assets/lupe.png) no-repeat scroll 7px 7px;
+    background-position: center left 12px;
+  }
+
+  &--search:focus{
+      outline-width: 0; 
+  }
+
+  &-list{
+      background: url(../assets/background_locations.png) center center no-repeat;
+  }
 }

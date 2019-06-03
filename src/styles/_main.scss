@@ -3,6 +3,7 @@
 @import "./animations";
 @import "./footer";
 
+
 h1,
 h2,
 h3,
@@ -375,12 +376,6 @@ body {
   background-color: $color-p;
   margin-bottom: 1rem;
 }
-
-.section-picture {
-  background-image: url('../assets/nicole-wolf-1339717-unsplash.jpg');
-  background-size: cover;
-}
-
 
 .display-4 {
   font-size: 4rem !important;
