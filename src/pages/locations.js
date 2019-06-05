@@ -16,7 +16,7 @@ class Locations extends Component {
     this.state = {
       locations: [
         {
-          city: "Muenster",
+          city: "Münster",
           imgTop: muenster,
           icon: MS,
         },

@@ -80,15 +80,33 @@
     padding: 0.5em 3em;
     border: none;
     color: #969696;
-    background: url(../assets/lupe.png) no-repeat scroll 7px 7px;
+    background: url(../assets/lupe.svg) no-repeat scroll 3px 3px;
     background-position: center left 12px;
   }
 
-  &--search:focus{
-      outline-width: 0; 
+  &--search:focus {
+    outline-width: 0;
   }
 
-  &-list{
-      background: url(../assets/background_locations.png) center center no-repeat;
+  &-list {
+    background: url(../assets/background_locations.png) center center no-repeat;
+    background-size: cover;
+  }
+
+  &--card {
+    background: #ffffff;
+    box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
+    border-radius: 7px;
+    border: 0px solid;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    transform-origin: bottom;
+    min-height: 400px;
+  }
+
+  &--icon{
+    margin-top: -10px;
   }
 }
