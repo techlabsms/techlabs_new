@@ -8,7 +8,9 @@ import LocationCard from "../components/LocationCard"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
+import MUC from "../assets/loc-muc.svg";
 import muenster from "../assets/muenster.jpg"
+import LocationCardDefault from "../components/LocationCardDefault";
 
 class Locations extends Component {
   constructor(){
@@ -57,7 +59,7 @@ class Locations extends Component {
                   </h1>
                   <p>
                     TechLabs is the community that enables you to become a
-                    Digital Entrepreneur. Exciting meetups, talks, hackathons,
+                    Digital Entrepreneur. Exciting meetups, talks, jactations,
                     social events, workshops and much more await you. Discover
                     TechLabs now.
                   </p>
@@ -98,7 +100,7 @@ class Locations extends Component {
               </div>
 
               <div className="row">
-                {filteredLocations && filteredLocations.map(location => (
+                {filteredLocations.length == 0 ? <LocationCardDefault/> : filteredLocations.map(location => (
                   <LocationCard
                     imgTop={location.imgTop}
                     city={location.city}
