@@ -7,6 +7,9 @@ import MS from "../assets/loc-ms.svg"
 import ImgOne from "../assets/muenster_img.png"
 import ImgTwo from "../assets/muenster_img_two.png"
 import GIC from "../assets/googleimpact.png"
+import tweet from "../assets/tweet_GIC.png"
+import article from "../assets/thanks_GIC.png"
+import wn from "../assets/wn.svg"
 import { Helmet } from "react-helmet"
 
 class muenster extends Component {
@@ -57,10 +60,10 @@ class muenster extends Component {
 
             <section className="py-5">
               <div className="row">
-                <div className="col-6">
+                <div className="col-sm-12 col-md-6">
                   <img src={GIC} alt="" className="muenster--img" />
                 </div>
-                <div className="col-6 text-left">
+                <div className="col-sm-12 col-md-12 col-lg-6 text-left">
                   <h1 className="section-title">
                     Google <br /> Impact <br /> Challenge
                   </h1>
@@ -73,6 +76,52 @@ class muenster extends Component {
                     received an award and won 20,000 euros at the final of the
                     Google Impact Challenge in Berlin
                   </p>
+                </div>
+              </div>
+            </section>
+            <section className="py-5">
+              <div className="row">
+                <div className="col-6">
+                  <img
+                    src={tweet}
+                    alt="tweet google impact challenge"
+                    className="float-right "
+                  />
+                </div>
+
+                <div className="col-6 ">
+                  <div className="locations--card w-50">
+                    <img
+                      className="card-img"
+                      src={article}
+                      alt="testimonial-image"
+                    />
+
+                    <div className="row mt-3">
+                      <div className="col-8 ">
+                        <h3 className="text-muted mt-4 ml-2 pr-3 d-inline-block align-middle">
+                          Read more about the Google Impact Challenge
+                        </h3>
+                      </div>
+                      <div className="col-4 text-right">
+                        <img
+                          src={wn}
+                          alt="icon"
+                          className="locations--icon mr-4 mt-5"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section className="container">
+            <section className="py-5">
+              <div className="row">
+                <div className="col-6">
+                  <h2 className="section-title">Open positions</h2>
+                  <div className="section-divider" />
                 </div>
               </div>
             </section>
