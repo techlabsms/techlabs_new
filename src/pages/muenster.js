@@ -11,6 +11,7 @@ import tweet from "../assets/tweet_GIC.png"
 import article from "../assets/thanks_GIC.png"
 import wn from "../assets/wn.svg"
 import { Helmet } from "react-helmet"
+import Position from "../components/Position"
 
 class muenster extends Component {
   render() {
@@ -122,6 +123,20 @@ class muenster extends Component {
                 <div className="col-6">
                   <h2 className="section-title">Open positions</h2>
                   <div className="section-divider" />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12 mt-5">
+                  <Position
+                    emoji="💻"
+                    jobTitle="Full Stack Web Developer"
+                    jobDescription="Cillum in reprehenderit magna sit. Duis incididunt ex magna deserunt mollit aliquip consectetur in culpa ut reprehenderit incididunt mollit. Dolor ex ullamco sint duis quis proident elit adipisicing ullamco deserunt pariatur duis. Exercitation officia ipsum incididunt duis labore ullamco sit qui amet anim cupidatat."
+                  />
+                  <Position 
+                    emoji="📊"     
+                    jobTitle="Sales Coordinator"
+                    jobDescription="Deserunt anim occaecat proident mollit ullamco esse velit minim. Culpa duis laborum mollit laboris. Velit mollit laboris nulla ad eu laborum veniam aliquip voluptate esse velit. Eu proident sunt Lorem fugiat nulla ex."             
+                  />
                 </div>
               </div>
             </section>
