@@ -8,13 +8,13 @@ import LocationCard from "../components/LocationCard"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
-import MUC from "../assets/loc-muc.svg";
+import MUC from "../assets/loc-muc.svg"
 import muenster from "../assets/muenster.jpg"
-import LocationCardDefault from "../components/LocationCardDefault";
+import LocationCardDefault from "../components/LocationCardDefault"
 
 class Locations extends Component {
-  constructor(){
-    super();
+  constructor() {
+    super()
     this.state = {
       locations: [
         {
@@ -42,7 +42,7 @@ class Locations extends Component {
     }
   }
   render() {
-    const { locations, search } = this.state;
+    const { locations, search } = this.state
     const filteredLocations = locations.filter(location => {
       return location.city.toLowerCase().includes(search.toLowerCase())
     })
@@ -100,14 +100,17 @@ class Locations extends Component {
               </div>
 
               <div className="row">
-                {filteredLocations.length == 0 ? <LocationCardDefault/> : filteredLocations.map(location => (
-                  <LocationCard
-                    imgTop={location.imgTop}
-                    city={location.city}
-                    icon={location.icon}
-                    
-                  />
-                ))}
+                {filteredLocations.length == 0 ? (
+                  <LocationCardDefault />
+                ) : (
+                  filteredLocations.map(location => (
+                    <LocationCard
+                      imgTop={location.imgTop}
+                      city={location.city}
+                      icon={location.icon}
+                    />
+                  ))
+                )}
               </div>
             </div>
           </section>

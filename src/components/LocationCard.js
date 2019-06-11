@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const LocationCard = ({ imgTop, city, icon }) => {
   return (
     <div className="col-md-6 mt-3">
-      <Link to="/muenster">
+      <Link to={`/${city.toLowerCase()}`}>
         <div className="locations--card">
           <img className="card-img" src={imgTop} alt="testimonial-image" />
 

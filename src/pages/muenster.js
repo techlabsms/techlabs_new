@@ -137,6 +137,7 @@ class muenster extends Component {
                     jobTitle="Sales Coordinator"
                     jobDescription="Deserunt anim occaecat proident mollit ullamco esse velit minim. Culpa duis laborum mollit laboris. Velit mollit laboris nulla ad eu laborum veniam aliquip voluptate esse velit. Eu proident sunt Lorem fugiat nulla ex."             
                   />
+                  <Position/>
                 </div>
               </div>
             </section>

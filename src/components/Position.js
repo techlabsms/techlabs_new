@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import arrowDown from "../assets/arrowDown.svg"
+import PropTypes from 'prop-types';
 
 class Position extends Component {
   state = {
@@ -48,6 +49,18 @@ class Position extends Component {
       </>
     )
   }
+}
+
+Position.propTypes = {
+  emoji: PropTypes.string,
+  jobTitle: PropTypes.string,
+  jobDescription: PropTypes.string,
+} 
+
+Position.defaultProps = {
+  emoji: '🔥',
+  jobTitle: 'Digital Shaper',
+  jobDescription: 'Wir suchen dich als digital Shaper für unser Team. Du willst die digitale Bildung in deutschland untertsützen? Hilf uns dabei!',
 }
 
 export default Position
