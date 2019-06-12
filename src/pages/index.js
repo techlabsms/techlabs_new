@@ -57,12 +57,12 @@ class index extends React.Component {
           <section className="promo">
             <div className="container center">
               <p className="no-margin-block">
-                🔥 You can currently apply for a spot in the next starting batch
+                <span role="img" aria-label="fire">🔥</span> You can currently apply for a spot in the next starting batch
                 in{" "}
                 <a className="" href="/copenhagen">
                   Copenhagen
                 </a>{" "}
-                & <a href="/barcelona">Barcelona</a> 🔥
+                & <a href="/barcelona">Barcelona</a><span role="img" aria-label="fire">🔥</span>
               </p>
             </div>
           </section>
@@ -166,7 +166,7 @@ class index extends React.Component {
                 </div>
                 <div className="d-flex col-lg-7 flex-wrap">
                   <div className="p-2 col-sm-6">
-                    <a href="" className="card-a">
+                    <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">12</h1> <br />
                         <p className="card-subtitle">weeks coding</p>
@@ -184,7 +184,7 @@ class index extends React.Component {
                     </a>
                   </div>
                   <div className="p-2 col-sm-6">
-                    <a href="" className="card-a">
+                    <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">learning tracks</p>
@@ -203,7 +203,7 @@ class index extends React.Component {
                     </a>
                   </div>
                   <div className="p-2 col-sm-6">
-                    <a href="" className="card-a">
+                    <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">300+</h1> <br />
                         <p className="card-subtitle">community members</p>
@@ -252,7 +252,7 @@ class index extends React.Component {
                     <img
                       className="card-img"
                       src={testimonials[number].image}
-                      alt="testimonial-image"
+                      alt="testimonial"
                     />
                     <p className="text-muted mt-3 pl-3 pr-3">
                       {testimonials[number].text}
@@ -329,7 +329,7 @@ class index extends React.Component {
                   <ul className="list-inline ml-4 mt-5">
                     <li className="d-flex mb-4">
                       <div>
-                        <h3>📍 Meetups</h3>
+                        <h3><span role="img" aria-label="pin">📍</span> Meetups</h3>
                         <p className="review">
                           Using our Piper Assistant application, you can move
                           your data to be stored our decentralized network with
@@ -339,7 +339,7 @@ class index extends React.Component {
                     </li>
                     <li className="d-flex mb-4">
                       <div>
-                        <h3>🌟 Workshops</h3>
+                        <h3><span role="img" aria-label="star">🌟</span> Workshops</h3>
                         <p>
                           TechLabs helps to spur innovation by organizing
                           workshops with our renowned partners. In these
@@ -351,7 +351,7 @@ class index extends React.Component {
                     </li>
                     <li className="d-flex mb-4">
                       <div>
-                        <h3>✨ Socials</h3>
+                        <h3><span role="img" aria-label="stars">✨</span> Socials</h3>
                         <p className="review">
                           As with all innovative technologies, sometimes
                           unpredictable things willl happen, and you can always
@@ -384,13 +384,12 @@ class index extends React.Component {
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 max-lengther">
                     <h1 className="mb-4">
-                      👋 Get a personal <br /> learning path
+                      <span role="img" aria-label="waving hand">👋</span> Get a personal <br /> learning path
                     </h1>
                     <p>
                       <span className="hashtag">
-                        {" "}
                         Start to code - independent of your prior knowledge.
-                      </span>{" "}
+                      </span>
                       Learn tech skills in the tracks Data Science, Artitificial
                       Intelligence or Web Development by means of the best
                       online resources available.
@@ -407,7 +406,7 @@ class index extends React.Component {
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
                     <h1 className="mb-4">
-                      💪 Build your own <br /> tech project
+                      <span role="img" aria-label="biceps">💪</span> Build your own <br /> tech project
                     </h1>
                     <p>
                       Choose a project idea that you find interesting and work
@@ -429,7 +428,7 @@ class index extends React.Component {
                     />
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 max-lengther">
-                    <h1 className="mb-4">🔥 Shape your career path</h1>
+                    <h1 className="mb-4"><span role="img" aria-label="fire">🔥</span> Shape your career path</h1>
                     <p>
                       If you want to{" "}
                       <span className="hashtag">
@@ -451,15 +450,15 @@ class index extends React.Component {
                     />
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
-                    <h1 className="mb-4">👨‍💻 Learn with the community </h1>
+                    <h1 className="mb-4"><span role="img" aria-label="guy behind laptop">👨‍💻</span> Learn with the community </h1>
                     <p>
                       In case you have any question during your learning journey
-                      or project work,{" "}
+                      or project work,
                       <span className="hashtag">
                         our community is always interested in discussing tech
                         and solving problems
-                      </span>{" "}
-                      and our mentors are happy to help you out! <span>🙌</span>
+                      </span>
+                      and our mentors are happy to help you out! <span role="img" aria-label="hands">🙌</span>
                     </p>
                   </div>
                 </div>

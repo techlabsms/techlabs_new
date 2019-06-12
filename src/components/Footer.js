@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from "../assets/tl-logo-white.svg"
 import PayPal from "../assets/paypal.svg"
+import { Link } from 'gatsby';
 
 const Footer = () => {
   return (
@@ -13,28 +14,28 @@ const Footer = () => {
               <br />
               <p className="white-font my-3">We build. Digital Shaper.</p>
               <button className="px-3 py-1 my-3">
-                <span role="img">🇬🇧</span> Englisch
+                <span role="img" aria-label="english">🇬🇧</span> Englisch
               </button>
             </div>
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">About us</h5>
-                  <a className="foot-a" href="/data-science">
+                  <Link className="foot-a" href="/data-science">
                     Team
-                  </a>
+                  </Link>
                   <br />
-                  <a className="foot-a" href="/web-development">
+                  <Link className="foot-a" to="/web-development">
                     Partner
-                  </a>
+                  </Link>
                   <br />
-                  <a className="foot-a" href="/artificial-intelligence">
+                  <Link className="foot-a" to="/artificial-intelligence">
                     Carrer
-                  </a>
+                  </Link>
                   <br />
-                  <a className="foot-a" href="/artificial-intelligence">
+                  <Link className="foot-a" to="/artificial-intelligence">
                     FAQ
-                  </a>
+                  </Link>
                   <br />
                 </div>
                 <div className="col-lg-4">
@@ -73,24 +74,24 @@ const Footer = () => {
             <div className="col-lg-8 col-md-6 text-md-left text-center">
               <nav className="nav d-inline ">
                 <div className="my-4">
-                  <a
+                  <Link
                     className="flex-fill text-sm-center nav-link white-font d-inline"
-                    href="#"
+                    to="/muenster"
                   >
                     Münster
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="flex-fill text-sm-center nav-link white-font d-inline"
-                    href="#"
+                    to="/barcelona"
                   >
                     Barcelona
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="flex-fill text-sm-center nav-link white-font d-inline"
-                    href="#"
+                    to="/copenhagen"
                   >
                     Copenhagen
-                  </a>
+                  </Link>
                 </div>
               </nav>
             </div>

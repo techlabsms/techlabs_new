@@ -35,10 +35,10 @@ class muenster extends Component {
                       Next Batch 01.10.2019
                     </p>
 
-                    <a className="btn btn-primary" href="#">
+                    <a className="btn btn-primary" href="/">
                       Apply now
                     </a>
-                    <a className="btn btn-secondary" href="#">
+                    <a className="btn btn-secondary" href="/">
                       Contact us
                     </a>
                   </div>
@@ -95,7 +95,7 @@ class muenster extends Component {
                     <img
                       className="card-img"
                       src={article}
-                      alt="testimonial-image"
+                      alt="testimonial"
                     />
 
                     <div className="row mt-3">

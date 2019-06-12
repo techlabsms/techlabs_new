@@ -26,6 +26,7 @@ class Position extends Component {
             <a
               className="locations--hero-btn"
               onClick={() => this.toggleVisibilty()}
+              href="/"
             >
               <img src={arrowDown} alt="locations" />
             </a>
@@ -35,7 +36,7 @@ class Position extends Component {
           <div className="row">
             <div className="col-12 mt-3">
               <p>{jobDescription}</p>
-              <a className="btn btn-primary mt-3" href="#">
+              <a className="btn btn-primary mt-3" href="/">
                 Apply now
               </a>
             </div>

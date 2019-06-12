@@ -18,7 +18,7 @@ const Navbar = () => {
             <img src={logo} className="tl-logo" alt="tl-logo" />
           </Link>
           <a href="/career" className="hire-button">
-            👋 we're hiring
+            <span role="img" aria-label="waving hand">👋</span> we're hiring
           </a>
           <button
             className="navbar-toggler"
@@ -68,7 +68,7 @@ const Navbar = () => {
                     Discover our Locations
                   </Link>
                   <Link className="dropdown-item dropdown-item-corr" to="/">
-                    branch it 🔥
+                    branch it <span role="img" aria-label="fire">🔥</span>
                   </Link>
                 </div>
               </li>
@@ -97,7 +97,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="/">
                   Blog
                 </a>
               </li>
@@ -119,7 +119,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="/">
                   Program
                 </a>
               </li>

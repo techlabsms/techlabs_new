@@ -8,7 +8,6 @@ import LocationCard from "../components/LocationCard"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
-import MUC from "../assets/loc-muc.svg"
 import muenster from "../assets/muenster.jpg"
 import LocationCardDefault from "../components/LocationCardDefault"
 
@@ -100,7 +99,7 @@ class Locations extends Component {
               </div>
 
               <div className="row">
-                {filteredLocations.length == 0 ? (
+                {filteredLocations.length === 0 ? (
                   <LocationCardDefault />
                 ) : (
                   filteredLocations.map(location => (
