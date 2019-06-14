@@ -27,7 +27,7 @@ class muenster extends Component {
             <section>
               <div className="location-hero-ms location-hero">
                 <div>
-                  <div className="col-md-7 col-lg-5 border-0 my-5 p-5 location-card">
+                  <div className="col-md-9 col-lg-5 border-0 my-5 p-5 location-card">
                     <h1 className="location-title">
                       <img src={MS} alt="" /> Muenster
                     </h1>
@@ -35,10 +35,10 @@ class muenster extends Component {
                       Next Batch 01.10.2019
                     </p>
 
-                    <a className="btn btn-primary" href="/">
+                    <a className="btn btn-primary mt-3 d-inline" href="/">
                       Apply now
                     </a>
-                    <a className="btn btn-secondary" href="/">
+                    <a className="btn btn-secondary mt-3 d-inline" href="/">
                       Contact us
                     </a>
                   </div>
@@ -52,8 +52,8 @@ class muenster extends Component {
                 </div>
               </div>
               <div className="row py-5">
-                <div className="col-3" />
-                <div className="col-9 text-right">
+                <div className="col-sm-0 col-md-3" />
+                <div className="col-sm-12 col-md-9 text-right">
                   <img src={ImgTwo} alt="" className="muenster--img" />
                 </div>
               </div>
@@ -61,7 +61,7 @@ class muenster extends Component {
 
             <section className="py-5">
               <div className="row">
-                <div className="col-sm-12 col-md-6">
+                <div className="col-sm-12 col-md-12 col-lg-6 text-left">
                   <img src={GIC} alt="" className="muenster--img" />
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 text-left">

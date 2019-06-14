@@ -1,28 +1,15 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 
 module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-markdown-pages`,
-    //   options: {
-    //     path: `.src/blog-artikel`,
-    //     templatePath: `${__dirname}/src/templates`,
-    //     template: "default",
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `blog-artikel`,
-    //     path: `${__dirname}/src/blog-artikel`,
-    //   },
-    // },
-    // `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+       spaceId: `zb5zx2adqx5t`,
+       accessToken: `920E3JZQNSjINbGuuNGDFOZ1n08Y1s4WEyvSysjgGO4`
+      }
+    },
+    `@contentful/gatsby-transformer-contentful-richtext`,
   ],
 }

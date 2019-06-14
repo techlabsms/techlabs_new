@@ -82,10 +82,10 @@ class index extends React.Component {
                     , you will learn code and become a Digital Shaper yourself.
                     Discover TechLabs now.
                   </p>
-                  <Link className="btn btn-primary" to="/locations">
+                  <Link className="btn btn-primary d-inline" to="/locations">
                     Locations
                   </Link>
-                  <Link className="btn btn-secondary" to="/program">
+                  <Link className="btn btn-secondary d-inline" to="/program">
                     Program
                   </Link>
                 </div>
