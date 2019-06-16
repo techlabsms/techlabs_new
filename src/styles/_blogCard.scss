@@ -1,3 +1,9 @@
+// Utilities
+@import "./variables";
+@import "./animations";
+@import "./footer";
+@import './position';
+
 .blog--card {
   background: #ffffff;
   box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
@@ -9,4 +15,13 @@
   transition: 0.3s ease-in-out;
   transform-origin: bottom;
   min-height: 200px;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
 }

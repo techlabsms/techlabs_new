@@ -7,7 +7,6 @@ import BlogCard from "../components/BlogCard"
 class blog extends Component {
   render() {
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
-
     return (
       <div>
         <Navbar />
@@ -37,6 +36,11 @@ export const pageQuery = graphql`
           readTime
           authorName
           slug
+          postImg{
+            file{
+              url
+            }
+          }
         }
       }
     }
