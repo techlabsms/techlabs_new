@@ -33,9 +33,11 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          id
           readTime
           authorName
           slug
+          abstract
           postImg{
             file{
               url

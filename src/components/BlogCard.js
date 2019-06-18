@@ -7,7 +7,7 @@ import "../styles/_blogCard.scss"
 const BlogCard = ({ article }) => {
   return (
     <div className="col-md-12 mt-3">
-      <Link className="link">
+      <Link className="link" to={`/blog/${article.slug}`}>
         <div className="blog--card">
           <div className="row mt-3">
             <div className="col-sm-12 col-lg-8">
@@ -17,7 +17,7 @@ const BlogCard = ({ article }) => {
                 </h3>
               </div>
               <div className="row ml-1">
-                <div className="col-3">
+                <div className="col-4">
                   <p className="ml-3">
                     <img src={clock} alt="clock" className="mr-3" />
                     {article.readTime}min read
@@ -38,22 +38,18 @@ const BlogCard = ({ article }) => {
               </div>
               <div className="row">
                 <div className="col-10 ml-2">
-                  <p className="ml-3">{article.slug}...</p>
+                  <p className="ml-3">{article.abstract}...</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 text-center d-none d-lg-block m-auto">
               {article.postImg != null ? (
-                <img
-                  src={`${article.postImg.file.url}?w=200&h=204`}
-                  alt="blog"
-                />
+                  <img
+                    src={`${article.postImg.file.url}?w=200&h=204`}
+                    alt="blog"
+                  />
               ) : (
-                <img
-                  src={techlabs}
-                  alt="blog"
-                  width="200"
-                />
+                <img src={techlabs} alt="blog" width="200" />
               )}
             </div>
           </div>
