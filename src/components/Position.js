@@ -26,7 +26,6 @@ class Position extends Component {
             <a
               className="locations--hero-btn"
               onClick={() => this.toggleVisibilty()}
-              href="/"
             >
               <img src={arrowDown} alt="locations" />
             </a>
