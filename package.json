@@ -32,7 +32,8 @@
     "react-helmet": "^5.2.1",
     "react-insta-stories": "^1.5.1",
     "react-overdrive": "0.0.10",
-    "react-transition-group": "^4.1.1"
+    "react-transition-group": "^4.1.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "prettier": "^1.17.1"

@@ -13,6 +13,7 @@ import wn from "../assets/wn.svg"
 import { Helmet } from "react-helmet"
 import Position from "../components/Position"
 
+
 class muenster extends Component {
   render() {
     return (
@@ -92,11 +93,7 @@ class muenster extends Component {
 
                 <div className="col-6 ">
                   <div className="locations--card w-50">
-                    <img
-                      className="card-img"
-                      src={article}
-                      alt="testimonial"
-                    />
+                    <img className="card-img" src={article} alt="testimonial" />
 
                     <div className="row mt-3">
                       <div className="col-8 ">
@@ -132,12 +129,12 @@ class muenster extends Component {
                     jobTitle="Full Stack Web Developer"
                     jobDescription="Cillum in reprehenderit magna sit. Duis incididunt ex magna deserunt mollit aliquip consectetur in culpa ut reprehenderit incididunt mollit. Dolor ex ullamco sint duis quis proident elit adipisicing ullamco deserunt pariatur duis. Exercitation officia ipsum incididunt duis labore ullamco sit qui amet anim cupidatat."
                   />
-                  <Position 
-                    emoji="📊"     
+                  <Position
+                    emoji="📊"
                     jobTitle="Sales Coordinator"
-                    jobDescription="Deserunt anim occaecat proident mollit ullamco esse velit minim. Culpa duis laborum mollit laboris. Velit mollit laboris nulla ad eu laborum veniam aliquip voluptate esse velit. Eu proident sunt Lorem fugiat nulla ex."             
+                    jobDescription="Deserunt anim occaecat proident mollit ullamco esse velit minim. Culpa duis laborum mollit laboris. Velit mollit laboris nulla ad eu laborum veniam aliquip voluptate esse velit. Eu proident sunt Lorem fugiat nulla ex."
                   />
-                  <Position/>
+                  <Position />
                 </div>
               </div>
             </section>
