@@ -22,6 +22,7 @@ import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 
 
+
 class index extends React.Component {
   state = {
     testimonials: [
@@ -45,24 +46,29 @@ class index extends React.Component {
       },
     ],
     number: 0,
+    inProp: true
   }
   render() {
-    const { testimonials, number } = this.state
+    const { testimonials, number, inProp } = this.state
     return (
       <>
-
         <div className="container-fluid">
           <Navbar />
 
           <section className="promo">
             <div className="container center">
               <p className="no-margin-block">
-                <span role="img" aria-label="fire">🔥</span> You can currently apply for a spot in the next starting batch
-                in{" "}
+                <span role="img" aria-label="fire">
+                  🔥
+                </span>{" "}
+                You can currently apply for a spot in the next starting batch in{" "}
                 <a className="" href="/copenhagen">
                   Copenhagen
                 </a>{" "}
-                & <a href="/barcelona">Barcelona</a><span role="img" aria-label="fire">🔥</span>
+                & <a href="/barcelona">Barcelona</a>
+                <span role="img" aria-label="fire">
+                  🔥
+                </span>
               </p>
             </div>
           </section>
@@ -249,14 +255,14 @@ class index extends React.Component {
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <div className="testimonial-card">
-                    <img
-                      className="card-img"
-                      src={testimonials[number].image}
-                      alt="testimonial"
-                    />
-                    <p className="text-muted mt-3 pl-3 pr-3">
-                      {testimonials[number].text}
-                    </p>
+                      <img
+                        className="card-img"
+                        src={testimonials[number].image}
+                        alt="testimonial"
+                      />
+                      <p className="text-muted mt-3 pl-3 pr-3">
+                        {testimonials[number].text}
+                      </p>
                     <div className="row align-content-end mt-3">
                       <div className="col-md-6 col-5 col-lg-5 col-sm-5">
                         <span className="card-discover pl-3">
@@ -264,32 +270,32 @@ class index extends React.Component {
                         </span>
                       </div>
                       <div className="col-md-6 text-right col-6 col-lg-6 col-sm-7">
-                          <img
-                            src={Arrow}
-                            alt="leftArrow"
-                            className="card-leftArrow"
-                            onClick={() =>
-                              this.setState({
-                                number:
-                                  number <= 0
-                                    ? testimonials.length - 1
-                                    : number - 1,
-                              })
-                            }
-                          />
-                          <img
-                            src={Arrow}
-                            alt="RightArrow"
-                            className="card-rightArrow"
-                            onClick={() =>
-                              this.setState({
-                                number:
-                                  number >= testimonials.length - 1
-                                    ? 0
-                                    : number + 1,
-                              })
-                            }
-                          />
+                        <img
+                          src={Arrow}
+                          alt="leftArrow"
+                          className="card-leftArrow"
+                          onClick={() =>
+                            this.setState({
+                              number:
+                                number <= 0
+                                  ? testimonials.length - 1
+                                  : number - 1,
+                            })
+                          }
+                        />
+                        <img
+                          src={Arrow}
+                          alt="RightArrow"
+                          className="card-rightArrow"
+                          onClick={() =>
+                            this.setState({
+                              number:
+                                number >= testimonials.length - 1
+                                  ? 0
+                                  : number + 1,
+                            })
+                          }
+                        />
                       </div>
                     </div>
                   </div>
@@ -329,7 +335,12 @@ class index extends React.Component {
                   <ul className="list-inline ml-4 mt-5">
                     <li className="d-flex mb-4">
                       <div>
-                        <h3><span role="img" aria-label="pin">📍</span> Meetups</h3>
+                        <h3>
+                          <span role="img" aria-label="pin">
+                            📍
+                          </span>{" "}
+                          Meetups
+                        </h3>
                         <p className="review">
                           Using our Piper Assistant application, you can move
                           your data to be stored our decentralized network with
@@ -339,7 +350,12 @@ class index extends React.Component {
                     </li>
                     <li className="d-flex mb-4">
                       <div>
-                        <h3><span role="img" aria-label="star">🌟</span> Workshops</h3>
+                        <h3>
+                          <span role="img" aria-label="star">
+                            🌟
+                          </span>{" "}
+                          Workshops
+                        </h3>
                         <p>
                           TechLabs helps to spur innovation by organizing
                           workshops with our renowned partners. In these
@@ -351,7 +367,12 @@ class index extends React.Component {
                     </li>
                     <li className="d-flex mb-4">
                       <div>
-                        <h3><span role="img" aria-label="stars">✨</span> Socials</h3>
+                        <h3>
+                          <span role="img" aria-label="stars">
+                            ✨
+                          </span>{" "}
+                          Socials
+                        </h3>
                         <p className="review">
                           As with all innovative technologies, sometimes
                           unpredictable things willl happen, and you can always
@@ -384,7 +405,10 @@ class index extends React.Component {
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 max-lengther">
                     <h1 className="mb-4">
-                      <span role="img" aria-label="waving hand">👋</span> Get a personal <br /> learning path
+                      <span role="img" aria-label="waving hand">
+                        👋
+                      </span>{" "}
+                      Get a personal <br /> learning path
                     </h1>
                     <p>
                       <span className="hashtag">
@@ -406,7 +430,10 @@ class index extends React.Component {
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
                     <h1 className="mb-4">
-                      <span role="img" aria-label="biceps">💪</span> Build your own <br /> tech project
+                      <span role="img" aria-label="biceps">
+                        💪
+                      </span>{" "}
+                      Build your own <br /> tech project
                     </h1>
                     <p>
                       Choose a project idea that you find interesting and work
@@ -428,7 +455,12 @@ class index extends React.Component {
                     />
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 max-lengther">
-                    <h1 className="mb-4"><span role="img" aria-label="fire">🔥</span> Shape your career path</h1>
+                    <h1 className="mb-4">
+                      <span role="img" aria-label="fire">
+                        🔥
+                      </span>{" "}
+                      Shape your career path
+                    </h1>
                     <p>
                       If you want to{" "}
                       <span className="hashtag">
@@ -450,7 +482,12 @@ class index extends React.Component {
                     />
                   </div>
                   <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
-                    <h1 className="mb-4"><span role="img" aria-label="guy behind laptop">👨‍💻</span> Learn with the community </h1>
+                    <h1 className="mb-4">
+                      <span role="img" aria-label="guy behind laptop">
+                        👨‍💻
+                      </span>{" "}
+                      Learn with the community{" "}
+                    </h1>
                     <p>
                       In case you have any question during your learning journey
                       or project work,
@@ -458,7 +495,10 @@ class index extends React.Component {
                         our community is always interested in discussing tech
                         and solving problems
                       </span>
-                      and our mentors are happy to help you out! <span role="img" aria-label="hands">🙌</span>
+                      and our mentors are happy to help you out!{" "}
+                      <span role="img" aria-label="hands">
+                        🙌
+                      </span>
                     </p>
                   </div>
                 </div>

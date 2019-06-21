@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 
-class program extends Component {
+class dataScience extends Component {
     render() {
         return (
             <div>
-            <Navbar/>
-                Program
+                <Navbar/>
+                dataScience
             </div>
         );
     }
 }
 
-export default program;
+export default dataScience;

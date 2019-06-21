@@ -5,45 +5,25 @@ import locationsImg from "../assets/locations.png"
 import arrowDown from "../assets/arrowDown.svg"
 import "../styles/_main.scss"
 import LocationCard from "../components/LocationCard"
-import MS from "../assets/loc-ms.svg"
-import CPH from "../assets/loc-cph.svg"
-import BCN from "../assets/loc-bcn.svg"
-import muenster from "../assets/muenster.jpg"
+import { graphql } from "gatsby"
+import get from "lodash/get"
 import LocationCardDefault from "../components/LocationCardDefault"
 
 class Locations extends Component {
   constructor() {
     super()
     this.state = {
-      locations: [
-        {
-          city: "Muenster",
-          imgTop: muenster,
-          icon: MS,
-        },
-        {
-          city: "Barcelona",
-          imgTop: muenster,
-          icon: BCN,
-        },
-        {
-          city: "Copenhagen",
-          imgTop: muenster,
-          icon: CPH,
-        },
-        {
-          city: "Munich",
-          imgTop: muenster,
-          icon: MS,
-        },
-      ],
       search: "",
     }
   }
   render() {
-    const { locations, search } = this.state
+    const { search } = this.state
+
+    const locations = get(this, "props.data.allContentfulLocationPage.edges")
+
+    //Filtering the locations for a fake search 
     const filteredLocations = locations.filter(location => {
-      return location.city.toLowerCase().includes(search.toLowerCase())
+      return location.node.heading.toLowerCase().includes(search.toLowerCase())
     })
     return (
       <div className="locations">
@@ -104,9 +84,9 @@ class Locations extends Component {
                 ) : (
                   filteredLocations.map(location => (
                     <LocationCard
-                      imgTop={location.imgTop}
-                      city={location.city}
-                      icon={location.icon}
+                      imgTop={location.node.image.file.url}
+                      city={location.node.heading}
+                      icon={location.node.icon.file.url}
                     />
                   ))
                 )}
@@ -122,3 +102,25 @@ class Locations extends Component {
 }
 
 export default Locations
+
+export const pageQuery = graphql`
+  query LocationPageQuery {
+    allContentfulLocationPage {
+      edges {
+        node {
+          heading
+          image {
+            file {
+              url
+            }
+          }
+          icon {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`

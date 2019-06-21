@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 
-class program extends Component {
+class journey extends Component {
     render() {
         return (
             <div>
-            <Navbar/>
-                Program
+                <Navbar/>
+                journey
             </div>
         );
     }
 }
 
-export default program;
+export default journey;

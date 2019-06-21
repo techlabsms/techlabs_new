@@ -84,13 +84,13 @@ const Navbar = () => {
                   <Link className="dropdown-item-corr dropdown-item" to="/journey">
                     Your Journey
                   </Link>
-                  <Link className="dropdown-item-corr dropdown-item" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/web">
                     Web Development
                   </Link>
-                  <Link className="dropdown-item-corr dropdown-item" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/dataScience">
                     Data Science
                   </Link>
-                  <Link className="dropdown-item-corr dropdown-item" to="/">
+                  <Link className="dropdown-item-corr dropdown-item" to="/ai">
                     Artificial Intelligence
                   </Link>
                 </div>

@@ -479,3 +479,18 @@ body {
   transform-origin: bottom;
   min-height: 600px;
 }
+
+.carousel-enter {
+  opacity: 0;
+}
+.carousel-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.carousel-exit {
+  opacity: 1;
+}
+.carousel-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
