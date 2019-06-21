@@ -9,7 +9,7 @@ const LocationCard = ({ imgTop, city, icon }) => {
         <div className="locations--card">
           <img className="card-img" src={imgTop} alt="location group" />
           <div className="row mt-3">
-            <div className="col-sm-7 col-md-9">
+            <div className="col-8">
               <img
                 src={pin}
                 alt="placemark"
@@ -19,7 +19,7 @@ const LocationCard = ({ imgTop, city, icon }) => {
                 {city}
               </h3>
             </div>
-            <div className="col-sm-4 col-md-4 text-right">
+            <div className="col-4 text-right">
               <img src={icon} alt="city" className="locations--icon mr-4 d-inline-block " />
             </div>
           </div>
