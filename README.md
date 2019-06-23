@@ -28,4 +28,6 @@ We use Contentful as a CMS (Content Management System). There you can edit the l
 
 ## 🐛 Bugs and issues
 
-You found something that has to be different? Something is broken? Please report it here: <a href="www.google.de" style="padding: 10px 20px; color: white; background-color: #fb1d5c; border-radius: 30px;">Report issue</a>
+You found something that has to be different? Something is broken? Please report it here: <a href="www.google.de">Report issue</a>
+
+
