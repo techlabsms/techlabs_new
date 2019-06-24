@@ -58,13 +58,13 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">Terms</h5>
-                  <a className="foot-a" href="/about">
+                  <Link className="foot-a" to="/privacyPolicy">
                     Privacy Policy
-                  </a>
+                  </Link>
                   <br />
-                  <a className="foot-a" href="/faq">
+                  <Link className="foot-a" to="/imprint">
                     Imprint
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
