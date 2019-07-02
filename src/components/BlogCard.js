@@ -5,6 +5,7 @@ import techlabs from "../assets/tl-icon-whitebg.svg"
 import "../styles/_blogCard.scss"
 
 const BlogCard = ({ article }) => {
+  
   return (
     <div className="col-md-12 mt-3">
       <Link className="link" to={`/blog/${article.slug}`}>
