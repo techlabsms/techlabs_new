@@ -28,6 +28,6 @@ We use Contentful as a CMS (Content Management System). There you can edit the l
 
 ## 🐛 Bugs and issues
 
-You found something that has to be different? Something is broken? Please report it here: <a href="www.google.de">Report issue</a>
+You found something that has to be different? Something is broken? Please report it here: <a href="https://github.com/techlabsms/techlabs_new/issues">Report issue</a>
 
 

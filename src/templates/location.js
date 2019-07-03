@@ -13,6 +13,7 @@ import Logo from "../assets/tl-logo.svg"
 import BlogCard from "../components/BlogCard"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
+import { Link } from 'gatsby'
 
 class location extends Component {
   render() {
@@ -38,7 +39,9 @@ class location extends Component {
                   </p>
                   {location.isOpen ? (
                     <div>
-                      <a className="btn btn-primary mt-3 d-inline" href="/">Apply now</a>
+                      <a className="btn btn-primary mt-3 d-inline" href="/">
+                        Apply now
+                      </a>
                       <a
                         className="btn btn-secondary mt-3 d-inline"
                         href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
@@ -50,7 +53,7 @@ class location extends Component {
                     <div>
                       <a
                         className="btn btn-secondary mt-3 d-inline"
-                        href="mailto:info@techlabs.org?subject=Kontaktanfrage%TechLabs.org"
+                        href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
                       >
                         Contact us
                       </a>
@@ -190,6 +193,11 @@ class location extends Component {
               question="This should be a question"
               answer="Esse ex magna aute eu labore. Qui id consectetur esse sint tempor consectetur tempor magna. Veniam elit velit cillum magna id nisi tempor laboris sit elit veniam consequat ex ea."
             />
+            <div className="text-center mt-5">
+              <Link className="btn btn-primary" to="/faq">
+                More Questions?
+              </Link>
+            </div>
           </Faq>
         </section>
 

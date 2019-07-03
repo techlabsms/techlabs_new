@@ -1,0 +1,18 @@
+@import "./variables";
+
+.faqQuestion {
+  &--icon {
+    color: $color-p;
+
+    transition: all 0.2s ease;
+  }
+
+  &--icon:hover {
+    color: black;
+    transform: scale(1.1);
+  }
+
+  &--rotate {
+    transform: rotate(90deg);
+  }
+}

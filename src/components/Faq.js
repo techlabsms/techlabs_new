@@ -1,5 +1,6 @@
 import React from "react"
 
+
 const Faq = (props) => {
   return (
     <>
@@ -10,7 +11,7 @@ const Faq = (props) => {
             <div className="col">
               {props.children}
             </div>
-          </div>
+          </div> 
         </div>
       </section>
     </>

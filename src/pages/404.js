@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Navbar from "../components/Navbar"
+import Footer from '../components/Footer'
 import { Link } from "gatsby"
 import "../styles/_404.scss"
 
@@ -54,6 +55,7 @@ class NotFound extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </>
     )
   }
