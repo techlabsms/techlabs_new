@@ -45,15 +45,15 @@ const Navbar = () => {
                   Locations
                 </Link>
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/muenster">
+                  <Link className="dropdown-item" to="/location/Muenster">
                     <img src={MS} className="nav-loc-icon" alt="loc-ms" />
                     Muenster
                   </Link>
-                  <Link className="dropdown-item" to="/barcelona">
+                  <Link className="dropdown-item" to="/location/Barcelona">
                     <img src={BCN} className="nav-loc-icon" alt="loc-bcn" />
                     Barcelona
                   </Link>
-                  <Link className="dropdown-item" href="/copenhagen">
+                  <Link className="dropdown-item" to="/location/Copenhagen">
                     <img src={CPH} className="nav-loc-icon" alt="loc-cph" />
                     Copenhagen
                   </Link>
