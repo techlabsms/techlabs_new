@@ -164,6 +164,12 @@ body {
   cursor: pointer;
 }
 
+.btn-slack:focus{
+  outline: none;
+}
+
+
+
 .partner-palette {
   box-shadow: 0 15px 40px -13px rgba(15, 18, 63, 0.2) !important;
   margin-left: 0px !important;
