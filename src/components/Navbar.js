@@ -7,7 +7,7 @@ import BCN from "../assets/loc-bcn.svg"
 import SLACK from "../assets/slack-icon.svg"
 import Headroom from "react-headroom"
 import { Link } from "gatsby"
-import 'jquery'
+import "jquery"
 
 const Navbar = () => {
   return (
@@ -18,7 +18,10 @@ const Navbar = () => {
             <img src={logo} className="tl-logo" alt="tl-logo" />
           </Link>
           <a href="/career" className="hire-button">
-            <span role="img" aria-label="waving hand">👋</span> we're hiring
+            <span role="img" aria-label="waving hand">
+              👋
+            </span>{" "}
+            we're hiring
           </a>
           <button
             className="navbar-toggler"
@@ -42,33 +45,30 @@ const Navbar = () => {
                   Locations
                 </Link>
                 <div className="dropdown-menu">
-                  <Link
-                    className="dropdown-item"
-                    to="/muenster"
-                  >
+                  <Link className="dropdown-item" to="/muenster">
                     <img src={MS} className="nav-loc-icon" alt="loc-ms" />
                     Muenster
                   </Link>
-                  <Link
-                    className="dropdown-item"
-                    to="/barcelona"
-                  >
+                  <Link className="dropdown-item" to="/barcelona">
                     <img src={BCN} className="nav-loc-icon" alt="loc-bcn" />
                     Barcelona
                   </Link>
-                  <Link
-                    className="dropdown-item"
-                    href="/copenhagen"
-                  >
+                  <Link className="dropdown-item" href="/copenhagen">
                     <img src={CPH} className="nav-loc-icon" alt="loc-cph" />
                     Copenhagen
                   </Link>
                   <div class="dropdown-divider" />
-                  <Link className="dropdown-item dropdown-item-corr" to="/locations">
+                  <Link
+                    className="dropdown-item dropdown-item-corr"
+                    to="/locations"
+                  >
                     Discover our Locations
                   </Link>
                   <Link className="dropdown-item dropdown-item-corr" to="/">
-                    branch it <span role="img" aria-label="fire">🔥</span>
+                    branch it{" "}
+                    <span role="img" aria-label="fire">
+                      🔥
+                    </span>
                   </Link>
                 </div>
               </li>
@@ -81,13 +81,19 @@ const Navbar = () => {
                   Program
                 </Link>
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item-corr dropdown-item" to="/journey">
+                  <Link
+                    className="dropdown-item-corr dropdown-item"
+                    to="/journey"
+                  >
                     Your Journey
                   </Link>
                   <Link className="dropdown-item-corr dropdown-item" to="/web">
                     Web Development
                   </Link>
-                  <Link className="dropdown-item-corr dropdown-item" to="/dataScience">
+                  <Link
+                    className="dropdown-item-corr dropdown-item"
+                    to="/dataScience"
+                  >
                     Data Science
                   </Link>
                   <Link className="dropdown-item-corr dropdown-item" to="/ai">
@@ -102,11 +108,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  <button className="btn-slack">
+                <button className="btn-slack">
+                  <a href="https://ms-techlabs.slack.com">
                     <img src={SLACK} className="slack-icon" alt="slack" />
-                  </button>
-                </Link>
+                  </a>
+                </button>
               </li>
             </ul>
 
