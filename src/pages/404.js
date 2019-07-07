@@ -26,7 +26,7 @@ class NotFound extends Component {
             <div className="row mt-5">
               <div className="col">
                 <h3>
-                  <span role="img">🤓 </span>Definiton:
+                  <span role="img" aria-label="emoji">🤓 </span>Definiton:
                 </h3>
               </div>
             </div>

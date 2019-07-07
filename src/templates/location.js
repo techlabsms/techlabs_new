@@ -9,7 +9,6 @@ import {
   faFacebookSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
-import Logo from "../assets/tl-logo.svg"
 import BlogCard from "../components/BlogCard"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"

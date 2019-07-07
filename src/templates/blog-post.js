@@ -4,7 +4,6 @@ import get from "lodash/get"
 import techlabs from "../assets/tl-icon-whitebg.svg"
 import clock from "../assets/clock.svg"
 import Footer from "../components/Footer"
-import Overdrive from "react-overdrive"
 
 class BlogPostTemplate extends Component {
   render() {

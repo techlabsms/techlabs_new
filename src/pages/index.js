@@ -46,10 +46,10 @@ class index extends React.Component {
       },
     ],
     number: 0,
-    inProp: true
+    
   }
   render() {
-    const { testimonials, number, inProp } = this.state
+    const { testimonials, number } = this.state
     return (
       <>
         <div className="container-fluid">

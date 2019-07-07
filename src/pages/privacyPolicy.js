@@ -30,7 +30,7 @@ const privacyPolicy = () => {
           Management-Teams Mitglied
         </h4>{" "}
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           Zwecke und Rechtsgrundlagen der Datenverarbeitung
         </h5>
         <br />
@@ -74,7 +74,7 @@ const privacyPolicy = () => {
         dessen Abwicklung erforderlich. <br />
         <br />
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           Speicherung und Löschung deiner Daten
         </h5>
         <br />
@@ -85,7 +85,7 @@ const privacyPolicy = () => {
         ist. <br />
         <br />
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           Weitergabe von Daten an Dritte{" "}
         </h5>
         <br />
@@ -98,7 +98,7 @@ const privacyPolicy = () => {
           Datenverarbeitung bei Teilnahme am Tech-Labs Digital Shaper-Programm
         </h4>
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           Digital Shaper Programm
         </h5>
         <br />
@@ -133,7 +133,7 @@ const privacyPolicy = () => {
         dessen Abwicklung erforderlich. <br />
         <br />
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           {" "}
           Fotos bei Social Media Auftritten
         </h5>
@@ -148,7 +148,7 @@ const privacyPolicy = () => {
         <br />
         <br />
         <br />
-        <h5 class="margin-b-0" class="margin-b-0">
+        <h5 className="margin-b-0">
           Speicherung und Löschung deiner Daten aus dem Digital Shaper Programm{" "}
         </h5>{" "}
         <br />
