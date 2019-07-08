@@ -60,11 +60,11 @@ class index extends React.Component {
               <p className="no-margin-block">
                 <span role="img" aria-label="fire">
                   🔥
-                </span>{" "}
+                </span>
                 You can currently apply for a spot in the next starting batch in{" "}
                 <a className="" href="/copenhagen">
                   Copenhagen
-                </a>{" "}
+                </a>
                 & <a href="/barcelona">Barcelona</a>
                 <span role="img" aria-label="fire">
                   🔥
@@ -195,11 +195,10 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">learning tracks</p>
                         <p className="text-muted">
-                          You can currently choose between learning tracks in{" "}
+                          You can currently choose between learning tracks in
                           <br />
                           <span className="hashtag">
-                            {" "}
-                            AI, Web Development and Data Science.{" "}
+                            AI, Web Development and Data Science.
                           </span>
                         </p>
                         <span className="card-discover">
@@ -214,7 +213,7 @@ class index extends React.Component {
                         <h1 className="card-title">300+</h1> <br />
                         <p className="card-subtitle">community members</p>
                         <p className="text-muted">
-                          Our growing community connects over{" "}
+                          Our growing community connects over
                           <span className="hashtag">
                             300 motivated people interested in learning tech.
                           </span>
@@ -375,7 +374,7 @@ class index extends React.Component {
                         </h3>
                         <p className="review">
                           As with all innovative technologies, sometimes
-                          unpredictable things willl happen, and you can always
+                          unpredictable things will happen, and you can always
                           count on our support to solve issues for you.
                         </p>
                       </div>

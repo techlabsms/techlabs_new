@@ -20,7 +20,7 @@ const Navbar = () => {
           <a href="/career" className="hire-button">
             <span role="img" aria-label="waving hand">
               👋
-            </span>{" "}
+            </span>
             we're hiring
           </a>
           <button
@@ -65,7 +65,7 @@ const Navbar = () => {
                     Discover our Locations
                   </Link>
                   <Link className="dropdown-item dropdown-item-corr" to="/">
-                    branch it{" "}
+                    branch it
                     <span role="img" aria-label="fire">
                       🔥
                     </span>

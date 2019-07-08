@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Stories from "react-insta-stories"
+import PIC1 from '../assets/photos/IMG_4012-1.jpg';
 
 
 class TLStory extends Component {
