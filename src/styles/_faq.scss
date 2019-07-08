@@ -1,0 +1,12 @@
+.faq {
+  &--search {
+    background: #ffffff;
+    box-shadow: 0 12px 42px -10px rgba(30, 49, 71, 0.2);
+    font-size: 20px;
+    padding: 0.5em 3em;
+    border: none;
+    color: #969696;
+    background: url(../assets/lupe.svg) no-repeat scroll 3px 3px;
+    background-position: center left 12px;
+  }
+}
