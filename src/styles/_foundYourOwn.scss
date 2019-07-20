@@ -1,0 +1,44 @@
+@import "./variables";
+
+.foundYourOwn {
+  &--heading {
+    line-height: 72px;
+    font-size: 48px;
+  }
+
+  &--highlight {
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    background-color: #fee9ef;
+    color: $color-p;
+  }
+
+  &--subtitle {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &--list {
+    color: $color-gl;
+    font-size: 20px;
+    li {
+      list-style-image: url("../assets/check-mark.png");
+    }
+  }
+  &--cta {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    background-color: #fee9ef;
+    color: $color-p;
+    width: 80%;
+    text-align: center;
+  }
+
+  &--card-text {
+    font-size: 20px;
+    line-height: 28px;
+    color: #8b9fa8;
+    text-align: justify;
+  }
+}
