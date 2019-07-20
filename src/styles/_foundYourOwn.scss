@@ -1,6 +1,10 @@
 @import "./variables";
 
 .foundYourOwn {
+  &-hero {
+    height: 75vh;
+    margin-top: 10vh;
+  }
   &--heading {
     line-height: 72px;
     font-size: 48px;
@@ -25,7 +29,6 @@
     }
   }
   &--cta {
-    font-size: 30px;
     font-weight: bold;
     padding-bottom: 0.5rem !important;
     padding-top: 0.5rem !important;
@@ -33,6 +36,17 @@
     color: $color-p;
     width: 80%;
     text-align: center;
+    &-first {
+      font-size: 30px;
+      font-weight: bold;
+      padding-bottom: 0.1rem !important;
+      padding-top: 0.1rem !important;
+      background-color: #fee9ef;
+      color: $color-p;
+      width: 90%;
+      text-align: center;
+      margin-top: 10px;
+    }
   }
 
   &--card-text {
@@ -40,5 +54,34 @@
     line-height: 28px;
     color: #8b9fa8;
     text-align: justify;
+    span {
+      font-weight: bolder;
+      color: #797d7f;
+    }
+  }
+
+  &--last {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 72px;
+  }
+
+  &--cards {
+    .card {
+      padding: 0 !important;
+    }
+  }
+
+  &--quote{
+    height: 60vh;
+    padding-top: 5%; 
+    .rightArrow{
+      margin-top: 30%;
+      margin-left: -40%;  
+    }
+  }
+
+  &--faq{
+    height: 80vh;
   }
 }
