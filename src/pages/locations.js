@@ -5,9 +5,10 @@ import locationsImg from "../assets/locations.png"
 import arrowDown from "../assets/arrowDown.svg"
 import "../styles/_main.scss"
 import LocationCard from "../components/LocationCard"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import get from "lodash/get"
 import LocationCardDefault from "../components/LocationCardDefault"
+import MAPLOC from '../assets/mapLoc.png'
 
 class Locations extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class Locations extends Component {
 
     const locations = get(this, "props.data.allContentfulLocationPage.edges")
 
-    //Filtering the locations for a fake search 
+    //Filtering the locations for a fake search
     const filteredLocations = locations.filter(location => {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
     })
@@ -90,6 +91,35 @@ class Locations extends Component {
                     />
                   ))
                 )}
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="container py-5">
+              <div className="row">
+                <div className="col">
+                  <div className="card">
+                    <div class="row no-gutters" >
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <h2><span className="highlighted mt-5">Your city</span> is not on the map?</h2>
+                          <p class="locations--card-text mt-5 mr-3 mt-2">
+                            If you are looking to bring TechLabs to your local
+                            community and want to shape the future of education,
+                            reach out! Let’s work together and <span className="locations--bold">build something
+                            great!</span>
+                          </p>
+                          <Link to="/foundYourOwn" className="btn btn-primary mt-5">
+                            More information
+                          </Link>
+                        </div>
+                      </div>
+                      <div class="col-md-6 text-center align-middle">
+                        <img src={MAPLOC} class="card-img pt-4 pr-2" alt="..." />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
