@@ -391,6 +391,16 @@ body {
   margin-bottom: 0.3rem;
 }
 
+.highlighted{
+  font-weight: bold;
+  padding-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  background-color: #fee9ef;
+  color: $color-p;
+  width: 80%;
+  text-align: center;
+}
+
 .img-shadow {
   box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
   border-radius: 8px;
