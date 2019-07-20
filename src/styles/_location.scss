@@ -110,6 +110,16 @@
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
     min-height: 400px;
+
+    .highlight {
+      font-weight: bold;
+      padding-bottom: 0.5rem !important;
+      padding-top: 0.5rem !important;
+      background-color: #fee9ef;
+      color: $color-p;
+      width: 80%;
+      text-align: center;
+    }
   }
 
   &--card:hover {
@@ -120,16 +130,15 @@
 
   &--icon {
     color: black;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 
   &--icon:hover {
     color: $color-p;
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 
-  &--tech{
+  &--tech {
     color: $color-p;
   }
 }
-
