@@ -3,7 +3,7 @@ import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import COMMUNITY from "../assets/photos/code-img.jpg"
 import { Link } from "gatsby"
-import MAP from "../assets/map.png"
+import MAP from "../assets/world.png"
 import PictureOne from "../assets/fyo1.png"
 import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
@@ -44,7 +44,7 @@ class foundYourOwn extends Component {
               </div>
               <div className="col-md-6">
                 <img
-                  className="img-fluid mt-4 mt-md-0 center-padding img-shadow"
+                  className="img-fluid mt-4 mt-md-0 center-padding"
                   src={MAP}
                   alt="commmunity"
                 />
