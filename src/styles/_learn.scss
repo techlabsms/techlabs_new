@@ -1,0 +1,25 @@
+@import './variables';
+
+.learn {
+  &--color {
+    width: 8px;
+    background-color: $color-p;
+    border-radius: 7px;
+    height: 100%;
+  }
+
+  &--card {
+    box-shadow: 0px 0px 40px rgba(30, 49, 71, 0.204409);
+    border-radius: 3px;
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &--card:hover{
+      background-color: $color-p;
+      color: white;
+  }
+}
