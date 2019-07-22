@@ -33,7 +33,7 @@ const ProgrammHero = ({ headingFirst, headingSecond }) => {
                 <img src={arrowDown} alt="locations" />
               </a>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-none d-sm-none d-md-block">
               <div className="card programmHero--card">
                 <h2 className="programmHero--card-heading text-center">
                   {headingFirst} {headingSecond}
