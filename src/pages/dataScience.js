@@ -12,13 +12,6 @@ class dataScience extends Component {
           <ProgrammHero
             headingFirst="Data"
             headingSecond=" Science"
-            intro=" TechLabs is the community that enables you to become a Digital
-                Entrepreneur. Exciting meetups, talks, hackathons, social
-                events, workshops and much more await you. Discover TechLabs
-                now. TechLabs is the community that enables you to become a
-                Digital Entrepreneur. Exciting meetups, talks, hackathons,
-                social events, workshops and much more await you. Discover
-                TechLabs now."
           />
         </div>
         <Footer />
