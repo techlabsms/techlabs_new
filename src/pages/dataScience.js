@@ -6,6 +6,7 @@ import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
 import Partners from '../components/Partners';
+import Projects from '../components/Projects';
 import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
 import dashboard from '../assets/dashboard.png'
@@ -55,6 +56,7 @@ class dataScience extends Component {
           quoteRole="Data Scientist"
           quoteCompanyLogo={accenture}
           />
+          <Projects/>
         </div>
         <Footer />
       </>

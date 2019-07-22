@@ -1,0 +1,20 @@
+@import "./variables";
+
+.projects {
+  &--heading {
+    font-size: 25px;
+    line-height: 31px;
+    color: $color-p;
+    text-align: center;
+  }
+
+  &--highlighted {
+    background-color: $color-background;
+  }
+
+  &--text {
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-gl;
+  }
+}
