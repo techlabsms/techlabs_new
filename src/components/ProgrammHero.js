@@ -4,7 +4,7 @@ import clock from "../assets/clock.png"
 import diploma from "../assets/diploma.png"
 import profile from "../assets/profile.png"
 
-const ProgrammHero = ({ headingFirst, headingSecond, intro }) => {
+const ProgrammHero = ({ headingFirst, headingSecond }) => {
   return (
     <>
       <section className="programmHero--hero">
@@ -20,12 +20,20 @@ const ProgrammHero = ({ headingFirst, headingSecond, intro }) => {
                   {headingSecond}
                 </span>
               </h1>
-              <p className="programmHero--intro mb-5">{intro}</p>
+              <p className="programmHero--intro mb-5">
+                TechLabs is the community that enables you to become a Digital
+                Entrepreneur. Exciting meetups, talks, hackathons, social
+                events, workshops and much more await you. Discover TechLabs
+                now. TechLabs is the community that enables you to become a
+                Digital Entrepreneur. Exciting meetups, talks, hackathons,
+                social events, workshops and much more await you. Discover
+                TechLabs now.
+              </p>
               <a className="locations--hero-btn" href="#locations-techlabs">
                 <img src={arrowDown} alt="locations" />
               </a>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-none d-sm-none d-md-block">
               <div className="card programmHero--card">
                 <h2 className="programmHero--card-heading text-center">
                   {headingFirst} {headingSecond}
@@ -36,7 +44,7 @@ const ProgrammHero = ({ headingFirst, headingSecond, intro }) => {
                     <div className="section-divider" />
                     <div className="row">
                       <div className="col-2">
-                        <img src={clock} alt="clock" className="align-middle"/>
+                        <img src={clock} alt="clock" className="align-middle" />
                       </div>
                       <div className="col-10">
                         <p>
@@ -54,7 +62,11 @@ const ProgrammHero = ({ headingFirst, headingSecond, intro }) => {
                     <div className="section-divider" />
                     <div className="row">
                       <div className="col-2">
-                        <img src={diploma} alt="clock" className="align-middle"/>
+                        <img
+                          src={diploma}
+                          alt="clock"
+                          className="align-middle"
+                        />
                       </div>
                       <div className="col-10">
                         <p>
@@ -71,7 +83,11 @@ const ProgrammHero = ({ headingFirst, headingSecond, intro }) => {
                     <div className="section-divider" />
                     <div className="row">
                       <div className="col-2">
-                        <img src={profile} alt="clock" className="align-middle"/>
+                        <img
+                          src={profile}
+                          alt="clock"
+                          className="align-middle"
+                        />
                       </div>
                       <div className="col-10">
                         <p>Over 250 grads</p>
