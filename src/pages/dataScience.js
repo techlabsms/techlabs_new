@@ -5,9 +5,11 @@ import ProgrammHero from "../components/ProgrammHero"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
+import Partners from '../components/Partners';
 import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
 import dashboard from '../assets/dashboard.png'
+import accenture from '../assets/accenture.png';
 
 class dataScience extends Component {
   render() {
@@ -44,6 +46,14 @@ class dataScience extends Component {
             subheading="Text Text Text Text"
             text="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. "
             image={dashboard}
+          />
+          <Partners 
+          heading="What our partners say"
+          subheading="Text text text" 
+          quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
+          quoteName="Hans Schneider"
+          quoteRole="Data Scientist"
+          quoteCompanyLogo={accenture}
           />
         </div>
         <Footer />
