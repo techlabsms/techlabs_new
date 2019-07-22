@@ -1,0 +1,43 @@
+@import "./variables";
+
+.programmHero {
+  &--hero {
+    background-image: url("../assets/ds_background.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vw;
+  }
+
+  &--heading {
+    font-weight: 500;
+    font-size: 75px;
+    line-height: 85px;
+    color: #fb1d5c !important;
+  }
+
+  &--highlighted {
+    &-first {
+      background-color: $color-background;
+      width: 55%;
+    }
+    &-second {
+      background-color: $color-background;
+      width: 55%;
+    }
+  }
+
+  &--intro {
+    margin-top: 20%;
+    font-size: 20px;
+    line-height: 35px;
+    /* or 175% */
+    text-align: justify;
+    width: 90%;
+    color: #8b9fa8;
+  }
+
+  &--card{
+      margin-top: 60%;
+  }
+}
