@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./animations";
+
+.partner {
+  &--quote {
+    font-size: 30px;
+    line-height: 37px;
+    margin-left: 5%;
+    &-sign {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--quote:hover {
+    transition: 0.5s ease-in;
+    color: $color-p;
+  }
+
+  &--person {
+    line-height: 26px;
+    margin-top: 4%;
+  }
+
+  &--name {
+    font-size: 22px;
+  }
+
+  &--role {
+    color: $color-gl;
+    font-size: 18px;
+  }
+}
