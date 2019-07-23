@@ -35,7 +35,7 @@ const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCo
           <p className="partner--person">
             <span className="partner--name">{quoteName} </span>
             <br />
-            <span className="partner--role">Data Scientist @ </span>
+            <span className="partner--role">{quoteRole} @ </span>
             <span>
               <img src={quoteCompanyLogo} alt="accenture" className="ml-2" />
             </span>

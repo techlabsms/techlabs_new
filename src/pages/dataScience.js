@@ -14,6 +14,8 @@ import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import accenture from "../assets/accenture.png"
+import Charts from "../assets/charts2.png"
+import smartCity from "../assets/smartCity.png"
 
 class dataScience extends Component {
   render() {
@@ -59,9 +61,30 @@ class dataScience extends Component {
             quoteRole="Data Scientist"
             quoteCompanyLogo={accenture}
           />
-          <Projects />
+          <Projects
+            heading="Projects from our participants"
+            subheading="Work on interesting project together with other participants"
+            firstProjectHeading="Churn-Prediction"
+            firstProjectText="The main goal was to identify customers that are likely to resign their mobile phone contracts. Aside from the resign-probabal, the team identified the impact of several variables. "
+            firstProjectImage={Charts}
+            secondProjectHeading="Apartment-Price Prediction"
+            secondProjectText="The project team gathered apartment data through web crawling. They build a model which predicts based on attributes like number of rooms, balcony yes/no or location."
+            secondProjectImage={Charts}
+            thirdProjectHeading="Smart-City"
+            thirdProjectText="Analysis of the bycicle infrastructure in Münster. The team identified bottleneck which might slow down the traffic."
+            thirdProjectImage={smartCity}
+          />
           <CallToAction />
-          <FirstImpression />
+          <FirstImpression
+            heading="Get a first Impression"
+            subheading="Check out our Open Curriculum"
+            firstHeading="Introduction to Data Science with Python"
+            firstImage={dashboard}
+            firstText="Start with our free Track and learn the fundamentals with Python now and see if it’s right for you"
+            secondHeading="Introduction to Data Science with R"
+            secondImage={dashboard}
+            secondText="Start with our free Track and learn the fundamentals with R now and see if it’s right for you"
+          />
           <div className="row mt-5">
             <div className="col">
               <h2>FAQ</h2>
