@@ -5,14 +5,15 @@ import ProgrammHero from "../components/ProgrammHero"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
-import Partners from '../components/Partners';
-import Projects from '../components/Projects';
-import CallToAction from '../components/CallToAction';
-import FirstImpression from '../components/FirstImpression';
+import Partners from "../components/Partners"
+import Projects from "../components/Projects"
+import CallToAction from "../components/CallToAction"
+import FirstImpression from "../components/FirstImpression"
+import FaqQuestion from "../components/FaqQuestion"
 import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
-import dashboard from '../assets/dashboard.png'
-import accenture from '../assets/accenture.png';
+import dashboard from "../assets/dashboard.png"
+import accenture from "../assets/accenture.png"
 
 class dataScience extends Component {
   render() {
@@ -50,17 +51,55 @@ class dataScience extends Component {
             text="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. "
             image={dashboard}
           />
-          <Partners 
-          heading="What our partners say"
-          subheading="Text text text" 
-          quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
-          quoteName="Hans Schneider"
-          quoteRole="Data Scientist"
-          quoteCompanyLogo={accenture}
+          <Partners
+            heading="What our partners say"
+            subheading="Text text text"
+            quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
+            quoteName="Hans Schneider"
+            quoteRole="Data Scientist"
+            quoteCompanyLogo={accenture}
           />
-          <Projects/>
+          <Projects />
           <CallToAction />
           <FirstImpression />
+          <div className="row mt-5">
+            <div className="col">
+              <h2>FAQ</h2>
+              <div className="section-divider" />
+              <p>Do you have more questions?</p>
+              <FaqQuestion
+                question="How can I apply for the Digital Shaper Program?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="What makes me a qualified Applicant?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="How does the application process look like?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="What are the costs for Participants?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="When is the next Application Deadline?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="How can I apply for the Digital Shaper Program?"
+                answer="sdjhfasölfdh"
+              />
+              <FaqQuestion
+                question="Who can I contact if I have any Questions?"
+                answer="sdjhfasölfdh"
+              />
+              <div className="text-center mt-5">
+                <button className="btn btn-primary">More questions?</button>
+              </div>
+            </div>
+          </div>
         </div>
         <Footer />
       </>
