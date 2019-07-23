@@ -55,24 +55,6 @@ class index extends React.Component {
         <div className="container-fluid">
           <Navbar />
 
-          <section className="promo">
-            <div className="container center">
-              <p className="no-margin-block">
-                <span role="img" aria-label="fire">
-                  🔥
-                </span>
-                You can currently apply for a spot in the next starting batch in{" "}
-                <a className="" href="/copenhagen">
-                  Copenhagen
-                </a>
-                & <a href="/barcelona">Barcelona</a>
-                <span role="img" aria-label="fire">
-                  🔥
-                </span>
-              </p>
-            </div>
-          </section>
-
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
