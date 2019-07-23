@@ -1,28 +1,36 @@
 import React from "react"
 import dashboard from "../assets/dashboard.png"
 
-const FirstImpression = () => {
+const FirstImpression = ({
+  heading,
+  subheading,
+  firstHeading,
+  firstImage,
+  firstText,
+  secondHeading,
+  secondImage,
+  secondText,
+}) => {
   return (
     <>
       <div className="row mt-5">
         <div className="col">
-          <h2>Get a first Impression</h2>
+          <h2>{heading}</h2>
           <div className="section-divider" />
-          <p className="basicSection--sub">Check out our Open Curriculum</p>
+          <p className="basicSection--sub">{subheading}</p>
         </div>
       </div>
       <div className="row">
         <div className="col-6 col-md-5">
           <div className="firstImpression--card">
             <h3 className="firstImpression--card-heading text-center">
-              Introduction to Data Science with Python
+             {firstHeading}
             </h3>
             <div className="text-center mt-3">
-              <img src={dashboard} alt="" className="w-50" />
+              <img src={firstImage} alt="" className="w-50" />
             </div>
             <p className="firstImpression--card-text text-center">
-              Start with our free Track and learn the fundamentals with Python
-              now and see if it’s right for you
+            {firstText}
             </p>
             <div className="text-center">
               <button className="firstImpression--card-btn">Start now</button>
@@ -39,14 +47,13 @@ const FirstImpression = () => {
         <div className="col-6 col-md-5">
           <div className="firstImpression--card">
             <h3 className="firstImpression--card-heading text-center">
-              Introduction to Data Science with R
+              {secondHeading}
             </h3>
             <div className="text-center mt-3">
-              <img src={dashboard} alt="" className="w-50" />
+              <img src={secondImage} alt="" className="w-50" />
             </div>
             <p className="firstImpression--card-text text-center">
-              Start with our free Track and learn the fundamentals with R now
-              and see if it’s right for you
+                {secondText}
             </p>
             <div className="text-center">
               <button className="firstImpression--card-btn">Start now</button>
