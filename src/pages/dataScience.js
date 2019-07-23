@@ -7,6 +7,7 @@ import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
 import Partners from '../components/Partners';
 import Projects from '../components/Projects';
+import CallToAction from '../components/CallToAction';
 import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
 import dashboard from '../assets/dashboard.png'
@@ -57,6 +58,7 @@ class dataScience extends Component {
           quoteCompanyLogo={accenture}
           />
           <Projects/>
+          <CallToAction />
         </div>
         <Footer />
       </>
