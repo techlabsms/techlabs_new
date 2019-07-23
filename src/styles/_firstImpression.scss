@@ -1,0 +1,52 @@
+@import "./variables";
+@import './animations';
+
+.firstImpression {
+  &--card {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.206692);
+    border-radius: 7px;
+    &-heading {
+      line-height: 31px;
+      padding: 20px 5px;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-gl;
+      padding: 30px 30px;
+    }
+
+    &-btn {
+      width: 100%;
+      background-color: $color-p;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+    }
+
+    &-btn:hover {
+      transform: scale(1.03);
+    }
+
+
+    &-circle {
+      width: 20px;
+      height: 20px;
+      background-color: $color-p;
+      border-radius: 20px;
+      animation: fade 2s ease-in;
+      animation-iteration-count: infinite;
+      &-3{
+        animation-delay: .65s;
+      }
+      &-2{
+        animation-delay: .45s;
+      }
+      &-1{
+        animation-delay: .25s;
+      }
+    }
+  }
+}

@@ -54,3 +54,12 @@
     opacity: 1;
   }
 }
+
+@keyframes fade {
+  0% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
