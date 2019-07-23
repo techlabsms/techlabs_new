@@ -8,6 +8,7 @@ import LeftImageSection from "../components/LeftImageSection"
 import Partners from '../components/Partners';
 import Projects from '../components/Projects';
 import CallToAction from '../components/CallToAction';
+import FirstImpression from '../components/FirstImpression';
 import graph from "../assets/graphs.png"
 import david from "../assets/david.png"
 import dashboard from '../assets/dashboard.png'
@@ -59,6 +60,7 @@ class dataScience extends Component {
           />
           <Projects/>
           <CallToAction />
+          <FirstImpression />
         </div>
         <Footer />
       </>
