@@ -1,58 +1,62 @@
 import React from "react"
 import Charts from "../assets/charts2.png"
-import smartCity from '../assets/smartCity.png'
+import smartCity from "../assets/smartCity.png"
 
-const Projects = () => {
+const Projects = ({
+  heading,
+  subheading,
+  firstProjectHeading,
+  firstProjectText,
+  firstProjectImage,
+  secondProjectHeading,
+  secondProjectText,
+  secondProjectImage,
+  thirdProjectHeading,
+  thirdProjectText,
+  thirdProjectImage,
+}) => {
   return (
     <>
       <div className="row mt-5">
         <div className="col">
-          <h2>Projects from our participants</h2>
+          <h2>{heading}</h2>
           <div className="section-divider" />
-          <p className="basicSection--sub">
-            Work on interesting project together with other participants
-          </p>
+          <p className="basicSection--sub">{subheading}</p>
         </div>
       </div>
       <div className="row">
-        <div className="col">
+        <div className="col-4">
           <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading highlighted">Churn Prediction</h3>
+            <h3 className="text-center projects--heading">
+              <span className="highlighted">{firstProjectHeading}</span>
+            </h3>
             <div className="card-body">
-              <p className="projects--text">
-                The main goal was to identify customers that are likely to
-                resign their mobile phone contracts. Aside from the
-                resign-probabal, the team identified the impact of several
-                variables.
-              </p>
-              <img src={Charts} alt="" />
+              <p className="projects--text">{firstProjectText}</p>
+              <img src={firstProjectImage} alt="" />
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
         </div>
-        <div className="col">
+        <div className="col-4">
           <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading"><span className="highlighted">Apartment-Price</span> <span className="highlighted">Prediction</span></h3>
+            <h3 className="text-center projects--heading">
+              <span className="highlighted">{secondProjectHeading}</span>
+            </h3>
             <div className="card-body">
-              <p className="projects--text">
-                The project team gathered apartment data through web crawling.
-                They build a model which predicts based on attributes like
-                number of rooms, balcony yes/no or location.
-              </p>
-              <img src={Charts} alt="" />
+              <p className="projects--text">{secondProjectText}</p>
+              <img src={secondProjectImage} alt="" />
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
         </div>
-        <div className="col">
+        <div className="col-4">
           <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading"><span className="highlighted">Smart City</span></h3>
+            <h3 className="text-center projects--heading">
+              <span className="highlighted">{thirdProjectHeading}</span>
+            </h3>
             <div className="card-body">
-              <p className="projects--text">
-                Analysis of the bycicle infrastructure in Münster. The team
-                identified bottleneck which might slow down the traffic.
-              </p>
-              <img src={smartCity} alt="" />
+              <p className="projects--text">{thirdProjectText}</p>
+              <img src={thirdProjectImage} alt="" />
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
