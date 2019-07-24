@@ -1,0 +1,54 @@
+@import "./variables";
+
+.slider {
+  &--pre {
+    font-size: 22px;
+    line-height: 25px;
+    color: $color-gl;
+  }
+  &--title {
+    font-size: 50px;
+    line-height: 54px;
+  }
+  &--text {
+    font-size: 22px;
+    line-height: 35px;
+    color: $color-gl;
+  }
+  &--name {
+    font-size: 30px;
+  }
+  &--role {
+    font-size: 20px;
+    color: $color-gl;
+  }
+  &--button{
+    background-color: #F3F3F3;
+    border-radius: 9px;
+    border: none;
+    padding: .7rem 1.25rem;
+    color: $color-p;
+  }
+  &--status{
+    background-color: #F3F3F3;
+    height: 15px;
+    width: 30%;
+    border-radius: 9px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+  &--status-inner{
+    background-color: $color-p;
+    height: 15px;
+    width: 33%;
+    border-radius: 9px;
+  }
+  &--arrow{
+      width: 15%;
+      &-left{
+          transform: rotate(-180deg);
+          margin-right: 10%;
+      }
+  }
+}

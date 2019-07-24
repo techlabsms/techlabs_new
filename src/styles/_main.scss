@@ -13,6 +13,7 @@
 @import './projects';
 @import './callToAction';
 @import './firstImpression';
+@import './slider';
 
 
 h1,
@@ -345,7 +346,7 @@ body {
 }
 
 .card-title {
-  font-size: 8rem;
+  font-size: 4rem;
   line-height: 0px;
   color: $color-p;
   margin-top: 1rem;
