@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Slider from "../components/Slider"
 import ACN from "../assets/partner-acn.png"
 import WF from "../assets/partner-wf.png"
 import EY from "../assets/partner-ey.png"
@@ -8,10 +9,6 @@ import SOPRA from "../assets/partner-sopra.png"
 import GIC from "../assets/gic.svg"
 import firstImage from "../assets/lp.png"
 import sittingagent from "../assets/sitting-agent.svg"
-import Arrow from "../assets/arrow.svg"
-import Simon from "../assets/simon.png"
-import Huemeyra from "../assets/huemeyra.png"
-import Clara from "../assets/clara.png"
 import TLStory from "../components/TLStory"
 import expect00 from "../assets/photos/code-img.jpg"
 import expect01 from "../assets/photos/IMG_4068-1.jpg"
@@ -22,31 +19,7 @@ import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 
 class index extends React.Component {
-  state = {
-    testimonials: [
-      {
-        name: "Simon, IT-Admin",
-        text:
-          "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
-      },
-      {
-        name: "Hümeyra, IT-Admin",
-        text:
-          "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit nisi mollit ad magna nisi nulla voluptate. Commodo enim tempor dolor pariatur enim eu magna.",
-        image: Huemeyra,
-      },
-      {
-        name: "Clara, IT-Admin",
-        text:
-          "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Clara,
-      },
-    ],
-    number: 0,
-  }
   render() {
-    const { testimonials, number } = this.state
     return (
       <>
         <div className="container-fluid">
@@ -224,87 +197,7 @@ class index extends React.Component {
               </div>
             </div>
           </section>
-          <section className="py-5">
-            <div className="container">
-              <h1 className="section-title">Our community</h1>
-              <div className="section-divider" />
-
-              <div className="row h-100">
-                <div className="col-md-6 mt-3">
-                  <div className="testimonial-card">
-                    <img
-                      className="card-img"
-                      src={testimonials[number].image}
-                      alt="testimonial"
-                    />
-                    <p className="text-muted mt-3 pl-3 pr-3">
-                      {testimonials[number].text}
-                    </p>
-                    <div className="row align-content-end mt-3">
-                      <div className="col-md-6 col-5 col-lg-5 col-sm-5">
-                        <span className="card-discover pl-3">
-                          {testimonials[number].name}
-                        </span>
-                      </div>
-                      <div className="col-md-6 text-right col-6 col-lg-6 col-sm-7">
-                        <img
-                          src={Arrow}
-                          alt="leftArrow"
-                          className="card-leftArrow"
-                          onClick={() =>
-                            this.setState({
-                              number:
-                                number <= 0
-                                  ? testimonials.length - 1
-                                  : number - 1,
-                            })
-                          }
-                        />
-                        <img
-                          src={Arrow}
-                          alt="RightArrow"
-                          className="card-rightArrow"
-                          onClick={() =>
-                            this.setState({
-                              number:
-                                number >= testimonials.length - 1
-                                  ? 0
-                                  : number + 1,
-                            })
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 my-auto">
-                  <div className="ml-md-5">
-                    <h3 className="community-title review mt-5">
-                      Our community is one of the key parts of our digital
-                      education concept
-                    </h3>
-                    <p className="community-text review">
-                      <p>
-                        {" "}
-                        <br />
-                        HIER MUSS EIN COMMUNITY TEXT HIN, DER BESCHREIBT, WARUM
-                        COMMUNITY KEY IST
-                      </p>{" "}
-                      <br />
-                      TechLabs Digital Shaper Journey: Get up to speed learning
-                      tech skills in one semester by means of our
-                      blended-learning concept that combines Online Learning,
-                      Project Work and TechLabs Community Meetings. Independent
-                      of the background and prior knowledge - anyone can
-                      participate and learn tech skills for free. Find more
-                      details about our program here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
+          <Slider />
           <section className="pt-5 margin-bottom-8 margin-top-4">
             <div className="container">
               <div className="row mt-5 pr-5">
