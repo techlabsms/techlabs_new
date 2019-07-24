@@ -6,7 +6,7 @@ import WF from "../assets/partner-wf.png"
 import EY from "../assets/partner-ey.png"
 import SOPRA from "../assets/partner-sopra.png"
 import GIC from "../assets/gic.svg"
-import COMMUNITY from "../assets/photos/IMG_4072-1.jpg"
+import firstImage from "../assets/lp.png"
 import sittingagent from "../assets/sitting-agent.svg"
 import Arrow from "../assets/arrow.svg"
 import Simon from "../assets/simon.png"
@@ -20,8 +20,6 @@ import expect03 from "../assets/photos/IMG_4119-1.jpg"
 import { Link } from "gatsby"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
-
-
 
 class index extends React.Component {
   state = {
@@ -46,7 +44,6 @@ class index extends React.Component {
       },
     ],
     number: 0,
-    
   }
   render() {
     const { testimonials, number } = this.state
@@ -58,17 +55,16 @@ class index extends React.Component {
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
-                <div className="col-md-5 my-auto xs-margin-right">
-                  <h1 className="display-4">We Build. Digital. Shapers.</h1>
+                <div className="col-md-6 my-auto xs-margin-right">
+                  <h1 className="display-4">
+                    Lets learn <br />
+                    digital <span className="highlighted">together</span>
+                  </h1>
                   <p className="lead text-muted mb-4 margin-top-15 margin-bottom-2">
-                    We are a community of tech-savvy individuals who approach
-                    the problems of our time with a digital mindset. Through{" "}
-                    <span className="hashtag">
-                      exciting meetups, hackathons, socials, workshops and a
-                      pioneering new design of a learning journey
-                    </span>
-                    , you will learn code and become a Digital Shaper yourself.
-                    Discover TechLabs now.
+                    TechLabs is the community that enables you to become a
+                    Digital Entrepreneur. Exciting meetups, talks, hackathons,
+                    social events, workshops and much more await you. Discover
+                    TechLabs now.
                   </p>
                   <Link className="btn btn-primary d-inline" to="/locations">
                     Locations
@@ -77,10 +73,10 @@ class index extends React.Component {
                     Program
                   </Link>
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-6">
                   <img
-                    className="img-fluid mt-4 mt-md-0 center-padding img-shadow"
-                    src={COMMUNITY}
+                    className="img-fluid mt-5 mt-md-0 center-padding"
+                    src={firstImage}
                     alt="commmunity"
                   />
                 </div>
@@ -98,7 +94,7 @@ class index extends React.Component {
             <div className="container">
               <div className="row justify-content-center align-items-center partner-palette">
                 <div className="col-md-2 mb-4 trusted">
-                  <h5 className="text-center trusted2">
+                  <h5 className="text-left trusted2 color-gl">
                     trusted by our renowned partners
                   </h5>
                 </div>
@@ -160,7 +156,7 @@ class index extends React.Component {
                         <p className="card-subtitle">weeks coding</p>
                         <p className="text-muted">
                           in 12-16 weeks you get{" "}
-                          <span className="hashtag">
+                          <span className="highlighted">
                             insights into the coding world
                           </span>{" "}
                           of TechLabs and get support from experienced mentors.
@@ -179,7 +175,7 @@ class index extends React.Component {
                         <p className="text-muted">
                           You can currently choose between learning tracks in
                           <br />
-                          <span className="hashtag">
+                          <span className="highlighted">
                             AI, Web Development and Data Science.
                           </span>
                         </p>
@@ -196,7 +192,7 @@ class index extends React.Component {
                         <p className="card-subtitle">community members</p>
                         <p className="text-muted">
                           Our growing community connects over
-                          <span className="hashtag">
+                          <span className="highlighted">
                             300 motivated people interested in learning tech.
                           </span>
                         </p>
@@ -213,7 +209,7 @@ class index extends React.Component {
                         <p className="card-subtitle">TechLabs locations</p>
                         <p className="text-muted">
                           Currently we have an offline community in{" "}
-                          <span className="hashtag">
+                          <span className="highlighted">
                             Münster, Copenhagen & Barcelona
                           </span>{" "}
                           and many more to come.
@@ -236,14 +232,14 @@ class index extends React.Component {
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <div className="testimonial-card">
-                      <img
-                        className="card-img"
-                        src={testimonials[number].image}
-                        alt="testimonial"
-                      />
-                      <p className="text-muted mt-3 pl-3 pr-3">
-                        {testimonials[number].text}
-                      </p>
+                    <img
+                      className="card-img"
+                      src={testimonials[number].image}
+                      alt="testimonial"
+                    />
+                    <p className="text-muted mt-3 pl-3 pr-3">
+                      {testimonials[number].text}
+                    </p>
                     <div className="row align-content-end mt-3">
                       <div className="col-md-6 col-5 col-lg-5 col-sm-5">
                         <span className="card-discover pl-3">
@@ -392,7 +388,7 @@ class index extends React.Component {
                       Get a personal <br /> learning path
                     </h1>
                     <p>
-                      <span className="hashtag">
+                      <span className="highlighted">
                         Start to code - independent of your prior knowledge.
                       </span>
                       Learn tech skills in the tracks Data Science, Artitificial
@@ -420,7 +416,7 @@ class index extends React.Component {
                       Choose a project idea that you find interesting and work
                       on it in an interdisciplinary group of 3-4 fellow TechLabs
                       participants.{" "}
-                      <span className="hashtag">
+                      <span className="highlighted">
                         {" "}
                         Build up a tech project portfolio.{" "}
                       </span>
@@ -444,7 +440,7 @@ class index extends React.Component {
                     </h1>
                     <p>
                       If you want to{" "}
-                      <span className="hashtag">
+                      <span className="highlighted">
                         {" "}
                         learn state-of-the-art tech skills
                       </span>{" "}
@@ -472,7 +468,7 @@ class index extends React.Component {
                     <p>
                       In case you have any question during your learning journey
                       or project work,
-                      <span className="hashtag">
+                      <span className="highlighted">
                         our community is always interested in discussing tech
                         and solving problems
                       </span>
