@@ -345,7 +345,7 @@ body {
 }
 
 .card-title {
-  font-size: 4rem;
+  font-size: 8rem;
   line-height: 0px;
   color: $color-p;
   margin-top: 1rem;
@@ -436,6 +436,9 @@ body {
   margin-top: 4rem;
 }
 
+.color-gl {
+  color: $color-gl !important;
+}
 
 .padding-bottom-4 {
   padding-bottom: 4rem !important;
