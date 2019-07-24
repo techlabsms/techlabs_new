@@ -7,8 +7,7 @@ import "../styles/_main.scss"
 import LocationCard from "../components/LocationCard"
 import { graphql, Link } from "gatsby"
 import get from "lodash/get"
-import LocationCardDefault from "../components/LocationCardDefault"
-import MAPLOC from '../assets/mapLoc.png'
+import MAPLOC from "../assets/mapLoc.png"
 
 class Locations extends Component {
   constructor() {
@@ -80,17 +79,13 @@ class Locations extends Component {
               </div>
 
               <div className="row">
-                {filteredLocations.length === 0 ? (
-                  <LocationCardDefault />
-                ) : (
-                  filteredLocations.map(location => (
-                    <LocationCard
-                      imgTop={location.node.image.file.url}
-                      city={location.node.heading}
-                      icon={location.node.icon.file.url}
-                    />
-                  ))
-                )}
+                {filteredLocations.map(location => (
+                  <LocationCard
+                    imgTop={location.node.image.file.url}
+                    city={location.node.heading}
+                    icon={location.node.icon.file.url}
+                  />
+                ))}
               </div>
             </div>
           </section>
@@ -99,23 +94,35 @@ class Locations extends Component {
               <div className="row">
                 <div className="col">
                   <div className="card">
-                    <div class="row no-gutters" >
+                    <div class="row no-gutters">
                       <div class="col-md-6">
                         <div class="card-body">
-                          <h2><span className="highlighted mt-5">Your city</span> is not on the map?</h2>
+                          <h2>
+                            <span className="highlighted mt-5">Your city</span>{" "}
+                            is not on the map?
+                          </h2>
                           <p class="locations--card-text mt-5 mr-3 mt-2">
                             If you are looking to bring TechLabs to your local
                             community and want to shape the future of education,
-                            reach out! Let’s work together and <span className="locations--bold">build something
-                            great!</span>
+                            reach out! Let’s work together and{" "}
+                            <span className="locations--bold">
+                              build something great!
+                            </span>
                           </p>
-                          <Link to="/foundYourOwn" className="btn btn-primary mt-5">
+                          <Link
+                            to="/foundYourOwn"
+                            className="btn btn-primary mt-5"
+                          >
                             More information
                           </Link>
                         </div>
                       </div>
                       <div class="col-md-6 text-center align-middle">
-                        <img src={MAPLOC} class="card-img pt-4 pr-2" alt="..." />
+                        <img
+                          src={MAPLOC}
+                          class="card-img pt-4 pr-2"
+                          alt="..."
+                        />
                       </div>
                     </div>
                   </div>
