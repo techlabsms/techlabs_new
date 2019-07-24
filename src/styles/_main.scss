@@ -13,6 +13,7 @@
 @import './projects';
 @import './callToAction';
 @import './firstImpression';
+@import './slider';
 
 
 h1,
@@ -436,6 +437,9 @@ body {
   margin-top: 4rem;
 }
 
+.color-gl {
+  color: $color-gl !important;
+}
 
 .padding-bottom-4 {
   padding-bottom: 4rem !important;
