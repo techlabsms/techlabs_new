@@ -63,3 +63,21 @@
     opacity: 1;
   }
 }
+
+@keyframes slideIn {
+  0% {
+     opacity:1
+  }
+
+    50% {
+     opacity:0
+  }
+     90% {
+     transform: translate(0,-100px);
+  }
+  100% {
+    opacity:0
+      /*transform: translateY(0px);*/
+      /*opacity:1*/
+  }
+}
