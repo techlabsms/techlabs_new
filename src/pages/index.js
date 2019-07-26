@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Slider from "../components/Slider"
+import RightImageSection from "../components/RightImageSection"
 import ACN from "../assets/partner-acn.png"
 import WF from "../assets/partner-wf.png"
 import EY from "../assets/partner-ey.png"
@@ -14,6 +15,7 @@ import expect00 from "../assets/photos/code-img.jpg"
 import expect01 from "../assets/photos/IMG_4068-1.jpg"
 import expect02 from "../assets/photos/IMG_4081-1.jpg"
 import expect03 from "../assets/photos/IMG_4119-1.jpg"
+import gic from "../assets/gic.png"
 import { Link } from "gatsby"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
@@ -198,6 +200,13 @@ class index extends React.Component {
             </div>
           </section>
           <Slider />
+          <section className="container">
+            <RightImageSection
+              heading="Award winning concept"
+              text="Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, "
+              image={gic}
+            />
+          </section>
           <section className="pt-5 margin-bottom-8 margin-top-4">
             <div className="container">
               <div className="row mt-5 pr-5">
