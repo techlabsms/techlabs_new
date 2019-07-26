@@ -110,7 +110,7 @@ class Slider extends Component {
                         }}
                       />
                     </div>
-                    <span>04</span>
+                    <span>03</span>
                   </div>
                   <div className="col-6 text-right">
                     <img
