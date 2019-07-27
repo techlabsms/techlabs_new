@@ -20,6 +20,8 @@ import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
 import icon4 from "../assets/icon4.png"
+import commu from "../assets/commu.png"
+import slack from "../assets/slack.png"
 import gic from "../assets/gic.png"
 import nils from "../assets/nils.png"
 import { Link } from "gatsby"
@@ -260,7 +262,7 @@ class index extends React.Component {
               </p>
             </div>
           </section>
-          <section className="container mt-5">
+          <section className="container mt-5 mb-5">
             <h1 className="section-title">Key Benefits</h1>
             <div className="section-divider" />
             <div className="row mt-5">
@@ -326,38 +328,36 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="py-5">
-            <div className="container text-center">
-              <h2 className="mb-5">Learn more about PiperNet</h2>
-              <div className="card-deck">
-                <div className="card">
-                  <div className="card-body mt-3">
-                    <h5 className="card-title">Videos</h5>
-                    <p className="card-text">
-                      Stop watching boring YouTube videos, and check out
-                      Dinesh's extremely interesting series about the features
-                      of PiperNet.
+          <section className="container-fluid mt-5 background">
+            <div className="container mt-5">
+              <h1 className="section-title">Learn More</h1>
+              <div className="section-divider" />
+              <div className="row h-100">
+                <div className="col-6 mt-3">
+                  <div className="card">
+                    <h2 className="mt-3 color-red">Location →</h2>
+                    <p className="color-gl">
+                      Check out our locations Check out our locations Check out
+                      our locations Check out our locations Check out our
+                      locations
                     </p>
-                  </div>
-                  <div className="card-footer bg-transparent border-0 mb-3">
-                    <a className="btn btn-primary" href="/">
-                      Watch Now
-                    </a>
+                    <Link to="/locations">
+                      <button className="btn btn-primary mt-3">
+                        Locations
+                      </button>
+                    </Link>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="card-body mt-3">
-                    <h5 className="card-title">Articles</h5>
-                    <p className="card-text">
-                      Let Gilfoyle take you on a journey into the futuristic
-                      world of computing and data security in the decentralized
-                      age.
+                <div className="col-6 mt-3">
+                  <div className="card">
+                    <h2 className="mt-3 color-red">Program →</h2>
+                    <p className="color-gl">
+                      Check out our Program Check out our Program Check out our
+                      Program Check out our Program Check out our Program
                     </p>
-                  </div>
-                  <div className="card-footer bg-transparent border-0 mb-3">
-                    <a className="btn btn-primary" href="/">
-                      Read Now
-                    </a>
+                    <Link to="/programm">
+                      <button className="btn btn-primary mt-3">Program</button>
+                    </Link>
                   </div>
                 </div>
               </div>
