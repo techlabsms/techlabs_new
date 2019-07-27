@@ -15,6 +15,11 @@ import expect00 from "../assets/photos/code-img.jpg"
 import expect01 from "../assets/photos/IMG_4068-1.jpg"
 import expect02 from "../assets/photos/IMG_4081-1.jpg"
 import expect03 from "../assets/photos/IMG_4119-1.jpg"
+import benefits from "../assets/benefits.png"
+import icon1 from "../assets/icon1.png"
+import icon2 from "../assets/icon2.png"
+import icon3 from "../assets/icon3.png"
+import icon4 from "../assets/icon4.png"
 import gic from "../assets/gic.png"
 import nils from "../assets/nils.png"
 import { Link } from "gatsby"
@@ -234,10 +239,10 @@ class index extends React.Component {
                   today’s problems in a digital and entrepreneurial way
                 </p>
                 <div className="row mt-4">
-                  <div className="col-2">
+                  <div className="col-3">
                     <img src={nils} alt="nils" />
                   </div>
-                  <div className="col-10">
+                  <div className="col-9">
                     <p className="mt-4 whatWeOffer--nils">
                       Nils Bahr <br />{" "}
                       <span className="whatWeOffer--nils-color">
@@ -255,116 +260,65 @@ class index extends React.Component {
               </p>
             </div>
           </section>
-          <section className="py-5">
-            <div className="container review">
-              <h1 className="section-title">Why you should start now</h1>
-              <div className="section-divider" />
-
-              <div>
-                <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0">
-                    <img
-                      className="img-fluid img-shadow"
-                      src={expect00}
-                      alt=""
-                    />
+          <section className="container mt-5">
+            <h1 className="section-title">Key Benefits</h1>
+            <div className="section-divider" />
+            <div className="row mt-5">
+              <div className="col-md-5 col-lg-4" />
+              <div className="col-md-7 col-lg-8">
+                <img src={benefits} alt="" />
+              </div>
+              <div className="card keyBenefits--card">
+                <div className="row">
+                  <div className="col-2 text-center">
+                    <img src={icon1} alt="code file" className="mt-2" />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0 max-lengther">
-                    <h1 className="mb-4">
-                      <span role="img" aria-label="waving hand">
-                        👋
-                      </span>{" "}
-                      Get a personal <br /> learning path
-                    </h1>
-                    <p>
-                      <span className="highlighted">
-                        Start to code - independent of your prior knowledge.
-                      </span>
-                      Learn tech skills in the tracks Data Science, Artitificial
-                      Intelligence or Web Development by means of the best
-                      online resources available.
+                  <div className="col-10 pl-5">
+                    <h3>Start to code - independent of your prior knowledge</h3>
+                    <p className="keyBenefits--card-text">
+                      Get a personal learning path. Learn tech skills in the
+                      tracks Data Science, Artitificial Intelligence or Web
+                      Development by means of the best online resources
+                      available.
                     </p>
                   </div>
                 </div>
-                <div className="row align-items-center text-md-right mb-5">
-                  <div className="col-md-6 order-1">
-                    <img
-                      className="img-fluid img-shadow"
-                      src={expect01}
-                      alt=""
-                    />
+                <div className="row mt-4">
+                  <div className="col-2 text-center">
+                    <img src={icon2} alt="code file" className="mt-2" />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
-                    <h1 className="mb-4">
-                      <span role="img" aria-label="biceps">
-                        💪
-                      </span>{" "}
-                      Build your own <br /> tech project
-                    </h1>
-                    <p>
+                  <div className="col-10 pl-5">
+                    <h3>Build your own tech project portfolio</h3>
+                    <p className="keyBenefits--card-text">
                       Choose a project idea that you find interesting and work
                       on it in an interdisciplinary group of 3-4 fellow TechLabs
-                      participants.{" "}
-                      <span className="highlighted">
-                        {" "}
-                        Build up a tech project portfolio.{" "}
-                      </span>
+                      participants. Build up a tech project portfolio.
                     </p>
                   </div>
                 </div>
-                <div className="row align-items-center text-md-left mb-5">
-                  <div className="col-md-6 order-1 order-md-0">
-                    <img
-                      className="img-fluid img-shadow"
-                      src={expect02}
-                      alt=""
-                    />
+                <div className="row mt-4">
+                  <div className="col-2 text-center">
+                    <img src={icon3} alt="code file" className="mt-2" />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0 max-lengther">
-                    <h1 className="mb-4">
-                      <span role="img" aria-label="fire">
-                        🔥
-                      </span>{" "}
-                      Shape your career path
-                    </h1>
-                    <p>
-                      If you want to{" "}
-                      <span className="highlighted">
-                        {" "}
-                        learn state-of-the-art tech skills
-                      </span>{" "}
-                      that will enable you to quickly create stunning tech
-                      projects, join a tech startup or get in touch with our
-                      renowned partners. TechLabs is the right way to go for.
+                  <div className="col-10 pl-5">
+                    <h3>Shape your career path</h3>
+                    <p className="keyBenefits--card-text">
+                      If you want to learn state-of-the-art tech skills that
+                      will enable you to quickly create stunning tech projects,
+                      join a tech startup or get in touch with our renowned
+                      partners. TechLabs is the right way to go for.
                     </p>
                   </div>
                 </div>
-                <div className="row align-items-center text-md-right mb-5">
-                  <div className="col-md-6 order-1">
-                    <img
-                      className="img-fluid img-shadow"
-                      src={expect03}
-                      alt=""
-                    />
+                <div className="row mt-4">
+                  <div className="col-2 text-center">
+                    <img src={icon4} alt="code file" className="mt-2" />
                   </div>
-                  <div className="col-md-6 mb-4 mb-md-0 order-0 max-lengther">
-                    <h1 className="mb-4">
-                      <span role="img" aria-label="guy behind laptop">
-                        👨‍💻
-                      </span>{" "}
-                      Learn with the community{" "}
-                    </h1>
-                    <p>
+                  <div className="col-10 pl-5">
+                    <h3>Learn from skilled mentors</h3>
+                    <p className="keyBenefits--card-text">
                       In case you have any question during your learning journey
-                      or project work,
-                      <span className="highlighted">
-                        our community is always interested in discussing tech
-                        and solving problems
-                      </span>
-                      and our mentors are happy to help you out!{" "}
-                      <span role="img" aria-label="hands">
-                        🙌
-                      </span>
+                      or project work, our mentors are happy to support.
                     </p>
                   </div>
                 </div>
