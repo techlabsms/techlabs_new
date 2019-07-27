@@ -17,6 +17,7 @@ import accenture from "../assets/accenture.png"
 import Charts from "../assets/charts2.png"
 import smartCity from "../assets/smartCity.png"
 import robot from "../assets/ai-robot.png"
+import background from '../assets/ds_background.png'
 
 class ai extends Component {
   render() {
@@ -24,7 +25,7 @@ class ai extends Component {
       <>
         <Navbar />
         <div className="container-fluid">
-          <ProgrammHero headingFirst="Artificial" headingSecond=" Intelligence" />
+          <ProgrammHero headingFirst="Artificial" headingSecond=" Intelligence" showCard={true} background={background}/>
         </div>
         <div className="container">
           <WhatYouWillLearn
