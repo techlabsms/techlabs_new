@@ -10,12 +10,13 @@ import SOPRA from "../assets/partner-sopra.png"
 import GIC from "../assets/gic.svg"
 import firstImage from "../assets/lp.png"
 import sittingagent from "../assets/sitting-agent.svg"
-import TLStory from "../components/TLStory"
+import quote from "../assets/quote.png"
 import expect00 from "../assets/photos/code-img.jpg"
 import expect01 from "../assets/photos/IMG_4068-1.jpg"
 import expect02 from "../assets/photos/IMG_4081-1.jpg"
 import expect03 from "../assets/photos/IMG_4119-1.jpg"
 import gic from "../assets/gic.png"
+import nils from "../assets/nils.png"
 import { Link } from "gatsby"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
@@ -207,67 +208,53 @@ class index extends React.Component {
               image={gic}
             />
           </section>
-          <section className="pt-5 margin-bottom-8 margin-top-4">
-            <div className="container">
-              <div className="row mt-5 pr-5">
-                <div className="col-md-6 pb-5 center-me story-text">
-                  <ul className="list-inline ml-4 mt-5">
-                    <li className="d-flex mb-4">
-                      <div>
-                        <h3>
-                          <span role="img" aria-label="pin">
-                            📍
-                          </span>{" "}
-                          Meetups
-                        </h3>
-                        <p className="review">
-                          Using our Piper Assistant application, you can move
-                          your data to be stored our decentralized network with
-                          simple drag & drop.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="d-flex mb-4">
-                      <div>
-                        <h3>
-                          <span role="img" aria-label="star">
-                            🌟
-                          </span>{" "}
-                          Workshops
-                        </h3>
-                        <p>
-                          TechLabs helps to spur innovation by organizing
-                          workshops with our renowned partners. In these
-                          workshops we are bringing students together with
-                          subject matter experts and focus on engaging tech
-                          topics.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="d-flex mb-4">
-                      <div>
-                        <h3>
-                          <span role="img" aria-label="stars">
-                            ✨
-                          </span>{" "}
-                          Socials
-                        </h3>
-                        <p className="review">
-                          As with all innovative technologies, sometimes
-                          unpredictable things will happen, and you can always
-                          count on our support to solve issues for you.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-md-6 mt-auto pl-5 d-none d-md-block">
-                  <TLStory className="center-padding" />
+          <section className="container whatWeOffer">
+            <h1 className="section-title">The TechLabs Journey</h1>
+            <div className="section-divider" />
+            <div className="row">
+              <div className="col">
+                <p className="mt-2 text-justify whatWeOffer--text">
+                  TechLabs Digital Shaper Journey: Get up to speed learning tech
+                  skills in one semester by means of our blended-learning
+                  concept that combines Online Learning, Project Work and
+                  TechLabs Community Meetings. Independent of the background and
+                  prior knowledge - anyone can participate and learn tech skills
+                  for free. Find more details about our program here.
+                </p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-2 text-right">
+                <img src={quote} alt="qoute" className="w-25" />
+              </div>
+              <div className="col-10">
+                <p className="whatWeOffer--quote text-justify">
+                  As a nonprofit, our mission is to enable as many people as
+                  possible to acquire state-of-the-art tech skills to solve
+                  today’s problems in a digital and entrepreneurial way
+                </p>
+                <div className="row mt-4">
+                  <div className="col-2">
+                    <img src={nils} alt="nils" />
+                  </div>
+                  <div className="col-10">
+                    <p className="mt-4 whatWeOffer--nils">
+                      Nils Bahr <br />{" "}
+                      <span className="whatWeOffer--nils-color">
+                        Head of Product @ TechLabs
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div className="text-center mt-5 mb-5">
+              <p className="whatWeOffer--lastLine">
+                Become a Digital Shaper. We help you to complete your own tech
+                project and qualify for tech internships.
+              </p>
+            </div>
           </section>
-
           <section className="py-5">
             <div className="container review">
               <h1 className="section-title">Why you should start now</h1>
