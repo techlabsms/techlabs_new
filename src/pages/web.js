@@ -15,6 +15,7 @@ import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import accenture from "../assets/accenture.png"
 import webdev from "../assets/webdevpro.png"
+import background from '../assets/ds_background.png'
 
 class web extends Component {
   render() {
@@ -22,7 +23,7 @@ class web extends Component {
       <>
         <Navbar />
         <div className="container-fluid">
-          <ProgrammHero headingFirst="Web" headingSecond=" Development" />
+          <ProgrammHero headingFirst="Web" headingSecond=" Development" showCard={true} background={background}/>
         </div>
         <div className="container">
           <WhatYouWillLearn

@@ -16,6 +16,7 @@ import dashboard from "../assets/dashboard.png"
 import accenture from "../assets/accenture.png"
 import Charts from "../assets/charts2.png"
 import smartCity from "../assets/smartCity.png"
+import background from '../assets/ds_background.png'
 
 class dataScience extends Component {
   render() {
@@ -23,7 +24,7 @@ class dataScience extends Component {
       <>
         <Navbar />
         <div className="container-fluid">
-          <ProgrammHero headingFirst="Data" headingSecond=" Science" />
+          <ProgrammHero headingFirst="Data" headingSecond=" Science" showCard={true} background={background}/>
         </div>
         <div className="container">
           <WhatYouWillLearn
