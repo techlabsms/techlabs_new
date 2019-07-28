@@ -45,9 +45,9 @@ class Academy extends Component {
   render() {
     const { images, index } = this.state
     return (
-      <>
+      <div className="academy">
         <div className="row mt-5">
-          <div className="col">
+          <div className="col-sm-12 col-lg-6">
             <h2>TechLabs Academy</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">
@@ -55,12 +55,12 @@ class Academy extends Component {
             </p>
           </div>
         </div>
-        <div className="row mt-5 d-flex">
-          <div className="col align-self-center text-center">
+        <div className="row mt-5 d-flex mb-5">
+          <div className="col align-self-center text-center ">
             <img src={images[index]} alt="web" className="w-75"/>
           </div>
-          <div className="col">
-            <div className="row">
+          <div className="col-sm-12 col-lg-6">
+            <div className="row mt-4">
               <div
                 className="academy--card"
                 onMouseEnter={() => this.dataScienceHandler()}
@@ -118,7 +118,7 @@ class Academy extends Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }
