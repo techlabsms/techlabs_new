@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "../assets/ThreeComponents.png"
+import Image from "../assets/threecomponents.png"
 
 const ThreeComponents = () => {
   return (
