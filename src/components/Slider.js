@@ -33,7 +33,7 @@ class Slider extends Component {
         role: "IT-Master",
         text:
           "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
+        image: Clara,
         width: "100%"
       },
     ],
