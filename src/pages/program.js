@@ -6,6 +6,7 @@ import ThreeComponents from "../components/ThreeComponents"
 import Process from '../components/Process'
 import background from "../assets/p_background.png"
 import benefits from "../assets/benefits.png"
+import Process from '../components/Process'
 import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
