@@ -2,7 +2,7 @@
 
 .programmHero {
   &--hero {
-    height: 70vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100vw;
@@ -13,6 +13,7 @@
     font-size: 75px;
     line-height: 85px;
     color: #fb1d5c !important;
+    width: 90%;
   }
 
   &--highlighted {
