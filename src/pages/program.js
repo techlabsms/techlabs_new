@@ -5,6 +5,8 @@ import Academy from "../components/Academy"
 import ThreeComponents from "../components/ThreeComponents"
 import Projects from "../components/Projects"
 import background from "../assets/p_background.png"
+import Faq from "../components/Faq"
+import FaqQuestion from "../components/FaqQuestion"
 import benefits from "../assets/benefits.png"
 import Process from "../components/Process"
 import icon1 from "../assets/icon1.png"
@@ -105,6 +107,24 @@ class program extends Component {
             thirdProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
             thirdProjectImage={AI}
           />
+          <Faq>
+            <FaqQuestion
+              question="How do I apply for the Digital Shaper Program?"
+              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+            />
+            <FaqQuestion
+              question="What makes me a qualified Applicant?"
+              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+            />
+            <FaqQuestion
+              question="How does the application process look like?"
+              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+            />
+            <FaqQuestion
+              question="What are the costs for Participants?"
+              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+            />
+          </Faq>
         </div>
       </div>
     )
