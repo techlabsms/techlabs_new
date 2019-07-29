@@ -3,14 +3,17 @@ import Navbar from "../components/Navbar"
 import ProgrammHero from "../components/ProgrammHero"
 import Academy from "../components/Academy"
 import ThreeComponents from "../components/ThreeComponents"
-import Process from '../components/Process'
+import Projects from "../components/Projects"
 import background from "../assets/p_background.png"
 import benefits from "../assets/benefits.png"
-import Process from '../components/Process'
+import Process from "../components/Process"
 import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
 import icon4 from "../assets/icon4.png"
+import DataScience from "../assets/dashboard.png"
+import web from "../assets/webdevpro.png"
+import AI from "../assets/ai-robot.png"
 
 class program extends Component {
   render() {
@@ -88,7 +91,20 @@ class program extends Component {
               </div>
             </div>
           </section>
-          <Process/>
+          <Process />
+          <Projects
+            heading="Learn More"
+            subheading="Culpa ea qui occaecat in laborum reprehenderit nulla anim mollit."
+            firstProjectHeading="Web Development"
+            firstProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
+            firstProjectImage={web}
+            secondProjectHeading="Data Science"
+            secondProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
+            secondProjectImage={DataScience}
+            thirdProjectHeading="Artificial Intelligence"
+            thirdProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
+            thirdProjectImage={AI}
+          />
         </div>
       </div>
     )

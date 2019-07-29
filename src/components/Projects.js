@@ -31,8 +31,14 @@ const Projects = ({
               <span className="highlighted">{firstProjectHeading}</span>
             </h3>
             <div className="card-body">
-              <p className="projects--text">{firstProjectText}</p>
-              <img src={firstProjectImage} alt="" />
+              <div className="row h-75">
+                <p className="projects--text">{firstProjectText}</p>
+                <img
+                  src={firstProjectImage}
+                  alt=""
+                  className="w-100 text-center my-3"
+                />
+              </div>
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
@@ -43,8 +49,14 @@ const Projects = ({
               <span className="highlighted">{secondProjectHeading}</span>
             </h3>
             <div className="card-body">
-              <p className="projects--text">{secondProjectText}</p>
-              <img src={secondProjectImage} alt="" />
+              <div className="row h-75">
+                <p className="projects--text">{secondProjectText}</p>
+                <img
+                  src={secondProjectImage}
+                  alt=""
+                  className="w-100 text-center my-3"
+                />
+              </div>
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
@@ -55,8 +67,14 @@ const Projects = ({
               <span className="highlighted">{thirdProjectHeading}</span>
             </h3>
             <div className="card-body">
-              <p className="projects--text">{thirdProjectText}</p>
-              <img src={thirdProjectImage} alt="" />
+              <div className="row h-75">
+                <p className="projects--text">{thirdProjectText}</p>
+                <img
+                  src={thirdProjectImage}
+                  alt=""
+                  className="w-100 text-center my-3"
+                />
+              </div>
               <button className="btn btn-primary mt-5">More information</button>
             </div>
           </div>
