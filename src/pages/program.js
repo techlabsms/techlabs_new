@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar"
 import ProgrammHero from "../components/ProgrammHero"
 import Academy from "../components/Academy"
 import ThreeComponents from "../components/ThreeComponents"
+import Process from '../components/Process'
 import background from "../assets/p_background.png"
 import benefits from "../assets/benefits.png"
 import icon1 from "../assets/icon1.png"
@@ -86,6 +87,7 @@ class program extends Component {
               </div>
             </div>
           </section>
+          <Process/>
         </div>
       </div>
     )

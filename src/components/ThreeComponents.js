@@ -3,7 +3,7 @@ import Image from "../assets/threecomponents.png"
 
 const ThreeComponents = () => {
   return (
-    <>
+    <div className="threeComponents">
       <div className="row mt-5 mb-5">
         <div className="col">
           <h2>The three Components</h2>
@@ -18,7 +18,7 @@ const ThreeComponents = () => {
           <img src={Image} alt="" className="w-100" />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
