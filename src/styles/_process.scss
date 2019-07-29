@@ -1,66 +1,18 @@
 @import "./variables";
 
 .process {
-  &--shapeOne {
-    background: $color-p;
-    height: 250px;
-    width: 250px;
-    transform: rotate(45deg);
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    &-img {
-      transform: rotate(-45deg);
+  &--title {
+    font-size: 25px;
+    line-height: 72px;
+    &-number {
+      font-size: 40px;
+      line-height: 72px;
     }
   }
 
-  &--shapeTwo {
-    background: $color-p;
-    height: 250px;
-    width: 250px;
-    transform: rotate(45deg);
-    border-top-left-radius: 100px;
-    &-img {
-      transform: rotate(-45deg);
-    }
-  }
-
-  &--shapeThree {
-    background: $color-p;
-    height: 250px;
-    width: 250px;
-    transform: rotate(45deg);
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    &-img {
-      transform: rotate(-45deg);
-    }
-  }
-  &--shapeFour {
-    background: $color-p;
-    height: 250px;
-    width: 250px;
-    transform: rotate(45deg);
-    border-bottom-right-radius: 100px;
-    margin-left: 180px;
-    margin-top: -5vh;
-    &-img {
-      transform: rotate(-45deg);
-    }
-  }
-  &--shapeFive {
-    background: $color-p;
-    height: 250px;
-    width: 250px;
-    transform: rotate(45deg);
-    border-bottom-right-radius: 100px;
-    margin-left: -190px;
-    margin-top: -5vh;
-    &-img {
-      transform: rotate(-45deg);
-    }
-  }
-
-  &--shapeOne:hover, &--shapeTwo:hover, &--shapeThree:hover, &--shapeFour:hover, &--shapeFive:hover{
-
+  &--text{
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-gl;
   }
 }

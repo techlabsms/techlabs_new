@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100vw;
+    width: 100vw;
   }
 
   &--heading {
@@ -13,7 +14,7 @@
     font-size: 75px;
     line-height: 85px;
     color: #fb1d5c !important;
-    width: 90%;
+    width: 40%;
   }
 
   &--highlighted {
@@ -33,7 +34,7 @@
     line-height: 35px;
     /* or 175% */
     text-align: justify;
-    width: 90%;
+    width: 80%;
     color: #8b9fa8;
   }
 

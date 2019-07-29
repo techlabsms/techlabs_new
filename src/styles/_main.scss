@@ -17,8 +17,8 @@
 @import "./whatWeOffer";
 @import "./keyBenefits";
 @import "./academy";
+@import "./threeComponents";
 @import "./process";
-
 
 h1,
 h2,
@@ -91,11 +91,11 @@ body {
   font-size: 15px !important;
 }
 
-.color-red{
+.color-red {
   color: $color-p;
 }
 
-.color-gl{
+.color-gl {
   color: $color-gl;
 }
 
