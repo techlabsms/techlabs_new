@@ -10,9 +10,14 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import BlogCard from "../components/BlogCard"
-import Faq from "../components/Faq"
-import FaqQuestion from "../components/FaqQuestion"
-import { Link } from 'gatsby'
+import LeftImageSection from "../components/LeftImageSection"
+import RightImageSection from "../components/RightImageSection"
+import Team from "../components/Team"
+import David from "../assets/David_team.png"
+import Marius from "../assets/Marius_team.png"
+import Nils from "../assets/Nils_team.png"
+import Jonas from "../assets/Jonas_team.png"
+import { Link } from "gatsby"
 
 class location extends Component {
   render() {
@@ -62,142 +67,45 @@ class location extends Component {
               </div>
             </div>
           </section>
-          <section className="py-3">
-            <div className="container">
-              <div className="d-flex justify-content-center align-items-center flex-column">
-                <div className="d-flex mt-3">
-                  <p className="mb-0 small text-muted">Follow us</p>
-                </div>
-
-                <div className="d-flex mb-3 mt-2">
-                  {location.facebookUrl !== null && (
-                    <a href={location.facebookUrl}>
-                      <FontAwesomeIcon
-                        icon={faFacebookSquare}
-                        size="2x"
-                        className="locations--icon mr-3"
-                      />
-                    </a>
-                  )}
-                  {location.instagramUrl !== null && (
-                    <a href={location.instagramUrl}>
-                      <FontAwesomeIcon
-                        icon={faInstagram}
-                        size="2x"
-                        className="locations--icon mr-3"
-                      />
-                    </a>
-                  )}
-
-                  {location.twitterUrl !== null && (
-                    <a href={location.twitterUrl}>
-                      <FontAwesomeIcon
-                        icon={faTwitterSquare}
-                        size="2x"
-                        className="locations--icon mr-3"
-                      />
-                    </a>
-                  )}
-
-                  {location.linkedinUrl !== null && (
-                    <a href={location.linkedinUrl}>
-                      <FontAwesomeIcon
-                        icon={faLinkedin}
-                        size="2x"
-                        className="locations--icon"
-                      />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-5">
-            <div className="container text-center">
-              <h1 className="mb-4">
-                <span className="locations--tech">Tech</span>Labs x{" "}
-                {location.heading}
-              </h1>
-              <div>
-                {location.usesFirstEntry && (
-                  <div className="row align-items-center text-md-left mb-5">
-                    <div className="col-md-6 order-1 order-md-0">
-                      <img
-                        className="img-fluid"
-                        src={location.firstEntryImage.file.url}
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4 mb-md-0">
-                      <h3 className="mb-4">{location.firstEntryTitle}</h3>
-                      <p>{location.firstEntryText}</p>
-                    </div>
-                  </div>
-                )}
-                {location.usesSecondEntry && (
-                  <div className="row align-items-center text-md-right mb-5">
-                    <div className="col-md-6 order-1">
-                      <img
-                        className="img-fluid"
-                        src={location.secondEntryImage.file.url}
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4 mb-md-0 order-0">
-                      <h3 className="mb-4">{location.secondEntryTitle}</h3>
-                      <p>{location.secondEntryText}</p>
-                    </div>
-                  </div>
-                )}
-                {location.usesThirdEntry && (
-                  <div className="row align-items-center text-md-left mb-5">
-                    <div className="col-md-6 order-1 order-md-0">
-                      <img
-                        className="img-fluid"
-                        src={location.thirdEntryImage.file.url}
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-6 mb-4 mb-md-0">
-                      <h3 className="mb-4">{location.thirdEntryTitle}</h3>
-                      <p>{location.thirdEntryText}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </section>
-
-          <section className="py-5">
-            <div className="container">
-              <h2 className="mb-4">Recent articels</h2>
-              <div className="row">
-                {articles.map(({ node }) => {
-                  return <BlogCard article={node} key={node.title} />
-                })}
-              </div>
-            </div>
-          </section>
-          <Faq>
-            <FaqQuestion
-              question="This should be a question"
-              answer="Esse ex magna aute eu labore. Qui id consectetur esse sint tempor consectetur tempor magna. Veniam elit velit cillum magna id nisi tempor laboris sit elit veniam consequat ex ea."
+          <section className="container location">
+            <LeftImageSection
+              heading={location.firstEntryTitle}
+              subheading="Text Text Text"
+              text={location.firstEntryText}
+              image={location.firstEntryImage.file.url}
             />
-            <FaqQuestion
-              question="This should be a question"
-              answer="Esse ex magna aute eu labore. Qui id consectetur esse sint tempor consectetur tempor magna. Veniam elit velit cillum magna id nisi tempor laboris sit elit veniam consequat ex ea."
+            <RightImageSection
+              heading={location.secondEntryTitle}
+              subheading="Text Text Text"
+              text={location.secondEntryText}
+              image={location.secondEntryImage.file.url}
             />
-            <FaqQuestion
-              question="This should be a question"
-              answer="Esse ex magna aute eu labore. Qui id consectetur esse sint tempor consectetur tempor magna. Veniam elit velit cillum magna id nisi tempor laboris sit elit veniam consequat ex ea."
+            <LeftImageSection
+              heading={location.thirdEntryTitle}
+              subheading="Text Text Text"
+              text={location.thirdEntryText}
+              image={location.thirdEntryImage.file.url}
             />
-            <div className="text-center mt-5">
-              <Link className="btn btn-primary" to="/faq">
-                More Questions?
-              </Link>
-            </div>
-          </Faq>
+            <Team
+              city="Münster"
+              firstName="David"
+              firstDescription="Magna officia exercitation voluptate sunt excepteur esse id id consequat occaecat duis commodo laborum. Aute esse est laboris cillum nulla. Quis aliqua nostrud laborum labore duis eiusmod eu enim quis cupidatat. Commodo ea nulla nostrud tempor non nulla. Incididunt fugiat est deserunt cupidatat ex est. Est magna fugiat ullamco sunt sint. Occaecat labore irure eiusmod ullamco ex est non id ullamco."
+              firstImage={David}
+              firstLinkedIn="https://www.linkedin.com"
+              secondName="Marius"
+              secondDescription="Quis nisi aliqua aliquip enim. Enim ad sunt nostrud exercitation eiusmod ad magna sunt laborum ut in. Nostrud officia consequat dolore sint eu proident pariatur dolor sit veniam aliqua dolore minim ea. In reprehenderit minim voluptate exercitation incididunt laborum minim aute et quis duis."
+              secondImage={Marius}
+              secondLinkedIn="https://www.linkedin.com"
+              thirdName="Nils"
+              thirdDescription="Consectetur aliquip adipisicing aute anim quis cupidatat nostrud culpa tempor est in enim mollit. Officia ad enim minim laboris dolor aute non tempor id cillum labore ut reprehenderit. Magna voluptate ad labore magna sint adipisicing officia sit consequat non id magna exercitation in. Ex ea excepteur velit nostrud adipisicing. Sint consequat exercitation Lorem amet eiusmod ut occaecat est."
+              thirdImage={Nils}
+              thirdLinkedIn="https://www.linkedin.com"
+              fourthName="Jonas"
+              fourthDescription="Veniam adipisicing qui voluptate deserunt officia. Cupidatat minim sunt nostrud eu elit irure amet tempor elit. Id cillum aliquip eu non in consequat. Laborum eiusmod sunt cupidatat irure non id. Non officia esse aliquip exercitation nulla ut anim anim excepteur ea."
+              fourthImage={Jonas}
+              fourthLinkedIn="https://www.linkedin.com"
+            />
+          </section>
         </section>
 
         <Footer />
