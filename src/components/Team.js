@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import linkedIn from "../assets/linkedIn-brands.svg"
+import linkedIn from "../assets/linkedin-brands.svg"
 
 class Team extends Component {
   render() {
