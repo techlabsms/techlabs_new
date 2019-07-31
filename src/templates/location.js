@@ -61,19 +61,19 @@ class location extends Component {
               heading={location.firstEntryTitle}
               subheading="Text Text Text"
               text={location.firstEntryText}
-              image={location.firstEntryImage.file.url}
+              image={Placeholder}
             />
             <RightImageSection
               heading={location.secondEntryTitle}
               subheading="Text Text Text"
               text={location.secondEntryText}
-              image={location.secondEntryImage.file.url}
+              image={Placeholder}
             />
             <LeftImageSection
               heading={location.thirdEntryTitle}
               subheading="Text Text Text"
               text={location.thirdEntryText}
-              image={location.thirdEntryImage.file.url}
+              image={Placeholder}
             />
             <Team
               city="Münster"
