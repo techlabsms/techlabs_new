@@ -12,7 +12,7 @@ import {
 import BlogCard from "../components/BlogCard"
 import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
-import News from '../components/news';
+import News from '../components/News';
 import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
 import David from "../assets/David_team.png"
