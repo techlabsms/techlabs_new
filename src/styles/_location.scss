@@ -137,4 +137,9 @@
   &--tech {
     color: $color-p;
   }
+
+  &--background{
+    background: url(../assets/background_locations.png) center center no-repeat;
+    background-size: cover;
+  }
 }
