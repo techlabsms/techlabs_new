@@ -12,6 +12,8 @@ import {
 import BlogCard from "../components/BlogCard"
 import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
+import News from '../components/news';
+import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
 import David from "../assets/David_team.png"
 import Marius from "../assets/Marius_team.png"
@@ -35,34 +37,21 @@ class location extends Component {
               <div>
                 <div className="col-md-9 col-lg-5 border-0 my-5 p-5 location-card">
                   <h1 className="location-title">
-                    <img src={location.icon.file.url} alt="" />{" "}
-                    {location.heading}
+                    <img src={location.icon.file.url} alt="" /> Münster
                   </h1>
-                  <p className="text-muted batch-text">
-                    Next Batch {location.nextBatchDate}
-                  </p>
-                  {location.isOpen ? (
-                    <div>
-                      <a className="btn btn-primary mt-3 d-inline" href="/">
-                        Apply now
-                      </a>
-                      <a
-                        className="btn btn-secondary mt-3 d-inline"
-                        href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
-                      >
-                        Contact us
-                      </a>
-                    </div>
-                  ) : (
-                    <div>
-                      <a
-                        className="btn btn-secondary mt-3 d-inline"
-                        href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
-                      >
-                        Contact us
-                      </a>
-                    </div>
-                  )}
+                  <p className="text-muted batch-text">Next Batch</p>
+
+                  <div>
+                    <a className="btn btn-primary mt-3 d-inline" href="/">
+                      Apply now
+                    </a>
+                    <a
+                      className="btn btn-secondary mt-3 d-inline"
+                      href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
+                    >
+                      Contact us
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,6 +93,10 @@ class location extends Component {
               fourthDescription="Veniam adipisicing qui voluptate deserunt officia. Cupidatat minim sunt nostrud eu elit irure amet tempor elit. Id cillum aliquip eu non in consequat. Laborum eiusmod sunt cupidatat irure non id. Non officia esse aliquip exercitation nulla ut anim anim excepteur ea."
               fourthImage={Jonas}
               fourthLinkedIn="https://www.linkedin.com"
+            />
+            <News 
+            heading="News from Münster"
+            subheading="You want to know what’s going on in Münster?"
             />
           </section>
         </section>
