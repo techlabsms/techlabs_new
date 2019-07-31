@@ -14,6 +14,7 @@ import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
 import News from "../components/News"
 import Follow from "../components/Follow"
+import JoinTheTeam from "../components/JoinTheTeam"
 import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
 import David from "../assets/David_team.png"
@@ -99,11 +100,16 @@ class location extends Component {
               heading="News from Münster"
               subheading="You want to know what’s going on in Münster?"
             />
-            <Follow
-              heading="Follow us:"
-              subheading="Stay up to date"
-            />
+            <Follow heading="Follow us:" subheading="Stay up to date" />
           </section>
+          <div className="locations--background">
+            <section className="container">
+              <JoinTheTeam
+                heading="Join the Team"
+                subheading="Interested in joining the team?"
+              />
+            </section>
+          </div>
         </section>
 
         <Footer />
