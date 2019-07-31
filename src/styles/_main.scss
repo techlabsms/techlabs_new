@@ -23,6 +23,7 @@
 @import "./news";
 @import "./follow";
 @import "./joinTheTeam";
+@import "./mobileNav";
 
 
 
@@ -120,6 +121,10 @@ body {
 
 .padding-location {
   padding-bottom: 11rem !important;
+}
+
+.mobile{
+  height: 80vh;
 }
 
 //nav announcement that we hire
