@@ -1,0 +1,10 @@
+@import './variables';
+
+
+.news{
+    &--img{
+        &-last{
+            margin-top: -20%;
+        }
+    }
+}
