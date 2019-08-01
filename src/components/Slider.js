@@ -23,7 +23,7 @@ class Slider extends Component {
         name: "Hümeyra",
         role: "IT-Master",
         text:
-          "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit nisi mollit ad magna nisi nulla voluptate. Commodo enim tempor dolor pariatur enim eu magna.",
+          "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit.",
         image: Huemeyra,
         width: "66%"
       },
@@ -72,7 +72,7 @@ class Slider extends Component {
                     <img
                       src={testimonials[number].image}
                       alt=""
-                      className="mt-4 d-block"
+                      className="mt-4 d-block w-100"
                     />
                   </CSSTransition>
                 </TransitionGroup>
@@ -87,7 +87,7 @@ class Slider extends Component {
                   how to code
                 </h2>
 
-                <p className="slider--text mt-5">{testimonials[number].text}</p>
+                <p className="slider--text mt-5 pb-5">{testimonials[number].text}</p>
                 <p className="slider--name mt-5">
                   {testimonials[number].name}
                   <br />

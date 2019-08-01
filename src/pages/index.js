@@ -49,14 +49,16 @@ class index extends React.Component {
                     social events, workshops and much more await you. Discover
                     TechLabs now.
                   </p>
-                  <Link className="btn btn-primary d-inline" to="/locations">
-                    Locations
-                  </Link>
-                  <Link className="btn btn-secondary d-inline" to="/program">
-                    Program
-                  </Link>
+                  <div className="mt-5">
+                    <Link className="btn btn-primary d-inline" to="/locations">
+                      Locations
+                    </Link>
+                    <Link className="btn btn-secondary d-inline" to="/program">
+                      Program
+                    </Link>
+                  </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 d-none d-md-block">
                   <img
                     className="img-fluid mt-5 mt-md-0 center-padding"
                     src={firstImage}
@@ -122,7 +124,7 @@ class index extends React.Component {
               <h1 className="section-title">What we offer</h1>
               <div className="section-divider" />
               <div className="row">
-                <div className="col-lg-5">
+                <div className="col-lg-5 d-none d-md-block">
                   <div className="d-flex flex-column bg-light h-100 p-4">
                     <img
                       src={sittingagent}
@@ -132,7 +134,7 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="d-flex col-lg-7 flex-wrap">
-                  <div className="p-2 col-sm-6">
+                  <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">12</h1> <br />
@@ -150,7 +152,7 @@ class index extends React.Component {
                       </div>
                     </a>
                   </div>
-                  <div className="p-2 col-sm-6">
+                  <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">3</h1> <br />
@@ -168,7 +170,7 @@ class index extends React.Component {
                       </div>
                     </a>
                   </div>
-                  <div className="p-2 col-sm-6">
+                  <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
                       <div className="card">
                         <h1 className="card-title">300+</h1> <br />
@@ -185,7 +187,7 @@ class index extends React.Component {
                       </div>
                     </a>
                   </div>
-                  <div className="p-2 col-sm-6">
+                  <div className="p-2 col-sm-6 mt-5">
                     <Link to="/locations" className="card-a">
                       <div className="card">
                         <h1 className="card-title">3</h1> <br />
@@ -215,7 +217,7 @@ class index extends React.Component {
               image={gic}
             />
           </section>
-          <section className="container whatWeOffer">
+          <section className="container whatWeOffer mt-5">
             <h1 className="section-title">The TechLabs Journey</h1>
             <div className="section-divider" />
             <div className="row">
@@ -231,21 +233,21 @@ class index extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-2 text-right">
-                <img src={quote} alt="qoute" className="w-25" />
+              <div className="col-md-2 text-md-right text-left  w-50 w-md-100">
+                <img src={quote} alt="qoute" className="w-25 my-3" />
               </div>
-              <div className="col-10">
-                <p className="whatWeOffer--quote text-justify">
+              <div className="col-md-10">
+                <p className="whatWeOffer--quote text-justify w-100">
                   As a nonprofit, our mission is to enable as many people as
                   possible to acquire state-of-the-art tech skills to solve
                   today’s problems in a digital and entrepreneurial way
                 </p>
                 <div className="row mt-4">
-                  <div className="col-3">
+                  <div className="col-md-3 text-center text-md-left" >
                     <img src={nils} alt="nils" />
                   </div>
-                  <div className="col-9">
-                    <p className="mt-4 whatWeOffer--nils">
+                  <div className="col-md-9">
+                    <p className="mt-4 whatWeOffer--nils text-center text-md-left">
                       Nils Bahr <br />{" "}
                       <span className="whatWeOffer--nils-color">
                         Head of Product @ TechLabs
@@ -268,7 +270,7 @@ class index extends React.Component {
             <div className="row mt-5">
               <div className="col-md-5 col-lg-4" />
               <div className="col-md-7 col-lg-8">
-                <img src={benefits} alt="" />
+                <img src={benefits} alt="" className="w-100" />
               </div>
               <div className="card keyBenefits--card">
                 <div className="row">
@@ -328,12 +330,12 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="container-fluid mt-5 background">
+          <section className="container-fluid mt-5 background h-100">
             <div className="container mt-5">
               <h1 className="section-title">Learn More</h1>
               <div className="section-divider" />
               <div className="row h-100">
-                <div className="col-6 mt-3">
+                <div className="col-md-6 mt-3">
                   <div className="card">
                     <h2 className="mt-3 color-red">Location →</h2>
                     <p className="color-gl">
@@ -348,7 +350,7 @@ class index extends React.Component {
                     </Link>
                   </div>
                 </div>
-                <div className="col-6 mt-3">
+                <div className="col-md-6 mt-3">
                   <div className="card">
                     <h2 className="mt-3 color-red">Program →</h2>
                     <p className="color-gl">
