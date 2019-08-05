@@ -38,27 +38,32 @@ class index extends React.Component {
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
-                <div className="col-md-6 my-auto xs-margin-right">
+                <div className="col-lg-5 my-auto xs-margin-right">
                   <h1 className="display-4">
-                    Lets learn <br />
-                    digital <span className="highlighted">together</span>
+                    We Build.
+                    <br />
+                    <span className="highlighted lh-90">Digital. </span>
+                    <br />
+                    <span className="highlighted lh-90">Shapers.</span>
                   </h1>
-                  <p className="lead text-muted mb-4 margin-top-15 margin-bottom-2">
-                    TechLabs is the community that enables you to become a
-                    Digital Entrepreneur. Exciting meetups, talks, hackathons,
-                    social events, workshops and much more await you. Discover
-                    TechLabs now.
+                  <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
+                    As a nonprofit, our mission is to enable as many people as
+                    possible to acquire state-of-the-art tech skills and to
+                    solve today’s problems in a digital and entrepreneurial way.
                   </p>
                   <div className="mt-5">
-                    <Link className="btn btn-primary d-inline" to="/locations">
+                    <Link
+                      className="btn btn-secondary d-inline"
+                      to="/locations"
+                    >
                       Locations
                     </Link>
-                    <Link className="btn btn-secondary d-inline" to="/program">
+                    <Link className="btn btn-primary d-inline" to="/program">
                       Program
                     </Link>
                   </div>
                 </div>
-                <div className="col-md-6 d-none d-md-block">
+                <div className="col-md-7 d-none d-lg-block">
                   <img
                     className="img-fluid mt-5 mt-md-0 center-padding"
                     src={firstImage}
@@ -146,9 +151,11 @@ class index extends React.Component {
                           </span>{" "}
                           of TechLabs and get support from experienced mentors.
                         </p>
-                        <span className="card-discover">
-                          > Discover our program
-                        </span>
+                        <Link to="/program" className="noDec">
+                          <span className="card-discover">
+                            > Discover our program
+                          </span>
+                        </Link>
                       </div>
                     </a>
                   </div>
@@ -164,9 +171,11 @@ class index extends React.Component {
                             AI, Web Development and Data Science.
                           </span>
                         </p>
-                        <span className="card-discover">
-                          > Discover our tracks
-                        </span>
+                        <Link to="/program" className="noDec">
+                          <span className="card-discover">
+                            > Discover our tracks
+                          </span>
+                        </Link>
                       </div>
                     </a>
                   </div>
@@ -178,32 +187,35 @@ class index extends React.Component {
                         <p className="text-muted">
                           Our growing community connects over
                           <span className="highlighted">
+                            {" "}
                             300 motivated people interested in learning tech.
                           </span>
                         </p>
-                        <span className="card-discover">
-                          > Discover our community
-                        </span>
+                        <Link to="/locations" className="noDec">
+                          <span className="card-discover">
+                            > Discover our community
+                          </span>
+                        </Link>
                       </div>
                     </a>
                   </div>
                   <div className="p-2 col-sm-6 mt-5">
-                    <Link to="/locations" className="card-a">
-                      <div className="card">
-                        <h1 className="card-title">3</h1> <br />
-                        <p className="card-subtitle">TechLabs locations</p>
-                        <p className="text-muted">
-                          Currently we have an offline community in{" "}
-                          <span className="highlighted">
-                            Münster, Copenhagen & Barcelona
-                          </span>{" "}
-                          and many more to come.
-                        </p>
+                    <div className="card">
+                      <h1 className="card-title">3</h1> <br />
+                      <p className="card-subtitle">TechLabs locations</p>
+                      <p className="text-muted">
+                        Currently we have an offline community in{" "}
+                        <span className="highlighted">
+                          Münster, Copenhagen & Barcelona
+                        </span>{" "}
+                        and many more to come.
+                      </p>
+                      <Link to="/locations" className="noDec">
                         <span className="card-discover">
                           > Discover our locations
                         </span>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -223,12 +235,13 @@ class index extends React.Component {
             <div className="row">
               <div className="col">
                 <p className="mt-2 text-justify whatWeOffer--text">
-                  TechLabs Digital Shaper Journey: Get up to speed learning tech
-                  skills in one semester by means of our blended-learning
-                  concept that combines Online Learning, Project Work and
-                  TechLabs Community Meetings. Independent of the background and
-                  prior knowledge - anyone can participate and learn tech skills
-                  for free. Find more details about our program here.
+                  Get up to speed learning tech skills in one semester by means
+                  of our award-winning concept that combines Online Learning,
+                  Project Work and TechLabs Community Meetings. Independent of
+                  the background and prior knowledge - anyone can participate
+                  and learn tech-skills for free. Become a Digital Shaper. We
+                  help you to complete your own tech project and qualify for
+                  tech internships.
                 </p>
               </div>
             </div>
@@ -243,7 +256,7 @@ class index extends React.Component {
                   today’s problems in a digital and entrepreneurial way
                 </p>
                 <div className="row mt-4">
-                  <div className="col-md-3 text-center text-md-left" >
+                  <div className="col-md-3 text-center text-md-left">
                     <img src={nils} alt="nils" />
                   </div>
                   <div className="col-md-9">
@@ -289,6 +302,18 @@ class index extends React.Component {
                 </div>
                 <div className="row mt-4">
                   <div className="col-2 text-center">
+                    <img src={icon4} alt="code file" className="mt-2" />
+                  </div>
+                  <div className="col-10 pl-5">
+                    <h3>Learn from skilled mentors</h3>
+                    <p className="keyBenefits--card-text">
+                      In case you have any question during your learning journey
+                      or project work, our mentors are happy to support.
+                    </p>
+                  </div>
+                </div>
+                <div className="row mt-4">
+                  <div className="col-2 text-center">
                     <img src={icon2} alt="code file" className="mt-2" />
                   </div>
                   <div className="col-10 pl-5">
@@ -311,18 +336,6 @@ class index extends React.Component {
                       will enable you to quickly create stunning tech projects,
                       join a tech startup or get in touch with our renowned
                       partners. TechLabs is the right way to go for.
-                    </p>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon4} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Learn from skilled mentors</h3>
-                    <p className="keyBenefits--card-text">
-                      In case you have any question during your learning journey
-                      or project work, our mentors are happy to support.
                     </p>
                   </div>
                 </div>
@@ -357,7 +370,7 @@ class index extends React.Component {
                       Check out our Program Check out our Program Check out our
                       Program Check out our Program Check out our Program
                     </p>
-                    <Link to="/programm">
+                    <Link to="/program">
                       <button className="btn btn-primary mt-3">Program</button>
                     </Link>
                   </div>

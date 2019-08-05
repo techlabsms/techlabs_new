@@ -5,7 +5,7 @@ const RightImageSection = ({ heading, subheading, text, image }) => {
     <>
       <div className="row mt-5">
         <div className="col">
-          <h2>{heading}</h2>
+          <h1 className="section-title">{heading}</h1>
           <div className="section-divider" />
           <p className="basicSection--sub">{subheading}</p>
         </div>
