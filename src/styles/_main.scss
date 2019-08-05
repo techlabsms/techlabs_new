@@ -1,3 +1,6 @@
+//Normalize
+@import '~@csstools/normalize.css';
+
 // Utilities
 @import "./variables";
 @import "./animations";
@@ -371,7 +374,7 @@ body {
 
 .card-title {
   font-size: 4rem;
-  line-height: 0px;
+  line-height: 60px;
   color: $color-p;
   margin-top: 1rem;
 }
