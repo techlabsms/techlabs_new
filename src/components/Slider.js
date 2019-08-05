@@ -16,25 +16,25 @@ class Slider extends Component {
         text:
           "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
         image: Simon,
-        width: "33%"
+        width: "33%",
       },
       {
         index: 1,
-        name: "Hümeyra",
-        role: "IT-Master",
+        name: "Hümeyra Husseini",
+        role: "Student Molekulare Biomedizin",
         text:
-          "Consectetur nulla officia duis irure ad adipisicing ea cupidatat. Laborum sunt sunt ea est laboris consectetur officia mollit. Aute eu occaecat amet laboris non cupidatat mollit nostrud amet. Est consectetur quis consequat enim velit.",
+          "Starting without a tech background, the personal learning path that the TechLabs team put together for me allowed me to enter the AI track, learn the necessary coding skills and get to grips with machine deep learning. Finally I can build a bridge between biomedicine and AI. In addition, only everyone can benefit from the growing TechLabs community.",
         image: Huemeyra,
-        width: "66%"
+        width: "66%",
       },
       {
         index: 2,
-        name: "Clara",
-        role: "IT-Master",
+        name: "Clara Oppermann",
+        role: "Student Marketing and Management",
         text:
-          "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
+          "Although analytical skills are also of great importance in marketing in times of big data, they are often not a subject of much study. Thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data and analysis tools without any previous programming knowledge.",
         image: Clara,
-        width: "100%"
+        width: "100%",
       },
     ],
     number: 0,
@@ -49,7 +49,7 @@ class Slider extends Component {
   moveLeft() {
     const { number, testimonials } = this.state
     this.setState({
-      number: number <= 0 ? testimonials.length -1 : number - 1,
+      number: number <= 0 ? testimonials.length - 1 : number - 1,
     })
   }
 
@@ -87,7 +87,9 @@ class Slider extends Component {
                   how to code
                 </h2>
 
-                <p className="slider--text mt-5 pb-5">{testimonials[number].text}</p>
+                <p className="slider--text mt-5 pb-5">
+                  {testimonials[number].text}
+                </p>
                 <p className="slider--name mt-5">
                   {testimonials[number].name}
                   <br />

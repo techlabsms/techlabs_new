@@ -1,5 +1,5 @@
 //Normalize
-@import '~@csstools/normalize.css';
+@import "~@csstools/normalize.css";
 
 // Utilities
 @import "./variables";
@@ -27,8 +27,6 @@
 @import "./follow";
 @import "./joinTheTeam";
 @import "./mobileNav";
-
-
 
 h1,
 h2,
@@ -126,8 +124,12 @@ body {
   padding-bottom: 11rem !important;
 }
 
-.mobile{
+.mobile {
   height: 80vh;
+}
+
+.lh-90 {
+  line-height: 90px;
 }
 
 //nav announcement that we hire
@@ -357,8 +359,10 @@ body {
   cursor: pointer;
 }
 
-.lead {
-  font-size: 17px !important;
+.index--lead {
+  font-size: 22px;
+  line-height: 35px;
+  color: $color-gl;
 }
 
 .card-a {
@@ -435,6 +439,11 @@ body {
   color: $color-p;
   width: 80%;
   text-align: center;
+  border-radius: 6px;
+}
+
+.noDec:hover{
+  text-decoration: none;
 }
 
 .img-shadow {
