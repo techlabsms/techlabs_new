@@ -47,15 +47,14 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    As a nonprofit, our mission is to enable as many people as
-                    possible to acquire state-of-the-art tech skills and to
-                    solve today’s problems in a digital and entrepreneurial way.
+                    Our mission is to enable as many people as possible to
+                    acquire state-of-the-art tech skills to solve today’s
+                    problems in a digital way by providing an unique program
+                    that combines online learning, project work and local
+                    community events.
                   </p>
                   <div className="mt-5">
-                    <Link
-                      className="btn btn-secondary d-inline"
-                      to="/locations"
-                    >
+                    <Link className="btn btn-primary d-inline" to="/locations">
                       Locations
                     </Link>
                     <Link className="btn btn-primary d-inline" to="/program">
@@ -74,82 +73,32 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="gic">
+          <section className="gic py-5">
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
           </section>
 
-          <section className="py-5 padding-top-1">
-            <div className="container">
-              <div className="row justify-content-center align-items-center partner-palette">
-                <div className="col-md-2 mb-4 trusted">
-                  <h5 className="text-left trusted2 color-gl">
-                    trusted by our renowned partners
-                  </h5>
-                </div>
-                <div className="col-md-10">
-                  <div className="row xs-margin-left">
-                    <div className="col-6 col-sm-3">
-                      <img
-                        className="img-fluid partner-logo"
-                        src={ACN}
-                        alt="acn"
-                      />
-                    </div>
-                    <div className="col-6 col-sm-3">
-                      <img
-                        className="img-fluid partner-logo"
-                        src={WF}
-                        alt="wf"
-                      />
-                    </div>
-                    <div className="col-6 col-sm-3">
-                      <img
-                        className="img-fluid partner-logo"
-                        src={EY}
-                        alt="ey"
-                      />
-                    </div>
-                    <div className="col-6 col-sm-3">
-                      <img
-                        className="img-fluid partner-logo"
-                        src={SOPRA}
-                        alt="sopra"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-5">
+          <section className="py-5 wwo">
             <div className="container">
               <h1 className="section-title">What we offer</h1>
               <div className="section-divider" />
               <div className="row">
                 <div className="col-lg-5 d-none d-md-block">
-                  <div className="d-flex flex-column bg-light h-100 p-4">
-                    <img
-                      src={sittingagent}
-                      alt="sittingtechy"
-                      className="center-me"
-                    />
+                  <div className="d-flex flex-column h-100 p-4">
+                   
                   </div>
                 </div>
                 <div className="d-flex col-lg-7 flex-wrap">
                   <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
-                      <div className="card">
-                        <h1 className="card-title">12</h1> <br />
-                        <p className="card-subtitle">weeks coding</p>
+                      <div className="card h-100">
+                        <h1 className="card-title">6</h1> <br />
+                        <p className="card-subtitle">months of coding</p>
                         <p className="text-muted">
-                          in 12-16 weeks you get{" "}
-                          <span className="highlighted">
-                            insights into the coding world
-                          </span>{" "}
-                          of TechLabs and get support from experienced mentors.
+                          Within 12-16 weeks you get insights into the world of
+                          coding and can master tech through our
+                          blended-learning concept.
                         </p>
                         <Link to="/program" className="noDec">
                           <span className="card-discover">
@@ -161,15 +110,12 @@ class index extends React.Component {
                   </div>
                   <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
-                      <div className="card">
-                        <h1 className="card-title">3</h1> <br />
-                        <p className="card-subtitle">learning tracks</p>
-                        <p className="text-muted">
-                          You can currently choose between learning tracks in
-                          <br />
-                          <span className="highlighted">
-                            AI, Web Development and Data Science.
-                          </span>
+                      <div className="card h-100">
+                        <h1 className="card-title">4</h1> <br />
+                        <p className="card-subtitle">digital tracks</p>
+                        <p className="text-muted pb-4">
+                          With TechLabs you can learn state of the art tech in
+                          AI, Web Development, UX Design and Data Science.
                         </p>
                         <Link to="/program" className="noDec">
                           <span className="card-discover">
@@ -181,15 +127,12 @@ class index extends React.Component {
                   </div>
                   <div className="p-2 col-sm-6 mt-5">
                     <a href="/" className="card-a">
-                      <div className="card">
+                      <div className="card h-100">
                         <h1 className="card-title">300+</h1> <br />
                         <p className="card-subtitle">community members</p>
                         <p className="text-muted">
-                          Our growing community connects over
-                          <span className="highlighted">
-                            {" "}
-                            300 motivated people interested in learning tech.
-                          </span>
+                          Our growing community connects 300+ people motivated
+                          to learn tech – on- and offline.
                         </p>
                         <Link to="/locations" className="noDec">
                           <span className="card-discover">
@@ -200,15 +143,12 @@ class index extends React.Component {
                     </a>
                   </div>
                   <div className="p-2 col-sm-6 mt-5">
-                    <div className="card">
+                    <div className="card h-100">
                       <h1 className="card-title">3</h1> <br />
-                      <p className="card-subtitle">TechLabs locations</p>
-                      <p className="text-muted">
-                        Currently we have an offline community in{" "}
-                        <span className="highlighted">
-                          Münster, Copenhagen & Barcelona
-                        </span>{" "}
-                        and many more to come.
+                      <p className="card-subtitle">locations</p>
+                      <p className="text-muted pb-4">
+                        We currently have offline communities in Münster,
+                        Barcelona and Copenhagen.
                       </p>
                       <Link to="/locations" className="noDec">
                         <span className="card-discover">
