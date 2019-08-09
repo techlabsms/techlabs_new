@@ -28,74 +28,101 @@ class location extends Component {
     const location = get(this.props, "data.contentfulLocationPage")
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <div>
-        <Navbar />
+      <>
         <section className="container-fluid">
+          <Navbar />
           <section>
             <div
-              className="location-hero-ms location-hero"
+              className="location-hero"
               style={{ backgroundImage: `url(${location.image.file.url})` }}
             >
-              <div>
-                <div className="col-md-9 col-lg-5 border-0 my-5 p-5 location-card">
+              <div className="row">
+                <div className="col-md-12 col-lg-5 border-0 location-card mt-5 py-5 position-absolute">
                   <h1 className="location-title">
-                    <img src={location.icon.file.url} alt="" /> Münster
+                    <img src={location.icon.file.url} alt="" />{" "}
+                    {location.heading}
                   </h1>
-                  <p className="text-muted batch-text">Next Batch</p>
-
-                  <div>
-                    <a className="btn btn-primary mt-3 d-inline" href="/">
-                      Apply now
-                    </a>
-                    <a
-                      className="btn btn-secondary mt-3 d-inline"
-                      href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
-                    >
-                      Contact us
-                    </a>
-                  </div>
+                  {location.nextBatchDate ? (
+                    <p className="text-muted batch-text">
+                      Next Batch: {location.nextBatchDate}
+                    </p>
+                  ) : (
+                    <p className="text-muted batch-text">
+                      Next Batch will be announced soon
+                    </p>
+                  )}
+                  {location.isOpen ? (
+                    <div>
+                      <a className="btn btn-primary mt-3 d-inline" href="/">
+                        Apply now
+                      </a>
+                      <a
+                        className="btn btn-secondary mt-3 d-inline"
+                        href={`mailto:${
+                          location.heading
+                        }@techlabs.org?subject=Question from techlabs.org`}
+                      >
+                        Contact us
+                      </a>
+                    </div>
+                  ) : (
+                    <div>
+                      <a
+                        className="btn btn-primary mt-3 d-inline"
+                        href={`mailto:${
+                          location.heading
+                        }@techlabs.org?subject=Question from techlabs.org`}
+                      >
+                        Contact us
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </section>
           <section className="container location">
-            <LeftImageSection
-              heading={location.firstEntryTitle}
-              subheading="Text Text Text"
-              text={location.firstEntryText}
-              image={Placeholder}
-            />
-            <RightImageSection
-              heading={location.secondEntryTitle}
-              subheading="Text Text Text"
-              text={location.secondEntryText}
-              image={Placeholder}
-            />
-            <LeftImageSection
-              heading={location.thirdEntryTitle}
-              subheading="Text Text Text"
-              text={location.thirdEntryText}
-              image={Placeholder}
-            />
-            <Team
-              city="Münster"
-              firstName="David"
-              firstDescription="Magna officia exercitation voluptate sunt excepteur esse id id consequat occaecat duis commodo laborum. Aute esse est laboris cillum nulla. Quis aliqua nostrud laborum labore duis eiusmod eu enim quis cupidatat. Commodo ea nulla nostrud tempor non nulla. Incididunt fugiat est deserunt cupidatat ex est. Est magna fugiat ullamco sunt sint. Occaecat labore irure eiusmod ullamco ex est non id ullamco."
-              firstImage={David}
-              firstLinkedIn="https://www.linkedin.com"
-              secondName="Marius"
-              secondDescription="Quis nisi aliqua aliquip enim. Enim ad sunt nostrud exercitation eiusmod ad magna sunt laborum ut in. Nostrud officia consequat dolore sint eu proident pariatur dolor sit veniam aliqua dolore minim ea. In reprehenderit minim voluptate exercitation incididunt laborum minim aute et quis duis."
-              secondImage={Marius}
-              secondLinkedIn="https://www.linkedin.com"
-              thirdName="Nils"
-              thirdDescription="Consectetur aliquip adipisicing aute anim quis cupidatat nostrud culpa tempor est in enim mollit. Officia ad enim minim laboris dolor aute non tempor id cillum labore ut reprehenderit. Magna voluptate ad labore magna sint adipisicing officia sit consequat non id magna exercitation in. Ex ea excepteur velit nostrud adipisicing. Sint consequat exercitation Lorem amet eiusmod ut occaecat est."
-              thirdImage={Nils}
-              thirdLinkedIn="https://www.linkedin.com"
-              fourthName="Jonas"
-              fourthDescription="Veniam adipisicing qui voluptate deserunt officia. Cupidatat minim sunt nostrud eu elit irure amet tempor elit. Id cillum aliquip eu non in consequat. Laborum eiusmod sunt cupidatat irure non id. Non officia esse aliquip exercitation nulla ut anim anim excepteur ea."
-              fourthImage={Jonas}
-              fourthLinkedIn="https://www.linkedin.com"
-            />
+            {location.firstEntryTitle && (
+              <LeftImageSection
+                heading={location.firstEntryTitle}
+                subheading="Text Text Text"
+                text={location.firstEntryText}
+                image={Placeholder}
+              />
+            )}
+            {location.secondEntryTitle && (
+              <RightImageSection
+                heading={location.secondEntryTitle}
+                subheading="Text Text Text"
+                text={location.secondEntryText}
+                image={Placeholder}
+              />
+            )}
+            {location.thirdEntryTitle && (
+              <LeftImageSection
+                heading={location.thirdEntryTitle}
+                subheading="Text Text Text"
+                text={location.thirdEntryText}
+                image={Placeholder}
+              />
+            )}
+            {location.firstName && (
+              <Team
+                city="Münster"
+                firstName="David"
+                firstImage={David}
+                firstLinkedIn="https://www.linkedin.com"
+                secondName="Marius"
+                secondImage={Marius}
+                secondLinkedIn="https://www.linkedin.com"
+                thirdName="Nils"
+                thirdImage={Nils}
+                thirdLinkedIn="https://www.linkedin.com"
+                fourthName="Jonas"
+                fourthImage={Jonas}
+                fourthLinkedIn="https://www.linkedin.com"
+              />
+            )}
             <News
               heading="News from Münster"
               subheading="You want to know what’s going on in Münster?"
@@ -113,7 +140,7 @@ class location extends Component {
         </section>
 
         <Footer />
-      </div>
+      </>
     )
   }
 }

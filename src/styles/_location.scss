@@ -2,14 +2,12 @@
 
 .location-hero {
   position: relative;
-  height: 700px;
-  background-size: cover;
-  background-position: 50%;
+  height: 85vh;
+  background-position: bottom;
   background-repeat: no-repeat;
-  max-width: 1300px;
-  margin: 0 auto;
-  border-radius: 8px;
   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.2);
+  width: 100%;
+  background-size: cover;
 }
 
 // .location-hero:after {
@@ -28,14 +26,14 @@
 
 .location-card {
   z-index: 1;
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 0px !important;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0 !important;
   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0) !important;
   transition: box-shadow 0.5s;
   background-color: #ffffff;
   will-change: transform;
-  padding-left: 6rem !important;
+  padding-left: 2rem !important;
   padding-top: 2rem !important;
 }
 
