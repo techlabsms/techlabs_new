@@ -7,7 +7,9 @@ const LocationCard = ({ imgTop, city, icon }) => {
     <div className="col-md-6 mt-3">
       <Link to={`/location/${city}`}>
         <div className="locations--card">
-          <img className="card-img" src={imgTop} alt="location group" />
+         <div className="locations--card-img" style={{
+           backgroundImage: `url(${imgTop})`
+         }}></div>
           <div className="row mt-3">
             <div className="col-8">
               <img
