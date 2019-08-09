@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import locationsImg from "../assets/locations.png"
-import arrowDown from "../assets/arrowDown.svg"
 import "../styles/_main.scss"
 import LocationCard from "../components/LocationCard"
 import { graphql, Link } from "gatsby"
@@ -33,18 +32,15 @@ class Locations extends Component {
             <div className="container py-5">
               <div className="row margin-top-bot padding-location">
                 <div className="col-md-5 col-lg-5 border-0 text-left">
-                  <h1 className="mt-3">
-                    Discover our <br /> locations
+                  <h1 className="mt-3 display-4">
+                    Discover our <br />{" "}
+                    <span className="highlighted">locations</span>
                   </h1>
-                  <p>
+                  <p className="pr-5 text-justify mt-5">
                     TechLabs is the community that enables you to become a
-                    Digital Entrepreneur. Exciting meetups, talks, jactations,
-                    social events, workshops and much more await you. Discover
-                    TechLabs now.
+                    digital shaper. Exciting meetups, hackathons, socials and
+                    workshops await you. Discover the TechLabs world here.
                   </p>
-                  <a className="locations--hero-btn" href="#locations-techlabs">
-                    <img src={arrowDown} alt="locations" />
-                  </a>
                 </div>
                 <div className="col-md-7 col-lg-7 text-center">
                   <img
@@ -63,6 +59,7 @@ class Locations extends Component {
                 <div className="col-md-8">
                   <h1 className="section-title">TechLabs locations</h1>
                   <div className="section-divider" />
+                  <p className="basicSection--sub">Check out our Locations</p>
                 </div>
                 <div className="col-md-4">
                   <input
@@ -95,7 +92,7 @@ class Locations extends Component {
                 <div className="col">
                   <div className="card">
                     <div class="row no-gutters">
-                      <div class="col-md-6">
+                      <div class="col-md-6 order-2 order-md-1">
                         <div class="card-body">
                           <h2>
                             <span className="highlighted mt-5">Your city</span>{" "}
@@ -105,7 +102,7 @@ class Locations extends Component {
                             If you are looking to bring TechLabs to your local
                             community and want to shape the future of education,
                             reach out! Let’s work together and{" "}
-                            <span className="locations--bold">
+                            <span className="highlighted">
                               build something great!
                             </span>
                           </p>
@@ -117,10 +114,10 @@ class Locations extends Component {
                           </Link>
                         </div>
                       </div>
-                      <div class="col-md-6 text-center align-middle">
+                      <div class="col-md-6 text-center align-middle order-1 order-md-2">
                         <img
                           src={MAPLOC}
-                          class="card-img pt-4 pr-2"
+                          class="card-img pt-4 pr-2 pb-5"
                           alt="..."
                         />
                       </div>
