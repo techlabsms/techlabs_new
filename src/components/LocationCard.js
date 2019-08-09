@@ -15,12 +15,12 @@ const LocationCard = ({ imgTop, city, icon }) => {
                 alt="placemark"
                 className="text-muted mt-3 pl-3 pr-3 ml-2 d-inline-block"
               />
-              <h3 className="text-muted mt-4 ml-3 pl-3 pr-3 d-inline-block align-middle">
+              <h3 className="text-muted mt-4 d-inline-block align-middle">
                 {city}
               </h3>
             </div>
             <div className="col-4 text-right">
-              <img src={icon} alt="city" className="locations--icon mr-4 d-inline-block " />
+              <img src={icon} alt="city" className="locations--icon mr-4 d-inline-block w-75" />
             </div>
           </div>
         </div>
