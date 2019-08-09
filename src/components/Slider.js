@@ -61,6 +61,7 @@ class Slider extends Component {
           <div className="container">
             <h1 className="section-title">Our community</h1>
             <div className="section-divider" />
+             <p className="basicSection--sub">Find out what our testimonials experienced at TechLabs!</p>
             <div className="row">
               <div className="col-12 col-lg-5">
                 <TransitionGroup>

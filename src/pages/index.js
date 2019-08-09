@@ -83,11 +83,12 @@ class index extends React.Component {
             <div className="container">
               <h1 className="section-title">What we offer</h1>
               <div className="section-divider" />
+              <p className="basicSection--sub">
+                Check out what TechLabs has in store for you!
+              </p>
               <div className="row">
                 <div className="col-lg-5 d-none d-md-block">
-                  <div className="d-flex flex-column h-100 p-4">
-                   
-                  </div>
+                  <div className="d-flex flex-column h-100 p-4" />
                 </div>
                 <div className="d-flex col-lg-7 flex-wrap">
                   <div className="p-2 col-sm-6 mt-5">
@@ -165,13 +166,18 @@ class index extends React.Component {
           <section className="container">
             <RightImageSection
               heading="Award winning concept"
-              text="Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, Text, Text,Text,Text, "
+              subheading="Google Impact Challenge 2018"
+              text="TechLabs - the idea has convinced: The non-profit start-up TechLabs  offers students the opportunity to continue their education in the tech sector free of charge in addition to their training. Their project has now received an award and won 20,000 euros at the final of the Google Impact Challenge in Berlin."
               image={gic}
+              hasButton={true}
+              buttonText="Read more at WN"
+              buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
             />
           </section>
           <section className="container whatWeOffer mt-5">
             <h1 className="section-title">The TechLabs Journey</h1>
             <div className="section-divider" />
+            <p className="basicSection--sub">What awaits you at TechLabs?</p>
             <div className="row">
               <div className="col">
                 <p className="mt-2 text-justify whatWeOffer--text">
@@ -186,21 +192,14 @@ class index extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-2 text-md-right text-left  w-50 w-md-100">
-                <img src={quote} alt="qoute" className="w-25 my-3" />
-              </div>
               <div className="col-md-10">
-                <p className="whatWeOffer--quote text-justify w-100">
-                  As a nonprofit, our mission is to enable as many people as
-                  possible to acquire state-of-the-art tech skills to solve
-                  today’s problems in a digital and entrepreneurial way
-                </p>
                 <div className="row mt-4">
-                  <div className="col-md-3 text-center text-md-left">
+                  <div className="col-md-3" />
+                  <div className="col-md-2 text-center text-md-left">
                     <img src={nils} alt="nils" />
                   </div>
-                  <div className="col-md-9">
-                    <p className="mt-4 whatWeOffer--nils text-center text-md-left">
+                  <div className="col-md-7">
+                    <p className="mt-4 whatWeOffer--nils text-left text-md-left">
                       Nils Bahr <br />{" "}
                       <span className="whatWeOffer--nils-color">
                         Head of Product @ TechLabs
@@ -210,16 +209,13 @@ class index extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-5 mb-5">
-              <p className="whatWeOffer--lastLine">
-                Become a Digital Shaper. We help you to complete your own tech
-                project and qualify for tech internships.
-              </p>
-            </div>
           </section>
           <section className="container mt-5 mb-5">
             <h1 className="section-title">Key Benefits</h1>
             <div className="section-divider" />
+            <p className="basicSection--sub">
+              How can you profit from TechLabs?
+            </p>
             <div className="row mt-5">
               <div className="col-md-5 col-lg-4" />
               <div className="col-md-7 col-lg-8">
@@ -287,33 +283,33 @@ class index extends React.Component {
             <div className="container mt-5">
               <h1 className="section-title">Learn More</h1>
               <div className="section-divider" />
+              <p className="basicSection--sub">
+                Check out our location and programm!
+              </p>
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
-                  <div className="card">
-                    <h2 className="mt-3 color-red">Location →</h2>
-                    <p className="color-gl">
-                      Check out our locations Check out our locations Check out
-                      our locations Check out our locations Check out our
-                      locations
-                    </p>
-                    <Link to="/locations">
-                      <button className="btn btn-primary mt-3">
-                        Locations
-                      </button>
-                    </Link>
-                  </div>
+                  <Link to="/locations" className="noDec">
+                    <div className="card">
+                      <h2 className="mt-3 color-red">Location →</h2>
+                      <p className="color-gl">
+                        Check out what’s happening in our offline-communities.
+                        Your city is not yet on the map? Bring TechLabs to your
+                        city and build digital shapers with us.
+                      </p>
+                    </div>
+                  </Link>
                 </div>
                 <div className="col-md-6 mt-3">
-                  <div className="card">
-                    <h2 className="mt-3 color-red">Program →</h2>
-                    <p className="color-gl">
-                      Check out our Program Check out our Program Check out our
-                      Program Check out our Program Check out our Program
-                    </p>
-                    <Link to="/program">
-                      <button className="btn btn-primary mt-3">Program</button>
-                    </Link>
-                  </div>
+                  <Link to="/program" className="noDec">
+                    <div className="card">
+                      <h2 className="mt-3 color-red">Program →</h2>
+                      <p className="color-gl">
+                        Not sure what each of the tracks has in store for you?
+                        Check out our program and get more detailed information
+                        about the learning tracks.
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
