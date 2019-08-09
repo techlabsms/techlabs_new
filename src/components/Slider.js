@@ -11,8 +11,8 @@ class Slider extends Component {
     testimonials: [
       {
         index: 0,
-        name: "Simon",
-        role: "IT-Master",
+        name: "Simon Herbert",
+        role: "IT Specialist System Integration",
         text:
           "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
         image: Simon,
@@ -21,7 +21,7 @@ class Slider extends Component {
       {
         index: 1,
         name: "Hümeyra Husseini",
-        role: "Student Molekulare Biomedizin",
+        role: "Student Molecular Biomedicine",
         text:
           "Starting without a tech background, the personal learning path that the TechLabs team put together for me allowed me to enter the AI track, learn the necessary coding skills and get to grips with machine deep learning. Finally I can build a bridge between biomedicine and AI. In addition, only everyone can benefit from the growing TechLabs community.",
         image: Huemeyra,
@@ -61,6 +61,7 @@ class Slider extends Component {
           <div className="container">
             <h1 className="section-title">Our community</h1>
             <div className="section-divider" />
+             <p className="basicSection--sub">Find out what our testimonials experienced at TechLabs!</p>
             <div className="row">
               <div className="col-12 col-lg-5">
                 <TransitionGroup>
