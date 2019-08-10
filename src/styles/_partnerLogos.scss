@@ -1,0 +1,19 @@
+@import "./variables";
+
+.partnerLogos {
+  box-shadow: 10px 0px 20px rgba(30, 49, 71, 0.204409);
+  border-radius: 7px;
+  padding: 3%;
+  &--text{
+    font-size: 22px;
+    line-height: 25px;
+    color: $color-gl;
+  }
+  &--img{
+      width: 80px;
+      transition: all .2s ease-in;
+  }
+  &--img:hover{
+    transform: scale(1.1);
+}
+}
