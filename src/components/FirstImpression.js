@@ -37,7 +37,11 @@ const FirstImpression = ({
             </div>
           </div>
         </div>
-        <div className="col-lg-2 d-none d-lg-flex">
+    
+        {
+          secondHeading && (
+            <>
+    <div className="col-lg-2 d-none d-lg-flex">
           <div className="row m-auto h-100 align-items-center d-none d-md-flex">
             <div className="firstImpression--card-circle-1 firstImpression--card-circle" />
             <div className="firstImpression--card-circle-2 firstImpression--card-circle ml-4" />
@@ -60,6 +64,9 @@ const FirstImpression = ({
             </div>
           </div>
         </div>
+        </>
+          )
+        }
       </div>
     </>
   )
