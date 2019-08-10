@@ -9,7 +9,7 @@ import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
-import FaqQuestion from "../components/FaqQuestion";
+import FaqQuestion from "../components/FaqQuestion"
 
 class foundYourOwn extends Component {
   render() {
@@ -38,7 +38,7 @@ class foundYourOwn extends Component {
                     challenges of tomorrow?
                   </li>
                 </ul>
-                <h3 className="foundYourOwn--cta-first">
+                <h3 className="foundYourOwn--cta-first my-5">
                   Lets make a difference together
                 </h3>
               </div>
@@ -55,7 +55,7 @@ class foundYourOwn extends Component {
         <section class="foundYourOwn--cards">
           <div className="container">
             <div className="row">
-              <h2>
+              <h2 className="ml-3">
                 Are you{" "}
                 <span className="foundYourOwn--cta">
                   passionated about Tech?
@@ -64,17 +64,17 @@ class foundYourOwn extends Component {
             </div>
             <div className="row mt-3">
               <div class="card mb-3">
-                <div class="row no-gutters">
+                <div class="row">
                   <div class="col-md-6">
                     <img src={PictureOne} class="card-img" alt="..." />
                   </div>
                   <div class="col-md-6">
                     <div class="card-body">
-                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-2">
+                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-5">
                         We at TechLabs dream of a world with no digital
-                        illiterates. A world full of
+                        illiterates. A world full of{" "}
                         <span>tech-savvy individuals</span> who approach the
-                        challenges of our time with a
+                        challenges of our time with a{" "}
                         <span>digital and entrepreneurial mindset.</span> In
                         order to achieve this we aim to provide as many
                         individuals as possible with access to tech education
@@ -86,7 +86,7 @@ class foundYourOwn extends Component {
               </div>
             </div>
             <div className="row my-5">
-              <h2>
+              <h2 className="ml-3">
                 Do you want to become part of an
                 <span className="foundYourOwn--cta">
                   {" "}
@@ -97,9 +97,9 @@ class foundYourOwn extends Component {
             <div className="row mt-3">
               <div class="card mb-3">
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="card-body">
-                      <p class="foundYourOwn--card-text mr-3 ml-3 mt-2">
+                  <div class="col-md-6 ">
+                    <div class="card-body ">
+                      <p class="foundYourOwn--card-text mr-3 ml-3 mt-5">
                         We like to think of{" "}
                         <span>TechLabs as global community</span> of tech
                         enthusiasts who approach the problems of our time with a
@@ -118,7 +118,7 @@ class foundYourOwn extends Component {
               </div>
             </div>
             <div className="row my-5">
-              <h2>
+              <h2 className="ml-3">
                 Do you strive to actively support others preparing for the{" "}
                 <span className="foundYourOwn--cta">
                   challenges of tomorrow?
@@ -133,7 +133,7 @@ class foundYourOwn extends Component {
                   </div>
                   <div class="col-md-6">
                     <div class="card-body">
-                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-2">
+                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-3">
                         Think of TechLabs as a huge concept consisting of a
                         variety of building blocks. The core concept - online
                         courses, offline community, project phase - is available
@@ -167,39 +167,24 @@ class foundYourOwn extends Component {
                 </h1>
               </div>
               <div className="col-3">
-                <img src={ArrowsRight} alt="arrow" className="float-left rightArrow" />
+                <img
+                  src={ArrowsRight}
+                  alt="arrow"
+                  className="float-left rightArrow"
+                />
               </div>
             </div>
           </div>
           <div className="container mt-5">
             <div className="row text-center mt-5">
               <div className="col">
-                <Link className="btn btn-primary d-inline" to="/">
-                  Back
-                </Link>
-                <a className="btn btn-secondary d-inline" to="/program">
+                <a
+                  className="btn btn-primary d-inline"
+                  href="mailto:muenster@techlabs.org?subject=Found your own location"
+                >
                   Contact us
                 </a>
               </div>
-            </div>
-          </div>
-        </section>
-        <section className="foundYourOwn--faq mt-5">
-        <div className="container mt-5">
-          <div className="row">
-            <h2>Faq</h2>
-          </div>
-        </div>
-          <div className="container">
-            <div className="row">
-              <FaqQuestion
-                question="How does a possible founding process gonna look like?"
-                answer="text"
-              />
-              <FaqQuestion
-                question="How many people should a new founding team include?"
-                answer="text"
-              />
             </div>
           </div>
         </section>
