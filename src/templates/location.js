@@ -231,7 +231,6 @@ export const pageQuery = graphql`
       facebookUrl
       instagramUrl
       linkedinUrl
-      twitterUrl
       mediumUrl
       usesFirstEntry
       firstEntryTitle

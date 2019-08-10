@@ -2,20 +2,13 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import '../styles/_faqQuestion.scss'
+import "../styles/_faqQuestion.scss"
 
 const Link = styled.a`
   font-weight: 900 !important;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-left: 5px;
 `
-
-const Answer = styled.p`
-  color: #303030;
-  margin-left: 10px;
-`
-
 
 class FaqQuestion extends Component {
   state = {
@@ -30,20 +23,27 @@ class FaqQuestion extends Component {
   render() {
     return (
       <>
-        <div className="card w-100 mb-4">
+        <div className="faqQuestion--card w-100 mb-4">
           <div className="py-3">
             <Link className="faq--a" onClick={() => this.handleClick()}>
-              <div className="row">
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  className={"faqQuestion--icon mr-3 mt-1 ml-4 " + (this.state.isOpen ? 'faqQuestion--rotate' : null)}
-                />
-                <h3>{this.props.question}</h3>
+              <div className="row h-100">
+                <div className="col-2">
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    className={
+                      "faqQuestion--icon mr-3 mt-3 ml-4 " +
+                      (this.state.isOpen ? "faqQuestion--rotate" : null)
+                    }
+                  />
+                </div>
+                <div className="col-9 py-2">
+                  <h3>{this.props.question}</h3>
+                </div>
               </div>
             </Link>
             {this.state.isOpen && (
               <div>
-                <Answer>{this.props.answer}</Answer>
+                <p className="px-5 text-justify">{this.props.answer}</p>
               </div>
             )}
           </div>
