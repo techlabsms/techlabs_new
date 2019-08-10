@@ -14,8 +14,10 @@ import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import accenture from "../assets/accenture.png"
 import webdev from "../assets/webdevpro.png"
-import webDevCover from '../assets/wd_cover.png'
-import background from '../assets/ds_background.png'
+import webDevCover from "../assets/wd_cover.png"
+import background from "../assets/ds_background.png"
+import Faq from "../components/Faq"
+import { Link } from "gatsby";
 
 class web extends Component {
   render() {
@@ -23,7 +25,13 @@ class web extends Component {
       <>
         <Navbar />
         <div className="container-fluid">
-          <ProgrammHero headingFirst="Web" headingSecond=" Development" showCard={true} background={background} intro="Inform yourself here about our Web Development track. Start your six months learning journey with the next batch in the city of your choice. Acquire state-of-the-art tech skills by making use of our individualised tracks,  offline events and professional mentoring. Within six months you will finish a tech project and be rewarded with  a valuable digital shaper certificate."/>
+          <ProgrammHero
+            headingFirst="Web"
+            headingSecond=" Development"
+            showCard={true}
+            background={background}
+            intro="Inform yourself here about our Web Development track. Start your six months learning journey with the next batch in the city of your choice. Acquire state-of-the-art tech skills by making use of our individualised tracks,  offline events and professional mentoring. Within six months you will finish a tech project and be rewarded with  a valuable digital shaper certificate."
+          />
         </div>
         <div className="container">
           <WhatYouWillLearn
@@ -82,41 +90,26 @@ class web extends Component {
             firstImage={dashboard}
             firstText="Start with our free Track and learn the fundamentals of Web Development now and see if it’s right for you"
           />
-          <div className="row mt-5">
-            <div className="col">
-              <h2>FAQ</h2>
-              <div className="section-divider" />
-              <p>Do you have more questions?</p>
-              <FaqQuestion
-                question="How can I apply for the Digital Shaper Program?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="What makes me a qualified Applicant?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="How does the application process look like?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="What are the costs for Participants?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="When is the next Application Deadline?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="How can I apply for the Digital Shaper Program?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="Who can I contact if I have any Questions?"
-                answer="sdjhfasölfdh"
-              />
-              <div className="text-center mt-5">
-                <button className="btn btn-primary">More questions?</button>
+          <Faq>
+            <FaqQuestion
+              question="How do I apply for the Digital Shaper Program?"
+              answer="This can be done directly via our application form for the respective location."
+            />
+            <FaqQuestion
+              question="What should I write in my application to be accepted?"
+              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+            />
+            <FaqQuestion
+              question="How can I imagine the time required?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+            />
+          </Faq>
+          <div className="container pb-5">
+            <div className="row">
+              <div className="col text-center">
+                <Link to="/faq" className="btn btn-primary">
+                  More Questions?
+                </Link>
               </div>
             </div>
           </div>
