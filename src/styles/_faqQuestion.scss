@@ -1,6 +1,11 @@
 @import "./variables";
 
 .faqQuestion {
+  &--card {
+    box-shadow: 0px 0px 40px rgba(30, 49, 71, 0.204409);
+    border-radius: 3px;
+  }
+
   &--icon {
     color: $color-p;
 
@@ -14,5 +19,11 @@
 
   &--rotate {
     transform: rotate(90deg);
+  }
+
+  &--line {
+    width: 8px;
+    border-radius: 7px;
+    height: 100%;
   }
 }
