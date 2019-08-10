@@ -6,6 +6,7 @@ import profile from "../assets/profile.png"
 const ProgrammHero = ({
   headingFirst,
   headingSecond,
+  intro,
   showCard,
   background,
 }) => {
@@ -30,10 +31,7 @@ const ProgrammHero = ({
                 </span>
               </h1>
               <p className="programmHero--intro mb-5">
-                Our program provides you with the most effective way to build
-                domain knowledge in the tech sphere. Our blended-learning
-                concept combines Online Learning, Project Work and Events within
-                your Offline Community. Discover our Program now.
+                {intro}
               </p>
             </div>
             {showCard && (
