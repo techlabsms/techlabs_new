@@ -25,7 +25,7 @@ const Projects = ({
         </div>
       </div>
       <div className="row">
-        <div className="col-4">
+        <div className="col-md-4 py-5">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">{firstProjectHeading}</span>
@@ -43,7 +43,7 @@ const Projects = ({
             </div>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-md-4 py-5">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">{secondProjectHeading}</span>
@@ -61,7 +61,7 @@ const Projects = ({
             </div>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-md-4 py-5">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">{thirdProjectHeading}</span>

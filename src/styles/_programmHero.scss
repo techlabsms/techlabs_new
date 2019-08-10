@@ -2,7 +2,7 @@
 
 .programmHero {
   &--hero {
-    height: 100vh;
+    min-height: 60vh;
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100vw;
@@ -23,8 +23,7 @@
       width: 55%;
     }
     &-second {
-      background-color: $color-background;
-      width: 55%;
+      color: black;
     }
   }
 
