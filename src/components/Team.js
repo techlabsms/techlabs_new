@@ -23,7 +23,7 @@ class Team extends Component {
       fourthLinkedIn,
     } = this.props
     return (
-      <>
+      <div className="container my-5 py-5 h-100">
         <div className="row mt-5">
           <div className="col">
             <h2>Core Team</h2>
@@ -81,7 +81,7 @@ class Team extends Component {
             <p className="text-justify team--text mt-4">{fourthDescription}</p>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }
