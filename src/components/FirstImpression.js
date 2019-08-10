@@ -13,7 +13,7 @@ const FirstImpression = ({
 }) => {
   return (
     <>
-      <div className="row mt-5">
+      <div className="row mt-5 firstImpression">
         <div className="col">
           <h2>{heading}</h2>
           <div className="section-divider" />
@@ -21,7 +21,7 @@ const FirstImpression = ({
         </div>
       </div>
       <div className="row">
-        <div className="col-6 col-md-5">
+        <div className="col-12 col-md-5 py-5">
           <div className="firstImpression--card">
             <h3 className="firstImpression--card-heading text-center">
              {firstHeading}
@@ -44,7 +44,7 @@ const FirstImpression = ({
             <div className="firstImpression--card-circle-3 firstImpression--card-circle ml-4" />
           </div>
         </div>
-        <div className="col-6 col-md-5">
+        <div className="col-12 col-md-5 py-5">
           <div className="firstImpression--card">
             <h3 className="firstImpression--card-heading text-center">
               {secondHeading}
