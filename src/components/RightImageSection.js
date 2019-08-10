@@ -10,7 +10,7 @@ const RightImageSection = ({
   buttonLink,
 }) => {
   return (
-    <>
+    <div className="container my-5 py-5 h-100">
       <div className="row mt-5">
         <div className="col">
           <h1 className="section-title">{heading}</h1>
@@ -36,7 +36,7 @@ const RightImageSection = ({
           <img src={image} alt="" className="w-100 mb-3" />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

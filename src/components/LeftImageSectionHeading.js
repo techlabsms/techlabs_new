@@ -2,7 +2,7 @@ import React from "react"
 
 const LeftImageSectionHeading = ({ heading, subheading, text, image }) => {
   return (
-    <>
+    <div className="container my-5 py-5 h-100">
       <div className="row mt-5">
         <div className="col-md-6 text-center mb-3">
           <img src={image} alt="" className="w-100" />
@@ -14,7 +14,7 @@ const LeftImageSectionHeading = ({ heading, subheading, text, image }) => {
           <p className="basicSection--text">{text}</p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -13,7 +13,7 @@ const Follow = ({
   mediumLink,
 }) => {
   return (
-    <>
+    <div className="container my-5 py-5 h-100">
       <div className="row mt-5">
         <div className="col">
           <h2>{heading}</h2>
@@ -24,7 +24,7 @@ const Follow = ({
       <div className="row my-4">
         <div className="col-md-2" />
         {facebookLink && (
-          <div className="col-md-2 d-flex justify-content-center">
+          <div className="col-6 col-md-2 d-flex justify-content-center mt-4">
             <a href={facebookLink}>
               <div className="follow--circle text-center">
                 <img src={facebook} alt="" className="follow--facebook" />
@@ -33,7 +33,7 @@ const Follow = ({
           </div>
         )}
         {instagramLink && (
-          <div className="col-md-2 d-flex justify-content-center">
+          <div className="col-6 col-md-2 d-flex justify-content-center mt-4">
             <a href={instagramLink}>
               <div className="follow--circle text-center">
                 <img src={instagram} alt="" className="follow--img" />
@@ -42,7 +42,7 @@ const Follow = ({
           </div>
         )}
         {linkedInLink && (
-          <div className="col-md-2 d-flex justify-content-center">
+          <div className="col-6 col-md-2 d-flex justify-content-center mt-4">
             <a href={linkedInLink}>
               <div className="follow--circle text-center">
                 <img src={linkedin} alt="" className="follow--img" />
@@ -51,7 +51,7 @@ const Follow = ({
           </div>
         )}
         {mediumLink && (
-          <div className="col-md-2 d-flex justify-content-center">
+          <div className="col-6 col-md-2 d-flex justify-content-center mt-4">
             <a href={mediumLink}>
               <div className="follow--circle text-center">
                 <img src={medium} alt="" className="follow--img" />
@@ -62,7 +62,7 @@ const Follow = ({
 
         <div className="col-md-2" />
       </div>
-    </>
+    </div>
   )
 }
 

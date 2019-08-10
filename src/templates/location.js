@@ -18,6 +18,9 @@ import JoinTheTeam from "../components/JoinTheTeam"
 import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
+import teamspirit from "../assets/teamspirit.png"
+import pin2 from "../assets/pin2.png"
+import getDirection from "../assets/get-directions-button.png"
 import { Link } from "gatsby"
 
 class location extends Component {
@@ -79,12 +82,12 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
-          <PartnerLogos 
-            logoOne={location.partnerOne.file.url}
-            logoTwo={location.partnerTwo.file.url}
-            logoThree={location.partnerThree.file.url}
-            logoFour={location.partnerFour.file.url}
-          />
+            <PartnerLogos
+              logoOne={location.partnerOne.file.url}
+              logoTwo={location.partnerTwo.file.url}
+              logoThree={location.partnerThree.file.url}
+              logoFour={location.partnerFour.file.url}
+            />
             {location.firstEntryTitle && (
               <LeftImageSectionHeading
                 heading={location.firstEntryTitle}
@@ -134,14 +137,64 @@ class location extends Component {
               mediumLink={location.mediumUrl}
             />
           </section>
-          <div className="locations--background">
-            <section className="container">
-              <JoinTheTeam
-                heading="Join the Team"
-                subheading="Interested in joining the team?"
-              />
-            </section>
-          </div>
+          {location.openPositionsLink && (
+            <RightImageSectionHeading
+              heading="Join the Team"
+              subheading="Interested in joining the team?"
+              text="Do you dream of a world with no digital illitarates? Are you passionate about tech? As a TechLabs Management Member you can actively support others in learning tech. Reach out and join the TechLabs-Team."
+              image={teamspirit}
+              hasButton={true}
+              buttonLink={location.openPositionsLink}
+              buttonText="Open Positions"
+            />
+          )}
+          {location.officeName && (
+            <div className="container h-100 my-5 py-5">
+              <div className="row">
+                <div className="col">
+                  <h2>{`Our Office - ${location.officeName}`}</h2>
+                  <div className="section-divider" />
+                  <p className="basicSection--sub">Checkout our Workspace</p>
+                </div>
+              </div>
+              <div className="row">
+                <div
+                  className="col-md-7 office--img"
+                  style={{
+                    backgroundImage: `url(${location.officeImg.file.url})`,
+                  }}
+                >
+                  <div className="w-75 office--card position-absolute">
+                    <h3 className="office--heading">
+                      Come & visit {location.officeName}
+                    </h3>
+                    <div className="row mt-4">
+                      <img src={pin2} alt="pin" className="h-75 mx-3" />
+                      <p className=" office--smalltext">
+                        {location.officeAdress}
+                      </p>
+                    </div>
+                    <div className="row mt-2">
+                      <img src={getDirection} alt="pin" className="h-75 mx-3" />
+                      <a
+                        href={location.officeLink}
+                        className="d-inline noDec office--smalltext"
+                      >
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-5">
+                  <div className="row pl-5 d-flex h-100 mt-5 pr-5">
+                    <p className="align-self-center justify-content-center office--text">
+                      {location.officeText.json.content[0].content[0].value}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         <Footer />
@@ -253,6 +306,18 @@ export const pageQuery = graphql`
       }
       teamLinkedInFour
       teamImgFour
+      openPositionsLink
+      officeName
+      officeImg {
+        file {
+          url
+        }
+      }
+      officeAdress
+      officeText {
+        json
+      }
+      officeLink
     }
     allContentfulBlogPost(limit: 3) {
       edges {

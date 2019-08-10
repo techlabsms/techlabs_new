@@ -149,3 +149,41 @@
     background-size: cover;
   }
 }
+
+.office {
+  &--img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+  }
+  &--card {
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0) !important;
+    transition: box-shadow 0.5s;
+    background-color: #ffffff;
+    will-change: transform;
+    box-shadow: 10px 0px 20px rgba(30, 49, 71, 0.206692);
+    border-top-left-radius: 6px;
+    padding: 1rem;
+  }
+  &--heading {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  &--smalltext {
+    font-size: 16px;
+    line-height: 28px;
+    color: black;
+  }
+  &--smalltext:hover {
+    color: black;
+  }
+  &--text {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+    color: $color-gl;
+  }
+}
