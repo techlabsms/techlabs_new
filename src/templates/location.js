@@ -82,12 +82,14 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
-            <PartnerLogos
-              logoOne={location.partnerOne.file.url}
-              logoTwo={location.partnerTwo.file.url}
-              logoThree={location.partnerThree.file.url}
-              logoFour={location.partnerFour.file.url}
-            />
+            {location.hasPartner && (
+              <PartnerLogos
+                logoOne={location.partnerOne.file.url}
+                logoTwo={location.partnerTwo.file.url}
+                logoThree={location.partnerThree.file.url}
+                logoFour={location.partnerFour.file.url}
+              />
+            )}
             {location.firstEntryTitle && (
               <LeftImageSectionHeading
                 heading={location.firstEntryTitle}
@@ -258,6 +260,7 @@ export const pageQuery = graphql`
           url
         }
       }
+      hasPartner
       partnerOne {
         file {
           url
