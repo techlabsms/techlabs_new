@@ -5,7 +5,7 @@ import accenture from "../assets/accenture.png"
 
 const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCompanyLogo}) => {
   return (
-    <>
+    <div className="container my-5 py-5 partners">
       <div className="row mt-5">
         <div className="col">
           <h2>{heading}</h2>
@@ -14,15 +14,15 @@ const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCo
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-1 text-right">
+        <div className="col-md-1 text-right">
           <img src={quote} alt="" />
         </div>
-        <div className="col-9">
+        <div className="col-md-9">
           <p className="partner--quote">
             {quoteText}
           </p>
         </div>
-        <div className="col-1" className="text-left">
+        <div className="col-md-1" className="text-left">
           <img src={quote} alt="qoute sign" className="partner--quote-sign" />
         </div>
       </div>
@@ -44,7 +44,7 @@ const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCo
 
         
       </div>
-    </>
+    </div>
   )
 }
 

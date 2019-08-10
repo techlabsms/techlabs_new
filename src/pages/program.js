@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 import ProgrammHero from "../components/ProgrammHero"
 import Academy from "../components/Academy"
 import ThreeComponents from "../components/ThreeComponents"
-import Projects from "../components/Projects"
+import LearnMore from "../components/LearnMore"
 import background from "../assets/p_background.png"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
@@ -17,7 +17,7 @@ import DataScience from "../assets/dashboard.png"
 import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import { Link } from "gatsby"
-import Footer from '../components/Footer'
+import Footer from "../components/Footer"
 
 class program extends Component {
   render() {
@@ -27,6 +27,10 @@ class program extends Component {
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond="Program"
+          intro="Our program provides you with the most effective way to build
+                domain knowledge in the tech sphere. Our blended-learning
+                concept combines Online Learning, Project Work and Events within
+                your Offline Community. Discover our Program now."
           background={background}
         />
         <div className="container">
@@ -111,7 +115,7 @@ class program extends Component {
             </div>
           </section>
           <Process />
-          <Projects
+          <LearnMore
             heading="Learn More"
             subheading="Get more information about the three different learning tracks!"
             firstProjectHeading="Web Development"
@@ -145,7 +149,7 @@ class program extends Component {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     )
   }
