@@ -10,17 +10,14 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import BlogCard from "../components/BlogCard"
-import LeftImageSection from "../components/LeftImageSection"
-import RightImageSection from "../components/RightImageSection"
+import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
+import RightImageSectionHeading from "../components/RightImageSectionHeading"
 import News from "../components/News"
 import Follow from "../components/Follow"
 import JoinTheTeam from "../components/JoinTheTeam"
 import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
-import David from "../assets/David_team.png"
-import Marius from "../assets/Marius_team.png"
-import Nils from "../assets/Nils_team.png"
-import Jonas from "../assets/Jonas_team.png"
+import PartnerLogos from "../components/PartnerLogos"
 import { Link } from "gatsby"
 
 class location extends Component {
@@ -82,52 +79,60 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
+          <PartnerLogos 
+            logoOne={location.partnerOne.file.url}
+            logoTwo={location.partnerTwo.file.url}
+            logoThree={location.partnerThree.file.url}
+            logoFour={location.partnerFour.file.url}
+          />
             {location.firstEntryTitle && (
-              <LeftImageSection
+              <LeftImageSectionHeading
                 heading={location.firstEntryTitle}
                 subheading="Text Text Text"
                 text={location.firstEntryText}
-                image={Placeholder}
+                image={location.firstEntryImage.file.url}
               />
             )}
             {location.secondEntryTitle && (
-              <RightImageSection
+              <RightImageSectionHeading
                 heading={location.secondEntryTitle}
                 subheading="Text Text Text"
                 text={location.secondEntryText}
-                image={Placeholder}
+                image={location.secondEntryImage.file.url}
               />
             )}
             {location.thirdEntryTitle && (
-              <LeftImageSection
+              <LeftImageSectionHeading
                 heading={location.thirdEntryTitle}
-                subheading="Text Text Text"
-                text={location.thirdEntryText}
-                image={Placeholder}
+                text={location.thirdEntryText.json.content[0].content[0].value}
+                image={location.thirdEntryImage.file.url}
               />
             )}
-            {location.firstName && (
+            {location.teamNameOne && (
               <Team
-                city="Münster"
-                firstName="David"
-                firstImage={David}
-                firstLinkedIn="https://www.linkedin.com"
-                secondName="Marius"
-                secondImage={Marius}
-                secondLinkedIn="https://www.linkedin.com"
-                thirdName="Nils"
-                thirdImage={Nils}
-                thirdLinkedIn="https://www.linkedin.com"
-                fourthName="Jonas"
-                fourthImage={Jonas}
-                fourthLinkedIn="https://www.linkedin.com"
+                city={location.heading}
+                firstName={location.teamNameOne}
+                firstImage={location.teamImgOne.file.url}
+                firstLinkedIn={location.teamLinkedInOne}
+                secondName={location.teamNameTwo}
+                secondImage={location.teamImgTwo.file.url}
+                secondLinkedIn={location.teamLinkedInTwo}
+                thirdName={location.teamNameThree}
+                thirdImage={location.teamImgThree.file.url}
+                thirdLinkedIn={location.teamLinkedInThree}
+                fourthName={location.teamImgFour}
+                fourthImage={location.teamNameFour.file.url}
+                fourthLinkedIn={location.teamLinkedInFour}
               />
             )}
-            <News
-              heading="News from Münster"
-              subheading="You want to know what’s going on in Münster?"
+            <Follow
+              heading="Follow us:"
+              subheading="Stay up to date"
+              facebookLink={location.facebookUrl}
+              instagramLink={location.instagramUrl}
+              linkedInLink={location.linkedinUrl}
+              mediumLink={location.mediumUrl}
             />
-            <Follow heading="Follow us:" subheading="Stay up to date" />
           </section>
           <div className="locations--background">
             <section className="container">
@@ -172,6 +177,7 @@ export const pageQuery = graphql`
       instagramUrl
       linkedinUrl
       twitterUrl
+      mediumUrl
       usesFirstEntry
       firstEntryTitle
       firstEntryText
@@ -190,7 +196,9 @@ export const pageQuery = graphql`
       }
       usesThirdEntry
       thirdEntryTitle
-      thirdEntryText
+      thirdEntryText {
+        json
+      }
 
       thirdEntryImage {
         file {
@@ -212,6 +220,39 @@ export const pageQuery = graphql`
           url
         }
       }
+      partnerFour {
+        file {
+          url
+        }
+      }
+      teamNameOne
+      teamLinkedInOne
+      teamImgOne {
+        file {
+          url
+        }
+      }
+      teamNameTwo
+      teamLinkedInTwo
+      teamImgTwo {
+        file {
+          url
+        }
+      }
+      teamNameThree
+      teamLinkedInThree
+      teamImgThree {
+        file {
+          url
+        }
+      }
+      teamNameFour {
+        file {
+          url
+        }
+      }
+      teamLinkedInFour
+      teamImgFour
     }
     allContentfulBlogPost(limit: 3) {
       edges {
