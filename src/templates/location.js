@@ -10,17 +10,17 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import BlogCard from "../components/BlogCard"
-import LeftImageSection from "../components/LeftImageSection"
-import RightImageSection from "../components/RightImageSection"
+import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
+import RightImageSectionHeading from "../components/RightImageSectionHeading"
 import News from "../components/News"
 import Follow from "../components/Follow"
 import JoinTheTeam from "../components/JoinTheTeam"
 import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
-import David from "../assets/David_team.png"
-import Marius from "../assets/Marius_team.png"
-import Nils from "../assets/Nils_team.png"
-import Jonas from "../assets/Jonas_team.png"
+import PartnerLogos from "../components/PartnerLogos"
+import teamspirit from "../assets/teamspirit.png"
+import pin2 from "../assets/pin2.png"
+import getDirection from "../assets/get-directions-button.png"
 import { Link } from "gatsby"
 
 class location extends Component {
@@ -28,92 +28,179 @@ class location extends Component {
     const location = get(this.props, "data.contentfulLocationPage")
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <div>
-        <Navbar />
+      <>
         <section className="container-fluid">
+          <Navbar />
           <section>
             <div
-              className="location-hero-ms location-hero"
+              className="location-hero"
               style={{ backgroundImage: `url(${location.image.file.url})` }}
             >
-              <div>
-                <div className="col-md-9 col-lg-5 border-0 my-5 p-5 location-card">
+              <div className="row">
+                <div className="col-md-12 col-lg-5 border-0 location-card mt-5 py-5 position-absolute">
                   <h1 className="location-title">
-                    <img src={location.icon.file.url} alt="" /> Münster
+                    <img src={location.icon.file.url} alt="" />{" "}
+                    {location.heading}
                   </h1>
-                  <p className="text-muted batch-text">Next Batch</p>
-
-                  <div>
-                    <a className="btn btn-primary mt-3 d-inline" href="/">
-                      Apply now
-                    </a>
-                    <a
-                      className="btn btn-secondary mt-3 d-inline"
-                      href="mailto:info@techlabs.org?subject=Kontaktanfrage TechLabs.org"
-                    >
-                      Contact us
-                    </a>
-                  </div>
+                  {location.nextBatchDate ? (
+                    <p className="text-muted batch-text">
+                      Next Batch: {location.nextBatchDate}
+                    </p>
+                  ) : (
+                    <p className="text-muted batch-text">
+                      Next Batch will be announced soon
+                    </p>
+                  )}
+                  {location.isOpen ? (
+                    <div>
+                      <a className="btn btn-primary mt-3 d-inline" href="/">
+                        Apply now
+                      </a>
+                      <a
+                        className="btn btn-secondary mt-3 d-inline"
+                        href={`mailto:${
+                          location.heading
+                        }@techlabs.org?subject=Question from techlabs.org`}
+                      >
+                        Contact us
+                      </a>
+                    </div>
+                  ) : (
+                    <div>
+                      <a
+                        className="btn btn-primary mt-3 d-inline"
+                        href={`mailto:${
+                          location.heading
+                        }@techlabs.org?subject=Question from techlabs.org`}
+                      >
+                        Contact us
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </section>
           <section className="container location">
-            <LeftImageSection
-              heading={location.firstEntryTitle}
-              subheading="Text Text Text"
-              text={location.firstEntryText}
-              image={Placeholder}
-            />
-            <RightImageSection
-              heading={location.secondEntryTitle}
-              subheading="Text Text Text"
-              text={location.secondEntryText}
-              image={Placeholder}
-            />
-            <LeftImageSection
-              heading={location.thirdEntryTitle}
-              subheading="Text Text Text"
-              text={location.thirdEntryText}
-              image={Placeholder}
-            />
-            <Team
-              city="Münster"
-              firstName="David"
-              firstDescription="Magna officia exercitation voluptate sunt excepteur esse id id consequat occaecat duis commodo laborum. Aute esse est laboris cillum nulla. Quis aliqua nostrud laborum labore duis eiusmod eu enim quis cupidatat. Commodo ea nulla nostrud tempor non nulla. Incididunt fugiat est deserunt cupidatat ex est. Est magna fugiat ullamco sunt sint. Occaecat labore irure eiusmod ullamco ex est non id ullamco."
-              firstImage={David}
-              firstLinkedIn="https://www.linkedin.com"
-              secondName="Marius"
-              secondDescription="Quis nisi aliqua aliquip enim. Enim ad sunt nostrud exercitation eiusmod ad magna sunt laborum ut in. Nostrud officia consequat dolore sint eu proident pariatur dolor sit veniam aliqua dolore minim ea. In reprehenderit minim voluptate exercitation incididunt laborum minim aute et quis duis."
-              secondImage={Marius}
-              secondLinkedIn="https://www.linkedin.com"
-              thirdName="Nils"
-              thirdDescription="Consectetur aliquip adipisicing aute anim quis cupidatat nostrud culpa tempor est in enim mollit. Officia ad enim minim laboris dolor aute non tempor id cillum labore ut reprehenderit. Magna voluptate ad labore magna sint adipisicing officia sit consequat non id magna exercitation in. Ex ea excepteur velit nostrud adipisicing. Sint consequat exercitation Lorem amet eiusmod ut occaecat est."
-              thirdImage={Nils}
-              thirdLinkedIn="https://www.linkedin.com"
-              fourthName="Jonas"
-              fourthDescription="Veniam adipisicing qui voluptate deserunt officia. Cupidatat minim sunt nostrud eu elit irure amet tempor elit. Id cillum aliquip eu non in consequat. Laborum eiusmod sunt cupidatat irure non id. Non officia esse aliquip exercitation nulla ut anim anim excepteur ea."
-              fourthImage={Jonas}
-              fourthLinkedIn="https://www.linkedin.com"
-            />
-            <News
-              heading="News from Münster"
-              subheading="You want to know what’s going on in Münster?"
-            />
-            <Follow heading="Follow us:" subheading="Stay up to date" />
-          </section>
-          <div className="locations--background">
-            <section className="container">
-              <JoinTheTeam
-                heading="Join the Team"
-                subheading="Interested in joining the team?"
+            {location.hasPartner && (
+              <PartnerLogos
+                logoOne={location.partnerOne.file.url}
+                logoTwo={location.partnerTwo.file.url}
+                logoThree={location.partnerThree.file.url}
+                logoFour={location.partnerFour.file.url}
               />
-            </section>
-          </div>
+            )}
+            {location.firstEntryTitle && (
+              <LeftImageSectionHeading
+                heading={location.firstEntryTitle}
+                subheading="Text Text Text"
+                text={location.firstEntryText}
+                image={location.firstEntryImage.file.url}
+              />
+            )}
+            {location.secondEntryTitle && (
+              <RightImageSectionHeading
+                heading={location.secondEntryTitle}
+                subheading="Text Text Text"
+                text={location.secondEntryText}
+                image={location.secondEntryImage.file.url}
+              />
+            )}
+            {location.thirdEntryTitle && (
+              <LeftImageSectionHeading
+                heading={location.thirdEntryTitle}
+                text={location.thirdEntryText.json.content[0].content[0].value}
+                image={location.thirdEntryImage.file.url}
+              />
+            )}
+            {location.teamNameOne && (
+              <Team
+                city={location.heading}
+                firstName={location.teamNameOne}
+                firstImage={location.teamImgOne.file.url}
+                firstLinkedIn={location.teamLinkedInOne}
+                secondName={location.teamNameTwo}
+                secondImage={location.teamImgTwo.file.url}
+                secondLinkedIn={location.teamLinkedInTwo}
+                thirdName={location.teamNameThree}
+                thirdImage={location.teamImgThree.file.url}
+                thirdLinkedIn={location.teamLinkedInThree}
+                fourthName={location.teamImgFour}
+                fourthImage={location.teamNameFour.file.url}
+                fourthLinkedIn={location.teamLinkedInFour}
+              />
+            )}
+            <Follow
+              heading="Follow us:"
+              subheading="Stay up to date"
+              facebookLink={location.facebookUrl}
+              instagramLink={location.instagramUrl}
+              linkedInLink={location.linkedinUrl}
+              mediumLink={location.mediumUrl}
+            />
+          </section>
+          {location.openPositionsLink && (
+            <RightImageSectionHeading
+              heading="Join the Team"
+              subheading="Interested in joining the team?"
+              text="Do you dream of a world with no digital illitarates? Are you passionate about tech? As a TechLabs Management Member you can actively support others in learning tech. Reach out and join the TechLabs-Team."
+              image={teamspirit}
+              hasButton={true}
+              buttonLink={location.openPositionsLink}
+              buttonText="Open Positions"
+            />
+          )}
+          {location.officeName && (
+            <div className="container h-100 my-5 py-5">
+              <div className="row">
+                <div className="col">
+                  <h2>{`Our Office - ${location.officeName}`}</h2>
+                  <div className="section-divider" />
+                  <p className="basicSection--sub">Checkout our Workspace</p>
+                </div>
+              </div>
+              <div className="row">
+                <div
+                  className="col-md-7 office--img"
+                  style={{
+                    backgroundImage: `url(${location.officeImg.file.url})`,
+                  }}
+                >
+                  <div className="w-75 office--card position-absolute">
+                    <h3 className="office--heading">
+                      Come & visit {location.officeName}
+                    </h3>
+                    <div className="row mt-4">
+                      <img src={pin2} alt="pin" className="h-75 mx-3" />
+                      <p className=" office--smalltext">
+                        {location.officeAdress}
+                      </p>
+                    </div>
+                    <div className="row mt-2">
+                      <img src={getDirection} alt="pin" className="h-75 mx-3" />
+                      <a
+                        href={location.officeLink}
+                        className="d-inline noDec office--smalltext"
+                      >
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-5">
+                  <div className="row pl-5 d-flex h-100 mt-5 pr-5">
+                    <p className="align-self-center justify-content-center office--text">
+                      {location.officeText.json.content[0].content[0].value}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         <Footer />
-      </div>
+      </>
     )
   }
 }
@@ -145,6 +232,7 @@ export const pageQuery = graphql`
       instagramUrl
       linkedinUrl
       twitterUrl
+      mediumUrl
       usesFirstEntry
       firstEntryTitle
       firstEntryText
@@ -163,13 +251,16 @@ export const pageQuery = graphql`
       }
       usesThirdEntry
       thirdEntryTitle
-      thirdEntryText
+      thirdEntryText {
+        json
+      }
 
       thirdEntryImage {
         file {
           url
         }
       }
+      hasPartner
       partnerOne {
         file {
           url
@@ -185,6 +276,51 @@ export const pageQuery = graphql`
           url
         }
       }
+      partnerFour {
+        file {
+          url
+        }
+      }
+      teamNameOne
+      teamLinkedInOne
+      teamImgOne {
+        file {
+          url
+        }
+      }
+      teamNameTwo
+      teamLinkedInTwo
+      teamImgTwo {
+        file {
+          url
+        }
+      }
+      teamNameThree
+      teamLinkedInThree
+      teamImgThree {
+        file {
+          url
+        }
+      }
+      teamNameFour {
+        file {
+          url
+        }
+      }
+      teamLinkedInFour
+      teamImgFour
+      openPositionsLink
+      officeName
+      officeImg {
+        file {
+          url
+        }
+      }
+      officeAdress
+      officeText {
+        json
+      }
+      officeLink
     }
     allContentfulBlogPost(limit: 3) {
       edges {
