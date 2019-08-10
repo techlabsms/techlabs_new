@@ -10,14 +10,15 @@ import Projects from "../components/Projects"
 import CallToAction from "../components/CallToAction"
 import FirstImpression from "../components/FirstImpression"
 import FaqQuestion from "../components/FaqQuestion"
-import graph from "../assets/graphs.png"
+import ai_cover from "../assets/ai_cover.png"
 import david from "../assets/david.png"
-import dashboard from "../assets/dashboard.png"
+import Faq from '../components/Faq'
+import { Link } from 'gatsby'
 import accenture from "../assets/accenture.png"
 import Charts from "../assets/charts2.png"
 import smartCity from "../assets/smartCity.png"
 import robot from "../assets/ai-robot.png"
-import background from '../assets/ds_background.png'
+import background from "../assets/ds_background.png"
 
 class ai extends Component {
   render() {
@@ -25,39 +26,45 @@ class ai extends Component {
       <>
         <Navbar />
         <div className="container-fluid">
-          <ProgrammHero headingFirst="Artificial" headingSecond=" Intelligence" showCard={true} background={background}/>
+          <ProgrammHero
+            headingFirst="Artificial"
+            headingSecond=" Intelligence"
+            showCard={true}
+            background={background}
+            intro="Inform yourself here about our Artificial Intelligence  track. Start your six months learning journey with the next batch in the city of your choice. Acquire state-of-the-art tech skills by making use of our individualised tracks,  offline events and professional mentoring. Within six months you will finish a tech project and be rewarded with  a valuable digital shaper certificate."
+          />
         </div>
         <div className="container">
           <WhatYouWillLearn
-            intro="Data Science is a multidisciplinary domain which is in it’s core the task of finding valuable insights from data"
-            first="How to apply machine learning models to solve problems like churn prediction or customer segmentation"
-            second="Exploration of raw data to gain useful insights"
-            third="General programming knowledge in R or Python"
-            fourth="How to present your results in a structured and visually appealing way"
+            intro="See here what different learnings our AI track offers!"
+            first="Acquire knowledge about the state-of-the-art deep learning algorithms"
+            second="Learn how to build image recognition systems"
+            third="Get to know what mathematical foundation hides behind the training of neural networks"
+            fourth="Acquire general python programming knowledge with emphasis on deep learning libraries"
           />
           <RightImageSection
-            heading="Why Data Science?"
-            subheading="Data Scientist - The most in demand job in the 21th Century"
-            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important during time. What makes companies like Google, Baidu or Amazon so powerful? It´s the data they possess AND the employers that are able to analyze it. 
-                  The data volume that is created every year and the number of companies that want to use this growth exponentially Hence the demand for data scientists is also increasing. 
-                  Data Science is a pretty versatile. Data Scientist are demanded in HealthCare, Banking, Logistics, E-Commerce and several other domains. Hence, as a data scientist you are able to explore a lot of different problems and gain important business knowledge."
-            image={graph}
+            heading="Why Artificial Intelligence"
+            subheading="Learn more about the various applications of Artificial Intelligence! "
+            text="Data is the new Oil, but „AI ist the new electricity“ - Andrew Ng. Artificial Intelligence helps to mine valuable knowledge from data. Deep neural network got a boost in popularity in 2011 when the Neural Network AlexNet solved the ImageNet Competition (Detection of 1000 classes of objects in images) with an error rate of 16%. Before deep neural networks ruled this competition the average error rate was way over 25%. Since then the error rate has been decreasing to less than 5%.
+                  The success of Deep Neural Network relies on the huge amount of data that is necessary to train the millions of parameters. Since the amount of data is continuously increasing, the range of applications for AI becomes wider and deeper. While AI has been a long time an instrument to solve a single very specific task, AI is more and more developing into a generalized approach for problem solving."
+            image={ai_cover}
           />
           <LeftImageSection
             heading="More abou the track"
-            subheading="Text Text Text Text"
-            text="The Data Science Programm is available either as a hands-on or a theoretical track. Both tracks include basic programming exercises at first to get to know the chosen programming language R or Python. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction."
+            subheading="Get to know neural networks and work with the background data in our individualised tracks!"
+            text="The AI track comes in several versions. You can combine the deep learning part with some refreshment of you python and/or machine learning knowledge. Despite this refreshment you should already have good knowledge in python and machine learning and/or done the data science track.
+            You´ll acquire theoretical knowledge as well as practical experience during the AI track. The primary applications are Image Classification, Object Detection and Text Mining. You´ll apply neural networks to detect objects in an image and classify those as well as find interesting patterns in text data (for example amazon reviews). Aside from the application the track contains information about the most important mathematical foundation of neural networks. This include back-propagation, gradient descent and vectorizing of word."
             image={david}
           />
           <RightImageSection
-            heading="What is AI?"
-            subheading="Text Text Text Text"
-            text="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now. TechLabs is the community that enables you to become a Digital Entrepreneur. "
+            heading="What is Artificial Intelligence"
+            subheading="Check out what hides behind the buzzword “AI”!"
+            text="AI is an expandable definition, which sometimes involves all learner structure that are able to detect patterns and apply the learned pattern to predict or transform something. When we are talking about AI, we talk about Deep Neural Networks or Reinforcement Learning Systems that are capable of solving large, complex problem like object detection, object classification or autonomous driving. These applications are ruled by deep neural networks with millions of parameters. "
             image={robot}
           />
           <Partners
             heading="What our partners say"
-            subheading="Text text text"
+            subheading="Read here what our partners think about the skills you learn at TechLabs! "
             quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
             quoteName="Hans Schneider"
             quoteRole="Data Scientist"
@@ -79,49 +86,31 @@ class ai extends Component {
           <CallToAction />
           <FirstImpression
             heading="Get a first Impression"
-            subheading="Check out our Open Curriculum"
+            subheading="Check out our curriculum that is open for everybody!"
             firstHeading="Introduction to Artificial Intelligence"
             firstImage={robot}
             firstText="Start with our free Track and learn the fundamentals of AI now and see if it’s right for you"
-            secondHeading="Introduction to Data Science with R"
-            secondImage={dashboard}
-            secondText="Start with our free Track and learn the fundamentals with R now and see if it’s right for you"
           />
-          <div className="row mt-5">
-            <div className="col">
-              <h2>FAQ</h2>
-              <div className="section-divider" />
-              <p>Do you have more questions?</p>
-              <FaqQuestion
-                question="How can I apply for the Digital Shaper Program?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="What makes me a qualified Applicant?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="How does the application process look like?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="What are the costs for Participants?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="When is the next Application Deadline?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="How can I apply for the Digital Shaper Program?"
-                answer="sdjhfasölfdh"
-              />
-              <FaqQuestion
-                question="Who can I contact if I have any Questions?"
-                answer="sdjhfasölfdh"
-              />
-              <div className="text-center mt-5">
-                <button className="btn btn-primary">More questions?</button>
+          <Faq>
+            <FaqQuestion
+              question="How do I apply for the Digital Shaper Program?"
+              answer="This can be done directly via our application form for the respective location."
+            />
+            <FaqQuestion
+              question="What should I write in my application to be accepted?"
+              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+            />
+            <FaqQuestion
+              question="How can I imagine the time required?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+            />
+          </Faq>
+          <div className="container pb-5">
+            <div className="row">
+              <div className="col text-center">
+                <Link to="/faq" className="btn btn-primary">
+                  More Questions?
+                </Link>
               </div>
             </div>
           </div>
