@@ -7,15 +7,15 @@ const CallToAction = () => {
   return (
     <section className="callToAction">
       <div className="row">
-        <div className="col-1">
+        <div className="col-3 col-md-1">
           <img src={ArrowsLeft} alt="arrow" className="float-right" />
         </div>
-        <div className="col-6">
-          <h1 className="foundYourOwn--last text-left">
+        <div className="col-6 col-md-6">
+          <h1 className="foundYourOwn--last text-center text-md-left">
             You can´t wait to acquire the most {" "}<span className="foundYourOwn--cta">in demand tech skills?</span>
           </h1>
         </div>
-        <div className="col">
+        <div className="col-3 col-md-5">
           <img
             src={ArrowsRight}
             alt="arrow"
@@ -41,15 +41,12 @@ const CallToAction = () => {
         </div>
       </div>
 
-      <div className="container mt-5">
+      <div className="container mt-5 py-5">
         <div className="row text-center mt-5">
           <div className="col">
-            <Link className="btn btn-primary d-inline" to="/">
-              Back
-            </Link>
-            <a className="btn btn-secondary d-inline" to="/program">
+            <Link className="btn btn-primary d-inline" to="/program">
               Apply now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
