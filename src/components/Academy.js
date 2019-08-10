@@ -27,27 +27,12 @@ class Academy extends Component {
     })
   }
 
-  componentDidMount() {
-   setInterval(() => {
-       if(this.state.index < 2){
-           this.setState({
-               index: this.state.index +1
-           })
-       } else {
-           this.setState({
-               index: 0
-           })
-       }
-       console.log(this.state.index)
-   }, 4000);   
-  }
-  
   render() {
     const { images, index } = this.state
     return (
-      <div className="academy">
+      <div className="academy container py-5 my-5">
         <div className="row mt-5">
-          <div className="col-sm-12 col-lg-6">
+          <div className="col-sm-12">
             <h2>TechLabs Academy</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">
@@ -57,17 +42,18 @@ class Academy extends Component {
         </div>
         <div className="row mt-5 d-flex mb-5">
           <div className="col align-self-center text-center ">
-            <img src={images[index]} alt="web" className="w-75"/>
+            <img src={images[index]} alt="web" className="w-75 py-5" />
           </div>
           <div className="col-sm-12 col-lg-6">
             <div className="row mt-4">
               <div
                 className="academy--card"
                 onMouseEnter={() => this.dataScienceHandler()}
+                onTouchStart={() => this.dataScienceHandler()}
                 style={{
                   backgroundColor: `${index === 0 ? "#fb1d5c" : "white"}`,
                   color: `${index === 0 ? "white" : "black"}`,
-                  transform:  `${index === 0 ? "scale(1.05)" : "scale(1.0)"}`
+                  transform: `${index === 0 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
                 <h4 className="academy--card-title">Data Science</h4>
@@ -84,10 +70,11 @@ class Academy extends Component {
               <div
                 className="academy--card"
                 onMouseEnter={() => this.webDevHandler()}
+                onTouchStart={() => this.webDevHandler()}
                 style={{
                   backgroundColor: `${index === 1 ? "#fb1d5c" : "white"}`,
                   color: `${index === 1 ? "white" : "black"}`,
-                  transform:  `${index === 1 ? "scale(1.05)" : "scale(1.0)"}`
+                  transform: `${index === 1 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
                 <h4 className="academy--card-title">Web Development</h4>
@@ -102,10 +89,11 @@ class Academy extends Component {
               <div
                 className="academy--card"
                 onMouseEnter={() => this.aiHandler()}
+                onTouchStart={() => this.aiHandler()}
                 style={{
                   backgroundColor: `${index === 2 ? "#fb1d5c" : "white"}`,
                   color: `${index === 2 ? "white" : "black"}`,
-                  transform:  `${index === 2 ? "scale(1.05)" : "scale(1.0)"}`
+                  transform: `${index === 2 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
                 <h4 className="academy--card-title">Artificial intelligence</h4>

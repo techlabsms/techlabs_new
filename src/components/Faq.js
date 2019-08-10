@@ -1,17 +1,20 @@
 import React from "react"
 
-
-const Faq = (props) => {
+const Faq = props => {
   return (
     <>
-      <section className="py-5">
+      <section className="py-5 my-5">
         <div className="container">
-          <h2 className="mb-5 text-center">Frequently Asked Questions</h2>
-          <div className="row">
+          <div className="row my-3">
             <div className="col">
-              {props.children}
+              <h2>FAQ´s</h2>
+              <div className="section-divider" />
+              <p className="basicSection--sub">Do you have more questions?</p>
             </div>
-          </div> 
+          </div>
+          <div className="row">
+            <div className="col">{props.children}</div>
+          </div>
         </div>
       </section>
     </>

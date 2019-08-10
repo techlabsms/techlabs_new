@@ -1,16 +1,23 @@
 import React from "react"
-import arrowDown from "../assets/arrowDown.png"
 import clock from "../assets/clock.png"
 import diploma from "../assets/diploma.png"
 import profile from "../assets/profile.png"
 
-const ProgrammHero = ({ headingFirst, headingSecond, showCard, background }) => {
+const ProgrammHero = ({
+  headingFirst,
+  headingSecond,
+  showCard,
+  background,
+}) => {
   return (
     <>
-      <section className="programmHero--hero" style={{
-        backgroundImage: `url(${background})`
-      }}>
-        <div className="container">
+      <section
+        className="programmHero--hero"
+        style={{
+          backgroundImage: `url(${background})`,
+        }}
+      >
+        <div className="container h-100">
           <div className="row">
             <div className="col-md-6">
               <h1 className="display-5 mt-5 programmHero--heading">
@@ -23,17 +30,11 @@ const ProgrammHero = ({ headingFirst, headingSecond, showCard, background }) => 
                 </span>
               </h1>
               <p className="programmHero--intro mb-5">
-                TechLabs is the community that enables you to become a Digital
-                Entrepreneur. Exciting meetups, talks, hackathons, social
-                events, workshops and much more await you. Discover TechLabs
-                now. TechLabs is the community that enables you to become a
-                Digital Entrepreneur. Exciting meetups, talks, hackathons,
-                social events, workshops and much more await you. Discover
-                TechLabs now.
+                Our program provides you with the most effective way to build
+                domain knowledge in the tech sphere. Our blended-learning
+                concept combines Online Learning, Project Work and Events within
+                your Offline Community. Discover our Program now.
               </p>
-              <a className="locations--hero-btn" href="#locations-techlabs">
-                <img src={arrowDown} alt="locations" />
-              </a>
             </div>
             {showCard && (
               <div className="col-md-6 d-none d-sm-none d-md-block">

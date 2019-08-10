@@ -73,7 +73,7 @@ class Navbar extends React.Component {
                     Program
                   </Link>
                   <div className="dropdown-menu">
-                    <Link className="dropdown-item-corr dropdown-item" to="/">
+                    <Link className="dropdown-item-corr dropdown-item" to="/program">
                       Program
                     </Link>
                     <Link

@@ -16,19 +16,19 @@ import icon4 from "../assets/icon4.png"
 import DataScience from "../assets/dashboard.png"
 import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
+import { Link } from "gatsby"
+import Footer from '../components/Footer'
 
 class program extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <div className="container-fluid">
-          <ProgrammHero
-            headingFirst="Digital Shaper"
-            headingSecond="Program"
-            background={background}
-          />
-        </div>
+        <ProgrammHero
+          headingFirst="Digital Shaper"
+          headingSecond="Program"
+          background={background}
+        />
         <div className="container">
           <Academy />
           <ThreeComponents />
@@ -38,10 +38,14 @@ class program extends Component {
             <div className="row mt-5">
               <div className="card keyBenefits--card-program">
                 <div className="row">
-                  <div className="col-2 text-center">
-                    <img src={icon1} alt="code file" className="mt-2" />
+                  <div className="col-md-2 text-center">
+                    <img
+                      src={icon1}
+                      alt="code file"
+                      className="mt-2 py-5 py-md-0"
+                    />
                   </div>
-                  <div className="col-10 pl-5">
+                  <div className="col-md-10 pl-md-5">
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
                       Get a personal learning path. Learn tech skills in the
@@ -52,10 +56,31 @@ class program extends Component {
                   </div>
                 </div>
                 <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon2} alt="code file" className="mt-2" />
+                  <div className="col-md-2 text-center">
+                    <img
+                      src={icon4}
+                      alt="code file"
+                      className="mt-2 py-5 py-md-0"
+                    />
                   </div>
-                  <div className="col-10 pl-5">
+                  <div className="col-md-10 pl-md-5">
+                    <h3>Learn from skilled mentors</h3>
+                    <p className="keyBenefits--card-text">
+                      Do you have questions during the projects or your learning
+                      journey? Just ask our proficient mentors who have
+                      long-standing practical experience!
+                    </p>
+                  </div>
+                </div>
+                <div className="row mt-4">
+                  <div className="col-md-2 text-center">
+                    <img
+                      src={icon2}
+                      alt="code file"
+                      className="mt-2 py-5 py-md-0"
+                    />
+                  </div>
+                  <div className="col-md-10 pl-md-5">
                     <h3>Build your own tech project portfolio</h3>
                     <p className="keyBenefits--card-text">
                       Choose a project idea that you find interesting and work
@@ -65,28 +90,20 @@ class program extends Component {
                   </div>
                 </div>
                 <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon3} alt="code file" className="mt-2" />
+                  <div className="col-md-2 text-center">
+                    <img
+                      src={icon3}
+                      alt="code file"
+                      className="mt-2 py-5 py-md-0"
+                    />
                   </div>
-                  <div className="col-10 pl-5">
+                  <div className="col-md-10 pl-md-5">
                     <h3>Shape your career path</h3>
                     <p className="keyBenefits--card-text">
-                      If you want to learn state-of-the-art tech skills that
+                      If you want to learn state-of-the-art tech skills, that
                       will enable you to quickly create stunning tech projects,
                       join a tech startup or get in touch with our renowned
-                      partners. TechLabs is the right way to go for.
-                    </p>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon4} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Learn from skilled mentors</h3>
-                    <p className="keyBenefits--card-text">
-                      In case you have any question during your learning journey
-                      or project work, our mentors are happy to support.
+                      partners – TechLabs is the right choice for you.
                     </p>
                   </div>
                 </div>
@@ -96,36 +113,39 @@ class program extends Component {
           <Process />
           <Projects
             heading="Learn More"
-            subheading="Culpa ea qui occaecat in laborum reprehenderit nulla anim mollit."
+            subheading="Get more information about the three different learning tracks!"
             firstProjectHeading="Web Development"
-            firstProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
             firstProjectImage={web}
             secondProjectHeading="Data Science"
-            secondProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
             secondProjectImage={DataScience}
             thirdProjectHeading="Artificial Intelligence"
-            thirdProjectText="TechLabs is the community that enables you to become a Digital Entrepreneur. Exciting meetups, talks, hackathons, social events, workshops and much more await you. Discover TechLabs now."
             thirdProjectImage={AI}
           />
           <Faq>
             <FaqQuestion
               question="How do I apply for the Digital Shaper Program?"
-              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+              answer="This can be done directly via our application form for the respective location."
             />
             <FaqQuestion
-              question="What makes me a qualified Applicant?"
-              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+              question="What should I write in my application to be accepted?"
+              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
             />
             <FaqQuestion
-              question="How does the application process look like?"
-              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
-            />
-            <FaqQuestion
-              question="What are the costs for Participants?"
-              answer="Qui do incididunt nisi deserunt exercitation consequat id eiusmod exercitation. Ex aliquip incididunt ullamco laborum deserunt eiusmod aute. Quis mollit elit proident nulla incididunt duis elit in tempor fugiat aute voluptate cillum."
+              question="How can I imagine the time required?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
             />
           </Faq>
+          <div className="container pb-5">
+            <div className="row">
+              <div className="col text-center">
+                <Link to="/faq" className="btn btn-primary">
+                  More Questions?
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+        <Footer/>
       </div>
     )
   }
