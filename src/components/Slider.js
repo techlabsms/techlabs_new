@@ -59,7 +59,7 @@ class Slider extends Component {
       <>
         <section className="py-5">
           <div className="container">
-            <h1 className="section-title">Our community</h1>
+            <h2>Our community</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">
               Find out what our testimonials experienced at TechLabs!
