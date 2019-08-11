@@ -2,7 +2,7 @@
 
 .foundYourOwn {
   &-hero {
-    height: 75vh;
+    min-height: 55vh;
     margin-top: 10vh;
   }
   &--heading {
@@ -22,7 +22,7 @@
     font-weight: bold;
   }
   &--list {
-    color: $color-gl;
+    color: black;
     font-size: 20px;
     li {
       list-style-image: url("../assets/check-mark.png");
@@ -39,13 +39,16 @@
     &-first {
       font-size: 30px;
       font-weight: bold;
-      padding-bottom: 0.1rem !important;
-      padding-top: 0.1rem !important;
-      background-color: #fee9ef;
-      color: $color-p;
-      width: 90%;
+      background-color: $color-p;
+      color: white !important;
+      width: 70%;
       text-align: center;
       margin-top: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.204409);
+      border-radius: 5px;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 1.3rem 1rem;
     }
   }
 
@@ -72,16 +75,16 @@
     }
   }
 
-  &--quote{
+  &--quote {
     height: 60vh;
-    padding-top: 5%; 
-    .rightArrow{
+    padding-top: 5%;
+    .rightArrow {
       margin-top: 30%;
-      margin-left: -40%;  
+      margin-left: -40%;
     }
   }
 
-  &--faq{
+  &--faq {
     height: 80vh;
   }
 }

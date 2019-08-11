@@ -48,14 +48,7 @@ class MobileNav extends Component {
                       Münster
                     </li>
                   </Link>
-                  <Link to="/locations/barcelona" className="color-gl">
-                    <li className="mt-2">
-                      <span>
-                        <img src={BCN} alt="" className="mobileNav--icon" />
-                      </span>
-                      Barcelona
-                    </li>
-                  </Link>
+
                   <Link to="/locations/copenhagen" className="color-gl">
                     <li className="mt-2">
                       <span>

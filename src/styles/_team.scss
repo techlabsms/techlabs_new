@@ -1,13 +1,6 @@
 @import "./variables";
 
 .team {
-  &--img {
-    filter: grayscale(1);
-    transition: all .2s ease-in;
-  }
-  &--img:hover {
-    filter: grayscale(0);
-  }
   &--name {
     font-size: 25px;
     line-height: 29px;
