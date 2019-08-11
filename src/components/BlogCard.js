@@ -18,13 +18,13 @@ const BlogCard = ({ article }) => {
                 </h3>
               </div>
               <div className="row ml-1">
-                <div className="col-4">
+                <div className="col-md-4">
                   <p className="ml-3">
                     <img src={clock} alt="clock" className="mr-3" />
                     {article.readTime}min read
                   </p>
                 </div>
-                <div className="col-8">
+                <div className="col-md-8">
                   <p className="ml-3">
                     <img
                       src={techlabs}
