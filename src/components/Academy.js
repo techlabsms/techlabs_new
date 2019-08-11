@@ -59,7 +59,7 @@ class Academy extends Component {
                 <h4 className="academy--card-title">Data Science</h4>
                 <p>
                   In the Data Science track you will learn basic coding skills
-                  in R or Python and then apply them directly to Data Science
+                  in R or Python and apply them directly to Data Science
                   tasks — from data import to data preparation and visualization
                   to building advanced machine learning models for
                   classification and regression
@@ -99,7 +99,7 @@ class Academy extends Component {
                 <h4 className="academy--card-title">Artificial intelligence</h4>
                 <p>
                   In the Artificial intelligence track you will learn about the
-                  possibilities of current AI techniques, attains Python skills,
+                  possibilities of current AI techniques, attain Python skills,
                   and builds first image recognition applications.
                 </p>
               </div>
