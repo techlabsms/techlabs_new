@@ -4,6 +4,7 @@ import get from "lodash/get"
 import techlabs from "../assets/tl-icon-whitebg.svg"
 import clock from "../assets/clock.svg"
 import Footer from "../components/Footer"
+import { graphql } from 'gatsby'
 
 class BlogPostTemplate extends Component {
   render() {

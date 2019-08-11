@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
 import get from "lodash/get"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -13,7 +14,7 @@ import getDirection from "../assets/get-directions-button.png"
 
 class location extends Component {
   render() {
-    const location = get(this.props, "data.contentfulLocationPage");
+    const location = get(this.props, "data.contentfulLocationPage")
     return (
       <>
         <section className="container-fluid">
