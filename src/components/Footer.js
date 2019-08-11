@@ -2,10 +2,14 @@ import React from "react"
 import Logo from "../assets/tl-logo-white.svg"
 import PayPal from "../assets/paypal.svg"
 import { Link } from "gatsby"
+import CookieConsent from "react-cookie-consent"
 
 const Footer = () => {
   return (
     <>
+      <CookieConsent style={{backgroundColor: "#fb1d5c", color: "white"}} buttonStyle={{ color: "#fb1d5c", borderRadius: "6px", backgroundColor: "white", padding: ".8rem 1.5rem"}} expires={90}>
+        This website uses cookies to enhance the user experience. <span role="emoji">🍪</span> <br/><Link to="/privacyPolicy" style={{ color : "white", textDecoration: "underline"}}>More Information</Link>   
+      </CookieConsent>
       <div className="footer-tl">
         <div className="container-ft">
           <div className="row cred">

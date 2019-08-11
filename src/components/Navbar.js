@@ -5,7 +5,7 @@ import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
 import SLACK from "../assets/slack-icon.svg"
-import MobileNav from "./MobileNav";
+import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import { Link } from "gatsby"
 import "jquery"
@@ -15,7 +15,7 @@ class Navbar extends React.Component {
     isOpen: false,
   }
   render() {
-    const { isOpen} = this.state;
+    const { isOpen } = this.state
     return (
       <>
         <Headroom>
@@ -23,7 +23,10 @@ class Navbar extends React.Component {
             <Link className="navbar-brand" to="/">
               <img src={logo} className="tl-logo" alt="tl-logo" />
             </Link>
-            <button className="navbar-toggler" onClick={() => this.setState({isOpen: !isOpen})}>
+            <button
+              className="navbar-toggler"
+              onClick={() => this.setState({ isOpen: !isOpen })}
+            >
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navigations-08">
@@ -69,7 +72,10 @@ class Navbar extends React.Component {
                     Program
                   </Link>
                   <div className="dropdown-menu">
-                    <Link className="dropdown-item-corr dropdown-item" to="/program">
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/program"
+                    >
                       Program
                     </Link>
                     <Link
@@ -107,9 +113,7 @@ class Navbar extends React.Component {
               {/* mobile view */}
             </div>
           </nav>
-          {isOpen && (
-            <MobileNav/>
-          )}
+          {isOpen && <MobileNav />}
         </Headroom>
       </>
     )
