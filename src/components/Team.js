@@ -28,7 +28,7 @@ class Team extends Component {
           <div className="col">
             <h2>Core Team</h2>
             <div className="section-divider" />
-            <p className="basicSection--sub">people behind {city}</p>
+            <p className="basicSection--sub">People behind {city}</p>
           </div>
         </div>
         <div className="row">

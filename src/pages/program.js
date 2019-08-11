@@ -52,10 +52,9 @@ class program extends Component {
                   <div className="col-md-10 pl-md-5">
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
-                      Get a personal learning path. Learn tech skills in the
-                      tracks Data Science, Artitificial Intelligence or Web
-                      Development by means of the best online resources
-                      available.
+                      Get a personalized learning path. Learn tech skills in
+                      Data Science, Artificial Intelligence or Web Development
+                      by means of the best online resources available
                     </p>
                   </div>
                 </div>

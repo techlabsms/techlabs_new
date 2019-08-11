@@ -14,7 +14,7 @@ class Slider extends Component {
         name: "Simon Herbert",
         role: "IT Specialist System Integration",
         text:
-          "I already come from the IT sector, but I am not learning programming there. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
+          "I already have an IT background, however, I have not learnt coding before TechLabs. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
         image: Simon,
         width: "33%",
       },
@@ -23,7 +23,7 @@ class Slider extends Component {
         name: "Hümeyra Husseini",
         role: "Student Molecular Biomedicine",
         text:
-          "Starting without a tech background, the personal learning path that the TechLabs team put together for me allowed me to enter the AI track, learn the necessary coding skills and get to grips with machine deep learning. Finally I can build a bridge between biomedicine and AI. In addition, only everyone can benefit from the growing TechLabs community.",
+          "Starting without a tech background, the personal learning path that the TechLabs team put together for me allowed me to enter the AI track, learn the necessary coding skills and get to grips with machine deep learning. Finally I can build a bridge between biomedicine and AI.",
         image: Huemeyra,
         width: "66%",
       },
@@ -61,7 +61,9 @@ class Slider extends Component {
           <div className="container">
             <h1 className="section-title">Our community</h1>
             <div className="section-divider" />
-             <p className="basicSection--sub">Find out what our testimonials experienced at TechLabs!</p>
+            <p className="basicSection--sub">
+              Find out what our testimonials experienced at TechLabs!
+            </p>
             <div className="row">
               <div className="col-12 col-lg-5">
                 <TransitionGroup>
