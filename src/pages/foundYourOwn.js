@@ -31,7 +31,7 @@ class foundYourOwn extends Component {
                     skills?
                   </li>
                   <li>
-                    Do you strive to actively support others preparing for the
+                    Do you strive to support others preparing for the
                     challenges of tomorrow?
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                Do you strive to actively support others preparing for the{" "}
+                Do you strive to support others preparing for the{" "}
                 <span className="foundYourOwn--cta">
                   challenges of tomorrow?
                 </span>

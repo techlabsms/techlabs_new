@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="col-lg-4">
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
-              <p className="white-font my-3">Let´s learn digital together</p>
+              <p className="white-font my-3">We Build. Digital. Shapers.</p>
               <button className="px-3 py-1 my-3 footer--btn">
                 <span role="img" aria-label="english">
                   🇬🇧

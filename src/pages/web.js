@@ -5,14 +5,12 @@ import ProgrammHero from "../components/ProgrammHero"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
-import Partners from "../components/Partners"
 import Projects from "../components/Projects"
 import CallToAction from "../components/CallToAction"
 import FirstImpression from "../components/FirstImpression"
 import FaqQuestion from "../components/FaqQuestion"
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
-import accenture from "../assets/accenture.png"
 import webDevCover from "../assets/wd_cover.png"
 import background from "../assets/ds_background.png"
 import Faq from "../components/Faq"
@@ -34,7 +32,7 @@ class web extends Component {
         </div>
         <div className="container">
           <WhatYouWillLearn
-            intro="Learn more about the technologies behind the web and how you can build modern web applications"
+            intro="Learn more about the technologies behind the web and how you can build modern web applications!"
             first="Create responsive and interactive web pages using cutting edge technologies including HTML, CSS and JavaScript"
             second="Acquire practical experience with open source tools and development frameworks, such as React"
             third="Learn how to program web-based application programming interfaces with node.JS "
@@ -42,8 +40,8 @@ class web extends Component {
           />
           <RightImageSection
             heading="Why Web Development"
-            subheading="The Internet has become an every day technology, learn how to create your own web pages and applications!"
-            text="The  Internet has disrupted our economy and society and millions of people  use the Internet every day. Without Web Developers no content or web  application would exist on the Internet. Companies such as Google or  Amazon wouldn't even exist, as these were born during the era of the  Internet. In the future, web development will be even more important since  technologies have been and will be evolving. Browsers are getting more  powerful day by day or are even used as a whole operating system (e.g., ChromeOS), recent web development toolkits allow you to create native apps on any device.  Think about all those applications you can access on the web from any device anywhere in the world. They have all been created by well-paid web developers that have excellent career prospects. Learning how development for the web works will provide you with powerful and versatile programming skills. These  allow you to create websites, visualize and making data accessible for  users, or just to build an awesome app. Machine Learning, Artificial  Intelligence, Robotics and other domains do often require modern  web-based interfaces to connect with the user or other systems to  provide value. Therefore, having knowledge of web development will  always be an asset for you!"
+            subheading="Learn how to create your own web pages and applications!"
+            text="The internet has disrupted our economy and society and millions of people  use the internet every day. Without Web Developers no content or web application would exist on the internet. Companies such as Google or  Amazon wouldn't even exist, as these were born during the era of the internet. In the future, web development will be even more important since technologies have been and will be evolving. Browsers are getting more powerful day by day or are even used as a whole operating system (e.g., ChromeOS), recent web development toolkits allow you to create native apps on any device.  Think about all the applications you can access on the web from every device anywhere in the world. Learning how development for the web works will provide you with powerful and versatile programming skills. These  allow you to create websites, visualize and making data accessible for  users, or just to build an awesome app. Machine Learning, Artificial  Intelligence, Robotics and other domains do often require modern  web-based interfaces to connect with the user or other systems to  provide value. Therefore, having knowledge of web development will  always be an asset for you!"
             image={webDevCover}
           />
           <LeftImageSection
@@ -60,19 +58,11 @@ class web extends Component {
             TechLabs provides you with the basic theories behind the web but focuses on skills required for developing web applications and web pages."
             image={dashboard}
           />
-          <Partners
-            heading="What our partners say"
-            subheading="Read here what our partners think about the skills you learn at TechLabs!"
-            quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
-            quoteName="Hans Schneider"
-            quoteRole="Web Developer"
-            quoteCompanyLogo={accenture}
-          />
           <Projects />
           <CallToAction />
           <FirstImpression
             heading="Get a first Impression"
-            subheading="Check out our Open Curriculum"
+            subheading="Check out our curriculum that is open for everybody!"
             firstHeading="Introduction to Web Development"
             firstImage={dashboard}
             firstText="Start with our free Track and learn the fundamentals of Web Development now and see if it’s right for you"

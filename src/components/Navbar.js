@@ -47,7 +47,7 @@ class Navbar extends React.Component {
                       <img src={CPH} className="nav-loc-icon" alt="loc-cph" />
                       Copenhagen
                     </Link>
-                    <div class="dropdown-divider" />
+                    <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/locations"
