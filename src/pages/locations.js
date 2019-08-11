@@ -59,7 +59,9 @@ class Locations extends Component {
                 <div className="col-md-8">
                   <h1 className="section-title">TechLabs locations</h1>
                   <div className="section-divider" />
-                  <p className="basicSection--sub">Check out our Locations</p>
+                  <p className="basicSection--sub">
+                    Check out our offline communities!
+                  </p>
                 </div>
                 <div className="col-md-4">
                   <input

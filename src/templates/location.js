@@ -93,22 +93,23 @@ class location extends Component {
             {location.firstEntryTitle && (
               <LeftImageSectionHeading
                 heading={location.firstEntryTitle}
-                subheading="Text Text Text"
-                text={location.firstEntryText}
+                subheading={location.firstEntrySubtitle}
+                text={location.firstEntryText.json.content[0].content[0].value}
                 image={location.firstEntryImage.file.url}
               />
             )}
             {location.secondEntryTitle && (
               <RightImageSectionHeading
                 heading={location.secondEntryTitle}
-                subheading="Text Text Text"
-                text={location.secondEntryText}
+                subheading={location.secondEntrySubtitle}
+                text={location.secondEntryText.json.content[0].content[0].value}
                 image={location.secondEntryImage.file.url}
               />
             )}
             {location.thirdEntryTitle && (
               <LeftImageSectionHeading
                 heading={location.thirdEntryTitle}
+                subheading={location.thirdEntrySubtitle}
                 text={location.thirdEntryText.json.content[0].content[0].value}
                 image={location.thirdEntryImage.file.url}
               />
@@ -132,7 +133,7 @@ class location extends Component {
             )}
             <Follow
               heading="Follow us:"
-              subheading="Stay up to date"
+              subheading="Stay up to date!"
               facebookLink={location.facebookUrl}
               instagramLink={location.instagramUrl}
               linkedInLink={location.linkedinUrl}
@@ -234,7 +235,10 @@ export const pageQuery = graphql`
       mediumUrl
       usesFirstEntry
       firstEntryTitle
-      firstEntryText
+      firstEntrySubtitle
+      firstEntryText{
+        json
+      }
       firstEntryImage {
         file {
           url
@@ -242,7 +246,10 @@ export const pageQuery = graphql`
       }
       usesSecondEntry
       secondEntryTitle
-      secondEntryText
+      secondEntrySubtitle
+      secondEntryText{
+        json
+      }
       secondEntryImage {
         file {
           url
@@ -250,6 +257,7 @@ export const pageQuery = graphql`
       }
       usesThirdEntry
       thirdEntryTitle
+      thirdEntrySubtitle
       thirdEntryText {
         json
       }
