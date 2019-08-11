@@ -1,3 +1,5 @@
+@import './variables';
+
 .footer-tl {
   background-image: url("../assets/footer-tl-2.svg");
   margin: 2em 0 0;
@@ -6,7 +8,7 @@
   width: 100%;
   padding-top: 35.33%;
   background-color: #fb1d5c;
-  height: 130vh;
+  min-height: 40vh;
   .footer-content {
     margin-top: 20%;
     padding-top: 15%;
@@ -38,9 +40,27 @@
   }
   button {
     background: #ffffff;
-    box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
     border-radius: 7px;
     width: 60%;
     text-align: left;
+    box-shadow: 0px 32px 40px rgba(30, 49, 71, 0.204409);
+    border: none;
+  }
+
+  &--subMenu {
+    list-style: none;
+    color: white;
+    margin-left: -30px;
+    &-link {
+      margin-top: 10px;
+    }
+  }
+
+  a{
+    color: white !important;
+  }
+  &--copy{
+    color: white !important;
+    font-size: 10px;
   }
 }
