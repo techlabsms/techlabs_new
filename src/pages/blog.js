@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import BlogCard from "../components/BlogCard"
@@ -20,6 +21,7 @@ class blog extends Component {
             })}
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
@@ -38,8 +40,8 @@ export const pageQuery = graphql`
           authorName
           slug
           abstract
-          postImg{
-            file{
+          postImg {
+            file {
               url
             }
           }
