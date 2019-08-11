@@ -13,11 +13,10 @@ import FaqQuestion from "../components/FaqQuestion"
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import accenture from "../assets/accenture.png"
-import webdev from "../assets/webdevpro.png"
 import webDevCover from "../assets/wd_cover.png"
 import background from "../assets/ds_background.png"
 import Faq from "../components/Faq"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
 class web extends Component {
   render() {
@@ -69,19 +68,7 @@ class web extends Component {
             quoteRole="Web Developer"
             quoteCompanyLogo={accenture}
           />
-          <Projects
-            heading="Projects from our participants"
-            subheading="Have a look at these projects, get inspired and apply now to finish your project!"
-            firstProjectHeading="Project1"
-            firstProjectText="The main goal was to identify customers that are likely to resign their mobile phone contracts. Aside from the resign-probabal, the team identified the impact of several variables."
-            firstProjectImage={webdev}
-            secondProjectHeading="Project1"
-            secondProjectText="The main goal was to identify customers that are likely to resign their mobile phone contracts. Aside from the resign-probabal, the team identified the impact of several variables."
-            secondProjectImage={webdev}
-            thirdProjectHeading="Project1"
-            thirdProjectText="The main goal was to identify customers that are likely to resign their mobile phone contracts. Aside from the resign-probabal, the team identified the impact of several variables."
-            thirdProjectImage={webdev}
-          />
+          <Projects />
           <CallToAction />
           <FirstImpression
             heading="Get a first Impression"
