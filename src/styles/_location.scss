@@ -10,6 +10,12 @@
   background-size: cover;
 }
 
+@media (max-width: 767px) {
+  .location-hero{
+    height: 110vh;
+  }
+}
+
 // .location-hero:after {
 //     content: "";
 //     position: absolute;
@@ -185,5 +191,19 @@
     line-height: 28px;
     text-align: justify;
     color: $color-gl;
+  }
+  
+  @media (max-width: 767px) {
+    &--img{
+      height: 70vh;
+    }
+
+    &--smalltext{
+      font-size: 12px;
+    }
+
+    &--heading{
+      font-size: 20px;
+    }
   }
 }

@@ -40,7 +40,7 @@ class MobileNav extends Component {
                     <li>Locations</li>
                   </Link>
                   <hr />
-                  <Link to="/locations/muenster" className="color-gl">
+                  <Link to="/location/Muenster" className="color-gl">
                     <li className="mt-2">
                       <span>
                         <img src={MS} alt="" className="mobileNav--icon" />
@@ -49,7 +49,7 @@ class MobileNav extends Component {
                     </li>
                   </Link>
 
-                  <Link to="/locations/copenhagen" className="color-gl">
+                  <Link to="/location/Copenhagen" className="color-gl">
                     <li className="mt-2">
                       <span>
                         <img src={CPH} alt="" className="mobileNav--icon" />
