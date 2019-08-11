@@ -6,7 +6,6 @@ import Faq from "../components/Faq"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
 import LeftImageSection from "../components/LeftImageSection"
-import Partners from "../components/Partners"
 import Projects from "../components/Projects"
 import CallToAction from "../components/CallToAction"
 import FirstImpression from "../components/FirstImpression"
@@ -14,7 +13,6 @@ import FaqQuestion from "../components/FaqQuestion"
 import dsCover from "../assets/ds_cover.png"
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
-import accenture from "../assets/accenture.png"
 import { Link } from "gatsby";
 import background from "../assets/ds_background.png"
 
@@ -43,32 +41,24 @@ class dataScience extends Component {
           <RightImageSection
             heading="Why Data Science?"
             subheading="Data Scientist - The most in demand job in the 21th Century"
-            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important during time. What makes companies like Google, Baidu or Amazon so powerful? It´s the data they possess AND the employers that are able to analyze it. 
+            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important during time. What makes companies like Google, Baidu or Amazon so powerful? It´s the data they possess and the employers that are able to analyze it. 
                   The data volume that is created every year and the number of companies that want to use this growth exponentially Hence the demand for data scientists is also increasing. 
                   Data Science is a pretty versatile. Data Scientist are demanded in HealthCare, Banking, Logistics, E-Commerce and several other domains. Hence, as a data scientist you are able to explore a lot of different problems and gain important business knowledge."
             image={dsCover}
           />
           <LeftImageSection
-            heading="What is Data Science"
+            heading="More about the Track"
             subheading="Learn data science - hands-on or theory - R or Python - your choice"
             text="It doesn't matter if you are a beginner or already have some experience. The program is designed so that you can choose which level of experience you want to start with, whether you want to do hands-on or theory courses and whether you prefer to program in Python or R. You decide.
             Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction.
             The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
             image={david}
           />
-          <Partners
-            heading="What our partners say"
-            subheading="Read here what our partners think about the skills you learn at TechLabs!"
-            quoteText="To start with pogramming is hard when done by yourself, but TechLabs is able to accelerate your learning curve by multiples."
-            quoteName="Hans Schneider"
-            quoteRole="Data Scientist"
-            quoteCompanyLogo={accenture}
-          />
           <Projects />
           <CallToAction />
           <FirstImpression
             heading="Get a first Impression"
-            subheading="Check out our Open Curriculum"
+            subheading="Check out our curriculum that is open for everybody!"
             firstHeading="Introduction to Data Science with Python"
             firstImage={dashboard}
             firstText="Start with our free Track and learn the fundamentals with Python now and see if it’s right for you"

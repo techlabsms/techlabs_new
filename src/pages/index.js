@@ -80,7 +80,7 @@ class index extends React.Component {
                 </div>
                 <div className="d-flex col-lg-7 flex-wrap">
                   <div className="p-2 col-sm-6 mt-5">
-                    <a href="/" className="card-a">
+                    <Link to="/program" className="card-a">
                       <div className="card h-100">
                         <h1 className="card-title">6</h1> <br />
                         <p className="card-subtitle">months of coding</p>
@@ -89,28 +89,24 @@ class index extends React.Component {
                           coding and can master tech through our
                           blended-learning concept.
                         </p>
-                        <Link to="/program" className="noDec">
-                          <span className="card-discover">
-                            > Discover our program
-                          </span>
-                        </Link>
+                        <span className="card-discover">
+                          > Discover our program
+                        </span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                   <div className="p-2 col-sm-6 mt-5">
                     <Link to="/program" className="card-a">
                       <div className="card h-100">
-                        <h1 className="card-title">4</h1> <br />
+                        <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">digital tracks</p>
                         <p className="text-muted pb-4">
                           With TechLabs you can learn state of the art tech in
-                          AI, Web Development, UX Design and Data Science.
+                          AI, Web Development and Data Science.
                         </p>
-                        <Link to="/program" className="noDec">
-                          <span className="card-discover">
-                            > Discover our tracks
-                          </span>
-                        </Link>
+                        <span className="card-discover">
+                          > Discover our tracks
+                        </span>
                       </div>
                     </Link>
                   </div>
@@ -123,11 +119,9 @@ class index extends React.Component {
                           Our growing community connects 300+ people motivated
                           to learn tech – on- and offline.
                         </p>
-                        <Link to="/locations" className="noDec">
-                          <span className="card-discover">
-                            > Discover our community
-                          </span>
-                        </Link>
+                        <span className="card-discover">
+                          > Discover our community
+                        </span>
                       </div>
                     </Link>
                   </div>
@@ -140,11 +134,9 @@ class index extends React.Component {
                           We currently have offline communities in Münster,
                           Barcelona and Copenhagen.
                         </p>
-                        <Link to="/locations" className="noDec">
-                          <span className="card-discover">
-                            > Discover our locations
-                          </span>
-                        </Link>
+                        <span className="card-discover">
+                          > Discover our locations
+                        </span>
                       </div>
                     </Link>
                   </div>
@@ -156,7 +148,7 @@ class index extends React.Component {
           <section className="container">
             <RightImageSection
               heading="Award winning concept"
-              subheading="Google Impact Challenge 2018"
+              subheading="Google Impact Challenge 2018!"
               text="TechLabs - the idea has convinced: The non-profit start-up TechLabs offers students the opportunity to continue their education in the tech sector free of charge in addition to their training. Their project has now received an award and won 20,000 euros at the final of the Google Impact Challenge in Berlin"
               image={gic}
               hasButton={true}
