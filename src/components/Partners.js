@@ -1,7 +1,6 @@
 import React from "react"
 import quote from "../assets/quote.png"
 import placeholder from "../assets/placeholder.png"
-import accenture from "../assets/accenture.png"
 
 const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCompanyLogo}) => {
   return (

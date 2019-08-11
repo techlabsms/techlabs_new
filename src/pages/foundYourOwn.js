@@ -1,15 +1,12 @@
 import React, { Component } from "react"
 import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
-import COMMUNITY from "../assets/photos/code-img.jpg"
-import { Link } from "gatsby"
 import MAP from "../assets/world.png"
 import PictureOne from "../assets/fyo1.png"
 import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
-import FaqQuestion from "../components/FaqQuestion"
 
 class foundYourOwn extends Component {
   render() {
