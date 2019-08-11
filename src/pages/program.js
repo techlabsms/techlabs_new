@@ -38,6 +38,7 @@ class program extends Component {
           <section className="container mt-5 mb-5 keyBenefits">
             <h2>Key Benefits</h2>
             <div className="section-divider" />
+               <p className="basicSection--sub">See how you can profit from TechLabs!</p>
             <div className="row mt-5">
               <div className="card keyBenefits--card-program">
                 <div className="row">

@@ -6,7 +6,7 @@ const ThreeComponents = () => {
     <div className="threeComponents container my-5 py-5">
       <div className="row mt-5 mb-5">
         <div className="col">
-          <h2>The three Components</h2>
+          <h2>The Core Concept</h2>
           <div className="section-divider" />
           <p className="basicSection--sub">
             Our blended learning concept consists of three components
