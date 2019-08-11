@@ -69,7 +69,7 @@ class index extends React.Component {
 
           <section className="py-5 wwo">
             <div className="container">
-              <h1 className="section-title">What we offer</h1>
+              <h2>What we offer</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
                 Check out what TechLabs has in store for you!
@@ -157,7 +157,7 @@ class index extends React.Component {
             />
           </section>
           <section className="container whatWeOffer mt-5">
-            <h1 className="section-title">The TechLabs Journey</h1>
+            <h2>The TechLabs Journey</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">What awaits you at TechLabs?</p>
             <div className="row">
@@ -191,8 +191,8 @@ class index extends React.Component {
               </div>
             </div>
           </section>
-          <section className="container mt-5 mb-5">
-            <h1 className="section-title">Key Benefits</h1>
+          <section className="container mt-5 mb-5 py-5">
+            <h2>Key Benefits</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">
               How can you profit from TechLabs?
@@ -260,9 +260,9 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="container-fluid mt-5 background h-100">
+          <section className="container-fluid mt-5 background h-100 py-5">
             <div className="container mt-5">
-              <h1 className="section-title">Learn More</h1>
+              <h2>Learn More</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
                 Check out our location and programm!
