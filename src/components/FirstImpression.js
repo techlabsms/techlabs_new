@@ -7,9 +7,11 @@ const FirstImpression = ({
   firstHeading,
   firstImage,
   firstText,
+  firstLink,
   secondHeading,
   secondImage,
   secondText,
+  secondLink,
 }) => {
   return (
     <>
@@ -33,7 +35,9 @@ const FirstImpression = ({
               {firstText}
             </p>
             <div className="text-center">
-              <button className="firstImpression--card-btn">Start now</button>
+              <a href={firstLink} className="noDec">
+                <div className="firstImpression--card-btn">Start now</div>
+              </a>
             </div>
           </div>
         </div>
@@ -59,9 +63,9 @@ const FirstImpression = ({
                   {secondText}
                 </p>
                 <div className="text-center">
-                  <button className="firstImpression--card-btn">
-                    Start now
-                  </button>
+                  <a href={secondLink} className="noDec">
+                    <div className="firstImpression--card-btn">Start now</div>
+                  </a>
                 </div>
               </div>
             </div>

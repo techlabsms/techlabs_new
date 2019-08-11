@@ -236,7 +236,7 @@ export const pageQuery = graphql`
       usesFirstEntry
       firstEntryTitle
       firstEntrySubtitle
-      firstEntryText{
+      firstEntryText {
         json
       }
       firstEntryImage {
@@ -247,7 +247,7 @@ export const pageQuery = graphql`
       usesSecondEntry
       secondEntryTitle
       secondEntrySubtitle
-      secondEntryText{
+      secondEntryText {
         json
       }
       secondEntryImage {
