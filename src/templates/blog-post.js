@@ -4,7 +4,7 @@ import get from "lodash/get"
 import techlabs from "../assets/tl-icon-whitebg.svg"
 import clock from "../assets/clock.svg"
 import Footer from "../components/Footer"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 
 class BlogPostTemplate extends Component {
   render() {
@@ -15,11 +15,11 @@ class BlogPostTemplate extends Component {
         <div className="container">
           <div className="row mt-5">
             {post.postImg !== null ? (
-                <img
-                  src={post.postImg.fixed.src}
-                  alt={post.slug}
-                  className="img-fluid mx-auto"
-                />
+              <img
+                src={post.postImg.fixed.src}
+                alt={post.slug}
+                className="img-fluid mx-auto"
+              />
             ) : (
               <img
                 src={techlabs}
@@ -30,10 +30,12 @@ class BlogPostTemplate extends Component {
             )}
           </div>
           <div className="row mt-5">
-            <h1>{post.title}</h1>
+            <div className="col-12 px-4">
+              <h3>{post.title}</h3>
+            </div>
           </div>
           <div className="row mt-2">
-            <div className="col-4">
+            <div className="col-md-4 px-4">
               <p>
                 <img src={clock} alt="clock" className="mr-3" />
                 {post.readTime}min read
@@ -53,11 +55,13 @@ class BlogPostTemplate extends Component {
             </div>
           </div>
           <div className="row mt-2">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.content.childContentfulRichText.html,
-              }}
-            />
+            <div className="col px-4">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: post.content.childContentfulRichText.html,
+                }}
+              />
+            </div>
           </div>
         </div>
         <Footer />
