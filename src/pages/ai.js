@@ -12,8 +12,8 @@ import FirstImpression from "../components/FirstImpression"
 import FaqQuestion from "../components/FaqQuestion"
 import ai_cover from "../assets/ai_cover.png"
 import david from "../assets/david.png"
-import Faq from '../components/Faq'
-import { Link } from 'gatsby'
+import Faq from "../components/Faq"
+import { Link } from "gatsby"
 import accenture from "../assets/accenture.png"
 import Charts from "../assets/charts2.png"
 import smartCity from "../assets/smartCity.png"
