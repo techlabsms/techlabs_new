@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Navbar from "../components/Navbar"
-import Footer from '../components/Footer'
+import Footer from "../components/Footer"
 import { Link } from "gatsby"
 import "../styles/_404.scss"
 
@@ -26,7 +26,10 @@ class NotFound extends Component {
             <div className="row mt-5">
               <div className="col">
                 <h3>
-                  <span role="img" aria-label="emoji">🤓 </span>Definiton:
+                  <span role="img" aria-label="emoji">
+                    🤓{" "}
+                  </span>
+                  Definiton:
                 </h3>
               </div>
             </div>
@@ -48,14 +51,18 @@ class NotFound extends Component {
               </div>
             </div>
             <div className="row">
-                <div className="col mt-5">
-                    <Link className="btn btn-primary" to="/">Learn tech</Link>
-                    <Link className="btn btn-secondary" to="/">Return home</Link>
-                </div>
+              <div className="col mt-5">
+                <Link className="btn btn-primary" to="/">
+                  Learn tech
+                </Link>
+                <Link className="btn btn-secondary" to="/">
+                  Return home
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </>
     )
   }
