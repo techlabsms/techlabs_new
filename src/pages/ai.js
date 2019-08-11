@@ -90,6 +90,7 @@ class ai extends Component {
             firstHeading="Introduction to Artificial Intelligence"
             firstImage={robot}
             firstText="Start with our free Track and learn the fundamentals of AI now and see if it’s right for you"
+            firstLink="https://app.edyoucated.org/login"
           />
           <Faq>
             <FaqQuestion
