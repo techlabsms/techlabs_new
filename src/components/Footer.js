@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">About us</h5>
-                  <Link className="foot-a" href="/locations">
+                  <Link className="foot-a" to="/locations">
                     Locations
                   </Link>
                   <ul className="footer-tl--subMenu">
