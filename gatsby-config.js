@@ -1,7 +1,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `TechLabs - We Build. Digital. Shapers.`,
   },
   plugins: [
     `gatsby-plugin-sass`,

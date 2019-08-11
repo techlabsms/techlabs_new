@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
-import BCN from "../assets/loc-bcn.svg"
 import SLACK from "../assets/slack-icon.svg"
 import { Link } from "gatsby"
 

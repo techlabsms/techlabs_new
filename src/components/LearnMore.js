@@ -1,6 +1,4 @@
 import React from "react"
-import Charts from "../assets/charts2.png"
-import smartCity from "../assets/smartCity.png"
 import { Link } from "gatsby"
 
 const LearnMore = ({

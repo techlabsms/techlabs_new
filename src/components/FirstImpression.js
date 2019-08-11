@@ -1,5 +1,4 @@
 import React from "react"
-import dashboard from "../assets/dashboard.png"
 
 const FirstImpression = ({
   heading,

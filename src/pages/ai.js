@@ -15,8 +15,6 @@ import david from "../assets/david.png"
 import Faq from "../components/Faq"
 import { Link } from "gatsby"
 import accenture from "../assets/accenture.png"
-import Charts from "../assets/charts2.png"
-import smartCity from "../assets/smartCity.png"
 import robot from "../assets/ai-robot.png"
 import background from "../assets/ds_background.png"
 
@@ -70,19 +68,7 @@ class ai extends Component {
             quoteRole="Data Scientist"
             quoteCompanyLogo={accenture}
           />
-          <Projects
-            heading="Projects from our participants"
-            subheading="Work on interesting project together with other participants"
-            firstProjectHeading="Churn-Prediction"
-            firstProjectText="The main goal was to identify customers that are likely to resign their mobile phone contracts. Aside from the resign-probabal, the team identified the impact of several variables. "
-            firstProjectImage={Charts}
-            secondProjectHeading="Apartment-Price Prediction"
-            secondProjectText="The project team gathered apartment data through web crawling. They build a model which predicts based on attributes like number of rooms, balcony yes/no or location."
-            secondProjectImage={Charts}
-            thirdProjectHeading="Smart-City"
-            thirdProjectText="Analysis of the bycicle infrastructure in Münster. The team identified bottleneck which might slow down the traffic."
-            thirdProjectImage={smartCity}
-          />
+          <Projects />
           <CallToAction />
           <FirstImpression
             heading="Get a first Impression"

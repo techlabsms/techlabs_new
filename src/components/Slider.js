@@ -101,7 +101,7 @@ class Slider extends Component {
                   </span>
                 </p>
                 <button className="slider--button mt-2">
-                  <span role="emoji">👍🏻</span>
+                  <span role="img" aria-label="thumbs up">👍🏻</span>
                   {` read about ${testimonials[number].name}´s project`}
                 </button>
                 <div className="row mt-5">

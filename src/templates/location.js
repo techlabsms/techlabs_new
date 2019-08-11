@@ -2,31 +2,18 @@ import React, { Component } from "react"
 import get from "lodash/get"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faTwitterSquare,
-  faInstagram,
-  faFacebookSquare,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
-import BlogCard from "../components/BlogCard"
 import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
-import News from "../components/News"
 import Follow from "../components/Follow"
-import JoinTheTeam from "../components/JoinTheTeam"
-import Placeholder from "../assets/commu.png"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
 import teamspirit from "../assets/teamspirit.png"
 import pin2 from "../assets/pin2.png"
 import getDirection from "../assets/get-directions-button.png"
-import { Link } from "gatsby"
 
 class location extends Component {
   render() {
-    const location = get(this.props, "data.contentfulLocationPage")
-    const articles = get(this, "props.data.allContentfulBlogPost.edges")
+    const location = get(this.props, "data.contentfulLocationPage");
     return (
       <>
         <section className="container-fluid">
