@@ -5,7 +5,7 @@
     min-height: 60vh;
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100vw;
+    background-size: contain;
     width: 100vw;
   }
 
@@ -33,7 +33,7 @@
     line-height: 35px;
     /* or 175% */
     text-align: justify;
-    width: 80%;
+    width: 60%;
     color: #8b9fa8;
   }
 
