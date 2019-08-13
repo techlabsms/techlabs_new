@@ -40,7 +40,7 @@ const Footer = () => {
                     </Link>
                   </ul>
                   <a className="foot-a" href="https://www.notion.so/techlabs/Work-at-TechLabs-16fa32d54d2d41a48ece59c6d28ed403">
-                    Carrer
+                    Career
                   </a>
                   <br />
                   <Link className="foot-a" to="/faq">

@@ -6,7 +6,7 @@ const Process = () => {
     <>
       <div className="row mt-5">
         <div className="col">
-          <h2>Curriculum Process</h2>
+          <h2>Your Learning Journey</h2>
           <div className="section-divider" />
           <p className="basicSection--sub">
             What awaits you at TechLabs? Check out the TechLabs journey from
