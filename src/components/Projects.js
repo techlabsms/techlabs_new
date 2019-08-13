@@ -57,7 +57,7 @@ const Projects = () => {
         <div className="col-md-4 py-5 justify-content-center align-self-center">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
-              <span className="highlighted">ZEB Project</span>
+              <span className="highlighted">The ZEB Project</span>
             </h3>
             <div className="card-body">
               <div className="row">
