@@ -265,13 +265,13 @@ class index extends React.Component {
               <h2>Learn More</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
-                Check out our location and program!
+                Check out our locations and program!
               </p>
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Location →</h2>
+                      <h2 className="mt-3 color-red">Locations →</h2>
                       <p className="color-gl">
                         Check out what’s happening in our offline-communities.
                         Your city is not yet on the map? Bring TechLabs to your
