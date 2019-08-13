@@ -6,8 +6,8 @@ const privacyPolicy = () => {
   return (
     <>
       <Navbar />
-      <div class="container mt-5">
-        <p>
+      <div className="container mt-5">
+        <div>
           <h3>Privacy Policy TechLabs e. V. </h3>
           <br />
           <h4>Name and contact details of the association</h4>
@@ -146,7 +146,7 @@ const privacyPolicy = () => {
           longer than is necessary to achieve the purpose of processing is.{" "}
           <br />
           <br />
-          <h5 class="margin-b-0">Passing on data to third parties</h5>
+          <h5 className="margin-b-0">Passing on data to third parties</h5>
           <br />
           Your personal data is safe with us. We give this to certain third
           parties only, if this is legally required. is allowed or you have
@@ -172,7 +172,7 @@ const privacyPolicy = () => {
           impossible from access by third parties. <br />
           <br />
           <br />
-          <h5 class="margin-b-0">Cookies</h5>
+          <h5 className="margin-b-0">Cookies</h5>
           <br />
           Some of the Internet pages use so-called cookies. Cookies do no damage
           to your computer and do not contain any Viruses. Cookies serve to make
@@ -197,7 +197,7 @@ const privacyPolicy = () => {
           Cookies (e.g. Cookies for the analysis of your surfing behaviour),
           these will be stored in this Privacy policy treated separately. <br />
           <br />
-          <h5 class="margin-b-0">Hosting and server log files</h5>
+          <h5 className="margin-b-0">Hosting and server log files</h5>
           <br />
           For the hosting of the Internet pages we take services of our
           Webhosting provider: This concerns Infrastructure services, computing
@@ -225,7 +225,7 @@ const privacyPolicy = () => {
           lit. f DSGVO, which regulates the processing of data for the purpose
           of fulfilling a contract or pre-contractual measures. <br />
           <br />
-          <h5 class="margin-b-0">Newsletter</h5>
+          <h5 className="margin-b-0">Newsletter</h5>
           <br />
           On our site we offer you the possibility to subscribe to our
           newsletter. to subscribe to. With this newsletter we inform in regular
@@ -247,9 +247,9 @@ const privacyPolicy = () => {
           found in the confirmation email and in every from the individual
           newsletters. <br />
           <br />
-          <h5 class="margin-b-0"> Analysis Tools and Advertising</h5>
+          <h5 className="margin-b-0"> Analysis Tools and Advertising</h5>
           <br />
-          <h6 class="margin-b-0">Google Analytics</h6>
+          <h6 className="margin-b-0">Google Analytics</h6>
           <br />
           This website uses functions of the web analysis service Google
           Analytics. Provider is Google Inc., 1600 Amphitheatre Parkway,
@@ -263,7 +263,7 @@ const privacyPolicy = () => {
           interest in the Analysis of the user behavior in order to be able to
           analyze both his web offer and his Optimize advertising. <br />
           <br />
-          <h6 class="margin-b-0">IP Anonymization</h6>
+          <h6 className="margin-b-0">IP Anonymization</h6>
           <br />
           We have activated the IP anonymization function on this website. This
           means that your IP address will be used by Google within Member States
@@ -279,7 +279,7 @@ const privacyPolicy = () => {
           Google Analytics from your browser is not linked to your IP address.
           other data from Google. <br />
           <br />
-          <h6 class="margin-b-0">Browser Plugin</h6>
+          <h6 className="margin-b-0">Browser Plugin</h6>
           <br />
           You can prevent the cookies from being saved by setting a
           corresponding prevent the setting of your browser software; we will,
@@ -299,7 +299,7 @@ const privacyPolicy = () => {
           </a>
           . <br />
           <br />
-          <h6 class="margin-b-0">Opt-Out Cookie</h6>
+          <h6 className="margin-b-0">Opt-Out Cookie</h6>
           <br />
           Alternative to browser add-on, especially for browsers on mobile
           devices end devices, you can also use Google Analytics to capture by
@@ -310,14 +310,14 @@ const privacyPolicy = () => {
           If you delete the cookies in this browser, you will have to Set
           Opt-Out cookie again. <br />
           <br />
-          <h6 class="margin-b-0"> Order data processing</h6>
+          <h6 className="margin-b-0"> Order data processing</h6>
           <br />
           We have a contract with Google for the processing of order data and
           set the strict specifications of the German Data protection
           authorities when using Google Analytics complete um.
           <br />
           <br />
-          <h6 class="margin-b-0">
+          <h6 className="margin-b-0">
             Demographic characteristics of Google Analytics
           </h6>
           <br />
@@ -331,7 +331,7 @@ const privacyPolicy = () => {
           Google Analytics as in the point "contradiction against data
           acquisition". <br />
           <br />
-          <h6 class="margin-b-0">Google-Maps</h6>
+          <h6 className="margin-b-0">Google-Maps</h6>
           <br />
           We put on our site the component "Google Maps" of the company Google
           Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA,
@@ -364,7 +364,7 @@ const privacyPolicy = () => {
           <br />
           <h4>Rights of the persons concerned</h4>
           <br />
-          <h5 class="margin-b-0">
+          <h5 className="margin-b-0">
             Revocation of your consent to data processing
           </h5>
           <br />
@@ -384,7 +384,7 @@ const privacyPolicy = () => {
           data you can access at any time under the link provided in the
           Impressum to contact us. <br />
           <br />
-          <h5 class="margin-b-0"> Opposition to advertising mails </h5>
+          <h5 className="margin-b-0"> Opposition to advertising mails </h5>
           <br />
           The use of any information published within the scope of the imprint
           obligation is prohibited. Contact data for sending unsolicited email
@@ -394,7 +394,7 @@ const privacyPolicy = () => {
           of advertising information, such as by Spam emails, before.
           <br />
           <br />
-          <h5 class="margin-b-0">
+          <h5 className="margin-b-0">
             Right of appeal to the competent supervisory authority
           </h5>
           <br />
@@ -417,7 +417,7 @@ const privacyPolicy = () => {
           Telefon: 02 11/384 24-0 <br />
           Telefax: 02 11/384 24-10 <br />
           E-Mail: poststelle@ldi.nrw.de <br />
-        </p>
+        </div>
       </div>
       <Footer />
     </>
