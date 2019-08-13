@@ -1,434 +1,425 @@
 import React from "react"
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const privacyPolicy = () => {
   return (
     <>
-    <Navbar/>
-    <div class="container mt-5">
-      <p>
-        <h3>Datenschutzerklärung TechLabs e. V. </h3>
-        <br />
-        <h4>Name und Kontaktdaten des Vereins</h4>
-        <br />
-        Der Verein ist für den sicheren Umgang mit Ihren Daten verantwortlich:{" "}
-        <br />
-        <br />
-        <strong>
-          TechLabs e.V. <br />
-          48151 Münster <br />
-          info@tech-labs.de <br />
-        </strong>
-        <br />
-        Wir haben für unseren Verein einen Datenschutzbeauftragten bestellt:
-        Jannis Haendke. Sie erreichen ihn unter datenschutz@tech-labs.de. <br />
-        <br /> <br />
-        <br />
-        <h4>
-          Datenverarbeitung bei Mitgliedschaft im Verein oder als
-          Management-Teams Mitglied
-        </h4>{" "}
-        <br />
-        <h5 className="margin-b-0">
-          Zwecke und Rechtsgrundlagen der Datenverarbeitung
-        </h5>
-        <br />
-        Aufgrund deiner Mitgliedschaft oder Mitarbeit im Management-Team in
-        unserem Verein verarbeiten wir diverse Daten von dir. Diese sind
-        personenbezogen und mitunter auch besonders schutzwürdig. <br />
-        <br />
-        Im Einzelnen erheben und verarbeiten wir die folgenden Informationen:{" "}
-        <br />
-        <br />
-        <ul>
-          <li>Stammdaten: Name, Titel, Anschrift, Geburtsdatum, </li>
-          <li>
-            {" "}
-            ergänzende Kontaktdaten: Telefonnummer (Festnetz und / oder
-            Mobilfunk), eine gültige eMail- und / oder Internetadresse{" "}
-          </li>
-          <li> Bankverbindungsdaten bei Mitgliedschaft</li>
-          <li>
-            {" "}
-            Ggf. Zusatzqualifikationen sowie Mitgliedschaft in weiteren
-            Verbänden, Gesellschaften u.v.m.
-          </li>
-        </ul>
-        <br />
-        Die Erhebung und Verarbeitung Ihrer Daten erfolgt, <br />
-        <br />
-        <ul>
-          <li> um dich als unser Mitglied identifizieren zu können,</li>
-          <li> zur weiteren Korrespondenz mit dir,</li>
-          <li>
-            {" "}
-            sowie gegebenenfalls zur Wahrnehmung eigener berechtigter Interessen
-            bei Ansprüchen gegen Sie.
-          </li>
+      <Navbar />
+      <div className="container mt-5">
+        <div>
+          <h3>Privacy Policy TechLabs e. V. </h3>
           <br />
-        </ul>
-        Die Datenverarbeitung erfolgt anlässlich deiner Mitgliedschaft bei uns
-        auf deine Anfrage hin und ist nach Art. 6 Abs. 1 Satz 1 lit. b DSGVO zu
-        den genannten Zwecken zur Erfüllung des Mitgliedschaftsvertrags und
-        dessen Abwicklung erforderlich. <br />
-        <br />
-        <br />
-        <h5 className="margin-b-0">
-          Speicherung und Löschung deiner Daten
-        </h5>
-        <br />
-        Die anlässlich der Mitgliedschaft von uns erhobenen personenbezogenen
-        Daten werden bis zum Ablauf der gesetzlichen Verjährungsfristen
-        gespeichert und danach gelöscht. Gespeichert werden Daten jedenfalls
-        nicht länger als dies zur Erreichung des Verarbeitungszwecks notwendig
-        ist. <br />
-        <br />
-        <br />
-        <h5 className="margin-b-0">
-          Weitergabe von Daten an Dritte{" "}
-        </h5>
-        <br />
-        Deine persönlichen Daten sind bei uns sicher. Wir geben diese
-        grundsätzlich nur an bestimmte Dritte weiter, wenn dies gesetzlich
-        erlaubt ist oder du eingewilligt hast. <br />
-        <br />
-        <br />
-        <h4>
-          Datenverarbeitung bei Teilnahme am Tech-Labs Digital Shaper-Programm
-        </h4>
-        <br />
-        <h5 className="margin-b-0">
-          Digital Shaper Programm
-        </h5>
-        <br />
-        Mit der Teilnahme am Digital Shaper Programm verarbeiten wir diverse
-        Daten von dir. Diese sind personenbezogen und mitunter auch besonders
-        schutzwürdig. <br />
-        <br />
-        Im Einzelnen erheben und verarbeiten wir die folgenden Informationen:{" "}
-        <br />
-        <br />
-        <ul>
-          <li>Stammdaten: Name, Titel, Anschrift,</li>
-          <li>
-            ergänzende Kontaktdaten: Telefonnummer (Festnetz und / oder
-            Mobilfunk), eine gültige eMail- und / oder{" "}
-          </li>
-          <li> Internetadresse</li>
-          <li> Kentnisse im Technologiebereich</li>
-          <li> Lernfortschritte innerhalb des Tech-Labs Programm</li>
-          <li> ggfs. Bankverbindungsdaten</li>
-        </ul>
-        <br />
-        Die Erhebung und Verarbeitung Ihrer Daten erfolgt, <br />
-        <ul>
-          <li>um dir ein individuelles Lern-Curicculum zu erstellen</li>
-          <li>um mit dir in Kontakt treten zu können</li>
-        </ul>
-        <br />
-        Die Datenverarbeitung erfolgt anlässlich deiner Teilnahme am Programm
-        bei uns auf deine Anfrage hin und ist nach Art. 6 Abs. 1 Satz 1 lit. b
-        DSGVO zu den genannten Zwecken zur Erfüllung der Programminhalte und
-        dessen Abwicklung erforderlich. <br />
-        <br />
-        <br />
-        <h5 className="margin-b-0">
-          {" "}
-          Fotos bei Social Media Auftritten
-        </h5>
-        <br />
-        Wenn du an einem unserer Events teilnimmst werden dort Fotos und Videos
-        für die Website und die Social Media Kanäle von Tech-Labs gemacht. Die
-        Verarbeitung und Nutzung dieser Daten erfolgt ausschließlich auf
-        Grundlage deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst
-        diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose
-        Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf
-        erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.{" "}
-        <br />
-        <br />
-        <br />
-        <h5 className="margin-b-0">
-          Speicherung und Löschung deiner Daten aus dem Digital Shaper Programm{" "}
-        </h5>{" "}
-        <br />
-        Die anlässlich deiner Teilnahnme von uns erhobenen personenbezogenen
-        Daten werden bis zum Ablauf der gesetzlichen Verjährungsfristen
-        gespeichert und danach gelöscht. Gespeichert werden Daten jedenfalls
-        nicht länger als dies zur Erreichung des Verarbeitungszwecks notwendig
-        ist. <br />
-        <br />
-        <h5 class="margin-b-0">Weitergabe von Daten an Dritte</h5>
-        <br />
-        Deine persönlichen Daten sind bei uns sicher. Wir geben diese
-        grundsätzlich nur an bestimmte Dritte weiter, wenn dies gesetzlich
-        erlaubt ist oder du eingewilligt hast. <br />
-        <br />
-        <br />
-        <h4>Datenverarbeitung auf der Website</h4>
-        <br />
-        Die Nutzung unserer Seite ist ohne eine Angabe von personenbezogenen
-        Daten möglich. Für die Nutzung einzelner Services unserer Seite können
-        sich hierfür abweichende Regelungen ergeben, die in diesem Falle
-        nachstehend gesondert erläutert werden. Deine personenbezogenen Daten
-        (z.B. Name, Anschrift, E-Mail, Telefonnummer, u.ä.) werden von uns nur
-        gemäß den Bestimmungen des deutschen Datenschutzrechts verarbeitet.
-        Daten sind dann personenbezogen, wenn sie eindeutig einer bestimmten
-        natürlichen Person zugeordnet werden können. Die rechtlichen Grundlagen
-        des Datenschutzes finden Sie im Bundesdatenschutzgesetz (BDSG) und dem
-        Telemediengesetz (TMG). Nachstehende Regelungen informieren Sie insoweit
-        über die Art, den Umfang und Zweck der Erhebung, die Nutzung und die
-        Verarbeitung von personenbezogenen Daten durch den Anbieter. Wir weisen
-        darauf hin, dass die internetbasierte Datenübertragung Sicherheitslücken
-        aufweist, ein lückenloser Schutz vor Zugriffen durch Dritte somit
-        unmöglich ist. <br />
-        <br />
-        <br />
-        <h5 class="margin-b-0">Cookies</h5>
-        <br />
-        Die Internetseiten verwenden teilweise so genannte Cookies. Cookies
-        richten auf deinem Rechner keinen Schaden an und enthalten keine Viren.
-        Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und
-        sicherer zu machen. Cookies sind kleine Textdateien, die auf deinem
-        Rechner abgelegt werden und die dein Browser speichert. Die meisten der
-        von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie
-        werden nach Ende deines Besuchs automatisch gelöscht. Andere Cookies
-        bleiben auf Ihrem Endgerät gespeichert bis du diese löschst. Diese
-        Cookies ermöglichen es uns, deinen Browser beim nächsten Besuch
-        wiederzuerkennen. Du kannst deinen Browser so einstellen, dass du über
-        das Setzen von Cookies informiert wirst und Cookies nur im Einzelfall
-        erlauben, die Annahme von Cookies für bestimmte Fälle oder generell
-        ausschließen sowie das automatische Löschen der Cookies beim Schließen
-        des Browser aktivieren. Bei der Deaktivierung von Cookies kann die
-        Funktionalität dieser Website eingeschränkt sein. Cookies, die zur
-        Durchführung des elektronischen Kommunikationsvorgangs oder zur
-        Bereitstellung bestimmter, von dir erwünschter Funktionen (z.B.
-        Warenkorbfunktion) erforderlich sind, werden auf Grundlage von Art. 6
-        Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein
-        berechtigtes Interesse an der Speicherung von Cookies zur technisch
-        fehlerfreien und optimierten Bereitstellung seiner Dienste. Soweit
-        andere Cookies (z.B. Cookies zur Analyse Ihres Surfverhaltens)
-        gespeichert werden, werden diese in dieser Datenschutzerklärung
-        gesondert behandelt. <br />
-        <br />
-        <h5 class="margin-b-0">Hosting und Server-Log-Dateien</h5>
-        <br />
-        Für das Hosting der Internetseiten nehmen wir Leistungen unseres
-        Webhosting-Anbieters in Anspruch: Dies betrifft
-        Infrastruktur-Leistungen, Rechenkapazität, Speicherplatz,
-        Datenbankdienste und technische Wartungen. Diese Leistungen sind zum
-        Betrieb der Internetseiten erforderlich. Dabei werden auch Kontaktdaten,
-        Inhaltsdaten, Vertragsdaten und Nutzungsdaten von Besuchern des
-        Internetangebots verarbeitet. Mit unserem Hosting-Anbieter haben wir
-        gemäß Art. 28 DSGVO einen Vertrag zur Auftragsverarbeitung geschlossen.{" "}
-        <br />
-        <br />
-        Unter anderem erhebt der Hosting-Anbieter automatisch Informationen in
-        so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns
-        übermittelt. Dies sind:
-        <br />
-        <ul>
-          <li> Browsertyp und Browserversion</li>
-          <li>verwendetes Betriebssystem</li>
-          <li>Referrer URL</li>
-          <li>Hostname des zugreifenden Rechners</li>
-          <li>Uhrzeit der Serveranfrage</li>
-          <li>IP-Adresse</li>
-        </ul>
-        Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht
-        vorgenommen. Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit.
-        f DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrags
-        oder vorvertraglicher Maßnahmen gestattet. <br />
-        <br />
-        <h5 class="margin-b-0">Newsletter</h5>
-        <br />
-        Wir bieten dir auf unserer Seite die Möglichkeit, unseren Newsletter zu
-        abonnieren. Mit diesem Newsletter informieren wir in regelmäßigen
-        Abständen über unsere Angebote. Um unseren Newsletter empfangen zu
-        können, benötigst du eine gültige E-Mailadresse. Die von dir
-        eingetragene E-Mail-Adresse werden wir dahingehend überprüfen, ob du
-        tatsächlich der Inhaber der angegebenen E-Mail-Adresse bist bzw. deren
-        Inhaber den Empfang des Newsletters autorisiert ist. Mit deiner
-        Anmeldung zu unserem Newsletter werden wir deine IP-Adresse und das
-        Datum sowie die Uhrzeit deiner Anmeldung speichern. Dies dient in dem
-        Fall, dass ein Dritter Ihre E-Mail-Adresse missbraucht und ohne dein
-        Wissen unseren Newsletter abonniert, als Absicherung unsererseits.
-        Weitere Daten werden unsererseits nicht erhoben. Die so erhobenen Daten
-        werden ausschließlich für den Bezug unseres Newsletters verwendet. Eine
-        Weitergabe an Dritte erfolgt nicht. Ein Abgleich der so erhobenen Daten
-        mit Daten, die möglicherweise durch andere Komponenten unserer Seite
-        erhoben werden, erfolgt ebenfalls nicht. Das Abonnement dieses
-        Newsletters kannst du jederzeit kündigen. Einzelheiten hierzu können Sie
-        der Bestätigungsmail sowie jedem einzelnen Newsletter entnehmen. <br />
-        <br />
-        <h5 class="margin-b-0"> Analyse-Tools und Werbung</h5>
-        <br />
-        <h6 class="margin-b-0">Google Analytics</h6>
-        <br />
-        Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics.
-        Anbieter ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View,
-        CA 94043, USA. Google Analytics verwendet so genannte "Cookies". Das
-        sind Textdateien, die auf deinem Computer gespeichert werden und die
-        eine Analyse der Benutzung der Website durch dich ermöglichen. Die durch
-        den Cookie erzeugten Informationen über deine Benutzung dieser Website
-        werden in der Regel an einen Server von Google in den USA übertragen und
-        dort gespeichert. Die Speicherung von Google-Analytics-Cookies erfolgt
-        auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat
-        ein berechtigtes Interesse an der Analyse des Nutzerverhaltens, um
-        sowohl sein Webangebot als auch seine Werbung zu optimieren. <br />
-        <br />
-        <h6 class="margin-b-0">IP Anonymisierung</h6>
-        <br />
-        Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert.
-        Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten
-        der Europäischen Union oder in anderen Vertragsstaaten des Abkommens
-        über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA
-        gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server
-        von Google in den USA übertragen und dort gekürzt. Im Auftrag des
-        Betreibers dieser Website wird Google diese Informationen benutzen, um
-        Ihre Nutzung der Website auszuwerten, um Reports über die
-        Websiteaktivitäten zusammenzustellen und um weitere mit der
-        Websitenutzung und der Internetnutzung verbundene Dienstleistungen
-        gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google
-        Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit
-        anderen Daten von Google zusammengeführt. <br />
-        <br />
-        <h6 class="margin-b-0">Browser Plugin</h6>
-        <br />
-        Sie können die Speicherung der Cookies durch eine entsprechende
-        Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch
-        darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche
-        Funktionen dieser Website vollumfänglich werden nutzen können. Sie
-        können darüber hinaus die Erfassung der durch den Cookie erzeugten und
-        auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an
-        Google sowie die Verarbeitung dieser Daten durch Google verhindern,
-        indem Sie das unter dem folgenden Link verfügbare Browser-Plugin
-        herunterladen und installieren:{" "}
-        <a href="https://tools.google.com/dlpage/gaoptout?hl=de">Plugin-Link</a>
-        <br />
-        Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics
-        finden Sie in der Datenschutzerklärung von{" "}
-        <a href="https://support.google.com/analytics/answer/6004245?hl=de">
-          Google
-        </a>
-        . <br />
-        <br />
-        <h6 class="margin-b-0">Opt-Out Cookie</h6>
-        <br />
-        Alternativ zum Browser-Add-On, insbesondere bei Browsern auf mobilen
-        Endgeräten, können Sie die Erfassung durch Google Analytics zudem
-        verhindern, indem Sie auf diesen Link klicken. Es wird ein
-        Opt-Out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Daten beim
-        Besuch dieser Website verhindert. Der Opt-Out-Cookie gilt nur in diesem
-        Browser und nur für unsere Website und wird auf Ihrem Gerät abgelegt.
-        Löschen Sie die Cookies in diesem Browser, müssen Sie das Opt-Out-Cookie
-        erneut setzen. <br />
-        <br />
-        <h6 class="margin-b-0"> Auftragsdatenverarbeitung</h6>
-        <br />
-        Wir haben mit Google einen Vertrag zur Auftragsdatenverarbeitung
-        abgeschlossen und setzen die strengen Vorgaben der deutschen
-        Datenschutzbehörden bei der Nutzung von Google Analytics vollständig um.
-        <br />
-        <br />
-        <h6 class="margin-b-0">Demografische Merkmale bei Google Analytics</h6>
-        <br />
-        Diese Website nutzt die Funktion "demografische Merkmale" von Google
-        Analytics. Dadurch können Berichte erstellt werden, die Aussagen zu
-        Alter, Geschlecht und Interessen der Seitenbesucher enthalten. Diese
-        Daten stammen aus interessenbezogener Werbung von Google sowie aus
-        Besucherdaten von Drittanbietern. Diese Daten können keiner bestimmten
-        Person zugeordnet werden. Sie können diese Funktion jederzeit über die
-        Anzeigeneinstellungen in Ihrem Google-Konto deaktivieren oder die
-        Erfassung Ihrer Daten durch Google Analytics wie im Punkt "Widerspruch
-        gegen Datenerfassung" dargestellt generell untersagen. <br />
-        <br />
-        <h6 class="margin-b-0">Google-Maps</h6>
-        <br />
-        Wir setzen auf unserer Seite die Komponente "Google Maps" der Firma
-        Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA,
-        nachfolgend „Google“, ein.
-        <br />
-        Bei jedem einzelnen Aufruf der Komponente "Google Maps" wird von Google
-        ein Cookie gesetzt, um bei der Anzeige der Seite, auf der die Komponente
-        "Google Maps" integriert ist, Nutzereinstellungen und -daten zu
-        verarbeiten. Dieses Cookie wird im Regelfall nicht durch das Schließen
-        des Browsers gelöscht, sondern läuft nach einer bestimmten Zeit ab,
-        soweit es nicht von Ihnen zuvor manuell gelöscht wird. Wenn Sie mit
-        dieser Verarbeitung Ihrer Daten nicht einverstanden sind, so besteht die
-        Möglichkeit, den Service von "Google Maps" zu deaktivieren und auf
-        diesem Weg die Übertragung von Daten an Google zu verhindern. Dazu
-        müssen Sie die Java-Script-Funktion in Ihrem Browser deaktivieren. Wir
-        weisen Sie jedoch darauf hin, dass Sie in diesem Fall die "Google Maps"
-        nicht oder nur eingeschränkt nutzen können. Die Nutzung von "Google
-        Maps" und der über "Google Maps" erlangten Informationen erfolgt gemäß
-        den
-        <a href=" http://www.google.de/intl/de/policies/terms/regional.html">
-          {" "}
-          Google-Nutzungsbedingungen
-        </a>
-        sowie der{" "}
-        <a href="https://www.google.com/intl/de_de/help/terms_maps.html">
-          zusätzlichen Geschäftsbedingungen für „Google Maps“
-        </a>
-        . <br />
-        <br />
-        <br />
-        <h4>Rechte der betroffenen Personen</h4>
-        <br />
-        <h5 class="margin-b-0">
-          Widerruf Ihrer Einwilligung zur Datenverarbeitung
-        </h5>
-        <br />
-        Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
-        Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
-        jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an
-        uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung
-        bleibt vom Widerruf unberührt. Auskunft, Sperrung, Löschung
-        <br />
-        Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
-        das Recht auf unentgeltliche Auskunft über Ihre gespeicherten
-        personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der
-        Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder
-        Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema
-        personenbezogene Daten können Sie sich jederzeit unter der im Impressum
-        angegebenen Adresse an uns wenden. <br />
-        <br />
-        <h5 class="margin-b-0"> Widerspruch gegen Werbe-Mails </h5>
-        <br />
-        Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
-        Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter
-        Werbung und Informationsmaterialien wird hiermit widersprochen. Die
-        Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im
-        Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
-        Spam-E-Mails, vor.
-        <br />
-        <br />
-        <h5 class="margin-b-0">
-          Beschwerderecht bei der zuständigen Aufsichtsbehörde
-        </h5>
-        <br />
-        Zuletzt sind Sie berechtigt, sich an die zuständige Aufsichtsbehörde für
-        den Datenschutz zu wenden, falls aus Ihrer Sicht die Verarbeitung Ihrer
-        Daten nicht rechtmäßig erfolgt (Art. 77 DSGVO). Ihre Beschwerde richten
-        Sie in diesem Fall an den Landesdatenschutzbeauftragten des Landes
-        Nordrhein-Westfalen:
-        <br />
-        <br />
-        Landesbeauftragte für Datenschutz und Informationsfreiheit
-        Nordrhein-Westfalen <br />
-        <br />
-        Postfach 20 04 44 <br />
-        40102 Düsseldorf <br />
-        Kavalleriestraße 2-4 <br />
-        40213 Düsseldorf <br />
-        <br />
-        Telefon: 02 11/384 24-0 <br />
-        Telefax: 02 11/384 24-10 <br />
-        E-Mail: poststelle@ldi.nrw.de <br />
-      </p>
-    </div>
-    <Footer/>
+          <h4>Name and contact details of the association</h4>
+          <br />
+          The association is responsible for the safe handling of your data:{" "}
+          <br />
+          <br />
+          <strong>
+            TechLabs e.V. <br />
+            48151 Münster <br />
+            info@tech-labs.de <br />
+          </strong>
+          <br />
+          We have appointed a data protection officer for our association:
+          Jannis Haendke. You can reach him at datenschutz@tech-labs.de.
+          <br />
+          <br /> <br />
+          <br />
+          <h4>
+            Data processing with membership in the association or as a
+            Management Teams Member
+          </h4>{" "}
+          <br />
+          <h5 className="margin-b-0">
+            Purposes and legal bases of data processing
+          </h5>
+          <br />
+          Due to your membership or participation in the management team of our
+          association we process various data from you. These are personal and
+          sometimes particularly worthy of protection. <br />
+          <br />
+          In detail, we collect and process the following information: <br />
+          <br />
+          <ul>
+            <li>Master data: Name, title, address, date of birth, </li>
+            <li>
+              {" "}
+              additional contact data: Telephone number (landline and / or
+              mobile radio), a valid e-mail and / or Internet address{" "}
+            </li>
+            <li>Bank details for membership</li>
+            <li>
+              Additional qualifications, if any, as well as membership in
+              additional Associations, companies, etc.
+            </li>
+          </ul>
+          <br />
+          The collection and processing of your data takes place, <br />
+          <br />
+          <ul>
+            <li> to be able to identify you as our member,</li>
+            <li> for further correspondence with you,</li>
+            <li>
+              {" "}
+              and, where appropriate, to exercise its own legitimate rights and
+              obligations interests in claims against you.
+            </li>
+            <br />
+          </ul>
+          The data processing takes place on the occasion of your membership
+          with us. at your request and is in accordance with Art. 6 para. 1
+          sentence 1 lit. b DSGVO for the purposes stated to fulfil the
+          membership contract, and its handling is necessary. <br />
+          <br />
+          <br />
+          <h5 className="margin-b-0">Storage and deletion of your data</h5>
+          <br />
+          The personal data collected by us on the occasion of the membership
+          Data will be stored until the end of the statutory limitation periods.
+          and then deleted. Data are stored in any case no longer than is
+          necessary to achieve the purpose of processing is. <br />
+          <br />
+          <br />
+          <h5 className="margin-b-0">Disclosure of data to third parties </h5>
+          <br />
+          Your personal data is safe with us. We give this to certain third
+          parties only, if this is legally required. is allowed or you have
+          consented. <br />
+          <br />
+          <br />
+          <h4>
+            Data Processing for Tech-Labs Digital Shaper Program Participation
+          </h4>
+          <br />
+          <h5 className="margin-b-0">Digital Shaper Program</h5>
+          <br />
+          With the participation in the Digital Shaper Program we process
+          various Data from you. These are personal and sometimes especially
+          worthy of protection. <br />
+          <br />
+          In detail, we collect and process the following information: <br />
+          <br />
+          <ul>
+            <li>Master data: Name, Title, Address,</li>
+            <li>
+              additional contact data: Telephone number (landline and / or
+              mobile radio), a valid email and / or{" "}
+            </li>
+            <li> Internet address</li>
+            <li> Knowledge in the field of technology</li>
+            <li> Learning progress within the Tech Lab Program</li>
+            <li> Bank details </li> if applicable
+          </ul>
+          <br />
+          The collection and processing of your data takes place, <br />
+          <ul>
+            <li>to create an individual learning curiculum for you</li>
+            <li>to get in contact with you </li>
+          </ul>
+          <br />
+          The data processing takes place on the occasion of your participation
+          in the program. to us on your request and is according to Art. 6 Para.
+          1 Sentence 1 lit. b DSGVO for the purposes mentioned to fulfil the
+          programme contents and its handling is necessary. <br />
+          <br />
+          <br />
+          <h5 className="margin-b-0"> Photos at Social Media Appearances</h5>
+          <br />
+          If you take part in one of our events you will find there photos and
+          Videos for the website and social media channels of Tech-Labs made.
+          The processing and use of this data takes place exclusively on the
+          basis of your consent (Art. 6 para. 1 lit. a DSGVO). You can revoke
+          this consent at any time. For this purpose an informal message by
+          e-mail to us. The lawfulness of the data processing operations carried
+          out for the purpose of revocation shall remain unaffected by the
+          revocation. untouched. <br />
+          <br />
+          <br />
+          <h5 className="margin-b-0">
+            Storage and deletion of your data from the Digital Shaper Program{" "}
+          </h5>{" "}
+          <br />
+          The personal data collected by us on the occasion of your
+          participation Data will be stored until the end of the statutory
+          limitation periods. and then deleted. Data are stored in any case no
+          longer than is necessary to achieve the purpose of processing is.{" "}
+          <br />
+          <br />
+          <h5 className="margin-b-0">Passing on data to third parties</h5>
+          <br />
+          Your personal data is safe with us. We give this to certain third
+          parties only, if this is legally required. is allowed or you have
+          consented. <br />
+          <br />
+          <br />
+          <h4>Data processing on the website </h4>
+          <br />
+          The use of our site is permitted without any indication of personal
+          data. Data possible. For the use of individual services of our site
+          may be deviating regulations arise for this, which in this case are to
+          be are explained separately below. Your personal data (e.g. name,
+          address, e-mail, telephone number, etc.) will only be used by us for
+          the purpose of in accordance with the provisions of German data
+          protection law. Data is then personal if it is clearly assigned to a
+          particular can be assigned to a natural person. The legal You will
+          find the basics of data protection in the Federal Data Protection Act.
+          (BDSG) and the German Telemedia Act (TMG). The following regulations
+          inform you in this respect about the type, scope and purpose of the
+          Collection, use and processing of personal data by the provider. We
+          would like to point out that the internet based data transmission has
+          security gaps, a complete protection of your data is therefore
+          impossible from access by third parties. <br />
+          <br />
+          <br />
+          <h5 className="margin-b-0">Cookies</h5>
+          <br />
+          Some of the Internet pages use so-called cookies. Cookies do no damage
+          to your computer and do not contain any Viruses. Cookies serve to make
+          our offer more user-friendly, more effective and safer. Cookies are
+          small text files, which are stored on your computer and saved by your
+          browser. Most of the cookies we use are so-called "cookies". "Session
+          cookies." They are automatically deleted at the end of your visit.
+          deleted. Other cookies remain stored on your end device until you have
+          erases it. These cookies enable us to save your browser when you to
+          recognize your next visit. You can change your browser so set that you
+          will be informed about the setting of cookies, and Cookies only allow
+          in individual cases, the acceptance of cookies for exclude certain
+          cases or generally as well as the automatic Activate the deletion of
+          cookies when closing the browser. When Deactivation of cookies may
+          affect the functionality of this website. must be restricted. Cookies,
+          which are used for the implementation of the electronic or for the
+          purpose of providing you with certain information or services that you
+          required functions (e.g. shopping basket function), are stored on the
+          basis of Art. 6 para. 1 lit. f DSGVO. The Website operator has a
+          legitimate interest in the storage of Cookies for technically
+          error-free and optimized provision of his services. As far as other
+          Cookies (e.g. Cookies for the analysis of your surfing behaviour),
+          these will be stored in this Privacy policy treated separately. <br />
+          <br />
+          <h5 className="margin-b-0">Hosting and server log files</h5>
+          <br />
+          For the hosting of the Internet pages we take services of our
+          Webhosting provider: This concerns Infrastructure services, computing
+          capacity, storage space, Database services and technical maintenance.
+          These services are available at Operation of the Internet pages
+          required. This also includes Contact data, content data, contract data
+          and usage data of visitors of the Internet offer. With our hosting
+          provider, we have concluded a contract in accordance with Art. 28
+          DSGVO to Order processing closed. <br />
+          <br />
+          Among other things, the hosting provider automatically collects
+          information in server log files, which your browser automatically
+          sends to us. is transmitted. These are:
+          <br />
+          <ul>
+            <li> Browser type and browser version</li>
+            <li>operating system used</li>
+            <li>Referrer URL</li>
+            <li>host name of the accessing computer</li>
+            <li>Time of the server request</li>
+            <li>IP address</li>
+          </ul>
+          A combination of this data with other data sources will not be
+          accepted. is made. The basis for data processing is Art. 6 para. 1.
+          lit. f DSGVO, which regulates the processing of data for the purpose
+          of fulfilling a contract or pre-contractual measures. <br />
+          <br />
+          <h5 className="margin-b-0">Newsletter</h5>
+          <br />
+          On our site we offer you the possibility to subscribe to our
+          newsletter. to subscribe to. With this newsletter we inform in regular
+          distances about our offers. To receive our newsletter you need a valid
+          e-mail address. The email address registered e-mail address, we will
+          check to see whether you have you are actually the owner of the e-mail
+          address you provided, or the owner of the e-mail address the holder is
+          authorized to receive the newsletter. With your Subscribe to our
+          newsletter we will collect your IP address and the Save the date and
+          time of your registration. This serves in the In the event that a
+          third party misuses your e-mail address and does not use your
+          Knowledge subscribes to our newsletter, as security on our part.
+          Further data will not be collected by us. The data collected in this
+          way Data will only be used for the subscription of our newsletter. is
+          used. It will not be passed on to third parties. An adjustment of the
+          data collected in this way with data that may have been collected by
+          other components of our site will also not be collected. The You can
+          unsubscribe from this newsletter at any time. Details of this can be
+          found in the confirmation email and in every from the individual
+          newsletters. <br />
+          <br />
+          <h5 className="margin-b-0"> Analysis Tools and Advertising</h5>
+          <br />
+          <h6 className="margin-b-0">Google Analytics</h6>
+          <br />
+          This website uses functions of the web analysis service Google
+          Analytics. Provider is Google Inc., 1600 Amphitheatre Parkway,
+          Mountain View, CA 94043, USA. Google Analytics uses so-called
+          "Cookies." These are text files that are stored on your computer. and
+          which will include an analysis of your use of the website. make it
+          possible. The information generated by the cookie about your Use of
+          this website is usually connected to a server of Google in the USA and
+          stored there. The storage of Google Analytics cookies are based on
+          Art. 6 Para. 1 lit. f DSGVO. The website operator has a justified
+          interest in the Analysis of the user behavior in order to be able to
+          analyze both his web offer and his Optimize advertising. <br />
+          <br />
+          <h6 className="margin-b-0">IP Anonymization</h6>
+          <br />
+          We have activated the IP anonymization function on this website. This
+          means that your IP address will be used by Google within Member States
+          of the European Union or in other Contracting States to the Agreement
+          on the European Economic Area before transmission to the USA
+          shortened. Only in exceptional cases is the full IP address sent to a
+          Server of Google transferred to the USA and shortened there. By order
+          of the operator of this website, Google will use this information to
+          to evaluate your use of the website, to compile reports on the use of
+          the website and to to compile website activities and to continue to
+          work with the Website use and Internet use related services to the
+          website operator. The information provided within the framework of
+          Google Analytics from your browser is not linked to your IP address.
+          other data from Google. <br />
+          <br />
+          <h6 className="margin-b-0">Browser Plugin</h6>
+          <br />
+          You can prevent the cookies from being saved by setting a
+          corresponding prevent the setting of your browser software; we will,
+          however, not that, in this case, you may not be able to use all of the
+          functions of this website will be able to use to the full extent. You
+          can also be used to record the data generated and stored by the
+          cookie. data related to your use of the website (including your IP
+          address) to Google and to prevent the processing of this data by
+          Google, by using the browser plugin available under the following link
+          download and install:{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout?hl">Plugin-Link</a>
+          <br />
+          More information about handling user data at Google Analytics you will
+          find in the privacy policy of{" "}
+          <a href="https://support.google.com/analytics/answer/6004245?hl=de">
+            Google
+          </a>
+          . <br />
+          <br />
+          <h6 className="margin-b-0">Opt-Out Cookie</h6>
+          <br />
+          Alternative to browser add-on, especially for browsers on mobile
+          devices end devices, you can also use Google Analytics to capture by
+          clicking on this link. There will be Opt-Out-Cookie, which will allow
+          the future collection of your data at the Visit of this website
+          prevented. The Opt-Out-Cookie is valid only in this browser and only
+          for our website and will be displayed on your device. and put it down.
+          If you delete the cookies in this browser, you will have to Set
+          Opt-Out cookie again. <br />
+          <br />
+          <h6 className="margin-b-0"> Order data processing</h6>
+          <br />
+          We have a contract with Google for the processing of order data and
+          set the strict specifications of the German Data protection
+          authorities when using Google Analytics complete um.
+          <br />
+          <br />
+          <h6 className="margin-b-0">
+            Demographic characteristics of Google Analytics
+          </h6>
+          <br />
+          This website uses Google's "demographic features" feature Analytics.
+          This allows reports to be created that contain statements on age, sex
+          and interests of the site visitors. These Data originates from
+          interest-related advertising by Google and from Third-party visitor
+          information. This data cannot be used for any specific person can be
+          assigned. You can call this function at any time using the Disable ad
+          settings in your Google Account or use the Collection of your data by
+          Google Analytics as in the point "contradiction against data
+          acquisition". <br />
+          <br />
+          <h6 className="margin-b-0">Google-Maps</h6>
+          <br />
+          We put on our site the component "Google Maps" of the company Google
+          Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA,
+          hereinafter referred to as "Google".
+          <br />
+          With every single call of the component "Google Maps" the following is
+          displayed by Google set a cookie to help display the page on which the
+          cookie was placed. component "Google Maps" is integrated, user
+          settings and -to process the data. As a rule, this cookie is not
+          processed by the close the browser, but runs after a certain period of
+          time. time, unless you delete it manually beforehand. If you are not
+          in agreement with this processing of your data, so there is the
+          possibility to deactivate the service of "Google Maps and in this way
+          to prevent the transmission of data to Google. To do this, you must
+          activate the Java Script function in your browser. Deactivate However,
+          we would like to point out to you that in this If the "Google Maps"
+          can not or only limited use. The Use of "Google Maps" and the "Google
+          Maps" obtained via "Google Maps Information is provided in accordance
+          with the
+          <a href=" http://www.google.de/intl/de/policies/terms/regional.html">
+            {" "}
+            Google Terms of Use
+          </a>
+          as well as the
+          <a href="https://www.google.com/intl/de_de/help/terms_maps.html">
+            additional terms and conditions for "Google Maps
+          </a>
+          . <br />
+          <br />
+          <br />
+          <h4>Rights of the persons concerned</h4>
+          <br />
+          <h5 className="margin-b-0">
+            Revocation of your consent to data processing
+          </h5>
+          <br />
+          Many data processing operations can only be carried out with your
+          express consent. Consent possible. You can use an already given
+          consent at any time. For this purpose, an informal notification by
+          e-mail is sufficient. to us. The lawfulness of the information
+          provided up to the time of revocation Data processing remains
+          unaffected by the revocation. Information, blocking, quenching
+          <br />
+          Within the framework of the applicable statutory provisions, you have
+          at all times the right to information free of charge about your stored
+          personal data personal data, their origin and recipient and the
+          purpose for which they were collected. data processing and, if
+          applicable, the right to correction, blocking or or deletion of this
+          data. For this as well as to further questions to the topic personal
+          data you can access at any time under the link provided in the
+          Impressum to contact us. <br />
+          <br />
+          <h5 className="margin-b-0"> Opposition to advertising mails </h5>
+          <br />
+          The use of any information published within the scope of the imprint
+          obligation is prohibited. Contact data for sending unsolicited email
+          addresses or telephone numbers Advertising and information materials
+          are hereby objected to. The Operators of the pages expressly reserve
+          the right to take legal action in the the case of unsolicited sending
+          of advertising information, such as by Spam emails, before.
+          <br />
+          <br />
+          <h5 className="margin-b-0">
+            Right of appeal to the competent supervisory authority
+          </h5>
+          <br />
+          Lastly, you are entitled to apply to the competent supervisory
+          authority for data protection, if from your point of view the
+          processing of your personal data is not possible. your data is not
+          lawful (Art. 77 DSGVO). Your complaint In this case, you should
+          address the data protection officer for the country in question to the
+          State of North Rhine-Westphalia:
+          <br />
+          <br />
+          State Commissioner for Data Protection and Freedom of Information
+          North Rhine-Westphalia <br />
+          <br />
+          Postfach 20 04 44 <br />
+          40102 Düsseldorf <br />
+          Kavalleriestraße 2-4 <br />
+          40213 Düsseldorf <br />
+          <br />
+          Telefon: 02 11/384 24-0 <br />
+          Telefax: 02 11/384 24-10 <br />
+          E-Mail: poststelle@ldi.nrw.de <br />
+        </div>
+      </div>
+      <Footer />
     </>
   )
 }

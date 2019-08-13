@@ -37,7 +37,7 @@ class index extends React.Component {
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
                     Our mission is to enable as many people as possible to
                     acquire state-of-the-art tech skills to solve today’s
-                    problems in a digital way by providing an unique programm
+                    problems in a digital way by providing a unique programm
                     that combines online learning, project work and local
                     community events.
                   </p>
@@ -101,7 +101,7 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">digital tracks</p>
                         <p className="text-muted pb-4">
-                          With TechLabs you can learn state of the art tech in
+                          With TechLabs you can learn state-of-the-art tech in
                           AI, Web Development and Data Science.
                         </p>
                         <span className="card-discover">
@@ -265,13 +265,13 @@ class index extends React.Component {
               <h2>Learn More</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
-                Check out our location and programm!
+                Check out our locations and program!
               </p>
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Location →</h2>
+                      <h2 className="mt-3 color-red">Locations →</h2>
                       <p className="color-gl">
                         Check out what’s happening in our offline-communities.
                         Your city is not yet on the map? Bring TechLabs to your
@@ -287,7 +287,7 @@ class index extends React.Component {
                       <p className="color-gl">
                         Not sure what each of the tracks has in store for you?
                         Check out our program and get more detailed information
-                        about the learning tracks
+                        about the learning tracks.
                       </p>
                     </div>
                   </Link>

@@ -26,7 +26,7 @@ class Team extends Component {
       <div className="container my-5 py-5 h-100">
         <div className="row mt-5">
           <div className="col">
-            <h2>Core Team</h2>
+            <h2>Our Board Members</h2>
             <div className="section-divider" />
             <p className="basicSection--sub">The People behind {city}</p>
           </div>
