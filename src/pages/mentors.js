@@ -17,8 +17,8 @@ class mentors extends Component {
           </div>
           <div className="row my-5">
             <div className="col">
-              <a className="btn btn-primary" href={Info}>Download Info</a>
-              <a className="btn btn-primary" href={Dates}>Download Calendar</a>
+              <a className="btn btn-primary mt-4" href={Info}>Download Info</a>
+              <a className="btn btn-primary mt-4" href={Dates}>Download Calendar</a>
             </div>
           </div>
         </div>
