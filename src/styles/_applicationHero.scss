@@ -1,0 +1,25 @@
+@import "./variables";
+
+.applicationHero {
+  &--hero {
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    width: 100vw;
+  }
+
+  &--heading {
+    margin-top: 75%;
+    font-size: 70px;
+    line-height: 72px;
+    color: $color-p;
+  }
+
+  &--intro {
+    color: $color-gl;
+    max-width: 70%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
