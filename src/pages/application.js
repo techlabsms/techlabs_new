@@ -5,6 +5,7 @@ import ChooseCity from "../components/ChooseCity"
 import Requirements from "../components/Requirements"
 import applicationHero from "../assets/application.png"
 import ApplicationProcess from "../components/ApplicationProcess"
+import Dates from "../components/Dates"
 
 class application extends Component {
   render() {
@@ -27,6 +28,10 @@ class application extends Component {
         <ApplicationProcess
           heading="Application Process"
           subheading="What are the steps for a successful application? "
+        />
+        <Dates
+          heading="Important Dates"
+          subheading="What is happening when?"
         />
       </>
     )
