@@ -1,5 +1,5 @@
 import React from "react"
-import skylineMuenster from "../assets/skylineMuenster.png"
+import skylineMuenster from "../assets/SkylineMuenster.png"
 import skylineKopenhagen from "../assets/skylineKopenhagen.png"
 
 const ChooseCity = ({ heading, subheading }) => {
