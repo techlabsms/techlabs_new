@@ -30,18 +30,19 @@
 @import "./location";
 @import "./partnerLogos";
 @import "./applicationHero";
+@import "./requirements";
+@import "./applicationProcess";
+@import "./dates";
 
 h1,
 h2,
 h3,
 h5,
 h6 {
-  color: $color-g;
   font-family: $font-h;
 }
 
 body {
-  color: $color-g;
   font-family: $font-p;
   font-size: 17px !important;
 }
