@@ -1,0 +1,17 @@
+@import "./variables";
+
+.applProcess {
+  &--rectangle {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--heading {
+    color: white;
+    font-size: 25px;
+    line-height: 28px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+}
