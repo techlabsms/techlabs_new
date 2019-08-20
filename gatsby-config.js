@@ -1,5 +1,6 @@
 module.exports = {
   /* Your site config here */
+  pathPrefix:"/techlabs_new",
   siteMetadata: {
     title: `TechLabs - We Build. Digital. Shapers.`,
   },
