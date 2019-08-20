@@ -7,7 +7,6 @@
   Official Website Repository for TechLabs Global
 </h1>
 
-The current Statuts of the website is: [![Netlify Status](https://api.netlify.com/api/v1/badges/4c9e30fd-b28c-4eb4-b096-a0aa734633be/deploy-status)](https://app.netlify.com/sites/hopeful-spence-494189/deploys)
 
 ## 🚀 Quick start
 
@@ -17,6 +16,11 @@ We use Gatsby.js to build our Site
 2. Install the Gatsby CLI `npm install -g gatsby-cli`
 3. Run `npm install`
 4. Run `gatsby develop` to start the project locally
+
+## Publish Changes 
+
+1. Run `npm deploy`
+2. Wait for the changes appearing.;-) 
 
 ## ✏️ Content
 
@@ -32,7 +36,6 @@ We use Contentful as a CMS (Content Management System). There you can edit the l
   - React as a Frontend Framework (<a href="https://reactjs.org/docs/getting-started.html">DOCS</a>)
   - Gatsby as static site generator (<a href="https://www.gatsbyjs.org/">DOCS</a>)
   - Data Source <a href="https://www.contentful.com/">Contentful</a>
-  - Deployed at <a href="https://www.netlify.com/">Netlify</a>
 
 
 ## 🐛 Bugs and issues
