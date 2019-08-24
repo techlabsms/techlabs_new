@@ -1,8 +1,10 @@
 module.exports = {
   /* Your site config here */
-  pathPrefix:"/techlabs_new/tree/gh-pages/",
   siteMetadata: {
     title: `TechLabs - We Build. Digital. Shapers.`,
+    description: `TechLabs is a platform for young people from all disciplines. We provide state-of-the-art Tech-Skills to solve the problems of our time digitally and entrepreneurially.`,
+    url: `https://www.techlabs.org`,
+    image: `/assets/tl-favicon.svg`
   },
   plugins: [
     `gatsby-plugin-sass`,
