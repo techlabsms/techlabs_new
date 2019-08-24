@@ -6,6 +6,7 @@ import CPH from "../assets/loc-cph.svg"
 import SLACK from "../assets/slack-icon.svg"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
+import Head from "./Head"
 import { Link } from "gatsby"
 import "jquery"
 
@@ -17,6 +18,7 @@ class Navbar extends React.Component {
     const { isOpen } = this.state
     return (
       <>
+        <Head />
         <Headroom>
           <nav className="navbar navbar-expand-lg navbar-light navbar-add">
             <Link className="navbar-brand" to="/">
