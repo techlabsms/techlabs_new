@@ -16,6 +16,12 @@ class Head extends Component {
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
             <link rel="shortcut icon" type="image/png" sizes="64x64" href={favicon64} />
+
+            <meta property="og:title" content="TechLabs - We Build. Digital. Shapers."> 
+            <meta property="og:description" content="TechLabs is a platform for young people from all disciplines. We provide state-of-the-art Tech-Skills to solve the problems of our time digitally and entrepreneurially.">
+            <meta property="og:image" content={favicon64}>
+            <meta property="og:url" content="https://www.techlabs.org">
+
         </Helmet>
       </>
     )
