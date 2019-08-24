@@ -22,6 +22,7 @@ const ApplicationProcess = ({ heading, subheading }) => {
             >
               <h3 className="applProcess--heading">Online Application</h3>
             </div>
+            <p className="px-3 d-block d-md-none">We look through your application and check whether your motivation fits our requirements!</p>
           </div>
           <div className="col-md-4">
             <div
@@ -32,6 +33,7 @@ const ApplicationProcess = ({ heading, subheading }) => {
             >
               <h3 className="applProcess--heading">Feedback Process</h3>
             </div>
+            <p className="px-3 d-block d-md-none">After looking through all applications we quickly get back to you with our final feedback!</p>
           </div>
           <div className="col-md-4">
             <div
@@ -42,17 +44,18 @@ const ApplicationProcess = ({ heading, subheading }) => {
             >
               <h3 className="applProcess--heading">Kick-Off</h3>
             </div>
+            <p className="px-3 d-block d-md-none">Congratulations – you are part of our TechLabs Community. Let’s start learning together!</p>
           </div>
         </div>
         <div className="row mt-3">
             <div className="col-md-4">
-                <p className="px-3">We look through your application and check whether your motivation fits our requirements!</p>
+                <p className="px-3 d-none d-md-block">We look through your application and check whether your motivation fits our requirements!</p>
             </div>
             <div className="col-md-4">
-                <p className="px-3">After looking through all applications we quickly get back to you with our final feedback!</p>
+                <p className="px-3 d-none d-md-block">After looking through all applications we quickly get back to you with our final feedback!</p>
             </div>
             <div className="col-md-4">
-                <p className="px-3">Congratulations – you are part of our TechLabs Community. Let’s start learning together!</p>
+                <p className="px-3 d-none d-md-block">Congratulations – you are part of our TechLabs Community. Let’s start learning together!</p>
             </div>
         </div>
       </div>

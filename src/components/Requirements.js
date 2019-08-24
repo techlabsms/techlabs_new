@@ -13,7 +13,7 @@ const Requirements = ({ heading, subheading }) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-5 pt-5">
+          <div className="col-md-5 pt-5 order-2 order-md-1">
             <ol className="requirements--list">
               <li className="requirements--list_item py-2">
                 <span className="highlighted requirements--text_first">
@@ -43,7 +43,7 @@ const Requirements = ({ heading, subheading }) => {
               </li>
             </ol>
           </div>
-          <div className="col-md-7 text-center">
+          <div className="col-md-7 text-center order-1 order-md-2">
             <img src={locationsImg} alt="" className="w-75"/>
           </div>
         </div>

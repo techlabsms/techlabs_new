@@ -13,12 +13,12 @@
       max-width: 90%;
     }
 
-    li:first-child{
-        margin-top: -.5rem;
+    li:first-child {
+      margin-top: -0.5rem;
     }
 
-    li:not(:first-child){
-    margin-top: 4.7rem;
+    li:not(:first-child) {
+      margin-top: 4.7rem;
     }
 
     li:hover {
@@ -45,6 +45,14 @@
       top: -80px;
       left: 40px;
       color: #454b69;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &--dateList {
+      li:not(:first-child) {
+        margin-top: 0;
+      }
     }
   }
 }
