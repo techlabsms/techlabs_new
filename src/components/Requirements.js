@@ -1,7 +1,7 @@
 import React from "react"
 import locationsImg from "../assets/locations.png"
 
-const Requirements = ({ heading, subheading }) => {
+const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
     <div className="requirements my-5 py-5">
       <div className="container ">
@@ -42,9 +42,18 @@ const Requirements = ({ heading, subheading }) => {
                 - Are your english skills sufficient?
               </li>
             </ol>
+            {isOpen ? (
+              <button className="btn btn-primary mt-4">
+                <a href={link} className="a-white">Apply now</a>
+              </button>
+            ) : (
+              <button className="btn btn-primary mt-4" disabled>
+                Application currently closed
+              </button>
+            )}
           </div>
           <div className="col-md-7 text-center order-1 order-md-2">
-            <img src={locationsImg} alt="" className="w-75"/>
+            <img src={locationsImg} alt="" className="w-75" />
           </div>
         </div>
       </div>

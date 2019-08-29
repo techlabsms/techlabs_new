@@ -33,6 +33,7 @@
 @import "./requirements";
 @import "./applicationProcess";
 @import "./dates";
+@import "./chooseCity";
 
 h1,
 h2,
@@ -45,6 +46,14 @@ h6 {
 body {
   font-family: $font-p;
   font-size: 17px !important;
+}
+
+.a-white{
+  color: white !important;
+}
+
+.a-black{
+  color: $color-g;
 }
 
 .tl-logo {
