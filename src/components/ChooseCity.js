@@ -53,8 +53,8 @@ class ChooseCity extends Component {
               <div
                 className={
                   this.state.copenhagenIsClicked
-                    ? "chooseCity--clickedCard"
-                    : "chooseCity--card"
+                    ? "chooseCity--clickedCard w-100"
+                    : "chooseCity--card w-100"
                 }
                 onClick={() => {
                   this.setState({
