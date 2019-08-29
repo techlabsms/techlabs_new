@@ -23,31 +23,11 @@ class application extends Component {
           name: "muenster",
           isOpen: true,
           link: "www.google.de",
-          dates: [
-            "16.04.2019",
-            "17.09.2019",
-            "16.04.2019",
-            "17.09.2019",
-            "16.04.2019",
-            "17.09.2019",
-            "16.04.2019",
-            "17.09.2019",
-          ],
         },
         {
           name: "copenhagen",
           link: "www.google.de",
           isOpen: false,
-          dates: [
-            "17.04.2019",
-            "17.09.2019",
-            "17.04.2019",
-            "17.09.2019",
-            "76.04.2019",
-            "17.09.2019",
-            "16.04.2019",
-            "17.09.2019",
-          ],
         },
       ],
       index: 0,
@@ -83,6 +63,8 @@ class application extends Component {
           heading="Choose yoour city"
           subheading="Where do you want to study?"
           isClicked={this.isClicked}
+          muensterStart="01.10.2019"
+          copenhagenStart="1.11.2019"
         />
         <div className={this.state.isClicked ? "d-block" : "d-none"}>
           <Requirements
@@ -94,11 +76,6 @@ class application extends Component {
           <ApplicationProcess
             heading="Application Process"
             subheading="What are the steps for a successful application? "
-          />
-          <Dates
-            heading="Important Dates"
-            subheading="What is happening when?"
-            dates={cityData[index].dates}
           />
           <div className="container">
             <CallToActionApplication 
