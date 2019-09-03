@@ -6,10 +6,14 @@ import Requirements from "../components/Requirements"
 import applicationHero from "../assets/application.png"
 import ApplicationProcess from "../components/ApplicationProcess"
 import CallToActionApplication from "../components/CallToActionApplication"
+import FirstImpressionThree from "../components/FirstImpressionThree"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
 import Footer from "../components/Footer"
 import Dates from "../components/Dates"
+import AI from '../assets/ai-robot.png'
+import Web from '../assets/webdevpro.png'
+import Ds from '../assets/dashboard.png'
 
 class application extends Component {
   constructor(props) {
@@ -61,7 +65,7 @@ class application extends Component {
         />
         <ChooseCity
           heading="Choose yoour city"
-          subheading="Where do you want to study?"
+          subheading="At the moment we are located in Münster and Copenhagen!"
           isClicked={this.isClicked}
           muensterStart="01.10.2019"
           copenhagenStart="1.11.2019"
@@ -81,6 +85,23 @@ class application extends Component {
             <CallToActionApplication 
               isOpen={cityData[index].isOpen}
               link={cityData[index].link}
+            />
+            <FirstImpressionThree
+              heading="Missed the deadline?"
+              subheading="Get a first impression of what it’s like to study Data Science, Web Development or AI. Prepare yourself for the next batch!"
+              firstHeading="AI"
+              firstImage={AI}
+              firstText="Start with our free Track and learn the fundamentals of AI now."
+              firstLink="https://app.edyoucated.org/login"
+              secondHeading="Web Development"
+              secondImage={Web}
+              secondText="Start with our free Track and learn the fundamentals of Web Development."
+              secondLink="https://app.edyoucated.org/login"
+              thirdHeading="Data Science"
+              thirdImage={Ds}
+              thirdText="Start with our free Track and learn the fundamentals with Python or R now."
+              thirdLink="https://app.edyoucated.org/login"
+
             />
             <Faq>
               <FaqQuestion

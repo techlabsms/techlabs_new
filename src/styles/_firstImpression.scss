@@ -1,5 +1,5 @@
 @import "./variables";
-@import './animations';
+@import "./animations";
 
 .firstImpression {
   &--card {
@@ -30,7 +30,6 @@
       transform: scale(1.03);
     }
 
-
     &-circle {
       width: 20px;
       height: 20px;
@@ -38,14 +37,32 @@
       border-radius: 20px;
       animation: fade 2s ease-in;
       animation-iteration-count: infinite;
-      &-3{
-        animation-delay: .65s;
+      &-3 {
+        animation-delay: 0.65s;
       }
-      &-2{
-        animation-delay: .45s;
+      &-2 {
+        animation-delay: 0.45s;
       }
-      &-1{
-        animation-delay: .25s;
+      &-1 {
+        animation-delay: 0.25s;
+      }
+    }
+
+    &-circle_three {
+      width: 10px;
+      height: 10px;
+      background-color: $color-p;
+      border-radius: 20px;
+      animation: fade 2s ease-in;
+      animation-iteration-count: infinite;
+      &-3 {
+        animation-delay: 0.65s;
+      }
+      &-2 {
+        animation-delay: 0.45s;
+      }
+      &-1 {
+        animation-delay: 0.25s;
       }
     }
   }
