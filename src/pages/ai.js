@@ -46,7 +46,7 @@ class ai extends Component {
             image={ai_cover}
           />
           <LeftImageSection
-            heading="More abou the track"
+            heading="More about the track"
             subheading="Get to know neural networks and work with the background data in our individualised tracks!"
             text="The AI track comes in several versions. You can combine the deep learning part with some refreshment of you python and/or machine learning knowledge. Despite this refreshment you should already have good knowledge in python and machine learning and/or done the data science track.
             You´ll acquire theoretical knowledge as well as practical experience during the AI track. The primary applications are Image Classification, Object Detection and Text Mining. You`ll apply neural networks to detect objects in an image and classify those as well as find interesting patterns in text data (for example amazon reviews). Aside from the application the track contains information about the most important mathematical foundation of neural networks. This includes back-propagation, gradient descent and vectorizing of word."
