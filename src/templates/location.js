@@ -41,14 +41,12 @@ class location extends Component {
                   )}
                   {location.isOpen ? (
                     <div>
-                      <a className="btn btn-primary mt-3 d-inline" href="/">
+                      <a className="btn btn-primary mt-3 d-inline" href={location.applicationLink}>
                         Apply now
                       </a>
                       <a
                         className="btn btn-secondary mt-3 d-inline"
-                        href={`mailto:${
-                          location.heading
-                        }@techlabs.org?subject=Question from techlabs.org`}
+                        href={`mailto:${location.email}`}
                       >
                         Contact us
                       </a>
@@ -57,9 +55,7 @@ class location extends Component {
                     <div>
                       <a
                         className="btn btn-primary mt-3 d-inline"
-                        href={`mailto:${
-                          location.heading
-                        }@techlabs.org?subject=Question from techlabs.org`}
+                        href={`mailto:${location.email}`}
                       >
                         Contact us
                       </a>
@@ -316,6 +312,8 @@ export const pageQuery = graphql`
         json
       }
       officeLink
+      applicationLink
+      email
     }
     allContentfulBlogPost(limit: 3) {
       edges {
