@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
 

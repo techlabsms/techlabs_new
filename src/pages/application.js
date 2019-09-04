@@ -10,7 +10,6 @@ import FirstImpressionThree from "../components/FirstImpressionThree"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
 import Footer from "../components/Footer"
-import Dates from "../components/Dates"
 import AI from '../assets/ai-robot.png'
 import Web from '../assets/webdevpro.png'
 import Ds from '../assets/dashboard.png'
