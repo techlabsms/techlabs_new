@@ -17,6 +17,8 @@
     width: 40%;
   }
 
+  
+
   &--highlighted {
     &-first {
       background-color: $color-background;
@@ -28,23 +30,49 @@
   }
 
   &--intro {
-    margin-top: 20%;
     font-size: 20px;
     line-height: 35px;
     /* or 175% */
+    width: 90%;
     text-align: justify;
-    width: 60%;
     color: #8b9fa8;
   }
 
   &--card{
       margin-top: 60%;
+      &-heading-small{
+        font-size: 30px;
+      }
+      &-heading-second{
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-p;
+      }
+      p{
+        color: $color-gl;
+      }
   }
 
   @media (max-width: 767px){
     &--heading{
-      font-size: 35px;
-      line-height: 45px;
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    &--intro{
+      width: 100%;
+    }
+
+    &--card{
+      margin-top: 10%;
+      margin-bottom: 20%;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &--card{
+      margin-top: 10%;
+      margin-bottom: 20%;
     }
   }
 }
