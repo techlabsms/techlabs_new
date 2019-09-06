@@ -1,10 +1,12 @@
 import React, { Component } from "react"
-import skylineMuenster from "../assets/SkylineMuenster.png"
-import skylineKopenhagen from "../assets/skylineKopenhagen.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
+import dswhite from "../assets/ds_white.png"
+import aiwhite from "../assets/ai_white.png"
+import webwhite from "../assets/web_white.png"
 import { Link } from "gatsby"
+import Countdown from "./Countdown"
 
 class ChooseCity extends Component {
   state = {
@@ -18,10 +20,15 @@ class ChooseCity extends Component {
       <>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-md-8">
               <h2>{heading}</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">{subheading}</p>
+            </div>
+            <div className="col-md-4">
+              <div className="highlighted">
+                <h4>Choose your City first!</h4>
+              </div>
             </div>
           </div>
           <div className="row my-3">
@@ -44,25 +51,25 @@ class ChooseCity extends Component {
                 }}
               >
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h4 className="chooseYourCity--heading">Muenster</h4>
-                    <div className="section-divider" />
+                    <div
+                      className={
+                        this.state.muensterIsClicked
+                          ? "section-divider-white"
+                          : "section-divider"
+                      }
+                    />
                   </div>
-                  <div className="col">
-                    <div className="chooseCity--start">
-                      <p className="chooseCity--start_text">
-                        Application Start:
-                        <br />
-                        {muensterStart}
-                      </p>
-                    </div>
+                  <div className="col-md-6">
+                    <Countdown date={this.props.muensterStart} />
                   </div>
                 </div>
                 <div className="row px-2 my-2">
                   <div className="col">
                     <div className="row">
                       <img
-                        src={ai}
+                        src={this.state.muensterIsClicked ? aiwhite : ai}
                         alt="artificial intelligence"
                         width="15"
                         height="15"
@@ -74,7 +81,7 @@ class ChooseCity extends Component {
                     </div>
                     <div className="row">
                       <img
-                        src={ds}
+                        src={this.state.muensterIsClicked ? dswhite : ds}
                         alt="data science"
                         width="15"
                         height="15"
@@ -86,7 +93,7 @@ class ChooseCity extends Component {
                   <div className="col">
                     <div className="row">
                       <img
-                        src={web}
+                        src={this.state.muensterIsClicked ? webwhite : web}
                         alt="artificial intelligence"
                         width="15"
                         height="15"
@@ -96,7 +103,7 @@ class ChooseCity extends Component {
                     </div>
                     <div className="row">
                       <img
-                        src={ds}
+                        src={this.state.muensterIsClicked ? webwhite : web}
                         alt="data science"
                         width="15"
                         height="15"
@@ -104,15 +111,6 @@ class ChooseCity extends Component {
                       />
                       <p className="chooseCity--subject">UX Design</p>
                     </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col text-center">
-                    <img
-                      src={skylineMuenster}
-                      alt="skyline Muenster"
-                      className="py-1 w-100"
-                    />
                   </div>
                 </div>
               </div>
@@ -136,25 +134,25 @@ class ChooseCity extends Component {
                 }}
               >
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h4 className="chooseYourCity--heading">Copenhagen</h4>
-                    <div className="section-divider" />
+                    <div
+                      className={
+                        this.state.copenhagenIsClicked
+                          ? "section-divider-white"
+                          : "section-divider"
+                      }
+                    />
                   </div>
-                  <div className="col">
-                    <div className="chooseCity--start">
-                      <p className="chooseCity--start_text">
-                        Application Start:
-                        <br />
-                        {copenhagenStart}
-                      </p>
-                    </div>
+                  <div className="col-md-6">
+                    <Countdown date={this.props.copenhagenStart} />
                   </div>
                 </div>
                 <div className="row px-2 my-2">
                   <div className="col">
                     <div className="row">
                       <img
-                        src={ai}
+                        src={this.state.copenhagenIsClicked ? aiwhite : ai}
                         alt="artificial intelligence"
                         width="15"
                         height="15"
@@ -166,7 +164,7 @@ class ChooseCity extends Component {
                     </div>
                     <div className="row">
                       <img
-                        src={ds}
+                        src={this.state.copenhagenIsClicked ? dswhite : ds}
                         alt="data science"
                         width="15"
                         height="15"
@@ -178,7 +176,7 @@ class ChooseCity extends Component {
                   <div className="col">
                     <div className="row">
                       <img
-                        src={web}
+                        src={this.state.copenhagenIsClicked ? webwhite : web}
                         alt="artificial intelligence"
                         width="15"
                         height="15"
@@ -186,15 +184,6 @@ class ChooseCity extends Component {
                       />
                       <p className="chooseCity--subject">Web Development</p>
                     </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col text-center">
-                    <img
-                      src={skylineKopenhagen}
-                      alt="skyline Muenster"
-                      className="w-100 py-4"
-                    />
                   </div>
                 </div>
               </div>
@@ -206,14 +195,12 @@ class ChooseCity extends Component {
                   <div className="section-divider" />
                   <div className="row">
                     <div className="col">
-                      <p className="chooseCity--subject py-2">Apply and build TechLabs in your City. Become a Co-Founder at TechLabs</p>
+                      <p className="chooseCity--subject py-2">
+                        Apply and build TechLabs in your City. Become a
+                        Co-Founder at TechLabs
+                      </p>
                     </div>
                   </div>
-                  <img
-                    src={skylineMuenster}
-                    alt="skyline Muenster"
-                    className="py-4"
-                  />
                 </div>
               </Link>
             </div>

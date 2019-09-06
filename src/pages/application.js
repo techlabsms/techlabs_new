@@ -66,8 +66,8 @@ class application extends Component {
           heading="Choose yoour city"
           subheading="At the moment we are located in Münster and Copenhagen!"
           isClicked={this.isClicked}
-          muensterStart="01.10.2019"
-          copenhagenStart="1.11.2019"
+          muensterStart="2019-10-01"
+          copenhagenStart="2019-12-02"
         />
         <div className={this.state.isClicked ? "d-block" : "d-none"}>
           <Requirements

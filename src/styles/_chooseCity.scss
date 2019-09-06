@@ -2,7 +2,7 @@
 
 .chooseCity {
   &--clickedCard {
-    background: #ffffff;
+    background: $color-p;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     border: 0px solid !important;
@@ -12,7 +12,7 @@
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
-
+    color: white;
   }
 
   &--card {
@@ -26,7 +26,6 @@
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
-    opacity: 0.3;
   }
 
   &--clickedCard:hover,
@@ -37,10 +36,26 @@
   &--start {
     background-color: $color-background;
     border-radius: 3px;
+    margin-bottom: 15px;
     &_text {
       font-size: 14px !important;
       color: $color-p;
       text-align: center;
+      padding-top: 10px;
+    }
+  }
+
+  &--countdown{
+   
+    &-text{
+      font-size: 5px;
+      word-spacing: 14px;
+      color: $color-p;
+    }
+
+    &-numbers{
+      font-size: 18px;
+      color: $color-p;
     }
   }
 
