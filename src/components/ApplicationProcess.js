@@ -116,12 +116,20 @@ class ApplicationProcess extends React.Component {
               }}
             >
               <div className="applProcess--card">
-                <h3>1. Online Application</h3>
-                <p className="px-3">
-                  We look through your application and check whether your
-                  motivation fits our requirements!
-                </p>
-                <div className="row mt-4">
+                <div className="row">
+                  <div className="col">
+                    <h3>1. Online Application</h3>
+                  </div>
+                </div>
+                <div className="row h-50">
+                  <div className="col">
+                    <p className="px-3">
+                      We look through your application and check whether your
+                      motivation fits our requirements!
+                    </p>
+                  </div>
+                </div>
+                <div className="row d-flex align-items-end">
                   <div className="col text-right">
                     <button
                       onClick={() => this.handleRightClick()}
@@ -140,12 +148,20 @@ class ApplicationProcess extends React.Component {
               }}
             >
               <div className="applProcess--card">
-                <h3>2. Online Application</h3>
-                <p className="px-3">
-                  After looking through all applications we quickly get back to
-                  you with our final feedback!
-                </p>
-                <div className="row mt-5">
+                <div className="row">
+                  <div className="col">
+                    <h3>2. Online Application</h3>
+                  </div>
+                </div>
+                <div className="row h-50">
+                  <div className="col">
+                    <p className="px-3">
+                      After looking through all applications we quickly get back
+                      to you with our final feedback!
+                    </p>
+                  </div>
+                </div>
+                <div className="row d-flex align-items-center">
                   <div className="col-6">
                     <button
                       onClick={() => this.handleLeftClick()}
@@ -172,13 +188,21 @@ class ApplicationProcess extends React.Component {
               }}
             >
               <div className="applProcess--card">
-                <h3>3. Online Application</h3>
-                <p className="px-3">
-                  Congratulations – you are part of our TechLabs Community.
-                  Let’s start learning together!
-                </p>
+                <div className="row">
+                  <div className="col">
+                    <h3>3. Online Application</h3>
+                  </div>
+                </div>
+                <div className="row h-50">
+                  <div className="col">
+                    <p className="px-3">
+                      Congratulations – you are part of our TechLabs Community.
+                      Let’s start learning together!
+                    </p>
+                  </div>
+                </div>
 
-                <div className="row mt-4">
+                <div className="row d-flex align-items-end">
                   <div className="col">
                     <button
                       onClick={() => this.handleLeftClick()}
