@@ -56,7 +56,7 @@ class ux extends Component {
             heading="What is User Experience Design?"
             subheading="A UX designer’s typical tasks vary, but often include user research, creating personas, designing wireframes and interactive prototypes as well as testing designs."
             text="The User Experience is made up of a person’s perceptions and responses resulting from the use or even just the anticipated use of a product, system or service. Therefore UX Design is the process of understanding the user, to iteratively improve the usability, accessibility and pleasure he has while interacting with the product.
-In short: Your job is it to make a user enjoy using a product."
+                  In short: Your job is it to make a user enjoy using a product."
             image={UX2}
           />
           <Projects />
