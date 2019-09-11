@@ -123,12 +123,12 @@ class ApplicationProcess extends React.Component {
                 </p>
                 <div className="row mt-4">
                   <div className="col text-right">
-                    <a
+                    <button
                       onClick={() => this.handleRightClick()}
                       className="applProcess--card-btn"
                     >
                       Next Step <img src={arrowRight} alt="" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -147,20 +147,20 @@ class ApplicationProcess extends React.Component {
                 </p>
                 <div className="row mt-5">
                   <div className="col-6">
-                    <a
+                    <button
                       onClick={() => this.handleLeftClick()}
                       className="applProcess--card-btn"
                     >
                       <img src={arrowLeft} alt="" /> First Step
-                    </a>
+                    </button>
                   </div>
                   <div className="col-6">
-                    <a
+                    <button
                       onClick={() => this.handleRightClick()}
                       className="applProcess--card-btn"
                     >
                       Next Step <img src={arrowRight} alt="" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -180,12 +180,12 @@ class ApplicationProcess extends React.Component {
 
                 <div className="row mt-4">
                   <div className="col">
-                    <a
+                    <button
                       onClick={() => this.handleLeftClick()}
                       className="applProcess--card-btn"
                     >
                       <img src={arrowLeft} alt="" /> Second Step
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

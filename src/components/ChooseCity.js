@@ -29,7 +29,7 @@ class ChooseCity extends Component {
   }
 
   render() {
-    const { heading, subheading, muensterStart, copenhagenStart } = this.props
+    const { heading, subheading, } = this.props
 
     const { muensterIsClicked, copenhagenIsClicked, atEnd } = this.state
     return (

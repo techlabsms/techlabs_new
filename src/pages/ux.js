@@ -13,7 +13,6 @@ import FaqQuestion from "../components/FaqQuestion"
 import UX from "../assets/UX.png"
 import UX2 from "../assets/UX2.png"
 import david from "../assets/david.png"
-import dashboard from "../assets/dashboard.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 
