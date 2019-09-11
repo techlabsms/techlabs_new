@@ -79,7 +79,7 @@ class application extends Component {
           <ApplicationProcess
             heading="Application Process"
             subheading="What are the steps for a successful application? "
-          />
+          />          
           <div className="container">
             <CallToActionApplication 
               isOpen={cityData[index].isOpen}

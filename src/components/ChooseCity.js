@@ -12,10 +12,26 @@ class ChooseCity extends Component {
   state = {
     muensterIsClicked: false,
     copenhagenIsClicked: false,
+    atEnd: false,
+  }
+
+  componentDidMount() {
+    window.onscroll = () => {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 200
+      ) {
+        this.setState({
+          atEnd: true,
+        })
+      }
+    }
   }
 
   render() {
     const { heading, subheading, muensterStart, copenhagenStart } = this.props
+
+    const { muensterIsClicked, copenhagenIsClicked, atEnd } = this.state
     return (
       <>
         <div className="container">
@@ -24,11 +40,6 @@ class ChooseCity extends Component {
               <h2>{heading}</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">{subheading}</p>
-            </div>
-            <div className="col-md-4">
-              <div className="highlighted">
-                <h4>Choose your City first!</h4>
-              </div>
             </div>
           </div>
           <div className="row my-3">
@@ -52,7 +63,7 @@ class ChooseCity extends Component {
               >
                 <div className="row">
                   <div className="col-md-6">
-                    <h4 className="chooseYourCity--heading">Muenster</h4>
+                    <h4 className="chooseCity--heading">Muenster</h4>
                     <div
                       className={
                         this.state.muensterIsClicked
@@ -61,7 +72,7 @@ class ChooseCity extends Component {
                       }
                     />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-12 col-xl-6">
                     <Countdown date={this.props.muensterStart} />
                   </div>
                 </div>
@@ -135,7 +146,7 @@ class ChooseCity extends Component {
               >
                 <div className="row">
                   <div className="col-md-6">
-                    <h4 className="chooseYourCity--heading">Copenhagen</h4>
+                    <h4 className="chooseCity--heading">Copenhagen</h4>
                     <div
                       className={
                         this.state.copenhagenIsClicked
@@ -144,7 +155,7 @@ class ChooseCity extends Component {
                       }
                     />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-12 col-xl-6">
                     <Countdown date={this.props.copenhagenStart} />
                   </div>
                 </div>
@@ -191,7 +202,7 @@ class ChooseCity extends Component {
             <div className="col-md-4 mt-4">
               <Link to="/foundYourOwn" className="noDec a-black">
                 <div className="chooseCity--card w-100 h-100">
-                  <h4 className="chooseYourCity--heading">Your City?</h4>
+                  <h4 className="chooseCity--heading">Your City?</h4>
                   <div className="section-divider" />
                   <div className="row">
                     <div className="col">
@@ -206,6 +217,13 @@ class ChooseCity extends Component {
             </div>
           </div>
         </div>
+        {atEnd && !muensterIsClicked && !copenhagenIsClicked ? (
+          <div className="row mt-5 chooseCity--stopper">
+            <div className="col text-center py-4">
+              <h2>Please choose a city first!</h2>
+            </div>
+          </div>
+        ) : null}
       </>
     )
   }

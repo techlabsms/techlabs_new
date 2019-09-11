@@ -3,7 +3,7 @@ import dayjs from "dayjs"
 
 class Countdown extends Component {
   state = {
-    months: undefined, 
+    months: undefined,
     days: undefined,
     hours: undefined,
     minutes: undefined,
@@ -21,8 +21,7 @@ class Countdown extends Component {
         clearInterval(this.interval)
       }
       const countdown = dayjs(this.props.date).subtract(now)
-      console.log(countdown.$M);
-      const months = countdown.$M;
+      const months = countdown.$M
       const days = countdown.$D
       const hours = countdown.$H
       const minutes = countdown.$m
@@ -51,26 +50,32 @@ class Countdown extends Component {
               <div className="row">
                 <div className="col text-center">
                   <span className="chooseCity--countdown-numbers">
-                   {months} : {days} : {hours} : {minutes}
+                    {months === 0
+                      ? `${days} : ${hours} : ${minutes} : ${seconds}`
+                      : `${months} : ${days} : ${hours} : ${minutes}`}
                   </span>
                 </div>
               </div>
               <div className="row">
                 <div className="col text-center">
-                  <p className="chooseCity--countdown-text">
-                    Months Days Hours Minutes
-                  </p>
+                  {months === 0 ? (
+                    <p className="chooseCity--countdown-text">
+                      days : hours : minutes : seconds
+                    </p>
+                  ) : (
+                    <p className="chooseCity--countdown-text">
+                      months : days : hours : minutes
+                    </p>
+                  )}
                 </div>
               </div>
             </>
           ) : (
             <div className="row">
-                <div className="col text-center  my-2">
-                  <span className="chooseCity--countdown-numbers">
-                    Open
-                  </span>
-                </div>
+              <div className="col text-center  my-2">
+                <span className="chooseCity--countdown-numbers">Open</span>
               </div>
+            </div>
           )}
         </div>
       </>

@@ -48,8 +48,8 @@
   &--countdown{
    
     &-text{
-      font-size: 5px;
-      word-spacing: 14px;
+      font-size: 7px;
+      word-spacing: 3px;
       color: $color-p;
     }
 
@@ -61,5 +61,10 @@
 
   &--subject {
     font-size: 13px;
+  }
+
+  &--stopper{
+    background-color: $color-p;
+    color: white; 
   }
 }
