@@ -98,7 +98,7 @@ class location extends Component {
                 image={location.thirdEntryImage.file.url}
               />
             )}
-            {location.teamNameOne && (
+            {location.teamNameOne && location.teamNameFour ?  (
               <Team
                 city={location.heading}
                 firstName={location.teamNameOne}
@@ -113,6 +113,19 @@ class location extends Component {
                 fourthName={location.teamImgFour}
                 fourthImage={location.teamNameFour.file.url}
                 fourthLinkedIn={location.teamLinkedInFour}
+              />
+            ): (
+              <Team
+                city={location.heading}
+                firstName={location.teamNameOne}
+                firstImage={location.teamImgOne.file.url}
+                firstLinkedIn={location.teamLinkedInOne}
+                secondName={location.teamNameTwo}
+                secondImage={location.teamImgTwo.file.url}
+                secondLinkedIn={location.teamLinkedInTwo}
+                thirdName={location.teamNameThree}
+                thirdImage={location.teamImgThree.file.url}
+                thirdLinkedIn={location.teamLinkedInThree}
               />
             )}
             <Follow

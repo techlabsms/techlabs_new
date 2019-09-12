@@ -35,11 +35,15 @@ class Team extends Component {
           <div className="col-md-3 text-center">
             <img src={firstImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
-              <span className="highlighted">{firstName} </span>
-              <span>
-                <a href={firstLinkedIn}>
-                  <img src={linkedIn} alt="" className="team--linkedIn" />
-                </a>
+              <span className="highlighted">
+                {firstName}
+                {firstImage && (
+                  <span>
+                    <a href={firstLinkedIn}>
+                      <img src={linkedIn} alt="" className="team--linkedIn" />
+                    </a>
+                  </span>
+                )}
               </span>
             </h3>
             <p className="text-justify team--text mt-4">{firstDescription}</p>
@@ -47,11 +51,15 @@ class Team extends Component {
           <div className="col-md-3 text-center">
             <img src={secondImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
-              <span className="highlighted">{secondName} </span>
-              <span>
-                <a href={secondLinkedIn}>
-                  <img src={linkedIn} alt="" className="team--linkedIn" />
-                </a>
+              <span className="highlighted">
+                {secondName}
+                {secondImage && (
+                  <span>
+                    <a href={secondLinkedIn}>
+                      <img src={linkedIn} alt="" className="team--linkedIn" />
+                    </a>
+                  </span>
+                )}
               </span>
             </h3>
             <p className="text-justify team--text mt-4">{secondDescription}</p>
@@ -59,11 +67,15 @@ class Team extends Component {
           <div className="col-md-3 text-center">
             <img src={thirdImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
-              <span className="highlighted">{thirdName} </span>
-              <span>
-                <a href={thirdLinkedIn}>
-                  <img src={linkedIn} alt="" className="team--linkedIn" />
-                </a>
+              <span className="highlighted">
+                {thirdName}
+                {thirdImage && (
+                  <span>
+                    <a href={thirdLinkedIn}>
+                      <img src={linkedIn} alt="" className="team--linkedIn" />
+                    </a>
+                  </span>
+                )}
               </span>
             </h3>
             <p className="text-justify team--text mt-4">{thirdDescription}</p>
@@ -71,11 +83,15 @@ class Team extends Component {
           <div className="col-md-3 text-center">
             <img src={fourthImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
-              <span className="highlighted">{fourthName} </span>
-              <span>
-                <a href={fourthLinkedIn}>
-                  <img src={linkedIn} alt="" className="team--linkedIn" />
-                </a>
+              <span className="highlighted">
+                {fourthName}
+                {fourthImage && (
+                  <span>
+                    <a href={fourthLinkedIn}>
+                      <img src={linkedIn} alt="" className="team--linkedIn" />
+                    </a>
+                  </span>
+                )}
               </span>
             </h3>
             <p className="text-justify team--text mt-4">{fourthDescription}</p>
