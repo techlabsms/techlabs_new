@@ -98,11 +98,11 @@ class index extends React.Component {
                   <div className="p-2 col-sm-6 mt-5">
                     <Link to="/program" className="card-a">
                       <div className="card h-100">
-                        <h1 className="card-title">3</h1> <br />
+                        <h1 className="card-title">4</h1> <br />
                         <p className="card-subtitle">digital tracks</p>
                         <p className="text-muted pb-4">
                           With TechLabs you can learn state-of-the-art tech in
-                          AI, Web Development and Data Science.
+                          AI, Web Development, UX Design and Data Science.
                         </p>
                         <span className="card-discover">
                           > Discover our tracks
@@ -211,7 +211,7 @@ class index extends React.Component {
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
                       Get a personalized learning path. Learn tech skills in
-                      Data Science, Artificial Intelligence or Web Development
+                      Data Science, Artificial Intelligence, Web Development or UX Design
                       by means of the best online resources available.
                     </p>
                   </div>
