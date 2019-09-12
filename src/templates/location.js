@@ -30,27 +30,36 @@ class location extends Component {
                     <img src={location.icon.file.url} alt="" />{" "}
                     {location.heading}
                   </h1>
-                  {location.nextBatchDate ? (
-                    <p className="text-muted batch-text">
-                      Next Batch: {location.nextBatchDate}
-                    </p>
-                  ) : (
-                    <p className="text-muted batch-text">
-                      Next Batch will be announced soon
-                    </p>
-                  )}
+                  <div className="row">
+                    <div className="col">
+                      {location.nextBatchDate ? (
+                        <p className="text-muted batch-text">
+                          Next Batch: {location.nextBatchDate}
+                        </p>
+                      ) : (
+                        <p className="text-muted batch-text">
+                          Next Batch will be announced soon
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
                   {location.isOpen ? (
-                    <div>
-                      <a className="btn btn-primary mt-3 d-inline" href={location.applicationLink}>
+                    <>
+                      <a
+                        className="btn btn-primary mt-3 d-inline"
+                        href={location.applicationLink}
+                      >
                         Apply now
                       </a>
+
                       <a
                         className="btn btn-secondary mt-3 d-inline"
                         href={`mailto:${location.email}`}
                       >
                         Contact us
                       </a>
-                    </div>
+                    </>
                   ) : (
                     <div>
                       <a
@@ -98,7 +107,7 @@ class location extends Component {
                 image={location.thirdEntryImage.file.url}
               />
             )}
-            {location.teamNameOne && location.teamNameFour ?  (
+            {location.teamNameOne && location.teamNameFour ? (
               <Team
                 city={location.heading}
                 firstName={location.teamNameOne}
@@ -114,7 +123,7 @@ class location extends Component {
                 fourthImage={location.teamNameFour.file.url}
                 fourthLinkedIn={location.teamLinkedInFour}
               />
-            ): (
+            ) : (
               <Team
                 city={location.heading}
                 firstName={location.teamNameOne}

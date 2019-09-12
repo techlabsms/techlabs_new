@@ -106,7 +106,6 @@ class MobileNav extends Component {
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
-           
           </ul>
         </div>
       </>

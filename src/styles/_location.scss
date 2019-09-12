@@ -3,7 +3,7 @@
 .location-hero {
   position: relative;
   height: 85vh;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.2);
   width: 100%;
@@ -12,7 +12,8 @@
 
 @media (max-width: 767px) {
   .location-hero{
-    height: 110vh;
+    background-size: 100% auto;
+    height: 85vh;
   }
 }
 
@@ -41,6 +42,7 @@
   will-change: transform;
   padding-left: 2rem !important;
   padding-top: 2rem !important;
+  overflow: hidden;
 }
 
 .location-card:hover {
