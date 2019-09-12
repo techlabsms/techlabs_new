@@ -94,6 +94,9 @@ class Navbar extends React.Component {
                     <Link className="dropdown-item-corr dropdown-item" to="/ai">
                       Artificial Intelligence
                     </Link>
+                    <Link className="dropdown-item-corr dropdown-item" to="/ux">
+                      User Experience Design
+                    </Link>
                   </div>
                 </li>
 

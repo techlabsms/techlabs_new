@@ -15,6 +15,7 @@ import icon4 from "../assets/icon4.png"
 import DataScience from "../assets/dashboard.png"
 import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
+import UX from "../assets/UX.png"
 import { Link } from "gatsby"
 import Footer from "../components/Footer"
 
@@ -53,7 +54,7 @@ class program extends Component {
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
                       Get a personalized learning path. Learn tech skills in
-                      Data Science, Artificial Intelligence or Web Development
+                      Data Science, Artificial Intelligence, Web Development or UX Design
                       by means of the best online resources available
                     </p>
                   </div>
@@ -119,10 +120,16 @@ class program extends Component {
             subheading="Get more information about the three different learning tracks!"
             firstProjectHeading="Web Development"
             firstProjectImage={web}
+            firstLink="/web"
             secondProjectHeading="Data Science"
             secondProjectImage={DataScience}
+            secondLink="/dataScience"
             thirdProjectHeading="Artificial Intelligence"
             thirdProjectImage={AI}
+            thirdLink="/ai"
+            fourthProjectHeading="User Experience Design"
+            fourthProjectImage={UX}
+            fourthLink="/ux"
           />
           <Faq>
             <FaqQuestion

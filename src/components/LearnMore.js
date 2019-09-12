@@ -1,18 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
+import arrow from "../assets/arrow.svg";
 
 const LearnMore = ({
   heading,
   subheading,
   firstProjectHeading,
-  firstProjectText,
+  firstLink,
   firstProjectImage,
   secondProjectHeading,
-  secondProjectText,
+  secondLink,
   secondProjectImage,
   thirdProjectHeading,
-  thirdProjectText,
+  thirdLink,
   thirdProjectImage,
+  fourthProjectHeading,
+  fourthLink,
+  fourthProjectImage,
 }) => {
   return (
     <>
@@ -23,59 +27,55 @@ const LearnMore = ({
           <p className="basicSection--sub">{subheading}</p>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-4 py-5">
-          <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading">
-              <span className="highlighted">{firstProjectHeading}</span>
-            </h3>
-            <div className="card-body">
-              <div className="row h-75 pb-5 mb-2">
-                <p className="projects--text">{firstProjectText}</p>
-                <img
-                  src={firstProjectImage}
-                  alt=""
-                  className="projects--img text-center my-5"
-                />
-              </div>
-              <Link to="/web" className="mt-5 projects--btn noDec">Learn More</Link>
-            </div>
+      <div className="learn--card w-100 mb-4">
+        <div className="row p-3 d-flex align-items-center">
+          <div className="col-md-4 text-center text-md-left">
+            <h3>{firstProjectHeading}</h3>
+          </div>
+          <div className="col-md-3 text-center py-2">
+            <img src={firstProjectImage} alt="" className="w-50" />
+          </div>
+          <div className="col-md-5 text-center text-md-right py-4">
+            <Link to={firstLink} className="btn btn-primary">Learn more</Link>
           </div>
         </div>
-        <div className="col-md-4 py-5">
-          <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading">
-              <span className="highlighted">{secondProjectHeading}</span>
-            </h3>
-            <div className="card-body">
-              <div className="row h-75 pb-5 mb-2">
-                <p className="projects--text">{secondProjectText}</p>
-                <img
-                  src={secondProjectImage}
-                  alt=""
-                  className="projects--img text-center my-5"
-                />
-              </div>
-              <Link to="/dataScience" className="mt-5 projects--btn noDec">Learn More</Link>
-            </div>
+      </div>
+      <div className="learn--card w-100 mb-4">
+        <div className="row p-3 d-flex align-items-center">
+          <div className="col-md-4 text-center text-md-left">
+            <h3>{secondProjectHeading}</h3>
+          </div>
+          <div className="col-md-3 text-center">
+            <img src={secondProjectImage} alt="" className="w-50" />
+          </div>
+          <div className="col-md-5 text-center text-md-right py-4">
+            <Link to={secondLink} className="btn btn-primary">Learn more</Link>
           </div>
         </div>
-        <div className="col-md-4 py-5">
-          <div className="card h-100 mt-5">
-            <h3 className="text-center projects--heading">
-              <span className="highlighted">{thirdProjectHeading}</span>
-            </h3>
-            <div className="card-body">
-              <div className="row h-75 pb-5 mb-2">
-                <p className="projects--text">{thirdProjectText}</p>
-                <img
-                  src={thirdProjectImage}
-                  alt=""
-                  className="projects--img text-center my-5"
-                />
-              </div>
-              <Link to="/ai" className="mt-5 projects--btn noDec">Learn More</Link>
-            </div>
+      </div>
+      <div className="learn--card w-100 mb-4">
+        <div className="row p-3 d-flex align-items-center">
+          <div className="col-md-4 text-center text-md-left">
+            <h3>{thirdProjectHeading}</h3>
+          </div>
+          <div className="col-md-3 text-center">
+            <img src={thirdProjectImage} alt="" className="w-50" />
+          </div>
+          <div className="col-md-5 text-center text-md-right py-4">
+            <Link to={thirdLink} className="btn btn-primary">Learn more</Link>
+          </div>
+        </div>
+      </div>
+      <div className="learn--card w-100">
+        <div className="row p-3 d-flex align-items-center">
+          <div className="col-md-4 text-center text-md-left">
+            <h3>{fourthProjectHeading}</h3>
+          </div>
+          <div className="col-md-3 text-center">
+            <img src={fourthProjectImage} alt="" className="w-50" />
+          </div>
+          <div className="col-md-5 text-center text-md-right py-4">
+            <Link to={fourthLink} className="btn btn-primary">Learn more</Link>
           </div>
         </div>
       </div>

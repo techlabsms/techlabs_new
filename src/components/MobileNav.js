@@ -95,6 +95,9 @@ class MobileNav extends Component {
                   <Link to="/ai" className="color-gl">
                     <li className="my-4">Artificial Intelligence</li>
                   </Link>
+                  <Link to="/ux" className="color-gl">
+                    <li className="my-4">User Experience Design</li>
+                  </Link>
                 </ul>
               )}
             </li>
