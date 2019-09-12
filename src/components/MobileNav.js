@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
-import SLACK from "../assets/slack-icon.svg"
 import { Link } from "gatsby"
 
 class MobileNav extends Component {
@@ -107,14 +106,7 @@ class MobileNav extends Component {
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
-            <li className="nav-item">
-            Join the community
-              <button className="btn-slack my-4 ml-2">
-                <a href="https://ms-techlabs.slack.com">
-                  <img src={SLACK} className="slack-icon" alt="slack" />
-                </a>
-              </button>
-            </li>
+           
           </ul>
         </div>
       </>

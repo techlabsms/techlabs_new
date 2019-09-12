@@ -3,7 +3,6 @@ import "../styles/_main.scss"
 import logo from "../assets/tl-logo.svg"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
-import SLACK from "../assets/slack-icon.svg"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
@@ -104,13 +103,6 @@ class Navbar extends React.Component {
                   <Link className="nav-link active" to="/blog">
                     Blog
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <button className="btn-slack">
-                    <a href="https://ms-techlabs.slack.com">
-                      <img src={SLACK} className="slack-icon" alt="slack" />
-                    </a>
-                  </button>
                 </li>
               </ul>
 
