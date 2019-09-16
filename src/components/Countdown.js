@@ -3,11 +3,11 @@ import dayjs from "dayjs"
 
 class Countdown extends Component {
   state = {
-    months: undefined,
-    days: undefined,
-    hours: undefined,
-    minutes: undefined,
-    seconds: undefined,
+    months: 0,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
     isEnd: false,
   }
 
