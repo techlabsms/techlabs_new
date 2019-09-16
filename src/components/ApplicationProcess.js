@@ -17,9 +17,11 @@ class ApplicationProcess extends React.Component {
 
   handleLeftClick() {
     const { translateX } = this.state
-    this.setState({
-      translateX: translateX + 100,
-    })
+    if (translateX !== 0) {
+      this.setState({
+        translateX: translateX + 100,
+      })
+    }
   }
 
   render() {
