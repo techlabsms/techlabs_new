@@ -143,9 +143,9 @@ class Academy extends Component {
                 <h4 className="academy--card-title">User Experience Design</h4>
 
                 <p class={index === 3 ? "d-block" : "d-none"}>
-                  In the Artificial intelligence track you will learn about the
-                  possibilities of current AI techniques, attain Python skills,
-                  and builds first image recognition applications.
+                  Learn UX Design with practical examples and use the
+                  opportunity to build a personal tech portfolio Find out what
+                  the key values are for designing an enjoyable user experience.
                 </p>
               </div>
             </div>
