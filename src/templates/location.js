@@ -149,8 +149,8 @@ class location extends Component {
           {location.openPositionsLink && (
             <RightImageSectionHeading
               heading="Join the Team"
-              subheading="Interested in joining the team?"
-              text="Do you dream of a world with no digital illitarates? Are you passionate about tech? As a TechLabs Management Member you can actively support others in learning tech. Reach out and join the TechLabs-Team."
+              subheading="Interested in joining our team?"
+              text="You are dreaming of a world with no digital illiterates and are passionate about tech? As a TechLabs Management-Team member you can actively support others in learning tech. Reach out and join the TechLabs family. "
               image={teamspirit}
               hasButton={true}
               buttonLink={location.openPositionsLink}

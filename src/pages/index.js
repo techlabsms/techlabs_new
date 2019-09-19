@@ -37,9 +37,9 @@ class index extends React.Component {
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
                     Our mission is to enable as many people as possible to
                     acquire state-of-the-art tech skills to solve today’s
-                    problems in a digital way by providing a unique programm
-                    that combines online learning, project work and local
-                    community events.
+                    problems in a digital way by providing a unique program that
+                    combines online learning, project work, and local community
+                    events.
                   </p>
                   <div className="mt-5">
                     <Link className="btn btn-primary d-inline" to="/locations">
@@ -69,7 +69,7 @@ class index extends React.Component {
 
           <section className="py-5 wwo">
             <div className="container">
-              <h2>What we offer</h2>
+              <h2>What We Offer</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
                 Check out what TechLabs has in store for you!
@@ -85,9 +85,9 @@ class index extends React.Component {
                         <h1 className="card-title">6</h1> <br />
                         <p className="card-subtitle">months of coding</p>
                         <p className="text-muted">
-                          Within 12-16 weeks you get insights into the world of
-                          coding and can master tech through our
-                          blended-learning concept.
+                          Within 12-16 weeks you will gain insights into the
+                          world of coding and will be able to master tech
+                          through our blended learning concept.
                         </p>
                         <span className="card-discover">
                           > Discover our program
@@ -102,7 +102,7 @@ class index extends React.Component {
                         <p className="card-subtitle">digital tracks</p>
                         <p className="text-muted pb-4">
                           With TechLabs you can learn state-of-the-art tech in
-                          AI, Web Development, UX Design and Data Science.
+                          AI, Web Development, Data Science, and UX.
                         </p>
                         <span className="card-discover">
                           > Discover our tracks
@@ -117,7 +117,7 @@ class index extends React.Component {
                         <p className="card-subtitle">community members</p>
                         <p className="text-muted">
                           Our growing community connects 300+ people motivated
-                          to learn tech – on- and offline.
+                          to learn tech – online and offline.
                         </p>
                         <span className="card-discover">
                           > Discover our community
@@ -131,8 +131,8 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">locations</p>
                         <p className="text-muted pb-4">
-                          We currently have offline communities in Münster,
-                          Barcelona and Copenhagen.
+                          We currently have local communities in Münster,
+                          Barcelona, and Copenhagen.
                         </p>
                         <span className="card-discover">
                           > Discover our locations
@@ -147,9 +147,9 @@ class index extends React.Component {
           <Slider />
           <section className="container">
             <RightImageSection
-              heading="Award winning concept"
+              heading="Award-Winning Concept"
               subheading="Google Impact Challenge 2018!"
-              text="TechLabs - the idea has convinced: The non-profit start-up TechLabs offers students the opportunity to continue their education in the tech sector free of charge in addition to their training. Their project has now received an award and won 20,000 euros at the final of the Google Impact Challenge in Berlin"
+              text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
               image={gic}
               hasButton={true}
               buttonText="Read more"
@@ -164,11 +164,11 @@ class index extends React.Component {
               <div className="col">
                 <p className="mt-2 text-justify whatWeOffer--text">
                   Get up to speed learning tech skills in one semester by means
-                  of our program that combines Online Learning, Project Work and
-                  TechLabs Community Meetings. Independent of the background and
-                  prior knowledge - anyone can participate and learn tech-skills
-                  for free. We help you to complete your own tech project and
-                  qualify for tech internships.
+                  of our program that combines Online Learning, Project Work,
+                  and TechLabs Community Meetings. Independent of the background
+                  and prior knowledge - anyone can participate and learn
+                  tech-skills for free. We help you to complete your own tech
+                  project and qualify for tech internships.
                 </p>
               </div>
             </div>
@@ -194,9 +194,7 @@ class index extends React.Component {
           <section className="container mt-5 mb-5 py-5">
             <h2>Key Benefits</h2>
             <div className="section-divider" />
-            <p className="basicSection--sub">
-              How can you profit from TechLabs?
-            </p>
+            <p className="basicSection--sub">So, what’s in it for you?</p>
             <div className="row mt-5">
               <div className="col-md-5 col-lg-4" />
               <div className="col-md-7 col-lg-8">
@@ -211,8 +209,8 @@ class index extends React.Component {
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
                       Get a personalized learning path. Learn tech skills in
-                      Data Science, Artificial Intelligence, Web Development or UX Design
-                      by means of the best online resources available.
+                      Data Science, Artificial Intelligence, or Web Development
+                      using the best online resources available.
                     </p>
                   </div>
                 </div>
@@ -223,9 +221,9 @@ class index extends React.Component {
                   <div className="col-10 pl-5">
                     <h3>Learn from skilled mentors</h3>
                     <p className="keyBenefits--card-text">
-                      Do you have questions during the projects or your learning
-                      journey? Just ask our proficient mentors who have
-                      long-standing practical experience!
+                      Do you have any questions during the project or your
+                      learning journey? Just ask our competent mentors with many
+                      years of practical experience!
                     </p>
                   </div>
                 </div>
@@ -234,11 +232,12 @@ class index extends React.Component {
                     <img src={icon2} alt="code file" className="mt-2" />
                   </div>
                   <div className="col-10 pl-5">
-                    <h3>Build your own tech project portfolio</h3>
+                    <h3>Apply your knowledge and solve real-world tasks</h3>
                     <p className="keyBenefits--card-text">
-                      Choose a project that interests you and work on it in a
-                      small interdisciplinary group with fellow TechLabs
-                      participants. Work on your tech project portfolio.
+                      Choose the project you are most interested in and work on
+                      it in a small interdisciplinary team together with other
+                      TechLabs participants. Build your own tech project
+                      portfolio.
                     </p>
                   </div>
                 </div>
@@ -249,10 +248,10 @@ class index extends React.Component {
                   <div className="col-10 pl-5">
                     <h3>Shape your career path</h3>
                     <p className="keyBenefits--card-text">
-                      If you want to learn state-of-the-art tech skills, that
-                      will enable you to quickly create stunning tech projects,
-                      join a tech startup or get in touch with our renowned
-                      partners – TechLabs is the right choice for you.
+                      If you want to learn state-of-the-art tech skills that
+                      will enable you to successfully realize your own tech
+                      projects, join a tech startup, or get in touch with our
+                      renowned partners – TechLabs is the right choice for you
                     </p>
                   </div>
                 </div>
@@ -265,7 +264,7 @@ class index extends React.Component {
               <h2>Learn More</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
-                Check out our locations and program!
+                Check out our locations and our Digital Shaper Program!
               </p>
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
@@ -273,9 +272,10 @@ class index extends React.Component {
                     <div className="card">
                       <h2 className="mt-3 color-red">Locations →</h2>
                       <p className="color-gl">
-                        Check out what’s happening in our offline-communities.
-                        Your city is not yet on the map? Bring TechLabs to your
-                        city and build digital shapers with us.
+                        Take a look at what is currently happening in our local
+                        tech communities. Your town is still missing? Bring
+                        TechLabs to your city, let’s build Digital Shapers
+                        together.
                       </p>
                     </div>
                   </Link>
@@ -285,9 +285,9 @@ class index extends React.Component {
                     <div className="card">
                       <h2 className="mt-3 color-red">Program →</h2>
                       <p className="color-gl">
-                        Not sure what each of the tracks has in store for you?
-                        Check out our program and get more detailed information
-                        about the learning tracks.
+                        Not sure which learning track is the right one for you?
+                        Check out our program and get more information about
+                        each of our tracks.
                       </p>
                     </div>
                   </Link>

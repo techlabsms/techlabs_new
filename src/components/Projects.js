@@ -8,11 +8,10 @@ const Projects = () => {
     <>
       <div className="row mt-5">
         <div className="col">
-          <h2>Projects from our participants</h2>
+          <h2>Projects From Our Participants</h2>
           <div className="section-divider" />
           <p className="basicSection--sub">
-            Have a look at these projects, get inspired and apply to finish your
-            project!
+            Have a look at these completed projects and get inspired!
           </p>
         </div>
       </div>
@@ -25,7 +24,7 @@ const Projects = () => {
             <div className="card-body">
               <div className="row">
                 <p className="projects--text">
-                  An application that basically keep track of your entire
+                  An application that basically keeps track of your entire
                   financial transactions.
                 </p>
                 <div className="row w-100">
@@ -57,14 +56,14 @@ const Projects = () => {
         <div className="col-md-4 py-5 justify-content-center align-self-center">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
-              <span className="highlighted">The ZEB Project</span>
+              <span className="highlighted">The zeb Project</span>
             </h3>
             <div className="card-body">
               <div className="row">
                 <p className="projects--text">
                   An application that recognizes the brand and model of a car by
-                  taking a picture and identifies statistics features from a
-                  picture of a data sheet of the used car.
+                  taking a picture and identifying key statistical features of
+                  the used car.
                 </p>
                 <div className="row w-100">
                   <div className="col-2">
@@ -108,8 +107,8 @@ const Projects = () => {
             <div className="card-body">
               <div className="row">
                 <p className="projects--text">
-                  Analysis of the bycicle infrastructure in Münster. The team
-                  identified bottleneck which might slow down the traffic.
+                  Analysis of the bicycle infrastructure in Münster to identify
+                  bottlenecks which might slow down the traffic.
                 </p>
                 <div className="row w-100">
                   <div className="col-2">

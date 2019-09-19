@@ -60,11 +60,11 @@ class application extends Component {
         <ApplicationHero
           background={applicationHero}
           headingFirst="Application"
-          intro="Do you want to learn state-of-the-art tech? Do you want to dive into a thriving community? Apply now for the TechLabs Digital Shaper Program. "
+          intro="Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program."
         />
         <ChooseCity
-          heading="Choose yoour city"
-          subheading="At the moment we are located in Münster and Copenhagen!"
+          heading="Choose Your City"
+          subheading="At the moment, we are located in Muenster and Copenhagen!"
           isClicked={this.isClicked}
           muensterStart="2019-10-01"
           copenhagenStart="2019-12-02"
@@ -78,7 +78,7 @@ class application extends Component {
           />
           <ApplicationProcess
             heading="Application Process"
-            subheading="What are the steps for a successful application? "
+            subheading="What are the steps for a successful application?"
           />          
           <div className="container">
             <CallToActionApplication 
@@ -87,18 +87,18 @@ class application extends Component {
             />
             <FirstImpressionThree
               heading="Missed the deadline?"
-              subheading="Get a first impression of what it’s like to study Data Science, Web Development or AI. Prepare yourself for the next batch!"
+              subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"
               firstHeading="AI"
               firstImage={AI}
-              firstText="Start with our free Track and learn the fundamentals of AI now."
+              firstText="Start with our free track and learn the fundamentals of Artificial Intelligence."
               firstLink="https://app.edyoucated.org/login"
               secondHeading="Web Development"
               secondImage={Web}
-              secondText="Start with our free Track and learn the fundamentals of Web Development."
+              secondText="Start with our free track and learn the fundamentals of Web Development."
               secondLink="https://app.edyoucated.org/login"
               thirdHeading="Data Science"
               thirdImage={Ds}
-              thirdText="Start with our free Track and learn the fundamentals with Python or R now."
+              thirdText="Start with our free track and learn the fundamentals of Data Science with Python or R."
               thirdLink="https://app.edyoucated.org/login"
 
             />

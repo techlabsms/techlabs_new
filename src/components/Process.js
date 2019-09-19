@@ -14,8 +14,7 @@ const Process = () => {
           <h2>Your Learning Journey</h2>
           <div className="section-divider" />
           <p className="basicSection--sub">
-            What awaits you at TechLabs? Check out the TechLabs journey from
-            start to finish!
+            Explore the TechLabs Journey from start to finish!
           </p>
         </div>
       </div>
@@ -27,7 +26,7 @@ const Process = () => {
             </h2>
             <p className="process--text">
               Inform yourself about the different learning tracks that TechLabs
-              offers and choose your favorite one!
+              offers and select your favorite one!
             </p>
           </div>
 
@@ -49,9 +48,8 @@ const Process = () => {
                     </div>
                     <div className="col-9">
                       <p className="process--text">
-                        Get a personalized learning path and learn to code. Meet
-                        up with other participants at community events and
-                        workshops.
+                        Inform yourself about the different learning tracks that
+                        TechLabs offers and select your favorite one!
                       </p>
                     </div>
                   </div>
@@ -78,9 +76,9 @@ const Process = () => {
                     </div>
                     <div className="col-9">
                       <p className="process--text">
-                        Get a personalized learning path and learn to code. Meet
-                        up with other participants at community events and
-                        workshops.
+                        Get a personalized learning path and learn how to code.
+                        Meet up with other participants at local community
+                        events and workshops.
                       </p>
                     </div>
                   </div>
@@ -93,8 +91,8 @@ const Process = () => {
               <span className="process--title-number">3. </span>Project Kickoff
             </h2>
             <p className="process--text">
-              Choose a project that interests you and work on it in a small
-              interdisciplinary team for the upcoming months!
+              Choose the project that interests you the most and work on it in a
+              small interdisciplinary team for the upcoming months!
             </p>
           </div>
           <div className="col-12 d-lg-none mb-3">
@@ -115,8 +113,9 @@ const Process = () => {
                     </div>
                     <div className="col-9">
                       <p className="process--text">
-                        Choose a project that interests you and work on it in a
-                        small interdisciplinary team for the upcoming months!
+                        Choose the project that interests you the most and work
+                        on it in a small interdisciplinary team for the upcoming
+                        months!
                       </p>
                     </div>
                   </div>
@@ -144,8 +143,9 @@ const Process = () => {
                     </div>
                     <div className="col-9">
                       <p className="process--text">
-                        Catch up with your team and work on the project that you
-                        have chosen. Get guidance from our Mentors!
+                        Catch up with the other participants and the
+                        Management-Team members and work on the project that you
+                        have started. Get guidance from our mentors!
                       </p>
                     </div>
                   </div>
@@ -171,8 +171,8 @@ const Process = () => {
                     </div>
                     <div className="col-9">
                       <p className="process--text">
-                        Earn a well respected certificate by presenting a
-                        project and present your final results.
+                        Earn a well-respected certificate by completing your
+                        group project and presenting your final results.
                       </p>
                     </div>
                   </div>
@@ -187,8 +187,8 @@ const Process = () => {
               the Project
             </h2>
             <p className="process--text">
-              Earn a well respected certificate by presenting a project and
-              present your final results.
+              Earn a well-respected certificate by completing your group project
+              and presenting your final results.
             </p>
           </div>
         </div>
@@ -204,8 +204,8 @@ const Process = () => {
               <span className="process--title-number">2. </span>Learning
             </h2>
             <p className="process--text">
-              Get a personalized learning path and learn to code. Meet up with
-              other participants at community events and workshops.
+              Get a personalized learning path and learn how to code. Meet up
+              with other participants at local community events and workshops.
             </p>
           </div>
           <div className="col-12 col-md-4  d-none d-lg-block">

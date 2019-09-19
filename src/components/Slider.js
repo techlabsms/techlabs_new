@@ -17,7 +17,7 @@ class Slider extends Component {
         name: "Simon Herbert",
         role: "IT Specialist",
         text:
-          "I already have an IT background, however, I have not learnt coding before TechLabs. That's why I came to TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
+          "Even though I have an IT background, I did not acquire any coding skills before joining TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
         image: Simon,
         image_mobil: Simon_mobil,
         width: "33%",
@@ -27,7 +27,7 @@ class Slider extends Component {
         name: "Hümeyra Husseini",
         role: "Student Molecular Biomedicine",
         text:
-          "Starting without a tech background, the personal learning path that the TechLabs team put together for me allowed me to enter the AI track, learn the necessary coding skills and get to grips with machine deep learning. Finally I can build a bridge between biomedicine and AI.",
+          "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
         image: Huemeyra,
         image_mobil: Huemeyra_mobil,
         width: "66%",
@@ -37,7 +37,7 @@ class Slider extends Component {
         name: "Clara Oppermann",
         role: "Student Marketing and Management",
         text:
-          "Although analytical skills are also of great importance in marketing in times of big data, they are often not a subject of much study. Thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data and analysis tools without any previous programming knowledge.",
+          "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
         image: Clara,
         image_mobil: Clara_mobil,
         width: "100%",
@@ -71,7 +71,7 @@ class Slider extends Component {
                   <h2>Our Community</h2>
                   <div className="section-divider" />
                   <p className="basicSection--sub">
-                    Find out what our testimonials experienced at TechLabs!
+                    Find out what our participants experienced at TechLabs!
                   </p>
                 </div>
               </div>
@@ -154,7 +154,7 @@ class Slider extends Component {
                   <h2>Our Community</h2>
                   <div className="section-divider" />
                   <p className="basicSection--sub">
-                    Find out what our testimonials experienced at TechLabs!
+                    Find out what our participants experienced at TechLabs!
                   </p>
                 </div>
               </div>

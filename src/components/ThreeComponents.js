@@ -9,7 +9,7 @@ const ThreeComponents = () => {
           <h2>The Core Concept</h2>
           <div className="section-divider" />
           <p className="basicSection--sub">
-            Our blended learning concept consists of three components
+            Our blended learning concept consists of three main components!
           </p>
         </div>
       </div>

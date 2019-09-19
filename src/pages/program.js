@@ -27,10 +27,7 @@ class program extends Component {
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond="Program"
-          intro="Our program provides you with the most effective way to build
-                domain knowledge in the tech sphere. Our blended-learning
-                concept combines Online Learning, Project Work and Events within
-                your Offline Community. Discover our Program now."
+          intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
           background={background}
         />
         <div className="container">
@@ -39,7 +36,7 @@ class program extends Component {
           <section className="container mt-5 mb-5 keyBenefits">
             <h2>Key Benefits</h2>
             <div className="section-divider" />
-               <p className="basicSection--sub">See how you can profit from TechLabs!</p>
+            <p className="basicSection--sub">So, what’s in it for you?</p>
             <div className="row mt-5">
               <div className="card keyBenefits--card-program">
                 <div className="row">
@@ -54,8 +51,8 @@ class program extends Component {
                     <h3>Start to code - independent of your prior knowledge</h3>
                     <p className="keyBenefits--card-text">
                       Get a personalized learning path. Learn tech skills in
-                      Data Science, Artificial Intelligence, Web Development or UX Design
-                      by means of the best online resources available
+                      Data Science, Artificial Intelligence, or Web Development
+                      using the best online resources available.
                     </p>
                   </div>
                 </div>
@@ -70,9 +67,9 @@ class program extends Component {
                   <div className="col-md-10 pl-md-5">
                     <h3>Learn from skilled mentors</h3>
                     <p className="keyBenefits--card-text">
-                      Do you have questions during the projects or your learning
-                      journey? Just ask our proficient mentors who have
-                      long-standing practical experience!
+                      Do you have any questions during the project or your
+                      learning journey? Just ask our competent mentors with many
+                      years of practical experience!
                     </p>
                   </div>
                 </div>
@@ -85,11 +82,12 @@ class program extends Component {
                     />
                   </div>
                   <div className="col-md-10 pl-md-5">
-                    <h3>Build your own tech project portfolio</h3>
+                    <h3>Apply your knowledge and solve real-world tasks</h3>
                     <p className="keyBenefits--card-text">
-                      Choose a project idea that you find interesting and work
-                      on it in an interdisciplinary group of 3-4 fellow TechLabs
-                      participants. Build up a tech project portfolio.
+                      Choose the project you are most interested in and work on
+                      it in a small interdisciplinary team together with other
+                      TechLabs participants. Build your own tech project
+                      portfolio.
                     </p>
                   </div>
                 </div>
@@ -104,10 +102,10 @@ class program extends Component {
                   <div className="col-md-10 pl-md-5">
                     <h3>Shape your career path</h3>
                     <p className="keyBenefits--card-text">
-                      If you want to learn state-of-the-art tech skills, that
-                      will enable you to quickly create stunning tech projects,
-                      join a tech startup or get in touch with our renowned
-                      partners – TechLabs is the right choice for you.
+                      If you want to learn state-of-the-art tech skills that
+                      will enable you to successfully realize your own tech
+                      projects, join a tech startup, or get in touch with our
+                      renowned partners – TechLabs is the right choice for you.
                     </p>
                   </div>
                 </div>
@@ -134,15 +132,15 @@ class program extends Component {
           <Faq>
             <FaqQuestion
               question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly via our application form for the respective location."
+              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
             />
             <FaqQuestion
               question="What should I write in my application to be accepted?"
-              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
             />
             <FaqQuestion
               question="How can I imagine the time required?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
             />
           </Faq>
           <div className="container pb-5">

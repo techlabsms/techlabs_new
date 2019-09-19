@@ -27,36 +27,34 @@ class web extends Component {
             headingSecond=" Development"
             showCard={true}
             background={background}
-            intro="Inform yourself here about our Web Development track. Start your six months learning journey with the next batch in the city of your choice. Acquire state-of-the-art tech skills by making use of our individualised tracks,  offline events and professional mentoring. Within six months you will finish a tech project and be rewarded with  a valuable digital shaper certificate."
+            intro="Inform yourself here about our Web Development track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate."
           />
         </div>
         <div className="container">
           <WhatYouWillLearn
-            intro="Learn more about the technologies behind the web and how you can build modern web applications!"
-            first="Create responsive and interactive web pages using cutting edge technologies including HTML, CSS and JavaScript"
+            intro="Learn more about the technologies behind the web and how to build modern web applications!"
+            first="Create responsive and interactive web pages using cutting edge technologies including HTML, CSS, and JavaScript"
             second="Acquire practical experience with open source tools and development frameworks, such as React"
-            third="Learn how to program web-based application programming interfaces with node.JS "
+            third="Learn how to program web-based application programming interfaces with Node.js"
             fourth="Bring data to life and build interactive visualizations and graphs for any type of data"
           />
           <RightImageSection
+            heading="What is Web Development"
+            subheading="Our track is all about the software development of web pages and applications."
+            text="Web Development is a software engineering discipline that involves the development of websites and web services. The variety of work in Web Development is huge, it can range from creating a basic static web page to complex interactive web apps, including enterprise-scale applications and application programming interfaces. However, there is much more that is relevant when developing for the web. For example, the design and content of a web page, web servers and networking as well as security aspects have to be considered."
+            image={dashboard}
+          />
+          <RightImageSection
             heading="Why Web Development"
-            subheading="Learn how to create your own web pages and applications!"
-            text="The internet has disrupted our economy and society and millions of people  use the internet every day. Without Web Developers no content or web application would exist on the internet. Companies such as Google or  Amazon wouldn't even exist, as these were born during the era of the internet. In the future, web development will be even more important since technologies have been and will be evolving. Browsers are getting more powerful day by day or are even used as a whole operating system (e.g., ChromeOS), recent web development toolkits allow you to create native apps on any device.  Think about all the applications you can access on the web from every device anywhere in the world. Learning how development for the web works will provide you with powerful and versatile programming skills. These  allow you to create websites, visualize and making data accessible for  users, or just to build an awesome app. Machine Learning, Artificial  Intelligence, Robotics and other domains do often require modern  web-based interfaces to connect with the user or other systems to  provide value. Therefore, having knowledge of web development will  always be an asset for you!"
+            subheading="Without Web Developers no content or web application would exist on the internet!"
+            text="The internet has disrupted our economy and society. The technologies we use on a daily basis will keep evolving, thus in the future Web Development will be even more important than it is today. Browsers are getting more powerful day by day, today they can even be used as whole operating systems (e.g. ChromeOS). Recent Web Development toolkits already allow you to create native apps on any device. Learning how Web Development works will provide you with powerful and versatile programming skills. These enable you to design websites, build applications, and to visualize data and make it accessible for users. Machine Learning, Artificial Intelligence, Robotics, and other domains often require modern web-based interfaces to connect with the user to provide value. Therefore, having knowledge of Web Development will  be an asset for you!"
             image={webDevCover}
           />
           <LeftImageSection
             heading="More about the Track"
-            subheading="Learn what's behind the web and get to know the technologies and frameworks than can be used for web development."
-            text="Our web development track is suited for web development novices and  advanced beginners. As a beginner you will be introduced to the basic  principles of computer science and learn how computers work. You will  also learn more about the tools and technologies that are required for  creating web pages and applications. You will get to know HTML5,  Cascading Style Sheets (CSS), and JavaScript. Additionally, you will  learn more about popular frameworks, which are toolsets that help developers to create awesome stuff, and the differences between the term frontend and backend. At the end you will be able to develop  full-stack, both frond- and backend, applications that not just look stunning but can actually help people to do something! 
-            As  an advanced beginner you will get to know more advanced web development  techniques and also learn more about software development paradigms.  You will improve your programming skills in JavaScript and use Node.JS  to program blazingly fast applications. If you previously gained some experience in Data Science you will also learn how to efficiently display that data using D3.js."
+            subheading="Get to know the technologies and frameworks than can be used for Web Development."
+            text="Our Web Development track is suited for novices and advanced beginners. As a beginner you will be introduced to the basic principles of computer science. You will also learn more about the tools and technologies that are required for creating web pages and applications. To be more specific, you will acquire skills in HTML5, Cascading Style Sheets (CSS), and JavaScript. Additionally, you will also learn more about popular frameworks and get familiar the differences between the terms frontend and backend. At the end, you are able to develop full-stack, both frontend and backend, applications! As an advanced beginner you will improve your Web Development techniques, your programming skills in JavaScript and you will learn to use Node.JS to program blazingly fast applications. If you previously gained some experience in Data Science you will also learn how to efficiently display that data using D3.js."
             image={david}
-          />
-          <RightImageSection
-            heading="What is Web Development"
-            subheading="Learn more about software development of web pages and applications."
-            text="Web development is a software engineering discipline that involves the development of web sites and web services. The variety of work in web development is huge, it can range from creating a basic static web page to a complex interactive web apps,  including enterprise-scale applications and application programming  interfaces. However, there is much more that is relevant when developing  for the web, such as the design and content of a web page, web servers and networking as well as security aspects. 
-            TechLabs provides you with the basic theories behind the web but focuses on skills required for developing web applications and web pages."
-            image={dashboard}
           />
           <Projects />
           <CallToAction />
@@ -71,15 +69,15 @@ class web extends Component {
           <Faq>
             <FaqQuestion
               question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly via our application form for the respective location."
+              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
             />
             <FaqQuestion
-              question="What should I write in my application to be accepted?"
-              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+              question="What do you look for in an applicant?"
+              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
             />
             <FaqQuestion
-              question="How can I imagine the time required?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+              question="How much time is required to become Digital Shaper?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
             />
           </Faq>
           <div className="container pb-5">
