@@ -60,7 +60,7 @@ class Academy extends Component {
                   in R or Python and apply them directly to Data Science
                   tasks — from data import to data preparation and visualization
                   to building advanced machine learning models for
-                  classification and regression
+                  classification and regression.
                 </p>
               </div>
             </div>
@@ -87,8 +87,9 @@ class Academy extends Component {
                 <h4 className="academy--card-title">Web Development</h4>
                 <p class={index === 1 ? "d-block" : "d-none"}>
                   In the Web Development track you will learn to build your
-                  first interactive web applications and get to know the Web Dev
-                  toolbox (e.g. HTML, CSS, JavaScript, React.js, and many more)
+                  first interactive web applications and get to know the
+                  WebDev-Toolbox (e.g. HTML, CSS, JavaScript, React.js, and many
+                  more)
                 </p>
               </div>
             </div>
@@ -114,9 +115,9 @@ class Academy extends Component {
               >
                 <h4 className="academy--card-title">Artificial intelligence</h4>
                 <p class={index === 2 ? "d-block" : "d-none"}>
-                  In the Artificial intelligence track you will learn about the
-                  possibilities of current AI techniques, attain Python skills,
-                  and builds first image recognition applications.
+                  In the Artificial Intelligence track you will learn about the
+                  possibilities of current AI-techniques, attain Python skills,
+                  and build first image recognition applications.
                 </p>
               </div>
             </div>

@@ -25,18 +25,21 @@ class foundYourOwn extends Component {
                   Become a Co-Founder of TechLabs
                 </p>
                 <ul className="foundYourOwn--list mb-4">
-                  <li>You are passionate about tech?</li>
                   <li>
-                    You want to actively support others in learning new tech
-                    skills?
+                    You are looking for a new challenge and are passionate about
+                    tech?
                   </li>
                   <li>
-                    Do you strive to support others preparing for the
-                    challenges of tomorrow?
+                    You always wanted to found an initiative yourself and turn
+                    own ideas into action?
+                  </li>
+                  <li>
+                    You want to help others prepare for the challenges of
+                    tomorrow?
                   </li>
                 </ul>
                 <h3 className="foundYourOwn--cta-first my-5">
-                  Lets make a difference together
+                  Perfect, let’s make a difference! Together.
                 </h3>
               </div>
               <div className="col-md-6">
@@ -53,7 +56,7 @@ class foundYourOwn extends Component {
           <div className="container">
             <div className="row">
               <h2 className="ml-3">
-                Are you{" "}
+                You are looking for a new challenge and are{" "}
                 <span className="foundYourOwn--cta">
                   passionated about Tech?
                 </span>
@@ -69,13 +72,13 @@ class foundYourOwn extends Component {
                     <div class="card-body">
                       <p class="foundYourOwn--card-text ml-3 mr-3 mt-5">
                         We at TechLabs dream of a world with no digital
-                        illiterates. A world full of{" "}
-                        <span>tech-savvy individuals</span> who approach the
-                        challenges of our time with a{" "}
-                        <span>digital and entrepreneurial mindset.</span> In
-                        order to achieve this we aim to provide as many
-                        individuals as possible with access to tech education
-                        which necessarilly requires a global approach.
+                        illiterates. A world full of tech-savvy individuals who
+                        approach the challenges of our time with a digital and
+                        entrepreneurial mindset. In order to achieve this, we
+                        aim to turn as many young people as possible into
+                        Digital Shapers, which necessarily requires a global
+                        approach. Let’s join forces to shape the future of tech
+                        education!
                       </p>
                     </div>
                   </div>
@@ -84,11 +87,9 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                Do you want to become part of an
-                <span className="foundYourOwn--cta">
-                  {" "}
-                  exceptional community?
-                </span>
+                You always wanted to found an initiative yourself and turn own
+                ideas
+                <span className="foundYourOwn--cta"> into action?</span>
               </h2>
             </div>
             <div className="row mt-3">
@@ -97,14 +98,15 @@ class foundYourOwn extends Component {
                   <div class="col-md-6 ">
                     <div class="card-body ">
                       <p class="foundYourOwn--card-text mr-3 ml-3 mt-5">
-                        We like to think of{" "}
-                        <span>TechLabs as global community</span> of tech
-                        enthusiasts who approach the problems of our time with a
-                        digital mindset. As a TechLabs Co-founder it is your
-                        mission to <span>establish TechLabs</span> in your local
-                        community from the ground up. Exemplary steps include
-                        the expansion of your network, foundation of basic
-                        frameworks, and the organization of workshops.
+                        Found a new TechLabs location in your city and be part
+                        of our extensive network to leverage your engagement,
+                        expertise, and ideas. Create a local tech community,
+                        organize workshops and coding sessions, establish
+                        cooperations with local supporters – your possibilities
+                        are endless. We not only support you in creating your
+                        own location but also offer a unique platform for you
+                        and your team to make an impact even beyond the local
+                        level!
                       </p>
                     </div>
                   </div>
@@ -116,10 +118,8 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                Do you strive to support others preparing for the{" "}
-                <span className="foundYourOwn--cta">
-                  challenges of tomorrow?
-                </span>
+                You want to help others prepare for the challenges
+                <span className="foundYourOwn--cta"> of tomorrow?</span>
               </h2>
             </div>
             <div className="row mt-3">
@@ -131,16 +131,17 @@ class foundYourOwn extends Component {
                   <div class="col-md-6">
                     <div class="card-body">
                       <p class="foundYourOwn--card-text ml-3 mr-3 mt-3">
-                        Think of TechLabs as a huge concept consisting of a
-                        variety of building blocks. The core concept - online
-                        courses, offline community, project phase - is available
-                        at all locations. Nevertheless, we put huge emphasis on
-                        the individual character of every location. We want to
-                        support you in creating your very{" "}
-                        <span>own vision</span> of TechLabs by compiling the
-                        different building blocks according to your preferences.
-                        <br /> <br />
-                        <span>Your location is your project!</span>
+                        As a TechLabs Co-Founder, your mission is to build a new
+                        location from scratch. To create the best possible
+                        learning environment, our approach combines online
+                        courses, offline communities, and a project phase. In
+                        addition to these core elements, we put huge emphasis on
+                        the individual character of each location. Think of
+                        TechLabs as a proven concept consisting of a variety of
+                        building blocks to choose from. By compiling these
+                        different blocks according to your preferences, you can
+                        create your very own version of TechLabs. Your location
+                        is your project!
                       </p>
                     </div>
                   </div>

@@ -60,7 +60,7 @@ class ApplicationProcess extends React.Component {
                 <h3 className="applProcess--heading">Feedback Process</h3>
               </div>
               <p className="px-3 d-block d-md-none">
-                After looking through all applications we quickly get back to
+                After looking through all applications, we quickly get back to
                 you with our final feedback!
               </p>
             </div>
@@ -88,7 +88,7 @@ class ApplicationProcess extends React.Component {
             </div>
             <div className="col-md-4">
               <p className="px-3 d-none d-md-block">
-                After looking through all applications we quickly get back to
+                After looking through all applications, we quickly get back to
                 you with our final feedback!
               </p>
             </div>
@@ -158,8 +158,8 @@ class ApplicationProcess extends React.Component {
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                      After looking through all applications we quickly get back
-                      to you with our final feedback!
+                      After looking through all applications, we quickly get
+                      back to you with our final feedback!
                     </p>
                   </div>
                 </div>

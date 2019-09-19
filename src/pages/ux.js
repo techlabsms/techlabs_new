@@ -27,7 +27,7 @@ class ux extends Component {
             headingSecond=" Design"
             showCard={true}
             background={background}
-            intro="Inform yourself here about our UX Design track. Start your six months learning journey with the next batch in the city of your choice. Acquire state-of-the-art tech skills by making use of our individualised tracks,  offline events and professional mentoring. Within six months you will finish a tech project and be rewarded with  a valuable digital shaper certificate."
+            intro="Inform yourself here about our UX Design track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate."
           />
         </div>
         <div className="container">
@@ -48,15 +48,14 @@ class ux extends Component {
           />
           <LeftImageSection
             heading="More about the Track"
-            subheading="Great design doesn’t come out of nowhere; it is born, nurtured, and grown--all through a systematic, learnable process!"
-            text="You will explore the process of taking a basic concept, grounded in user needs, and developing it into a design that will address those needs. You will gain hands-on experience with techniques such as prototyping, scenario and persona development as well as wireframing that will help you transform your understanding of what your users need into a compelling user experience. You will learn how to turn ideas into interactive prototypes that can be tested with prospective users and iteratively turned into a high quality design."
+            subheading="Great design is born, nurtured, and grown – all through a systematic, learnable process!"
+            text="Within the track, you will explore the process of taking a basic concept, grounded in user needs, and developing it into a design that will address those needs. You will gain hands-on experience with techniques such as prototyping, scenario and persona development as well as wireframing that will help you transform your understanding of what your users need into a compelling user experience. Additionally, you turn your ideas into interactive prototypes that can be tested with prospective users and iteratively turned into a high quality design."
             image={david}
           />
           <RightImageSection
             heading="What is User Experience Design?"
-            subheading="A UX designer’s typical tasks vary, but often include user research, creating personas, designing wireframes and interactive prototypes as well as testing designs."
-            text="The User Experience is made up of a person’s perceptions and responses resulting from the use or even just the anticipated use of a product, system or service. Therefore UX Design is the process of understanding the user, to iteratively improve the usability, accessibility and pleasure he has while interacting with the product.
-                  In short: Your job is it to make a user enjoy using a product."
+            subheading="A UX designer’s tasks often include user research, designing interactive prototypes, and testing designs."
+            text="The User Experience is made up of a person’s perception and response resulting from the use or even just the anticipated use of a product, system, or service. Therefore, UX Design is the process of understanding the user to iteratively improve the usability, accessibility and pleasure while interacting with the product. In short: Your job is it to make a user enjoy your product."
             image={UX2}
           />
           <Projects />
@@ -72,15 +71,15 @@ class ux extends Component {
           <Faq>
             <FaqQuestion
               question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly via our application form for the respective location."
+              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
             />
             <FaqQuestion
-              question="What should I write in my application to be accepted?"
-              answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+              question="What do you look for in an applicant?"
+              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
             />
             <FaqQuestion
-              question="How can I imagine the time required?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+              question="How much time is required to become Digital Shaper?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
             />
           </Faq>
           <div className="container pb-5">

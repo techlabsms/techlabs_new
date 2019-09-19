@@ -5,11 +5,9 @@ const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
     <div>
       <div className="row">
         <div className="col">
-          <h2>What you will learn</h2>
+          <h2>What Will You Learn?</h2>
           <div className="section-divider" />
-          <p>
-            {intro}
-          </p>
+          <p>{intro}</p>
         </div>
       </div>
       <div className="row">
@@ -20,9 +18,7 @@ const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
                 <div className="learn--color" />
               </div>
               <div className="col-11 mt-3">
-                <p>
-                {first}
-                </p>
+                <p>{first}</p>
               </div>
             </div>
           </div>
@@ -64,9 +60,7 @@ const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
                 <div className="learn--color" />
               </div>
               <div className="col-11 mt-3">
-                <p>
-                  {fourth}
-                </p>
+                <p>{fourth}</p>
               </div>
             </div>
           </div>

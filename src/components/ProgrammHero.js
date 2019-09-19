@@ -54,9 +54,9 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              6 Months Program
+                              6 months program
                               <br />
-                              10 Hours per Week
+                              10 hours per week
                             </p>
                           </div>
                         </div>
@@ -76,8 +76,8 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              Get a graduation certificate <br /> by submitting
-                              a project
+                              Receive a graduation certificate <br />
+                              by presenting your project
                             </p>
                           </div>
                         </div>
@@ -96,7 +96,7 @@ const ProgrammHero = ({
                             />
                           </div>
                           <div className="col-10">
-                            <p>Over 250 grads</p>
+                            <p>Over 250 graduates</p>
                           </div>
                         </div>
                       </div>

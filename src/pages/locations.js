@@ -34,12 +34,14 @@ class Locations extends Component {
                 <div className="col-md-5 col-lg-5 border-0 text-left">
                   <h1 className="mt-3 display-4">
                     Discover our <br />{" "}
-                    <span className="highlighted">locations</span>
+                    <span className="highlighted">Locations</span>
                   </h1>
                   <p className="pr-5 text-justify mt-5">
-                    TechLabs is the community that enables you to become a
-                    digital shaper. Exciting meetups, hackathons, socials and
-                    workshops await you. Discover the TechLabs world here.
+                    TechLabs is a set of enthusiastic, driven, and passionate
+                    individuals who have joined forces to turn as many people as
+                    possible into Digital Shapers. Exciting meetups, hackathons,
+                    socials, and workshops await you. Discover the TechLabs
+                    world here
                   </p>
                 </div>
                 <div className="col-md-7 col-lg-7 text-center">
@@ -57,10 +59,10 @@ class Locations extends Component {
             <div className="container" id="locations-techlabs">
               <div className="row">
                 <div className="col-md-8">
-                  <h1 className="section-title">TechLabs locations</h1>
+                  <h1 className="section-title">TechLabs Locations</h1>
                   <div className="section-divider" />
                   <p className="basicSection--sub">
-                    Check out our offline communities!
+                    Check out our current tech communities!
                   </p>
                 </div>
                 <div className="col-md-4">
@@ -101,9 +103,10 @@ class Locations extends Component {
                             is not on the map?
                           </h2>
                           <p class="locations--card-text mt-5 mr-3 mt-2">
-                            If you are looking to bring TechLabs to your local
-                            community and want to shape the future of education,
-                            reach out! Let’s work together and{" "}
+                            If you are willing to shape the future of tech
+                            education and want to create your own TechLabs
+                            location, reach out! reach out! Let’s work together
+                            and{" "}
                             <span className="highlighted">
                               build something great!
                             </span>
