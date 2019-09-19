@@ -20,6 +20,7 @@ class Slider extends Component {
           "Even though I have an IT background, I did not acquire any coding skills before joining TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
         image: Simon,
         image_mobil: Simon_mobil,
+        link: "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
         width: "33%",
       },
       {
@@ -29,6 +30,7 @@ class Slider extends Component {
         text:
           "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
         image: Huemeyra,
+        link: "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
         image_mobil: Huemeyra_mobil,
         width: "66%",
       },
@@ -40,6 +42,7 @@ class Slider extends Component {
           "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
         image: Clara,
         image_mobil: Clara_mobil,
+        link: "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
         width: "100%",
       },
     ],
@@ -111,12 +114,12 @@ class Slider extends Component {
                       {testimonials[number].role}
                     </span>
                   </p>
-                  <button className="slider--button mt-2">
+                  <a className="slider--button mt-2" href={testimonials[number].link} target="blank">
                     <span role="img" aria-label="thumbs up">
                       👍🏻
                     </span>
                     {` read about ${testimonials[number].name}´s project`}
-                  </button>
+                  </a>
                   <div className="row mt-5">
                     <div className="col-6 d-flex">
                       <span>{`0${testimonials[number].index + 1}`}</span>
