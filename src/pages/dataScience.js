@@ -15,6 +15,7 @@ import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
+import backgroundMobil from '../assets/courseMobil.png';
 
 class dataScience extends Component {
   render() {
@@ -28,6 +29,7 @@ class dataScience extends Component {
             showCard={true}
             background={background}
             intro="Inform yourself here about our Data Science track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate."
+            backgroundMobil={backgroundMobil}
           />
         </div>
         <div className="container">

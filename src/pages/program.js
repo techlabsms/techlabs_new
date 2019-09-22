@@ -18,6 +18,7 @@ import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
 import { Link } from "gatsby"
 import Footer from "../components/Footer"
+import ProgrammMobil from '../assets/ProgrammMobil.png';
 
 class program extends Component {
   render() {
@@ -29,6 +30,7 @@ class program extends Component {
           headingSecond="Program"
           intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
           background={background}
+          backgroundMobil={ProgrammMobil}
         />
         <div className="container">
           <Academy />
