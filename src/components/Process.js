@@ -5,6 +5,7 @@ import orientation from "../assets/orientationBlack.svg"
 import kickoff from "../assets/kickoffBlack.svg"
 import hackathon from "../assets/hackathonBlack.svg"
 import certificate from "../assets/certificateBlack.svg"
+import dotLine from "../assets/dotLine.svg"
 
 const Process = () => {
   return (
@@ -18,207 +19,147 @@ const Process = () => {
           </p>
         </div>
       </div>
-      <div className="div">
-        <div className="row mt-5">
-          <div className="col-12 col-md-4 d-none d-lg-block">
-            <h2 className="process--title">
-              <span className="process--title-number">1. </span>Orientation Week
-            </h2>
-            <p className="process--text">
-              Inform yourself about the different learning tracks that TechLabs
-              offers and select your favorite one!
-            </p>
-          </div>
+      <div className="d-none d-lg-block">
+        <div className="div">
+          <div className="row mt-5">
+            <div className="col-12 col-md-4 d-none d-lg-block">
+              <h2 className="process--title">
+                <span className="process--title-number">1. </span>Orientation
+                Week
+              </h2>
+              <p className="process--text">
+                Inform yourself about the different learning tracks that
+                TechLabs offers and select your favorite one!
+              </p>
+            </div>
 
-          <div className="col-12 d-lg-none mb-3">
-            <div className="row">
-              <div className="col-11">
-                <div className="card">
-                  <h2 className="process--title">
-                    <span className="process--title-number">1. </span>
-                    Orientation Week
-                  </h2>
-                  <div className="row">
-                    <div className="col-3 text-center">
-                      <img
-                        src={orientation}
-                        alt="learning person"
-                        className="w-75 mt-3"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="process--text">
-                        Inform yourself about the different learning tracks that
-                        TechLabs offers and select your favorite one!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-1" />
+            <div className="col-12 col-md-4 d-none d-lg-block">
+              <h2 className="process--title">
+                <span className="process--title-number">3. </span>Project
+                Kickoff
+              </h2>
+              <p className="process--text">
+                Choose the project that interests you the most and work on it in
+                a small interdisciplinary team for the upcoming months!
+              </p>
+            </div>
+
+            <div className="col-12 col-md-4 d-none d-lg-block">
+              <h2 className="process--title">
+                <span className="process--title-number">5. </span>Completion of
+                the Project
+              </h2>
+              <p className="process--text">
+                Earn a well-respected certificate by completing your group
+                project and presenting your final results.
+              </p>
             </div>
           </div>
-          <div className="col-12 d-lg-none mb-3">
-            <div className="row">
-              <div className="col-1" />
-              <div className="col-11">
-                <div className="card">
-                  <h2 className="process--title">
-                    <span className="process--title-number">2. </span>Learning
-                  </h2>
-                  <div className="row">
-                    <div className="col-3 text-center">
-                      <img
-                        src={learn}
-                        alt="learning person"
-                        className="w-75 mt-3"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="process--text">
-                        Get a personalized learning path and learn how to code.
-                        Meet up with other participants at local community
-                        events and workshops.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="row my-5  d-lg-block d-none">
+            <div className="col-12">
+              <img src={process} alt="" />
             </div>
           </div>
-          <div className="col-12 col-md-4 d-none d-lg-block">
-            <h2 className="process--title">
-              <span className="process--title-number">3. </span>Project Kickoff
-            </h2>
-            <p className="process--text">
-              Choose the project that interests you the most and work on it in a
-              small interdisciplinary team for the upcoming months!
-            </p>
-          </div>
-          <div className="col-12 d-lg-none mb-3">
-            <div className="row">
-              <div className="col-11">
-                <div className="card">
-                  <h2 className="process--title">
-                    <span className="process--title-number">3. </span>Project
-                    Kickoff
-                  </h2>
-                  <div className="row">
-                    <div className="col-3 text-center">
-                      <img
-                        src={kickoff}
-                        alt="learning person"
-                        className="w-75 mt-3"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="process--text">
-                        Choose the project that interests you the most and work
-                        on it in a small interdisciplinary team for the upcoming
-                        months!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-1" />
+          <div className="row">
+            <div className="col-2" />
+            <div className="col-12 col-md-4  d-none d-lg-block">
+              <h2 className="process--title">
+                <span className="process--title-number">2. </span>Learning
+              </h2>
+              <p className="process--text">
+                Get a personalized learning path and learn how to code. Meet up
+                with other participants at local community events and workshops.
+              </p>
             </div>
-          </div>
-          <div className="col-12 d-lg-none mb-3">
-            <div className="row">
-              <div className="col-1" />
-              <div className="col-11">
-                <div className="card">
-                  <h2 className="process--title">
-                    <span className="process--title-number">4. </span>Project
-                    Hackathon
-                  </h2>
-                  <div className="row">
-                    <div className="col-3 text-center">
-                      <img
-                        src={hackathon}
-                        alt="learning person"
-                        className="w-75 mt-3"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="process--text">
-                        Catch up with the other participants and the
-                        Management-Team members and work on the project that you
-                        have started. Get guidance from our mentors!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="col-12 col-md-4  d-none d-lg-block">
+              <h2 className="process--title">
+                <span className="process--title-number">4. </span>Project
+                Hackathon
+              </h2>
+              <p className="process--text">
+                Catch up with your team and work on the project that you have
+                chosen. Get guidance from our Mentors!
+              </p>
             </div>
-          </div>
-          <div className="col-12 d-lg-none mb-3">
-            <div className="row">
-              <div className="col-11">
-                <div className="card">
-                  <h2 className="process--title">
-                    <span className="process--title-number">5. </span>Completion
-                    of the Project
-                  </h2>
-                  <div className="row">
-                    <div className="col-3 text-center">
-                      <img
-                        src={certificate}
-                        alt="learning person"
-                        className="w-75 mt-3"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="process--text">
-                        Earn a well-respected certificate by completing your
-                        group project and presenting your final results.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-1" />
-            </div>
-          </div>
-          <div className="col-12 col-md-4 d-none d-lg-block">
-            <h2 className="process--title">
-              <span className="process--title-number">5. </span>Completion of
-              the Project
-            </h2>
-            <p className="process--text">
-              Earn a well-respected certificate by completing your group project
-              and presenting your final results.
-            </p>
+            <div className="col-2" />
           </div>
         </div>
-        <div className="row my-5  d-lg-block d-none">
-          <div className="col-12">
-            <img src={process} alt="" />
+      </div>
+      <div className="d-lg-none">
+        <div className="row mt-3">
+          <div className="col-3 text-center">
+            <img src={orientation} alt="orientation"  />
+          </div>
+          <div className="col-1">
+            <img src={dotLine} alt="" className="h-100" />
+          </div>
+          <div className="col-7 ml-2">
+            <h4 className="process--h4">Orientation Week</h4>
+            <p className="process--text-mobil">
+              Inform yourself about the three Learning Tracks that TechLabs
+              offers and choose your favorite track!
+            </p>
           </div>
         </div>
         <div className="row">
-          <div className="col-2" />
-          <div className="col-12 col-md-4  d-none d-lg-block">
-            <h2 className="process--title">
-              <span className="process--title-number">2. </span>Learning
-            </h2>
-            <p className="process--text">
+          <div className="col-3 text-center">
+            <img src={learn} alt="learn"  />
+          </div>
+          <div className="col-1">
+            <img src={dotLine} alt="" className="h-100" />
+          </div>
+          <div className="col-7 ml-2">
+            <h4 className="process--h4">Online Course</h4>
+            <p className="process--text-mobil">
               Get a personalized learning path and learn how to code. Meet up
               with other participants at local community events and workshops.
             </p>
           </div>
-          <div className="col-12 col-md-4  d-none d-lg-block">
-            <h2 className="process--title">
-              <span className="process--title-number">4. </span>Project
-              Hackathon
-            </h2>
-            <p className="process--text">
+        </div>
+        <div className="row">
+          <div className="col-3 text-center">
+            <img src={kickoff} alt="kickoff" />
+          </div>
+          <div className="col-1">
+            <img src={dotLine} alt="" className="h-100" />
+          </div>
+          <div className="col-7 ml-2">
+            <h4 className="process--h4">Project Kickoff</h4>
+            <p className="process--text-mobil">
+              Choose the project that interests you the most and work on it in a
+              small interdisciplinary team for the upcoming months!
+            </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3 text-center">
+            <img src={hackathon} alt="hackathon"  />
+          </div>
+          <div className="col-1">
+            <img src={dotLine} alt="" className="h-100" />
+          </div>
+          <div className="col-7 ml-2">
+            <h4 className="process--h4">Project Hackathon</h4>
+            <p className="process--text-mobil">
               Catch up with your team and work on the project that you have
               chosen. Get guidance from our Mentors!
             </p>
           </div>
-          <div className="col-2" />
+        </div>
+        <div className="row">
+          <div className="col-3 text-center">
+            <img src={certificate} alt="certificate"  />
+          </div>
+          <div className="col-1">
+            <img src={dotLine} alt="" className="h-100" />
+          </div>
+          <div className="col-7 ml-2">
+            <h4 className="process--h4">Completion of the Project</h4>
+            <p className="process--text-mobil">
+              Earn a well-respected certificate by completing your group project
+              and presenting your final results.
+            </p>
+          </div>
         </div>
       </div>
     </>
