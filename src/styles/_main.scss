@@ -439,6 +439,13 @@ body {
   margin-bottom: 1rem;
 }
 
+.section-divider_mobil {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: $color-p;
+  margin-bottom: .8rem;
+}
+
 .section-divider-white {
   height: 0.3rem;
   width: 3.5rem;
@@ -516,9 +523,7 @@ body {
   padding-right: 20px !important;
 }
 
-.mb-5 {
-  margin-top: 8rem;
-}
+
 
 .zoom-in {
   animation: zoom 6s ease-in-out infinite alternate;

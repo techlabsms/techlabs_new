@@ -9,11 +9,12 @@ const ProgrammHero = ({
   intro,
   showCard,
   background,
+  backgroundMobil,
 }) => {
   return (
     <>
       <section
-        className="programmHero--hero"
+        className="programmHero--hero d-none d-md-block"
         style={{
           backgroundImage: `url(${background})`,
         }}
@@ -157,6 +158,73 @@ const ProgrammHero = ({
                 </div>
               </>
             )}
+          </div>
+        </div>
+      </section>
+      <section
+        className="programmHero--hero d-md-none"
+        style={{
+          backgroundImage: `url(${backgroundMobil})`,
+        }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 col-lg-6">
+              <h1 className="display-5 mt-5 programmHero--heading-mobil">
+                <span className="programmHero--highlighted-first-mobil">
+                  {headingFirst}
+                </span>
+                <br />
+                <span className="programmHero--highlighted-second-mobil">
+                  {headingSecond}
+                </span>
+              </h1>
+            </div>
+          </div>
+          {showCard && (
+            <div className="row mt-5">
+              <div className="col-12">
+                <div className="programmHero--card_mobil">
+                  <div className="row">
+                    <div className="col-4">
+                      <h1 className="programmHero--card-title_mobil">Time</h1>
+                      <div className="section-divider_mobil" />
+                      <p className="programmHero--card-subtitle_mobil">
+                        10 Hours/ Week <br /> 6 Month Program
+                      </p>
+                    </div>
+                    <div className="col-4">
+                      <h1 className="programmHero--card-title_mobil">
+                        Certificate
+                      </h1>
+                      <div className="section-divider_mobil" />
+                      <p className="programmHero--card-subtitle_mobil">
+                        Get a graduation certificate by submitting a project
+                      </p>
+                    </div>
+                    <div className="col-4">
+                      <h1 className="programmHero--card-title_mobil">
+                        Participants
+                      </h1>
+                      <div className="section-divider_mobil" />
+                      <p className="programmHero--card-subtitle_mobil">
+                        Over 250 grads
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          <div
+            className="row"
+            style={{
+              marginTop: showCard ? "35%" : "70%",
+            }}
+          >
+            <div className="col">
+              <p className="programmHero--intro mb-5">{intro}</p>
+            </div>
           </div>
         </div>
       </section>

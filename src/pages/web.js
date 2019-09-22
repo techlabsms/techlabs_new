@@ -15,6 +15,7 @@ import webDevCover from "../assets/wd_cover.png"
 import background from "../assets/ds_background.png"
 import Faq from "../components/Faq"
 import { Link } from "gatsby"
+import backgroundMobil from '../assets/courseMobil.png';
 
 class web extends Component {
   render() {
@@ -28,6 +29,7 @@ class web extends Component {
             showCard={true}
             background={background}
             intro="Inform yourself here about our Web Development track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate."
+            backgroundMobil={backgroundMobil}
           />
         </div>
         <div className="container">
