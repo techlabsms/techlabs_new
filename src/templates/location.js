@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
+import JoinCommunity from "../components/JoinCommunity"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
@@ -138,7 +139,7 @@ class location extends Component {
               />
             )}
             <Follow
-              heading="Follow us:"
+              heading="Follow Us:"
               subheading="Stay up to date!"
               facebookLink={location.facebookUrl}
               instagramLink={location.instagramUrl}
@@ -205,7 +206,11 @@ class location extends Component {
             </div>
           )}
         </section>
-
+        <JoinCommunity
+          heading="Join The Community"
+          subheading="Get in touch with our Slack-Community"
+          slackLink={location.slackLink}
+        />
         <Footer />
       </>
     )
@@ -239,7 +244,6 @@ export const pageQuery = graphql`
       instagramUrl
       linkedinUrl
       mediumUrl
-      usesFirstEntry
       firstEntryTitle
       firstEntrySubtitle
       firstEntryText {
@@ -336,6 +340,7 @@ export const pageQuery = graphql`
       officeLink
       applicationLink
       email
+      slackLink
     }
     allContentfulBlogPost(limit: 3) {
       edges {
