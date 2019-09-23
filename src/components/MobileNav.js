@@ -109,7 +109,7 @@ class MobileNav extends Component {
             </Link>
             <li className="nav-item mt-2">
               <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
-                <a href="ms-techlabs.slack.com" target="_blank" className="noDec">
+                <a href="https://ms-techlabs.slack.com" target="_blank" className="noDec">
                   <div className="row">
                     <div className="col-2">
                       <img src={Slack} alt="" className="slack-icon" />
