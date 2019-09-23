@@ -7,7 +7,6 @@ import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
 import { Link } from "gatsby"
-import Slack from "../assets/slack.png"
 import "jquery"
 
 class Navbar extends React.Component {
@@ -105,6 +104,7 @@ class Navbar extends React.Component {
                     Blog
                   </Link>
                 </li>
+
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">
                     <a href="ms-techlabs.slack.com" target="_blank">
@@ -112,6 +112,8 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                 </li>
+
+
               </ul>
 
               {/* mobile view */}

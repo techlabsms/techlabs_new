@@ -206,6 +206,11 @@ class location extends Component {
             </div>
           )}
         </section>
+        <JoinCommunity
+          heading="Join The Community"
+          subheading="Get in touch with our Slack-Community"
+          slackLink={location.slackLink}
+        />
         <Footer />
       </>
     )
