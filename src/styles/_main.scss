@@ -49,11 +49,11 @@ body {
   font-size: 17px !important;
 }
 
-.a-white{
+.a-white {
   color: white !important;
 }
 
-.a-black{
+.a-black {
   color: $color-g;
 }
 
@@ -213,6 +213,20 @@ body {
   border: 0;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
+}
+
+.btn-slack_mobil {
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+}
+
+
+.btn-slack_mobil-h4 {
+  color: black;
 }
 
 .btn-slack:hover {
@@ -444,7 +458,7 @@ body {
   height: 0.2rem;
   width: 2.5rem;
   background-color: $color-p;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-divider-white {
@@ -470,11 +484,11 @@ body {
   border-radius: 6px;
 }
 
-.noDec:hover{
+.noDec:hover {
   text-decoration: none;
 }
 
-.wwo{
+.wwo {
   background: url(../assets/wwo.png) center no-repeat;
   background-size: contain;
 }
@@ -523,8 +537,6 @@ body {
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
-
-
 
 .zoom-in {
   animation: zoom 6s ease-in-out infinite alternate;

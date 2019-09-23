@@ -4,6 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import { Link } from "gatsby"
+import Slack from "../assets/slack.png"
 
 class MobileNav extends Component {
   state = {
@@ -106,6 +107,20 @@ class MobileNav extends Component {
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
+            <li className="nav-item mt-2">
+              <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
+                <a href="ms-techlabs.slack.com" target="_blank" className="noDec">
+                  <div className="row">
+                    <div className="col-2">
+                      <img src={Slack} alt="" className="slack-icon" />
+                    </div>
+                    <div className="col-10 text-center">
+                      <h4 className="btn-slack_mobil-h4">Join our Slack</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
       </>
