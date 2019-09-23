@@ -107,11 +107,7 @@ class Navbar extends React.Component {
                 </li>
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">
-                    <a
-                      href="ms-techlabs.slack.com"
-                      target="_blank"
-                      className=""
-                    >
+                    <a href="ms-techlabs.slack.com" target="_blank">
                       <img src={Slack} alt="" className="slack-icon" />
                     </a>
                   </div>
