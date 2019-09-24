@@ -14,7 +14,7 @@ import AI from '../assets/ai-robot.png'
 import Web from '../assets/webdevpro.png'
 import Ds from '../assets/dashboard.png'
 
-class application extends Component {
+class apply extends Component {
   constructor(props) {
     super(props)
 
@@ -124,4 +124,4 @@ class application extends Component {
   }
 }
 
-export default application
+export default apply
