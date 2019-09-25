@@ -141,7 +141,6 @@ class Navbar extends React.Component {
                   </div>
                 </li>
               </ul>
-
               {/* mobile view */}
             </div>
           </nav>

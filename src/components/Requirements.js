@@ -52,16 +52,16 @@ const Requirements = ({ heading, subheading, link, isOpen }) => {
                 <span className="highlighted requirements--text_first">
                   Time-Management
                 </span>{" "}
-                - Are you committed to spend enough time to participate in our program? <br />
-                To become a Digital Shaper you should invest 50+ hours online and offline!
+                - Are you committed to spend enough time to participate in our
+                program? <br />
+                To become a Digital Shaper you should invest 50+ hours online
+                and offline!
               </li>
             </ol>
             {isOpen ? (
-              <button className="btn btn-primary mt-4">
-                <a href={link} className="a-white">
-                  Apply now
-                </a>
-              </button>
+              <a href={link} className="a-white btn btn-primary mt-4">
+                Apply now
+              </a>
             ) : (
               <button className="btn btn-primary mt-4" disabled>
                 Application currently closed

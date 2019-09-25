@@ -44,7 +44,7 @@ const CallToAction = () => {
       <div className="container mt-5 py-5">
         <div className="row text-center mt-5">
           <div className="col">
-            <Link className="btn btn-primary d-inline" to="/program">
+            <Link className="btn btn-primary d-inline" to="/apply">
               Apply now
             </Link>
           </div>

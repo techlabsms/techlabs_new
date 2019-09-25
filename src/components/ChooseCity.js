@@ -73,7 +73,7 @@ class ChooseCity extends Component {
                     />
                   </div>
                   <div className="col-md-12 col-xl-6">
-                    <Countdown date={this.props.muensterStart} />
+                    <Countdown date={this.props.muensterStart} isOpen={this.props.muensterIsOpen}/>
                   </div>
                 </div>
                 <div className="row px-2 my-2">
@@ -156,7 +156,7 @@ class ChooseCity extends Component {
                     />
                   </div>
                   <div className="col-md-12 col-xl-6">
-                    <Countdown date={this.props.copenhagenStart} />
+                    <Countdown date={this.props.copenhagenStart} isOpen={this.props.copenhagenIsOpen}/>
                   </div>
                 </div>
                 <div className="row px-2 my-2">
