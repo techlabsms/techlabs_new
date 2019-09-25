@@ -34,14 +34,19 @@ class Navbar extends React.Component {
               <ul className="navbar-nav ml-auto d-none d-lg-flex">
                 <li className="nav-item dropdown">
                   <Link
-                    className="nav-link active"
+                    className="nav-link"
                     to="/locations"
                     data-toggle="dropdown"
+                    activeClassName="navLink--active"
                   >
                     Locations
                   </Link>
                   <div className="dropdown-menu">
-                    <Link className="dropdown-item" to="/location/Muenster">
+                    <Link
+                      className="dropdown-item"
+                      to="/location/Muenster"
+                      activeClassName="navLink--active"
+                    >
                       <img src={MS} className="nav-loc-icon" alt="loc-ms" />
                       Muenster
                     </Link>
@@ -53,12 +58,14 @@ class Navbar extends React.Component {
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/locations"
+                      activeClassName="navLink--active"
                     >
                       Discover our Locations
                     </Link>
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
+                      activeClassName="navLink--active"
                     >
                       Found your own
                     </Link>
@@ -66,9 +73,10 @@ class Navbar extends React.Component {
                 </li>
                 <li className="nav-item dropdown">
                   <Link
-                    className="nav-link active"
+                    className="nav-link"
                     to="/program"
                     data-toggle="dropdown"
+                    activeClassName="navLink--active"
                   >
                     Program
                   </Link>
@@ -76,39 +84,58 @@ class Navbar extends React.Component {
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/program"
+                      activeClassName="navLink--active"
                     >
                       Program
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/web"
+                      activeClassName="navLink--active"
                     >
                       Web Development
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/dataScience"
+                      activeClassName="navLink--active"
                     >
                       Data Science
                     </Link>
-                    <Link className="dropdown-item-corr dropdown-item" to="/ai">
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/ai"
+                      activeClassName="navLink--active"
+                    >
                       Artificial Intelligence
                     </Link>
-                    <Link className="dropdown-item-corr dropdown-item" to="/ux">
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/ux"
+                      activeClassName="navLink--active"
+                    >
                       User Experience Design
                     </Link>
                   </div>
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/blog">
+                  <Link
+                    className="nav-link"
+                    to="/blog"
+                    activeClassName="navLink--active"
+                  >
                     Blog
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">
-                    <a href="https://ms-techlabs.slack.com" target="_blank">
+                    <a
+                      href="https://ms-techlabs.slack.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img src={Slack} alt="" className="slack-icon" />
                     </a>
                   </div>
