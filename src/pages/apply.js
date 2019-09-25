@@ -13,7 +13,6 @@ import Footer from "../components/Footer"
 import AI from "../assets/ai-robot.png"
 import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
-import dayjs from "dayjs"
 
 class apply extends Component {
   constructor(props) {
