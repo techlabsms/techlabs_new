@@ -18,20 +18,14 @@ import "../styles/bootstrap.min.css"
 
 class index extends React.Component {
   componentDidMount() {
-    console.log(`  
-                  
-
-████████╗███████╗ ██████╗██╗  ██╗██╗      █████╗ ██████╗ ███████╗
-╚══██╔══╝██╔════╝██╔════╝██║  ██║██║     ██╔══██╗██╔══██╗██╔════╝
-   ██║   █████╗  ██║     ███████║██║     ███████║██████╔╝███████╗
-   ██║   ██╔══╝  ██║     ██╔══██║██║     ██╔══██║██╔══██╗╚════██║
-   ██║   ███████╗╚██████╗██║  ██║███████╗██║  ██║██████╔╝███████║
-   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝ 
-
-_________________________________________________________________
-
-Passionated about Tech? Become a Co-Founder of TechLabs => techlabs.org/foundYourOwn
-`)
+    console.log(
+      "%cTechLabs",
+      "font-family:'helvetica'; display: block;font-weight:bold; font-size:48px;"
+    )
+    console.log(
+      "%cPassionated about Tech? Become a Co-Founder of TechLabs => https://techlabs.org/foundYourOwn",
+      "font-family:'helvetica'; font-weight:100;"
+    )
   }
   render() {
     return (
