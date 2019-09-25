@@ -8,7 +8,8 @@ class Countdown extends Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
-    isEnd: false,
+    isEnd: true,
+    isOpen: this.props.isOpen
   }
 
   componentDidMount() {
@@ -16,7 +17,7 @@ class Countdown extends Component {
       const now = dayjs()
       if (dayjs(this.props.date).isBefore(now)) {
         this.setState({
-          isEnd: true,
+          isEnd: false,
         })
         clearInterval(this.interval)
       }
@@ -38,14 +39,14 @@ class Countdown extends Component {
   }
 
   render() {
-    const { months, days, hours, minutes, seconds, isEnd } = this.state
+    const { months, days, hours, minutes, seconds, isEnd, isOpen } = this.state
     return (
       <>
         <div className="chooseCity--start">
           <h2 className="chooseCity--start_text">
-            {!isEnd ? "Application start:" : "Application is"}
+            {isEnd ? "Application start:" : "Application is"}
           </h2>
-          {!isEnd ? (
+          {isEnd ? (
             <>
               <div className="row">
                 <div className="col text-center">
@@ -73,7 +74,7 @@ class Countdown extends Component {
           ) : (
             <div className="row">
               <div className="col text-center  my-2">
-                <span className="chooseCity--countdown-numbers">Open</span>
+                <span className="chooseCity--countdown-numbers">{!isEnd && isOpen ? "Open": "Closed"}</span>
               </div>
             </div>
           )}

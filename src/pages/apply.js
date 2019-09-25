@@ -10,9 +10,10 @@ import FirstImpressionThree from "../components/FirstImpressionThree"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
 import Footer from "../components/Footer"
-import AI from '../assets/ai-robot.png'
-import Web from '../assets/webdevpro.png'
-import Ds from '../assets/dashboard.png'
+import AI from "../assets/ai-robot.png"
+import Web from "../assets/webdevpro.png"
+import Ds from "../assets/dashboard.png"
+import dayjs from "dayjs"
 
 class apply extends Component {
   constructor(props) {
@@ -24,13 +25,15 @@ class apply extends Component {
       cityData: [
         {
           name: "muenster",
-          isOpen: true,
-          link: "www.google.de",
+          isOpen: false,
+          link: "https://techlabsorg.typeform.com/to/sD79sQ",
+          startDate: "2019-09-27",
         },
         {
           name: "copenhagen",
           link: "www.google.de",
           isOpen: false,
+          startDate: "2019-09-01",
         },
       ],
       index: 0,
@@ -38,6 +41,7 @@ class apply extends Component {
 
     this.isClicked = this.isClicked.bind(this)
   }
+
   isClicked(city, cityIsClicked) {
     this.setState({
       isClicked: cityIsClicked,
@@ -53,7 +57,7 @@ class apply extends Component {
     })
   }
   render() {
-    const { cityData, index} = this.state;
+    const { cityData, index } = this.state
     return (
       <>
         <Navbar />
@@ -66,8 +70,10 @@ class apply extends Component {
           heading="Choose Your City"
           subheading="At the moment, we are located in Muenster and Copenhagen!"
           isClicked={this.isClicked}
-          muensterStart="2019-10-01"
-          copenhagenStart="2019-12-02"
+          muensterStart={cityData[0].startDate}
+          muensterIsOpen={cityData[0].isOpen}
+          copenhagenStart={cityData[1].startDate}
+          copenhagenIsOpen={cityData[1].isOpen}
         />
         <div className={this.state.isClicked ? "d-block" : "d-none"}>
           <Requirements
@@ -79,9 +85,9 @@ class apply extends Component {
           <ApplicationProcess
             heading="Application Process"
             subheading="What are the steps for a successful application?"
-          />          
+          />
           <div className="container">
-            <CallToActionApplication 
+            <CallToActionApplication
               isOpen={cityData[index].isOpen}
               link={cityData[index].link}
             />
@@ -100,7 +106,6 @@ class apply extends Component {
               thirdImage={Ds}
               thirdText="Start with our free track and learn the fundamentals of Data Science with Python or R."
               thirdLink="https://app.edyoucated.org/login"
-
             />
             <Faq>
               <FaqQuestion
