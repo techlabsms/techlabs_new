@@ -35,11 +35,19 @@ class MobileNav extends Component {
               </h3>
               {locationOpen && (
                 <ul className="mobileNav--subMenu">
-                  <Link to="/locations" className="color-gl">
+                  <Link
+                    to="/locations"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li>Locations</li>
                   </Link>
                   <hr />
-                  <Link to="/location/Muenster" className="color-gl">
+                  <Link
+                    to="/location/Muenster"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="mt-2">
                       <span>
                         <img src={MS} alt="" className="mobileNav--icon" />
@@ -48,7 +56,11 @@ class MobileNav extends Component {
                     </li>
                   </Link>
 
-                  <Link to="/location/Copenhagen" className="color-gl">
+                  <Link
+                    to="/location/Copenhagen"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="mt-2">
                       <span>
                         <img src={CPH} alt="" className="mobileNav--icon" />
@@ -57,7 +69,11 @@ class MobileNav extends Component {
                     </li>
                   </Link>
                   <hr />
-                  <Link to="/foundYourOwn" className="color-gl">
+                  <Link
+                    to="/foundYourOwn"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="mt-4">Found your own</li>
                   </Link>
                 </ul>
@@ -82,34 +98,59 @@ class MobileNav extends Component {
               </h3>
               {programOpen && (
                 <ul className="mobileNav--subMenu">
-                  <Link to="/program" className="color-gl">
+                  <Link
+                    to="/program"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li>Program</li>
                   </Link>
                   <hr />
-                  <Link to="/web" className="color-gl">
+                  <Link
+                    to="/web"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="my-4">Web Development</li>
                   </Link>
-                  <Link to="/dataScience" className="color-gl">
+                  <Link
+                    to="/dataScience"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="my-4">Data Science</li>
                   </Link>
-                  <Link to="/ai" className="color-gl">
+                  <Link
+                    to="/ai"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="my-4">Artificial Intelligence</li>
                   </Link>
-                  <Link to="/ux" className="color-gl">
+                  <Link
+                    to="/ux"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
                     <li className="my-4">User Experience Design</li>
                   </Link>
                 </ul>
               )}
             </li>
 
-            <Link to="/blog">
+            <Link to="/blog" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
             <li className="nav-item mt-2">
               <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
-                <a href="https://ms-techlabs.slack.com" target="_blank" className="noDec">
+                <a
+                  href="https://ms-techlabs.slack.com"
+                  target="_blank"
+                  className="noDec"
+                  rel="noopener noreferrer"
+                >
                   <div className="row">
                     <div className="col-2">
                       <img src={Slack} alt="" className="slack-icon" />

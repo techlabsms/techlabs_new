@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import arrow from "../assets/arrow.svg";
 
 const LearnMore = ({
   heading,

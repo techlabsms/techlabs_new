@@ -233,6 +233,14 @@ body {
   padding-left: 1.5rem;
 }
 
+.navLink--active{
+  color: $color-p;
+}
+
+.navLink--active_mobil{
+  color: $color-gl;
+}
+
 .gic {
   padding-bottom: 0.5rem !important;
   padding-top: 6.5rem !important;
