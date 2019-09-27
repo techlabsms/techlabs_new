@@ -24,7 +24,7 @@ class apply extends Component {
       cityData: [
         {
           name: "muenster",
-          isOpen: false,
+          isOpen: true,
           link: "https://techlabsorg.typeform.com/to/sD79sQ",
           startDate: "2019-09-27",
         },
