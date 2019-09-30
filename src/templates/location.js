@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
-import JoinCommunity from "../components/JoinCommunity"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
@@ -208,11 +207,6 @@ class location extends Component {
             </div>
           )}
         </section>
-        <JoinCommunity
-          heading="Join The Community"
-          subheading="Get in touch with our Slack-Community"
-          slackLink={location.slackLink}
-        />
         <Footer />
       </>
     )
