@@ -34,6 +34,12 @@ class apply extends Component {
           isOpen: false,
           startDate: "2019-09-01",
         },
+        {
+          name: "barcelona",
+          link: "www.google.de",
+          isOpen: false,
+          startDate: "2019-10-03",
+        },
       ],
       index: 0,
     }
@@ -73,6 +79,8 @@ class apply extends Component {
           muensterIsOpen={cityData[0].isOpen}
           copenhagenStart={cityData[1].startDate}
           copenhagenIsOpen={cityData[1].isOpen}
+          barcelonaStart={cityData[2].startDate}
+          barcelonaIsOpen={cityData[2].isOpen}
         />
         <div className={this.state.isClicked ? "d-block" : "d-none"}>
           <Requirements
