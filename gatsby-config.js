@@ -4,7 +4,7 @@ module.exports = {
     title: `TechLabs - We Build. Digital. Shapers.`,
     description: `TechLabs is a platform for young people from all disciplines. We provide state-of-the-art Tech-Skills to solve the problems of our time digitally and entrepreneurially.`,
     url: `https://www.techlabs.org`,
-    image: `/assets/tl-favicon.svg`
+    image: `/assets/tl-favicon.svg`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -16,5 +16,20 @@ module.exports = {
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-T9RV4L2`,
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: `gatsby` },
+      },
+    },
   ],
 }
