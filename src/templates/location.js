@@ -108,36 +108,38 @@ class location extends Component {
                 image={location.thirdEntryImage.file.url}
               />
             )}
-            {location.teamNameOne && location.teamNameFour ? (
-              <Team
-                city={location.heading}
-                firstName={location.teamNameOne}
-                firstImage={location.teamImgOne.file.url}
-                firstLinkedIn={location.teamLinkedInOne}
-                secondName={location.teamNameTwo}
-                secondImage={location.teamImgTwo.file.url}
-                secondLinkedIn={location.teamLinkedInTwo}
-                thirdName={location.teamNameThree}
-                thirdImage={location.teamImgThree.file.url}
-                thirdLinkedIn={location.teamLinkedInThree}
-                fourthName={location.teamImgFour}
-                fourthImage={location.teamNameFour.file.url}
-                fourthLinkedIn={location.teamLinkedInFour}
-              />
-            ) : (
-              <Team
-                city={location.heading}
-                firstName={location.teamNameOne}
-                firstImage={location.teamImgOne.file.url}
-                firstLinkedIn={location.teamLinkedInOne}
-                secondName={location.teamNameTwo}
-                secondImage={location.teamImgTwo.file.url}
-                secondLinkedIn={location.teamLinkedInTwo}
-                thirdName={location.teamNameThree}
-                thirdImage={location.teamImgThree.file.url}
-                thirdLinkedIn={location.teamLinkedInThree}
-              />
-            )}
+            {location.usesTeam ? (
+              location.teamNameOne && location.teamNameFour ? (
+                <Team
+                  city={location.heading}
+                  firstName={location.teamNameOne}
+                  firstImage={location.teamImgOne.file.url}
+                  firstLinkedIn={location.teamLinkedInOne}
+                  secondName={location.teamNameTwo}
+                  secondImage={location.teamImgTwo.file.url}
+                  secondLinkedIn={location.teamLinkedInTwo}
+                  thirdName={location.teamNameThree}
+                  thirdImage={location.teamImgThree.file.url}
+                  thirdLinkedIn={location.teamLinkedInThree}
+                  fourthName={location.teamImgFour}
+                  fourthImage={location.teamNameFour.file.url}
+                  fourthLinkedIn={location.teamLinkedInFour}
+                />
+              ) : (
+                <Team
+                  city={location.heading}
+                  firstName={location.teamNameOne}
+                  firstImage={location.teamImgOne.file.url}
+                  firstLinkedIn={location.teamLinkedInOne}
+                  secondName={location.teamNameTwo}
+                  secondImage={location.teamImgTwo.file.url}
+                  secondLinkedIn={location.teamLinkedInTwo}
+                  thirdName={location.teamNameThree}
+                  thirdImage={location.teamImgThree.file.url}
+                  thirdLinkedIn={location.teamLinkedInThree}
+                />
+              )
+            ) : null}
             <Follow
               heading="Follow Us:"
               subheading="Stay up to date!"
@@ -254,7 +256,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      usesSecondEntry
       secondEntryTitle
       secondEntrySubtitle
       secondEntryText {
@@ -265,7 +266,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      usesThirdEntry
       thirdEntryTitle
       thirdEntrySubtitle
       thirdEntryText {
@@ -341,6 +341,7 @@ export const pageQuery = graphql`
       applicationLink
       email
       slackLink
+      usesTeam
     }
     allContentfulBlogPost(limit: 3) {
       edges {
