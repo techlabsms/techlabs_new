@@ -49,7 +49,7 @@ class location extends Component {
                     <>
                       <a
                         className="btn btn-primary mt-3 d-inline"
-                        href={location.applicationLink}
+                        href={`${location.applicationLink}`}
                       >
                         Apply now
                       </a>
