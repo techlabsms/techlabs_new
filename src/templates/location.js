@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
-import JoinCommunity from "../components/JoinCommunity"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
@@ -49,7 +48,7 @@ class location extends Component {
                     <>
                       <a
                         className="btn btn-primary mt-3 d-inline"
-                        href={location.applicationLink}
+                        href={`${location.applicationLink}`}
                       >
                         Apply now
                       </a>
@@ -108,36 +107,38 @@ class location extends Component {
                 image={location.thirdEntryImage.file.url}
               />
             )}
-            {location.teamNameOne && location.teamNameFour ? (
-              <Team
-                city={location.heading}
-                firstName={location.teamNameOne}
-                firstImage={location.teamImgOne.file.url}
-                firstLinkedIn={location.teamLinkedInOne}
-                secondName={location.teamNameTwo}
-                secondImage={location.teamImgTwo.file.url}
-                secondLinkedIn={location.teamLinkedInTwo}
-                thirdName={location.teamNameThree}
-                thirdImage={location.teamImgThree.file.url}
-                thirdLinkedIn={location.teamLinkedInThree}
-                fourthName={location.teamImgFour}
-                fourthImage={location.teamNameFour.file.url}
-                fourthLinkedIn={location.teamLinkedInFour}
-              />
-            ) : (
-              <Team
-                city={location.heading}
-                firstName={location.teamNameOne}
-                firstImage={location.teamImgOne.file.url}
-                firstLinkedIn={location.teamLinkedInOne}
-                secondName={location.teamNameTwo}
-                secondImage={location.teamImgTwo.file.url}
-                secondLinkedIn={location.teamLinkedInTwo}
-                thirdName={location.teamNameThree}
-                thirdImage={location.teamImgThree.file.url}
-                thirdLinkedIn={location.teamLinkedInThree}
-              />
-            )}
+            {location.usesTeam ? (
+              location.teamNameOne && location.teamNameFour ? (
+                <Team
+                  city={location.heading}
+                  firstName={location.teamNameOne}
+                  firstImage={location.teamImgOne.file.url}
+                  firstLinkedIn={location.teamLinkedInOne}
+                  secondName={location.teamNameTwo}
+                  secondImage={location.teamImgTwo.file.url}
+                  secondLinkedIn={location.teamLinkedInTwo}
+                  thirdName={location.teamNameThree}
+                  thirdImage={location.teamImgThree.file.url}
+                  thirdLinkedIn={location.teamLinkedInThree}
+                  fourthName={location.teamImgFour}
+                  fourthImage={location.teamNameFour.file.url}
+                  fourthLinkedIn={location.teamLinkedInFour}
+                />
+              ) : (
+                <Team
+                  city={location.heading}
+                  firstName={location.teamNameOne}
+                  firstImage={location.teamImgOne.file.url}
+                  firstLinkedIn={location.teamLinkedInOne}
+                  secondName={location.teamNameTwo}
+                  secondImage={location.teamImgTwo.file.url}
+                  secondLinkedIn={location.teamLinkedInTwo}
+                  thirdName={location.teamNameThree}
+                  thirdImage={location.teamImgThree.file.url}
+                  thirdLinkedIn={location.teamLinkedInThree}
+                />
+              )
+            ) : null}
             <Follow
               heading="Follow Us:"
               subheading="Stay up to date!"
@@ -206,11 +207,6 @@ class location extends Component {
             </div>
           )}
         </section>
-        <JoinCommunity
-          heading="Join The Community"
-          subheading="Get in touch with our Slack-Community"
-          slackLink={location.slackLink}
-        />
         <Footer />
       </>
     )
@@ -254,7 +250,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      usesSecondEntry
       secondEntryTitle
       secondEntrySubtitle
       secondEntryText {
@@ -265,7 +260,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      usesThirdEntry
       thirdEntryTitle
       thirdEntrySubtitle
       thirdEntryText {
@@ -341,6 +335,7 @@ export const pageQuery = graphql`
       applicationLink
       email
       slackLink
+      usesTeam
     }
     allContentfulBlogPost(limit: 3) {
       edges {

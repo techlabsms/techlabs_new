@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
+import BCN from "../assets/loc-bcn.svg"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
 
@@ -66,6 +67,18 @@ class MobileNav extends Component {
                         <img src={CPH} alt="" className="mobileNav--icon" />
                       </span>
                       Copenhagen
+                    </li>
+                  </Link>
+                  <Link
+                    to="/location/Barcelona"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="mt-2">
+                      <span>
+                        <img src={BCN} alt="logo Barcelona" className="mobileNav--icon" />
+                      </span>
+                      Barcelona
                     </li>
                   </Link>
                   <hr />
