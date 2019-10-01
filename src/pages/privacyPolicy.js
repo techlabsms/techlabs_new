@@ -197,6 +197,19 @@ const privacyPolicy = () => {
           Cookies (e.g. Cookies for the analysis of your surfing behaviour),
           these will be stored in this Privacy policy treated separately. <br />
           <br />
+          <h5 className="margin-b-0">Google Tag Manager</h5>
+          This website uses the Google Tag Manager. This service allows website
+          tags to be managed through an interface. The Google Tool Manager only
+          implements tags. This means that no cookies are used and no personal
+          data is collected. Google Tool Manager triggers other tags that may
+          collect data. However, the Google Tag Manager does not access this
+          data.
+          <br />
+          <a href="javascript:gtmOptOut();">
+            Click here to be excluded from Google Tag Manager capture.
+          </a>
+          <br />
+          <br />
           <h5 className="margin-b-0">Hosting and server log files</h5>
           <br />
           For the hosting of the Internet pages we take services of our
