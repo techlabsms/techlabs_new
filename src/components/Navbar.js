@@ -133,6 +133,16 @@ class Navbar extends React.Component {
                     Blog
                   </Link>
                 </li>
+                
+                <li className="nav-item">
+                  <Link
+                    className="nav-button"
+                    to="/apply"
+                    activeClassName="navLink--active"
+                  >
+                    Apply now
+                  </Link>
+                </li>
 
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">

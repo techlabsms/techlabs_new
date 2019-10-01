@@ -76,7 +76,11 @@ class MobileNav extends Component {
                   >
                     <li className="mt-2">
                       <span>
-                        <img src={BCN} alt="logo Barcelona" className="mobileNav--icon" />
+                        <img
+                          src={BCN}
+                          alt="logo Barcelona"
+                          className="mobileNav--icon"
+                        />
                       </span>
                       Barcelona
                     </li>
@@ -156,6 +160,12 @@ class MobileNav extends Component {
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
+            <Link to="/apply" activeClassName="navLink--active">
+              <li className="nav-item">
+                <h3 className="nav-link mobileNav--link">Apply Now</h3>
+              </li>
+            </Link>
+            <br />
             <li className="nav-item mt-2">
               <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
                 <a

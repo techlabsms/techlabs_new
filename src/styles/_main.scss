@@ -268,6 +268,24 @@ body {
   margin-bottom: 0px !important;
 }
 
+.nav-button {
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+  padding-top: 0.6em !important;
+  padding-bottom: 0.6em !important;
+  margin-right: 1.5rem;
+  border: 1px solid $color-p;
+  border-radius: 5px;
+  color: $color-p;
+}
+
+.nav-button:hover {
+  text-decoration: none;
+  background: $color-p;
+  color: white !important;
+  transition: all 0.4s ease 0s;
+}
+
 @media (max-width: 767px) {
   .trusted {
     margin-top: 3rem !important;
