@@ -205,11 +205,6 @@ const privacyPolicy = () => {
           collect data. However, the Google Tag Manager does not access this
           data.
           <br />
-          <a href="javascript:gtmOptOut();">
-            Click here to be excluded from Google Tag Manager capture.
-          </a>
-          <br />
-          <br />
           <h5 className="margin-b-0">Hosting and server log files</h5>
           <br />
           For the hosting of the Internet pages we take services of our

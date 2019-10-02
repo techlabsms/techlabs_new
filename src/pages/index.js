@@ -92,8 +92,8 @@ class index extends React.Component {
                   <div className="p-2 col-sm-6 mt-5">
                     <Link to="/program" className="card-a">
                       <div className="card h-100">
-                        <h1 className="card-title">6</h1> <br />
-                        <p className="card-subtitle">months of coding</p>
+                        <h1 className="card-title">16</h1> <br />
+                        <p className="card-subtitle">weeks of coding</p>
                         <p className="text-muted">
                           Within 12-16 weeks you will gain insights into the
                           world of coding and will be able to master tech
