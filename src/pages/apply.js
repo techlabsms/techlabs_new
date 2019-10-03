@@ -73,7 +73,7 @@ class apply extends Component {
         />
         <ChooseCity
           heading="Choose Your City"
-          subheading="At the moment, we are located in Muenster and Copenhagen!"
+          subheading="At the moment, we are located in Muenster, Copenhagen and Barcelona!"
           isClicked={this.isClicked}
           muensterStart={cityData[0].startDate}
           muensterIsOpen={cityData[0].isOpen}

@@ -58,7 +58,7 @@ class foundYourOwn extends Component {
               <h2 className="ml-3">
                 You are looking for a new challenge and are{" "}
                 <span className="foundYourOwn--cta">
-                  passionated about Tech?
+                  passionate about Tech?
                 </span>
               </h2>
             </div>
@@ -87,8 +87,7 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                You always wanted to found an initiative yourself and turn own
-                ideas
+                You want to found an initiative yourself and turn own ideas
                 <span className="foundYourOwn--cta"> into action?</span>
               </h2>
             </div>
@@ -118,7 +117,7 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                You want to help others prepare for the challenges
+                You want to support others prepare for the challenges
                 <span className="foundYourOwn--cta"> of tomorrow?</span>
               </h2>
             </div>

@@ -15,7 +15,7 @@ import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
-import backgroundMobil from '../assets/courseMobil.png';
+import backgroundMobil from "../assets/courseMobil.png"
 
 class dataScience extends Component {
   render() {
@@ -43,13 +43,17 @@ class dataScience extends Component {
           <RightImageSection
             heading="Why Data Science?"
             subheading="Data Scientist - The most in demand job in the 21st century!"
-            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important over time. What makes companies like Google, Baidu or Amazon so powerful? It’s the amount of data they possess and the employees that are able to analyze it. The data volume that is created as well as the number of companies that want to use this data growth exponentially every year. There are beautiful and interesting insights hidden in this sea of ever increasing data, waiting to be discovered and Data Science is the key to decipher all these hidden insights. Therefore the demand for data scientists is increasing. Data Science is a pretty versatile field. Data Scientist are demanded in almost ever field you can imagine, such as HealthCare, Banking, Logistics, E-Commerce and many more. Hence, as a data scientist you are able to solve a lot of different problems, gain important knowledge and deliver value to other people and your business."
+            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important over time. What makes companies like Google, Baidu or Amazon so powerful? It’s the amount of data they possess and the employees that are able to analyze it. 
+                  The data volume that is created as well as the number of companies that want to use this data growth exponentially every year. There are beautiful and interesting insights hidden in this sea of ever increasing data, waiting to be discovered and Data Science is the key to decipher all these hidden insights. Therefore the demand for data scientists is increasing. 
+                  Data Science is a pretty versatile field. Data Scientist are demanded in almost ever field you can imagine, such as HealthCare, Banking, Logistics, E-Commerce and many more. Hence, as a data scientist you are able to solve a lot of different problems, gain important knowledge and deliver value to other people and your business."
             image={dsCover}
           />
           <LeftImageSection
             heading="More about the Track"
             subheading="Learn data science - hands-on or theory - R or Python - your choice"
-            text="It doesn't matter if you are a beginner or already have some experience. The program is designed so that you can choose which level of experience you want to start with, whether you want to do hands-on or theory courses and whether you prefer to program in Python or R. You decide.Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction.The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
+            text="It doesn't matter if you are a beginner or already have some experience. The program is designed so that you can choose which level of experience you want to start with, whether you want to do hands-on or theory courses and whether you prefer to program in Python or R. You decide.
+                  Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction.
+                  The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
             image={david}
           />
           <Projects />

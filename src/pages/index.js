@@ -141,7 +141,7 @@ class index extends React.Component {
                         <h1 className="card-title">3</h1> <br />
                         <p className="card-subtitle">locations</p>
                         <p className="text-muted pb-4">
-                          We currently have local communities in Münster,
+                          We currently have local communities in Muenster,
                           Barcelona, and Copenhagen.
                         </p>
                         <span className="card-discover">

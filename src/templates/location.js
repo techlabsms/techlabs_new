@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
-import RightImageSectionHeading from "../components/RightImageSectionHeading"
+import LeftImageSection from "../components/LeftImageSection"
+import RightImageSection from "../components/RightImageSection"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
 import PartnerLogos from "../components/PartnerLogos"
@@ -84,27 +84,36 @@ class location extends Component {
               />
             )}
             {location.firstEntryTitle && (
-              <LeftImageSectionHeading
+              <LeftImageSection
                 heading={location.firstEntryTitle}
                 subheading={location.firstEntrySubtitle}
                 text={location.firstEntryText.json.content[0].content[0].value}
                 image={location.firstEntryImage.file.url}
+                leftPartSize="6"
+                rightPartSize="6"
+                float={true}
               />
             )}
             {location.secondEntryTitle && (
-              <RightImageSectionHeading
+              <RightImageSection
                 heading={location.secondEntryTitle}
                 subheading={location.secondEntrySubtitle}
                 text={location.secondEntryText.json.content[0].content[0].value}
                 image={location.secondEntryImage.file.url}
+                leftPartSize="6"
+                rightPartSize="6"
+                float={true}
               />
             )}
             {location.thirdEntryTitle && (
-              <LeftImageSectionHeading
+              <LeftImageSection
                 heading={location.thirdEntryTitle}
                 subheading={location.thirdEntrySubtitle}
                 text={location.thirdEntryText.json.content[0].content[0].value}
                 image={location.thirdEntryImage.file.url}
+                leftPartSize="6"
+                rightPartSize="6"
+                float={true}
               />
             )}
             {location.usesTeam ? (
@@ -149,7 +158,7 @@ class location extends Component {
             />
           </section>
           {location.openPositionsLink && (
-            <RightImageSectionHeading
+            <RightImageSection
               heading="Join the Team"
               subheading="Interested in joining our team?"
               text="You are dreaming of a world with no digital illiterates and are passionate about tech? As a TechLabs Management-Team member you can actively support others in learning tech. Reach out and join the TechLabs family. "
