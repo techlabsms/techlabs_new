@@ -177,7 +177,7 @@ class foundYourOwn extends Component {
               <div className="col">
                 <a
                   className="btn btn-primary d-inline"
-                  href="mailto:muenster@techlabs.org?subject=Found your own location"
+                  href="mailto:bizdev@techlabs.org?subject=Found your own location"
                 >
                   Contact us
                 </a>

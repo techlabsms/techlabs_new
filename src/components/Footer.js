@@ -7,8 +7,27 @@ import CookieConsent from "react-cookie-consent"
 const Footer = () => {
   return (
     <>
-      <CookieConsent style={{backgroundColor: "#fb1d5c", color: "white"}} buttonStyle={{ color: "#fb1d5c", borderRadius: "6px", backgroundColor: "white", padding: ".8rem 1.5rem"}} expires={90}>
-        This website uses cookies to enhance the user experience. <span role="img" aria-label="cookie">🍪</span> <br/><Link to="/privacyPolicy" style={{ color : "white", textDecoration: "underline"}}>More Information</Link>   
+      <CookieConsent
+        style={{ backgroundColor: "#fb1d5c", color: "white" }}
+        buttonStyle={{
+          color: "#fb1d5c",
+          borderRadius: "6px",
+          backgroundColor: "white",
+          padding: ".8rem 1.5rem",
+        }}
+        expires={90}
+      >
+        This website uses cookies to enhance the user experience.{" "}
+        <span role="img" aria-label="cookie">
+          🍪
+        </span>{" "}
+        <br />
+        <Link
+          to="/privacyPolicy"
+          style={{ color: "white", textDecoration: "underline" }}
+        >
+          More Information
+        </Link>
       </CookieConsent>
       <div className="footer-tl">
         <div className="container-ft">
@@ -39,7 +58,10 @@ const Footer = () => {
                       <li className="footer-tl--subMenu-link">Copenhagen</li>
                     </Link>
                   </ul>
-                  <a className="foot-a" href="https://www.notion.so/techlabs/Work-at-TechLabs-16fa32d54d2d41a48ece59c6d28ed403">
+                  <a
+                    className="foot-a"
+                    href="https://www.notion.so/techlabs/Work-at-TechLabs-16fa32d54d2d41a48ece59c6d28ed403"
+                  >
                     Career
                   </a>
                   <br />
@@ -49,7 +71,9 @@ const Footer = () => {
                   <br />
                 </div>
                 <div className="col-lg-4">
-                  <h5 className="line-height-0 white-font my-2">Program</h5>
+                  <Link to="/program" className="noDec">
+                    <h5 className="line-height-0 white-font my-2">Program</h5>
+                  </Link>
                   <Link className="foot-a" to="/dataScience">
                     Data Science
                   </Link>
