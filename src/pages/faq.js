@@ -29,7 +29,7 @@ class faq extends Component {
       },
 
       {
-        question: "How can I imagine the time required?",
+        question: "How much time will I have to invest?",
         answer:
           "In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it.",
       },

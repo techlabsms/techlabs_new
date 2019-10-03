@@ -21,7 +21,7 @@ const Footer = () => {
                 <span role="img" aria-label="english">
                   🇬🇧
                 </span>{" "}
-                Englisch
+                English
               </button>
             </div>
             <div className="col-lg-8">
