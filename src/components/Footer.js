@@ -15,7 +15,17 @@ const Footer = () => {
           backgroundColor: "white",
           padding: ".8rem 1.5rem",
         }}
+        declineButtonStyle={{
+          color: "white",
+          borderRadius: "6px",
+          border: "2px solid white",
+          backgroundColor: "#fb1d5c",
+          padding: ".8rem 1.5rem",
+        }}
         expires={90}
+        enableDeclineButton={true}
+        declineButtonText="I decline"
+        setDeclineCookie={false}
       >
         This website uses cookies to enhance the user experience.{" "}
         <span role="img" aria-label="cookie">
