@@ -7,6 +7,7 @@ import LocationCard from "../components/LocationCard"
 import { graphql, Link } from "gatsby"
 import get from "lodash/get"
 import MAPLOC from "../assets/mapLoc.png"
+import arrowDown from "../assets/arrowDown.svg"
 
 class Locations extends Component {
   constructor() {
@@ -43,6 +44,11 @@ class Locations extends Component {
                     socials, and workshops await you. Discover the TechLabs
                     world here
                   </p>
+                  <div className="mt-5">
+                    <a className="locations--hero-btn" href="#locations-list">
+                      <img src={arrowDown} alt="arrow down" />
+                    </a>
+                  </div>
                 </div>
                 <div className="col-md-7 col-lg-7 text-center">
                   <img
@@ -55,7 +61,7 @@ class Locations extends Component {
             </div>
           </section>
 
-          <section className="locations-list py-5">
+          <section className="locations-list py-5" id="locations-list">
             <div className="container" id="locations-techlabs">
               <div className="row">
                 <div className="col-md-8">
@@ -105,8 +111,7 @@ class Locations extends Component {
                           <p class="locations--card-text mt-5 mr-3 mt-2">
                             If you are willing to shape the future of tech
                             education and want to create your own TechLabs
-                            location, reach out! Let’s work together
-                            and{" "}
+                            location, reach out! Let’s work together and{" "}
                             <span className="highlighted">
                               build something great!
                             </span>
