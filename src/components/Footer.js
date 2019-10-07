@@ -114,7 +114,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-8 col-md-6 text-md-left text-center" />
             <div className="col-lg-4 col-md-6 text-md-right text-center mt-sm-5 mt-md-0">
-              <a href="https://www.paypal.com/donate/?token=8Wum2XRH01a6wZkY5iduEaus4H9VmOIg73TxewbVjTcZu8Okl7hW4hsixYuoknOJbTl5R0&country.x=DE&locale.x=DE">
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=payments%40tech-labs.de&currency_code=EUR&source=url">
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
