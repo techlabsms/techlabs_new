@@ -71,13 +71,14 @@
     border-radius: 60px;
     background: $color-p;
     border: 0px solid !important;
-    transition: 0.3s ease-in-out !important;
+    transition:  all 0.7s ease !important;
     font-size: 17px !important;
     font-family: $font-h;
     text-align: center;
     padding: 0.7em 0.6em !important;
     :hover {
       transform: translateY(4px);
+      
     }
   }
 
