@@ -3,7 +3,7 @@ import locationsImg from "../assets/locations.png"
 
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
-    <div className="requirements my-5 py-5">
+    <div className="requirements my-5 py-5" id="requirements">
       <div className="container ">
         <div className="row">
           <div className="col">

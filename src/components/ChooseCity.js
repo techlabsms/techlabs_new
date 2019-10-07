@@ -50,245 +50,254 @@ class ChooseCity extends Component {
           </div>
           <div className="row my-3">
             <div className="col-md-4 mt-4">
-              <div
-                className={
-                  this.state.muensterIsClicked
-                    ? "chooseCity--clickedCard h-100"
-                    : "chooseCity--card h-100"
-                }
-                onClick={() => {
-                  this.setState({
-                    muensterIsClicked: !this.state.muensterIsClicked,
-                    copenhagenIsClicked: false,
-                    barcelonaIsClicked: false,
-                  })
-                  this.props.isClicked(
-                    "muenster",
-                    !this.state.muensterIsClicked
-                  )
-                }}
-              >
-                <div className="row">
-                  <div className="col-md-6">
-                    <h4 className="chooseCity--heading">Muenster</h4>
-                    <div
-                      className={
-                        this.state.muensterIsClicked
-                          ? "section-divider-white"
-                          : "section-divider"
-                      }
-                    />
+              <a href="#requirements" className="noDec aNone w-100">
+                <div
+                  className={
+                    this.state.muensterIsClicked
+                      ? "chooseCity--clickedCard h-100"
+                      : "chooseCity--card h-100"
+                  }
+                  onClick={() => {
+                    this.setState({
+                      muensterIsClicked: !this.state.muensterIsClicked,
+                      copenhagenIsClicked: false,
+                      barcelonaIsClicked: false,
+                    })
+                    this.props.isClicked(
+                      "muenster",
+                      !this.state.muensterIsClicked
+                    )
+                  }}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <h4 className="chooseCity--heading">Muenster</h4>
+                      <div
+                        className={
+                          this.state.muensterIsClicked
+                            ? "section-divider-white"
+                            : "section-divider"
+                        }
+                      />
+                    </div>
+                    <div className="col-md-12 col-xl-6">
+                      <Countdown
+                        date={this.props.muensterStart}
+                        isOpen={this.props.muensterIsOpen}
+                      />
+                    </div>
                   </div>
-                  <div className="col-md-12 col-xl-6">
-                    <Countdown
-                      date={this.props.muensterStart}
-                      isOpen={this.props.muensterIsOpen}
-                    />
+                  <p>Available Tracks</p>
+                  <div className="row px-2 my-2">
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.muensterIsClicked ? aiwhite : ai}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">
+                          Artifical Intelligence
+                        </p>
+                      </div>
+                      <div className="row">
+                        <img
+                          src={this.state.muensterIsClicked ? dswhite : ds}
+                          alt="data science"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Data Science</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.muensterIsClicked ? webwhite : web}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Web Development</p>
+                      </div>
+                      <div className="row">
+                        <img
+                          src={this.state.muensterIsClicked ? webwhite : web}
+                          alt="data science"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">UX Design</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="row px-2 my-2">
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.muensterIsClicked ? aiwhite : ai}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">
-                        Artifical Intelligence
-                      </p>
-                    </div>
-                    <div className="row">
-                      <img
-                        src={this.state.muensterIsClicked ? dswhite : ds}
-                        alt="data science"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Data Science</p>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.muensterIsClicked ? webwhite : web}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Web Development</p>
-                    </div>
-                    <div className="row">
-                      <img
-                        src={this.state.muensterIsClicked ? webwhite : web}
-                        alt="data science"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">UX Design</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div className="col-md-4 d-flex mt-4">
-              <div
-                className={
-                  this.state.copenhagenIsClicked
-                    ? "chooseCity--clickedCard w-100 h-100"
-                    : "chooseCity--card w-100 h-100"
-                }
-                onClick={() => {
-                  this.setState({
-                    muensterIsClicked: false,
-                    copenhagenIsClicked: !this.state.copenhagenIsClicked,
-                    barcelonaIsClicked: false,
-                  })
-                  this.props.isClicked(
-                    "copenhagen",
-                    !this.state.copenhagenIsClicked
-                  )
-                }}
-              >
-                <div className="row">
-                  <div className="col-md-6">
-                    <h4 className="chooseCity--heading">Copenhagen</h4>
-                    <div
-                      className={
-                        this.state.copenhagenIsClicked
-                          ? "section-divider-white"
-                          : "section-divider"
-                      }
-                    />
+              <a href="#requirements" className="noDec aNone w-100">
+                <div
+                  className={
+                    this.state.copenhagenIsClicked
+                      ? "chooseCity--clickedCard w-100 h-100"
+                      : "chooseCity--card w-100 h-100"
+                  }
+                  onClick={() => {
+                    this.setState({
+                      muensterIsClicked: false,
+                      copenhagenIsClicked: !this.state.copenhagenIsClicked,
+                      barcelonaIsClicked: false,
+                    })
+                    this.props.isClicked(
+                      "copenhagen",
+                      !this.state.copenhagenIsClicked
+                    )
+                  }}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <h4 className="chooseCity--heading">Copenhagen</h4>
+                      <div
+                        className={
+                          this.state.copenhagenIsClicked
+                            ? "section-divider-white"
+                            : "section-divider"
+                        }
+                      />
+                    </div>
+                    <div className="col-md-12 col-xl-6">
+                      <Countdown
+                        date={this.props.copenhagenStart}
+                        isOpen={this.props.copenhagenIsOpen}
+                      />
+                    </div>
                   </div>
-                  <div className="col-md-12 col-xl-6">
-                    <Countdown
-                      date={this.props.copenhagenStart}
-                      isOpen={this.props.copenhagenIsOpen}
-                    />
+                  <p>Available Tracks</p>
+                  <div className="row px-2 my-2">
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.copenhagenIsClicked ? aiwhite : ai}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">
+                          Artifical Intelligence
+                        </p>
+                      </div>
+                      <div className="row">
+                        <img
+                          src={this.state.copenhagenIsClicked ? dswhite : ds}
+                          alt="data science"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Data Science</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.copenhagenIsClicked ? webwhite : web}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Web Development</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="row px-2 my-2">
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.copenhagenIsClicked ? aiwhite : ai}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">
-                        Artifical Intelligence
-                      </p>
-                    </div>
-                    <div className="row">
-                      <img
-                        src={this.state.copenhagenIsClicked ? dswhite : ds}
-                        alt="data science"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Data Science</p>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.copenhagenIsClicked ? webwhite : web}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Web Development</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div className="col-md-4 d-flex mt-4">
-              <div
-                className={
-                  this.state.barcelonaIsClicked
-                    ? "chooseCity--clickedCard w-100 h-100"
-                    : "chooseCity--card w-100 h-100"
-                }
-                onClick={() => {
-                  this.setState({
-                    muensterIsClicked: false,
-                    copenhagenIsClicked: false,
-                    barcelonaIsClicked: !this.state.barcelonaIsClicked,
-                  })
-                  this.props.isClicked(
-                    "copenhagen",
-                    !this.state.barcelonaIsClicked
-                  )
-                }}
-              >
-                <div className="row">
-                  <div className="col-md-6">
-                    <h4 className="chooseCity--heading">Barcelona</h4>
-                    <div
-                      className={
-                        this.state.barcelonaIsClicked
-                          ? "section-divider-white"
-                          : "section-divider"
-                      }
-                    />
+              <a href="#requirements" className="noDec aNone w-100">
+                <div
+                  className={
+                    this.state.barcelonaIsClicked
+                      ? "chooseCity--clickedCard w-100 h-100"
+                      : "chooseCity--card w-100 h-100"
+                  }
+                  onClick={() => {
+                    this.setState({
+                      muensterIsClicked: false,
+                      copenhagenIsClicked: false,
+                      barcelonaIsClicked: !this.state.barcelonaIsClicked,
+                    })
+                    this.props.isClicked(
+                      "copenhagen",
+                      !this.state.barcelonaIsClicked
+                    )
+                  }}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <h4 className="chooseCity--heading">Barcelona</h4>
+                      <div
+                        className={
+                          this.state.barcelonaIsClicked
+                            ? "section-divider-white"
+                            : "section-divider"
+                        }
+                      />
+                    </div>
+                    <div className="col-md-12 col-xl-6">
+                      <Countdown
+                        date={this.props.barcelonaStart}
+                        isOpen={this.props.barcelonaIsOpen}
+                      />
+                    </div>
                   </div>
-                  <div className="col-md-12 col-xl-6">
-                    <Countdown
-                      date={this.props.barcelonaStart}
-                      isOpen={this.props.barcelonaIsOpen}
-                    />
+                  <p>Available Tracks</p>
+                  <div className="row px-2 my-2">
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.barcelonaIsClicked ? aiwhite : ai}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">
+                          Artifical Intelligence
+                        </p>
+                      </div>
+                      <div className="row">
+                        <img
+                          src={this.state.barcelonaIsClicked ? dswhite : ds}
+                          alt="data science"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Data Science</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="row">
+                        <img
+                          src={this.state.barcelonaIsClicked ? webwhite : web}
+                          alt="artificial intelligence"
+                          width="15"
+                          height="15"
+                          className="mr-2"
+                        />
+                        <p className="chooseCity--subject">Web Development</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="row px-2 my-2">
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.barcelonaIsClicked ? aiwhite : ai}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">
-                        Artifical Intelligence
-                      </p>
-                    </div>
-                    <div className="row">
-                      <img
-                        src={this.state.barcelonaIsClicked ? dswhite : ds}
-                        alt="data science"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Data Science</p>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="row">
-                      <img
-                        src={this.state.barcelonaIsClicked ? webwhite : web}
-                        alt="artificial intelligence"
-                        width="15"
-                        height="15"
-                        className="mr-2"
-                      />
-                      <p className="chooseCity--subject">Web Development</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div className="col-md-4 mt-4">
               <Link to="/foundYourOwn" className="noDec a-black">
@@ -308,7 +317,10 @@ class ChooseCity extends Component {
             </div>
           </div>
         </div>
-        {atEnd && !muensterIsClicked && !copenhagenIsClicked && !barcelonaIsClicked ? (
+        {atEnd &&
+        !muensterIsClicked &&
+        !copenhagenIsClicked &&
+        !barcelonaIsClicked ? (
           <div className="row mt-5 chooseCity--stopper">
             <div className="col text-center py-4">
               <h2>Please choose a city first!</h2>
