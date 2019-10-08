@@ -52,11 +52,11 @@ class index extends React.Component {
                     events.
                   </p>
                   <div className="mt-5">
-                    <Link className="btn btn-primary d-inline" to="/locations">
-                      Locations
-                    </Link>
                     <Link className="btn btn-primary d-inline" to="/program">
                       Program
+                    </Link>
+                    <Link className="btn btn-primary d-inline" to="/locations">
+                      Locations
                     </Link>
                   </div>
                 </div>
