@@ -33,13 +33,6 @@ class dataScience extends Component {
           />
         </div>
         <div className="container">
-          <WhatYouWillLearn
-            intro="Data Science is a multidisciplinary domain. In it’s core it is the task of finding valuable insights from data."
-            first="How to apply machine learning models to solve problems like churn prediction or customer segmentation"
-            second="Exploration of raw data to gain useful insights"
-            third="General programming knowledge in R or Python"
-            fourth="How to present your results in a structured and visually appealing way"
-          />
           <RightImageSection
             heading="Why Data Science?"
             subheading="Data Scientist - The most in demand job in the 21st century!"
@@ -47,6 +40,13 @@ class dataScience extends Component {
                   The data volume that is created as well as the number of companies that want to use this data growth exponentially every year. There are beautiful and interesting insights hidden in this sea of ever increasing data, waiting to be discovered and Data Science is the key to decipher all these hidden insights. Therefore the demand for data scientists is increasing. 
                   Data Science is a pretty versatile field. Data Scientist are demanded in almost ever field you can imagine, such as HealthCare, Banking, Logistics, E-Commerce and many more. Hence, as a data scientist you are able to solve a lot of different problems, gain important knowledge and deliver value to other people and your business."
             image={dsCover}
+          />
+          <WhatYouWillLearn
+            intro="Data Science is a multidisciplinary domain. In it’s core it is the task of finding valuable insights from data."
+            first="How to apply machine learning models to solve problems like churn prediction or customer segmentation"
+            second="Exploration of raw data to gain useful insights"
+            third="General programming knowledge in R or Python"
+            fourth="How to present your results in a structured and visually appealing way"
           />
           <LeftImageSection
             heading="More about the Track"

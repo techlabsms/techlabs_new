@@ -33,13 +33,6 @@ class web extends Component {
           />
         </div>
         <div className="container">
-          <WhatYouWillLearn
-            intro="Learn more about the technologies behind the web and how to build modern web applications!"
-            first="Create responsive and interactive web pages using cutting edge technologies including HTML, CSS, and JavaScript"
-            second="Acquire practical experience with open source tools and development frameworks, such as React"
-            third="Learn how to program web-based application programming interfaces with Node.js"
-            fourth="Bring data to life and build interactive visualizations and graphs for any type of data"
-          />
           <RightImageSection
             heading="What is Web Development"
             subheading="Our track is all about the software development of web pages and applications."
@@ -51,6 +44,13 @@ class web extends Component {
             subheading="Without Web Developers no content or web application would exist on the internet!"
             text="The internet has disrupted our economy and society. The technologies we use on a daily basis will keep evolving, thus in the future Web Development will be even more important than it is today. Browsers are getting more powerful day by day, today they can even be used as whole operating systems (e.g. ChromeOS). Recent Web Development toolkits already allow you to create native apps on any device. Learning how Web Development works will provide you with powerful and versatile programming skills. These enable you to design websites, build applications, and to visualize data and make it accessible for users. Machine Learning, Artificial Intelligence, Robotics, and other domains often require modern web-based interfaces to connect with the user to provide value. Therefore, having knowledge of Web Development will  be an asset for you!"
             image={webDevCover}
+          />
+          <WhatYouWillLearn
+            intro="Learn more about the technologies behind the web and how to build modern web applications!"
+            first="Create responsive and interactive web pages using cutting edge technologies including HTML, CSS, and JavaScript"
+            second="Acquire practical experience with open source tools and development frameworks, such as React"
+            third="Learn how to program web-based application programming interfaces with Node.js"
+            fourth="Bring data to life and build interactive visualizations and graphs for any type of data"
           />
           <LeftImageSection
             heading="More about the Track"
