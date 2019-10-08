@@ -33,12 +33,11 @@ class ux extends Component {
           />
         </div>
         <div className="container">
-          <WhatYouWillLearn
-            intro="Define and scope the design problem you will try to address!"
-            first="Learn UX Design with practical examples and use the opportunity to build a personal portfolio."
-            second="Find out what the key values are for designing an enjoyable user experience"
-            third="Get experience in communicating in a multidisciplinary team and create your own design portfolio."
-            fourth="Get to know tools to prototype and implement your ideas."
+          <RightImageSection
+            heading="What is User Experience Design?"
+            subheading="A UX designer’s tasks often include user research, designing interactive prototypes, and testing designs."
+            text="The User Experience is made up of a person’s perception and response resulting from the use or even just the anticipated use of a product, system, or service. Therefore, UX Design is the process of understanding the user to iteratively improve the usability, accessibility and pleasure while interacting with the product. In short: Your job is it to make a user enjoy your product."
+            image={UX2}
           />
           <RightImageSection
             heading="Why User Experience Design?"
@@ -48,17 +47,18 @@ class ux extends Component {
                     As a lot of products and informations are turning digital you will be the key to making them accessible for the people that depend on them and with that have the chance to make their lives easier. "
             image={UX}
           />
+          <WhatYouWillLearn
+            intro="Define and scope the design problem you will try to address!"
+            first="Learn UX Design with practical examples and use the opportunity to build a personal portfolio."
+            second="Find out what the key values are for designing an enjoyable user experience"
+            third="Get experience in communicating in a multidisciplinary team and create your own design portfolio."
+            fourth="Get to know tools to prototype and implement your ideas."
+          />
           <LeftImageSection
             heading="More about the Track"
             subheading="Great design is born, nurtured, and grown – all through a systematic, learnable process!"
             text="Within the track, you will explore the process of taking a basic concept, grounded in user needs, and developing it into a design that will address those needs. You will gain hands-on experience with techniques such as prototyping, scenario and persona development as well as wireframing that will help you transform your understanding of what your users need into a compelling user experience. Additionally, you turn your ideas into interactive prototypes that can be tested with prospective users and iteratively turned into a high quality design."
             image={david}
-          />
-          <RightImageSection
-            heading="What is User Experience Design?"
-            subheading="A UX designer’s tasks often include user research, designing interactive prototypes, and testing designs."
-            text="The User Experience is made up of a person’s perception and response resulting from the use or even just the anticipated use of a product, system, or service. Therefore, UX Design is the process of understanding the user to iteratively improve the usability, accessibility and pleasure while interacting with the product. In short: Your job is it to make a user enjoy your product."
-            image={UX2}
           />
           <Projects />
           <CallToAction />

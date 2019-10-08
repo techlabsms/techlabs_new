@@ -33,13 +33,6 @@ class ai extends Component {
           />
         </div>
         <div className="container">
-          <WhatYouWillLearn
-            intro="See here what different learnings our AI track offers!"
-            first="Acquire knowledge about deep learning algorithms"
-            second="Learn how to build image recognition system"
-            third="Get to know what mathematical foundation behind the training of neural networks"
-            fourth="Acquire general python programming knowledge with emphasis on deep learning libraries"
-          />
           <RightImageSection
             heading="What is Artificial Intelligence?"
             subheading="See what hides behind the buzzword “AI”!"
@@ -51,6 +44,13 @@ class ai extends Component {
             subheading="Learn more about the various applications of Artificial Intelligence!"
             text="Data is the new Oil, but „AI ist the new electricity“ - Andrew Ng. Artificial Intelligence helps to mine valuable knowledge from data. Deep neural networks got a boost in popularity in 2011 when the neural network AlexNet solved the ImageNet Competition (Detection of 1000 classes of objects in images) with an error rate of 16%. Before deep neural networks ruled this competition the average error rate was way over 25%. Since then the error rate has been decreasing to less than 5%. The success of Deep Neural Networks relies on the huge amount of data that is necessary to train the millions of parameters. Since the amount of data is continuously increasing, the range of applications for AI becomes wider and deeper. While AI has been a long time an instrument to solve a single very specific task, AI is more and more developing into a generalized approach for problem solving."
             image={ai_cover}
+          />
+          <WhatYouWillLearn
+            intro="See here what different learnings our AI track offers!"
+            first="Acquire knowledge about deep learning algorithms"
+            second="Learn how to build image recognition system"
+            third="Get to know what mathematical foundation behind the training of neural networks"
+            fourth="Acquire general python programming knowledge with emphasis on deep learning libraries"
           />
           <LeftImageSection
             heading="More About the Track"
