@@ -95,17 +95,17 @@ class Navbar extends React.Component {
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
-                      to="/web"
-                      activeClassName="navLink--active"
-                    >
-                      Web Development
-                    </Link>
-                    <Link
-                      className="dropdown-item-corr dropdown-item"
                       to="/dataScience"
                       activeClassName="navLink--active"
                     >
                       Data Science
+                    </Link>
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/web"
+                      activeClassName="navLink--active"
+                    >
+                      Web Development
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -133,7 +133,7 @@ class Navbar extends React.Component {
                     Blog
                   </Link>
                 </li>
-                
+
                 <li className="nav-item">
                   <Link
                     className="nav-button"
