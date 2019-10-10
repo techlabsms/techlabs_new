@@ -124,18 +124,18 @@ class MobileNav extends Component {
                   </Link>
                   <hr />
                   <Link
-                    to="/web"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="my-4">Web Development</li>
-                  </Link>
-                  <Link
                     to="/dataScience"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">Data Science</li>
+                  </Link>
+                  <Link
+                    to="/web"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="my-4">Web Development</li>
                   </Link>
                   <Link
                     to="/ai"
