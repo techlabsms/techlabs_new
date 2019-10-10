@@ -21,6 +21,7 @@ class Head extends Component {
             <meta property="og:description" content="TechLabs is a platform for young people from all disciplines. We provide state-of-the-art Tech-Skills to solve the problems of our time digitally and entrepreneurially."/>
             <meta property="og:image" content={favicon64}/>
             <meta property="og:url" content="https://www.techlabs.org"/>
+            <script src="https://embed.small.chat/TG9SCN33JGHR17BPSR.js" async></script>
 
         </Helmet>
       </>
