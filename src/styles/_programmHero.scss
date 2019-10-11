@@ -43,9 +43,10 @@
     font-size: 20px;
     line-height: 35px;
     /* or 175% */
-    width: 90%;
+    width: 80%;
     text-align: justify;
     color: #8b9fa8;
+    margin-top: 20%;
   }
 
   &--card {
@@ -97,6 +98,10 @@
     &--card {
       margin-top: 10%;
       margin-bottom: 20%;
+    }
+
+    &--intro{
+      margin-top: 0;
     }
   }
 }
