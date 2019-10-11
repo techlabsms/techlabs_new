@@ -74,7 +74,7 @@ class Locations extends Component {
                 <div className="col-md-4">
                   <input
                     type="search"
-                    className="locations--search mt-2"
+                    className="locations--search mt-2 w-100 mb-4"
                     placeholder="Search location"
                     onChange={e => {
                       this.setState({
@@ -85,7 +85,7 @@ class Locations extends Component {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row pl-5 pr-5">
                 {filteredLocations.map(location => (
                   <LocationCard
                     imgTop={location.node.image.file.url}
