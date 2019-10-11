@@ -6,13 +6,14 @@ import Requirements from "../components/Requirements"
 import applicationHero from "../assets/application.png"
 import ApplicationProcess from "../components/ApplicationProcess"
 import CallToActionApplication from "../components/CallToActionApplication"
-import FirstImpressionThree from "../components/FirstImpressionThree"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
 import Footer from "../components/Footer"
 import AI from "../assets/ai-robot.png"
 import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
+import LearnMore from "../components/LearnMore"
+import UX from "../assets/UX.png"
 
 class apply extends Component {
   constructor(props) {
@@ -98,21 +99,26 @@ class apply extends Component {
               isOpen={cityData[index].isOpen}
               link={cityData[index].link}
             />
-            <FirstImpressionThree
+            <LearnMore
               heading="Missed the deadline?"
               subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"
-              firstHeading="AI"
-              firstImage={AI}
-              firstText="Start with our free track and learn the fundamentals of Artificial Intelligence."
+              firstProjectHeading="Web Development"
+              firstProjectImage={Web}
               firstLink="https://app.edyoucated.org/login"
-              secondHeading="Web Development"
-              secondImage={Web}
-              secondText="Start with our free track and learn the fundamentals of Web Development."
+              firstButtonText="Start now"
+              secondProjectHeading="Data Science"
+              secondProjectImage={Ds}
               secondLink="https://app.edyoucated.org/login"
-              thirdHeading="Data Science"
-              thirdImage={Ds}
-              thirdText="Start with our free track and learn the fundamentals of Data Science with Python or R."
+              secondButtonText="Start now"
+              thirdProjectHeading="Artificial Intelligence"
+              thirdProjectImage={AI}
               thirdLink="https://app.edyoucated.org/login"
+              thirdButtonText="Start now"
+              fourthProjectHeading="User Experience Design"
+              fourthProjectImage={UX}
+              fourthLink="https://app.edyoucated.org/login"
+              fourthButtonText="Start now"
+              externalLink={true}
             />
             <Faq>
               <FaqQuestion
