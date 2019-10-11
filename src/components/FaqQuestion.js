@@ -27,7 +27,7 @@ class FaqQuestion extends Component {
           <div className="py-3">
             <Link className="faq--a" onClick={() => this.handleClick()}>
               <div className="row h-100">
-                <div className="col-2">
+                <div className="col-1">
                   <FontAwesomeIcon
                     icon={faChevronRight}
                     className={
@@ -42,8 +42,10 @@ class FaqQuestion extends Component {
               </div>
             </Link>
             {this.state.isOpen && (
-              <div>
-                <p className="px-5 text-justify">{this.props.answer}</p>
+              <div className="row justify-content-end">
+                <div className="col-11">
+                  <p className="pr-5 text-justify">{this.props.answer}</p>
+                </div>
               </div>
             )}
           </div>
