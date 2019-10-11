@@ -9,6 +9,7 @@ const Footer = () => {
     <>
       <CookieConsent
         style={{ backgroundColor: "#fb1d5c", color: "white" }}
+        location="top"
         buttonStyle={{
           color: "#fb1d5c",
           borderRadius: "6px",
