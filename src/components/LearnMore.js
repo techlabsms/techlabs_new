@@ -6,16 +6,21 @@ const LearnMore = ({
   subheading,
   firstProjectHeading,
   firstLink,
+  firstButtonText,
   firstProjectImage,
   secondProjectHeading,
   secondLink,
+  secondButtonText,
   secondProjectImage,
   thirdProjectHeading,
   thirdLink,
+  thirdButtonText,
   thirdProjectImage,
   fourthProjectHeading,
   fourthLink,
+  fourthButtonText,
   fourthProjectImage,
+  externalLink,
 }) => {
   return (
     <>
@@ -35,7 +40,15 @@ const LearnMore = ({
             <img src={firstProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            <Link to={firstLink} className="btn btn-primary">Learn more</Link>
+            {externalLink || false ? (
+              <a href={firstLink} className="btn btn-primary">
+                {firstButtonText || "Learn more"}
+              </a>
+            ) : (
+              <Link to={firstLink} className="btn btn-primary">
+                {firstButtonText || "Learn more"}
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -48,7 +61,15 @@ const LearnMore = ({
             <img src={secondProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            <Link to={secondLink} className="btn btn-primary">Learn more</Link>
+            {externalLink || false ? (
+              <a href={secondLink} className="btn btn-primary">
+                {secondButtonText || "Learn more"}
+              </a>
+            ) : (
+              <Link to={secondLink} className="btn btn-primary">
+                {secondButtonText || "Learn more"}
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -61,7 +82,15 @@ const LearnMore = ({
             <img src={thirdProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            <Link to={thirdLink} className="btn btn-primary">Learn more</Link>
+             {externalLink || false ? (
+              <a href={thirdLink} className="btn btn-primary">
+                {thirdButtonText || "Learn more"}
+              </a>
+            ) : (
+              <Link to={thirdLink} className="btn btn-primary">
+                {thirdButtonText || "Learn more"}
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -74,7 +103,15 @@ const LearnMore = ({
             <img src={fourthProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            <Link to={fourthLink} className="btn btn-primary">Learn more</Link>
+              {externalLink || false ? (
+              <a href={fourthLink} className="btn btn-primary">
+                {fourthButtonText || "Learn more"}
+              </a>
+            ) : (
+              <Link to={fourthLink} className="btn btn-primary">
+                {fourthButtonText || "Learn more"}
+              </Link>
+            )}
           </div>
         </div>
       </div>
