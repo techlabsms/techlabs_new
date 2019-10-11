@@ -79,6 +79,11 @@ body {
   padding-left: 27px;
 }
 
+.dropdown-item:active{
+  background-color: white !important;
+  color: $color-p;
+}
+
 .headroom {
   box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0.15) !important;
   background-color: #ffffff !important;
