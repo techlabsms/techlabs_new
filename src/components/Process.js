@@ -6,6 +6,7 @@ import kickoff from "../assets/kickoffBlack.svg"
 import hackathon from "../assets/hackathonBlack.svg"
 import certificate from "../assets/certificateBlack.svg"
 import dotLine from "../assets/dotLine.svg"
+import dot from "../assets/dot.svg"
 
 const Process = () => {
   return (
@@ -88,9 +89,9 @@ const Process = () => {
       <div className="d-lg-none">
         <div className="row mt-3">
           <div className="col-3 text-center">
-            <img src={orientation} alt="orientation"  />
+            <img src={orientation} alt="orientation" />
           </div>
-          <div className="col-1">
+          <div className="col-1 d-flex justify-contentstartr  align-self-stretch">
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
@@ -103,9 +104,9 @@ const Process = () => {
         </div>
         <div className="row">
           <div className="col-3 text-center">
-            <img src={learn} alt="learn"  />
+            <img src={learn} alt="learn" />
           </div>
-          <div className="col-1">
+          <div className="col-1  d-flex justify-content-start  align-self-stretch">
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
@@ -120,7 +121,7 @@ const Process = () => {
           <div className="col-3 text-center">
             <img src={kickoff} alt="kickoff" />
           </div>
-          <div className="col-1">
+          <div className="col-1 d-flex justify-content-start  align-self-stretch">
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
@@ -133,9 +134,9 @@ const Process = () => {
         </div>
         <div className="row">
           <div className="col-3 text-center">
-            <img src={hackathon} alt="hackathon"  />
+            <img src={hackathon} alt="hackathon" />
           </div>
-          <div className="col-1">
+          <div className="col-1 d-flex justify-content-start  align-self-stretch">
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
@@ -148,10 +149,10 @@ const Process = () => {
         </div>
         <div className="row">
           <div className="col-3 text-center">
-            <img src={certificate} alt="certificate"  />
+            <img src={certificate} alt="certificate" />
           </div>
-          <div className="col-1">
-            <img src={dotLine} alt="" className="h-100" />
+          <div className="col-1 d-flex justify-content-start  align-self-stretch">
+            <img src={dot} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
             <h4 className="process--h4">Completion of the Project</h4>
