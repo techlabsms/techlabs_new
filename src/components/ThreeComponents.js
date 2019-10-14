@@ -1,9 +1,6 @@
-import React, { useState } from "react"
-import Image from "../assets/threecomponents.png"
+import React from "react"
 
 const ThreeComponents = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <div className="threeComponents container my-5 py-5">
       <div className="row mt-5 mb-5">
@@ -20,11 +17,7 @@ const ThreeComponents = () => {
         <div className="col-md-8">
           <div className="row">
             <div className="col-md-4">
-              <div
-                className="threeComponents--circle threeComponents--circle_1 d-flex justify-content-center"
-                onMouseEnter={() => setIsOpen(true)}
-                onMouseLeave={() => setIsOpen(false)}
-              >
+              <div className="threeComponents--circle threeComponents--circle_1 d-flex justify-content-center">
                 <h3 className="align-self-center">Local Community</h3>
                 <p className="align-self-center">
                   Online learning does not unfold its full potential in
@@ -72,7 +65,7 @@ const ThreeComponents = () => {
       </div>
       <div className="row d-block d-lg-none">
         <div className="col-md-4">
-          <h3 className="highlighted mb-3 pl-3 w-50">Local Community</h3>
+          <h3 className="highlighted mb-3 pl-3 text-left">Local Community</h3>
           <p>
             Online learning does not unfold its full potential in isolation. We
             need a social context in which people can share what they have
@@ -84,7 +77,7 @@ const ThreeComponents = () => {
           </p>
         </div>
         <div className="col-md-4">
-          <h3 className="highlighted mb-3 pl-3 w-50">Online Learning</h3>
+          <h3 className="highlighted mb-3 pl-3 text-left">Online Learning</h3>
           <p>
             Our participants learn tech skills in one of our online learning
             tracks. For each of the tracks, our curriculum experts carefully
@@ -96,7 +89,7 @@ const ThreeComponents = () => {
           </p>
         </div>
         <div className="col-md-4">
-          <h3 className="highlighted mb-3 pl-3 w-50">Project Work</h3>
+          <h3 className="highlighted mb-3 pl-3 text-left">Project Work</h3>
           <p>
             The overarching goal of the online learning component of our program
             is that the learning resources of our tracks enable our participants
