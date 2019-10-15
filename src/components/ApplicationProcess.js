@@ -152,7 +152,7 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>2. Online Application</h3>
+                    <h3>2. Feedback Process</h3>
                   </div>
                 </div>
                 <div className="row h-50">
@@ -192,7 +192,7 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>3. Online Application</h3>
+                    <h3>3. Kick-Off</h3>
                   </div>
                 </div>
                 <div className="row h-50">
