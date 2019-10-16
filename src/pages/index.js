@@ -5,7 +5,6 @@ import Slider from "../components/Slider"
 import RightImageSection from "../components/RightImageSection"
 import GIC from "../assets/gic.svg"
 import firstImage from "../assets/lp.png"
-import benefits from "../assets/benefits.png"
 import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
@@ -206,11 +205,8 @@ class index extends React.Component {
             <div className="section-divider" />
             <p className="basicSection--sub">So, what’s in it for you?</p>
             <div className="row mt-5">
-              <div className="col-md-5 col-lg-4" />
-              <div className="col-md-7 col-lg-8">
-                <img src={benefits} alt="" className="w-100" />
-              </div>
-              <div className="card keyBenefits--card">
+
+              <div className="card keyBenefits--card mt-4">
                 <div className="row">
                   <div className="col-2 text-center">
                     <img src={icon1} alt="code file" className="mt-2" />
