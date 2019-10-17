@@ -27,7 +27,7 @@ class apply extends Component {
           name: "muenster",
           isOpen: true,
           link: "https://techlabsorg.typeform.com/to/sD79sQ",
-          startDate: "2019-09-27",
+          startDate: "2019-10-20",
         },
         {
           name: "copenhagen",
