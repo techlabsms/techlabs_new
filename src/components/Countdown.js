@@ -9,7 +9,7 @@ class Countdown extends Component {
     minutes: 0,
     seconds: 0,
     isEnd: true,
-    isOpen: this.props.isOpen
+    isOpen: this.props.isOpen,
   }
 
   componentDidMount() {
@@ -44,7 +44,7 @@ class Countdown extends Component {
       <>
         <div className="chooseCity--start">
           <h2 className="chooseCity--start_text">
-            {isEnd ? "Application start:" : "Application is"}
+            {isEnd ? "Application ends:" : "Application is"}
           </h2>
           {isEnd ? (
             <>
@@ -74,7 +74,36 @@ class Countdown extends Component {
           ) : (
             <div className="row">
               <div className="col text-center  my-2">
-                <span className="chooseCity--countdown-numbers">{!isEnd && isOpen ? "Open": "Closed"}</span>
+                <span className="chooseCity--countdown-numbers">
+                  {!isEnd && isOpen ? (
+                    <>
+                      <div className="row">
+                        <div className="col text-center">
+                          <span className="chooseCity--countdown-numbers">
+                            {months === 0
+                              ? `${days} : ${hours} : ${minutes} : ${seconds}`
+                              : `${months} : ${days} : ${hours} : ${minutes}`}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col text-center">
+                          {months === 0 ? (
+                            <p className="chooseCity--countdown-text">
+                              days : hours : minutes : seconds
+                            </p>
+                          ) : (
+                            <p className="chooseCity--countdown-text">
+                              months : days : hours : minutes
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="py-2">Closed</div>
+                  )}
+                </span>
               </div>
             </div>
           )}
