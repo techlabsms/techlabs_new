@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import RightImageSection from "../components/RightImageSection"
 import GIC from "../assets/gic.svg"
-import firstImage from "../assets/lp.png"
+import firstImage from "../assets/startPage.png"
 import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
@@ -51,11 +51,11 @@ class index extends React.Component {
                     events.
                   </p>
                   <div className="mt-5">
-                    <Link className="btn btn-primary d-inline" to="/program">
+                    <Link className="btn btn-secondary d-inline" to="/program">
                       Program
                     </Link>
-                    <Link className="btn btn-primary d-inline" to="/locations">
-                      Locations
+                    <Link className="btn btn-primary d-inline" to="/apply">
+                      Apply now
                     </Link>
                   </div>
                 </div>
@@ -176,8 +176,9 @@ class index extends React.Component {
                   of our program that combines Online Learning, Project Work,
                   and TechLabs Community Meetings. Independent of the background
                   and prior knowledge - anyone can participate and learn
-                  tech-skills for free. We help you to complete your own tech
-                  project and qualify for tech internships.
+                  tech-skills. At TechLabs we don’t want money to be an issue.
+                  That’s why our programs are free of charge. We help you to
+                  complete your own tech project and qualify for tech roles.
                 </p>
               </div>
             </div>
@@ -205,7 +206,6 @@ class index extends React.Component {
             <div className="section-divider" />
             <p className="basicSection--sub">So, what’s in it for you?</p>
             <div className="row mt-5">
-
               <div className="card keyBenefits--card mt-4">
                 <div className="row">
                   <div className="col-2 text-center">
@@ -266,7 +266,7 @@ class index extends React.Component {
           </section>
 
           <section className="container-fluid mt-5 background h-100 py-5">
-            <div className="container mt-5">
+            <div className="container my-5 py-5">
               <h2>Learn More</h2>
               <div className="section-divider" />
               <p className="basicSection--sub">
