@@ -32,9 +32,9 @@ class location extends Component {
                   </h1>
                   <div className="row">
                     <div className="col">
-                      {location.nextBatchDate ? (
+                      {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          Next Batch: {location.nextBatchDate}
+                          Application open until: <span className="a-black">{location.nextBatchDate}</span>
                         </p>
                       ) : (
                         <p className="text-muted batch-text">
