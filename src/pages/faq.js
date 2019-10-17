@@ -69,6 +69,16 @@ class faq extends Component {
         answer:
           "Grundsätzlich kannst du davon ausgehen, dass nur die Online-Kurse auf Englisch sein werden. Die Kurse sind allerdings gut verständlich und weiterhin gibt es bei den meisten Plattformen die Möglichkeit deutsche Untertitel einzustellen. Unsere Meetings im Semester werden in Deutsch abgehalten werden.",
       },
+      {
+        question: "How much does it cost?",
+        answer:
+          "We don’t want money to be an issue. That’s why all our programs are completely free of charge.",
+      },
+      {
+        question: "Who can apply for our programs?",
+        answer:
+          "We encourage everybody to apply for our programs. Our mission is to enable as many people as possible to acquire state-of-the-art tech skills to solve today’s problems. It doesn’t matter if you are already working or still a student. We welcome everybody at TechLabs! Please apply.",
+      },
     ],
     search: "",
   }
