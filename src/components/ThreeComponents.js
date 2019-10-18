@@ -1,17 +1,11 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const ThreeComponents = () => {
   return (
-    <div className="threeComponents container my-5 py-5">
-      <div className="row mt-5 mb-5">
-        <div className="col">
-          <h2>The Core Concept</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">
-            Our blended learning concept consists of three main components!
-          </p>
-        </div>
-      </div>
+    <Container>
+      <Heading heading="The Core Concept" subheading="Our blended learning concept consists of three main components!" />
       <div className="row my-5 py-5 d-none d-lg-flex">
         <div className="col-md-2" />
         <div className="col-md-8">
@@ -100,7 +94,7 @@ const ThreeComponents = () => {
           </p>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

@@ -1,17 +1,12 @@
 import React from "react"
 import locationsImg from "../assets/locations.png"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
-    <div className="requirements my-5 py-5" id="requirements">
-      <div className="container ">
-        <div className="row">
-          <div className="col">
-            <h2>{heading}</h2>
-            <div className="section-divider" />
-            <p className="basicSection--sub">{subheading}</p>
-          </div>
-        </div>
+    <Container>
+        <Heading heading={heading} subheading={subheading} />
         <div className="row">
           <div className="col-md-5 pt-5 order-2 order-md-1">
             <ol className="requirements--list">
@@ -72,8 +67,8 @@ const Requirements = ({ heading, subheading, link, isOpen }) => {
             <img src={locationsImg} alt="" className="w-75" />
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+
   )
 }
 export default Requirements

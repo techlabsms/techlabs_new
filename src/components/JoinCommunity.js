@@ -1,17 +1,13 @@
 import React from "react"
 import SlackImg from "../assets/SlackImg.png"
 import slackLogo from "../assets/slack.png"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const JoinCommunity = ({ heading, subheading, slackLink }) => {
   return (
-    <div className="container my-5 py-5 h-100">
-      <div className="row mt-5">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
-      </div>
+    <Container>
+      <Heading heading={heading} subheading={subheading} />
       <div className="row">
         <div className="col">
           <img src={SlackImg} alt="Group Foto" className="w-75" />
@@ -33,7 +29,7 @@ const JoinCommunity = ({ heading, subheading, slackLink }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

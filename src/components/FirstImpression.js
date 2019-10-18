@@ -1,4 +1,6 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const FirstImpression = ({
   heading,
@@ -13,13 +15,9 @@ const FirstImpression = ({
   secondLink,
 }) => {
   return (
-    <>
-      <div className="row mt-5 firstImpression">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
+    <Container>
+      <div className="row firstImpression">
+        <Heading heading={heading} subheading={subheading} />
       </div>
       <div className="row">
         <div className="col-12 col-md-5 py-5">
@@ -71,7 +69,7 @@ const FirstImpression = ({
           </>
         )}
       </div>
-    </>
+    </Container>
   )
 }
 

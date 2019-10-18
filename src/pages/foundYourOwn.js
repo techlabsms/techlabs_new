@@ -13,8 +13,8 @@ class foundYourOwn extends Component {
     return (
       <>
         <NavBar />
-        <section className="py-5 padding-top-15 foundYourOwn-hero">
-          <div className="container">
+        <section className="foundYourOwn-hero py-5">
+          <div className="container py-5">
             <div className="row">
               <div className="col-md-6 my-auto xs-margin-right">
                 <h1 className="display-5 foundYourOwn--heading">

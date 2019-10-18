@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import linkedIn from "../assets/linkedin-brands.svg"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 class Team extends Component {
   render() {
@@ -23,16 +25,13 @@ class Team extends Component {
       fourthLinkedIn,
     } = this.props
     return (
-      <div className="container my-5 py-5 h-100">
-        <div className="row mt-5">
-          <div className="col">
-            <h2>Our Board Members</h2>
-            <div className="section-divider" />
-            <p className="basicSection--sub">The People behind {city}</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-3 text-center">
+      <Container>
+        <Heading
+          heading="Our Board Members"
+          subheading={`The People behind ${city}`}
+        />
+        <div className="row d-flex d-justify-content-center">
+          <div className="col-12 col-md-3 text-center">
             <img src={firstImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
               <span className="highlighted">
@@ -48,7 +47,7 @@ class Team extends Component {
             </h3>
             <p className="text-justify team--text mt-4">{firstDescription}</p>
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-12 col-md-3 text-center">
             <img src={secondImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
               <span className="highlighted">
@@ -64,7 +63,7 @@ class Team extends Component {
             </h3>
             <p className="text-justify team--text mt-4">{secondDescription}</p>
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-12 col-md-3 text-center">
             <img src={thirdImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
               <span className="highlighted">
@@ -80,7 +79,7 @@ class Team extends Component {
             </h3>
             <p className="text-justify team--text mt-4">{thirdDescription}</p>
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-12 col-md-3 text-center">
             <img src={fourthImage} alt="" className="team--img my-4" />
             <h3 className="team--name text-center">
               <span className="highlighted">
@@ -97,7 +96,7 @@ class Team extends Component {
             <p className="text-justify team--text mt-4">{fourthDescription}</p>
           </div>
         </div>
-      </div>
+      </Container>
     )
   }
 }

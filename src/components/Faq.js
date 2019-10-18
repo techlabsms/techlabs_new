@@ -1,23 +1,19 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const Faq = props => {
   return (
-    <>
-      <section className="py-5 my-5">
-        <div className="container">
-          <div className="row my-3">
-            <div className="col">
-              <h2>FAQ´s</h2>
-              <div className="section-divider" />
-              <p className="basicSection--sub">Do you have more questions?</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">{props.children}</div>
-          </div>
+    <Container>
+      <div className="container">
+        <div className="row my-3">
+          <Heading heading="FAQ´s" subheading="Do you have more questions?" />
         </div>
-      </section>
-    </>
+        <div className="row">
+          <div className="col">{props.children}</div>
+        </div>
+      </div>
+    </Container>
   )
 }
 

@@ -1,17 +1,13 @@
 import React from "react"
 import quote from "../assets/quote.png"
 import placeholder from "../assets/placeholder.png"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCompanyLogo}) => {
   return (
-    <div className="container my-5 py-5 partners">
-      <div className="row mt-5">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
-      </div>
+    <Container>
+       <Heading heading={heading} subheading={subheading} />
       <div className="row mt-5">
         <div className="col-md-1 text-right">
           <img src={quote} alt="" />
@@ -40,10 +36,8 @@ const Partners = ({heading, subheading, quoteText, quoteName, quoteRole, quoteCo
             </span>
           </p>
         </div>
-
-        
       </div>
-    </div>
+    </Container>
   )
 }
 

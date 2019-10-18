@@ -3,6 +3,8 @@ import DataScience from "../assets/dashboard.png"
 import WebDev from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 class Academy extends Component {
   state = {
@@ -19,16 +21,11 @@ class Academy extends Component {
   render() {
     const { images, index } = this.state
     return (
-      <div className="academy container py-5 my-5">
-        <div className="row mt-5">
-          <div className="col-sm-12">
-            <h2>TechLabs Academy</h2>
-            <div className="section-divider" />
-            <p className="basicSection--sub">
-              Explore our courses and choose the one that suits you the most!
-            </p>
-          </div>
-        </div>
+      <Container>
+        <Heading
+          heading="TechLabs Academy"
+          subheading="Explore our courses and choose the one that suits you the most!"
+        />
         <div className="row mt-5 d-flex mb-5">
           <div className="col align-self-center text-center d-none d-lg-block">
             <img src={images[index]} alt="web" className="w-75 py-5" />
@@ -152,7 +149,7 @@ class Academy extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     )
   }
 }

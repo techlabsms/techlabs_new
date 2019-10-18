@@ -1,4 +1,6 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const LeftImageSection = ({
   heading,
@@ -10,14 +12,8 @@ const LeftImageSection = ({
   rightPartSize,
 }) => {
   return (
-    <div className="container my-5 h-100 py-5">
-      <div className="row my-5 mt-5">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
-      </div>
+    <Container>
+      <Heading heading={heading} subheading={subheading} />
       {float && (
         <>
           <div className="d-none d-md-block row mt-5">
@@ -46,7 +42,7 @@ const LeftImageSection = ({
           <p className="basicSection--text">{text}</p>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

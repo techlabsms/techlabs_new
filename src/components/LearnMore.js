@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const LearnMore = ({
   heading,
@@ -23,14 +25,9 @@ const LearnMore = ({
   externalLink,
 }) => {
   return (
-    <>
-      <div className="row mt-5">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
-      </div>
+    <Container>
+      <Heading heading={heading} subheading={subheading} />
+
       <div className="learn--card w-100 mb-4">
         <div className="row p-3 d-flex align-items-center">
           <div className="col-md-4 text-center text-md-left">
@@ -115,7 +112,7 @@ const LearnMore = ({
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

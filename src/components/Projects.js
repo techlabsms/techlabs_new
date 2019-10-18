@@ -2,19 +2,13 @@ import React from "react"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
 import ds from "../assets/ds.png"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const Projects = () => {
   return (
-    <>
-      <div className="row mt-5">
-        <div className="col">
-          <h2>Projects From Our Participants</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">
-            Have a look at these completed projects and get inspired!
-          </p>
-        </div>
-      </div>
+    <Container>
+       <Heading heading="Projects From Our Participants" subheading="Have a look at these completed projects and get inspired!" />
       <div className="row d-flex">
         <div className="col-md-4 py-5 justify-content-center align-self-center">
           <div className="card h-75 mt-5">
@@ -129,7 +123,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

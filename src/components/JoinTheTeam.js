@@ -1,15 +1,11 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const JoinTheTeam = ({ heading, subheading }) => {
   return (
-    <>
-      <div className="row mt-5">
-        <div className="col">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
-        </div>
-      </div>
+    <Container>
+    <Heading heading={heading} subheading={subheading} />
       <div className="row mt-5">
         <div className="col">
           <p className="joinTheTeam--text">
@@ -23,7 +19,7 @@ const JoinTheTeam = ({ heading, subheading }) => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

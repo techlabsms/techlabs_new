@@ -1,8 +1,9 @@
 import React from "react"
+import Container from './smallComponents/Container'
 
 const PartnerLogos = ({ logoOne, logoTwo, logoThree, logoFour }) => {
   return (
-    <div className="container py-5">
+    <Container>
       <div className="row my-5 d-flex h-100 partnerLogos">
         <div className="col-md-4 col-12 text-center text-md-left justify-content-center align-self-center">
           <p className="partnerLogos--text my-5">
@@ -22,7 +23,7 @@ const PartnerLogos = ({ logoOne, logoTwo, logoThree, logoFour }) => {
           <img src={logoFour} alt="partner logo" className="partnerLogos--img"/>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

@@ -11,6 +11,8 @@ import PartnerLogos from "../components/PartnerLogos"
 import teamspirit from "../assets/teamspirit.png"
 import pin2 from "../assets/pin2.png"
 import getDirection from "../assets/get-directions-button.png"
+import Heading from "../components/smallComponents/Heading"
+import Container from "../components/smallComponents/Container"
 
 class location extends Component {
   render() {
@@ -34,7 +36,10 @@ class location extends Component {
                     <div className="col">
                       {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          Application open until: <span className="a-black">{location.nextBatchDate}</span>
+                          Application open until:{" "}
+                          <span className="a-black">
+                            {location.nextBatchDate}
+                          </span>
                         </p>
                       ) : (
                         <p className="text-muted batch-text">
@@ -169,14 +174,11 @@ class location extends Component {
             />
           )}
           {location.officeName && (
-            <div className="container h-100 my-5 py-5">
-              <div className="row">
-                <div className="col">
-                  <h2>{`Our Office - ${location.officeName}`}</h2>
-                  <div className="section-divider" />
-                  <p className="basicSection--sub">Checkout our Workspace</p>
-                </div>
-              </div>
+            <Container>
+              <Heading
+                heading={`Our Office - ${location.officeName}`}
+                subheading="Checkout our Workspace"
+              />
               <div className="row">
                 <div
                   className="col-md-7 office--img"
@@ -213,7 +215,7 @@ class location extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </Container>
           )}
         </section>
         <Footer />

@@ -7,22 +7,16 @@ import hackathon from "../assets/hackathonBlack.svg"
 import certificate from "../assets/certificateBlack.svg"
 import dotLine from "../assets/dotLine.svg"
 import dot from "../assets/dot.svg"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const Process = () => {
   return (
-    <>
-      <div className="row mt-5">
-        <div className="col">
-          <h2>Your Learning Journey</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">
-            Explore the TechLabs Journey from start to finish!
-          </p>
-        </div>
-      </div>
+    <Container>
+      <Heading heading="Your Learning Journey" subheading="Explore the TechLabs Journey from start to finish!" />
       <div className="d-none d-lg-block">
         <div className="div">
-          <div className="row mt-5">
+          <div className="row">
             <div className="col-12 col-md-4 d-none d-lg-block">
               <h2 className="process--title">
                 <span className="process--title-number">1. </span>Orientation
@@ -163,7 +157,7 @@ const Process = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 
