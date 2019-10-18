@@ -7,6 +7,7 @@ import aiwhite from "../assets/ai_white.png"
 import webwhite from "../assets/web_white.png"
 import { Link } from "gatsby"
 import Countdown from "./Countdown"
+import Heading from "./smallComponents/Heading"
 
 class ChooseCity extends Component {
   state = {
@@ -41,13 +42,7 @@ class ChooseCity extends Component {
     return (
       <>
         <div className="container">
-          <div className="row">
-            <div className="col-md-8">
-              <h2>{heading}</h2>
-              <div className="section-divider" />
-              <p className="basicSection--sub">{subheading}</p>
-            </div>
-          </div>
+          <Heading heading={heading} subheading={subheading} />
           <div className="row my-3">
             <div className="col-md-4 mt-4">
               <a href="#requirements" className="noDec aNone w-100">

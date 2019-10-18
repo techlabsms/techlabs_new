@@ -8,6 +8,8 @@ import { graphql, Link } from "gatsby"
 import get from "lodash/get"
 import MAPLOC from "../assets/mapLoc.png"
 import arrowDown from "../assets/arrowDown.svg"
+import Heading from "../components/smallComponents/Heading"
+import Container from "../components/smallComponents/Container"
 
 class Locations extends Component {
   constructor() {
@@ -33,11 +35,11 @@ class Locations extends Component {
             <div className="container py-5">
               <div className="row margin-top-bot padding-location">
                 <div className="col-md-5 col-lg-5 border-0 text-left">
-                  <h1 className="mt-3 display-4">
+                  <h1 className="pb-5 display-4">
                     Discover our <br />{" "}
                     <span className="highlighted">Locations</span>
                   </h1>
-                  <p className="pr-5 text-justify mt-5">
+                  <p className="programmHero--intro">
                     TechLabs is a set of enthusiastic, driven, and passionate
                     individuals who have joined forces to turn as many people as
                     possible into Digital Shapers. Exciting meetups, hackathons,
@@ -65,16 +67,16 @@ class Locations extends Component {
             <div className="container" id="locations-techlabs">
               <div className="row">
                 <div className="col-md-8">
-                  <h1 className="section-title">TechLabs Locations</h1>
-                  <div className="section-divider" />
-                  <p className="basicSection--sub">
-                    Check out our current tech communities!
-                  </p>
+                  <Heading
+                    heading="TechLabs Locations"
+                    subheading="Check out our current tech communities!"
+                  />
                 </div>
-                <div className="col-md-4">
+
+                <div className="col-md-4 d-flex">
                   <input
                     type="search"
-                    className="locations--search mt-2 w-100 mb-4"
+                    className="locations--search mt-2 w-100 mb-4 align-self-center"
                     placeholder="Search location"
                     onChange={e => {
                       this.setState({
@@ -85,7 +87,7 @@ class Locations extends Component {
                 </div>
               </div>
 
-              <div className="row pl-5 pr-5">
+              <div className="row my-5 py-5">
                 {filteredLocations.map(location => (
                   <LocationCard
                     imgTop={location.node.image.file.url}
@@ -96,47 +98,45 @@ class Locations extends Component {
               </div>
             </div>
           </section>
-          <section>
-            <div className="container py-5">
-              <div className="row">
-                <div className="col">
-                  <div className="card">
-                    <div class="row no-gutters">
-                      <div class="col-md-6 order-2 order-md-1">
-                        <div class="card-body">
-                          <h2>
-                            <span className="highlighted mt-5">Your city</span>{" "}
-                            is not on the map?
-                          </h2>
-                          <p class="locations--card-text mt-5 mr-3 mt-2">
-                            If you are willing to shape the future of tech
-                            education and want to create your own TechLabs
-                            location, reach out! Let’s work together and{" "}
-                            <span className="highlighted">
-                              build something great!
-                            </span>
-                          </p>
-                          <Link
-                            to="/foundYourOwn"
-                            className="btn btn-primary mt-5"
-                          >
-                            More information
-                          </Link>
-                        </div>
+          <Container>
+            <div className="row">
+              <div className="col">
+                <div className="card">
+                  <div class="row no-gutters">
+                    <div class="col-md-6 order-2 order-md-1">
+                      <div class="card-body">
+                        <h2>
+                          <span className="highlighted mt-5">Your city</span> is
+                          not on the map?
+                        </h2>
+                        <p class="locations--card-text mt-5 mr-3 mt-2">
+                          If you are willing to shape the future of tech
+                          education and want to create your own TechLabs
+                          location, reach out! Let’s work together and{" "}
+                          <span className="highlighted">
+                            build something great!
+                          </span>
+                        </p>
+                        <Link
+                          to="/foundYourOwn"
+                          className="btn btn-primary mt-5"
+                        >
+                          More information
+                        </Link>
                       </div>
-                      <div class="col-md-6 text-center align-middle order-1 order-md-2">
-                        <img
-                          src={MAPLOC}
-                          class="card-img pt-4 pr-2 pb-5"
-                          alt="..."
-                        />
-                      </div>
+                    </div>
+                    <div class="col-md-6 text-center align-middle order-1 order-md-2">
+                      <img
+                        src={MAPLOC}
+                        class="card-img pt-4 pr-2 pb-5"
+                        alt="..."
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </Container>
         </div>
 
         <Footer />

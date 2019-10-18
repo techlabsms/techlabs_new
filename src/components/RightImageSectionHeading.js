@@ -1,4 +1,6 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const RightImageSectionHeading = ({
   heading,
@@ -10,12 +12,10 @@ const RightImageSectionHeading = ({
   buttonLink,
 }) => {
   return (
-    <div className="container my-5 py-5 h-100">
+    <Container>
       <div className="row mt-5">
         <div className="col-md-6 order-2 order-md-1">
-          <h2>{heading}</h2>
-          <div className="section-divider" />
-          <p className="basicSection--sub">{subheading}</p>
+          <Heading heading={heading} subheading={subheading} />
           <div className="basicSection--text">{text}</div>
           {hasButton && (
             <div className="row mt-5 ml-2">
@@ -29,7 +29,7 @@ const RightImageSectionHeading = ({
           <img src={image} alt="" className="w-100 mb-3" />
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

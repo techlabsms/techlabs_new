@@ -2,6 +2,7 @@ import React from "react"
 import prerectangle from "../assets/precatngle.png"
 import arrowRight from "../assets/arrowRight.png"
 import arrowLeft from "../assets/arrowLeft.png"
+import Heading from "./smallComponents/Heading"
 
 class ApplicationProcess extends React.Component {
   state = {
@@ -25,16 +26,11 @@ class ApplicationProcess extends React.Component {
   }
 
   render() {
+    const { heading, subheading } = this.props
     return (
       <>
-        <div className="container d-none d-lg-block">
-          <div className="row">
-            <div className="col">
-              <h2>{this.props.heading}</h2>
-              <div className="section-divider" />
-              <p className="basicSection--sub">{this.props.subheading}</p>
-            </div>
-          </div>
+        <div className="container d-none d-lg-block my-5 py-5">
+          <Heading heading={heading} subheading={subheading} />
           <div className="row mt-4">
             <div className="col-md-4">
               <div
@@ -100,7 +96,7 @@ class ApplicationProcess extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fluid d-block d-lg-none applProcess--cards-container">
+        <div className="container-fluid d-block d-lg-none applProcess--cards-container my-5 py-5">
           <div className="container">
             <div className="row">
               <div className="col">

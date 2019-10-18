@@ -27,11 +27,11 @@ class FaqQuestion extends Component {
           <div className="py-3">
             <Link className="faq--a" onClick={() => this.handleClick()}>
               <div className="row h-100">
-                <div className="col-1">
+                <div className="col-2">
                   <FontAwesomeIcon
                     icon={faChevronRight}
                     className={
-                      "faqQuestion--icon mr-3 mt-3 ml-4 " +
+                      "faqQuestion--icon mr-5 mt-3 ml-4 " +
                       (this.state.isOpen ? "faqQuestion--rotate" : null)
                     }
                   />
@@ -43,7 +43,7 @@ class FaqQuestion extends Component {
             </Link>
             {this.state.isOpen && (
               <div className="row justify-content-end">
-                <div className="col-11">
+                <div className="col-10">
                   <p className="pr-5 text-justify">{this.props.answer}</p>
                 </div>
               </div>

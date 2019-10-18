@@ -1,15 +1,14 @@
 import React from "react"
+import Heading from "./smallComponents/Heading"
+import Container from "./smallComponents/Container"
 
 const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
   return (
-    <div>
-      <div className="row">
-        <div className="col">
-          <h2>What Will You Learn?</h2>
-          <div className="section-divider" />
-          <p>{intro}</p>
-        </div>
-      </div>
+    <Container>
+      <Heading
+        heading="What Will You Learn?"
+        subheading={intro}/>
+
       <div className="row">
         <div className="col">
           <div className="learn--card">
@@ -66,7 +65,7 @@ const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

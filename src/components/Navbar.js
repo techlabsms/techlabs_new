@@ -20,7 +20,9 @@ class Navbar extends React.Component {
     return (
       <>
         <Head />
-        <Headroom>
+        <Headroom
+          disableInlineStyles={true}
+        >
           <nav className="navbar navbar-expand-lg navbar-light navbar-add">
             <Link className="navbar-brand" to="/">
               <img src={logo} className="tl-logo" alt="tl-logo" />
@@ -160,7 +162,7 @@ class Navbar extends React.Component {
             </div>
           </nav>
           {isOpen && <MobileNav />}
-        </Headroom>
+          </Headroom>
       </>
     )
   }

@@ -3,17 +3,16 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import RightImageSection from "../components/RightImageSection"
+import KeyBenefits from "../components/KeyBenefits"
 import GIC from "../assets/gic.svg"
 import firstImage from "../assets/startPage.png"
-import icon1 from "../assets/icon1.png"
-import icon2 from "../assets/icon2.png"
-import icon3 from "../assets/icon3.png"
-import icon4 from "../assets/icon4.png"
 import gic from "../assets/gic.png"
 import nils from "../assets/nils.png"
 import { Link } from "gatsby"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
+import Heading from "../components/smallComponents/Heading"
+import Container from "../components/smallComponents/Container"
 
 class index extends React.Component {
   componentDidMount() {
@@ -76,13 +75,12 @@ class index extends React.Component {
             </div>
           </section>
 
-          <section className="py-5 wwo">
+          <section className="py-5 my-5 wwo">
             <div className="container">
-              <h2>What We Offer</h2>
-              <div className="section-divider" />
-              <p className="basicSection--sub">
-                Check out what TechLabs has in store for you!
-              </p>
+              <Heading
+                heading="What We Offer"
+                subheading="Check out what TechLabs has in store for you!"
+              />
               <div className="row">
                 <div className="col-lg-5 d-none d-md-block">
                   <div className="d-flex flex-column h-100 p-4" />
@@ -154,21 +152,22 @@ class index extends React.Component {
             </div>
           </section>
           <Slider />
-          <section className="container">
-            <RightImageSection
-              heading="Award-Winning Concept"
-              subheading="Google Impact Challenge 2018!"
-              text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
-              image={gic}
-              hasButton={true}
-              buttonText="Read more"
-              buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
+
+          <RightImageSection
+            heading="Award-Winning Concept"
+            subheading="Google Impact Challenge 2018!"
+            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
+            image={gic}
+            hasButton={true}
+            buttonText="Read more"
+            buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
+          />
+
+          <Container>
+            <Heading
+              heading="The TechLabs Journey"
+              subheading="What awaits you at TechLabs"
             />
-          </section>
-          <section className="container whatWeOffer mt-5">
-            <h2>The TechLabs Journey</h2>
-            <div className="section-divider" />
-            <p className="basicSection--sub">What awaits you at TechLabs?</p>
             <div className="row">
               <div className="col">
                 <p className="mt-2 text-justify whatWeOffer--text">
@@ -200,78 +199,14 @@ class index extends React.Component {
                 </div>
               </div>
             </div>
-          </section>
-          <section className="container mt-5 mb-5 py-5">
-            <h2>Key Benefits</h2>
-            <div className="section-divider" />
-            <p className="basicSection--sub">So, what’s in it for you?</p>
-            <div className="row mt-5">
-              <div className="card keyBenefits--card mt-4">
-                <div className="row">
-                  <div className="col-2 text-center">
-                    <img src={icon1} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Start to code - independent of your prior knowledge</h3>
-                    <p className="keyBenefits--card-text">
-                      Get a personalized learning path. Learn tech skills in
-                      Data Science, Artificial Intelligence, or Web Development
-                      using the best online resources available.
-                    </p>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon4} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Learn from skilled mentors</h3>
-                    <p className="keyBenefits--card-text">
-                      Do you have any questions during the project or your
-                      learning journey? Just ask our competent mentors with many
-                      years of practical experience!
-                    </p>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon2} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Apply your knowledge and solve real-world tasks</h3>
-                    <p className="keyBenefits--card-text">
-                      Choose the project you are most interested in and work on
-                      it in a small interdisciplinary team together with other
-                      TechLabs participants. Build your own tech project
-                      portfolio.
-                    </p>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-2 text-center">
-                    <img src={icon3} alt="code file" className="mt-2" />
-                  </div>
-                  <div className="col-10 pl-5">
-                    <h3>Shape your career path</h3>
-                    <p className="keyBenefits--card-text">
-                      If you want to learn state-of-the-art tech skills that
-                      will enable you to successfully realize your own tech
-                      projects, join a tech startup, or get in touch with our
-                      renowned partners – TechLabs is the right choice for you
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
+          </Container>
+          <KeyBenefits />
           <section className="container-fluid mt-5 background h-100 py-5">
-            <div className="container my-5 py-5">
-              <h2>Learn More</h2>
-              <div className="section-divider" />
-              <p className="basicSection--sub">
-                Check out our locations and our Digital Shaper Program!
-              </p>
+            <Container>
+              <Heading
+                heading="Learn More"
+                subheading="Check out our locations and our Digital Shaper Program!"
+              />
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
@@ -299,7 +234,7 @@ class index extends React.Component {
                   </Link>
                 </div>
               </div>
-            </div>
+            </Container>
           </section>
         </div>
         <Footer />

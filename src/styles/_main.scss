@@ -90,6 +90,24 @@ body {
   z-index: 100 !important;
 }
 
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(0%);
+  width: 100%;
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  width: 100%;
+}
+
 //dropdown
 .dropdown:hover > .dropdown-menu {
   display: block;
