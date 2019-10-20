@@ -7,6 +7,14 @@ module.exports = {
     image: `/assets/tl-favicon.svg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1534821,
+        sv: 6,
+      },
+    },
+
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-contentful`,
