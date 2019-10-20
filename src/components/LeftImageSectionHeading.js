@@ -6,10 +6,10 @@ const LeftImageSectionHeading = ({ heading, subheading, text, image }) => {
   return (
     <Container>
       <div className="row mt-5">
-        <div className="col-md-6 text-center mb-3">
-          <img src={image} alt="" className="w-100" />
+        <div className="col-lg-6 text-center mb-3 d-flex">
+          <img src={image} alt="" className="w-100 align-self-center" />
         </div>
-        <div className="col-md-6">
+        <div className="col-lg-6">
           <Heading heading={heading} subheading={subheading} />
           <p className="basicSection--text">{text}</p>
         </div>

@@ -7,9 +7,9 @@ import LocationCard from "../components/LocationCard"
 import { graphql, Link } from "gatsby"
 import get from "lodash/get"
 import MAPLOC from "../assets/mapLoc.png"
-import arrowDown from "../assets/arrowDown.svg"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
+import ArrowButton from "../components/smallComponents/ArrowButton"
 
 class Locations extends Component {
   constructor() {
@@ -46,11 +46,7 @@ class Locations extends Component {
                     socials, and workshops await you. Discover the TechLabs
                     world here
                   </p>
-                  <div className="mt-5">
-                    <a className="locations--hero-btn" href="#locations-list">
-                      <img src={arrowDown} alt="arrow down" />
-                    </a>
-                  </div>
+                  <ArrowButton href="locations-list" />
                 </div>
                 <div className="col-md-7 col-lg-7 text-center">
                   <img
