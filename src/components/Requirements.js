@@ -6,8 +6,8 @@ import Container from "./smallComponents/Container"
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
     <Container>
-        <Heading heading={heading} subheading={subheading} />
-        <div className="row">
+        <Heading heading={heading} subheading={subheading}/>
+        <div className="row" id="requirements">
           <div className="col-md-5 pt-5 order-2 order-md-1">
             <ol className="requirements--list">
               <li className="requirements--list_item py-2">

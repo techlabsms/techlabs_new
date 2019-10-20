@@ -77,28 +77,7 @@ class Countdown extends Component {
                 <span className="chooseCity--countdown-numbers">
                   {!isEnd && isOpen ? (
                     <>
-                      <div className="row">
-                        <div className="col text-center">
-                          <span className="chooseCity--countdown-numbers">
-                            {months === 0
-                              ? `${days} : ${hours} : ${minutes} : ${seconds}`
-                              : `${months} : ${days} : ${hours} : ${minutes}`}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col text-center">
-                          {months === 0 ? (
-                            <p className="chooseCity--countdown-text">
-                              days : hours : minutes : seconds
-                            </p>
-                          ) : (
-                            <p className="chooseCity--countdown-text">
-                              months : days : hours : minutes
-                            </p>
-                          )}
-                        </div>
-                      </div>
+                      <div className="py-2">Open</div>
                     </>
                   ) : (
                     <div className="py-2">Closed</div>
