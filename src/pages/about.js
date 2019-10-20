@@ -38,18 +38,24 @@ class about extends Component {
           subheading="We need to address the digital skill gap"
           text="McKinsey estimates that between 400 million and 800 million individuals could be displaced by automation and need to find new jobs by 2030 around the world. 75 million to 375 million may need to switch occupational categories and learn new skills. Who is there to help? Universities and bootcamps will not achieve this alone. It will come down to people like us to rethink education from the ground up and come up with new and innovative ideas on how to solve this immense challenge."
           image={WhyWeDo}
+          leftSize="5"
+          rightSize="7"
         />
         <LeftImageSectionHeading
           heading="Our Vision"
           subheading="A world without digital illiterates"
           text="We at TechLabs dream of a world with no digital illiterates. A world full of tech-savvy individuals who approach the challenges of our time with a digital and entrepreneurial mindset. As a learning accelerator for technology skills, TechLabs designs pioneering learning journeys for our communities. It's a place where diversity meets personalized learning paths. A place where beginners meet experienced mentors. A place where curiosity meets powerful learning resources and where online and offline learning are not just two separate sides of the same coin, but perfectly blended together into an holistic learning concept."
           image={google}
+          leftSize="7"
+          rightSize="5"
         />
         <RightImageSectionHeading
           heading="Our Mission"
           subheading="A learning platform for young people of all disciplines"
           text="Our mission is to enable as many people as possible to acquire state-of-the-art tech skills to solve today’s problems in a digital way by providing a unique program that combines online learning, project work, and local community events. To bring digital education to the next level, we aim for three distinctive goals."
           image={mission}
+          leftSize="5"
+          rightSize="7"
         />
         <ThreeCard
           headingOne="Effective Learning"
@@ -65,6 +71,8 @@ class about extends Component {
           subheading="Find out more about the people behind the mission"
           text="What started 2017 as an idea of our seven founding members in the working area of the local library in Münster has become a growing team with more than seventy team members. The inspiring work that everybody contributes on a voluntary basis helps TechLabs to keep flourishing. TechLabs consist of seventy individuals from all kinds of different backgrounds who bonded over the same idea and driven reach the TechLabs Mission."
           image={teamStairs}
+          leftSize="7"
+          rightSize="5"
         />
         <RightImageSectionHeading
           heading="Join the Team"
@@ -74,6 +82,8 @@ class about extends Component {
           hasButton={true}
           buttonText="Apply now"
           buttonLink="https://www.notion.so/techlabs/Work-at-TechLabs-16fa32d54d2d41a48ece59c6d28ed403"
+          leftSize="5"
+          rightSize="7"
         />
         <CheckoutLocations />
         <RightImageSection

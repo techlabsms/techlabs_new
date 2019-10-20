@@ -13,7 +13,7 @@
     padding-bottom: 100%;
     background: linear-gradient(
       270deg,
-      rgba(251, 29, 92, 0.3) 0%,
+      rgba(251, 29, 92, 0.69) 0%,
       rgba(196, 196, 196, 0) 102.23%
     );
     content: "";
@@ -22,7 +22,8 @@
   }
   &--heading {
     font-size: 50px;
-    line-height: 102px;
+    line-height: 70px;
+    margin-right: 15%;
     span {
       text-decoration: underline;
       text-decoration-color: $color-p;
@@ -32,7 +33,7 @@
   &--mobil {
     background: linear-gradient(
       270deg,
-      rgba(251, 29, 92, 0.3) 0%,
+      rgba(251, 29, 92, 0.69) 0%,
       rgba(196, 196, 196, 0) 102.23%
     );
     width: 100%;
