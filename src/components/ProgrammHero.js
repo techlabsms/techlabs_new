@@ -2,6 +2,7 @@ import React from "react"
 import clock from "../assets/clock.png"
 import diploma from "../assets/diploma.png"
 import profile from "../assets/profile.png"
+import ArrowButton from "../components/smallComponents/ArrowButton"
 
 const ProgrammHero = ({
   headingFirst,
@@ -10,6 +11,8 @@ const ProgrammHero = ({
   showCard,
   background,
   backgroundMobil,
+  href,
+  secondintro,
 }) => {
   return (
     <>
@@ -32,7 +35,11 @@ const ProgrammHero = ({
                 </span>
               </h1>
 
-              <p className="programmHero--intro mb-5">{intro}</p>
+              <p className="programmHero--intro">{intro}</p>
+              {secondintro && (
+                <p className="programmHero--intro-second mb-5">{secondintro}</p>
+              )}
+              {href && <ArrowButton href={href} />}
             </div>
             {showCard && (
               <>

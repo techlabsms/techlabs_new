@@ -43,10 +43,19 @@
     font-size: 20px;
     line-height: 35px;
     /* or 175% */
-    width: 80%;
+    width: 70%;
     text-align: justify;
     color: #8b9fa8;
     margin-top: 20%;
+    &-second {
+      font-size: 20px;
+      line-height: 35px;
+      /* or 175% */
+      width: 70%;
+      text-align: justify;
+      color: #8b9fa8;
+      margin-top: 5%;
+    }
   }
 
   &--card {
@@ -100,7 +109,7 @@
       margin-bottom: 20%;
     }
 
-    &--intro{
+    &--intro {
       margin-top: 0;
     }
   }
