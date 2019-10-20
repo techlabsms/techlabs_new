@@ -205,6 +205,39 @@ const privacyPolicy = () => {
           collect data. However, the Google Tag Manager does not access this
           data.
           <br />
+          <br />
+          <h5 className="margin-b-0">Hotjar</h5>
+          Hotjar Wir nutzen Hotjar, um die Bedürfnisse unserer Nutzer besser zu
+          verstehen und das Angebot auf dieser Website zu optimieren. Mithilfe
+          der Technologie von Hotjar bekommen wir ein besseres Verständnis von
+          den Erfahrungen unserer Nutzer (z.B. wieviel Zeit Nutzer auf welchen
+          Seiten verbringen, welche Links sie anklicken, was sie mögen und was
+          nicht etc.) und das hilft uns, unser Angebot am Feedback unserer
+          Nutzer auszurichten. Hotjar arbeitet mit Cookies und anderen
+          Technologien, um Informationen über das Verhalten unserer Nutzer und
+          über ihre Endgeräte zu sammeln (insbesondere IP Adresse des Geräts
+          (wird nur in anonymisierter Form erfasst und gespeichert),
+          Bildschirmgröße, Gerätetyp (Unique Device Identifiers), Informationen
+          über den verwendeten Browser, Standort (nur Land), zum Anzeigen
+          unserer Website bevorzugte Sprache). Hotjar speichert diese
+          Informationen in einem pseudonymisierten Nutzerprofil. Die
+          Informationen werden weder von Hotjar noch von uns zur Identifizierung
+          einzelner Nutzer verwendet oder mit weiteren Daten über einzelne
+          Nutzer zusammengeführt. Rechtsgrundlage ist Art. 6 abs. 1 S. 1 lit. f
+          DSGVO. Weitere Informationen findest Du in Hotjars
+          Datenschutzerklärung:{" "}
+          <a href="https://www.hotjar.com/legal/policies/privacy">
+            https://www.hotjar.com/legal/policies/privacy
+          </a>{" "}
+          Du kannst der Speicherung eines Nutzerprofils und von Informationen
+          über Deinen Besuch auf unserer Website durch Hotjar sowie dem Setzen
+          von Hotjar Tracking Cookies auf anderen Websites über diesen Link
+          widersprechen:{" "}
+          <a href="https://www.hotjar.com/legal/compliance/opt-out">
+            https://www.hotjar.com/legal/compliance/opt-out
+          </a>
+          <br />
+          <br />
           <h5 className="margin-b-0">Hosting and server log files</h5>
           <br />
           For the hosting of the Internet pages we take services of our
