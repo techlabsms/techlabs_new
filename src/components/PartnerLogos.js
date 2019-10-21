@@ -1,7 +1,16 @@
 import React from "react"
 import Container from "./smallComponents/Container"
 
-const PartnerLogos = ({ logoOne, logoTwo, logoThree, logoFour }) => {
+const PartnerLogos = ({
+  logoOne,
+  linkPartnerOne,
+  logoTwo,
+  linkPartnerTwo,
+  logoThree,
+  linkPartnerThree,
+  logoFour,
+  linkPartnerFour,
+}) => {
   return (
     <Container>
       <div className="row my-5 d-flex h-100 partnerLogos">
@@ -12,24 +21,40 @@ const PartnerLogos = ({ logoOne, logoTwo, logoThree, logoFour }) => {
           </p>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
-          <img src={logoOne} alt="partner logo" className="partnerLogos--img img-fluid" />
+          <a href={linkPartnerOne}>
+            <img
+              src={logoOne}
+              alt="partner logo"
+              className="partnerLogos--img img-fluid"
+            />
+          </a>
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">
-          <img src={logoTwo} alt="partner logo" className="partnerLogos--img img-fluid" />
+          <a href={linkPartnerThree}>
+            <img
+              src={logoTwo}
+              alt="partner logo"
+              className="partnerLogos--img img-fluid"
+            />
+          </a>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
-          <img
-            src={logoThree}
-            alt="partner logo"
-            className="partnerLogos--img img-fluid"
-          />
+          <a href={linkPartnerThree}>
+            <img
+              src={logoThree}
+              alt="partner logo"
+              className="partnerLogos--img img-fluid"
+            />
+          </a>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
-          <img
-            src={logoFour}
-            alt="partner logo"
-            className="partnerLogos--img img-fluid"
-          />
+          <a href={linkPartnerFour}>
+            <img
+              src={logoFour}
+              alt="partner logo"
+              className="partnerLogos--img img-fluid"
+            />
+          </a>
         </div>
       </div>
     </Container>

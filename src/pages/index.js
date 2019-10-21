@@ -78,11 +78,15 @@ class index extends React.Component {
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
-            <PartnerLogos 
+            <PartnerLogos
               logoOne={accenture}
+              linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
               logoTwo={sopra}
+              linkPartnerTwo="https://www.soprasteria.de/de"
               logoThree={westfalen}
+              linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
               logoFour={ernstYoung}
+              linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
 
