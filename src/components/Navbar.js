@@ -20,9 +20,7 @@ class Navbar extends React.Component {
     return (
       <>
         <Head />
-        <Headroom
-          disableInlineStyles={true}
-        >
+        <Headroom disableInlineStyles={true}>
           <nav className="navbar navbar-expand-lg navbar-light navbar-add">
             <Link className="navbar-brand" to="/">
               <img src={logo} className="tl-logo" alt="tl-logo" />
@@ -125,6 +123,15 @@ class Navbar extends React.Component {
                     </Link>
                   </div>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/about"
+                    activeClassName="navLink--active"
+                  >
+                    About
+                  </Link>
+                </li>
 
                 <li className="nav-item">
                   <Link
@@ -136,7 +143,7 @@ class Navbar extends React.Component {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                {/*<li className="nav-item">
                   <Link
                     className="nav-button"
                     to="/apply"
@@ -144,7 +151,7 @@ class Navbar extends React.Component {
                   >
                     Apply now
                   </Link>
-                </li>
+                </li>*/}
 
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">
@@ -162,7 +169,7 @@ class Navbar extends React.Component {
             </div>
           </nav>
           {isOpen && <MobileNav />}
-          </Headroom>
+        </Headroom>
       </>
     )
   }

@@ -7,7 +7,6 @@ import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
-import PartnerLogos from "../components/PartnerLogos"
 import teamspirit from "../assets/teamspirit.png"
 import pin2 from "../assets/pin2.png"
 import getDirection from "../assets/get-directions-button.png"
@@ -80,14 +79,6 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
-            {location.hasPartner && (
-              <PartnerLogos
-                logoOne={location.partnerOne.file.url}
-                logoTwo={location.partnerTwo.file.url}
-                logoThree={location.partnerThree.file.url}
-                logoFour={location.partnerFour.file.url}
-              />
-            )}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}

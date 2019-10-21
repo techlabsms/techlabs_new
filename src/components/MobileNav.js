@@ -155,16 +155,22 @@ class MobileNav extends Component {
               )}
             </li>
 
+            <Link to="/about" activeClassName="navLink--active">
+              <li className="nav-item">
+                <h3 className="nav-link mobileNav--link">About</h3>
+              </li>
+            </Link>
+
             <Link to="/blog" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Blog</h3>
               </li>
             </Link>
-            <Link to="/apply" activeClassName="navLink--active">
+            {/*<Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Apply Now</h3>
               </li>
-            </Link>
+            </Link>*/}
             <br />
             <li className="nav-item mt-2">
               <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
