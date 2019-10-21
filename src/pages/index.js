@@ -2,11 +2,16 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Slider from "../components/Slider"
-import RightImageSection from "../components/RightImageSection"
+import RightImageSectionHeading from "../components/RightImageSectionHeading"
+import PartnerLogos from "../components/PartnerLogos"
 import KeyBenefits from "../components/KeyBenefits"
 import GIC from "../assets/gic.svg"
 import firstImage from "../assets/startPage.png"
-import gic from "../assets/gic.png"
+import accenture from "../assets/accenture.png"
+import westfalen from "../assets/westfalen.png"
+import sopra from "../assets/sopra.png"
+import ernstYoung from "../assets/ernst-young-ey.png"
+import gic from "../assets/gic_team.png"
 import nils from "../assets/nils.png"
 import { Link } from "gatsby"
 import "../styles/_main.scss"
@@ -73,6 +78,12 @@ class index extends React.Component {
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
+            <PartnerLogos 
+              logoOne={accenture}
+              logoTwo={sopra}
+              logoThree={westfalen}
+              logoFour={ernstYoung}
+            />
           </section>
 
           <section className="py-5 my-5 wwo">
@@ -153,7 +164,7 @@ class index extends React.Component {
           </section>
           <Slider />
 
-          <RightImageSection
+          <RightImageSectionHeading
             heading="Award-Winning Concept"
             subheading="Google Impact Challenge 2018!"
             text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
@@ -184,12 +195,11 @@ class index extends React.Component {
             <div className="row">
               <div className="col-md-10">
                 <div className="row mt-4">
-                  <div className="col-md-3" />
-                  <div className="col-md-2 text-center text-md-left">
+                  <div className="col-3 text-left d-flex justify-content-center align-content-center">
                     <img src={nils} alt="nils" />
                   </div>
-                  <div className="col-md-7">
-                    <p className="mt-4 whatWeOffer--nils text-left text-md-left">
+                  <div className="col-9">
+                    <p className="mt-4 whatWeOffer--nils">
                       Nils Bahr <br />{" "}
                       <span className="whatWeOffer--nils-color">
                         Head of Product @ TechLabs
