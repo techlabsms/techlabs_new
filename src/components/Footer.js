@@ -57,7 +57,9 @@ const Footer = () => {
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-4">
-                  <h5 className="line-height-0 white-font my-2">About us</h5>
+                  <Link to="/about" className="noDec">
+                    <h5 className="line-height-0 white-font my-2">About us</h5>
+                  </Link>
                   <Link className="foot-a" to="/locations">
                     Locations
                   </Link>
@@ -67,6 +69,9 @@ const Footer = () => {
                     </Link>
                     <Link to="/location/Copenhagen" className="noDec">
                       <li className="footer-tl--subMenu-link">Copenhagen</li>
+                    </Link>
+                    <Link to="/location/Barcelona" className="noDec">
+                      <li className="footer-tl--subMenu-link">Barcelona</li>
                     </Link>
                   </ul>
                   <a
