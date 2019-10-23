@@ -101,6 +101,10 @@ const Footer = () => {
                   <Link className="foot-a" to="/ai">
                     Artificial Intelligence
                   </Link>
+                  <br/>
+                  <Link className="foot-a" to="/ux">
+                    User Experience Design
+                  </Link>
                   <br />
                 </div>
                 <div className="col-lg-4">
