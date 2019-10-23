@@ -9,6 +9,9 @@ import Headroom from "react-headroom"
 import Head from "./Head"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
+import ds from "../assets/ds.png"
+import ai from "../assets/ai.png"
+import web from "../assets/web.png"
 import "jquery"
 
 class Navbar extends React.Component {
@@ -98,6 +101,7 @@ class Navbar extends React.Component {
                       to="/dataScience"
                       activeClassName="navLink--active"
                     >
+                      <img src={ds} alt="Data Science"  className="mr-3"/>
                       Data Science
                     </Link>
                     <Link
@@ -105,6 +109,7 @@ class Navbar extends React.Component {
                       to="/web"
                       activeClassName="navLink--active"
                     >
+                     <img src={web} alt="web development"  className="mr-3"/>
                       Web Development
                     </Link>
                     <Link
@@ -112,6 +117,7 @@ class Navbar extends React.Component {
                       to="/ai"
                       activeClassName="navLink--active"
                     >
+                     <img src={ai} alt="ai"  className="mr-3"/>
                       Artificial Intelligence
                     </Link>
                     <Link
@@ -119,6 +125,7 @@ class Navbar extends React.Component {
                       to="/ux"
                       activeClassName="navLink--active"
                     >
+                     <img src={web} alt="UX Design"  className="mr-3"/>
                       User Experience Design
                     </Link>
                   </div>

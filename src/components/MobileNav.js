@@ -6,6 +6,9 @@ import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
+import ds from "../assets/ds.png"
+import ai from "../assets/ai.png"
+import web from "../assets/web.png"
 
 class MobileNav extends Component {
   state = {
@@ -128,28 +131,37 @@ class MobileNav extends Component {
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4">Data Science</li>
+                    <li className="my-4">
+                      <img src={ds} alt="data science" className="mr-3" />
+                      Data Science
+                    </li>
                   </Link>
                   <Link
                     to="/web"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4">Web Development</li>
+                    <li className="my-4">
+                      <img src={web} alt="web development" className="mr-3" />
+                      Web Development
+                    </li>
                   </Link>
                   <Link
                     to="/ai"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4">Artificial Intelligence</li>
+                    <li className="my-4">
+                      <img src={ai} alt="ai" className="mr-3" />
+                      Artificial Intelligence
+                    </li>
                   </Link>
                   <Link
                     to="/ux"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4">User Experience Design</li>
+                    <li className="my-4"><img src={web} alt="ux design" className="mr-3"/>User Experience Design</li>
                   </Link>
                 </ul>
               )}
