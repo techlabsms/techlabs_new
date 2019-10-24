@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
+import DatesCalendar from "../components/DatesCalendar"
 import Follow from "../components/Follow"
 import Team from "../components/Team"
 import teamspirit from "../assets/teamspirit.png"
@@ -79,6 +80,7 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
+            {location.eventsPage && <DatesCalendar eventsPage={location.eventsPage} city={location.heading}/>}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}
@@ -273,27 +275,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      hasPartner
-      partnerOne {
-        file {
-          url
-        }
-      }
-      partnerTwo {
-        file {
-          url
-        }
-      }
-      partnerThree {
-        file {
-          url
-        }
-      }
-      partnerFour {
-        file {
-          url
-        }
-      }
       teamNameOne
       teamLinkedInOne
       teamImgOne {
@@ -338,23 +319,7 @@ export const pageQuery = graphql`
       email
       slackLink
       usesTeam
-    }
-    allContentfulBlogPost(limit: 3) {
-      edges {
-        node {
-          title
-          id
-          readTime
-          authorName
-          slug
-          abstract
-          postImg {
-            file {
-              url
-            }
-          }
-        }
-      }
+      eventsPage
     }
   }
 `
