@@ -1,8 +1,6 @@
 import React from "react"
 import Container from "./smallComponents/Container"
 import Heading from "./smallComponents/Heading"
-import { Link } from "gatsby"
-import dayjs from "dayjs"
 
 const DatesCalendar = ({ eventsPage, city}) => {
   return (
