@@ -10,49 +10,67 @@ import Quote from "../assets/quote.png"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
+import Modal from "react-modal"
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+  },
+}
 
 class Slider extends Component {
-  state = {
-    testimonials: [
-      {
-        index: 0,
-        name: "Simon Herbert",
-        role: "IT Specialist",
-        text:
-          "Even though I have an IT background, I did not acquire any coding skills before joining TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
-        image_mobil: Simon_mobil,
-        link:
-          "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
-        width: "33%",
-      },
-      {
-        index: 1,
-        name: "Hümeyra Husseini",
-        role: "Student Molecular Biomedicine",
-        text:
-          "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
-        image: Huemeyra,
-        link:
-          "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
-        image_mobil: Huemeyra_mobil,
-        width: "66%",
-      },
-      {
-        index: 2,
-        name: "Clara Oppermann",
-        role: "Student Marketing and Management",
-        text:
-          "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
-        image: Clara,
-        image_mobil: Clara_mobil,
-        link:
-          "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
-        width: "100%",
-      },
-    ],
-    number: 0,
+  constructor() {
+    super()
+    this.state = {
+      testimonials: [
+        {
+          index: 0,
+          name: "Simon Herbert",
+          role: "IT Specialist",
+          text:
+            "Even though I have an IT background, I did not acquire any coding skills before joining TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
+          image: Simon,
+          image_mobil: Simon_mobil,
+          link:
+            "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
+          width: "33%",
+        },
+        {
+          index: 1,
+          name: "Hümeyra Husseini",
+          role: "Student Molecular Biomedicine",
+          text:
+            "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
+          image: Huemeyra,
+          link:
+            "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
+          image_mobil: Huemeyra_mobil,
+          width: "66%",
+        },
+        {
+          index: 2,
+          name: "Clara Oppermann",
+          role: "Student Marketing and Management",
+          text:
+            "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
+          image: Clara,
+          image_mobil: Clara_mobil,
+          link:
+            "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
+          width: "100%",
+        },
+      ],
+      number: 0,
+      modalIsOpen: false,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
+
   moveRight() {
     const { number, testimonials } = this.state
     this.setState({
@@ -65,6 +83,14 @@ class Slider extends Component {
     this.setState({
       number: number <= 0 ? testimonials.length - 1 : number - 1,
     })
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false })
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true })
   }
 
   render() {
@@ -89,9 +115,28 @@ class Slider extends Component {
                       src={testimonials[number].image}
                       alt=""
                       className="mt-4 d-block w-100"
+                      onClick={this.openModal}
                     />
                   </CSSTransition>
                 </TransitionGroup>
+                <Modal
+                  isOpen={this.state.modalIsOpen}
+                  onRequestClose={this.closeModal}
+                  contentLabel="Example Modal"
+                  style={customStyles}
+                >
+                  <button onClick={this.closeModal}>close</button>
+                  <iframe
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    width="788.54"
+                    height="443"
+                    type="text/html"
+                    src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"
+                  />
+                </Modal>
               </div>
               <div className="col-md-1 text-center d-none d-lg-block">
                 <img src={Quote} alt="" className="mt-5 w-50" />
