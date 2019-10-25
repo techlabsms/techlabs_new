@@ -16,17 +16,22 @@ const CallToAction = () => {
               className="float-right  callToAction--arrow"
             />
           </div>
-          <div className="col-6 col-md-4">
+          <div className="col-6 col-md-6">
             <h1 className="foundYourOwn--last text-center text-md-left  callToAction--text">
               You can´t wait to acquire the most{" "}
               <span className="foundYourOwn--cta"> in demand tech skills?</span>
+              <img
+                src={ArrowsRight}
+                alt="arrow"
+                className=" ml-4 d-none d-lg-inline"
+              />
             </h1>
           </div>
-          <div className="col-3 col-md-5">
+          <div className="col-3 d-lg-none">
             <img
               src={ArrowsRight}
               alt="arrow"
-              className="float-left rightArrow callToAction--arrow"
+              className="loat-right  callToAction--arrow"
             />
           </div>
         </div>

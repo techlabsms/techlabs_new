@@ -75,7 +75,7 @@ class Navbar extends React.Component {
                       to="/foundYourOwn"
                       activeClassName="navLink--active"
                     >
-                      Found your own
+                      Become a Co-Founder
                     </Link>
                   </div>
                 </li>

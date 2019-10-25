@@ -7,7 +7,7 @@ const DatesCalendar = ({ eventsPage, city}) => {
     <Container>
         <Heading
             heading="Important Dates"
-            subheading={`Get an overview all Events and Deadlines in ${city}`}
+            subheading={`Get an overview of all Events and Deadlines in ${city}`}
         />
         <a href={eventsPage} className="btn btn-primary noDec text-light">
             See now 

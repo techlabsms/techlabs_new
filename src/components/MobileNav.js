@@ -94,7 +94,7 @@ class MobileNav extends Component {
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="mt-4">Found your own</li>
+                    <li className="mt-4">Become a Co-Founder</li>
                   </Link>
                 </ul>
               )}
