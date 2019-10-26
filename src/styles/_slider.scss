@@ -28,6 +28,10 @@
     height: 30%;
   }
 
+  &--img {
+    cursor: pointer !important;
+  }
+
   /* starting ENTER animation */
   &--imgout-enter {
     position: absolute;
@@ -111,5 +115,44 @@
       transform: rotate(-180deg);
       margin-right: 20%;
     }
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &--wrapper{
+    iframe{
+      max-width: 100%;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    top: -30px;
+    right: 0;
+  }
+
+  &--button {
+    background-color: $color-p;
+    border: none;
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    outline: none;
   }
 }

@@ -1,58 +1,70 @@
 import React, { Component } from "react"
 import Arrow from "../assets/arrow.svg"
-import Simon from "../assets/simon.png"
-import Simon_mobil from "../assets/simon_mobil.png"
+import Jin from "../assets/jinrhee.png"
+import Jin_mobil from "../assets/jinrhee_mobil.png"
 import Huemeyra from "../assets/humeyra.png"
 import Huemeyra_mobil from "../assets/humeyra_mobil.png"
 import Clara from "../assets/clara.png"
 import Clara_mobil from "../assets/clara_mobil.png"
 import Quote from "../assets/quote.png"
-import { CSSTransition, TransitionGroup } from "react-transition-group"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
+import Modal from "react-modal"
 
 class Slider extends Component {
-  state = {
-    testimonials: [
-      {
-        index: 0,
-        name: "Simon Herbert",
-        role: "IT Specialist",
-        text:
-          "Even though I have an IT background, I did not acquire any coding skills before joining TechLabs. The Web Development Track provides me with the necessary knowledge and the certificate is particularly valuable to me.",
-        image: Simon,
-        image_mobil: Simon_mobil,
-        link:
-          "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
-        width: "33%",
-      },
-      {
-        index: 1,
-        name: "Hümeyra Husseini",
-        role: "Student Molecular Biomedicine",
-        text:
-          "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
-        image: Huemeyra,
-        link:
-          "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
-        image_mobil: Huemeyra_mobil,
-        width: "66%",
-      },
-      {
-        index: 2,
-        name: "Clara Oppermann",
-        role: "Student Marketing and Management",
-        text:
-          "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
-        image: Clara,
-        image_mobil: Clara_mobil,
-        link:
-          "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
-        width: "100%",
-      },
-    ],
-    number: 0,
+  constructor() {
+    super()
+    this.state = {
+      testimonials: [
+        {
+          index: 0,
+          name: "Jin Rhee",
+          role: "Business Administration",
+          text:
+            "TechLabs gave me enough knowledge and confidence to enroll and participate in a hackathon. We created a web application for productivity and got the third place.",
+          image: Jin,
+          image_mobil: Jin_mobil,
+          link:
+            "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
+          width: "33%",
+          youtube: "https://www.youtube.com/embed/nWYeW37H2kM",
+          video: true,
+        },
+        {
+          index: 1,
+          name: "Hümeyra Husseini",
+          role: "Student Molecular Biomedicine",
+          text:
+            "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
+          image: Huemeyra,
+          link:
+            "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
+          image_mobil: Huemeyra_mobil,
+          width: "66%",
+          video: false,
+        },
+        {
+          index: 2,
+          name: "Clara Oppermann",
+          role: "Student Marketing and Management",
+          text:
+            "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
+          image: Clara,
+          image_mobil: Clara_mobil,
+          link:
+            "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
+          width: "100%",
+          video: false,
+        },
+      ],
+      number: 0,
+      modalIsOpen: false,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
+
   moveRight() {
     const { number, testimonials } = this.state
     this.setState({
@@ -67,6 +79,14 @@ class Slider extends Component {
     })
   }
 
+  closeModal() {
+    this.setState({ modalIsOpen: false })
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true })
+  }
+
   render() {
     const { testimonials, number } = this.state
     return (
@@ -78,20 +98,44 @@ class Slider extends Component {
               subheading="Find out what our participants experienced at TechLabs!"
             />
             <div className="row">
-              <div className="col-12 col-lg-5">
-                <TransitionGroup>
-                  <CSSTransition
-                    key={testimonials[number].index}
-                    timeout={1000}
-                    classNames="slider--imgout"
-                  >
-                    <img
-                      src={testimonials[number].image}
-                      alt=""
-                      className="mt-4 d-block w-100"
+              <div
+                className={
+                  testimonials[number].video
+                    ? "col-12 col-lg-5  slider--img"
+                    : "col-12 col-lg-5"
+                }
+              >
+                <img
+                  src={testimonials[number].image}
+                  alt=""
+                  className="mt-4 d-block w-100 "
+                  onClick={testimonials[number].video ? this.openModal : ""}
+                />
+
+                <Modal
+                  isOpen={this.state.modalIsOpen}
+                  onRequestClose={this.closeModal}
+                  className="Modal"
+                  overlayClassName="Modal--overlay"
+                >
+                  <div className="Modal--wrapper">
+                    <iframe
+                      type="text/html"
+                      title="video"
+                      width="920"
+                      height="518"
+                      frameborder="0"
+                      className="Modal--video"
+                      src={testimonials[number].youtube}
+                      autoplay
                     />
-                  </CSSTransition>
-                </TransitionGroup>
+                  </div>
+                  <span className="Modal--close">
+                    <button onClick={this.closeModal} className="Modal--button">
+                      X
+                    </button>
+                  </span>
+                </Modal>
               </div>
               <div className="col-md-1 text-center d-none d-lg-block">
                 <img src={Quote} alt="" className="mt-5 w-50" />
