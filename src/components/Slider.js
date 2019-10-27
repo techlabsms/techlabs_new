@@ -4,8 +4,8 @@ import Jin from "../assets/jinrhee.png"
 import Jin_mobil from "../assets/jinrhee_mobil.png"
 import Huemeyra from "../assets/humeyra.png"
 import Huemeyra_mobil from "../assets/humeyra_mobil.png"
-import Clara from "../assets/clara.png"
-import Clara_mobil from "../assets/clara_mobil.png"
+import Miriam from "../assets/miriam.png"
+import Miriam_mobil from "../assets/miriam_mobil.png"
 import Quote from "../assets/quote.png"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
@@ -27,7 +27,8 @@ class Slider extends Component {
           link:
             "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
           width: "33%",
-          youtube: "https://www.youtube.com/embed/nWYeW37H2kM",
+          youtube: "https://www.youtube.com/embed/rlMgA98IAFE",
+          hasProject: false,
           video: true,
         },
         {
@@ -41,20 +42,23 @@ class Slider extends Component {
             "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
           image_mobil: Huemeyra_mobil,
           width: "66%",
+          hasProject: true,
           video: false,
         },
         {
           index: 2,
-          name: "Clara Oppermann",
-          role: "Student Marketing and Management",
+          name: "Miriam Gercken",
+          role: "Student Marketing",
           text:
-            "Although analytical skills are also of great importance in marketing in times of big data, they are usually not taught while studying. But thanks to an individual curriculum at TechLabs, I had the opportunity to learn how to use data analysis tools without any previous programming knowledge.",
-          image: Clara,
-          image_mobil: Clara_mobil,
+            "When I decided to achieve some tech knowledge, I didn’t know where to start. At TechLabs, there are people who know what they are doing, can help me to get started, and then also help me to achieve my goals.",
+          image: Miriam,
+          image_mobil: Miriam_mobil,
           link:
             "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
           width: "100%",
-          video: false,
+          youtube: "https://www.youtube.com/embed/TSXyJbCmGto",
+          hasProject: false,
+          video: true,
         },
       ],
       number: 0,
@@ -157,16 +161,18 @@ class Slider extends Component {
                     {testimonials[number].role}
                   </span>
                 </p>
-                <a
-                  className="slider--button mt-2"
-                  href={testimonials[number].link}
-                  target="blank"
-                >
-                  <span role="img" aria-label="thumbs up">
-                    👍🏻
-                  </span>
-                  {` read about ${testimonials[number].name}´s project`}
-                </a>
+                {testimonials[number].hasProject && (
+                  <a
+                    className="slider--button mt-2"
+                    href={testimonials[number].link}
+                    target="blank"
+                  >
+                    <span role="img" aria-label="thumbs up">
+                      👍🏻
+                    </span>
+                    {` read about ${testimonials[number].name}´s project`}
+                  </a>
+                )}
                 <div className="row mt-5">
                   <div className="col-6 d-flex">
                     <span>{`0${testimonials[number].index + 1}`}</span>
