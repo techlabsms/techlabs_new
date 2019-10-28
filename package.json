@@ -45,6 +45,7 @@
     "react-overdrive": "0.0.10",
     "react-responsive-modal": "^4.0.1",
     "react-transition-group": "^4.1.1",
+    "react-visibility-sensor": "^5.1.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
