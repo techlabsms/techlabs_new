@@ -65,13 +65,6 @@ class Navbar extends React.Component {
                     <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item dropdown-item-corr"
-                      to="/locations"
-                      activeClassName="navLink--active"
-                    >
-                      Discover our Locations
-                    </Link>
-                    <Link
-                      className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
                       activeClassName="navLink--active"
                     >
