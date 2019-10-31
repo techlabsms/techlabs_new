@@ -67,7 +67,7 @@ class faq extends Component {
       {
         question: "What language will the courses be in?",
         answer:
-          "Grundsätzlich kannst du davon ausgehen, dass nur die Online-Kurse auf Englisch sein werden. Die Kurse sind allerdings gut verständlich und weiterhin gibt es bei den meisten Plattformen die Möglichkeit deutsche Untertitel einzustellen. Unsere Meetings im Semester werden in Deutsch abgehalten werden.",
+          "Basically, you can assume that only the online courses will be in English. However, the courses are easy to understand and most platforms offer the possibility to add German subtitles. Our semester meetings will be held in German.",
       },
       {
         question: "How much does it cost?",
