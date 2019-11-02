@@ -18,6 +18,7 @@ import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
+import Button from "../components/smallComponents/Button"
 
 class index extends React.Component {
   componentDidMount() {
@@ -55,12 +56,8 @@ class index extends React.Component {
                     events.
                   </p>
                   <div className="mt-5">
-                    <Link className="btn btn-secondary d-inline" to="/program">
-                      Program
-                    </Link>
-                    <Link className="btn btn-primary d-inline" to="/apply">
-                      Apply now
-                    </Link>
+                    <Button text="Program" primary={false} link="/program" />
+                    <Button text="About" primary={true} link="/about" />
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">

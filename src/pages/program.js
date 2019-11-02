@@ -12,10 +12,10 @@ import DataScience from "../assets/dashboard.png"
 import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
-import { Link } from "gatsby"
 import Footer from "../components/Footer"
 import ProgrammMobil from "../assets/ProgrammMobil.png"
 import KeyBenefits from "../components/KeyBenefits"
+import Button from "../components/smallComponents/Button"
 
 class program extends Component {
   render() {
@@ -67,9 +67,11 @@ class program extends Component {
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Link to="/faq" className="btn btn-primary">
-                  More Questions?
-                </Link>
+                <Button
+                  text="More Questions?"
+                  link="/faq"
+                  primary={true}
+                />
               </div>
             </div>
           </div>
