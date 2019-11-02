@@ -1,6 +1,7 @@
 import React from "react"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
+import Button from "./smallComponents/Button"
 
 const RightImageSection = ({
   heading,
@@ -40,9 +41,12 @@ const RightImageSection = ({
           <p className="basicSection--text">{text}</p>
           {hasButton && (
             <div className="row mt-5 ml-2">
-              <a className="btn btn-primary d-inline" href={buttonLink}>
-                {buttonText}
-              </a>
+              <Button
+                text={buttonText}
+                isExternal={true}
+                link={buttonLink}
+                primary={true}
+              />
             </div>
           )}
         </div>

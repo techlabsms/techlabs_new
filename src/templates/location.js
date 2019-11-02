@@ -13,6 +13,7 @@ import pin2 from "../assets/pin2.png"
 import getDirection from "../assets/get-directions-button.png"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
+import Button from "../components/smallComponents/Button"
 
 class location extends Component {
   render() {
@@ -51,36 +52,40 @@ class location extends Component {
 
                   {location.isOpen ? (
                     <>
-                      <a
-                        className="btn btn-primary mt-3 d-inline"
-                        href={`${location.applicationLink}`}
-                      >
-                        Apply now
-                      </a>
-
-                      <a
-                        className="btn btn-secondary mt-3 d-inline"
-                        href={`mailto:${location.email}`}
-                      >
-                        Contact us
-                      </a>
+                      <Button
+                        text="Apply now"
+                        link={`${location.applicationLink}`}
+                        isExternal={true}
+                        primary={true}
+                      />
+                      <Button
+                        text="Contact us"
+                        primary={false}
+                        isExternal={true}
+                        link={`mailto:${location.email}`}
+                      />
                     </>
                   ) : (
-                    <div>
-                      <a
-                        className="btn btn-primary mt-3 d-inline"
-                        href={`mailto:${location.email}`}
-                      >
-                        Contact us
-                      </a>
-                    </div>
+                    <>
+                      <Button
+                        text="Contact us"
+                        primary={true}
+                        isExternal={true}
+                        link={`mailto:${location.email}`}
+                      />
+                    </>
                   )}
                 </div>
               </div>
             </div>
           </section>
           <section className="container location">
-            {location.eventsPage && <DatesCalendar eventsPage={location.eventsPage} city={location.heading}/>}
+            {location.eventsPage && (
+              <DatesCalendar
+                eventsPage={location.eventsPage}
+                city={location.heading}
+              />
+            )}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}

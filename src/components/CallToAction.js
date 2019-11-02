@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
 import Container from "./smallComponents/Container"
+import Button from "./smallComponents/Button"
 
 const CallToAction = () => {
   return (
@@ -60,9 +60,7 @@ const CallToAction = () => {
         <div className="container my-5 pb-5">
           <div className="row text-center mt-5">
             <div className="col-12">
-              <Link className="btn btn-primary" to="/apply">
-                Apply now
-              </Link>
+              <Button text="Apply now" primary={true} link="/apply" />
             </div>
           </div>
         </div>

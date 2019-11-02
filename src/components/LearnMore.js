@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
+import Button from "./smallComponents/Button"
 
 const LearnMore = ({
   heading,
@@ -37,15 +37,12 @@ const LearnMore = ({
             <img src={firstProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            {externalLink || false ? (
-              <a href={firstLink} className="btn btn-primary">
-                {firstButtonText || "Learn more"}
-              </a>
-            ) : (
-              <Link to={firstLink} className="btn btn-primary">
-                {firstButtonText || "Learn more"}
-              </Link>
-            )}
+            <Button
+              text={firstButtonText || "Learn more"}
+              primary={true}
+              link={firstLink}
+              isExternal={externalLink || false}
+            />
           </div>
         </div>
       </div>
@@ -58,15 +55,12 @@ const LearnMore = ({
             <img src={secondProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-            {externalLink || false ? (
-              <a href={secondLink} className="btn btn-primary">
-                {secondButtonText || "Learn more"}
-              </a>
-            ) : (
-              <Link to={secondLink} className="btn btn-primary">
-                {secondButtonText || "Learn more"}
-              </Link>
-            )}
+            <Button
+              text={secondButtonText || "Learn more"}
+              primary={true}
+              link={secondLink}
+              isExternal={externalLink || false}
+            />
           </div>
         </div>
       </div>
@@ -79,15 +73,12 @@ const LearnMore = ({
             <img src={thirdProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-             {externalLink || false ? (
-              <a href={thirdLink} className="btn btn-primary">
-                {thirdButtonText || "Learn more"}
-              </a>
-            ) : (
-              <Link to={thirdLink} className="btn btn-primary">
-                {thirdButtonText || "Learn more"}
-              </Link>
-            )}
+             <Button
+              text={thirdButtonText || "Learn more"}
+              primary={true}
+              link={thirdLink}
+              isExternal={externalLink || false}
+            />
           </div>
         </div>
       </div>
@@ -100,15 +91,12 @@ const LearnMore = ({
             <img src={fourthProjectImage} alt="" className="w-50" />
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
-              {externalLink || false ? (
-              <a href={fourthLink} className="btn btn-primary">
-                {fourthButtonText || "Learn more"}
-              </a>
-            ) : (
-              <Link to={fourthLink} className="btn btn-primary">
-                {fourthButtonText || "Learn more"}
-              </Link>
-            )}
+            <Button
+              text={fourthButtonText || "Learn more"}
+              primary={true}
+              link={fourthLink}
+              isExternal={externalLink || false}
+            />
           </div>
         </div>
       </div>
