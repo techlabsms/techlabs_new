@@ -2,10 +2,12 @@ import React, { Component } from "react"
 import Arrow from "../assets/arrow.svg"
 import Jin from "../assets/jinrhee.png"
 import Jin_mobil from "../assets/jinrhee_mobil.png"
+import Jin_mobil_thumbnail from "../assets/jin_mobil.png"
 import Huemeyra from "../assets/humeyra.png"
 import Huemeyra_mobil from "../assets/humeyra_mobil.png"
 import Miriam from "../assets/miriam.png"
 import Miriam_mobil from "../assets/miriam_mobil.png"
+import Miriam_mobil_thumbnail from "../assets/miriam_mobil_thumbnail.png"
 import Quote from "../assets/quote.png"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
@@ -24,6 +26,7 @@ class Slider extends Component {
             "TechLabs gave me enough knowledge and confidence to enroll and participate in a hackathon. We created a web application for productivity and got the third place.",
           image: Jin,
           image_mobil: Jin_mobil,
+          image_mobil_thumbnail: Jin_mobil_thumbnail,
           link:
             "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
           width: "33%",
@@ -53,6 +56,7 @@ class Slider extends Component {
             "When I decided to achieve some tech knowledge, I didn’t know where to start. At TechLabs, there are people who know what they are doing, can help me to get started, and then also help me to achieve my goals.",
           image: Miriam,
           image_mobil: Miriam_mobil,
+          image_mobil_thumbnail: Miriam_mobil_thumbnail,
           link:
             "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
           width: "100%",
@@ -222,9 +226,20 @@ class Slider extends Component {
 
             <div className="row">
               <div className="col">
-                <p className="slider--text-mobil mt-3 pb-5">
-                  {testimonials[number].text}
-                </p>
+                {testimonials[number].video ? (
+                  <div className="text-center my-4">
+                    <img
+                      src={testimonials[number].image_mobil_thumbnail}
+                      className="w-75 img-fluid"
+                      onClick={testimonials[number].video ? this.openModal : ""}
+                      alt="img thumbnail"
+                    />
+                  </div>
+                ) : (
+                  <p className="slider--text-mobil mt-3 pb-5">
+                    {testimonials[number].text}
+                  </p>
+                )}
               </div>
             </div>
             <div className="row">
