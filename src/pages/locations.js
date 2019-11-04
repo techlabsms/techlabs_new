@@ -109,7 +109,8 @@ class Locations extends Component {
                         <p class="locations--card-text mt-5 mr-3 mt-2">
                           If you are willing to shape the future of tech
                           education and want to create your own TechLabs
-                          location, reach out! Let’s work together and{" "}
+                          location on a voluntary basis, reach out! Let’s work
+                          together and{" "}
                           <span className="highlighted">
                             build something great!
                           </span>

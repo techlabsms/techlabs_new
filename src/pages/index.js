@@ -4,8 +4,9 @@ import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
 import PartnerLogos from "../components/PartnerLogos"
-import KeyBenefits from "../components/KeyBenefits"
 import GIC from "../assets/gic.svg"
+import KeyBenefits from "../components/KeyBenefits"
+import Quote from "../components/Quote"
 import firstImage from "../assets/startPage.png"
 import accenture from "../assets/accenture.png"
 import westfalen from "../assets/westfalen.png"
@@ -168,49 +169,26 @@ class index extends React.Component {
           <RightImageSectionHeading
             heading="Award-Winning Concept"
             subheading="Google Impact Challenge 2018!"
-            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
+            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin. Today over 100 people joined TechLabs on a voluntary basis to spread the idea."
             image={gic}
             hasButton={true}
             buttonText="Read more"
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
-
-          <Container>
-            <Heading
-              heading="The TechLabs Journey"
-              subheading="What awaits you at TechLabs"
-            />
-            <div className="row">
-              <div className="col">
-                <p className="mt-2 text-justify whatWeOffer--text">
-                  Get up to speed learning tech skills in one semester by means
+          <Quote
+            heading="The TechLabs Journey"
+            subheading="What awaits you at TechLabs"
+            text="Get up to speed learning tech skills in one semester by means
                   of our program that combines Online Learning, Project Work,
                   and TechLabs Community Meetings. Independent of the background
                   and prior knowledge - anyone can participate and learn
                   tech-skills. At TechLabs we don’t want money to be an issue.
                   That’s why our programs are free of charge. We help you to
-                  complete your own tech project and qualify for tech roles.
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-10">
-                <div className="row mt-4">
-                  <div className="col-3 text-left d-flex justify-content-center align-content-center">
-                    <img src={nils} alt="nils" />
-                  </div>
-                  <div className="col-9">
-                    <p className="mt-4 whatWeOffer--nils">
-                      Nils Bahr <br />{" "}
-                      <span className="whatWeOffer--nils-color">
-                        Head of Product @ TechLabs
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
+                  complete your own tech project and qualify for tech roles."
+            photo={nils}
+            name="Nils Bahr"
+            job="Head of Product @ TechLabs"
+          />
           <KeyBenefits />
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
