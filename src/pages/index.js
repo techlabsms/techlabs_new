@@ -39,7 +39,7 @@ class index extends React.Component {
           <Navbar />
 
           <section className="py-5 padding-top-15">
-            <div className="container">
+            <div className="container"> 
               <div className="row">
                 <div className="col-lg-5 my-auto xs-margin-right">
                   <h1 className="display-4">
@@ -50,11 +50,7 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    Our mission is to enable as many people as possible to
-                    acquire state-of-the-art tech skills to solve today’s
-                    problems in a digital way by providing a unique program that
-                    combines online learning, project work, and local community
-                    events.
+                    Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations <span className="text-bold">- and that completely for free for everyone!</span>
                   </p>
                   <div className="mt-5">
                     <Button text="Program" primary={false} link="/program" />
