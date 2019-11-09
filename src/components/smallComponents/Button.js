@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const Button = ({ text, primary, link, isExternal, style }) => {
   return (
     <>
-      {isExternal ? (
+      {!isExternal ? (
         <Link
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           to={link}
