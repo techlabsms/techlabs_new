@@ -90,7 +90,6 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              ,
               <div className="mt-5">
                 <Button
                   text="More information"
