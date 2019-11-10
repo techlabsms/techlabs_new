@@ -1,0 +1,28 @@
+@import "./variables";
+
+.datesCalendar {
+  &--dates:first-child {
+    & h3 {
+      color: $color-p;
+    }
+  }
+
+  &--dates:not(:first-child) {
+    & h3 {
+      color: $color-gl;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+
+  &--day {
+    background-color: $color-background;
+    padding: 15px;
+    border-radius: 7px;
+    text-align: center;
+    color: $color-p;
+    font-size: 26px !important;
+    font-weight: bolder;
+  }
+}
