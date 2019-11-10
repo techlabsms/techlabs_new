@@ -50,7 +50,7 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations <span className="text-bold">- and that completely for free for everyone!</span>
+                    Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations <span className="text-bold">- and that completely free for everyone!</span>
                   </p>
                   <div className="mt-5">
                     <Button text="Program" primary={false} link="/program" />
