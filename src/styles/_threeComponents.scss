@@ -29,7 +29,7 @@
       animation-iteration-count: 2;
     }
 
-    & > p {
+    & > div {
       display: none;
       transition: all 0.3s ease-in;
     }
@@ -48,7 +48,7 @@
     -webkit-opacity: 1;
     z-index: 2;
     animation: none;
-    & > p {
+    & > div {
       display: block;
       color: white;
       margin-top: 10%;
