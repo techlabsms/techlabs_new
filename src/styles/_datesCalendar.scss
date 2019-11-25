@@ -1,13 +1,15 @@
 @import "./variables";
 
 .datesCalendar {
-  &--dates:first-child {
+  &--dates_active {
     & h3 {
       color: $color-p;
+      text-align: center;
+      transition: all .1s ease;
     }
   }
 
-  &--dates:not(:first-child) {
+  &--dates {
     & h3 {
       color: $color-gl;
       font-size: 20px;
@@ -18,11 +20,17 @@
 
   &--day {
     background-color: $color-background;
-    padding: 15px;
+    padding: 10px;
     border-radius: 7px;
     text-align: center;
     color: $color-p;
-    font-size: 26px !important;
+    font-size: 28px !important;
     font-weight: bolder;
+    margin: 0 5px;
+  }
+
+  &--threeLetterDate{
+    letter-spacing: 4px;
+    font-weight: lighter;
   }
 }
