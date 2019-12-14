@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import Container from "./smallComponents/Container"
 import Heading from "./smallComponents/Heading"
+import Date from "./Date"
 import dayjs from "dayjs"
+import Arrow from "../assets/arrow.svg"
 import { graphql, useStaticQuery } from "gatsby"
 
 const DatesCalendar = ({ eventsPage, city }) => {
@@ -10,14 +12,15 @@ const DatesCalendar = ({ eventsPage, city }) => {
   const [currentMonth, setCurrentMonth] = useState(
     month[0].format("MMMM").toLowerCase()
   )
+  const [index, setIndex] = useState(0)
 
   return (
-    <Container>
+    <Container className="datesCalendar">
       <Heading
         heading="Important Dates"
         subheading={`Get an overview all Events and Deadlines in ${city}`}
       />
-      <div className="card">
+      <div className="datesCalendar--card">
         <div className="row">
           {month.map(date => (
             <div
@@ -41,23 +44,62 @@ const DatesCalendar = ({ eventsPage, city }) => {
         <div className="row">
           <div className="col">
             <div className="row">
-              {dates[currentMonth].map(event => (
-                <div className="col" key={event}>
-                  <div className="datesCalendar--day">
-                    <div className="row">
-                      <div className="col">
-                        <h6 className="datesCalendar--threeLetterDate">
-                          {currentMonth.substring(0, 3).toUpperCase()}
-                        </h6>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">{event.date}</div>
-                    </div>
+              {Object.keys(dates[currentMonth]).length > 5 ? (
+                <>
+                  <div className="col-md-1 d-flex justify-content-center">
+                    <img
+                      src={Arrow}
+                      className="w-50 mb-4 datesCalendar--arrow-left"
+                      onClick={() => {
+                        index.length >= index
+                          ? setIndex(index - 1)
+                          : setIndex(0)
+                      }}
+                    />
                   </div>
-                  <h4 className="ml-3 mt-2">{event.name}</h4>
-                </div>
-              ))}
+                  <Date
+                    month={currentMonth}
+                    event={dates[currentMonth][index]}
+                  />
+                  <Date
+                    month={currentMonth}
+                    event={dates[currentMonth][index + 1]}
+                  />
+                  <Date
+                    month={currentMonth}
+                    event={dates[currentMonth][index + 2]}
+                  />
+                  <Date
+                    month={currentMonth}
+                    event={dates[currentMonth][index + 3]}
+                  />
+                  <Date
+                    month={currentMonth}
+                    event={dates[currentMonth][index + 4]}
+                  />
+                  <div className="col-md-1 d-flex justify-content-center">
+                    <img
+                      src={Arrow}
+                      className="w-50 mb-4 datesCalendar--arrow-right"
+                      onClick={() => {
+                        index.length <= index
+                          ? setIndex(index + 1)
+                          : setIndex(0)
+                      }}
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="col-md-1" />
+                  {dates[currentMonth].map(event => (
+                    <>
+                      <Date month={currentMonth} event={event} />
+                    </>
+                  ))}
+                  <div className="col-md-1" />
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -83,59 +125,92 @@ const getDatesForLocation = city => {
               heading
             }
             january {
+              id
               date
               name
               description
+              location
+              organizer
             }
             february {
+              id
               date
               name
               description
+              location
+              organizer
             }
             march {
+              id
               date
               name
               description
+              location
+              organizer
             }
             april {
+              id
               date
               name
               description
+              location
+              organizer
             }
             may {
+              id
               date
               name
               description
+              location
+              organizer
             }
             june {
+              id
               date
               name
               description
+              location
+              organizer
             }
             july {
+              id
               date
               name
               description
+              location
+              organizer
             }
             august {
+              id
               date
               name
               description
+              location
+              organizer
             }
             september {
+              id
               date
               name
               description
+              location
+              organizer
             }
             november {
+              id
               date
               name
               description
+              location
+              organizer
             }
             december {
+              id
               date
               name
               description
+              location
+              organizer
             }
           }
         }
