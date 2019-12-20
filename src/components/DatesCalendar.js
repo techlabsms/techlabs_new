@@ -6,7 +6,7 @@ import dayjs from "dayjs"
 import Arrow from "../assets/arrow.svg"
 import { graphql, useStaticQuery } from "gatsby"
 
-const DatesCalendar = ({ eventsPage, city }) => {
+const DatesCalendar = ({ eventsPage, city, mail }) => {
   const month = getNextFiveMonth()
   const [dates] = useState(getDatesForLocation(city))
   const [currentMonth, setCurrentMonth] = useState(
@@ -55,27 +55,33 @@ const DatesCalendar = ({ eventsPage, city }) => {
                           ? setIndex(index - 1)
                           : setIndex(0)
                       }}
+                      alt="arrow left"
                     />
                   </div>
                   <Date
                     month={currentMonth}
                     event={dates[currentMonth][index]}
+                    mail={mail}
                   />
                   <Date
                     month={currentMonth}
                     event={dates[currentMonth][index + 1]}
+                    mail={mail}
                   />
                   <Date
                     month={currentMonth}
                     event={dates[currentMonth][index + 2]}
+                    mail={mail}
                   />
                   <Date
                     month={currentMonth}
                     event={dates[currentMonth][index + 3]}
+                    mail={mail}
                   />
                   <Date
                     month={currentMonth}
                     event={dates[currentMonth][index + 4]}
+                    mail={mail}
                   />
                   <div className="col-md-1 d-flex justify-content-center">
                     <img
@@ -86,6 +92,7 @@ const DatesCalendar = ({ eventsPage, city }) => {
                           ? setIndex(index + 1)
                           : setIndex(0)
                       }}
+                      alt="arrow right"
                     />
                   </div>
                 </>
@@ -94,7 +101,7 @@ const DatesCalendar = ({ eventsPage, city }) => {
                   <div className="col-md-1" />
                   {dates[currentMonth].map(event => (
                     <>
-                      <Date month={currentMonth} event={event} />
+                      <Date month={currentMonth} event={event} mail={mail} />
                     </>
                   ))}
                   <div className="col-md-1" />
@@ -129,88 +136,66 @@ const getDatesForLocation = city => {
               date
               name
               description
-              location
-              organizer
             }
             february {
               id
               date
               name
               description
-              location
-              organizer
             }
             march {
               id
               date
               name
               description
-              location
-              organizer
             }
             april {
               id
               date
               name
               description
-              location
-              organizer
             }
             may {
               id
               date
               name
               description
-              location
-              organizer
             }
             june {
               id
               date
               name
               description
-              location
-              organizer
             }
             july {
               id
               date
               name
               description
-              location
-              organizer
             }
             august {
               id
               date
               name
               description
-              location
-              organizer
             }
             september {
               id
               date
               name
               description
-              location
-              organizer
             }
             november {
               id
               date
               name
               description
-              location
-              organizer
             }
             december {
               id
               date
               name
               description
-              location
-              organizer
             }
           }
         }

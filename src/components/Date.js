@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-import ReactDOM from "react-dom"
 import Modal from "react-responsive-modal"
 
-const Date = ({ event, month }) => {
+const Date = ({ event, month, mail }) => {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -21,18 +20,11 @@ const Date = ({ event, month }) => {
             </div>
           </div>
         </div>
-        <h4 className="ml-3 mt-2">{event.name}</h4>
+        <h5 className="ml-3 mt-2">{event.name}</h5>
       </div>
       <Modal open={open} onClose={() => setOpen(false)} center>
         <h1>{event.name}</h1>
-        <p>
-          Amet laborum cupidatat veniam non est excepteur dolor reprehenderit
-          aliquip cupidatat consectetur veniam eu consectetur. Laborum laborum
-          dolor sunt amet consequat dolore voluptate dolore. Ad esse pariatur
-          cillum ut fugiat ut commodo amet veniam quis elit. Qui aute ipsum do
-          Lorem amet aliqua cillum laboris sunt cillum. Proident ad aliquip aute
-          aute ipsum anim qui proident deserunt minim dolor.
-        </p>
+        <p>{event.description}</p>
         <div className="row mt-5">
           <div className="col-md-3">
             <h5>Datum:</h5>
@@ -40,11 +32,11 @@ const Date = ({ event, month }) => {
               {event.date}. {month.toUpperCase()}
             </p>
           </div>
-          {generateInfo("Location", event.location)}
-          {generateInfo("Organizer", event.organizer)}
         </div>
         <div className="row text-light">
-          <a className="btn btn-primary mt-3 ml-3">Contact us</a>
+          <a className="btn btn-primary mt-3 ml-3" href={`mailto:${mail}`}>
+            Contact us
+          </a>
         </div>
       </Modal>
     </>
@@ -52,16 +44,3 @@ const Date = ({ event, month }) => {
 }
 
 export default Date
-
-function generateInfo(key, data) {
-  if (data != "" || data != null) {
-    return (
-      <>
-        <div className="col-md-3">
-          <h5>{key}</h5>
-          <p>{data}</p>
-        </div>
-      </>
-    )
-  }
-}

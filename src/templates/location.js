@@ -80,7 +80,13 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
-            {location.eventsPage && <DatesCalendar eventsPage={location.eventsPage} city={location.heading}/>}
+            {location.hasCalendar && (
+              <DatesCalendar
+                eventsPage={location.eventsPage}
+                city={location.heading}
+                mail={location.mail}
+              />
+            )}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}
@@ -319,7 +325,7 @@ export const pageQuery = graphql`
       email
       slackLink
       usesTeam
-      eventsPage
+      hasCalendar
     }
   }
 `
