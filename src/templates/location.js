@@ -80,10 +80,11 @@ class location extends Component {
             </div>
           </section>
           <section className="container location">
-            {location.eventsPage && (
+            {location.hasCalendar && (
               <DatesCalendar
                 eventsPage={location.eventsPage}
                 city={location.heading}
+                mail={location.mail}
               />
             )}
             {location.firstEntryTitle && (
@@ -324,7 +325,7 @@ export const pageQuery = graphql`
       email
       slackLink
       usesTeam
-      eventsPage
+      hasCalendar
     }
   }
 `

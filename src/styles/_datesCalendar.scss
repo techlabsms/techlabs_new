@@ -1,0 +1,60 @@
+@import "./variables";
+
+.datesCalendar {
+  &--dates_active {
+    & h3 {
+      color: $color-p;
+      text-align: center;
+      transition: all 0.1s ease;
+    }
+  }
+
+  &--dates {
+    & h3 {
+      color: $color-gl;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &--day {
+    background-color: $color-background;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+    color: $color-p;
+    font-size: 28px !important;
+    font-weight: bolder;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  &--threeLetterDate {
+    letter-spacing: 4px;
+    font-weight: lighter;
+  }
+
+  &--arrow-left {
+    transform: rotate(-180deg);
+    cursor: pointer; 
+  }
+
+  &--arrow-right{
+    cursor: pointer; 
+  }
+
+  &--card {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border: 0px solid !important;
+    padding: 2em;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    transform-origin: bottom;
+  }
+}
