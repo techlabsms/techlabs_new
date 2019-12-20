@@ -26,7 +26,16 @@ class Locations extends Component {
 
     //Filtering the locations for a fake search
     const filteredLocations = locations.filter(location => {
-      return location.node.heading.toLowerCase().includes(search.toLowerCase())
+      if (
+        location.node.heading === "Muenster" ||
+        location.node.heading === "Copenhagen" ||
+        location.node.heading === "Barcelona"
+      ) {
+        return location.node.heading
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      }
+      return null
     })
     return (
       <div className="locations">
