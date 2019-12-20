@@ -4,12 +4,13 @@ import Footer from "../components/Footer"
 import locationsImg from "../assets/locations.png"
 import "../styles/_main.scss"
 import LocationCard from "../components/LocationCard"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import get from "lodash/get"
 import MAPLOC from "../assets/mapLoc.png"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import ArrowButton from "../components/smallComponents/ArrowButton"
+import Button from "../components/smallComponents/Button"
 
 class Locations extends Component {
   constructor() {
@@ -108,17 +109,19 @@ class Locations extends Component {
                         <p class="locations--card-text mt-5 mr-3 mt-2">
                           If you are willing to shape the future of tech
                           education and want to create your own TechLabs
-                          location, reach out! Let’s work together and{" "}
+                          location on a voluntary basis, reach out! Let’s work
+                          together and{" "}
                           <span className="highlighted">
                             build something great!
                           </span>
                         </p>
-                        <Link
-                          to="/foundYourOwn"
-                          className="btn btn-primary mt-5"
-                        >
-                          More information
-                        </Link>
+                        <div className="mt-5">
+                          <Button
+                            text="More information"
+                            link="/foundYourOwn"
+                            primary={true}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-6 text-center align-middle order-1 order-md-2">

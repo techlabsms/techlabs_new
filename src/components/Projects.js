@@ -4,11 +4,15 @@ import web from "../assets/web.png"
 import ds from "../assets/ds.png"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
+import Button from "./smallComponents/Button"
 
 const Projects = () => {
   return (
     <Container>
-       <Heading heading="Projects From Our Participants" subheading="Have a look at these completed projects and get inspired!" />
+      <Heading
+        heading="Projects From Our Participants"
+        subheading="Have a look at these completed projects and get inspired!"
+      />
       <div className="row d-flex">
         <div className="col-md-4 py-5 justify-content-center align-self-center">
           <div className="card h-75 mt-5">
@@ -38,12 +42,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <a
-                className="btn btn-primary mt-5"
-                href="https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256"
-              >
-                More information
-              </a>
+              <div className="mt-5">
+                <Button
+                  text="More information"
+                  link="https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256"
+                  isExternal={true}
+                  primary={true}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -84,12 +90,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <a
-                className="btn btn-primary mt-5"
-                href="https://medium.com/techlabsms/zeb-project-f239ac0abc8c"
-              >
-                More information
-              </a>
+              <div className="mt-5">
+                <Button
+                  text="More information"
+                  link="https://medium.com/techlabsms/zeb-project-f239ac0abc8c"
+                  isExternal={true}
+                  primary={true}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -113,12 +121,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <a
-                className="btn btn-primary mt-5"
-                href="https://medium.com/techlabsms/smart-city-visualizing-bike-traffic-in-m%C3%BCnster-af8445cca8db"
-              >
-                More information
-              </a>
+              <div className="mt-5">
+                <Button
+                  text="More information"
+                  link="https://medium.com/techlabsms/smart-city-visualizing-bike-traffic-in-m%C3%BCnster-af8445cca8db"
+                  isExternal={true}
+                  primary={true}
+                />
+              </div>
             </div>
           </div>
         </div>

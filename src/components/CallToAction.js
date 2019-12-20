@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
 import Container from "./smallComponents/Container"
+import Button from "./smallComponents/Button"
 
 const CallToAction = () => {
   return (
@@ -16,17 +16,22 @@ const CallToAction = () => {
               className="float-right  callToAction--arrow"
             />
           </div>
-          <div className="col-6 col-md-4">
+          <div className="col-6 col-md-6">
             <h1 className="foundYourOwn--last text-center text-md-left  callToAction--text">
               You can´t wait to acquire the most{" "}
               <span className="foundYourOwn--cta"> in demand tech skills?</span>
+              <img
+                src={ArrowsRight}
+                alt="arrow"
+                className=" ml-4 d-none d-lg-inline"
+              />
             </h1>
           </div>
-          <div className="col-3 col-md-5">
+          <div className="col-3 d-lg-none">
             <img
               src={ArrowsRight}
               alt="arrow"
-              className="float-left rightArrow callToAction--arrow"
+              className="loat-right  callToAction--arrow"
             />
           </div>
         </div>
@@ -55,9 +60,7 @@ const CallToAction = () => {
         <div className="container my-5 pb-5">
           <div className="row text-center mt-5">
             <div className="col-12">
-              <Link className="btn btn-primary" to="/apply">
-                Apply now
-              </Link>
+              <Button text="Apply now" primary={true} link="/apply" />
             </div>
           </div>
         </div>

@@ -34,8 +34,8 @@ class foundYourOwn extends Component {
                     own ideas into action?
                   </li>
                   <li>
-                    You want to help others prepare for the challenges of
-                    tomorrow?
+                    You want to help others on a voluntary basis prepare for the
+                    challenges of tomorrow?
                   </li>
                 </ul>
                 <h3 className="foundYourOwn--cta-first my-5">

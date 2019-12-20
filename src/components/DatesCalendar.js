@@ -1,6 +1,3 @@
-import React, { useState } from "react"
-import Container from "./smallComponents/Container"
-import Heading from "./smallComponents/Heading"
 import Date from "./Date"
 import dayjs from "dayjs"
 import Arrow from "../assets/arrow.svg"

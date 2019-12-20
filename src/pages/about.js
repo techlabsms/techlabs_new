@@ -8,6 +8,7 @@ import RightImageSection from "../components/RightImageSection"
 import LeftImageSectionHeading from "../components/LeftImageSectionHeading"
 import CoreValues from "../components/CoreValues"
 import CheckoutLocations from "../components/CheckoutLocations"
+import Quote from "../components/Quote"
 import WhyWeDo from "../assets/wwd.png"
 import google from "../assets/google.png"
 import mission from "../assets/mission.png"
@@ -15,6 +16,7 @@ import teamStairs from "../assets/teamStairs.png"
 import join from "../assets/join.png"
 import ThreeCard from "../components/smallComponents/ThreeCard"
 import MAP from "../assets/map_small.png"
+import Lina from "../assets/lina.png"
 import Background_mobil from "../assets/about_mobil.png"
 
 class about extends Component {
@@ -22,17 +24,15 @@ class about extends Component {
     return (
       <>
         <Navbar />
-        <div className="container-fluid">
-          <ProgrammHero
-            headingFirst="About"
-            headingSecond="TechLabs"
-            intro="We at TechLabs dream of a world with no digital illiterates. A world full of tech-savvy individuals who approach the challenges of our time with a digital and entrepreneurial mindset."
-            background={Background}
-            backgroundMobil={Background_mobil}
-            secondintro="Learn more about us and our vision."
-            href="test"
-          />
-        </div>
+        <ProgrammHero
+          headingFirst="About"
+          headingSecond="TechLabs"
+          intro="We at TechLabs dream of a world with no digital illiterates. A world full of tech-savvy individuals who approach the challenges of our time with a digital and entrepreneurial mindset."
+          background={Background}
+          backgroundMobil={Background_mobil}
+          secondintro="Learn more about us and our vision."
+          href="test"
+        />
         <RightImageSectionHeading
           heading="Why we do what we do"
           subheading="We need to address the digital skill gap"
@@ -65,6 +65,15 @@ class about extends Component {
           headingThree="Connecting People"
           textThree="We believe learning requires diversity and is best embraced within a vibrant community. Hence, we aim to connect people across different disciplines and cultural backgrounds along their personal journey."
         />
+        <Quote
+          heading="Helping Others"
+          subheading="Make a difference"
+          showHeading={false}
+          text="Helping others to develop the skills they need in order to make a difference and seeing them succeed is one of the most rewarding experiences. That’s why we are not asking for anything in return and work on a voluntary basis."
+          name="Lina Oechsner"
+          job="Head of Marketing @TechLabs"
+          photo={Lina}
+        />
         <CoreValues />
         <LeftImageSectionHeading
           heading="Who we are"
@@ -77,7 +86,7 @@ class about extends Component {
         <RightImageSectionHeading
           heading="Join the Team"
           subheading="Want to become part of TechLabs?"
-          text="Do you dream of a world with no digital illiterates? Are you passionate about tech? As a TechLabs Management Member you can actively support others in learning tech. Reach out and join the TechLabs-Team."
+          text="You are dreaming of a world with no digital illiterates and are passionate about tech? As a TechLabs Management-Team member you will work voluntarily to support others in learning tech. Reach out and join the TechLabs family."
           image={join}
           hasButton={true}
           buttonText="Apply now"

@@ -4,8 +4,9 @@ import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
 import PartnerLogos from "../components/PartnerLogos"
-import KeyBenefits from "../components/KeyBenefits"
 import GIC from "../assets/gic.svg"
+import KeyBenefits from "../components/KeyBenefits"
+import Quote from "../components/Quote"
 import firstImage from "../assets/startPage.png"
 import accenture from "../assets/accenture.png"
 import westfalen from "../assets/westfalen.png"
@@ -18,6 +19,7 @@ import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
+import Button from "../components/smallComponents/Button"
 
 class index extends React.Component {
   componentDidMount() {
@@ -37,7 +39,7 @@ class index extends React.Component {
           <Navbar />
 
           <section className="py-5 padding-top-15">
-            <div className="container">
+            <div className="container"> 
               <div className="row">
                 <div className="col-lg-5 my-auto xs-margin-right">
                   <h1 className="display-4">
@@ -48,19 +50,11 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    Our mission is to enable as many people as possible to
-                    acquire state-of-the-art tech skills to solve today’s
-                    problems in a digital way by providing a unique program that
-                    combines online learning, project work, and local community
-                    events.
+                    Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations <span className="text-bold">- and that completely free for everyone!</span>
                   </p>
                   <div className="mt-5">
-                    <Link className="btn btn-secondary d-inline" to="/program">
-                      Program
-                    </Link>
-                    <Link className="btn btn-primary d-inline" to="/apply">
-                      Apply now
-                    </Link>
+                    <Button text="Program" primary={false} link="/program" />
+                    <Button text="About" primary={true} link="/about" />
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
@@ -171,49 +165,26 @@ class index extends React.Component {
           <RightImageSectionHeading
             heading="Award-Winning Concept"
             subheading="Google Impact Challenge 2018!"
-            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin."
+            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin. Today over 100 people joined TechLabs on a voluntary basis to spread the idea."
             image={gic}
             hasButton={true}
             buttonText="Read more"
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
-
-          <Container>
-            <Heading
-              heading="The TechLabs Journey"
-              subheading="What awaits you at TechLabs"
-            />
-            <div className="row">
-              <div className="col">
-                <p className="mt-2 text-justify whatWeOffer--text">
-                  Get up to speed learning tech skills in one semester by means
+          <Quote
+            heading="The TechLabs Journey"
+            subheading="What awaits you at TechLabs"
+            text="Get up to speed learning tech skills in one semester by means
                   of our program that combines Online Learning, Project Work,
                   and TechLabs Community Meetings. Independent of the background
                   and prior knowledge - anyone can participate and learn
                   tech-skills. At TechLabs we don’t want money to be an issue.
                   That’s why our programs are free of charge. We help you to
-                  complete your own tech project and qualify for tech roles.
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-10">
-                <div className="row mt-4">
-                  <div className="col-3 text-left d-flex justify-content-center align-content-center">
-                    <img src={nils} alt="nils" />
-                  </div>
-                  <div className="col-9">
-                    <p className="mt-4 whatWeOffer--nils">
-                      Nils Bahr <br />{" "}
-                      <span className="whatWeOffer--nils-color">
-                        Head of Product @ TechLabs
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
+                  complete your own tech project and qualify for tech roles."
+            photo={nils}
+            name="Nils Bahr"
+            job="Head of Product @ TechLabs"
+          />
           <KeyBenefits />
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
