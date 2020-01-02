@@ -94,7 +94,7 @@ const Footer = () => {
                   <Link className="foot-a" to="/ai">
                     Artificial Intelligence
                   </Link>
-                  <br/>
+                  <br />
                   <Link className="foot-a" to="/ux">
                     User Experience Design
                   </Link>
@@ -121,7 +121,7 @@ const Footer = () => {
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
-            <p className="footer-tl--copy">&copy; TechLabs e.V. 2019</p>
+            <p className="footer-tl--copy">&copy; TechLabs e.V. 2020</p>
           </div>
         </div>
       </div>
