@@ -106,13 +106,12 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
                     <>
                       <div className="col-md-1" />
                       {dates[currentMonth].map(event => (
-                        <>
-                          <Date
-                            month={currentMonth}
-                            event={event}
-                            mail={mail}
-                          />
-                        </>
+                        <Date
+                          month={currentMonth}
+                          event={event}
+                          mail={mail}
+                          key={event.id}
+                        />
                       ))}
                       <div className="col-md-1" />
                     </>
