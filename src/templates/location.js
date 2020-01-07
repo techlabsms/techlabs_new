@@ -84,7 +84,7 @@ class location extends Component {
               <DatesCalendar
                 eventsPage={location.eventsPage}
                 city={location.heading}
-                mail={location.mail}
+                mail={location.email}
               />
             )}
             {location.firstEntryTitle && (
