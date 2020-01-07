@@ -81,7 +81,7 @@ body {
   padding-left: 27px;
 }
 
-.dropdown-item:active{
+.dropdown-item:active {
   background-color: white !important;
   color: $color-p;
 }
@@ -150,7 +150,7 @@ body {
   color: $color-gl;
 }
 
-.no-cursor{
+.no-cursor {
   cursor: none !important;
 }
 
@@ -305,11 +305,11 @@ body {
   margin-bottom: 0px !important;
 }
 
-.aNone{
-  color: black; 
+.aNone {
+  color: black;
 }
 
-.aNone:hover{
+.aNone:hover {
   color: black;
 }
 
@@ -381,6 +381,10 @@ body {
   padding-top: 1em !important;
   padding-bottom: 1em !important;
   margin-right: 1.5rem;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn-primary {

@@ -1,11 +1,11 @@
 import React, { useState } from "react"
-import Modal from "react-responsive-modal"
+import Modal from "react-modal"
 
 const Date = ({ event, month, mail }) => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <div className="col-md-2" key={event.id}>
+      <div className="col-md-2 col-sm-4" key={event.id}>
         <div className="datesCalendar--day" onClick={() => setOpen(true)}>
           <div className="row">
             <div className="col">
@@ -20,9 +20,14 @@ const Date = ({ event, month, mail }) => {
             </div>
           </div>
         </div>
-        <h5 className="ml-3 mt-2">{event.name}</h5>
+        <h6 className="ml-3 mt-2">{event.name}</h6>
       </div>
-      <Modal open={open} onClose={() => setOpen(false)} center>
+      <Modal
+        isOpen={open}
+        onRequestClose={() => setOpen(false)}
+        className="Modal-Date"
+        overlayClassName="Modal--overlay"
+      >
         <h1>{event.name}</h1>
         <p>{event.description}</p>
         <div className="row mt-5">
