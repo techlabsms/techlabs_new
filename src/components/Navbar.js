@@ -4,6 +4,7 @@ import logo from "../assets/tl-logo.svg"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
+import MED from "../assets/loc-med.svg"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
@@ -61,6 +62,14 @@ class Navbar extends React.Component {
                     <Link className="dropdown-item" to="/location/Barcelona">
                       <img src={BCN} className="nav-loc-icon" alt="loc-bcn" />
                       Barcelona
+                    </Link>
+                    <Link className="dropdown-item" to="/location/Medellín">
+                      <img
+                        src={MED}
+                        className="nav-loc-icon h-75"
+                        alt="loc-bcn"
+                      />
+                      Medellín
                     </Link>
                     <div className="dropdown-divider" />
                     <Link
