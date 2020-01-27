@@ -74,7 +74,7 @@ class Navbar extends React.Component {
                 </li>
                 <li className="nav-item dropdown">
                   <Link
-                  to="/program"
+                    to="/program"
                     className="nav-link"
                     data-toggle="dropdown"
                     activeClassName="navLink--active"
@@ -87,7 +87,7 @@ class Navbar extends React.Component {
                       to="/dataScience"
                       activeClassName="navLink--active"
                     >
-                      <img src={ds} alt="Data Science"  className="mr-3"/>
+                      <img src={ds} alt="Data Science" className="mr-3" />
                       Data Science
                     </Link>
                     <Link
@@ -95,7 +95,7 @@ class Navbar extends React.Component {
                       to="/web"
                       activeClassName="navLink--active"
                     >
-                     <img src={web} alt="web development"  className="mr-3"/>
+                      <img src={web} alt="web development" className="mr-3" />
                       Web Development
                     </Link>
                     <Link
@@ -103,7 +103,7 @@ class Navbar extends React.Component {
                       to="/ai"
                       activeClassName="navLink--active"
                     >
-                     <img src={ai} alt="ai"  className="mr-3"/>
+                      <img src={ai} alt="ai" className="mr-3" />
                       Artificial Intelligence
                     </Link>
                     <Link
@@ -111,7 +111,7 @@ class Navbar extends React.Component {
                       to="/ux"
                       activeClassName="navLink--active"
                     >
-                     <img src={web} alt="UX Design"  className="mr-3"/>
+                      <img src={web} alt="UX Design" className="mr-3" />
                       User Experience Design
                     </Link>
                   </div>
@@ -136,7 +136,7 @@ class Navbar extends React.Component {
                   </Link>
                 </li>
 
-                {/*<li className="nav-item">
+                <li className="nav-item">
                   <Link
                     className="nav-button"
                     to="/apply"
@@ -144,7 +144,7 @@ class Navbar extends React.Component {
                   >
                     Apply now
                   </Link>
-                </li>*/}
+                </li>
 
                 <li className="nav-item">
                   <div className="btn-slack d-flex align-items-center justify-content-center">

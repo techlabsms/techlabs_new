@@ -31,9 +31,9 @@ class apply extends Component {
         },
         {
           name: "copenhagen",
-          link: "www.google.de",
-          isOpen: false,
-          startDate: "2019-09-01",
+          link: "https://techlabsorg.typeform.com/to/DRVtUy",
+          isOpen: true,
+          startDate: "2020-02-08",
         },
         {
           name: "barcelona",
