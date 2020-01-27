@@ -4,6 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
+import MED from "../assets/loc-med.svg"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
 import ds from "../assets/ds.png"
@@ -88,6 +89,18 @@ class MobileNav extends Component {
                       Barcelona
                     </li>
                   </Link>
+                  <Link
+                    to="/location/Medellín"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="mt-2">
+                      <span>
+                        <img src={MED} alt="" className="mobileNav--icon" />
+                      </span>
+                      Medellín
+                    </li>
+                  </Link>
                   <hr />
                   <Link
                     to="/foundYourOwn"
@@ -161,7 +174,10 @@ class MobileNav extends Component {
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4"><img src={web} alt="ux design" className="mr-3"/>User Experience Design</li>
+                    <li className="my-4">
+                      <img src={web} alt="ux design" className="mr-3" />
+                      User Experience Design
+                    </li>
                   </Link>
                 </ul>
               )}

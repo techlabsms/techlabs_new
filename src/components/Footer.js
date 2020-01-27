@@ -73,6 +73,9 @@ const Footer = () => {
                     <Link to="/location/Barcelona" className="noDec">
                       <li className="footer-tl--subMenu-link">Barcelona</li>
                     </Link>
+                    <Link to="/location/Medellín" className="noDec">
+                      <li className="footer-tl--subMenu-link">Medellín</li>
+                    </Link>
                   </ul>
                   <Link className="foot-a" to="/faq">
                     FAQ
