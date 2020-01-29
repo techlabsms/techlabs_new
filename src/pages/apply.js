@@ -41,6 +41,12 @@ class apply extends Component {
           isOpen: false,
           startDate: "2019-09-03",
         },
+        {
+          name: "medellín",
+          link: "https://techlabsorg.typeform.com/to/nQEp0v",
+          isOpen: true,
+          startDate: "2020-02-04",
+        },
       ],
       index: 0,
     }
@@ -82,6 +88,8 @@ class apply extends Component {
           copenhagenIsOpen={cityData[1].isOpen}
           barcelonaStart={cityData[2].startDate}
           barcelonaIsOpen={cityData[2].isOpen}
+          medellinStart={cityData[3].startDate}
+          medellinIsOpen={cityData[3].isOpen}
         />
         <div className={this.state.isClicked ? "d-block" : "d-none"}>
           <Requirements
