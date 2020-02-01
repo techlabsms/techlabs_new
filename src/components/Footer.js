@@ -3,8 +3,9 @@ import Logo from "../assets/tl-logo-white.svg"
 import PayPal from "../assets/paypal.svg"
 import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
+import { graphql, StaticQuery } from "gatsby"
 
-const Footer = () => {
+const Footer = props => {
   return (
     <>
       <CookieConsent
@@ -64,18 +65,35 @@ const Footer = () => {
                     Locations
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    <Link to="/location/Muenster" className="noDec">
-                      <li className="footer-tl--subMenu-link">Muenster</li>
-                    </Link>
-                    <Link to="/location/Copenhagen" className="noDec">
-                      <li className="footer-tl--subMenu-link">Copenhagen</li>
-                    </Link>
-                    <Link to="/location/Barcelona" className="noDec">
-                      <li className="footer-tl--subMenu-link">Barcelona</li>
-                    </Link>
-                    <Link to="/location/Medellín" className="noDec">
-                      <li className="footer-tl--subMenu-link">Medellín</li>
-                    </Link>
+                    <StaticQuery
+                      query={graphql`
+                        query location {
+                          allContentfulLocationPage {
+                            edges {
+                              node {
+                                heading
+                              }
+                            }
+                          }
+                        }
+                      `}
+                      render={data => (
+                        <>
+                          {data.allContentfulLocationPage.edges.map(
+                            location => (
+                              <Link
+                                to={`/location/${location.node.heading}`}
+                                className="noDec"
+                              >
+                                <li className="footer-tl--subMenu-link">
+                                  {location.node.heading}
+                                </li>
+                              </Link>
+                            )
+                          )}
+                        </>
+                      )}
+                    />
                   </ul>
                   <Link className="foot-a" to="/faq">
                     FAQ
