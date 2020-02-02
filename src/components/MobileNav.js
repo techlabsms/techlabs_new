@@ -5,6 +5,7 @@ import MS from "../assets/loc-ms.svg"
 import CPH from "../assets/loc-cph.svg"
 import BCN from "../assets/loc-bcn.svg"
 import MED from "../assets/loc-med.svg"
+import BER from "../assets/loc-ber.png"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
 import ds from "../assets/ds.png"
@@ -99,6 +100,18 @@ class MobileNav extends Component {
                         <img src={MED} alt="" className="mobileNav--icon" />
                       </span>
                       Medellín
+                    </li>
+                  </Link>
+                  <Link
+                    to="/location/Berlin"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="mt-2">
+                      <span>
+                        <img src={BER} alt="" className="mobileNav--icon p-3" />
+                      </span>
+                      Berlin
                     </li>
                   </Link>
                   <hr />
