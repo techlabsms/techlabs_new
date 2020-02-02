@@ -29,7 +29,8 @@ class Locations extends Component {
       if (
         location.node.heading === "Muenster" ||
         location.node.heading === "Copenhagen" ||
-        location.node.heading === "Barcelona"
+        location.node.heading === "Barcelona" ||
+        location.node.heading === "Medellín"
       ) {
         return location.node.heading
           .toLowerCase()
