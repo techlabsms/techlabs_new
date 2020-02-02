@@ -13,7 +13,7 @@ import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
 import Footer from "../components/Footer"
-import ProgrammMobil from "../assets/programmMobil.png"
+import ProgrammMobil from "../assets/ProgrammMobil.png"
 import KeyBenefits from "../components/KeyBenefits"
 import Button from "../components/smallComponents/Button"
 
