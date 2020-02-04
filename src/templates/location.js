@@ -30,7 +30,7 @@ class location extends Component {
               <div className="row">
                 <div className="col-md-12 col-lg-5 border-0 location-card mt-5 py-5 position-absolute">
                   <h1 className="location-title">
-                    <img src={location.icon.file.url} alt="" />{" "}
+                    <img src={location.icon.file.url} alt="" width="60" />{" "}
                     {location.heading}
                   </h1>
                   <div className="row">

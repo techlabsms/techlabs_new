@@ -4,7 +4,7 @@ import PayPal from "../assets/paypal.svg"
 import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
 
-const Footer = () => {
+const Footer = props => {
   return (
     <>
       <CookieConsent
@@ -72,6 +72,12 @@ const Footer = () => {
                     </Link>
                     <Link to="/location/Barcelona" className="noDec">
                       <li className="footer-tl--subMenu-link">Barcelona</li>
+                    </Link>
+                    <Link to="/location/Medellín" className="noDec">
+                      <li className="footer-tl--subMenu-link">Medellín</li>
+                    </Link>
+                    <Link to="/location/Berlin" className="noDec">
+                      <li className="footer-tl--subMenu-link">Berlin</li>
                     </Link>
                   </ul>
                   <Link className="foot-a" to="/faq">

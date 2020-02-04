@@ -39,7 +39,7 @@ class index extends React.Component {
           <Navbar />
 
           <section className="py-5 padding-top-15">
-            <div className="container"> 
+            <div className="container">
               <div className="row">
                 <div className="col-lg-5 my-auto xs-margin-right">
                   <h1 className="display-4">
@@ -50,7 +50,13 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations <span className="text-bold">- and that completely free for everyone!</span>
+                    Learn Data Science, Artificial Intelligence, Web Development
+                    and User Experience by means of our pioneering Digital
+                    Shaper program that combines online learning, project work
+                    as well as community events at one of our locations{" "}
+                    <span className="text-bold">
+                      - and that completely free for everyone!
+                    </span>
                   </p>
                   <div className="mt-5">
                     <Button text="Program" primary={false} link="/program" />
@@ -134,6 +140,8 @@ class index extends React.Component {
                         <p className="text-muted">
                           Our growing community connects 300+ people motivated
                           to learn tech – online and offline.
+                          <br />
+                          <br />
                         </p>
                         <span className="card-discover">
                           > Discover our community
@@ -144,11 +152,11 @@ class index extends React.Component {
                   <div className="p-2 col-sm-6 mt-5">
                     <Link to="/locations" className="card-a">
                       <div className="card h-100">
-                        <h1 className="card-title">3</h1> <br />
+                        <h1 className="card-title">5</h1> <br />
                         <p className="card-subtitle">locations</p>
                         <p className="text-muted pb-4">
                           We currently have local communities in Muenster,
-                          Barcelona, and Copenhagen.
+                          Barcelona, Copenhagen, Berlin and Medellín.
                         </p>
                         <span className="card-discover">
                           > Discover our locations

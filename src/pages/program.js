@@ -67,11 +67,7 @@ class program extends Component {
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button
-                  text="More Questions?"
-                  link="/faq"
-                  primary={true}
-                />
+                <Button text="More Questions?" link="/faq" primary={true} />
               </div>
             </div>
           </div>

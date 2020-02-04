@@ -25,6 +25,7 @@
     "dayjs": "^1.8.16",
     "env": "0.0.2",
     "gatsby": "^2.7.1",
+    "gatsby-cli": "^2.8.28",
     "gatsby-plugin-google-tagmanager": "^2.1.12",
     "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-sass": "^2.0.11",
