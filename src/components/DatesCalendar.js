@@ -8,11 +8,97 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const DatesCalendar = ({ eventsPage, city, mail }) => {
   const month = getNextFiveMonth()
-  const [dates] = useState(getDatesForLocation(city))
   const [currentMonth, setCurrentMonth] = useState(
     month[0].format("MMMM").toLowerCase()
   )
   const [index, setIndex] = useState(0)
+
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulDates {
+        edges {
+          node {
+            location {
+              heading
+            }
+            january {
+              id
+              date
+              name
+              description
+            }
+            february {
+              id
+              date
+              name
+              description
+            }
+            march {
+              id
+              date
+              name
+              description
+            }
+            april {
+              id
+              date
+              name
+              description
+            }
+            may {
+              id
+              date
+              name
+              description
+            }
+            june {
+              id
+              date
+              name
+              description
+            }
+            july {
+              id
+              date
+              name
+              description
+            }
+            august {
+              id
+              date
+              name
+              description
+            }
+            september {
+              id
+              date
+              name
+              description
+            }
+            november {
+              id
+              date
+              name
+              description
+            }
+            december {
+              id
+              date
+              name
+              description
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // filtering the dates for the location
+  const locationDates = data.allContentfulDates.edges.filter(data => {
+    return data.node.location.heading === city
+  })
+
+  const dates = locationDates[0].node
 
   return (
     <Container className="datesCalendar">
@@ -131,95 +217,6 @@ const getNextFiveMonth = () => {
     return dayjs().add(day, "month")
   })
   return dates
-}
-
-const getDatesForLocation = city => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulDates {
-        edges {
-          node {
-            location {
-              heading
-            }
-            january {
-              id
-              date
-              name
-              description
-            }
-            february {
-              id
-              date
-              name
-              description
-            }
-            march {
-              id
-              date
-              name
-              description
-            }
-            april {
-              id
-              date
-              name
-              description
-            }
-            may {
-              id
-              date
-              name
-              description
-            }
-            june {
-              id
-              date
-              name
-              description
-            }
-            july {
-              id
-              date
-              name
-              description
-            }
-            august {
-              id
-              date
-              name
-              description
-            }
-            september {
-              id
-              date
-              name
-              description
-            }
-            november {
-              id
-              date
-              name
-              description
-            }
-            december {
-              id
-              date
-              name
-              description
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  // filtering the dates for the location
-  const locationDates = data.allContentfulDates.edges.filter(data => {
-    return data.node.location.heading === city
-  })
-
-  return locationDates[0].node
 }
 
 export default DatesCalendar
