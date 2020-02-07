@@ -13,7 +13,7 @@ import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
 import Footer from "../components/Footer"
-import ProgrammMobil from "../assets/ProgrammMobil.png"
+import ProgrammMobil from "../assets/programmMobil.png"
 import KeyBenefits from "../components/KeyBenefits"
 import Button from "../components/smallComponents/Button"
 
@@ -67,11 +67,7 @@ class program extends Component {
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button
-                  text="More Questions?"
-                  link="/faq"
-                  primary={true}
-                />
+                <Button text="More Questions?" link="/faq" primary={true} />
               </div>
             </div>
           </div>
