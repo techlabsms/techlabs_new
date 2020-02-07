@@ -19,8 +19,7 @@ We use Gatsby.js to build our Site
 
 ## Publish Changes 
 
-1. Run `npm deploy`
-2. Wait for the changes appearing.;-) 
+Staging branch automatically deploys to the staging environment and the production branch automatically to the production environment. 
 
 ## ✏️ Content
 
@@ -28,8 +27,10 @@ We use Contentful as a CMS (Content Management System). There you can edit the l
 
 
 ### Adding a BlogPost
+tbd
 
 ### Changing the location page
+tbd
 
 ## Technical Setup 
 
@@ -37,6 +38,10 @@ We use Contentful as a CMS (Content Management System). There you can edit the l
   - Gatsby as static site generator (<a href="https://www.gatsbyjs.org/">DOCS</a>)
   - Data Source <a href="https://www.contentful.com/">Contentful</a>
 
+## URLS
+
+  - Staging-Environment: <a href="https://techlabs-staging.netlify.com">Staging</a> [![Netlify Status](https://api.netlify.com/api/v1/badges/c95ad6e6-d4b0-491f-ba27-6df51922187e/deploy-status)](https://app.netlify.com/sites/techlabs-staging/deploys)
+  - Production: <a href="techlabs.org">techlabs.org</a> [![Netlify Status](https://api.netlify.com/api/v1/badges/1c016a39-3c99-4e93-a749-7b8a7cf9e62e/deploy-status)](https://app.netlify.com/sites/techlabs-prod/deploys)
 
 ## 🐛 Bugs and issues
 
