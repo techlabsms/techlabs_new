@@ -44,7 +44,7 @@ class apply extends Component {
         {
           name: "medellín",
           link: "https://techlabsorg.typeform.com/to/nQEp0v",
-          isOpen: true,
+          isOpen: false,
           startDate: "2020-02-04",
         },
       ],
