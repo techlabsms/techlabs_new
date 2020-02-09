@@ -116,14 +116,12 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
                   : "col datesCalendar--dates"
               }
               key={date.month()}
+              onClick={() => setCurrentMonth(date.format("MMMM").toLowerCase())}
+              onKeyDown={() => null}
+              role="button"
+              tabIndex={0}
             >
-              <h3
-                onClick={() =>
-                  setCurrentMonth(date.format("MMMM").toLowerCase())
-                }
-              >
-                {date.format("MMMM")}
-              </h3>
+              <h3>{date.format("MMMM")}</h3>
             </div>
           ))}
         </div>
@@ -132,15 +130,18 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
             <div className="row">
               {Object.keys(dates[currentMonth]).length > 5 ? (
                 <>
-                  <div className="col-md-1 d-flex justify-content-center">
+                  <div
+                    className="col-md-1 d-flex justify-content-center"
+                    onKeyDown={() => null}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => {
+                      index.length >= index ? setIndex(index - 1) : setIndex(0)
+                    }}
+                  >
                     <img
                       src={Arrow}
                       className="w-50 mb-4 datesCalendar--arrow-left"
-                      onClick={() => {
-                        index.length >= index
-                          ? setIndex(index - 1)
-                          : setIndex(0)
-                      }}
                       alt="arrow left"
                     />
                   </div>
@@ -169,15 +170,18 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
                     event={dates[currentMonth][index + 4]}
                     mail={mail}
                   />
-                  <div className="col-md-1 d-flex justify-content-center">
+                  <div
+                    className="col-md-1 d-flex justify-content-center"
+                    onClick={() => {
+                      index.length <= index ? setIndex(index + 1) : setIndex(0)
+                    }}
+                    onKeyDown={() => null}
+                    role="button"
+                    tabIndex={0}
+                  >
                     <img
                       src={Arrow}
                       className="w-50 mb-4 datesCalendar--arrow-right"
-                      onClick={() => {
-                        index.length <= index
-                          ? setIndex(index + 1)
-                          : setIndex(0)
-                      }}
                       alt="arrow right"
                     />
                   </div>

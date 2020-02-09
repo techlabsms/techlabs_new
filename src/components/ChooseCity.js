@@ -65,6 +65,9 @@ class ChooseCity extends Component {
                       !this.state.muensterIsClicked
                     )
                   }}
+                  onKeyDown={()=>null}
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="row">
                     <div className="col-md-6">
@@ -156,6 +159,9 @@ class ChooseCity extends Component {
                       !this.state.copenhagenIsClicked
                     )
                   }}
+                  onKeyDown={()=>null}
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="row">
                     <div className="col-md-6">
@@ -237,6 +243,9 @@ class ChooseCity extends Component {
                       !this.state.barcelonaIsClicked
                     )
                   }}
+                  onKeyDown={()=>null}
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="row">
                     <div className="col-md-6">
@@ -318,6 +327,9 @@ class ChooseCity extends Component {
                       !this.state.medellinIsClicked
                     )
                   }}
+                  onKeyDown={()=>null}
+                  role="button"
+                  tabIndex={0}
                 >
                   <div className="row">
                     <div className="col-md-6">

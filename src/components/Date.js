@@ -6,7 +6,13 @@ const Date = ({ event, month, mail }) => {
   return (
     <>
       <div className="col-md-2 col-sm-4" key={event.id}>
-        <div className="datesCalendar--day" onClick={() => setOpen(true)}>
+        <div
+          className="datesCalendar--day"
+          onClick={() => setOpen(true)}
+          onKeyDown={() => null}
+          role="button"
+          tabIndex={0}
+        >
           <div className="row">
             <div className="col">
               <h6 className="datesCalendar--threeLetterDate">

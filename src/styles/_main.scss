@@ -119,6 +119,10 @@ body {
   display: block;
 }
 
+[role="button"]:focus {
+  outline: none;
+}
+
 .dropdown-menu {
   margin: 0 !important;
   padding: 0 !important;
