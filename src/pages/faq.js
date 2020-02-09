@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-import NavBar from "../components/Navbar"
-import Footer from "../components/Footer"
 import FaqQuestion from "../components/FaqQuestion"
 import "../styles/_faq.scss"
+import Layout from "../components/Layout"
 
 class faq extends Component {
   state = {
@@ -89,8 +88,7 @@ class faq extends Component {
       return question.question.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <>
-        <NavBar />
+      <Layout>
         <div className="container">
           <div className="row py-5">
             <div className="col-8">
@@ -117,8 +115,7 @@ class faq extends Component {
             />
           ))}
         </div>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }
