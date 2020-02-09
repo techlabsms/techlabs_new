@@ -25,21 +25,25 @@ class MobileNav extends Component {
         <div className="mobileNav  d-lg-none d-xl-none">
           <ul className="navbar-nav ml-auto d-sm-block d-md-block mo">
             <li className="nav-item">
-              <h3
-                className="nav-link mobileNav--link text-center"
+              <div
                 onClick={() => {
                   this.setState({
                     locationOpen: !locationOpen,
                     programOpen: false,
                   })
                 }}
+                onKeyDown={() => null}
+                role="button"
+                tabIndex={0}
               >
-                Locations{" "}
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className="mr-3 mt-1 ml-4"
-                />
-              </h3>
+                <h3 className="nav-link mobileNav--link text-center">
+                  Locations{" "}
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="mr-3 mt-1 ml-4"
+                  />
+                </h3>
+              </div>
               {locationOpen && (
                 <ul className="mobileNav--subMenu">
                   <Link
@@ -140,21 +144,25 @@ class MobileNav extends Component {
             </li>
 
             <li className="nav-item">
-              <h3
-                className="nav-link mobileNav--link text-center"
+              <div
                 onClick={() => {
                   this.setState({
                     programOpen: !programOpen,
                     locationOpen: false,
                   })
                 }}
+                onKeyDown={() => null}
+                role="button"
+                tabIndex={0}
               >
-                Program
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className="mr-3 mt-1 ml-4"
-                />
-              </h3>
+                <h3 className="nav-link mobileNav--link text-center">
+                  Program
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="mr-3 mt-1 ml-4"
+                  />
+                </h3>
+              </div>
               {programOpen && (
                 <ul className="mobileNav--subMenu">
                   <Link

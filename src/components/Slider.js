@@ -113,12 +113,18 @@ class Slider extends Component {
                     : "col-12 col-lg-5"
                 }
               >
-                <img
-                  src={testimonials[number].image}
-                  alt=""
-                  className="mt-4 d-block w-100 "
+                <div
                   onClick={testimonials[number].video ? this.openModal : ""}
-                />
+                  onKeyDown={() => null}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <img
+                    src={testimonials[number].image}
+                    alt=""
+                    className="mt-4 d-block w-100 "
+                  />
+                </div>
 
                 <Modal
                   isOpen={this.state.modalIsOpen}
@@ -191,18 +197,26 @@ class Slider extends Component {
                     <span>03</span>
                   </div>
                   <div className="col-6 text-right">
-                    <img
-                      src={Arrow}
-                      alt=""
-                      className="slider--arrow slider--arrow-left"
+                    <div
                       onClick={() => this.moveLeft()}
-                    />
-                    <img
-                      src={Arrow}
-                      alt=""
-                      className="slider--arrow"
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img
+                        src={Arrow}
+                        alt=""
+                        className="slider--arrow slider--arrow-left"
+                      />
+                    </div>
+                    <div
                       onClick={() => this.moveRight()}
-                    />
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img src={Arrow} alt="" className="slider--arrow" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -228,12 +242,18 @@ class Slider extends Component {
               <div className="col">
                 {testimonials[number].video ? (
                   <div className="text-center my-4">
-                    <img
-                      src={testimonials[number].image_mobil_thumbnail}
-                      className="w-75 img-fluid"
+                    <div
                       onClick={testimonials[number].video ? this.openModal : ""}
-                      alt="img thumbnail"
-                    />
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img
+                        src={testimonials[number].image_mobil_thumbnail}
+                        className="w-75 img-fluid"
+                        alt="img thumbnail"
+                      />
+                    </div>
                   </div>
                 ) : (
                   <p className="slider--text-mobil mt-3 pb-5">
