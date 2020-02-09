@@ -1,18 +1,16 @@
 import React, { Component } from "react"
-import NavBar from "../components/Navbar"
-import Footer from "../components/Footer"
 import MAP from "../assets/world.png"
 import PictureOne from "../assets/fyo1.png"
 import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
+import Layout from "../components/Layout"
 
 class foundYourOwn extends Component {
   render() {
     return (
-      <>
-        <NavBar />
+      <Layout>
         <section className="foundYourOwn-hero py-5">
           <div className="container py-5">
             <div className="row">
@@ -185,9 +183,7 @@ class foundYourOwn extends Component {
             </div>
           </div>
         </section>
-
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }

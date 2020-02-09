@@ -12,16 +12,15 @@ import DataScience from "../assets/dashboard.png"
 import web from "../assets/webdevpro.png"
 import AI from "../assets/ai-robot.png"
 import UX from "../assets/UX.png"
-import Footer from "../components/Footer"
 import ProgrammMobil from "../assets/programmMobil.png"
 import KeyBenefits from "../components/KeyBenefits"
 import Button from "../components/smallComponents/Button"
+import Layout from "../components/Layout"
 
 class program extends Component {
   render() {
     return (
-      <div>
-        <Navbar />
+      <Layout>
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond="Program"
@@ -72,8 +71,7 @@ class program extends Component {
             </div>
           </div>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     )
   }
 }

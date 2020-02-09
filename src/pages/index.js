@@ -1,6 +1,4 @@
 import React from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
 import PartnerLogos from "../components/PartnerLogos"
@@ -20,6 +18,7 @@ import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
+import Layout from "../components/Layout"
 
 class index extends React.Component {
   componentDidMount() {
@@ -34,10 +33,8 @@ class index extends React.Component {
   }
   render() {
     return (
-      <>
+      <Layout>
         <div className="container-fluid">
-          <Navbar />
-
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
@@ -230,8 +227,7 @@ class index extends React.Component {
             </Container>
           </section>
         </div>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }
