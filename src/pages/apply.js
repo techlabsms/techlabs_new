@@ -32,7 +32,7 @@ class apply extends Component {
         {
           name: "copenhagen",
           link: "https://techlabsorg.typeform.com/to/DRVtUy",
-          isOpen: true,
+          isOpen: false,
           startDate: "2020-02-08",
         },
         {
