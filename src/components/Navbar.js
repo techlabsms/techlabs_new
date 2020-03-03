@@ -7,6 +7,7 @@ import BCN from "../assets/loc-bcn.svg"
 import MED from "../assets/loc-med.svg"
 import BER from "../assets/loc-ber.png"
 import CUR from "../assets/loc-cu.svg"
+import AAC from "../assets/loc-aac.png"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
@@ -81,13 +82,21 @@ class Navbar extends React.Component {
                       />
                       Berlin
                     </Link>
-                    <Link className="dropdown-item" to="/location/Curitiba">
+                    <Link className="dropdown-item " to="/location/Curitiba">
                       <img
                         src={CUR}
                         className="nav-loc-icon p-2"
                         alt="loc-bcn"
                       />
                       Curitiba
+                    </Link>
+                    <Link className="dropdown-item" to="/location/Aachen">
+                      <img
+                        src={AAC}
+                        className="nav-loc-icon p-2 mr-3"
+                        alt="loc-bcn"
+                      />
+                      Aachen
                     </Link>
                     <div className="dropdown-divider" />
                     <Link
