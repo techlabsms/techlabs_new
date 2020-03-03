@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, {Component} from "react"
 import Navbar from "../components/Navbar"
 import ApplicationHero from "../components/ApplicationHero"
 import ChooseCity from "../components/ChooseCity"
@@ -14,6 +14,7 @@ import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/LearnMore"
 import UX from "../assets/UX.png"
+import {ApplicationLinkEnum} from "../enums/ApplicationLinkEnum";
 
 class apply extends Component {
   constructor(props) {
@@ -23,30 +24,30 @@ class apply extends Component {
       isClicked: false,
       city: "",
       cityData: [
-        {
-          name: "muenster",
-          isOpen: false,
-          link: "https://techlabsorg.typeform.com/to/sD79sQ",
-          startDate: "2019-10-20",
-        },
-        {
-          name: "copenhagen",
-          link: "https://techlabsorg.typeform.com/to/DRVtUy",
-          isOpen: true,
-          startDate: "2020-02-08",
-        },
-        {
-          name: "barcelona",
-          link: "www.google.de",
-          isOpen: false,
-          startDate: "2019-09-03",
-        },
-        {
-          name: "medellín",
-          link: "https://techlabsorg.typeform.com/to/nQEp0v",
-          isOpen: false,
-          startDate: "2020-02-04",
-        },
+          {
+              name: "muenster",
+              isOpen: false,
+              link: ApplicationLinkEnum.MUENSTER,
+              startDate: "2019-10-20",
+          },
+          {
+              name: "copenhagen",
+              link: ApplicationLinkEnum.COPENHAGEN,
+              isOpen: true,
+              startDate: "2020-02-08",
+          },
+          {
+              name: "barcelona",
+              link: ApplicationLinkEnum.BARCELONA,
+              isOpen: false,
+              startDate: "2019-09-03",
+          },
+          {
+              name: "medellín",
+              link: ApplicationLinkEnum.MEDELLIN,
+              isOpen: false,
+              startDate: "2020-02-04",
+          },
       ],
       index: 0,
     }
