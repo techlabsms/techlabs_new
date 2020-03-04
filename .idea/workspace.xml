@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c1196b9-e1bc-4ef7-b400-28ae1a83f456" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/techlabs_new.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/landingpage/applicationPeriod.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landingpage/applicationPeriod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,17 @@
       <recent name="$PROJECT_DIR$/.cache" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="i18n" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -96,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.i18n" />
       </list>
@@ -130,7 +140,7 @@
       <workItem from="1582900364174" duration="2675000" />
       <workItem from="1583272526680" duration="1381000" />
       <workItem from="1583273913707" duration="162000" />
-      <workItem from="1583274084439" duration="240000" />
+      <workItem from="1583274084439" duration="1475000" />
     </task>
     <task id="LOCAL-00001" summary="Add Application countdown and prepare for internationalization">
       <created>1583273851430</created>
@@ -146,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583274196745</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Staging: Add Application countdown and prepare for internationalization">
+      <created>1583274335165</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583274335165</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +172,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Application countdown and prepare for internationalization" />
     <MESSAGE value="Config: Add Application countdown and prepare for internationalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config: Add Application countdown and prepare for internationalization" />
+    <MESSAGE value="Staging: Add Application countdown and prepare for internationalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staging: Add Application countdown and prepare for internationalization" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -177,10 +195,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1582142265184" />
-    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1583274196355">
+    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1583274334832">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1583274196355" />
+    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1583274334832" />
     <state x="128" y="90" key="DiffContextDialog" timestamp="1582064931572">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -189,22 +207,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="0" y="37" key="FileDocumentManager.FileCacheConflict/0.23.1280.777@0.23.1280.777" timestamp="1582670651503" />
-    <state width="619" height="197" key="GridCell.Tab.0.bottom" timestamp="1583274075923">
+    <state width="619" height="197" key="GridCell.Tab.0.bottom" timestamp="1583357607498">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1583274075923" />
-    <state width="619" height="197" key="GridCell.Tab.0.center" timestamp="1583274075922">
+    <state width="619" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1583357607498" />
+    <state width="619" height="197" key="GridCell.Tab.0.center" timestamp="1583357607497">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1583274075922" />
-    <state width="619" height="197" key="GridCell.Tab.0.left" timestamp="1583274075922">
+    <state width="619" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1583357607497" />
+    <state width="619" height="197" key="GridCell.Tab.0.left" timestamp="1583357607497">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1583274075922" />
-    <state width="619" height="197" key="GridCell.Tab.0.right" timestamp="1583274075923">
+    <state width="619" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1583357607497" />
+    <state width="619" height="197" key="GridCell.Tab.0.right" timestamp="1583357607498">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1583274075923" />
+    <state width="619" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1583357607498" />
     <state x="128" y="90" key="MergeDialog" timestamp="1583274254352">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -221,10 +239,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="128" y="23" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1582885182709" />
-    <state x="240" y="139" key="Vcs.Push.Dialog.v2" timestamp="1583273854886">
+    <state x="240" y="139" key="Vcs.Push.Dialog.v2" timestamp="1583274338735">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="240" y="139" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1583273854886" />
+    <state x="240" y="139" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1583274338735" />
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582840799663">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -245,9 +263,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="394" y="133" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274207601" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1583273986809">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1583357604884">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1583273986809" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1583357604884" />
   </component>
 </project>

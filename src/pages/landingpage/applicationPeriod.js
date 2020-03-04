@@ -1,8 +1,6 @@
 import Heading from "../../components/smallComponents/Heading";
 import React, {Component} from "react";
-import wave from "../../assets/landingpage/wave.svg";
-import leaf from "../../assets/landingpage/leafs.png";
-import girl_clock from "../../assets/landingpage/girl_clock.png";
+import wave from "../../assets/landingpage/wave.png";
 import '../../styles/landingpage/_applicationPeriod.scss';
 import Dropdown from "../../templates/dropdown";
 import localeData from "../../intl";
@@ -38,17 +36,6 @@ class ApplicationPeriod extends Component {
     }
 
     render() {
-        const girl_clock_style = {
-            width: window.innerWidth * 0.15,
-            top: '3em',
-        };
-
-        const leaf_style = {
-            width: window.innerWidth * 0.1,
-            bottom: '-2.5em',
-            left: '-3em',
-        };
-
         const wave_style = {
             width: '100%'
         };
@@ -57,7 +44,6 @@ class ApplicationPeriod extends Component {
             marginBottom: '1em',
             width: '70%'
         };
-
 
         const countryOptions = [
             {value: CountryEnum.COUNTRY, label: this.messages[CountryEnum.COUNTRY]},
@@ -151,10 +137,6 @@ class ApplicationPeriod extends Component {
                     </div>
                 </div>
                 <div className="images">
-                    <div className="image-box" style={{opacity: window.innerWidth < 600 ? 0 : 1}}>
-                        <img src={leaf} className="leafs" style={leaf_style}/>
-                        <img src={girl_clock} className="girl_clock" style={girl_clock_style}/>
-                    </div>
                     <img src={wave} style={wave_style}/>
                 </div>
             </section>
