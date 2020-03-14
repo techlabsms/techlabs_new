@@ -5,7 +5,7 @@ export const ApplicationLinkEnum = {
     MUENSTER: 'https://techlabsorg.typeform.com/to/sD79sQ',
     MEDELLIN: 'https://techlabsorg.typeform.com/to/nQEp0v',
     BARCELONA: 'https://www.techlabs.org/',
-    BERLIN: 'https://www.techlabs.org/',
+    BERLIN: 'https://techlabsberlin.typeform.com/to/OlQaRy',
     CURITIBA: 'https://www.techlabs.org/'
 }
 
