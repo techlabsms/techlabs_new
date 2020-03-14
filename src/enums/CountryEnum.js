@@ -18,8 +18,8 @@ export const CityEnum = {
 
 export const CityCountryEnum = {
     CITY: [{value: 'location.city'}],
-    GERMANY: [{value: 'location.muenster', applicationStart: '2020.03.15', applicationEnd: '2020.04.12'},
-        {value: 'location.berlin', applicationStart: '2020.03.01', applicationEnd: '2020.03.28'}],
+    GERMANY: [{value: 'location.muenster', applicationStart: '20200315', applicationEnd: '20200412'},
+        {value: 'location.berlin', applicationStart: '20200301', applicationEnd: '20200328'}],
     SPAIN: [{
         value: 'location.barcelona', applicationStart: null, applicationEnd: null
     }],
@@ -27,7 +27,7 @@ export const CityCountryEnum = {
         value: 'location.copenhagen', applicationStart: null, applicationEnd: null
     }],
     BRAZIL: [{
-        value: 'location.curitiba', applicationStart: '2020.08.15', applicationEnd: '2020.08.26'
+        value: 'location.curitiba', applicationStart: '20200815', applicationEnd: '20200826'
     }],
     COLOMBIA: [{
         value: 'location.medellin', applicationStart: null, applicationEnd: null
