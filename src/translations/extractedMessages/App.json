@@ -36,6 +36,10 @@
     "defaultMessage": "Berlin"
   },
   {
+    "id": "location.aachen",
+    "defaultMessage": "Aachen"
+  },
+  {
     "id": "location.copenhagen",
     "defaultMessage": "Copenhagen"
   },

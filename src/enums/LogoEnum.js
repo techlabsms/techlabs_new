@@ -4,6 +4,7 @@ import BCN from "../assets/loc-bcn.svg";
 import MED from "../assets/loc-med.svg";
 import BER from "../assets/loc-ber.png";
 import CUR from "../assets/loc-cu.svg";
+import AAC from "../assets/loc-aac.png";
 import {CityEnum} from "./CountryEnum";
 
 export function getLogo(city) {
@@ -25,5 +26,8 @@ export function getLogo(city) {
 
         case CityEnum.MEDELLIN:
             return MED;
+
+        case CityEnum.AACHEN:
+            return AAC;
     }
 }

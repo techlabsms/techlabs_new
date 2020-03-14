@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3c1196b9-e1bc-4ef7-b400-28ae1a83f456" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landingpage/applicationPeriod.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landingpage/applicationPeriod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/ApplicationLinkEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/ApplicationLinkEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/CountryEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/CountryEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/LogoEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/LogoEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intl/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/intl/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intl/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/intl/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/extractedMessages/App.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/extractedMessages/App.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +77,22 @@
       <recent name="$PROJECT_DIR$/.cache" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.develop">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -105,9 +120,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.develop" />
+        <item itemvalue="npm.i18n" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.i18n" />
       </list>
     </recent_temporary>
   </component>
@@ -207,22 +223,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="0" y="37" key="FileDocumentManager.FileCacheConflict/0.23.1280.777@0.23.1280.777" timestamp="1582670651503" />
-    <state width="619" height="197" key="GridCell.Tab.0.bottom" timestamp="1583357607498">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1584206774673">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1583357607498" />
-    <state width="619" height="197" key="GridCell.Tab.0.center" timestamp="1583357607497">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1584206774673" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1584206774672">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1583357607497" />
-    <state width="619" height="197" key="GridCell.Tab.0.left" timestamp="1583357607497">
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1584206774672" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1584206774671">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1583357607497" />
-    <state width="619" height="197" key="GridCell.Tab.0.right" timestamp="1583357607498">
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1584206774671" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1584206774672">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="619" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1583357607498" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1584206774672" />
     <state x="128" y="90" key="MergeDialog" timestamp="1583274254352">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -255,17 +271,17 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="429" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1583274101138" />
-    <state x="301" y="174" width="673" height="472" key="find.popup" timestamp="1582901970904">
+    <state x="301" y="174" width="673" height="472" key="find.popup" timestamp="1584206698540">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="301" y="174" width="673" height="472" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1582901970904" />
+    <state x="301" y="174" width="673" height="472" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1584206698540" />
     <state x="394" y="133" key="git4idea.branch.GitSmartOperationDialog" timestamp="1583274207601">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="394" y="133" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274207601" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1583357604884">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1584206771849">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1583357604884" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1584206771849" />
   </component>
 </project>
