@@ -11,6 +11,7 @@ import {CityCountryEnum, CountryEnum, getCity} from "../../enums/CountryEnum.js"
 import {getLogo} from "../../enums/LogoEnum";
 import {getCityValues} from "../../enums/CountryEnum";
 import {getLink} from "../../enums/ApplicationLinkEnum";
+import dayjs from "dayjs";
 
 class ApplicationPeriod extends Component {
 
@@ -60,17 +61,17 @@ class ApplicationPeriod extends Component {
         let open;
         let date;
         let available = true;
-        let now = this.formatDate(Date.now());
+        let now = dayjs(Date.now());
 
         if (this.state.city !== null) {
             cityValues = getCityValues(this.state.city);
             if (!cityValues || cityValues.applicationStart === null) {
                 available = false;
             } else {
-                open = now > cityValues.applicationStart;
+                open = now.isAfter(dayjs(cityValues.applicationStart));
                 if (open) {
                     date = cityValues.applicationEnd;
-                    if (now > cityValues.applicationEnd) {
+                    if (now.isAfter(dayjs(cityValues.applicationEnd))) {
                         available = false;
                     }
                 } else {
