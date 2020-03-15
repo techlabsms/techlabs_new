@@ -1,6 +1,7 @@
 import { CityEnum } from "./CountryEnum"
 
 export const ApplicationLinkEnum = {
+
   COPENHAGEN: "https://techlabsorg.typeform.com/to/DRVtUy",
   MUENSTER: "https://techlabsorg.typeform.com/to/nP8sGW",
   MEDELLIN: "https://techlabsorg.typeform.com/to/nQEp0v",
@@ -17,8 +18,12 @@ export function getLink(city) {
     case CityEnum.BERLIN:
       return ApplicationLinkEnum.BERLIN
 
-    case CityEnum.COPENHAGEN:
-      return ApplicationLinkEnum.COPENHAGEN
+        case CityEnum.AACHEN:
+            return ApplicationLinkEnum.AACHEN;
+
+        case CityEnum.COPENHAGEN:
+            return ApplicationLinkEnum.COPENHAGEN;
+
 
     case CityEnum.CURITIBA:
       return ApplicationLinkEnum.CURITIBA

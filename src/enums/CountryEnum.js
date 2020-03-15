@@ -13,13 +13,16 @@ export const CityEnum = {
     COPENHAGEN: 'location.copenhagen',
     MEDELLIN: 'location.medellin',
     CURITIBA: 'location.curitiba',
-    BARCELONA: 'location.barcelona'
+    BARCELONA: 'location.barcelona',
+    AACHEN: 'location.aachen',
 };
 
 export const CityCountryEnum = {
     CITY: [{value: 'location.city'}],
     GERMANY: [{value: 'location.muenster', applicationStart: '20200315', applicationEnd: '20200412'},
-        {value: 'location.berlin', applicationStart: '20200301', applicationEnd: '20200328'}],
+        {value: 'location.berlin', applicationStart: '20200301', applicationEnd: '20200328'}, {
+            value: 'location.aachen', applicationStart: null, applicationEnd: null
+        }],
     SPAIN: [{
         value: 'location.barcelona', applicationStart: null, applicationEnd: null
     }],
@@ -44,6 +47,9 @@ export function getCityValues(city) {
 
         case CityEnum.BERLIN:
             return CityCountryEnum.GERMANY[1];
+
+        case CityEnum.AACHEN:
+            return CityCountryEnum.GERMANY[2];
 
         case CityEnum.COPENHAGEN:
             return CityCountryEnum.DENMARK[0];
