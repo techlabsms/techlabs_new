@@ -11,17 +11,9 @@ import { getCityValues, getCity } from "../../enums/CountryEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import dayjs from "dayjs"
 
-const ApplyCard = ({ country }) => {
+const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   const [isClicked, setIsClicked] = useState(false)
-  const [cityValues, setCityValues] = useState({})
-  const [isLoading, setIsLoading] = useState(true)
-  const [city, setCity] = useState("")
-
-  useEffect(() => {
-    setCityValues(getCityValues(country.value))
-
-    setIsLoading(false)
-  }, [])
+  const [isOpen, setIsOpen] = useState()
 
   const countryKey = "country"
   const cityKey = "city"
@@ -51,22 +43,25 @@ const ApplyCard = ({ country }) => {
         <a href="#requirements" className="noDec aNone w-100">
           <div
             className={
-              isClicked
+              isClicked && clickedCityValue === cityValues.value
                 ? "chooseCity--clickedCard h-100"
                 : "chooseCity--card h-100"
             }
             onClick={() => {
               setIsClicked(!isClicked)
+              handleClick(!isClicked, cityValues.value, open)
             }}
           >
             <div className="row">
               <div className="col-md-6">
                 <h4 className="chooseCity--heading">
-                  <FormattedMessage id={country.value} />
+                  <FormattedMessage id={cityValues.value} />
                 </h4>
                 <div
                   className={
-                    isClicked ? "section-divider-white" : "section-divider"
+                    isClicked && clickedCityValue === cityValues.value
+                      ? "section-divider-white"
+                      : "section-divider"
                   }
                 />
               </div>
@@ -90,12 +85,12 @@ const ApplyCard = ({ country }) => {
                         />
                       </p>
                     )}
-                    <div className="text-muted">
+                    <div className="text-muted pb-4">
                       <ApplicationCountdown date={date} isSmall={true} />
                     </div>
                   </>
                 ) : (
-                  <p className="card-subtitle">
+                  <p className="card-subtitle pb-4">
                     <FormattedMessage
                       id={"app.landingpage.applicationperiod.no.deadline"}
                     />
@@ -106,48 +101,74 @@ const ApplyCard = ({ country }) => {
             <p>Available Tracks</p>
             <div className="row px-2 my-2">
               <div className="col">
-                <div className="row">
-                  <img
-                    src={isClicked ? aiwhite : ai}
-                    alt="artificial intelligence"
-                    width="15"
-                    height="15"
-                    className="mr-2"
-                  />
-                  <p className="chooseCity--subject">Artifical Intelligence</p>
-                </div>
-                <div className="row">
-                  <img
-                    src={isClicked ? dswhite : ds}
-                    alt="data science"
-                    width="15"
-                    height="15"
-                    className="mr-2"
-                  />
-                  <p className="chooseCity--subject">Data Science</p>
-                </div>
+                {cityValues.availableTracks.ai && (
+                  <div className="row">
+                    <img
+                      src={
+                        isClicked && clickedCityValue === cityValues.value
+                          ? aiwhite
+                          : ai
+                      }
+                      alt="artificial intelligence"
+                      width="15"
+                      height="15"
+                      className="mr-2"
+                    />
+                    <p className="chooseCity--subject">
+                      Artifical Intelligence
+                    </p>
+                  </div>
+                )}
+                {cityValues.availableTracks.dataScience && (
+                  <div className="row">
+                    <img
+                      src={
+                        isClicked && clickedCityValue === cityValues.value
+                          ? dswhite
+                          : ds
+                      }
+                      alt="data science"
+                      width="15"
+                      height="15"
+                      className="mr-2"
+                    />
+                    <p className="chooseCity--subject">Data Science</p>
+                  </div>
+                )}
               </div>
               <div className="col">
-                <div className="row">
-                  <img
-                    src={isClicked ? webwhite : web}
-                    alt="artificial intelligence"
-                    width="15"
-                    height="15"
-                    className="mr-2"
-                  />
-                  <p className="chooseCity--subject">Web Development</p>
-                </div>
-                <div className="row">
-                  <img
-                    src={isClicked ? webwhite : web}
-                    alt="data science"
-                    width="15"
-                    height="15"
-                    className="mr-2"
-                  />
-                  <p className="chooseCity--subject">UX Design</p>
-                </div>
+                {cityValues.availableTracks.web && (
+                  <div className="row">
+                    <img
+                      src={
+                        isClicked && clickedCityValue === cityValues.value
+                          ? webwhite
+                          : web
+                      }
+                      alt="artificial intelligence"
+                      width="15"
+                      height="15"
+                      className="mr-2"
+                    />
+                    <p className="chooseCity--subject">Web Development</p>
+                  </div>
+                )}
+                {cityValues.availableTracks.ux && (
+                  <div className="row">
+                    <img
+                      src={
+                        isClicked && clickedCityValue === cityValues.value
+                          ? webwhite
+                          : web
+                      }
+                      alt="data science"
+                      width="15"
+                      height="15"
+                      className="mr-2"
+                    />
+                    <p className="chooseCity--subject">UX Design</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
