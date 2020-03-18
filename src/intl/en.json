@@ -2,7 +2,9 @@
   "app.landingpage.applicationperiod.check": "Check",
   "app.landingpage.applicationperiod.deadline.apply": "Apply",
   "app.landingpage.applicationperiod.deadline.end": "Our Application ends in:",
+  "app.landingpage.applicationperiod.deadline.end.short": "Ends in:",
   "app.landingpage.applicationperiod.deadline.start": "Our Application starts in:",
+  "app.landingpage.applicationperiod.deadline.start.short": "Starts in:",
   "app.landingpage.applicationperiod.header": "Our Application Deadlines",
   "app.landingpage.applicationperiod.no.deadline": "Next Batch will be announced soon",
   "app.landingpage.applicationperiod.subheader": "Check out when you can apply for each location!",
@@ -35,5 +37,7 @@
   "location.country.spain": "Spain",
   "location.curitiba": "Curitiba",
   "location.medellin": "Medellin",
-  "location.muenster": "Münster"
+  "location.muenster": "Münster",
+  "applypage.choose.your.city.title": "Choose Your City",
+  "applypage.choose.your.city.subtitle": "At the moment, we are located in Muenster, Copenhagen, Barcelona, Méddillin, Curitiba, Berlin, Dortmund and Aachen!"
 }
