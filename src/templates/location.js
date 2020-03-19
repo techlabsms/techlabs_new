@@ -123,16 +123,12 @@ class location extends Component {
             <Team
               city={location.heading && location.heading}
               firstName={location.teamNameOne && location.teamNameOne}
-              firstImage={
-                location.teamImgOne.file && location.teamImgOne.file.url
-              }
+              firstImage={location.teamImgOne && location.teamImgOne.file.url}
               firstLinkedIn={
                 location.teamLinkedInOne && location.teamLinkedInOne
               }
               secondName={location.teamNameTwo && location.teamNameTwo}
-              secondImage={
-                location.teamImgTwo.file && location.teamImgTwo.file.url
-              }
+              secondImage={location.teamImgTwo && location.teamImgTwo.file.url}
               secondLinkedIn={
                 location.teamLinkedInTwo && location.teamLinkedInTwo
               }
@@ -145,7 +141,7 @@ class location extends Component {
               }
               fourthName={location.teamImgFour && location.teamImgFour}
               fourthImage={
-                location.teamImgFour && location.teamImgFour.file.url
+                location.teamNameFour && location.teamNameFour.file.url
               }
               fourthLinkedIn={
                 location.teamLinkedInFour && location.teamLinkedInFour
