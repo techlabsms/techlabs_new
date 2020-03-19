@@ -85,6 +85,9 @@ const Footer = props => {
                     <Link to="/location/Aachen" className="noDec">
                       <li className="footer-tl--subMenu-link">Aachen</li>
                     </Link>
+                    <Link to="/location/Dortmund" className="noDec">
+                      <li className="footer-tl--subMenu-link">Dortmund</li>
+                    </Link>
                   </ul>
                   <Link className="foot-a" to="/faq">
                     FAQ
