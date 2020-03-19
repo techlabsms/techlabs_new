@@ -8,6 +8,7 @@ import MED from "../assets/loc-med.svg"
 import BER from "../assets/loc-ber.png"
 import CUR from "../assets/loc-cu.svg"
 import AAC from "../assets/loc-aac.png"
+import DOR from "../assets/loc-do.svg"
 import { Link } from "gatsby"
 import Slack from "../assets/slack.png"
 import ds from "../assets/ds.png"
@@ -138,6 +139,18 @@ class MobileNav extends Component {
                         <img src={AAC} alt="" className="mobileNav--icon p-3" />
                       </span>
                       Aachen
+                    </li>
+                  </Link>
+                  <Link
+                    to="/location/Dortmund"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="mt-2">
+                      <span>
+                        <img src={DOR} alt="" className="mobileNav--icon p-3" />
+                      </span>
+                      Dortmund
                     </li>
                   </Link>
                   <hr />
