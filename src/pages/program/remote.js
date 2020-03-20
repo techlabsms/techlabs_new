@@ -68,6 +68,36 @@ class remote extends Component {
                 id={"program.remote.threeComponents.subheading"}
               />
             }
+            firstHeading={
+              <FormattedMessage
+                id={"program.remote.threeComponents.first.heading"}
+              />
+            }
+            firstText={
+              <FormattedMessage
+                id={"program.remote.threeComponents.first.text"}
+              />
+            }
+            secondHeading={
+              <FormattedMessage
+                id={"program.remote.threeComponents.second.heading"}
+              />
+            }
+            secondText={
+              <FormattedMessage
+                id={"program.remote.threeComponents.second.text"}
+              />
+            }
+            thirdHeading={
+              <FormattedMessage
+                id={"program.remote.threeComponents.third.heading"}
+              />
+            }
+            thirdText={
+              <FormattedMessage
+                id={"program.remote.threeComponents.third.text"}
+              />
+            }
           />
           <KeyBenefits
             heading={
