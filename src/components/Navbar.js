@@ -129,6 +129,21 @@ class Navbar extends React.Component {
                   <div className="dropdown-menu">
                     <Link
                       className="dropdown-item-corr dropdown-item"
+                      to="/program/local"
+                      activeClassName="navLink--active"
+                    >
+                      Digital Shaper Program
+                    </Link>
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/program/remote"
+                      activeClassName="navLink--active"
+                    >
+                      codeathome Bootcamp
+                    </Link>
+                    <div className="dropdown-divider" />
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
                       to="/dataScience"
                       activeClassName="navLink--active"
                     >

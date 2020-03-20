@@ -1,54 +1,51 @@
-import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import ProgrammHero from "../components/ProgrammHero"
-import Academy from "../components/Academy"
-import ThreeComponents from "../components/ThreeComponents"
-import LearnMore from "../components/LearnMore"
-import background from "../assets/p_background.png"
-import Faq from "../components/Faq"
-import FaqQuestion from "../components/FaqQuestion"
-import Process from "../components/Process"
-import DataScience from "../assets/dashboard.png"
-import web from "../assets/webdevpro.png"
-import AI from "../assets/ai-robot.png"
-import UX from "../assets/UX.png"
-import Footer from "../components/Footer"
-import ProgrammMobil from "../assets/programmMobil.png"
-import KeyBenefits from "../components/KeyBenefits"
-import Button from "../components/smallComponents/Button"
+import React from "react"
+import Navbar from "../../components/Navbar"
+import ProgrammHero from "../../components/ProgrammHero"
+import Academy from "../../components/Academy"
+import ThreeComponents from "../../components/ThreeComponents"
+import LearnMore from "../../components/LearnMore"
+import background from "../../assets/p_background.png"
+import Faq from "../../components/Faq"
+import FaqQuestion from "../../components/FaqQuestion"
+import DataScience from "../../assets/dashboard.png"
+import web from "../../assets/webdevpro.png"
+import Footer from "../../components/Footer"
+import ProgrammMobil from "../../assets/programmMobil.png"
+import Button from "../../components/smallComponents/Button"
+import Table from "../../components/program/Table"
 
-class program extends Component {
-  render() {
-    return (
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+const index = () => {
+  return (
+    <>
       <div>
         <Navbar />
         <ProgrammHero
-          headingFirst="Digital Shaper"
-          headingSecond="Program"
+          headingFirst="Our Learning"
+          headingSecond="Programs"
           intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
           background={background}
           backgroundMobil={ProgrammMobil}
         />
         <div className="container">
           <Academy />
-          <ThreeComponents />
-          <KeyBenefits />
-          <Process />
+          <Table
+            heading={<FormattedMessage id={"program.index.table.heading"} />}
+            subheading={
+              <FormattedMessage id={"program.index.table.subheading"} />
+            }
+            activeProgram="remote"
+          />
           <LearnMore
             heading="Learn More"
-            subheading="Get more information about the three different learning tracks!"
-            firstProjectHeading="Web Development"
+            subheading="Get more information about the programs!"
+            firstProjectHeading="Local Digital Shaper Program"
             firstProjectImage={web}
-            firstLink="/web"
-            secondProjectHeading="Data Science"
+            firstLink="/program/local"
+            secondProjectHeading="#codeathome Bootcamp"
             secondProjectImage={DataScience}
-            secondLink="/dataScience"
-            thirdProjectHeading="Artificial Intelligence"
-            thirdProjectImage={AI}
-            thirdLink="/ai"
-            fourthProjectHeading="User Experience Design"
-            fourthProjectImage={UX}
-            fourthLink="/ux"
+            secondLink="/program/remote"
           />
           <Faq>
             <FaqQuestion
@@ -74,8 +71,8 @@ class program extends Component {
         </div>
         <Footer />
       </div>
-    )
-  }
+    </>
+  )
 }
 
-export default program
+export default index
