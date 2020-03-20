@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
 import VisibilitySensor from "react-visibility-sensor"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
-const ThreeComponents = () => {
+const ThreeComponents = ({ heading, subheading }) => {
   const [componentVisible, setComponentVisible] = useState(false)
 
   return (
@@ -14,10 +15,7 @@ const ThreeComponents = () => {
       once
     >
       <Container>
-        <Heading
-          heading="The Core Concept"
-          subheading="Our blended learning concept consists of three main components!"
-        />
+        <Heading heading={heading} subheading={subheading} />
         <div className="row my-5 py-5 d-none d-lg-flex">
           <div className="col-md-2" />
           <div className="col-md-8">
@@ -26,7 +24,9 @@ const ThreeComponents = () => {
                 <div className="threeComponents--circle threeComponents--circle_1  d-flex justify-content-center">
                   <h3 className="align-self-center">Local Community</h3>
                   <div>
-                    <h5 className="align-self-center text-center">Local Community</h5>
+                    <h5 className="align-self-center text-center">
+                      Local Community
+                    </h5>
                     <p className="align-self-center">
                       Online learning does not unfold its full potential in
                       isolation. We need a social context in which people can
@@ -50,7 +50,9 @@ const ThreeComponents = () => {
                 >
                   <h3 className="align-self-center">Online Learning</h3>
                   <div>
-                    <h5 className="align-self-center text-center">Online Learning</h5>
+                    <h5 className="align-self-center text-center">
+                      Online Learning
+                    </h5>
                     <p className="align-self-center">
                       Our participants learn tech skills in one of our online
                       learning tracks. For each of the tracks, our curriculum
@@ -68,7 +70,9 @@ const ThreeComponents = () => {
                 <div className="threeComponents--circle threeComponents--circle_3  d-flex justify-content-center">
                   <h3 className="align-self-center">Project Work</h3>
                   <div>
-                    <h5 className="align-self-center text-center">Project Work</h5>
+                    <h5 className="align-self-center text-center">
+                      Project Work
+                    </h5>
                     <p className="align-self-center">
                       The overarching goal of the online learning component of
                       our program is that the learning resources of our tracks

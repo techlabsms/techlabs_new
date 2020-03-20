@@ -6,10 +6,21 @@ import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
 import icon4 from "../assets/icon4.png"
 
-const KeyBenefits = () => {
+const KeyBenefits = ({
+  heading,
+  subheading,
+  firstHeading,
+  firstText,
+  secondHeading,
+  secondText,
+  thirdHeading,
+  thirdText,
+  fourthHeading,
+  fourthText,
+}) => {
   return (
     <Container>
-      <Heading heading="Key Benefits" subheading="So, what’s in it for you?" />
+      <Heading heading={heading} subheading={subheading} />
       <div className="row mt-5">
         <div className="card keyBenefits--card mt-4">
           <div className="row">
@@ -17,12 +28,8 @@ const KeyBenefits = () => {
               <img src={icon1} alt="code file" className="mt-2" />
             </div>
             <div className="col-10 pl-5">
-              <h3>Start to code - independent of your prior knowledge</h3>
-              <p className="keyBenefits--card-text">
-                Get a personalized learning path. Learn tech skills in Data
-                Science, Artificial Intelligence, or Web Development using the
-                best online resources available.
-              </p>
+              <h3>{firstHeading}</h3>
+              <p className="keyBenefits--card-text">{firstText}</p>
             </div>
           </div>
           <div className="row mt-4">
@@ -30,12 +37,8 @@ const KeyBenefits = () => {
               <img src={icon4} alt="code file" className="mt-2" />
             </div>
             <div className="col-10 pl-5">
-              <h3>Learn from skilled mentors</h3>
-              <p className="keyBenefits--card-text">
-                Do you have any questions during the project or your learning
-                journey? Just ask our competent mentors with many years of
-                practical experience!
-              </p>
+              <h3>{secondHeading}</h3>
+              <p className="keyBenefits--card-text">{secondText}</p>
             </div>
           </div>
           <div className="row mt-4">
@@ -43,12 +46,8 @@ const KeyBenefits = () => {
               <img src={icon2} alt="code file" className="mt-2" />
             </div>
             <div className="col-10 pl-5">
-              <h3>Apply your knowledge and solve real-world tasks</h3>
-              <p className="keyBenefits--card-text">
-                Choose the project you are most interested in and work on it in
-                a small interdisciplinary team together with other TechLabs
-                participants. Build your own tech project portfolio.
-              </p>
+              <h3>{thirdHeading}</h3>
+              <p className="keyBenefits--card-text">{thirdText}</p>
             </div>
           </div>
           <div className="row mt-4">
@@ -56,13 +55,8 @@ const KeyBenefits = () => {
               <img src={icon3} alt="code file" className="mt-2" />
             </div>
             <div className="col-10 pl-5">
-              <h3>Shape your career path</h3>
-              <p className="keyBenefits--card-text">
-                If you want to learn state-of-the-art tech skills that will
-                enable you to successfully realize your own tech projects, join
-                a tech startup, or get in touch with our renowned partners –
-                TechLabs is the right choice for you
-              </p>
+              <h3>{fourthHeading}</h3>
+              <p className="keyBenefits--card-text">{fourthText}</p>
             </div>
           </div>
         </div>

@@ -190,6 +190,20 @@ class MobileNav extends Component {
                   >
                     <li>Program</li>
                   </Link>
+                  <Link
+                    to="/program/local"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="my-4">Digital Shaper Program</li>
+                  </Link>
+                  <Link
+                    to="/program/remote"
+                    className="color-gl"
+                    activeClassName="navLink--active"
+                  >
+                    <li className="my-4">codeathome Bootcamp</li>
+                  </Link>
                   <hr />
                   <Link
                     to="/dataScience"
