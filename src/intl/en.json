@@ -58,7 +58,7 @@
   "program.remote.learnMore.firstProjectHeading": "Web Development",
   "program.remote.learnMore.secondProjectHeading": "Data Science",
   "program.remote.learnMore.thirdProjectHeading": "Artificial Intelligence",
-  "program.remote.learnMore.fourthProjectHeading": "User Exprience Design",
+  "program.remote.learnMore.fourthProjectHeading": "User Experience Design",
   "program.remote.table.heading": "What is included in the #codeathome Bootcamp?",
   "program.remote.table.subheading": "See the difference between the Local Digital Shaper Program and the Codeathome Bootcamp!",
   "program.local.threeComponents.heading": "The Core Concept",
@@ -75,5 +75,18 @@
   "program.local.keyBenefits.third.text": "Choose a project that interests you and work on it in a small interdisciplinary group with fellow TechLabs participants. Work on your tech project portfolio.",
   "program.local.keyBenefits.fourth.heading": "Shape your career path",
   "program.local.keyBenefits.fourth.text": "If you want to learn state-of-the-art tech skills, that will enable you to quickly create stunning tech projects, join a tech startup or get in touch with our renowned partners – TechLabs is the right choice for you.",
-  "program.index.table.heading": "If you want to learn state-of-the-art tech skills, that will enable you to quickly create stunning tech projects, join a tech startup or get in touch with our renowned partners – TechLabs is the right choice for you."
+  "program.local.threeComponents.first.heading": "Local community",
+  "program.local.threeComponents.first.text": "Online learning does not unfold its full potential in isolation. We need a social context in which people can share what they have learned and help each other. We need the dynamics of a community to make sure that everyone is motivated throughout the learning journey. In order to bring our TechLabs community together and learn collectively, we have various meeting formats during the regular semester.",
+  "program.local.threeComponents.second.heading": "Online Learning",
+  "program.local.threeComponents.second.text": "Our participants learn tech skills in one of our online learning tracks. For each of the tracks, our curriculum experts carefully compiled the best online learning resources available in various formats. Because we want to make sure that both a coding beginner or already experienced techie can learn something new in our program, we individualize our participant’s learning paths based on prior knowledge and learning goals.",
+  "program.local.threeComponents.third.heading": "Project Work",
+  "program.local.threeComponents.third.text": "The overarching goal of the online learning component of our program is that the learning resources of our tracks enable our participants to take part in their own tech project in which they solve an open problem. Our mentors are experts in their respective field and are happy support the project groups in case of technical issues and questions regarding the project scope or project management.",
+  "program.remote.threeComponents.first.heading": "Online Learning",
+  "program.remote.threeComponents.first.text": "Our participants learn tech skills in one of our online learning tracks. For each of the tracks, our curriculum experts carefully compiled the best online learning resources available in various formats.",
+  "program.remote.threeComponents.second.heading": "Coding Challenge",
+  "program.remote.threeComponents.second.text": "The overarching goal of the online learning component of our program is that the learning resources of our tracks enable our participants to solve  their own coding challenge in which they tackle an open problem. Our mentors are experts in their respective field and are happy support the participants.",
+  "program.remote.threeComponents.third.heading": "Global Community",
+  "program.remote.threeComponents.third.text": "Online learning does not unfold its full potential in isolation. We need a social context in which people can share what they have learned and help each other. We need the dynamics of a community to make sure that everyone is motivated throughout the learning journey. In order to bring our TechLabs community together and learn collectively, we have various meeting formats during the remote program.",
+  "program.index.table.heading": "What kind of Programs do we offer?",
+  "program.index.table.subheading": "At Techlabs you can study completly online or learn on campus!"
 }

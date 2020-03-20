@@ -51,6 +51,36 @@ class local extends Component {
                 id={"program.local.threeComponents.subheading"}
               />
             }
+            firstHeading={
+              <FormattedMessage
+                id={"program.local.threeComponents.first.heading"}
+              />
+            }
+            firstText={
+              <FormattedMessage
+                id={"program.local.threeComponents.first.text"}
+              />
+            }
+            secondHeading={
+              <FormattedMessage
+                id={"program.local.threeComponents.second.heading"}
+              />
+            }
+            secondText={
+              <FormattedMessage
+                id={"program.local.threeComponents.second.text"}
+              />
+            }
+            thirdHeading={
+              <FormattedMessage
+                id={"program.local.threeComponents.third.heading"}
+              />
+            }
+            thirdText={
+              <FormattedMessage
+                id={"program.local.threeComponents.third.text"}
+              />
+            }
           />
           <KeyBenefits
             heading={
