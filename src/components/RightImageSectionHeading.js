@@ -13,6 +13,7 @@ const RightImageSectionHeading = ({
   leftSize,
   rightSize,
   topText,
+  infoText
 }) => {
   return (
     <Container>
@@ -33,6 +34,11 @@ const RightImageSectionHeading = ({
                 </a>
               </div>
             )}
+            {
+              infoText && (
+              <p className="highlighted my-4">{infoText}</p>
+              )
+            }
           </div>
           <div
             className={`col-lg-${rightSize ||
