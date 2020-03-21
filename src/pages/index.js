@@ -190,7 +190,46 @@ class index extends React.Component {
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
           />
-          <KeyBenefits />
+           <KeyBenefits
+            heading={
+              <FormattedMessage id={"program.local.keyBenefits.heading"} />
+            }
+            subheading={
+              <FormattedMessage id={"program.local.keyBenefits.subheading"} />
+            }
+            firstHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.first.heading"}
+              />
+            }
+            firstText={
+              <FormattedMessage id={"program.local.keyBenefits.first.text"} />
+            }
+            secondHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.second.heading"}
+              />
+            }
+            secondText={
+              <FormattedMessage id={"program.local.keyBenefits.second.text"} />
+            }
+            thirdHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.third.heading"}
+              />
+            }
+            thirdText={
+              <FormattedMessage id={"program.local.keyBenefits.third.text"} />
+            }
+            fourthHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.fourth.heading"}
+              />
+            }
+            fourthText={
+              <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
+            }
+          />
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
               <Heading
