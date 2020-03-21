@@ -40,14 +40,9 @@ class remote extends Component {
             text={
               <FormattedMessage id={"program.remote.rightImageSection.text"} />
             }
-            hasButton={true}
+            hasButton={false}
             // TODO: Add correct link and import from enum
-            buttonLink="www.typeform.com"
-            buttonText={
-              <FormattedMessage
-                id={"program.remote.rightImageSection.button"}
-              />
-            }
+            infoText="Application starts: 23.03.2020 "
             image={Remote}
           />
           <Academy />
