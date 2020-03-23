@@ -37,6 +37,7 @@
 @import "./joinCommunity";
 @import "./coreValues";
 @import "./datesCalendar";
+@import "./table";
 
 h1,
 h2,
@@ -152,6 +153,10 @@ body {
 
 .no-cursor {
   cursor: none !important;
+}
+
+.heading--grey {
+  color: $color-gl;
 }
 
 .color-black {
@@ -484,7 +489,6 @@ body {
   margin-top: 1rem;
 }
 
-
 .card-subtitle {
   font-family: $font-pp;
   margin-bottom: 1.5rem;
@@ -598,11 +602,11 @@ body {
   appearance: none;
   background-color: #fff;
   border: none;
-  padding: .6em 1.4em .5em .8em;
+  padding: 0.6em 1.4em 0.5em 0.8em;
   background-image: url("../assets/shared/arrow-down.svg");
   background-repeat: no-repeat, repeat;
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 
 .img-shadow {

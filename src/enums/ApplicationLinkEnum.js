@@ -7,6 +7,7 @@ export const ApplicationLinkEnum = {
   BARCELONA: "https://www.techlabs.org/",
   BERLIN: "https://techlabsberlin.typeform.com/to/OlQaRy",
   CURITIBA: "https://www.techlabs.org/",
+  DORTMUND: "https://www.techlabs.org/",
 }
 
 export function getLink(city) {
@@ -31,5 +32,7 @@ export function getLink(city) {
 
     case CityEnum.MEDELLIN:
       return ApplicationLinkEnum.MEDELLIN
+    case CityEnum.DORTMUND:
+      return ApplicationLinkEnum.DORTMUND
   }
 }

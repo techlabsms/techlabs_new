@@ -5,6 +5,7 @@ export const CountryEnum = {
   DENMARK: "location.country.denmark",
   BRAZIL: "location.country.brazil",
   COLOMBIA: "location.country.colombia",
+  DORTMUND: "location.country.dortmund",
 }
 
 export const CityEnum = {
@@ -15,6 +16,7 @@ export const CityEnum = {
   CURITIBA: "location.curitiba",
   BARCELONA: "location.barcelona",
   AACHEN: "location.aachen",
+  DORTMUND: "location.dortmund",
 }
 
 export const CityCountryEnum = {
@@ -28,7 +30,7 @@ export const CityCountryEnum = {
         ai: true,
         web: true,
         dataScience: true,
-        ux: false,
+        ux: true,
       },
     },
     {
@@ -47,6 +49,17 @@ export const CityCountryEnum = {
       applicationStart: null,
       applicationEnd: null,
       availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
+    },
+    {
+      value: "location.dortmund",
+      applicationStart: "20200323",
+      applicationEnd: "20200402",
+       availableTracks: {
         ai: true,
         web: true,
         dataScience: true,
@@ -133,6 +146,9 @@ export function getCityValues(city) {
 
     case CityEnum.MEDELLIN:
       return CityCountryEnum.COLOMBIA[0]
+    case CityEnum.DORTMUND:
+      return CityCountryEnum.GERMANY[3]
+
   }
 }
 

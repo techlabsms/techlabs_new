@@ -1,0 +1,72 @@
+@import "./variables";
+
+.tableComponent {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 7px;
+  background-image: url("../assets/program/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  > table {
+    width: 70%;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+
+    th:first-child {
+      width: 5%;
+    }
+    th {
+      border: none;
+      border-top-left-radius: 7px;
+      width: 10%;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+    }
+
+    td {
+      vertical-align: middle;
+      padding: 20px;
+      ul {
+        list-style-image: url("../assets/program/checkmark.svg");
+        li {
+          margin-left: -20px;
+        }
+      }
+    }
+
+    tr:nth-child(odd) {
+      background-color: $color-background;
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    .active {
+      background-color: $color-p;
+      box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+      color: white;
+    }
+    .active-right {
+      background-color: $color-p;
+      box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25);
+      color: white;
+    }
+    @media (max-width: 460px) {
+      font-size: 12px;
+      width: 100%;
+      th:first-child {
+        width: 5%;
+      }
+      td {
+        padding: 5px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+    }
+  }
+}
