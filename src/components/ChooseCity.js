@@ -33,6 +33,10 @@ class ChooseCity extends Component {
         label: this.messages[CityCountryEnum.GERMANY[2].value],
         value: CityCountryEnum.GERMANY[2].value,
       },
+      {
+        label: this.messages[CityCountryEnum.GERMANY[3].value],
+        value: CityCountryEnum.GERMANY[3].value,
+      },
     ],
   }
 
