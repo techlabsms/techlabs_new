@@ -40,19 +40,46 @@ class remote extends Component {
             text={
               <FormattedMessage id={"program.remote.rightImageSection.text"} />
             }
-            hasButton={false}
+            hasButton={true}
             // TODO: Add correct link and import from enum
-            infoText="Application starts: 23.03.2020 "
+            buttonText="Apply now"
+            buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
             image={Remote}
           />
-          <Academy />
+          <Academy
+            firstTrack={
+              <FormattedMessage id={"program.remote.academy.first.name"} />
+            }
+            firstTrackText={
+              <FormattedMessage id={"program.remote.academy.first.text"} />
+            }
+            secondTrack={
+              <FormattedMessage id={"program.remote.academy.second.name"} />
+            }
+            secondTrackText={
+              <FormattedMessage id={"program.remote.academy.second.text"} />
+            }
+            thirdTrack={
+              <FormattedMessage id={"program.remote.academy.third.name"} />
+            }
+            thirdTrackText={
+              <FormattedMessage id={"program.remote.academy.third.text"} />
+            }
+            fourthTrack={
+              <FormattedMessage id={"program.remote.academy.fourth.name"} />
+            }
+            fourthTrackText={
+              <FormattedMessage id={"program.remote.academy.fourth.text"} />
+            }
+          />
           <Table
             heading={<FormattedMessage id={"program.remote.table.heading"} />}
             subheading={
               <FormattedMessage id={"program.remote.table.subheading"} />
             }
             activeProgram="remote"
-            hasButton={false}
+            hasButton={true}
+            buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
           />
           <ThreeComponents
             heading={
