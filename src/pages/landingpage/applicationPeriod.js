@@ -63,6 +63,7 @@ class ApplicationPeriod extends Component {
         label: this.messages[CountryEnum.COLOMBIA],
       },
       { value: CountryEnum.BRAZIL, label: this.messages[CountryEnum.BRAZIL] },
+      { value: CountryEnum.REMOTE, label: this.messages[CountryEnum.REMOTE] },
     ]
 
     const countryKey = "country"
@@ -140,11 +141,13 @@ class ApplicationPeriod extends Component {
                   <div className="card h-100 center no-padding">
                     <h1 className="card-title-black">
                       {this.messages[this.state.city]}{" "}
-                      <img
-                        src={getLogo(this.state.city)}
-                        className="nav-loc-icon"
-                        alt="loc-ms"
-                      />
+                      {getLogo(this.state.city) && (
+                        <img
+                          src={getLogo(this.state.city)}
+                          className="nav-loc-icon"
+                          alt="loc-ms"
+                        />
+                      )}
                     </h1>{" "}
                     <br />
                     {available ? (
