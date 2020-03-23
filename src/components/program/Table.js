@@ -3,7 +3,13 @@ import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import { Link } from "gatsby"
 
-const Table = ({ heading, subheading, activeProgram, hasButton }) => {
+const Table = ({
+  heading,
+  subheading,
+  activeProgram,
+  hasButton,
+  buttonLink,
+}) => {
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -130,16 +136,29 @@ const Table = ({ heading, subheading, activeProgram, hasButton }) => {
                     : "text-center"
                 }
               >
-                <Link
-                  className={
-                    activeProgram === "remote"
-                      ? "btn btn-secondary"
-                      : "btn btn-primary"
-                  }
-                  to={activeProgram === "remote" ? "/apply" : "/program/remote"}
-                >
-                  {activeProgram === "remote" ? "Apply" : "Learn more"}
-                </Link>
+                {buttonLink ? (
+                  <a
+                    href={buttonLink}
+                    className={
+                      activeProgram === "remote"
+                        ? "btn btn-secondary"
+                        : "btn btn-primary"
+                    }
+                  >
+                    Apply
+                  </a>
+                ) : (
+                  <Link
+                    className={
+                      activeProgram === "remote"
+                        ? "btn btn-secondary"
+                        : "btn btn-primary"
+                    }
+                    to="/program/remote"
+                  >
+                    Learn more
+                  </Link>
+                )}
               </td>
               <td
                 className={
@@ -154,7 +173,7 @@ const Table = ({ heading, subheading, activeProgram, hasButton }) => {
                       ? "btn btn-secondary"
                       : "btn btn-primary"
                   }
-                  to={activeProgram === "local" ? "/apply" : "/program/local"}
+                  to={activeProgram === "local" ? buttonLink : "/program/local"}
                 >
                   {activeProgram === "local" ? "Apply" : "Learn more"}
                 </Link>

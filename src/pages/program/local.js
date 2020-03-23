@@ -33,7 +33,32 @@ class local extends Component {
           backgroundMobil={ProgrammMobil}
         />
         <div className="container">
-          <Academy />
+          <Academy
+            firstTrack={
+              <FormattedMessage id={"program.local.academy.first.name"} />
+            }
+            firstTrackText={
+              <FormattedMessage id={"program.local.academy.first.text"} />
+            }
+            secondTrack={
+              <FormattedMessage id={"program.local.academy.second.name"} />
+            }
+            secondTrackText={
+              <FormattedMessage id={"program.local.academy.second.text"} />
+            }
+            thirdTrack={
+              <FormattedMessage id={"program.local.academy.third.name"} />
+            }
+            thirdTrackText={
+              <FormattedMessage id={"program.local.academy.third.text"} />
+            }
+            fourthTrack={
+              <FormattedMessage id={"program.local.academy.fourth.name"} />
+            }
+            fourthTrackText={
+              <FormattedMessage id={"program.local.academy.fourth.text"} />
+            }
+          />
           <Table
             heading={<FormattedMessage id={"program.local.table.heading"} />}
             subheading={

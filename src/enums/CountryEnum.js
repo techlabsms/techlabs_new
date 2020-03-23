@@ -5,7 +5,6 @@ export const CountryEnum = {
   DENMARK: "location.country.denmark",
   BRAZIL: "location.country.brazil",
   COLOMBIA: "location.country.colombia",
-  DORTMUND: "location.country.dortmund",
 }
 
 export const CityEnum = {
@@ -26,21 +25,45 @@ export const CityCountryEnum = {
       value: "location.muenster",
       applicationStart: "20200315",
       applicationEnd: "20200412",
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: true,
+      },
     },
     {
       value: "location.berlin",
       applicationStart: "20200301",
       applicationEnd: "20200328",
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
     {
       value: "location.aachen",
       applicationStart: null,
       applicationEnd: null,
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
     {
       value: "location.dortmund",
       applicationStart: "20200323",
       applicationEnd: "20200402",
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
   ],
   SPAIN: [
@@ -48,6 +71,12 @@ export const CityCountryEnum = {
       value: "location.barcelona",
       applicationStart: null,
       applicationEnd: null,
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
   ],
   DENMARK: [
@@ -55,6 +84,12 @@ export const CityCountryEnum = {
       value: "location.copenhagen",
       applicationStart: null,
       applicationEnd: null,
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
   ],
   BRAZIL: [
@@ -62,6 +97,12 @@ export const CityCountryEnum = {
       value: "location.curitiba",
       applicationStart: "20200815",
       applicationEnd: "20200826",
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
   ],
   COLOMBIA: [
@@ -69,6 +110,12 @@ export const CityCountryEnum = {
       value: "location.medellin",
       applicationStart: null,
       applicationEnd: null,
+      availableTracks: {
+        ai: true,
+        web: true,
+        dataScience: true,
+        ux: false,
+      },
     },
   ],
 }
