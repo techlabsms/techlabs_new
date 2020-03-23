@@ -1,14 +1,8 @@
 import React, { Component } from "react"
-
-import { Link } from "gatsby"
-import Countdown from "./Countdown"
 import localeData from "../intl"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import Heading from "./smallComponents/Heading"
 import { CityCountryEnum, CountryEnum, getCity } from "../enums/CountryEnum"
 import { getCityValues } from "../enums/CountryEnum"
-import ApplicationCountdown from "./ApplicationCountdown"
-import dayjs from "dayjs"
 import ApplyCard from "./applyPage/ApplyCard"
 import Dropdown from "../templates/dropdown"
 
@@ -87,6 +81,7 @@ class ChooseCity extends Component {
         label: this.messages[CountryEnum.COLOMBIA],
       },
       { value: CountryEnum.BRAZIL, label: this.messages[CountryEnum.BRAZIL] },
+      { value: CountryEnum.REMOTE, label: this.messages[CountryEnum.REMOTE] },
     ]
 
     const countryKey = "germany"

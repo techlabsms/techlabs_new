@@ -32,5 +32,7 @@ export function getLogo(city) {
       return AAC
     case CityEnum.DORTMUND:
       return DOR
+    case CityEnum.REMOTE:
+      return null
   }
 }
