@@ -51,7 +51,7 @@ export const CityCountryEnum = {
       applicationEnd: null,
       availableTracks: {
         ai: true,
-        web: true,
+        web: false,
         dataScience: true,
         ux: false,
       },
