@@ -20,6 +20,7 @@ import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "./landingpage/applicationPeriod"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import Layout from "../components/Layout"
 
 class index extends React.Component {
   componentDidMount() {

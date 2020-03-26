@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
 import DatesCalendar from "../components/DatesCalendar"

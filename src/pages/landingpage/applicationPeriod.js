@@ -207,7 +207,7 @@ class ApplicationPeriod extends Component {
           </div>
         </div>
         <div className="images">
-          <img src={wave} style={wave_style} />
+          <img src={wave} style={wave_style} alt="wave" />
         </div>
       </section>
     )

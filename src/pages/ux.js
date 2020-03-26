@@ -14,6 +14,7 @@ import david from "../assets/david.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
+import Layout from "../components/Layout"
 
 class ux extends Component {
   render() {

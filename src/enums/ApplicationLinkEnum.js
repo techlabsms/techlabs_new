@@ -37,5 +37,7 @@ export function getLink(city) {
       return ApplicationLinkEnum.DORTMUND
     case CityEnum.REMOTE:
       return ApplicationLinkEnum.REMOTE
+    default:
+      return
   }
 }

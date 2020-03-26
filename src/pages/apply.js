@@ -13,8 +13,7 @@ import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/LearnMore"
 import UX from "../assets/UX.png"
-import { ApplicationLinkEnum, getLink } from "../enums/ApplicationLinkEnum"
-import { CityCountryEnum, CountryEnum } from "../enums/CountryEnum.js"
+import { getLink } from "../enums/ApplicationLinkEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 class apply extends Component {
