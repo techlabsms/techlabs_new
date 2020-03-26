@@ -20,6 +20,16 @@ class Academy extends Component {
 
   render() {
     const { images, index } = this.state
+    const {
+      firstTrack,
+      firstTrackText,
+      secondTrack,
+      secondTrackText,
+      thirdTrack,
+      thirdTrackText,
+      fourthTrack,
+      fourthTrackText,
+    } = this.props
     return (
       <Container>
         <Heading
@@ -51,13 +61,9 @@ class Academy extends Component {
                   transform: `${index === 0 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
-                <h4 className="academy--card-title">Data Science</h4>
+                <h4 className="academy--card-title">{firstTrack}</h4>
                 <p class={index === 0 ? "d-block" : "d-none"}>
-                  In the Data Science track you will learn basic coding skills
-                  in R or Python and apply them directly to Data Science
-                  tasks — from data import to data preparation and visualization
-                  to building advanced machine learning models for
-                  classification and regression.
+                  {firstTrackText}
                 </p>
               </div>
             </div>
@@ -81,12 +87,9 @@ class Academy extends Component {
                   transform: `${index === 1 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
-                <h4 className="academy--card-title">Web Development</h4>
+                <h4 className="academy--card-title">{secondTrack}</h4>
                 <p class={index === 1 ? "d-block" : "d-none"}>
-                  In the Web Development track you will learn to build your
-                  first interactive web applications and get to know the
-                  WebDev-Toolbox (e.g. HTML, CSS, JavaScript, React.js, and many
-                  more)
+                  {secondTrackText}
                 </p>
               </div>
             </div>
@@ -110,11 +113,9 @@ class Academy extends Component {
                   transform: `${index === 2 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
-                <h4 className="academy--card-title">Artificial intelligence</h4>
+                <h4 className="academy--card-title">{thirdTrack}</h4>
                 <p class={index === 2 ? "d-block" : "d-none"}>
-                  In the Artificial Intelligence track you will learn about the
-                  possibilities of current AI-techniques, attain Python skills,
-                  and build first image recognition applications.
+                  {thirdTrackText}
                 </p>
               </div>
             </div>
@@ -138,12 +139,10 @@ class Academy extends Component {
                   transform: `${index === 3 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
               >
-                <h4 className="academy--card-title">User Experience Design</h4>
+                <h4 className="academy--card-title">{fourthTrack}</h4>
 
                 <p class={index === 3 ? "d-block" : "d-none"}>
-                  Learn UX Design with practical examples and use the
-                  opportunity to build a personal tech portfolio Find out what
-                  the key values are for designing an enjoyable user experience.
+                  {fourthTrackText}
                 </p>
               </div>
             </div>

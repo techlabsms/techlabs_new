@@ -2,7 +2,7 @@
 
 .chooseCity {
   &--clickedCard {
-    background: $color-p;
+    background: $color-gl;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     border: 0px solid !important;
@@ -45,15 +45,44 @@
     }
   }
 
-  &--countdown{
-   
-    &-text{
+  &--countdown {
+    &-text {
       font-size: 7px;
       word-spacing: 3px;
       color: $color-p;
     }
 
-    &-numbers{
+    &-textBlackLarge {
+      font-size: 15px;
+      line-height: 37px;
+      word-spacing: 3px;
+      color: $color-g;
+    }
+
+    &-textBlackSmall {
+      font-size: 7px;
+      line-height: 37px;
+      word-spacing: 3px;
+      color: $color-g;
+    }
+
+    &-numbersLarge {
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 37px;
+      color: $color-p;
+      display: block;
+    }
+
+    &-numbersSmall {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 17px;
+      color: $color-p;
+      display: block;
+    }
+
+    &-numbers {
       font-size: 18px;
       color: $color-p;
     }
@@ -63,8 +92,8 @@
     font-size: 13px;
   }
 
-  &--stopper{
+  &--stopper {
     background-color: $color-p;
-    color: white; 
+    color: white;
   }
 }

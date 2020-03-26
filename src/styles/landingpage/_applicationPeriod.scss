@@ -1,0 +1,60 @@
+
+.wave {
+  // position: absolute;
+  //width: 100%;
+
+}
+
+.grid-center {
+  text-align: center;
+}
+
+.leafs {
+  position: absolute;
+}
+
+.images {
+  margin-top: -35%;
+}
+
+.girl_clock {
+  position: relative;
+}
+
+.apply-button {
+  width: 35%;
+}
+
+.image-box {
+  position: absolute;
+  left: 75%
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.card-padding {
+  padding: 3em 0;
+}
+
+.wave-box {
+  position: relative;
+}
+
+@media(max-width: 640px) {
+  .apply-button {
+    width: 100%;
+  }
+
+  .no-padding {
+    padding: 5px !important;
+  }
+  .card-padding {
+    padding: 0;
+  }
+}

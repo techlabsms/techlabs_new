@@ -14,62 +14,20 @@ import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/LearnMore"
 import UX from "../assets/UX.png"
+import { ApplicationLinkEnum, getLink } from "../enums/ApplicationLinkEnum"
+import { CityCountryEnum, CountryEnum } from "../enums/CountryEnum.js"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 class apply extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isClicked: false,
-      city: "",
-      cityData: [
-        {
-          name: "muenster",
-          isOpen: false,
-          link: "https://techlabsorg.typeform.com/to/sD79sQ",
-          startDate: "2019-10-20",
-        },
-        {
-          name: "copenhagen",
-          link: "https://techlabsorg.typeform.com/to/DRVtUy",
-          isOpen: true,
-          startDate: "2020-02-08",
-        },
-        {
-          name: "barcelona",
-          link: "www.google.de",
-          isOpen: false,
-          startDate: "2019-09-03",
-        },
-        {
-          name: "medellín",
-          link: "https://techlabsorg.typeform.com/to/nQEp0v",
-          isOpen: false,
-          startDate: "2020-02-04",
-        },
-      ],
-      index: 0,
-    }
-
-    this.isClicked = this.isClicked.bind(this)
+  state = {
+    isClicked: false,
+    cityValue: "",
+    open: false,
+    link: "",
   }
 
-  isClicked(city, cityIsClicked) {
-    this.setState({
-      isClicked: cityIsClicked,
-      city,
-    })
-
-    this.state.cityData.forEach(data => {
-      if (data.name === city) {
-        this.setState({
-          index: this.state.cityData.indexOf(data),
-        })
-      }
-    })
-  }
   render() {
-    const { cityData, index } = this.state
+    const { isClicked } = this.state
     return (
       <>
         <Navbar />
@@ -79,34 +37,33 @@ class apply extends Component {
           intro="Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program."
         />
         <ChooseCity
-          heading="Choose Your City"
-          subheading="At the moment, we are located in Muenster, Copenhagen and Barcelona!"
-          isClicked={this.isClicked}
-          muensterStart={cityData[0].startDate}
-          muensterIsOpen={cityData[0].isOpen}
-          copenhagenStart={cityData[1].startDate}
-          copenhagenIsOpen={cityData[1].isOpen}
-          barcelonaStart={cityData[2].startDate}
-          barcelonaIsOpen={cityData[2].isOpen}
-          medellinStart={cityData[3].startDate}
-          medellinIsOpen={cityData[3].isOpen}
+          heading={<FormattedMessage id={"applypage.choose.your.city.title"} />}
+          subheading={
+            <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
+          }
+          handleClick={(isClicked, value, open) => {
+            this.setState({
+              isClicked,
+              cityValue: value,
+              open,
+              link: getLink(value),
+            })
+          }}
+          clickedCityValue={this.state.cityValue}
         />
-        <div className={this.state.isClicked ? "d-block" : "d-none"}>
+        <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
             heading="Application Requirements"
             subheading="What we are looking for in an applicant?"
-            link={cityData[index].link}
-            isOpen={cityData[index].isOpen}
+            link={this.state.link}
+            isOpen={this.state.open}
           />
           <ApplicationProcess
             heading="Application Process"
             subheading="What are the steps for a successful application?"
           />
           <div className="container">
-            <CallToActionApplication
-              isOpen={cityData[index].isOpen}
-              link={cityData[index].link}
-            />
+            <CallToActionApplication isOpen={true} link={this.state.link} />
             <LearnMore
               heading="Missed the deadline?"
               subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"

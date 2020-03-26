@@ -64,42 +64,46 @@ const LearnMore = ({
           </div>
         </div>
       </div>
-      <div className="learn--card w-100 mb-4">
-        <div className="row p-3 d-flex align-items-center">
-          <div className="col-md-4 text-center text-md-left">
-            <h3>{thirdProjectHeading}</h3>
-          </div>
-          <div className="col-md-3 text-center">
-            <img src={thirdProjectImage} alt="" className="w-50" />
-          </div>
-          <div className="col-md-5 text-center text-md-right py-4">
-             <Button
-              text={thirdButtonText || "Learn more"}
-              primary={true}
-              link={thirdLink}
-              isExternal={externalLink || false}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="learn--card w-100">
-        <div className="row p-3 d-flex align-items-center">
-          <div className="col-md-4 text-center text-md-left">
-            <h3>{fourthProjectHeading}</h3>
-          </div>
-          <div className="col-md-3 text-center">
-            <img src={fourthProjectImage} alt="" className="w-50" />
-          </div>
-          <div className="col-md-5 text-center text-md-right py-4">
-            <Button
-              text={fourthButtonText || "Learn more"}
-              primary={true}
-              link={fourthLink}
-              isExternal={externalLink || false}
-            />
+      {thirdProjectHeading && (
+        <div className="learn--card w-100 mb-4">
+          <div className="row p-3 d-flex align-items-center">
+            <div className="col-md-4 text-center text-md-left">
+              <h3>{thirdProjectHeading}</h3>
+            </div>
+            <div className="col-md-3 text-center">
+              <img src={thirdProjectImage} alt="" className="w-50" />
+            </div>
+            <div className="col-md-5 text-center text-md-right py-4">
+              <Button
+                text={thirdButtonText || "Learn more"}
+                primary={true}
+                link={thirdLink}
+                isExternal={externalLink || false}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
+      {fourthProjectHeading && (
+        <div className="learn--card w-100">
+          <div className="row p-3 d-flex align-items-center">
+            <div className="col-md-4 text-center text-md-left">
+              <h3>{fourthProjectHeading}</h3>
+            </div>
+            <div className="col-md-3 text-center">
+              <img src={fourthProjectImage} alt="" className="w-50" />
+            </div>
+            <div className="col-md-5 text-center text-md-right py-4">
+              <Button
+                text={fourthButtonText || "Learn more"}
+                primary={true}
+                link={fourthLink}
+                isExternal={externalLink || false}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </Container>
   )
 }

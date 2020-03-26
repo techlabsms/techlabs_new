@@ -37,7 +37,7 @@ class location extends Component {
                     <div className="col">
                       {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          Application opened again:{" "}
+                          Next application phase:{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
@@ -120,38 +120,34 @@ class location extends Component {
                 float={true}
               />
             )}
-            {location.usesTeam ? (
-              location.teamNameOne && location.teamNameFour ? (
-                <Team
-                  city={location.heading}
-                  firstName={location.teamNameOne}
-                  firstImage={location.teamImgOne.file.url}
-                  firstLinkedIn={location.teamLinkedInOne}
-                  secondName={location.teamNameTwo}
-                  secondImage={location.teamImgTwo.file.url}
-                  secondLinkedIn={location.teamLinkedInTwo}
-                  thirdName={location.teamNameThree}
-                  thirdImage={location.teamImgThree.file.url}
-                  thirdLinkedIn={location.teamLinkedInThree}
-                  fourthName={location.teamImgFour}
-                  fourthImage={location.teamNameFour.file.url}
-                  fourthLinkedIn={location.teamLinkedInFour}
-                />
-              ) : (
-                <Team
-                  city={location.heading}
-                  firstName={location.teamNameOne}
-                  firstImage={location.teamImgOne.file.url}
-                  firstLinkedIn={location.teamLinkedInOne}
-                  secondName={location.teamNameTwo}
-                  secondImage={location.teamImgTwo.file.url}
-                  secondLinkedIn={location.teamLinkedInTwo}
-                  thirdName={location.teamNameThree}
-                  thirdImage={location.teamImgThree.file.url}
-                  thirdLinkedIn={location.teamLinkedInThree}
-                />
-              )
-            ) : null}
+            <Team
+              city={location.heading && location.heading}
+              firstName={location.teamNameOne && location.teamNameOne}
+              firstImage={location.teamImgOne && location.teamImgOne.file.url}
+              firstLinkedIn={
+                location.teamLinkedInOne && location.teamLinkedInOne
+              }
+              secondName={location.teamNameTwo && location.teamNameTwo}
+              secondImage={location.teamImgTwo && location.teamImgTwo.file.url}
+              secondLinkedIn={
+                location.teamLinkedInTwo && location.teamLinkedInTwo
+              }
+              thirdName={location.teamNameThree && location.teamNameThree}
+              thirdImage={
+                location.teamImgThree && location.teamImgThree.file.url
+              }
+              thirdLinkedIn={
+                location.teamLinkedInThree && location.teamLinkedInThree
+              }
+              fourthName={location.teamImgFour && location.teamImgFour}
+              fourthImage={
+                location.teamNameFour && location.teamNameFour.file.url
+              }
+              fourthLinkedIn={
+                location.teamLinkedInFour && location.teamLinkedInFour
+              }
+            />
+
             <Follow
               heading="Follow Us:"
               subheading="Stay up to date!"

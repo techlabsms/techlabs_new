@@ -37,6 +37,7 @@
 @import "./joinCommunity";
 @import "./coreValues";
 @import "./datesCalendar";
+@import "./table";
 
 h1,
 h2,
@@ -152,6 +153,10 @@ body {
 
 .no-cursor {
   cursor: none !important;
+}
+
+.heading--grey {
+  color: $color-gl;
 }
 
 .color-black {
@@ -476,9 +481,26 @@ body {
   margin-top: 1rem;
 }
 
+.card-title-black {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 72px;
+  color: #303030;
+  margin-top: 1rem;
+}
+
 .card-subtitle {
   font-family: $font-pp;
   margin-bottom: 1.5rem;
+}
+
+.card-subtitle-grey {
+  font-family: $font-pp;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 31px;
+  color: #979797;
 }
 
 .card-leftArrow {
@@ -556,6 +578,35 @@ body {
 .wwo {
   background: url(../assets/wwo.png) center no-repeat;
   background-size: contain;
+}
+
+.application-period-background {
+  background: url(../assets/landingpage/wave.svg) center no-repeat;
+  background-size: contain;
+}
+
+.dropdown-select {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: none;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  background-image: url("../assets/shared/arrow-down.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 
 .img-shadow {

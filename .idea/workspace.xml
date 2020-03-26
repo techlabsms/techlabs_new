@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c1196b9-e1bc-4ef7-b400-28ae1a83f456" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/ApplicationLinkEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/ApplicationLinkEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/CountryEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/CountryEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/LogoEnum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/LogoEnum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intl/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/intl/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intl/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/intl/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/extractedMessages/App.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/extractedMessages/App.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XxKiEJ7Ayzwf8fo5AfoAzhrAIQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/enums" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets/landingpage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/enums" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/styles/landingpage" />
+      <recent name="$PROJECT_DIR$/src/assets/landingpage" />
+      <recent name="$PROJECT_DIR$/.cache" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.develop">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="i18n" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="i18n" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+        <item itemvalue="npm.i18n" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c1196b9-e1bc-4ef7-b400-28ae1a83f456" name="Default Changelist" comment="" />
+      <created>1581982431021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581982431021</updated>
+      <workItem from="1581982436250" duration="7000" />
+      <workItem from="1581982463221" duration="42331000" />
+      <workItem from="1582755526414" duration="9910000" />
+      <workItem from="1582897364986" duration="149000" />
+      <workItem from="1582900364174" duration="2675000" />
+      <workItem from="1583272526680" duration="1381000" />
+      <workItem from="1583273913707" duration="162000" />
+      <workItem from="1583274084439" duration="1475000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add Application countdown and prepare for internationalization">
+      <created>1583273851430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583273851430</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Config: Add Application countdown and prepare for internationalization">
+      <created>1583274196745</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583274196745</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Staging: Add Application countdown and prepare for internationalization">
+      <created>1583274335165</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583274335165</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Application countdown and prepare for internationalization" />
+    <MESSAGE value="Config: Add Application countdown and prepare for internationalization" />
+    <MESSAGE value="Staging: Add Application countdown and prepare for internationalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staging: Add Application countdown and prepare for internationalization" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582144486834">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="104" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1582144486834" />
+    <state x="370" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582141445583">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="370" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1582141445583" />
+    <state x="364" y="258" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582144555970">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="364" y="258" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1280.777@0.23.1280.777" timestamp="1582144555970" />
+    <state x="378" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582142265184">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="378" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1582142265184" />
+    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1583274334832">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="0" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1583274334832" />
+    <state x="128" y="90" key="DiffContextDialog" timestamp="1582064931572">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="128" y="90" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1582064931572" />
+    <state x="0" y="37" key="FileDocumentManager.FileCacheConflict" timestamp="1582670651503">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="0" y="37" key="FileDocumentManager.FileCacheConflict/0.23.1280.777@0.23.1280.777" timestamp="1582670651503" />
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1584206774673">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1584206774673" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1584206774672">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1584206774672" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1584206774671">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1584206774671" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1584206774672">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1584206774672" />
+    <state x="128" y="90" key="MergeDialog" timestamp="1583274254352">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="128" y="90" key="MergeDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274254352" />
+    <state x="353" y="135" key="MultipleFileMergeDialog" timestamp="1583274254386">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="353" y="135" key="MultipleFileMergeDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274254386" />
+    <state x="431" y="140" key="RollbackChangesDialog" timestamp="1583274158216">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="431" y="140" key="RollbackChangesDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274158216" />
+    <state x="128" y="23" key="SettingsEditor" timestamp="1582885182709">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="128" y="23" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1582885182709" />
+    <state x="240" y="139" key="Vcs.Push.Dialog.v2" timestamp="1583274338735">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="139" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1583274338735" />
+    <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582840799663">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.777@0.23.1280.777" timestamp="1582840799663" />
+    <state x="296" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1583272527397">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="296" y="246" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1583272527397" />
+    <state x="429" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583274101138">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="429" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1583274101138" />
+    <state x="301" y="174" width="673" height="472" key="find.popup" timestamp="1584206698540">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="301" y="174" width="673" height="472" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1584206698540" />
+    <state x="394" y="133" key="git4idea.branch.GitSmartOperationDialog" timestamp="1583274207601">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="394" y="133" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.777@0.23.1280.777" timestamp="1583274207601" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1584206771849">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1584206771849" />
+  </component>
+</project>
