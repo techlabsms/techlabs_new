@@ -37,7 +37,7 @@ class location extends Component {
                     <div className="col">
                       {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          Application open until:{" "}
+                          Application opened again:{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
