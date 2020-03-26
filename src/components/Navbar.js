@@ -8,6 +8,7 @@ import MED from "../assets/loc-med.svg"
 import BER from "../assets/loc-ber.png"
 import CUR from "../assets/loc-cu.svg"
 import AAC from "../assets/loc-aac.png"
+import DOR from "../assets/loc-do.svg"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
@@ -98,6 +99,14 @@ class Navbar extends React.Component {
                       />
                       Aachen
                     </Link>
+                    <Link className="dropdown-item" to="/location/Dortmund">
+                      <img
+                        src={DOR}
+                        className="nav-loc-icon p-2 mr-1"
+                        alt="loc-dor"
+                      />
+                      Dortmund
+                    </Link>
                     <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item dropdown-item-corr"
@@ -118,6 +127,21 @@ class Navbar extends React.Component {
                     Program
                   </Link>
                   <div className="dropdown-menu">
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/program/local"
+                      activeClassName="navLink--active"
+                    >
+                      Digital Shaper Program
+                    </Link>
+                    <Link
+                      className="dropdown-item-corr dropdown-item"
+                      to="/program/remote"
+                      activeClassName="navLink--active"
+                    >
+                      codeathome Bootcamp
+                    </Link>
+                    <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/dataScience"

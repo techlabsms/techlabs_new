@@ -85,6 +85,9 @@ const Footer = props => {
                     <Link to="/location/Aachen" className="noDec">
                       <li className="footer-tl--subMenu-link">Aachen</li>
                     </Link>
+                    <Link to="/location/Dortmund" className="noDec">
+                      <li className="footer-tl--subMenu-link">Dortmund</li>
+                    </Link>
                   </ul>
                   <Link className="foot-a" to="/faq">
                     FAQ
@@ -95,6 +98,17 @@ const Footer = props => {
                   <Link to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">Program</h5>
                   </Link>
+                  <br />
+                  <Link to="/program/local" className="noDec">
+                    Program
+                  </Link>
+                  <br />
+                  <Link to="/program/remote" className="noDec">
+                    codeathome Bootcamp
+                  </Link>
+                  <br />
+                  <br />
+                  <h5 className="line-height-0 white-font my-2">Tracks</h5>
                   <Link className="foot-a" to="/dataScience">
                     Data Science
                   </Link>

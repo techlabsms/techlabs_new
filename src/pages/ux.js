@@ -14,7 +14,6 @@ import david from "../assets/david.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
-import Layout from "../components/Layout"
 
 class ux extends Component {
   render() {
@@ -63,7 +62,7 @@ class ux extends Component {
           <FirstImpression
             heading="Get a first Impression"
             subheading="Check out our curriculum that is open for everybody!"
-            firstHeading="Introduction to User Expercience Design"
+            firstHeading="Introduction to User Experience Design"
             firstImage={UX2}
             firstText="Start with our free Track and learn the fundamentals now and see if it’s right for you"
             firstLink="https://app.edyoucated.org/login"

@@ -18,7 +18,8 @@ import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
-import Layout from "../components/Layout"
+import ApplicationPeriod from "./landingpage/applicationPeriod"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 class index extends React.Component {
   componentDidMount() {
@@ -47,12 +48,11 @@ class index extends React.Component {
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
-                    Learn Data Science, Artificial Intelligence, Web Development
-                    and User Experience by means of our pioneering Digital
-                    Shaper program that combines online learning, project work
-                    as well as community events at one of our locations{" "}
+                    <FormattedMessage id={"landingpage.digital.shaper.part1"} />
                     <span className="text-bold">
-                      - and that completely free for everyone!
+                      <FormattedMessage
+                        id={"landingpage.digital.shaper.part2"}
+                      />
                     </span>
                   </p>
                   <div className="mt-5">
@@ -90,8 +90,12 @@ class index extends React.Component {
           <section className="py-5 my-5 wwo">
             <div className="container">
               <Heading
-                heading="What We Offer"
-                subheading="Check out what TechLabs has in store for you!"
+                heading={
+                  <FormattedMessage id={"landingpage.what.we.offer.title"} />
+                }
+                subheading={
+                  <FormattedMessage id={"landingpage.what.we.offer.subtitle"} />
+                }
               />
               <div className="row">
                 <div className="col-lg-5 d-none d-md-block">
@@ -102,14 +106,26 @@ class index extends React.Component {
                     <Link to="/program" className="card-a">
                       <div className="card h-100">
                         <h1 className="card-title">16</h1> <br />
-                        <p className="card-subtitle">weeks of coding</p>
+                        <p className="card-subtitle">
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.weeks.of.coding"}
+                            />
+                          }
+                        </p>
                         <p className="text-muted">
-                          Within 12-16 weeks you will gain insights into the
-                          world of coding and will be able to master tech
-                          through our blended learning concept.
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.weeks.of.coding.text"}
+                            />
+                          }
                         </p>
                         <span className="card-discover">
-                          > Discover our program
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.weeks.of.coding.discover"}
+                            />
+                          }
                         </span>
                       </div>
                     </Link>
@@ -118,13 +134,26 @@ class index extends React.Component {
                     <Link to="/program" className="card-a">
                       <div className="card h-100">
                         <h1 className="card-title">4</h1> <br />
-                        <p className="card-subtitle">digital tracks</p>
+                        <p className="card-subtitle">
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.digital.tracks"}
+                            />
+                          }
+                        </p>
                         <p className="text-muted pb-4">
-                          With TechLabs you can learn state-of-the-art tech in
-                          AI, Web Development, Data Science, and UX.
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.digital.tracks.text"}
+                            />
+                          }
                         </p>
                         <span className="card-discover">
-                          > Discover our tracks
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.digital.tracks.discover"}
+                            />
+                          }
                         </span>
                       </div>
                     </Link>
@@ -133,15 +162,28 @@ class index extends React.Component {
                     <Link to="/locations" className="card-a">
                       <div className="card h-100">
                         <h1 className="card-title">300+</h1> <br />
-                        <p className="card-subtitle">community members</p>
+                        <p className="card-subtitle">
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.community.members"}
+                            />
+                          }
+                        </p>
                         <p className="text-muted">
-                          Our growing community connects 300+ people motivated
-                          to learn tech – online and offline.
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.community.members.text"}
+                            />
+                          }
                           <br />
                           <br />
                         </p>
                         <span className="card-discover">
-                          > Discover our community
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.community.members.discover"}
+                            />
+                          }
                         </span>
                       </div>
                     </Link>
@@ -150,13 +192,26 @@ class index extends React.Component {
                     <Link to="/locations" className="card-a">
                       <div className="card h-100">
                         <h1 className="card-title">6</h1> <br />
-                        <p className="card-subtitle">locations</p>
+                        <p className="card-subtitle">
+                          {
+                            <FormattedMessage
+                              id={"landingpage.what.location"}
+                            />
+                          }
+                        </p>
                         <p className="text-muted pb-4">
-                          We currently have local communities in Muenster,
-                          Barcelona, Copenhagen, Berlin, Curitiba and Medellín.
+                          {
+                            <FormattedMessage
+                              id={"landingpage.location.text"}
+                            />
+                          }
                         </p>
                         <span className="card-discover">
-                          > Discover our locations
+                          {
+                            <FormattedMessage
+                              id={"landingpage.location.discover"}
+                            />
+                          }
                         </span>
                       </div>
                     </Link>
@@ -165,6 +220,9 @@ class index extends React.Component {
               </div>
             </div>
           </section>
+
+          <ApplicationPeriod />
+
           <Slider />
 
           <RightImageSectionHeading
@@ -190,7 +248,46 @@ class index extends React.Component {
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
           />
-          <KeyBenefits />
+          <KeyBenefits
+            heading={
+              <FormattedMessage id={"program.local.keyBenefits.heading"} />
+            }
+            subheading={
+              <FormattedMessage id={"program.local.keyBenefits.subheading"} />
+            }
+            firstHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.first.heading"}
+              />
+            }
+            firstText={
+              <FormattedMessage id={"program.local.keyBenefits.first.text"} />
+            }
+            secondHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.second.heading"}
+              />
+            }
+            secondText={
+              <FormattedMessage id={"program.local.keyBenefits.second.text"} />
+            }
+            thirdHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.third.heading"}
+              />
+            }
+            thirdText={
+              <FormattedMessage id={"program.local.keyBenefits.third.text"} />
+            }
+            fourthHeading={
+              <FormattedMessage
+                id={"program.local.keyBenefits.fourth.heading"}
+              />
+            }
+            fourthText={
+              <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
+            }
+          />
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
               <Heading

@@ -1,0 +1,150 @@
+[
+  {
+    "id": "app.landingpage.applicationperiod.header",
+    "defaultMessage": "Our Application Deadlines"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.subheader",
+    "defaultMessage": "Check out when you can apply for each location!"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.check",
+    "defaultMessage": "Check"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.deadline.end",
+    "defaultMessage": "Our Application ends in:"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.deadline.start",
+    "defaultMessage": "Our Application starts in:"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.no.deadline",
+    "defaultMessage": "Next Batch will be announced soon"
+  },
+  {
+    "id": "app.landingpage.applicationperiod.deadline.apply",
+    "defaultMessage": "Apply"
+  },
+  {
+    "id": "location.muenster",
+    "defaultMessage": "Münster"
+  },
+  {
+    "id": "location.berlin",
+    "defaultMessage": "Berlin"
+  },
+  {
+    "id": "location.aachen",
+    "defaultMessage": "Aachen"
+  },
+  {
+    "id": "location.copenhagen",
+    "defaultMessage": "Copenhagen"
+  },
+  {
+    "id": "location.barcelona",
+    "defaultMessage": "Barcelona"
+  },
+  {
+    "id": "location.medellin",
+    "defaultMessage": "Medellín"
+  },
+  {
+    "id": "location.curitiba",
+    "defaultMessage": "Curitiba"
+  },
+  {
+    "id": "location.country",
+    "defaultMessage": "Country"
+  },
+  {
+    "id": "location.city",
+    "defaultMessage": "City"
+  },
+  {
+    "id": "location.country.germany",
+    "defaultMessage": "Germany"
+  },
+  {
+    "id": "location.country.denmark",
+    "defaultMessage": "Denmark"
+  },
+  {
+    "id": "location.country.spain",
+    "defaultMessage": "Spain"
+  },
+  {
+    "id": "location.country.brazil",
+    "defaultMessage": "Brazil"
+  },
+  {
+    "id": "location.country.colombia",
+    "defaultMessage": "Colombia"
+  },
+  {
+    "id": "landingpage.what.we.offer.title",
+    "defaultMessage": "What We Offer"
+  },
+  {
+    "id": "landingpage.what.we.offer.subtitle",
+    "defaultMessage": "Check out what TechLabs has in store for you!"
+  },
+  {
+    "id": "landingpage.what.weeks.of.coding",
+    "defaultMessage": "weeks of coding"
+  },
+  {
+    "id": "landingpage.what.weeks.of.coding.text",
+    "defaultMessage": "Within 12-16 weeks you will gain insights into the world of coding and will be able to master tech through our blended learning concept."
+  },
+  {
+    "id": "landingpage.what.weeks.of.coding.discover",
+    "defaultMessage": "> Discover our program"
+  },
+  {
+    "id": "landingpage.what.digital.tracks",
+    "defaultMessage": "digital tracks"
+  },
+  {
+    "id": "landingpage.what.digital.tracks.text",
+    "defaultMessage": "With TechLabs you can learn state-of-the-art tech in AI, Web Development, Data Science, and UX."
+  },
+  {
+    "id": "landingpage.what.digital.tracks.discover",
+    "defaultMessage": "> Discover our tracks"
+  },
+  {
+    "id": "landingpage.what.community.members",
+    "defaultMessage": "community members"
+  },
+  {
+    "id": "landingpage.what.community.members.text",
+    "defaultMessage": "Our growing community connects 300+ people motivated to learn tech – online and offline."
+  },
+  {
+    "id": "landingpage.what.community.members.discover",
+    "defaultMessage": "> Discover our community"
+  },
+  {
+    "id": "landingpage.what.location",
+    "defaultMessage": "locations"
+  },
+  {
+    "id": "landingpage.location.text",
+    "defaultMessage": "We currently have local communities in Muenster, Barcelona, Copenhagen, Berlin, Curitiba and Medellín."
+  },
+  {
+    "id": "landingpage.location.discover",
+    "defaultMessage": "> Discover our locations"
+  },
+  {
+    "id": "landingpage.digital.shaper.part1",
+    "defaultMessage": "Learn Data Science, Artificial Intelligence, Web Development and User Experience by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations "
+  },
+  {
+    "id": "landingpage.digital.shaper.part2",
+    "defaultMessage": "- and that completely free for everyone!"
+  }
+]

@@ -28,7 +28,19 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: `gatsby` },
+        defaultDataLayer: {platform: `gatsby`},
+      },
+    }, {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `de`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: false,
       },
     },
   ],
