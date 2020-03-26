@@ -18,6 +18,8 @@ import Footer from "../../components/Footer"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Table from "../../components/program/Table"
 import { Component } from "react"
+import Faq from "../../components/Faq"
+import FaqQuestion from "../../components/FaqQuestion"
 
 class remote extends Component {
   render() {
@@ -198,6 +200,20 @@ class remote extends Component {
             fourthLink="/ux"
           />
         </div>
+        <Faq>
+            <FaqQuestion
+              question="How do I apply for the Digital Shaper Program?"
+              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
+            />
+            <FaqQuestion
+              question="What should I write in my application to be accepted?"
+              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
+            />
+            <FaqQuestion
+              question="How can I imagine the time required?"
+              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
+            />
+          </Faq>
         <Footer />
       </div>
     )
