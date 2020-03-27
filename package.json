@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "techlabs-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "The official website for techlabs global",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Richard Menning",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
