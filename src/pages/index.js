@@ -5,14 +5,8 @@ import PartnerLogos from "../components/PartnerLogos"
 import GIC from "../assets/gic.svg"
 import KeyBenefits from "../components/KeyBenefits"
 import Quote from "../components/Quote"
-import firstImage from "../assets/startPage.png"
-import accenture from "../assets/accenture.png"
-import westfalen from "../assets/westfalen.png"
-import sopra from "../assets/sopra.png"
-import ernstYoung from "../assets/ernst-young-ey.png"
 import gic from "../assets/gic_team.png"
-import nils from "../assets/nils.png"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
@@ -21,6 +15,8 @@ import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "./landingpage/applicationPeriod"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
+import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 class index extends React.Component {
   componentDidMount() {
@@ -34,6 +30,7 @@ class index extends React.Component {
     )
   }
   render() {
+    const { data } = this.props
     return (
       <Layout>
         <div className="container-fluid">
@@ -62,10 +59,9 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
-                  <img
-                    className="img-fluid mt-5 mt-md-0 center-padding"
-                    src={firstImage}
+                  <Img
                     alt="commmunity"
+                    fluid={data.imageOne.childImageSharp.fluid}
                   />
                 </div>
               </div>
@@ -77,154 +73,178 @@ class index extends React.Component {
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
             <PartnerLogos
-              logoOne={accenture}
+              logoOne={data.accenture.childImageSharp.fluid}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
-              logoTwo={sopra}
+              logoTwo={data.sopra.childImageSharp.fluid}
               linkPartnerTwo="https://www.soprasteria.de/de"
-              logoThree={westfalen}
+              logoThree={data.westfalen.childImageSharp.fluid}
               linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
-              logoFour={ernstYoung}
+              logoFour={data.ey.childImageSharp.fluid}
               linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
 
-          <section className="py-5 my-5 wwo">
-            <div className="container">
-              <Heading
-                heading={
-                  <FormattedMessage id={"landingpage.what.we.offer.title"} />
-                }
-                subheading={
-                  <FormattedMessage id={"landingpage.what.we.offer.subtitle"} />
-                }
-              />
-              <div className="row">
-                <div className="col-lg-5 d-none d-md-block">
-                  <div className="d-flex flex-column h-100 p-4" />
-                </div>
-                <div className="d-flex col-lg-7 flex-wrap">
-                  <div className="p-2 col-sm-6 mt-5">
-                    <Link to="/program" className="card-a">
-                      <div className="card h-100">
-                        <h1 className="card-title">16</h1> <br />
-                        <p className="card-subtitle">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.weeks.of.coding"}
-                            />
-                          }
-                        </p>
-                        <p className="text-muted">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.weeks.of.coding.text"}
-                            />
-                          }
-                        </p>
-                        <span className="card-discover">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.weeks.of.coding.discover"}
-                            />
-                          }
-                        </span>
-                      </div>
-                    </Link>
+          <section className="py-5 my-5">
+            <BackgroundImage
+              fluid={data.wwo.childImageSharp.fluid}
+              style={{
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+            >
+              <div className="container">
+                <Heading
+                  heading={
+                    <FormattedMessage id={"landingpage.what.we.offer.title"} />
+                  }
+                  subheading={
+                    <FormattedMessage
+                      id={"landingpage.what.we.offer.subtitle"}
+                    />
+                  }
+                />
+                <div className="row">
+                  <div className="col-lg-5 d-none d-md-block">
+                    <div className="d-flex flex-column h-100 p-4" />
                   </div>
-                  <div className="p-2 col-sm-6 mt-5">
-                    <Link to="/program" className="card-a">
-                      <div className="card h-100">
-                        <h1 className="card-title">4</h1> <br />
-                        <p className="card-subtitle">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.digital.tracks"}
-                            />
-                          }
-                        </p>
-                        <p className="text-muted pb-4">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.digital.tracks.text"}
-                            />
-                          }
-                        </p>
-                        <span className="card-discover">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.digital.tracks.discover"}
-                            />
-                          }
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="p-2 col-sm-6 mt-5">
-                    <Link to="/locations" className="card-a">
-                      <div className="card h-100">
-                        <h1 className="card-title">300+</h1> <br />
-                        <p className="card-subtitle">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.community.members"}
-                            />
-                          }
-                        </p>
-                        <p className="text-muted">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.community.members.text"}
-                            />
-                          }
-                          <br />
-                          <br />
-                        </p>
-                        <span className="card-discover">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.community.members.discover"}
-                            />
-                          }
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="p-2 col-sm-6 mt-5">
-                    <Link to="/locations" className="card-a">
-                      <div className="card h-100">
-                        <h1 className="card-title">6</h1> <br />
-                        <p className="card-subtitle">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.what.location"}
-                            />
-                          }
-                        </p>
-                        <p className="text-muted pb-4">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.location.text"}
-                            />
-                          }
-                        </p>
-                        <span className="card-discover">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.location.discover"}
-                            />
-                          }
-                        </span>
-                      </div>
-                    </Link>
+                  <div className="d-flex col-lg-7 flex-wrap">
+                    <div className="p-2 col-sm-6 mt-5">
+                      <Link to="/program" className="card-a">
+                        <div className="card h-100">
+                          <h1 className="card-title">16</h1> <br />
+                          <p className="card-subtitle">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.weeks.of.coding"}
+                              />
+                            }
+                          </p>
+                          <p className="text-muted">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.weeks.of.coding.text"}
+                              />
+                            }
+                          </p>
+                          <span className="card-discover">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.weeks.of.coding.discover"}
+                              />
+                            }
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="p-2 col-sm-6 mt-5">
+                      <Link to="/program" className="card-a">
+                        <div className="card h-100">
+                          <h1 className="card-title">4</h1> <br />
+                          <p className="card-subtitle">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.digital.tracks"}
+                              />
+                            }
+                          </p>
+                          <p className="text-muted pb-4">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.digital.tracks.text"}
+                              />
+                            }
+                          </p>
+                          <span className="card-discover">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.digital.tracks.discover"}
+                              />
+                            }
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="p-2 col-sm-6 mt-5">
+                      <Link to="/locations" className="card-a">
+                        <div className="card h-100">
+                          <h1 className="card-title">300+</h1> <br />
+                          <p className="card-subtitle">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.community.members"}
+                              />
+                            }
+                          </p>
+                          <p className="text-muted">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.community.members.text"}
+                              />
+                            }
+                            <br />
+                            <br />
+                          </p>
+                          <span className="card-discover">
+                            {
+                              <FormattedMessage
+                                id={
+                                  "landingpage.what.community.members.discover"
+                                }
+                              />
+                            }
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="p-2 col-sm-6 mt-5">
+                      <Link to="/locations" className="card-a">
+                        <div className="card h-100">
+                          <h1 className="card-title">6</h1> <br />
+                          <p className="card-subtitle">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.what.location"}
+                              />
+                            }
+                          </p>
+                          <p className="text-muted pb-4">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.location.text"}
+                              />
+                            }
+                          </p>
+                          <span className="card-discover">
+                            {
+                              <FormattedMessage
+                                id={"landingpage.location.discover"}
+                              />
+                            }
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundImage>
           </section>
 
-          <ApplicationPeriod />
+          <ApplicationPeriod wave={data.wave.childImageSharp.fluid} />
 
-          <Slider />
+          <Slider
+            imageOne={data.jin.childImageSharp.fluid}
+            imageOneMobil={data.jin_mobil.childImageSharp.fixed}
+            imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp.fluid}
+            imageTwo={data.huemeyra.childImageSharp.fluid}
+            imageTwoMobil={data.huemeyra_mobil.childImageSharp.fixed}
+            imageThree={data.miriam.childImageSharp.fluid}
+            imageThreeMobil={data.miriam_mobil.childImageSharp.fixed}
+            imageThreeThumbnail={
+              data.miriam_mobil_thumbnail.childImageSharp.fluid
+            }
+          />
 
           <RightImageSectionHeading
             heading="Award-Winning Concept"
@@ -245,7 +265,7 @@ class index extends React.Component {
                   tech-skills. At TechLabs we don’t want money to be an issue.
                   That’s why our programs are free of charge. We help you to
                   complete your own tech project and qualify for tech roles."
-            photo={nils}
+            photo={data.nils.childImageSharp.fixed}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
           />
@@ -331,3 +351,77 @@ class index extends React.Component {
 }
 
 export default index
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    childImageSharp {
+      fixed(width: 60, height: 60) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "startPage.png" }) {
+      ...fluidImage
+    }
+    accenture: file(relativePath: { eq: "accenture.png" }) {
+      ...fluidImage
+    }
+    sopra: file(relativePath: { eq: "sopra.png" }) {
+      ...fluidImage
+    }
+    westfalen: file(relativePath: { eq: "westfalen.png" }) {
+      ...fluidImage
+    }
+    ey: file(relativePath: { eq: "ey.png" }) {
+      ...fluidImage
+    }
+    wwo: file(relativePath: { eq: "wwo.png" }) {
+      ...fluidImage
+    }
+    wave: file(relativePath: { eq: "wave.png" }) {
+      ...fluidImage
+    }
+    jin: file(relativePath: { eq: "jinrhee.png" }) {
+      ...fluidImage
+    }
+    jin_mobil: file(relativePath: { eq: "jinrhee_mobil.png" }) {
+      ...fixedImage
+    }
+    jin_mobil_thumbnail: file(relativePath: { eq: "jin_mobil.png" }) {
+      ...fluidImage
+    }
+    huemeyra: file(relativePath: { eq: "humeyra.png" }) {
+      ...fluidImage
+    }
+    huemeyra_mobil: file(relativePath: { eq: "humeyra_mobil.png" }) {
+      ...fixedImage
+    }
+    miriam: file(relativePath: { eq: "miriam.png" }) {
+      ...fluidImage
+    }
+    miriam_mobil: file(relativePath: { eq: "miriam_mobil.png" }) {
+      ...fixedImage
+    }
+    miriam_mobil_thumbnail: file(
+      relativePath: { eq: "miriam_mobil_thumbnail.png" }
+    ) {
+      ...fluidImage
+    }
+    nils: file(relativePath: { eq: "nils.png" }) {
+      ...fixedImage
+    }
+  }
+`
