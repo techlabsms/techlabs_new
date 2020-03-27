@@ -364,7 +364,7 @@ export const fluidImage = graphql`
 export const fixedImage = graphql`
   fragment fixedImage on File {
     childImageSharp {
-      fixed(width: 60, height: 60) {
+      fixed(width: 50, height: 50) {
         ...GatsbyImageSharpFixed
       }
     }
