@@ -1,22 +1,27 @@
 import React, { Component } from "react"
 import Arrow from "../assets/arrow.svg"
-import Jin from "../assets/jinrhee.png"
-import Jin_mobil from "../assets/jinrhee_mobil.png"
-import Jin_mobil_thumbnail from "../assets/jin_mobil.png"
-import Huemeyra from "../assets/humeyra.png"
-import Huemeyra_mobil from "../assets/humeyra_mobil.png"
-import Miriam from "../assets/miriam.png"
-import Miriam_mobil from "../assets/miriam_mobil.png"
-import Miriam_mobil_thumbnail from "../assets/miriam_mobil_thumbnail.png"
 import Quote from "../assets/quote.png"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
 import Modal from "react-modal"
+import Img from "gatsby-image"
 
 class Slider extends Component {
   constructor() {
     super()
     this.state = {
+      testimonials: [],
+      number: 0,
+      modalIsOpen: false,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  componentWillMount() {
+    this.setState({
+      ...this.state,
       testimonials: [
         {
           index: 0,
@@ -24,9 +29,9 @@ class Slider extends Component {
           role: "Business Administration",
           text:
             "TechLabs gave me enough knowledge and confidence to enroll and participate in a hackathon. We created a web application for productivity and got the third place.",
-          image: Jin,
-          image_mobil: Jin_mobil,
-          image_mobil_thumbnail: Jin_mobil_thumbnail,
+          image: this.props.imageOne,
+          image_mobil: this.props.imageOneMobil,
+          image_mobil_thumbnail: this.props.imageOneThumbnail,
           link:
             "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
           width: "33%",
@@ -40,10 +45,10 @@ class Slider extends Component {
           role: "Student Molecular Biomedicine",
           text:
             "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
-          image: Huemeyra,
+          image: this.props.imageTwo,
           link:
             "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
-          image_mobil: Huemeyra_mobil,
+          image_mobil: this.props.imageTwoMobil,
           width: "66%",
           hasProject: true,
           video: false,
@@ -54,9 +59,9 @@ class Slider extends Component {
           role: "Student Marketing",
           text:
             "When I decided to achieve some tech knowledge, I didn’t know where to start. At TechLabs, there are people who know what they are doing, can help me to get started, and then also help me to achieve my goals.",
-          image: Miriam,
-          image_mobil: Miriam_mobil,
-          image_mobil_thumbnail: Miriam_mobil_thumbnail,
+          image: this.props.imageThree,
+          image_mobil: this.props.imageThreeMobil,
+          image_mobil_thumbnail: this.props.imageThreeThumbnail,
           link:
             "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
           width: "100%",
@@ -65,12 +70,7 @@ class Slider extends Component {
           video: true,
         },
       ],
-      number: 0,
-      modalIsOpen: false,
-    }
-
-    this.openModal = this.openModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
+    })
   }
 
   moveRight() {
@@ -113,12 +113,14 @@ class Slider extends Component {
                     : "col-12 col-lg-5"
                 }
               >
-                <img
-                  src={testimonials[number].image}
-                  alt=""
-                  className="mt-4 d-block w-100 "
+                <div
                   onClick={testimonials[number].video ? this.openModal : ""}
-                />
+                  onKeyDown={() => null}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <Img fluid={testimonials[number].image} alt="" />
+                </div>
 
                 <Modal
                   isOpen={this.state.modalIsOpen}
@@ -190,19 +192,27 @@ class Slider extends Component {
                     </div>
                     <span>03</span>
                   </div>
-                  <div className="col-6 text-right">
-                    <img
-                      src={Arrow}
-                      alt=""
-                      className="slider--arrow slider--arrow-left"
+                  <div className="col-6 text-right slider--arrow">
+                    <div
                       onClick={() => this.moveLeft()}
-                    />
-                    <img
-                      src={Arrow}
-                      alt=""
-                      className="slider--arrow"
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img
+                        src={Arrow}
+                        alt=""
+                        className="slider--arrow slider--arrow-left"
+                      />
+                    </div>
+                    <div
                       onClick={() => this.moveRight()}
-                    />
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img src={Arrow} alt="" className="slider--arrow" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -228,12 +238,17 @@ class Slider extends Component {
               <div className="col">
                 {testimonials[number].video ? (
                   <div className="text-center my-4">
-                    <img
-                      src={testimonials[number].image_mobil_thumbnail}
-                      className="w-75 img-fluid"
+                    <div
                       onClick={testimonials[number].video ? this.openModal : ""}
-                      alt="img thumbnail"
-                    />
+                      onKeyDown={() => null}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <Img
+                        fluid={testimonials[number].image_mobil_thumbnail}
+                        alt="img thumbnail"
+                      />
+                    </div>
                   </div>
                 ) : (
                   <p className="slider--text-mobil mt-3 pb-5">
@@ -244,7 +259,14 @@ class Slider extends Component {
             </div>
             <div className="row">
               <div className="col-4 text-center">
-                <img src={testimonials[number].image_mobil} alt="img" />
+                <Img
+                  fixed={testimonials[number].image_mobil}
+                  alt="img"
+                  style={{
+                    marginLeft: "auto",
+                    marginTop: "auto",
+                  }}
+                />
               </div>
               <div className="col-8">
                 <p className="slider--name-mobil">
@@ -270,7 +292,7 @@ class Slider extends Component {
                 </div>
                 <span>03</span>
               </div>
-              <div className="col text-center">
+              <div className="col text-center  ">
                 <img
                   src={Arrow}
                   alt=""

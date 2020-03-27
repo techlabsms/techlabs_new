@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import ApplicationCountdown from "../ApplicationCountdown"
 
 import ds from "../../assets/ds.png"
@@ -7,16 +7,11 @@ import web from "../../assets/web.png"
 import dswhite from "../../assets/ds_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
-import { getCityValues, getCity } from "../../enums/CountryEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import dayjs from "dayjs"
 
 const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   const [isClicked, setIsClicked] = useState(false)
-  const [isOpen, setIsOpen] = useState()
-
-  const countryKey = "country"
-  const cityKey = "city"
   let open
   let date
   let available = true
@@ -51,6 +46,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
               setIsClicked(!isClicked)
               handleClick(!isClicked, cityValues.value, open)
             }}
+            onKeyPress={null}
+            role="link"
+            tabIndex="-1"
           >
             <div className="row">
               <div className="col-md-6">

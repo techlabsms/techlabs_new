@@ -8,6 +8,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: "images",
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -28,9 +37,10 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: {platform: `gatsby`},
+        defaultDataLayer: { platform: `gatsby` },
       },
-    }, {
+    },
+    {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path

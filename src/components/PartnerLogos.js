@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "./smallComponents/Container"
+import Img from "gatsby-image"
 
 const PartnerLogos = ({
   logoOne,
@@ -22,17 +23,13 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerOne}>
-            <img
-              src={logoOne}
-              alt="partner logo"
-              className="partnerLogos--img img-fluid"
-            />
+            <Img alt="partner logo" fluid={logoOne} />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">
           <a href={linkPartnerThree}>
-            <img
-              src={logoTwo}
+            <Img
+              fluid={logoTwo}
               alt="partner logo"
               className="partnerLogos--img img-fluid"
             />
@@ -40,19 +37,26 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerThree}>
-            <img
-              src={logoThree}
+            <Img
+              fluid={logoThree}
               alt="partner logo"
               className="partnerLogos--img img-fluid"
+              imgStyle={{
+                width: "80%",
+                objectFit: "contain",
+                margin: "0px 10px",
+                alignSelf: "center",
+              }}
             />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerFour}>
-            <img
-              src={logoFour}
+            <Img
+              fluid={logoFour}
               alt="partner logo"
-              className="partnerLogos--img img-fluid"
+              className="partnerLogos--img img-fluid  text-center"
+              imgStyle={{ width: "40%", objectFit: "contain" }}
             />
           </a>
         </div>

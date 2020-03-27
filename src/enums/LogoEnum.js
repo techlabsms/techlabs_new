@@ -34,5 +34,7 @@ export function getLogo(city) {
       return DOR
     case CityEnum.REMOTE:
       return null
+    default:
+      return
   }
 }

@@ -120,6 +120,10 @@ body {
   display: block;
 }
 
+[role="button"]:focus {
+  outline: none;
+}
+
 .dropdown-menu {
   margin: 0 !important;
   padding: 0 !important;
@@ -573,16 +577,6 @@ body {
 
 .noDec:hover {
   text-decoration: none;
-}
-
-.wwo {
-  background: url(../assets/wwo.png) center no-repeat;
-  background-size: contain;
-}
-
-.application-period-background {
-  background: url(../assets/landingpage/wave.svg) center no-repeat;
-  background-size: contain;
 }
 
 .dropdown-select {
