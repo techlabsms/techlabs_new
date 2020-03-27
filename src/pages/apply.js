@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
+import Layout from "../components/Layout"
 import ApplicationHero from "../components/ApplicationHero"
 import ChooseCity from "../components/ChooseCity"
 import Requirements from "../components/Requirements"
@@ -8,14 +8,12 @@ import ApplicationProcess from "../components/ApplicationProcess"
 import CallToActionApplication from "../components/CallToActionApplication"
 import Faq from "../components/Faq"
 import FaqQuestion from "../components/FaqQuestion"
-import Footer from "../components/Footer"
 import AI from "../assets/ai-robot.png"
 import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/LearnMore"
 import UX from "../assets/UX.png"
-import { ApplicationLinkEnum, getLink } from "../enums/ApplicationLinkEnum"
-import { CityCountryEnum, CountryEnum } from "../enums/CountryEnum.js"
+import { getLink } from "../enums/ApplicationLinkEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 class apply extends Component {
@@ -29,8 +27,7 @@ class apply extends Component {
   render() {
     const { isClicked } = this.state
     return (
-      <>
-        <Navbar />
+      <Layout>
         <ApplicationHero
           background={applicationHero}
           headingFirst="Application"
@@ -101,8 +98,7 @@ class apply extends Component {
             </Faq>
           </div>
         </div>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }

@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import ProgrammHero from "../components/ProgrammHero"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
 import RightImageSection from "../components/RightImageSection"
@@ -15,13 +13,13 @@ import webDevCover from "../assets/wd_cover.png"
 import background from "../assets/ds_background.png"
 import Faq from "../components/Faq"
 import { Link } from "gatsby"
-import backgroundMobil from '../assets/courseMobil.png';
+import backgroundMobil from "../assets/courseMobil.png"
+import Layout from "../components/Layout"
 
 class web extends Component {
   render() {
     return (
-      <>
-        <Navbar />
+      <Layout>
         <div className="container-fluid">
           <ProgrammHero
             headingFirst="Web"
@@ -92,8 +90,7 @@ class web extends Component {
             </div>
           </div>
         </div>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }

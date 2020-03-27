@@ -1,11 +1,9 @@
 import React from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 const privacyPolicy = () => {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="container mt-5">
         <div>
           <h3>Privacy Policy TechLabs e. V. </h3>
@@ -460,8 +458,7 @@ const privacyPolicy = () => {
           E-Mail: poststelle@ldi.nrw.de <br />
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

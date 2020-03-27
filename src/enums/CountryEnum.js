@@ -166,6 +166,8 @@ export function getCityValues(city) {
 
     case CityEnum.REMOTE:
       return CityCountryEnum.REMOTE[0]
+    default:
+      return
   }
 }
 
@@ -191,5 +193,7 @@ export function getCity(country) {
 
     case CountryEnum.REMOTE:
       return CityCountryEnum.REMOTE
+    default:
+      return
   }
 }

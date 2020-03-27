@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Heading from "./smallComponents/Heading"
 import Container from "./smallComponents/Container"
 import VisibilitySensor from "react-visibility-sensor"
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 const ThreeComponents = ({
   heading,

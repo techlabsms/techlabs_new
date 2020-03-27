@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import ProgrammHero from "../components/ProgrammHero"
 import Background from "../assets/about_background.png"
 import RightImageSectionHeading from "../components/RightImageSectionHeading"
@@ -18,12 +16,12 @@ import ThreeCard from "../components/smallComponents/ThreeCard"
 import MAP from "../assets/map_small.png"
 import Lina from "../assets/lina.png"
 import Background_mobil from "../assets/about_mobil.png"
+import Layout from "../components/Layout"
 
 class about extends Component {
   render() {
     return (
-      <>
-        <Navbar />
+      <Layout>
         <ProgrammHero
           headingFirst="About"
           headingSecond="TechLabs"
@@ -106,8 +104,7 @@ class about extends Component {
           leftPartSize="8"
           rightPartSize="4"
         />
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }
