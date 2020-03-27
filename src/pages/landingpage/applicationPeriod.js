@@ -1,6 +1,5 @@
 import Heading from "../../components/smallComponents/Heading"
 import React, { Component } from "react"
-import wave from "../../assets/landingpage/wave.png"
 import "../../styles/landingpage/_applicationPeriod.scss"
 import Dropdown from "../../templates/dropdown"
 import localeData from "../../intl"
@@ -16,6 +15,8 @@ import { getLogo } from "../../enums/LogoEnum"
 import { getCityValues } from "../../enums/CountryEnum"
 import { getLink } from "../../enums/ApplicationLinkEnum"
 import dayjs from "dayjs"
+
+import Img from "gatsby-image"
 
 class ApplicationPeriod extends Component {
   defaultLocale = "en"
@@ -46,6 +47,7 @@ class ApplicationPeriod extends Component {
   render() {
     const wave_style = {
       width: "100%",
+      zIndex: "-1",
     }
 
     const dropdown_style = {
@@ -207,7 +209,7 @@ class ApplicationPeriod extends Component {
           </div>
         </div>
         <div className="images">
-          <img src={wave} style={wave_style} alt="wave" />
+          <Img fluid={this.props.wave} style={wave_style} alt="wave" />
         </div>
       </section>
     )
