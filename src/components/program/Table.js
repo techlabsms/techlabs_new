@@ -95,7 +95,7 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li>Web Development</li>
-                <li>Data Science</li>
+                <li>Data Science (Python)</li>
                 <li>AI</li>
                 <li>UX Design</li>
               </ul>
@@ -103,7 +103,7 @@ const Table = ({
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li>Premium Web Development</li>
-                <li>Premium Data Science</li>
+                <li>Premium Data Science <br/>(Python & R)</li>
                 <li>Premium AI</li>
                 <li>Premium UX Design</li>
               </ul>
