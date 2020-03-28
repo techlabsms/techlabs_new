@@ -60,6 +60,8 @@ class Academy extends Component {
                   color: `${index === 0 ? "white" : "black"}`,
                   transform: `${index === 0 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
+                role="button"
+                tabIndex={0}
               >
                 <h4 className="academy--card-title">{firstTrack}</h4>
                 <p class={index === 0 ? "d-block" : "d-none"}>
@@ -86,6 +88,8 @@ class Academy extends Component {
                   color: `${index === 1 ? "white" : "black"}`,
                   transform: `${index === 1 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
+                role="button"
+                tabIndex={0}
               >
                 <h4 className="academy--card-title">{secondTrack}</h4>
                 <p class={index === 1 ? "d-block" : "d-none"}>
@@ -112,6 +116,8 @@ class Academy extends Component {
                   color: `${index === 2 ? "white" : "black"}`,
                   transform: `${index === 2 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
+                role="button"
+                tabIndex={0}
               >
                 <h4 className="academy--card-title">{thirdTrack}</h4>
                 <p class={index === 2 ? "d-block" : "d-none"}>
@@ -138,6 +144,8 @@ class Academy extends Component {
                   color: `${index === 3 ? "white" : "black"}`,
                   transform: `${index === 3 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
+                role="button"
+                tabIndex={0}
               >
                 <h4 className="academy--card-title">{fourthTrack}</h4>
 

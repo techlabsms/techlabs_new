@@ -1,12 +1,10 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer";
+import Layout from "../components/Layout"
 
 class imprint extends Component {
   render() {
     return (
-      <>
-        <Navbar />
+      <Layout>
         <div className="container">
           <h1 className="mt-3">Impressum</h1>
           <p>
@@ -34,8 +32,7 @@ class imprint extends Component {
             </a>
           </p>
         </div>
-        <Footer/>
-      </>
+      </Layout>
     )
   }
 }

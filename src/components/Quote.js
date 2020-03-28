@@ -1,16 +1,9 @@
 import React from "react"
 import Container from "./smallComponents/Container"
 import Heading from "./smallComponents/Heading"
+import Img from "gatsby-image"
 
-const Quote = ({
-  heading,
-  subheading,
-  text,
-  photo,
-  name,
-  job,
-  showHeading,
-}) => {
+const Quote = ({ heading, subheading, text, photo, name, job }) => {
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -24,7 +17,14 @@ const Quote = ({
         <div className="col-md-10">
           <div className="row mt-4">
             <div className="col-3 text-left d-flex justify-content-center align-content-center">
-              <img src={photo} alt="nils" />
+              <Img
+                fixed={photo}
+                alt="nils"
+                style={{
+                  marginTop: "auto",
+                  marginBottom: "auto",
+                }}
+              />
             </div>
             <div className="col-9">
               <p className="mt-4 whatWeOffer--nils">

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import LeftImageSection from "../components/LeftImageSection"
 import RightImageSection from "../components/RightImageSection"
 import DatesCalendar from "../components/DatesCalendar"
@@ -14,14 +12,14 @@ import getDirection from "../assets/get-directions-button.png"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
+import Layout from "../components/Layout"
 
 class location extends Component {
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
     return (
-      <>
+      <Layout>
         <section className="container-fluid">
-          <Navbar />
           <section>
             <div
               className="location-hero"
@@ -213,8 +211,7 @@ class location extends Component {
             </Container>
           )}
         </section>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }

@@ -1,16 +1,14 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import BlogCard from "../components/BlogCard"
+import Layout from "../components/Layout"
 
 class blog extends Component {
   render() {
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <div>
-        <Navbar />
+      <Layout>
         <div className="container">
           <div className="row mt-5">
             <h2>Recent articles</h2>
@@ -21,8 +19,7 @@ class blog extends Component {
             })}
           </div>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     )
   }
 }

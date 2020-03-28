@@ -103,7 +103,9 @@
   }
 
   &--arrow {
-    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
     &-left {
       transform: rotate(-180deg);
       margin-right: 10%;
@@ -135,8 +137,8 @@
     background-color: rgba(0, 0, 0, 0.6);
   }
 
-  &--wrapper{
-    iframe{
+  &--wrapper {
+    iframe {
       max-width: 100%;
     }
   }

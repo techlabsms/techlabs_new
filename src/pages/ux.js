@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
 import ProgrammHero from "../components/ProgrammHero"
 import Faq from "../components/Faq"
 import WhatYouWillLearn from "../components/WhatYouWillLearn"
@@ -16,12 +14,12 @@ import david from "../assets/david.png"
 import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
+import Layout from "../components/Layout"
 
 class ux extends Component {
   render() {
     return (
-      <>
-        <Navbar />
+      <Layout>
         <div className="container-fluid">
           <ProgrammHero
             headingFirst="UX"
@@ -94,8 +92,7 @@ class ux extends Component {
             </div>
           </div>
         </div>
-        <Footer />
-      </>
+      </Layout>
     )
   }
 }
