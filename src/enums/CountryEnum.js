@@ -58,8 +58,8 @@ export const CityCountryEnum = {
     },
     {
       value: "location.dortmund",
-      applicationStart: "20200323",
-      applicationEnd: "20200402",
+      applicationStart: null,
+      applicationEnd: null,
       availableTracks: {
         ai: true,
         web: true,
