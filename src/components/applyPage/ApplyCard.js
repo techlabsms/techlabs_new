@@ -44,7 +44,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
             }
             onClick={() => {
               setIsClicked(!isClicked)
-              handleClick(!isClicked, cityValues.value, open)
+              handleClick(!isClicked, cityValues.value, open, available)
             }}
             onKeyPress={null}
             role="link"
