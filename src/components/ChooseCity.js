@@ -101,8 +101,8 @@ class ChooseCity extends Component {
             <ApplyCard
               cityValues={getCityValues(country.value)}
               key={country.label}
-              handleClick={(isClicked, value, open) => {
-                this.props.handleClick(isClicked, value, open)
+              handleClick={(isClicked, value, open, available) => {
+                this.props.handleClick(isClicked, value, open, available)
               }}
               clickedCityValue={this.props.clickedCityValue}
             />

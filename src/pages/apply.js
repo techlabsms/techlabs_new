@@ -22,6 +22,7 @@ class apply extends Component {
     cityValue: "",
     open: false,
     link: "",
+    available: false,
   }
 
   render() {
@@ -38,12 +39,13 @@ class apply extends Component {
           subheading={
             <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
           }
-          handleClick={(isClicked, value, open) => {
+          handleClick={(isClicked, value, open, available) => {
             this.setState({
               isClicked,
               cityValue: value,
               open,
               link: getLink(value),
+              available,
             })
           }}
           clickedCityValue={this.state.cityValue}

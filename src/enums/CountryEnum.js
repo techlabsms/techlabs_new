@@ -123,8 +123,8 @@ export const CityCountryEnum = {
   REMOTE: [
     {
       value: "location.remote",
-      applicationStart: "20200323",
-      applicationEnd: "20200329",
+      applicationStart: null,
+      applicationEnd: null,
       availableTracks: {
         ai: true,
         web: true,
