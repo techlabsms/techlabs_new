@@ -58,8 +58,8 @@ export const CityCountryEnum = {
     },
     {
       value: "location.dortmund",
-      applicationStart: null,
-      applicationEnd: null,
+      applicationStart: "20200323",
+      applicationEnd: "20200402",
       availableTracks: {
         ai: true,
         web: true,
@@ -71,8 +71,8 @@ export const CityCountryEnum = {
   SPAIN: [
     {
       value: "location.barcelona",
-      applicationStart: "20200330",
-      applicationEnd: "20200430",
+      applicationStart: null,
+      applicationEnd: null,
       availableTracks: {
         ai: true,
         web: true,
