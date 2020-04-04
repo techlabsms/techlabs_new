@@ -1,7 +1,6 @@
 import React, { Component } from "react"
-import FaqQuestion from "../components/FaqQuestion"
-import "../styles/_faq.scss"
-import Layout from "../components/Layout"
+import FaqQuestion from "../components/shared/FaqQuestion"
+import Layout from "../components/Layout/Layout"
 
 class faq extends Component {
   state = {

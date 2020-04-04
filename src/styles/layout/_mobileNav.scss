@@ -1,0 +1,21 @@
+@import "../variables";
+
+.mobileNav {
+  height: 130vh;
+  &--link {
+    color: $color-p;
+  }
+  &--subMenu {
+    list-style: none;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  &--icon {
+    width: 30%;
+  }
+  &--chevron {
+    transform: rotate(-90deg);
+  }
+}

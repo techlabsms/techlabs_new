@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import BlogCard from "../components/BlogCard"
-import Layout from "../components/Layout"
+import BlogCard from "../components/blog/BlogCard"
+import Layout from "../components/Layout/Layout"
 
 class blog extends Component {
   render() {
