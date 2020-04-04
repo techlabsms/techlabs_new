@@ -8,7 +8,7 @@ export const ApplicationLinkEnum = {
   BERLIN: "https://techlabsberlin.typeform.com/to/OlQaRy",
   CURITIBA: "https://www.techlabs.org/",
   DORTMUND: "https://techlabsorg.typeform.com/to/q8nFhq",
-  AACHEN: "https://techlabsorg.typeform.com/to/q8nFhq",
+  AACHEN: "https://techlabsorg.typeform.com/to/patbjz",
   REMOTE: " https://techlabsorg.typeform.com/to/o08v5Y",
 }
 
