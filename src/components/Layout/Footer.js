@@ -121,7 +121,7 @@ const Footer = props => {
                   </Link>
                   <br />
                   <Link className="foot-a" to="/web">
-                    Web DevelopmentÌ
+                    Web Development
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ai">
