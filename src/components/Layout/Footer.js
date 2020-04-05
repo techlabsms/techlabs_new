@@ -93,6 +93,13 @@ const Footer = props => {
                     FAQ
                   </Link>
                   <br />
+                  <a
+                    className="foot-a"
+                    href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
+                  >
+                    Volunteer at TechLabs
+                  </a>
+                  <br />
                 </div>
                 <div className="col-lg-4">
                   <Link to="/program" className="noDec">
