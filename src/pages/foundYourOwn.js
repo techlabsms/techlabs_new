@@ -5,7 +5,7 @@ import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
-import Layout from "../components/Layout"
+import Layout from "../components/Layout/Layout"
 
 class foundYourOwn extends Component {
   render() {
