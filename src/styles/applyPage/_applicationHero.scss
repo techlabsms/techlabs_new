@@ -1,0 +1,55 @@
+@import "../variables";
+
+.applicationHero {
+  &--hero {
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    width: 100vw;
+  }
+
+  &--heading {
+    margin-top: 75%;
+    font-size: 70px;
+    line-height: 72px;
+    color: $color-p;
+  }
+
+  &--highlighted {
+    font-weight: bold;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    background-color: #fee9ef;
+    color: $color-p;
+    width: 80%;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  &--intro {
+    color: $color-gl;
+    max-width: 70%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 767px) {
+    &--heading {
+      margin-top: 65%;
+      font-size: 40px;
+      line-height: 22px;
+      color: $color-p;
+      text-align: left;
+      margin-left: 10%;
+    }
+
+    &--intro {
+      margin-left: 10%;
+    }
+
+    &--highlighted {
+      min-width: 65%;
+    }
+  }
+}

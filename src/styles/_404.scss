@@ -3,7 +3,7 @@
 .notFound {
   &--number {
     font-size: 12rem;
-    animation: fadeIn .8s ease-in;
+    animation: fadeIn 0.8s ease-in;
   }
 
   &--dot {
@@ -12,11 +12,11 @@
 
   p {
     font-size: 2rem;
-    animation: fadeIn .8s ease-in;
+    animation: fadeIn 0.8s ease-in;
   }
 
-  &--definition{
-    animation: fadeIn .8s ease-in;
-    animation: fadeIn .5s ease-in;
+  &--definition {
+    animation: fadeIn 0.8s ease-in;
+    animation: fadeIn 0.5s ease-in;
   }
 }

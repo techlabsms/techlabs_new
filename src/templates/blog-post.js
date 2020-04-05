@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Layout/Navbar"
 import get from "lodash/get"
 import techlabs from "../assets/tl-icon-whitebg.svg"
 import clock from "../assets/clock.svg"
-import Footer from "../components/Footer"
+import Footer from "../components/Layout/Footer"
 import { graphql } from "gatsby"
 
 class BlogPostTemplate extends Component {
