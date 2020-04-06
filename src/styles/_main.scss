@@ -4,40 +4,40 @@
 // Utilities
 @import "./variables";
 @import "./animations";
-@import "./footer";
-
-@import "./foundYourOwn";
 
 //styling for the components
-@import "./programmHero";
-@import "./learn";
-@import "./basicSection";
-@import "./partner";
-@import "./projects";
-@import "./callToAction";
-@import "./firstImpression";
-@import "./slider";
-@import "./whatWeOffer";
-@import "./keyBenefits";
-@import "./academy";
-@import "./threeComponents";
-@import "./process";
-@import "./team";
-@import "./news";
-@import "./follow";
-@import "./joinTheTeam";
-@import "./mobileNav";
-@import "./location";
-@import "./partnerLogos";
-@import "./applicationHero";
-@import "./requirements";
-@import "./applicationProcess";
-@import "./dates";
-@import "./chooseCity";
-@import "./joinCommunity";
-@import "./coreValues";
-@import "./datesCalendar";
-@import "./table";
+@import "./program/programmHero";
+@import "./program/learn";
+@import "./shared/basicSection";
+@import "./landingpage/partner";
+@import "./program/projects";
+@import "./shared/callToAction";
+@import "./foundYourOwn/firstImpression";
+@import "./landingpage/slider";
+@import "./program/whatWeOffer";
+@import "./shared/keyBenefits";
+@import "./program/academy";
+@import "./program/threeComponents";
+@import "./applyPage/process";
+@import "./locations/team";
+@import "./locations/news";
+@import "./locations/follow";
+@import "./locations/joinTheTeam";
+@import "./layout/mobileNav";
+@import "./locations/location";
+@import "./landingpage/partnerLogos";
+@import "./shared/faq";
+@import "./applyPage/applicationHero";
+@import "./applyPage/requirements";
+@import "./applyPage/applicationProcess";
+@import "./locations/dates";
+@import "./applyPage/chooseCity";
+@import "./locations/joinCommunity";
+@import "./program/coreValues";
+@import "./locations/datesCalendar";
+@import "./program/table";
+@import "./layout/footer";
+@import "./foundYourOwn/foundYourOwn";
 
 h1,
 h2,

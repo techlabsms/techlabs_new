@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import ApplicationCountdown from "../ApplicationCountdown"
+import ApplicationCountdown from "./ApplicationCountdown"
 
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"

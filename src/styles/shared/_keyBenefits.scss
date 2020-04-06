@@ -1,0 +1,12 @@
+@import "../variables";
+
+.keyBenefits {
+  &--card {
+    margin-top: -10%;
+    &-text {
+      color: $color-gl;
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+}

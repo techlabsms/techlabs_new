@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import locationsImg from "../assets/locations.png"
 import "../styles/_main.scss"
-import LocationCard from "../components/LocationCard"
+import LocationCard from "../components/locations/LocationCard"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import MAPLOC from "../assets/mapLoc.png"
@@ -9,7 +9,7 @@ import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import ArrowButton from "../components/smallComponents/ArrowButton"
 import Button from "../components/smallComponents/Button"
-import Layout from "../components/Layout"
+import Layout from "../components/Layout/Layout"
 
 class Locations extends Component {
   constructor() {
