@@ -3,7 +3,6 @@ import Navbar from "../../components/Layout/Navbar"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
 import LearnMore from "../../components/program/LearnMore"
-import background from "../../assets/p_background.png"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
 import DataScience from "../../assets/dashboard.png"
@@ -14,8 +13,9 @@ import Button from "../../components/smallComponents/Button"
 import Table from "../../components/program/Table"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { graphql } from "gatsby"
 
-const index = () => {
+const index = ({ data }) => {
   return (
     <>
       <div>
@@ -24,7 +24,7 @@ const index = () => {
           headingFirst="Our Learning"
           headingSecond="Programs"
           intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
-          background={background}
+          // background={data.background.childImageSharp.fluid}
           backgroundMobil={ProgrammMobil}
         />
         <div className="container">
@@ -100,3 +100,21 @@ const index = () => {
 }
 
 export default index
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    background: file(relativePath: { eq: "p_background.png" }) {
+      ...fluidImage
+    }
+  }
+`
