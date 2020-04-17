@@ -42,7 +42,7 @@ export const CityCountryEnum = {
         ai: true,
         web: true,
         dataScience: true,
-        ux: false,
+        ux: true,
       },
     },
     {
