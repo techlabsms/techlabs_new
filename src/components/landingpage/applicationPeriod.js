@@ -44,6 +44,14 @@ class ApplicationPeriod extends Component {
     return [year, month, day].join(".")
   }
 
+  getValues = city => {
+    const tmpArray = this.props.locationData.filter(location => {
+      return location.node.heading.toLowerCase() === city.split(".")[1]
+    })
+
+    return tmpArray.length > 0 ? tmpArray[0].node : getCityValues(city)
+  }
+
   render() {
     const wave_style = {
       width: "100%",
@@ -77,7 +85,7 @@ class ApplicationPeriod extends Component {
     let now = dayjs(Date.now())
 
     if (this.state.city !== null) {
-      cityValues = getCityValues(this.state.city)
+      cityValues = this.getValues(this.state.city)
       if (!cityValues || cityValues.applicationStart === null) {
         available = false
       } else {
