@@ -68,7 +68,6 @@ class ChooseCity extends Component {
     const countryKey = "germany"
 
     const filteredCountries = this.props.countries.filter(locations => {
-      console.log(locations)
       return (
         locations.node.country.toLowerCase() ===
         this.state.country.split(".")[2]
@@ -88,8 +87,8 @@ class ChooseCity extends Component {
             <ApplyCard
               cityValues={country.node}
               key={country.node.heading}
-              handleClick={(isClicked, value, open, available) => {
-                this.props.handleClick(isClicked, value, open, available)
+              handleClick={(isClicked, value, available, link) => {
+                this.props.handleClick(isClicked, value, available, link)
               }}
               clickedCityValue={this.props.clickedCityValue}
             />

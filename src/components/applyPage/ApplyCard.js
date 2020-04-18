@@ -47,8 +47,8 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
               handleClick(
                 !isClicked,
                 cityValues.heading.toLowerCase(),
-                open,
-                available
+                available,
+                cityValues.applicationLink
               )
             }}
             onKeyPress={null}
