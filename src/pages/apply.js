@@ -15,6 +15,7 @@ import LearnMore from "../components/program/LearnMore"
 import UX from "../assets/UX.png"
 import { getLink } from "../enums/ApplicationLinkEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { graphql } from "gatsby"
 
 class apply extends Component {
   state = {
@@ -49,6 +50,7 @@ class apply extends Component {
             })
           }}
           clickedCityValue={this.state.cityValue}
+          countries={this.props.data.allContentfulLocationPage.edges}
         />
         <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
@@ -106,3 +108,25 @@ class apply extends Component {
 }
 
 export default apply
+
+export const pageQuery = graphql`
+  query {
+    allContentfulLocationPage {
+      edges {
+        node {
+          heading
+          country
+          applicationStart
+          applicationEnd
+          applicationLink
+          avaiableTracks {
+            ai
+            web
+            data
+            ux
+          }
+        }
+      }
+    }
+  }
+`
