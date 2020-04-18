@@ -38,13 +38,18 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
         <a href="#requirements" className="noDec aNone w-100">
           <div
             className={
-              isClicked && clickedCityValue === cityValues.value
+              isClicked && clickedCityValue === cityValues.heading.toLowerCase()
                 ? "chooseCity--clickedCard h-100"
                 : "chooseCity--card h-100"
             }
             onClick={() => {
               setIsClicked(!isClicked)
-              handleClick(!isClicked, cityValues.value, open, available)
+              handleClick(
+                !isClicked,
+                cityValues.heading.toLowerCase(),
+                open,
+                available
+              )
             }}
             onKeyPress={null}
             role="link"
@@ -53,11 +58,14 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
             <div className="row">
               <div className="col-md-6">
                 <h4 className="chooseCity--heading">
-                  <FormattedMessage id={cityValues.value} />
+                  <FormattedMessage
+                    id={`location.${cityValues.heading.toLowerCase()}`}
+                  />
                 </h4>
                 <div
                   className={
-                    isClicked && clickedCityValue === cityValues.value
+                    isClicked &&
+                    clickedCityValue === cityValues.heading.toLowerCase()
                       ? "section-divider-white"
                       : "section-divider"
                   }
@@ -99,11 +107,12 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
             <p>Available Tracks</p>
             <div className="row px-2 my-2">
               <div className="col">
-                {cityValues.availableTracks.ai && (
+                {cityValues.avaiableTracks.ai && (
                   <div className="row">
                     <img
                       src={
-                        isClicked && clickedCityValue === cityValues.value
+                        isClicked &&
+                        clickedCityValue === cityValues.heading.toLowerCase()
                           ? aiwhite
                           : ai
                       }
@@ -117,11 +126,12 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                     </p>
                   </div>
                 )}
-                {cityValues.availableTracks.dataScience && (
+                {cityValues.avaiableTracks.data && (
                   <div className="row">
                     <img
                       src={
-                        isClicked && clickedCityValue === cityValues.value
+                        isClicked &&
+                        clickedCityValue === cityValues.heading.toLowerCase()
                           ? dswhite
                           : ds
                       }
@@ -135,11 +145,12 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                 )}
               </div>
               <div className="col">
-                {cityValues.availableTracks.web && (
+                {cityValues.avaiableTracks.web && (
                   <div className="row">
                     <img
                       src={
-                        isClicked && clickedCityValue === cityValues.value
+                        isClicked &&
+                        clickedCityValue === cityValues.heading.toLowerCase()
                           ? webwhite
                           : web
                       }
@@ -151,11 +162,12 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                     <p className="chooseCity--subject">Web Development</p>
                   </div>
                 )}
-                {cityValues.availableTracks.ux && (
+                {cityValues.avaiableTracks.ux && (
                   <div className="row">
                     <img
                       src={
-                        isClicked && clickedCityValue === cityValues.value
+                        isClicked &&
+                        clickedCityValue === cityValues.heading.toLowerCase()
                           ? webwhite
                           : web
                       }
