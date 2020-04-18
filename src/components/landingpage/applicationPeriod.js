@@ -185,17 +185,17 @@ class ApplicationPeriod extends Component {
                         </div>
                         <span className="card-discover">
                           {open ? (
-                            <button
+                            <a
                               className="btn btn-primary d-inline apply-button"
                               type="submit"
-                              onClick={this.routeToApplicationForm}
+                              href={cityValues.applicationLink}
                             >
                               <FormattedMessage
                                 id={
                                   "app.landingpage.applicationperiod.deadline.apply"
                                 }
                               />
-                            </button>
+                            </a>
                           ) : (
                             <> </>
                           )}
@@ -221,10 +221,6 @@ class ApplicationPeriod extends Component {
         </div>
       </section>
     )
-  }
-
-  routeToApplicationForm = () => {
-    window.location.href = getLink(this.state.city)
   }
 
   handleCountryChange = country => {
