@@ -13,7 +13,6 @@ import {
 } from "../../enums/CountryEnum.js"
 import { getLogo } from "../../enums/LogoEnum"
 import { getCityValues } from "../../enums/CountryEnum"
-import { getLink } from "../../enums/ApplicationLinkEnum"
 import dayjs from "dayjs"
 
 import Img from "gatsby-image"
