@@ -13,7 +13,6 @@ import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/program/LearnMore"
 import UX from "../assets/UX.png"
-import { getLink } from "../enums/ApplicationLinkEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
