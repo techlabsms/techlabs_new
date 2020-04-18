@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import localeData from "../../intl"
 import Heading from "../smallComponents/Heading"
-import { CityCountryEnum, CountryEnum, getCity } from "../../enums/CountryEnum"
+import { CountryEnum, getCity } from "../../enums/CountryEnum"
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
 
