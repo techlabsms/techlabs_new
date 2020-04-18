@@ -231,7 +231,10 @@ class index extends React.Component {
             </BackgroundImage>
           </section>
 
-          <ApplicationPeriod wave={data.wave.childImageSharp.fluid} />
+          <ApplicationPeriod
+            wave={data.wave.childImageSharp.fluid}
+            locationData={data.allContentfulLocationPage.edges}
+          />
 
           <Slider
             imageOne={data.jin.childImageSharp.fluid}
@@ -422,6 +425,17 @@ export const pageQuery = graphql`
     }
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
+    }
+    allContentfulLocationPage {
+      edges {
+        node {
+          heading
+          country
+          applicationStart
+          applicationEnd
+          applicationLink
+        }
+      }
     }
   }
 `
