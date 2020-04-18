@@ -3,7 +3,7 @@ import localeData from "../../intl"
 import Heading from "../smallComponents/Heading"
 import { CityCountryEnum, CountryEnum, getCity } from "../../enums/CountryEnum"
 import ApplyCard from "./ApplyCard"
-import Dropdown from "../../templates/dropdown"
+import Dropdown from "../shared/dropdown"
 
 class ChooseCity extends Component {
   defaultLocale = "en"

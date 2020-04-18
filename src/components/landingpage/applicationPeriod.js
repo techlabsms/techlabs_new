@@ -1,7 +1,7 @@
 import Heading from "../smallComponents/Heading"
 import React, { Component } from "react"
 import "../../styles/landingpage/_applicationPeriod.scss"
-import Dropdown from "../../templates/dropdown"
+import Dropdown from "../shared/dropdown"
 import localeData from "../../intl"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
