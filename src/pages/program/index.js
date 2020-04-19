@@ -28,13 +28,31 @@ const index = () => {
           backgroundMobil={ProgrammMobil}
         />
         <div className="container">
-          <Academy />
-          <Table
-            heading={<FormattedMessage id={"program.index.table.heading"} />}
-            subheading={
-              <FormattedMessage id={"program.index.table.subheading"} />
+          <Academy
+            firstTrack={
+              <FormattedMessage id={"program.local.academy.first.name"} />
             }
-            activeProgram="remote"
+            firstTrackText={
+              <FormattedMessage id={"program.local.academy.first.text"} />
+            }
+            secondTrack={
+              <FormattedMessage id={"program.local.academy.second.name"} />
+            }
+            secondTrackText={
+              <FormattedMessage id={"program.local.academy.second.text"} />
+            }
+            thirdTrack={
+              <FormattedMessage id={"program.local.academy.third.name"} />
+            }
+            thirdTrackText={
+              <FormattedMessage id={"program.local.academy.third.text"} />
+            }
+            fourthTrack={
+              <FormattedMessage id={"program.local.academy.fourth.name"} />
+            }
+            fourthTrackText={
+              <FormattedMessage id={"program.local.academy.fourth.text"} />
+            }
           />
           <LearnMore
             heading="Learn More"
