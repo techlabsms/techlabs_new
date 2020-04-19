@@ -64,7 +64,7 @@ const ProgrammHero = ({
                             <p>
                               6 months program
                               <br />
-                              10 hours per week
+                              5 hours per week
                             </p>
                           </div>
                         </div>
@@ -129,7 +129,7 @@ const ProgrammHero = ({
                         <p>
                           6 Months Program
                           <br />
-                          10 Hours per Week
+                          5 hours per Week
                         </p>
                       </div>
                     </div>
@@ -197,7 +197,7 @@ const ProgrammHero = ({
                       <h1 className="programmHero--card-title_mobil">Time</h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        10 Hours/ Week <br /> 6 Month Program
+                        5 hours / Week <br /> 6 Month Program
                       </p>
                     </div>
                     <div className="col-4">
