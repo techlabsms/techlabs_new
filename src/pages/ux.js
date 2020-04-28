@@ -66,7 +66,7 @@ class ux extends Component {
             firstHeading="Introduction to User Experience Design"
             firstImage={UX2}
             firstText="Start with our free Track and learn the fundamentals now and see if it’s right for you"
-            firstLink="https://app.edyoucated.org/login"
+            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
           />
           <Faq>
             <FaqQuestion

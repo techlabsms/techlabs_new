@@ -13,14 +13,13 @@ import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
 import LearnMore from "../components/program/LearnMore"
 import UX from "../assets/UX.png"
-import { getLink } from "../enums/ApplicationLinkEnum"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { graphql } from "gatsby"
 
 class apply extends Component {
   state = {
     isClicked: false,
     cityValue: "",
-    open: false,
     link: "",
     available: false,
   }
@@ -39,48 +38,51 @@ class apply extends Component {
           subheading={
             <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
           }
-          handleClick={(isClicked, value, open, available) => {
+          handleClick={(isClicked, value, available, link) => {
             this.setState({
               isClicked,
               cityValue: value,
-              open,
-              link: getLink(value),
               available,
+              link,
             })
           }}
           clickedCityValue={this.state.cityValue}
+          countries={this.props.data.allContentfulLocationPage.edges}
         />
         <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
             heading="Application Requirements"
             subheading="What we are looking for in an applicant?"
             link={this.state.link}
-            isOpen={this.state.open}
+            isOpen={this.state.available}
           />
           <ApplicationProcess
             heading="Application Process"
             subheading="What are the steps for a successful application?"
           />
           <div className="container">
-            <CallToActionApplication isOpen={true} link={this.state.link} />
+            <CallToActionApplication
+              isOpen={this.state.available}
+              link={this.state.link}
+            />
             <LearnMore
               heading="Missed the deadline?"
               subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"
               firstProjectHeading="Web Development"
               firstProjectImage={Web}
-              firstLink="https://app.edyoucated.org/login"
+              firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               firstButtonText="Start now"
               secondProjectHeading="Data Science"
               secondProjectImage={Ds}
-              secondLink="https://app.edyoucated.org/login"
+              secondLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               secondButtonText="Start now"
               thirdProjectHeading="Artificial Intelligence"
               thirdProjectImage={AI}
-              thirdLink="https://app.edyoucated.org/login"
+              thirdLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               thirdButtonText="Start now"
               fourthProjectHeading="User Experience Design"
               fourthProjectImage={UX}
-              fourthLink="https://app.edyoucated.org/login"
+              fourthLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               fourthButtonText="Start now"
               externalLink={true}
             />
@@ -106,3 +108,25 @@ class apply extends Component {
 }
 
 export default apply
+
+export const pageQuery = graphql`
+  query {
+    allContentfulLocationPage {
+      edges {
+        node {
+          heading
+          country
+          applicationStart
+          applicationEnd
+          applicationLink
+          avaiableTracks {
+            ai
+            web
+            data
+            ux
+          }
+        }
+      }
+    }
+  }
+`

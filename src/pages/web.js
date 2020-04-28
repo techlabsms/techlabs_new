@@ -64,7 +64,7 @@ class web extends Component {
             firstHeading="Introduction to Web Development"
             firstImage={dashboard}
             firstText="Start with our free Track and learn the fundamentals of Web Development now and see if it’s right for you"
-            firstLink="https://app.edyoucated.org/login"
+            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
           />
           <Faq>
             <FaqQuestion

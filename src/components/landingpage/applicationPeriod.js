@@ -1,7 +1,7 @@
 import Heading from "../smallComponents/Heading"
 import React, { Component } from "react"
 import "../../styles/landingpage/_applicationPeriod.scss"
-import Dropdown from "../../templates/dropdown"
+import Dropdown from "../shared/dropdown"
 import localeData from "../../intl"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
@@ -13,7 +13,6 @@ import {
 } from "../../enums/CountryEnum.js"
 import { getLogo } from "../../enums/LogoEnum"
 import { getCityValues } from "../../enums/CountryEnum"
-import { getLink } from "../../enums/ApplicationLinkEnum"
 import dayjs from "dayjs"
 
 import Img from "gatsby-image"
@@ -42,6 +41,14 @@ class ApplicationPeriod extends Component {
     if (day.length < 2) day = "0" + day
 
     return [year, month, day].join(".")
+  }
+
+  getValues = city => {
+    const tmpArray = this.props.locationData.filter(location => {
+      return location.node.heading.toLowerCase() === city.split(".")[1]
+    })
+
+    return tmpArray.length > 0 ? tmpArray[0].node : getCityValues(city)
   }
 
   render() {
@@ -77,7 +84,7 @@ class ApplicationPeriod extends Component {
     let now = dayjs(Date.now())
 
     if (this.state.city !== null) {
-      cityValues = getCityValues(this.state.city)
+      cityValues = this.getValues(this.state.city)
       if (!cityValues || cityValues.applicationStart === null) {
         available = false
       } else {
@@ -177,17 +184,17 @@ class ApplicationPeriod extends Component {
                         </div>
                         <span className="card-discover">
                           {open ? (
-                            <button
+                            <a
                               className="btn btn-primary d-inline apply-button"
                               type="submit"
-                              onClick={this.routeToApplicationForm}
+                              href={cityValues.applicationLink}
                             >
                               <FormattedMessage
                                 id={
                                   "app.landingpage.applicationperiod.deadline.apply"
                                 }
                               />
-                            </button>
+                            </a>
                           ) : (
                             <> </>
                           )}
@@ -213,10 +220,6 @@ class ApplicationPeriod extends Component {
         </div>
       </section>
     )
-  }
-
-  routeToApplicationForm = () => {
-    window.location.href = getLink(this.state.city)
   }
 
   handleCountryChange = country => {

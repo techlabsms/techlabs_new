@@ -64,7 +64,7 @@ class ai extends Component {
             firstHeading="Introduction to Artificial Intelligence"
             firstImage={robot}
             firstText="Start with our free Track and learn the fundamentals of AI now and see if you want to join the Digital Shaper Program!"
-            firstLink="https://app.edyoucated.org/login"
+            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
           />
           <Faq>
             <FaqQuestion

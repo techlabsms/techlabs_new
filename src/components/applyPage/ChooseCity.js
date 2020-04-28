@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 import localeData from "../../intl"
 import Heading from "../smallComponents/Heading"
-import { CityCountryEnum, CountryEnum, getCity } from "../../enums/CountryEnum"
-import { getCityValues } from "../../enums/CountryEnum"
+import { CountryEnum, getCity } from "../../enums/CountryEnum"
 import ApplyCard from "./ApplyCard"
-import Dropdown from "../../templates/dropdown"
+import Dropdown from "../shared/dropdown"
 
 class ChooseCity extends Component {
   defaultLocale = "en"
@@ -12,26 +11,8 @@ class ChooseCity extends Component {
 
   state = {
     atEnd: false,
-    country: null,
+    country: "location.country.germany",
     city: null,
-    cityOptions: [
-      {
-        label: this.messages[CityCountryEnum.GERMANY[0].value],
-        value: CityCountryEnum.GERMANY[0].value,
-      },
-      {
-        label: this.messages[CityCountryEnum.GERMANY[1].value],
-        value: CityCountryEnum.GERMANY[1].value,
-      },
-      {
-        label: this.messages[CityCountryEnum.GERMANY[2].value],
-        value: CityCountryEnum.GERMANY[2].value,
-      },
-      {
-        label: this.messages[CityCountryEnum.GERMANY[3].value],
-        value: CityCountryEnum.GERMANY[3].value,
-      },
-    ],
   }
 
   handleCountryChange = country => {
@@ -86,7 +67,12 @@ class ChooseCity extends Component {
 
     const countryKey = "germany"
 
-    const { cityOptions } = this.state
+    const filteredCountries = this.props.countries.filter(locations => {
+      return (
+        locations.node.country.toLowerCase() ===
+        this.state.country.split(".")[2]
+      )
+    })
     return (
       <div className="container">
         <Heading heading={heading} subheading={subheading} />
@@ -97,12 +83,12 @@ class ChooseCity extends Component {
           onSelect={this.handleCountryChange}
         />
         <div className="row">
-          {cityOptions.map(country => (
+          {filteredCountries.map(country => (
             <ApplyCard
-              cityValues={getCityValues(country.value)}
-              key={country.label}
-              handleClick={(isClicked, value, open, available) => {
-                this.props.handleClick(isClicked, value, open, available)
+              cityValues={country.node}
+              key={country.node.heading}
+              handleClick={(isClicked, value, available, link) => {
+                this.props.handleClick(isClicked, value, available, link)
               }}
               clickedCityValue={this.props.clickedCityValue}
             />
