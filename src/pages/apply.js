@@ -70,19 +70,19 @@ class apply extends Component {
               subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"
               firstProjectHeading="Web Development"
               firstProjectImage={Web}
-              firstLink="https://app.edyoucated.org/login"
+              firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               firstButtonText="Start now"
               secondProjectHeading="Data Science"
               secondProjectImage={Ds}
-              secondLink="https://app.edyoucated.org/login"
+              secondLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               secondButtonText="Start now"
               thirdProjectHeading="Artificial Intelligence"
               thirdProjectImage={AI}
-              thirdLink="https://app.edyoucated.org/login"
+              thirdLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               thirdButtonText="Start now"
               fourthProjectHeading="User Experience Design"
               fourthProjectImage={UX}
-              fourthLink="https://app.edyoucated.org/login"
+              fourthLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
               fourthButtonText="Start now"
               externalLink={true}
             />
