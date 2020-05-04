@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import DataScience from "../../assets/dashboard.png"
 import WebDev from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
@@ -22,9 +21,30 @@ const Academy = ({
 
   const data = useStaticQuery(graphql`
     query {
-      dataScience: file(relativePath: { eq: "dashboard.jpg" }) {
+      dataScience: file(relativePath: { eq: "dashboard.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100) {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      web: file(relativePath: { eq: "webdevpro.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      ai: file(relativePath: { eq: "ai-robot.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      ux: file(relativePath: { eq: "UX.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -36,6 +56,13 @@ const Academy = ({
     setIndex(number)
   }
 
+  const images = [
+    data.dataScience.childImageSharp.fluid,
+    data.web.childImageSharp.fluid,
+    data.ai.childImageSharp.fluid,
+    data.ux.childImageSharp.fluid,
+  ]
+
   return (
     <Container>
       <Heading
@@ -44,10 +71,7 @@ const Academy = ({
       />
       <div className="row mt-5 d-flex mb-5">
         <div className="col align-self-center text-center d-none d-lg-block">
-          <Img
-            fluid={data.dataScience.childImageSharp.fluid}
-            className="w-75"
-          />
+          <Img fluid={images[index]} className="w-75" />
         </div>
         <div className="col-sm-12 col-lg-6">
           <div className="row mt-4">
@@ -58,7 +82,10 @@ const Academy = ({
                   : "col align-self-center text-center d-none"
               }
             >
-              <Img fluid={data.dataScience.childImageSharp.fluid} />
+              <Img
+                fluid={data.dataScience.childImageSharp.fluid}
+                className="m-5"
+              />
             </div>
             <div
               className="academy--card w-100"
@@ -84,7 +111,7 @@ const Academy = ({
                   : "col align-self-center text-center d-none"
               }
             >
-              <Img fluid={data.dataScience.childImageSharp.fluid} />
+              <Img fluid={data.web.childImageSharp.fluid} className="m-5" />
             </div>
             <div
               className="academy--card w-100"
@@ -112,7 +139,7 @@ const Academy = ({
                   : "col align-self-center text-center d-none"
               }
             >
-              <Img fluid={data.dataScience.childImageSharp.fluid} />
+              <Img fluid={data.ai.childImageSharp.fluid} className="m-5" />
             </div>
             <div
               className="academy--card w-100"
@@ -138,7 +165,7 @@ const Academy = ({
                   : "col align-self-center text-center d-none"
               }
             >
-              <Img fluid={data.dataScience.childImageSharp.fluid} />
+              <Img fluid={data.ux.childImageSharp.fluid} className="m-5" />
             </div>
             <div
               className="academy--card w-100"
