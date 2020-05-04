@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Navbar from "../../components/Layout/Navbar"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
@@ -16,6 +16,8 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
 const index = ({ data }) => {
+  console.log(data)
+
   return (
     <>
       <div>
@@ -24,8 +26,8 @@ const index = ({ data }) => {
           headingFirst="Our Learning"
           headingSecond="Programs"
           intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
-          // background={data.background.childImageSharp.fluid}
-          backgroundMobil={ProgrammMobil}
+          background={data.background.childImageSharp.fluid}
+          backgroundMobil={data.backgroundMobil.childImageSharp.fluid}
         />
         <div className="container">
           <Academy
@@ -113,7 +115,10 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    background: file(relativePath: { eq: "p_background.png" }) {
+    background: file(relativePath: { eq: "p_background.jpg" }) {
+      ...fluidImage
+    }
+    backgroundMobil: file(relativePath: { eq: "google.jpg" }) {
       ...fluidImage
     }
   }
