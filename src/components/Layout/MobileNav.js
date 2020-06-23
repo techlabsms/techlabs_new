@@ -13,11 +13,11 @@ class MobileNav extends Component {
     programOpen: false,
   }
   render() {
-    const { locationOpen, programOpen } = this.state
+    const { programOpen } = this.state
     return (
       <>
         <div className="mobileNav  d-lg-none d-xl-none">
-          <ul className="navbar-nav ml-auto d-sm-block d-md-block mo">
+          <ul className="navbar-nav ml-auto d-sm-block d-md-block">
             <Link to="/locations" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Locations</h3>
