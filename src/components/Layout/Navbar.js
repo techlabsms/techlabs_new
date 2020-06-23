@@ -52,62 +52,12 @@ class Navbar extends React.Component {
                   </Link>
                   <div className="dropdown-menu">
                     <Link
-                      className="dropdown-item"
-                      to="/location/Muenster"
+                      className="dropdown-item dropdown-item-corr"
+                      to="/locations"
                       activeClassName="navLink--active"
                     >
-                      <img src={MS} className="nav-loc-icon" alt="loc-ms" />
-                      Muenster
+                      All locations
                     </Link>
-                    <Link className="dropdown-item" to="/location/Copenhagen">
-                      <img src={CPH} className="nav-loc-icon" alt="loc-cph" />
-                      Copenhagen
-                    </Link>
-                    <Link className="dropdown-item" to="/location/Barcelona">
-                      <img src={BCN} className="nav-loc-icon" alt="loc-bcn" />
-                      Barcelona
-                    </Link>
-                    <Link className="dropdown-item" to="/location/Medellín">
-                      <img
-                        src={MED}
-                        className="nav-loc-icon h-75"
-                        alt="loc-bcn"
-                      />
-                      Medellín
-                    </Link>
-                    <Link className="dropdown-item" to="/location/Berlin">
-                      <img
-                        src={BER}
-                        className="nav-loc-icon p-2"
-                        alt="loc-bcn"
-                      />
-                      Berlin
-                    </Link>
-                    <Link className="dropdown-item " to="/location/Curitiba">
-                      <img
-                        src={CUR}
-                        className="nav-loc-icon p-2"
-                        alt="loc-bcn"
-                      />
-                      Curitiba
-                    </Link>
-                    <Link className="dropdown-item" to="/location/Aachen">
-                      <img
-                        src={AAC}
-                        className="nav-loc-icon p-2 mr-3"
-                        alt="loc-bcn"
-                      />
-                      Aachen
-                    </Link>
-                    <Link className="dropdown-item" to="/location/Dortmund">
-                      <img
-                        src={DOR}
-                        className="nav-loc-icon p-2 mr-1"
-                        alt="loc-dor"
-                      />
-                      Dortmund
-                    </Link>
-                    <div className="dropdown-divider" />
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
