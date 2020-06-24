@@ -316,7 +316,6 @@ export const pageQuery = graphql`
       officeLink
       applicationLink
       email
-      slackLink
       usesTeam
       hasCalendar
     }
