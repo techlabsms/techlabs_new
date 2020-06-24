@@ -18,4 +18,8 @@
   &--chevron {
     transform: rotate(-90deg);
   }
+
+  @media only screen and (max-width: 320px) {
+    height: 160vh;
+  }
 }
