@@ -146,7 +146,7 @@ class Navbar extends React.Component {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                <li className="nav-item ml-3">
                   <Link
                     className="nav-button"
                     to="/apply"
@@ -154,18 +154,6 @@ class Navbar extends React.Component {
                   >
                     Apply now
                   </Link>
-                </li>
-
-                <li className="nav-item">
-                  <div className="btn-slack d-flex align-items-center justify-content-center">
-                    <a
-                      href="https://ms-techlabs.slack.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={Slack} alt="" className="slack-icon" />
-                    </a>
-                  </div>
                 </li>
               </ul>
               {/* mobile view */}
