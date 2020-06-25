@@ -1,14 +1,6 @@
 import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import MS from "../../assets/loc-ms.svg"
-import CPH from "../../assets/loc-cph.svg"
-import BCN from "../../assets/loc-bcn.svg"
-import MED from "../../assets/loc-med.svg"
-import BER from "../../assets/loc-ber.png"
-import CUR from "../../assets/loc-cu.svg"
-import AAC from "../../assets/loc-aac.png"
-import DOR from "../../assets/loc-do.svg"
 import { Link } from "gatsby"
 import Slack from "../../assets/slack.png"
 import ds from "../../assets/ds.png"
@@ -21,153 +13,16 @@ class MobileNav extends Component {
     programOpen: false,
   }
   render() {
-    const { locationOpen, programOpen } = this.state
+    const { programOpen } = this.state
     return (
       <>
         <div className="mobileNav  d-lg-none d-xl-none">
-          <ul className="navbar-nav ml-auto d-sm-block d-md-block mo">
-            <li className="nav-item">
-              <div
-                onClick={() => {
-                  this.setState({
-                    locationOpen: !locationOpen,
-                    programOpen: false,
-                  })
-                }}
-                onKeyDown={() => null}
-                role="button"
-                tabIndex={0}
-              >
-                <h3 className="nav-link mobileNav--link text-center">
-                  Locations{" "}
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className="mr-3 mt-1 ml-4"
-                  />
-                </h3>
-              </div>
-              {locationOpen && (
-                <ul className="mobileNav--subMenu">
-                  <Link
-                    to="/locations"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li>Locations</li>
-                  </Link>
-                  <hr />
-                  <Link
-                    to="/location/Muenster"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={MS} alt="" className="mobileNav--icon" />
-                      </span>
-                      Münster
-                    </li>
-                  </Link>
-
-                  <Link
-                    to="/location/Copenhagen"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={CPH} alt="" className="mobileNav--icon" />
-                      </span>
-                      Copenhagen
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Barcelona"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img
-                          src={BCN}
-                          alt="logo Barcelona"
-                          className="mobileNav--icon"
-                        />
-                      </span>
-                      Barcelona
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Medellín"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={MED} alt="" className="mobileNav--icon" />
-                      </span>
-                      Medellín
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Berlin"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={BER} alt="" className="mobileNav--icon p-3" />
-                      </span>
-                      Berlin
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Curitiba"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={CUR} alt="" className="mobileNav--icon p-3" />
-                      </span>
-                      Curitiba
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Aachen"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={AAC} alt="" className="mobileNav--icon p-3" />
-                      </span>
-                      Aachen
-                    </li>
-                  </Link>
-                  <Link
-                    to="/location/Dortmund"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-2">
-                      <span>
-                        <img src={DOR} alt="" className="mobileNav--icon p-3" />
-                      </span>
-                      Dortmund
-                    </li>
-                  </Link>
-                  <hr />
-                  <Link
-                    to="/foundYourOwn"
-                    className="color-gl"
-                    activeClassName="navLink--active"
-                  >
-                    <li className="mt-4">Become a Co-Founder</li>
-                  </Link>
-                </ul>
-              )}
-            </li>
+          <ul className="navbar-nav ml-auto d-sm-block d-md-block">
+            <Link to="/locations" activeClassName="navLink--active">
+              <li className="nav-item">
+                <h3 className="nav-link mobileNav--link">Locations</h3>
+              </li>
+            </Link>
 
             <li className="nav-item">
               <div

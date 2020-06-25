@@ -62,11 +62,7 @@ class dataScience extends Component {
             firstHeading="Introduction to Data Science with Python"
             firstImage={dashboard}
             firstText="Start with our free track and learn the fundamentals of Data Science with Python now and see if you want to join the Digital Shaper Program!"
-            firstLink="https://app.edyoucated.org/login"
-            secondHeading="Introduction to Data Science with R"
-            secondImage={dashboard}
-            secondText="Start with our free Track and learn the fundamentals of Data Science with R now and see if you want to join the Digital Shaper Program!"
-            secondLink="https://app.edyoucated.org/login"
+            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
           />
           <Faq>
             <FaqQuestion

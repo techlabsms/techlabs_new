@@ -25,99 +25,35 @@ export const CityCountryEnum = {
   GERMANY: [
     {
       value: "location.muenster",
-      applicationStart: "20200315",
-      applicationEnd: "20200412",
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: true,
-      },
     },
     {
       value: "location.berlin",
-      applicationStart: "20200301",
-      applicationEnd: "20200328",
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
     {
       value: "location.aachen",
-      applicationStart: "20200401",
-      applicationEnd: "20200417",
-      availableTracks: {
-        ai: true,
-        web: false,
-        dataScience: true,
-        ux: false,
-      },
     },
     {
       value: "location.dortmund",
-      applicationStart: "20200323",
-      applicationEnd: "20200402",
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
   ],
   SPAIN: [
     {
       value: "location.barcelona",
-      applicationStart: null,
-      applicationEnd: null,
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
   ],
   DENMARK: [
     {
       value: "location.copenhagen",
-      applicationStart: null,
-      applicationEnd: null,
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
   ],
   BRAZIL: [
     {
       value: "location.curitiba",
-      applicationStart: "20200815",
-      applicationEnd: "20200826",
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
   ],
   COLOMBIA: [
     {
       value: "location.medellin",
-      applicationStart: null,
-      applicationEnd: null,
-      availableTracks: {
-        ai: true,
-        web: true,
-        dataScience: true,
-        ux: false,
-      },
     },
   ],
   REMOTE: [

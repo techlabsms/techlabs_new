@@ -200,7 +200,7 @@ class index extends React.Component {
                     <div className="p-2 col-sm-6 mt-5">
                       <Link to="/locations" className="card-a">
                         <div className="card h-100">
-                          <h1 className="card-title">6</h1> <br />
+                          <h1 className="card-title">8</h1> <br />
                           <p className="card-subtitle">
                             {
                               <FormattedMessage
@@ -231,7 +231,10 @@ class index extends React.Component {
             </BackgroundImage>
           </section>
 
-          <ApplicationPeriod wave={data.wave.childImageSharp.fluid} />
+          <ApplicationPeriod
+            wave={data.wave.childImageSharp.fluid}
+            locationData={data.allContentfulLocationPage.edges}
+          />
 
           <Slider
             imageOne={data.jin.childImageSharp.fluid}
@@ -422,6 +425,17 @@ export const pageQuery = graphql`
     }
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
+    }
+    allContentfulLocationPage {
+      edges {
+        node {
+          heading
+          country
+          applicationStart
+          applicationEnd
+          applicationLink
+        }
+      }
     }
   }
 `

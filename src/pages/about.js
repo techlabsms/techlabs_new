@@ -25,7 +25,7 @@ class about extends Component {
         <ProgrammHero
           headingFirst="About"
           headingSecond="TechLabs"
-          intro="We at TechLabs dream of a world with no digital illiterates. A world full of tech-savvy individuals who approach the challenges of our time with a digital and entrepreneurial mindset."
+          intro="We dream of a world full of digital shapers. Individuals who use technological tools to approach the challenges of our time with a digital and entrepreneurial mindset."
           background={Background}
           backgroundMobil={Background_mobil}
           secondintro="Learn more about us and our vision."
@@ -41,8 +41,8 @@ class about extends Component {
         />
         <LeftImageSectionHeading
           heading="Our Vision"
-          subheading="A world without digital illiterates"
-          text="We at TechLabs dream of a world with no digital illiterates. A world full of tech-savvy individuals who approach the challenges of our time with a digital and entrepreneurial mindset. As a learning accelerator for technology skills, TechLabs designs pioneering learning journeys for our communities. It's a place where diversity meets personalized learning paths. A place where beginners meet experienced mentors. A place where curiosity meets powerful learning resources and where online and offline learning are not just two separate sides of the same coin, but perfectly blended together into an holistic learning concept."
+          subheading="A world full of digital shapers"
+          text="We dream of a world full of digital shapers. Individuals who use technological tools to approach the challenges of our time with a digital and entrepreneurial mindset. As a learning accelerator for technology skills, TechLabs designs pioneering learning journeys for our communities. It's a place where diversity meets personalized learning paths. A place where beginners meet experienced mentors. A place where curiosity meets powerful learning resources. A place where online and offline learning are not just two separate sides of the same coin, but perfectly blended together into a holistic learning concept. A place where ambitious individuals meet like-minded people to solve pressing issues by means of technology."
           image={google}
           leftSize="7"
           rightSize="5"
@@ -50,18 +50,18 @@ class about extends Component {
         <RightImageSectionHeading
           heading="Our Mission"
           subheading="A learning platform for young people of all disciplines"
-          text="Our mission is to enable as many people as possible to acquire state-of-the-art tech skills to solve today’s problems in a digital way by providing a unique program that combines online learning, project work, and local community events. To bring digital education to the next level, we aim for three distinctive goals."
+          text="We offer state-of-the-art tech education in form of the Digital Shaper Program, a program that aims to equip young individuals with tech domain expertise as well as methodical and soft skills that are highly relevant now and in our (more and more automated) future workforce. At TechLabs, we have defined the following three strategic goals that serve as a framework for our daily work and are also at the heart of the Journey Strategy of the Digital Shaper Program."
           image={mission}
           leftSize="5"
           rightSize="7"
         />
         <ThreeCard
           headingOne="Effective Learning"
-          textOne="We show you the most effective way to build domain expertise in tech. We achieve this through a revolutionary combination of blended and accelerated learning techniques."
-          headingTwo="Learning at scale"
+          textOne="We offer the most effective way to develop tech domain expertise and future skills. We achieve this through a revolutionary blended learning-based program."
+          headingTwo="Learning at scale without boundaries"
           textTwo="We bring our offering to as many ambitious people as possible. In particular, to those who need it the most and/or create the most impact."
           headingThree="Connecting People"
-          textThree="We believe learning requires diversity and is best embraced within a vibrant community. Hence, we aim to connect people across different disciplines and cultural backgrounds along their personal journey."
+          textThree="We believe curiosity and learning require diversity and are best embraced within a vibrant global community. Hence, we aim to connect people across different disciplines, professions, cultural and educational backgrounds along their personal learning journey."
         />
         <Quote
           heading="Helping Others"
