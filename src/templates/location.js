@@ -118,34 +118,12 @@ class location extends Component {
                 float={true}
               />
             )}
-            <Team
-              city={location.heading && location.heading}
-              firstName={location.teamNameOne && location.teamNameOne}
-              firstImage={location.teamImgOne && location.teamImgOne.file.url}
-              firstLinkedIn={
-                location.teamLinkedInOne && location.teamLinkedInOne
-              }
-              secondName={location.teamNameTwo && location.teamNameTwo}
-              secondImage={location.teamImgTwo && location.teamImgTwo.file.url}
-              secondLinkedIn={
-                location.teamLinkedInTwo && location.teamLinkedInTwo
-              }
-              thirdName={location.teamNameThree && location.teamNameThree}
-              thirdImage={
-                location.teamImgThree && location.teamImgThree.file.url
-              }
-              thirdLinkedIn={
-                location.teamLinkedInThree && location.teamLinkedInThree
-              }
-              fourthName={location.teamImgFour && location.teamImgFour}
-              fourthImage={
-                location.teamNameFour && location.teamNameFour.file.url
-              }
-              fourthLinkedIn={
-                location.teamLinkedInFour && location.teamLinkedInFour
-              }
-            />
-
+            {location.team != null && (
+              <Team
+                city={location.heading && location.heading}
+                team={location.team}
+              />
+            )}
             <Follow
               heading="Follow Us:"
               subheading="Stay up to date!"
@@ -274,34 +252,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      teamNameOne
-      teamLinkedInOne
-      teamImgOne {
-        file {
-          url
-        }
-      }
-      teamNameTwo
-      teamLinkedInTwo
-      teamImgTwo {
-        file {
-          url
-        }
-      }
-      teamNameThree
-      teamLinkedInThree
-      teamImgThree {
-        file {
-          url
-        }
-      }
-      teamNameFour {
-        file {
-          url
-        }
-      }
-      teamLinkedInFour
-      teamImgFour
       openPositionsLink
       officeName
       officeImg {
@@ -318,6 +268,16 @@ export const pageQuery = graphql`
       email
       usesTeam
       hasCalendar
+      team {
+        linkedIn
+        name
+        image {
+          sizes(quality: 100) {
+            ...GatsbyContentfulSizes_withWebp
+          }
+          title
+        }
+      }
     }
   }
 `
