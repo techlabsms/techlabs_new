@@ -1,104 +1,53 @@
-import React, { Component } from "react"
-import linkedIn from "../../assets/linkedin-brands.svg"
+import React from "react"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+import Img from "gatsby-image"
 
-class Team extends Component {
-  render() {
-    const {
-      city,
-      firstName,
-      firstDescription,
-      firstImage,
-      firstLinkedIn,
-      secondName,
-      secondDescription,
-      secondImage,
-      secondLinkedIn,
-      thirdName,
-      thirdDescription,
-      thirdImage,
-      thirdLinkedIn,
-      fourthName,
-      fourthDescription,
-      fourthImage,
-      fourthLinkedIn,
-    } = this.props
-    return (
-      <Container>
-        <Heading
-          heading="Our Board Members"
-          subheading={`The People behind ${city}`}
-        />
-        <div className="row d-flex d-justify-content-center">
-          <div className="col-12 col-md-3 text-center">
-            <img src={firstImage} alt="" className="team--img my-4" />
-            <h3 className="team--name text-center">
-              <span className="highlighted">
-                {firstName}
-                {firstImage && (
-                  <span>
-                    <a href={firstLinkedIn}>
-                      <img src={linkedIn} alt="" className="team--linkedIn" />
-                    </a>
-                  </span>
-                )}
-              </span>
-            </h3>
-            <p className="text-justify team--text mt-4">{firstDescription}</p>
-          </div>
-          <div className="col-12 col-md-3 text-center">
-            <img src={secondImage} alt="" className="team--img my-4" />
-            <h3 className="team--name text-center">
-              <span className="highlighted">
-                {secondName}
-                {secondImage && (
-                  <span>
-                    <a href={secondLinkedIn}>
-                      <img src={linkedIn} alt="" className="team--linkedIn" />
-                    </a>
-                  </span>
-                )}
-              </span>
-            </h3>
-            <p className="text-justify team--text mt-4">{secondDescription}</p>
-          </div>
-          <div className="col-12 col-md-3 text-center">
-            <img src={thirdImage} alt="" className="team--img my-4" />
-            <h3 className="team--name text-center">
-              <span className="highlighted">
-                {thirdName}
-                {thirdImage && (
-                  <span>
-                    <a href={thirdLinkedIn}>
-                      <img src={linkedIn} alt="" className="team--linkedIn" />
-                    </a>
-                  </span>
-                )}
-              </span>
-            </h3>
-            <p className="text-justify team--text mt-4">{thirdDescription}</p>
-          </div>
-          <div className="col-12 col-md-3 text-center">
-            <img src={fourthImage} alt="" className="team--img my-4" />
-            <h3 className="team--name text-center">
-              <span className="highlighted">
-                {fourthName}
-                {fourthImage && (
-                  <span>
-                    <a href={fourthLinkedIn}>
-                      <img src={linkedIn} alt="" className="team--linkedIn" />
-                    </a>
-                  </span>
-                )}
-              </span>
-            </h3>
-            <p className="text-justify team--text mt-4">{fourthDescription}</p>
-          </div>
-        </div>
-      </Container>
-    )
-  }
+const circleImage = {
+  borderRadius: "300px",
+  height: "200px",
+  width: "200px",
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginBottom: "20px",
+}
+
+const Team = ({ city, team }) => {
+  return (
+    <Container>
+      <Heading
+        heading="Our Board Members"
+        subheading={`The People behind ${city}`}
+      />
+      <div className="row d-flex d-justify-content-center">
+        {team &&
+          team.map(teamMember => (
+            <div
+              className="col-12 col-md-3 text-center my-4 d-flex flex-column justify-content-center"
+              key={teamMember.name}
+            >
+              <Img
+                sizes={teamMember.image.sizes}
+                alt={teamMember.image.title}
+                style={circleImage}
+              />
+              <h3 className="team--name text-center">
+                <span className="highlighted">{teamMember.name}</span>
+              </h3>
+              <div className="mt-4">
+                <a
+                  href={teamMember.linkedIn}
+                  target="_blank"
+                  className="a-black"
+                >
+                  Get in contact
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+    </Container>
+  )
 }
 
 export default Team
