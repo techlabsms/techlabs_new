@@ -136,6 +136,19 @@ class Navbar extends React.Component {
                   </Link>
                 </li>
 
+          
+
+                <li className="nav-item">
+                  <a className="nav-link"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
+                  >
+                    Open Position
+                  </a>
+                </li>
+                  
+
                 <li className="nav-item">
                   <Link
                     className="nav-link"
@@ -145,6 +158,7 @@ class Navbar extends React.Component {
                     Blog
                   </Link>
                 </li>
+
 
                 <li className="nav-item ml-3">
                   <Link
