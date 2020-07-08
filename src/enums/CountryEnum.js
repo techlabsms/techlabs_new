@@ -17,6 +17,7 @@ export const CityEnum = {
   BARCELONA: "location.barcelona",
   AACHEN: "location.aachen",
   DORTMUND: "location.dortmund",
+  MUNICH: "location.munich",
   REMOTE: "location.remote",
 }
 
@@ -34,6 +35,9 @@ export const CityCountryEnum = {
     },
     {
       value: "location.dortmund",
+    },
+    {
+      value: "location.munich",
     },
   ],
   SPAIN: [
@@ -100,6 +104,9 @@ export function getCityValues(city) {
     case CityEnum.DORTMUND:
       return CityCountryEnum.GERMANY[3]
 
+    case CityEnum.MUNICH:
+      return CityCountryEnum.GERMANY[4]
+
     case CityEnum.REMOTE:
       return CityCountryEnum.REMOTE[0]
     default:
@@ -129,6 +136,8 @@ export function getCity(country) {
 
     case CountryEnum.REMOTE:
       return CityCountryEnum.REMOTE
+    case CountryEnum.MUNICH:
+      return CityCountryEnum.MUNICH
     default:
       return
   }

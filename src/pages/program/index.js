@@ -11,7 +11,6 @@ import web from "../../assets/webdevpro.png"
 import Footer from "../../components/Layout/Footer"
 import ProgrammMobil from "../../assets/programmMobil.png"
 import Button from "../../components/smallComponents/Button"
-import Table from "../../components/program/Table"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 
