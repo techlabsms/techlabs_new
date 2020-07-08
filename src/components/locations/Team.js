@@ -39,6 +39,7 @@ const Team = ({ city, team }) => {
                   href={teamMember.linkedIn}
                   target="_blank"
                   className="a-black"
+                  rel="noreferrer"
                 >
                   Get in contact
                 </a>
