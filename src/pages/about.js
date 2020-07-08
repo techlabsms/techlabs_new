@@ -5,7 +5,6 @@ import RightImageSectionHeading from "../components/shared/RightImageSectionHead
 import RightImageSection from "../components/shared/RightImageSection"
 import LeftImageSectionHeading from "../components/shared/LeftImageSectionHeading"
 import CoreValues from "../components/program/CoreValues"
-import CheckoutLocations from "../components/locations/CheckoutLocations"
 import Quote from "../components/shared/Quote"
 import WhyWeDo from "../assets/wwd.png"
 import google from "../assets/google.png"
@@ -92,7 +91,6 @@ class about extends Component {
           leftSize="5"
           rightSize="7"
         />
-        <CheckoutLocations />
         <RightImageSection
           heading="Your city is not on the map?"
           text="If you are willing to shape the future of tech education and want to create your own TechLabs location, reach out! Let's work together and build something great!"
