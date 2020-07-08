@@ -1,19 +1,10 @@
 import React from "react"
 import "../../styles/_main.scss"
 import logo from "../../assets/tl-logo.svg"
-import MS from "../../assets/loc-ms.svg"
-import CPH from "../../assets/loc-cph.svg"
-import BCN from "../../assets/loc-bcn.svg"
-import MED from "../../assets/loc-med.svg"
-import BER from "../../assets/loc-ber.png"
-import CUR from "../../assets/loc-cu.svg"
-import AAC from "../../assets/loc-aac.png"
-import DOR from "../../assets/loc-do.svg"
 import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
 import Head from "./Head"
 import { Link } from "gatsby"
-import Slack from "../../assets/slack.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
@@ -136,18 +127,16 @@ class Navbar extends React.Component {
                   </Link>
                 </li>
 
-          
-
                 <li className="nav-item">
-                  <a className="nav-link"
-                    target="_blank" 
+                  <a
+                    className="nav-link"
+                    target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
                     Open Position
                   </a>
                 </li>
-                  
 
                 <li className="nav-item">
                   <Link
@@ -158,7 +147,6 @@ class Navbar extends React.Component {
                     Blog
                   </Link>
                 </li>
-
 
                 <li className="nav-item ml-3">
                   <Link
