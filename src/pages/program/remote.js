@@ -199,7 +199,11 @@ class remote extends Component {
             fourthProjectImage={UX}
             fourthLink="/ux"
           />
-          <Newsletter image={data.newsletterImage.childImageSharp.fluid} />
+          <Newsletter
+            image={data.newsletterImage.childImageSharp.fluid}
+            title="Want to know when the next application period starts?"
+            subtitle="Subscribe to our email list to get notified!"
+          />
         </div>
 
         <Faq>

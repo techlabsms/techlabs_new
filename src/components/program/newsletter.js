@@ -3,13 +3,10 @@ import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
 
-const Newsletter = ({ image }) => {
+const Newsletter = ({ image, title, subtitle }) => {
   return (
     <Container>
-      <Heading
-        heading="Want to know when the next application period starts?"
-        subheading="Subscribe to our email list to get notified!"
-      ></Heading>
+      <Heading heading={title} subheading={subtitle}></Heading>
       <div className="row">
         <div className="col-md-6 order-2 order-md-1 py-5 d-flex align-items-center">
           <form
