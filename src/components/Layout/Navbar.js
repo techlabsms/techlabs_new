@@ -134,7 +134,7 @@ class Navbar extends React.Component {
                     rel="noopener noreferrer"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    Open Position
+                    Open Positions
                   </a>
                 </li>
 
