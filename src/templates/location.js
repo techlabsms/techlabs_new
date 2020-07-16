@@ -13,6 +13,7 @@ import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
+import PartnerLogos from "../components/locations/partnerLogos"
 
 class location extends Component {
   render() {
@@ -188,6 +189,13 @@ class location extends Component {
               </div>
             </Container>
           )}
+          {location.partners && (
+            <PartnerLogos
+              heading="Our Partners"
+              subheading="Our location is proudly supported"
+              partners={location.partners}
+            />
+          )}
         </section>
       </Layout>
     )
@@ -276,6 +284,15 @@ export const pageQuery = graphql`
             ...GatsbyContentfulSizes_withWebp
           }
           title
+        }
+      }
+      partners {
+        name
+        partnerLink
+        logo {
+          sizes(quality: 100) {
+            ...GatsbyContentfulSizes_withWebp
+          }
         }
       }
     }
