@@ -1,0 +1,12 @@
+.newsletter {
+  &-checkbox {
+    list-style: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    padding-left: 1.2rem;
+    > input {
+      padding-right: 10px;
+    }
+  }
+}
