@@ -19,6 +19,17 @@ const Newsletter = ({ image, title, subtitle }) => {
             novalidate
             className="w-100"
           >
+            <div className="form-group">
+              <label for="mce-FNAME">First Name*</label>
+              <input
+                type="text"
+                name="FNAME"
+                className="form-control"
+                id="mce-FNAME"
+                placeholder="Your Name"
+                required
+              />
+            </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email*</label>
               <input
@@ -28,7 +39,29 @@ const Newsletter = ({ image, title, subtitle }) => {
                 id="mce-EMAIL"
                 aria-describedby="emailHelp"
                 name="EMAIL"
+                required
               />
+            </div>
+            <div className="form-group">
+              <ul className="newsletter-checkbox">
+                <li>
+                  <input
+                    type="checkbox"
+                    value="1"
+                    name="group[13885][1]"
+                    className="form-check-input"
+                    id="mce-group[13885]-13885-0"
+                    required
+                  />
+                  <label
+                    for="mce-group[13885]-13885-0"
+                    className="form-check-label"
+                  >
+                    I agree that TechLabs could use my information to stay in
+                    contact, send news and information.
+                  </label>
+                </li>
+              </ul>
             </div>
             <div id="mce-responses" className="clear">
               <div
@@ -55,7 +88,7 @@ const Newsletter = ({ image, title, subtitle }) => {
           <Img
             fluid={image}
             style={{
-              width: "250px",
+              width: "300px",
               margin: "auto",
             }}
           />
