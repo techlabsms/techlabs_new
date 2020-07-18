@@ -17,9 +17,12 @@ import Table from "../../components/program/Table"
 import { Component } from "react"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
+import Newsletter from "../../components/program/newsletter"
+import { graphql } from "gatsby"
 
 class remote extends Component {
   render() {
+    const { data } = this.props
     return (
       <div>
         <Navbar />
@@ -196,6 +199,11 @@ class remote extends Component {
             fourthProjectImage={UX}
             fourthLink="/ux"
           />
+          <Newsletter
+            image={data.newsletterImage.childImageSharp.fluid}
+            title="Want to know when the next application period starts?"
+            subtitle="Subscribe to our email list to get notified!"
+          />
         </div>
 
         <Faq>
@@ -255,3 +263,21 @@ class remote extends Component {
 }
 
 export default remote
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+      ...fluidImage
+    }
+  }
+`

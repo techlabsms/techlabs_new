@@ -38,6 +38,8 @@
 @import "./program/table";
 @import "./layout/footer";
 @import "./foundYourOwn/foundYourOwn";
+@import "./locations/partnerLogos";
+@import "./program/newsletter";
 
 h1,
 h2,
@@ -323,6 +325,7 @@ body {
 
 .aNone:hover {
   color: black;
+  text-decoration: none;
 }
 
 .nav-button {
