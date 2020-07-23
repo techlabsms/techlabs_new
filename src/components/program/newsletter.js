@@ -2,8 +2,20 @@ import React from "react"
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Newsletter = ({ image, title, subtitle }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulLocationPage {
+        edges {
+          node {
+            heading
+          }
+        }
+      }
+    }
+  `)
   return (
     <Container>
       <Heading heading={title} subheading={subtitle}></Heading>
@@ -43,6 +55,25 @@ const Newsletter = ({ image, title, subtitle }) => {
               />
             </div>
             <div className="form-group">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">
+                  Choose which locations you want to get updates about*
+                </label>
+                <select
+                  class="form-control"
+                  id="exampleFormControlSelect1"
+                  required
+                >
+                  {data.allContentfulLocationPage.edges.map(location => (
+                    <option value={location.node.heading}>
+                      {location.node.heading}
+                    </option>
+                  ))}
+                  <option value="Code@Home">Code@Home</option>
+                </select>
+              </div>
+            </div>
+            <div className="form-group">
               <ul className="newsletter-checkbox">
                 <li>
                   <input
@@ -67,12 +98,16 @@ const Newsletter = ({ image, title, subtitle }) => {
               <div
                 className="response"
                 id="mce-error-response"
-                style={{ display: "none" }}
+                style={{
+                  display: "none",
+                }}
               ></div>
               <div
                 className="response"
                 id="mce-success-response"
-                style={{ display: "none" }}
+                style={{
+                  display: "none",
+                }}
               ></div>
             </div>
             <input
