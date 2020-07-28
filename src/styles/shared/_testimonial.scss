@@ -24,6 +24,21 @@
     }
 }
 
+@media (max-width: 576px) {
+    .testimonial-quote {
+        img {
+            width: 2em;
+            height: 1.5em;
+        }
+    
+        p {
+            font-size: 1em;
+            margin-right: 1rem;
+        }
+    }
+}
+
+
 // style for DIV with Testimonial avatar
 
 .testimonial-info {
