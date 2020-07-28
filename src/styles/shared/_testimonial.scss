@@ -1,6 +1,8 @@
 // style for DIV with quotation marks and quote text
 
 .testimonial-quote {
+    display: flex;
+    margin-top: 1rem;
     img {
         width: 7.5em;
         height: 3em;
@@ -8,6 +10,9 @@
 
     p {
         font-size: 1.8em;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        text-align: justify;
     }
 }
 
@@ -21,6 +26,9 @@
     > img {
         max-height: 4.5rem;
         margin-left: 1em;
+    }
+    p {
+        margin-bottom: 0;
     }
 }
 
@@ -47,7 +55,6 @@
             width: 2em;
             height: 1.5em;
         }
-    
         p {
             font-size: 1em;
             margin-right: 1rem;

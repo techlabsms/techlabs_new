@@ -7,15 +7,15 @@ const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonial
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
-      <div className="testimonial-quote d-flex mt-3">
+      <div className="testimonial-quote">
         <img src={Quote}
-            alt=""/>
-            <p className="ml-3 mt-3 text-justify">{text}</p>
+            alt="quotes"/>
+            <p>{text}</p>
       </div>
       <div className="testimonial-info">
           <div>
-            <p className="mb-0"><strong>{testimonialName}</strong></p>
-            <p className="mb-0">{testimonialTagline} <img src={testimonialLogo}/></p>
+            <p><strong>{testimonialName}</strong></p>
+            <p>{testimonialTagline} <img src={testimonialLogo}/></p>
           </div>
           <img src={testimonialAvatar} alt={testimonialName}/>
       </div>
