@@ -9,11 +9,7 @@ const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonial
       <Heading heading={heading} subheading={subheading} />
       <div className="d-flex mt-3 testimonial-quote">
         <img src={Quote}
-            alt=""
-            style={{
-                width: "8em",
-                height: "3em"
-            }}/>
+            alt=""/>
             <p 
             className="ml-3 mt-3 text-justify"
             style={{
