@@ -12,17 +12,12 @@ const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonial
             alt=""/>
             <p className="ml-3 mt-3 text-justify">{text}</p>
       </div>
-      <div className="d-flex justify-content-end align-items-center text-right">
+      <div className="d-flex justify-content-end align-items-center text-right testimonial-info">
           <div className="">
             <p className="mb-0"><strong>{testimonialName}</strong></p>
             <p className="mb-0">{testimonialTagline} <img src={testimonialLogo}/></p>
           </div>
-          <img 
-            src={testimonialAvatar}
-            style={{
-                maxHeight: "4.5rem",
-                marginLeft: "1em"
-            }}/>
+          <img src={testimonialAvatar} alt={testimonialName}/>
       </div>
     </Container>
   )
