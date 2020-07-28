@@ -10,12 +10,7 @@ const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonial
       <div className="d-flex mt-3 testimonial-quote">
         <img src={Quote}
             alt=""/>
-            <p 
-            className="ml-3 mt-3 text-justify"
-            style={{
-                fontSize: "1.8em"
-            }}
-            >{text}</p>
+            <p className="ml-3 mt-3 text-justify">{text}</p>
       </div>
       <div className="d-flex justify-content-end align-items-center text-right">
           <div className="">
