@@ -13,7 +13,7 @@ const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonial
             <p className="ml-3 mt-3 text-justify">{text}</p>
       </div>
       <div className="d-flex justify-content-end align-items-center text-right testimonial-info">
-          <div className="testimonial-info-text">
+          <div>
             <p className="mb-0"><strong>{testimonialName}</strong></p>
             <p className="mb-0">{testimonialTagline} <img src={testimonialLogo}/></p>
           </div>
