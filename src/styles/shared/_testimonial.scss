@@ -11,6 +11,21 @@
     }
 }
 
+// style for DIV with Testimonial avatar
+
+.testimonial-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    > img {
+        max-height: 4.5rem;
+        margin-left: 1em;
+    }
+}
+
+// medium devices
+
 @media (max-width: 768px) {
     .testimonial-quote {
         img {
@@ -24,6 +39,8 @@
     }
 }
 
+// small devices
+
 @media (max-width: 576px) {
     .testimonial-quote {
         img {
@@ -36,14 +53,14 @@
             margin-right: 1rem;
         }
     }
-}
 
-
-// style for DIV with Testimonial avatar
-
-.testimonial-info {
-    > img {
-        max-height: 4.5rem;
-        margin-left: 1em;
+    .testimonial-info {
+        p {
+            font-size: .8rem;
+        }
+        > img {
+            max-height: 4rem;
+            margin-left: 1em;
+        }
     }
 }
