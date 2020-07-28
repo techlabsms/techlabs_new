@@ -11,6 +11,21 @@
     }
 }
 
+@media (max-width: 768px) {
+    .testimonial-quote {
+        img {
+            width: 7.5em;
+            height: 2.5em;
+        }
+    
+        p {
+            font-size: 1.5em;
+        }
+    }
+}
+
+// style for DIV with Testimonial avatar
+
 .testimonial-info {
     > img {
         max-height: 4.5rem;
