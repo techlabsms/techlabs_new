@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
 import Navbar from "../../components/Layout/Navbar"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
@@ -18,13 +19,14 @@ import KeyBenefits from "../../components/shared/KeyBenefits"
 import Button from "../../components/smallComponents/Button"
 import Table from "../../components/program/Table"
 import Testimonial from "../../components/shared/Testimonial"
-import Accenture from "../../assets/images/accenture.png"
-import Timothee from "../../assets/images/timothee.png"
+// import Accenture from "../../assets/images/accenture.png"
+// import Timothee from "../../assets/images/timothee.png"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 class local extends Component {
   render() {
+    const { data } = this.props
     return (
       <div>
         <Navbar />
@@ -154,10 +156,10 @@ class local extends Component {
             heading="What our partners say"
             subheading="Read here what our partners think about the skills you learn at TechLabs!"
             text="Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods."
-            testimonialAvatar={Timothee}
+            testimonialAvatar={data.timothee.childImageSharp.fixed}
             testimonialName="Timothée Clolus"
             testimonialTagline="Front end Developer @ "
-            testimonialLogo={Accenture}
+            testimonialLogo={data.accenture.childImageSharp.fluid}
           />
           <Process />
           <LearnMore
@@ -204,4 +206,35 @@ class local extends Component {
   }
 }
 
-export default local;
+export default local
+
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    childImageSharp {
+      fixed(width: 50, height: 50) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    timothee: file(relativePath: { eq: "timothee.png" }) {
+      ...fixedImage
+    }
+    accenture: file(relativePath: { eq: "accenture.png" }) {
+      ...fluidImage
+    }
+  }
+`
