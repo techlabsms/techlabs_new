@@ -36,10 +36,12 @@ const Testimonial = props  => {
             <p><strong>{props.testimonialName}</strong></p>
             <p>{props.testimonialTagline} <Img fluid={props.testimonialLogo}/></p>
           </div>
-          <Img
-          fixed={props.testimonialAvatar}
-          alt={props.testimonialName}
-          />
+          <div>
+            <Img
+            fluid={props.testimonialAvatar}
+            alt={props.testimonialName}
+            />
+          </div>
       </div>
     </Container>
   )

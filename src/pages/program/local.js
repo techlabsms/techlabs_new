@@ -156,7 +156,7 @@ class local extends Component {
             heading="What our partners say"
             subheading="Read here what our partners think about the skills you learn at TechLabs!"
             text="Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods."
-            testimonialAvatar={data.timothee.childImageSharp.fixed}
+            testimonialAvatar={data.timothee.childImageSharp.fluid}
             testimonialName="Timothée Clolus"
             testimonialTagline="Front end Developer @ "
             testimonialLogo={data.accenture.childImageSharp.fluid}
@@ -209,20 +209,11 @@ class local extends Component {
 export default local
 
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
+export const fluidImageLocal = graphql`
+  fragment fluidImageLocal on File {
     childImageSharp {
-      fluid(maxWidth: 1000) {
+      fluid(maxWidth: 200) {
         ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-export const fixedImage = graphql`
-  fragment fixedImage on File {
-    childImageSharp {
-      fixed(width: 50, height: 50) {
-        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -231,10 +222,10 @@ export const fixedImage = graphql`
 export const pageQuery = graphql`
   query {
     timothee: file(relativePath: { eq: "timothee.png" }) {
-      ...fixedImage
+      ...fluidImageLocal
     }
     accenture: file(relativePath: { eq: "accenture.png" }) {
-      ...fluidImage
+      ...fluidImageLocal
     }
   }
 `
