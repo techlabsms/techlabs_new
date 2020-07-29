@@ -71,6 +71,9 @@
         p {
             font-size: .8rem;
         }
+        .gatsby-image-wrapper {
+            min-width: 5rem;
+        }
         > img {
             max-height: 4rem;
             margin-left: 1em;
