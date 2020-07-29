@@ -28,7 +28,6 @@ const Testimonial = props  => {
         <Img
           fixed={data.quotes.childImageSharp.fixed}
           alt="quotes"
-          id="quotes"
         />
         <p>{props.text}</p>
       </div>
