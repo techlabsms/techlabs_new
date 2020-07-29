@@ -14,6 +14,9 @@ import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+import ds from "../../assets/ds.png"
+import ai from "../../assets/ai.png"
+import web from "../../assets/web.png"
 
 class location extends Component {
   render() {
@@ -32,6 +35,9 @@ class location extends Component {
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
                     {location.heading}
                   </h1>
+                  {location.availableTracks.web && (
+                    <img src={web} alt="" width="60" />
+                  )}
                   <div className="row">
                     <div className="col">
                       {location.isOpen ? (
@@ -285,6 +291,12 @@ export const pageQuery = graphql`
           }
           title
         }
+      }
+      avaiableTracks {
+        ai
+        data
+        ux
+        web
       }
       partners {
         name
