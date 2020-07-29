@@ -204,4 +204,4 @@ class local extends Component {
   }
 }
 
-export default local
+export default local;

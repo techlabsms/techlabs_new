@@ -1,23 +1,46 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
-import Quote from "../../assets/quote.png"
+import Img from "gatsby-image"
 
-const Testimonial = ({ heading, subheading, text, testimonialAvatar, testimonialName, testimonialTagline, testimonialLogo }) => {
+// import Quote from "../../assets/quote.png"
+// ({ heading, subheading, text, testimonialAvatar, testimonialName, testimonialTagline, testimonialLogo })
+
+const Testimonial = props  => {
+  const data = useStaticQuery(graphql`
+    query {
+      quotes: file(relativePath: { eq: "quote.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Container>
-      <Heading heading={heading} subheading={subheading} />
+      <Heading heading={props.heading} subheading={props.subheading} />
       <div className="testimonial-quote">
-        <img src={Quote}
-            alt="quotes"/>
-            <p>{text}</p>
+        <Img
+          fixed={data.quotes.childImageSharp.fixed}
+          alt="quotes"
+          id="quotes"
+        />
+        <p>{props.text}</p>
       </div>
       <div className="testimonial-info">
           <div>
-            <p><strong>{testimonialName}</strong></p>
-            <p>{testimonialTagline} <img src={testimonialLogo}/></p>
+            <p><strong>{props.testimonialName}</strong></p>
+            <p>{props.testimonialTagline} <img src={props.testimonialLogo}/></p>
           </div>
-          <img src={testimonialAvatar} alt={testimonialName}/>
+          <Img
+          fixed={props.testimonialAvatar}
+          alt={props.testimonialName}
+          />
       </div>
     </Container>
   )
