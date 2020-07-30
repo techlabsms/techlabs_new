@@ -54,6 +54,7 @@ class dataScience extends Component {
                   The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
             image={david}
           />
+          <p>Here testimonial!</p>
           <Projects />
           <CallToAction />
           <FirstImpression
