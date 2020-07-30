@@ -75,6 +75,12 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
               name
               description
             }
+            october {
+              id
+              date
+              name
+              description
+            }
             november {
               id
               date
