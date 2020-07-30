@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
 import ProgrammHero from "../components/program/ProgrammHero"
 import Faq from "../components/shared/Faq"
 import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
@@ -95,3 +96,25 @@ class dataScience extends Component {
 }
 
 export default dataScience
+
+
+export const fluidImageLocal = graphql`
+  fragment fluidImageLocal on File {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    katharina: file(relativePath: { eq: "katharina.png" }) {
+      ...fluidImageLocal
+    }
+    accenture: file(relativePath: { eq: "accenture.png" }) {
+      ...fluidImageLocal
+    }
+  }
+`
