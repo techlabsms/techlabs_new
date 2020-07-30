@@ -34,7 +34,10 @@ const Testimonial = props  => {
       <div className="testimonial-info">
           <div>
             <p><strong>{props.testimonialName}</strong></p>
-            <p>{props.testimonialTagline} <Img fluid={props.testimonialLogo}/></p>
+            <div className="testimonial-info-work">
+              <p>{props.testimonialTagline}</p>
+              <Img fluid={props.testimonialLogo}/>
+            </div>
           </div>
           <div>
             <Img

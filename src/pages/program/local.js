@@ -158,7 +158,7 @@ class local extends Component {
             text="Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods."
             testimonialAvatar={data.timothee.childImageSharp.fluid}
             testimonialName="Timothée Clolus"
-            testimonialTagline="Front end Developer @ "
+            testimonialTagline="Front end Developer @"
             testimonialLogo={data.accenture.childImageSharp.fluid}
           />
           <Process />
