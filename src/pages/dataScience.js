@@ -19,6 +19,7 @@ import Layout from "../components/Layout/Layout"
 
 class dataScience extends Component {
   render() {
+    const { data } = this.props
     return (
       <Layout>
         <div className="container-fluid">
