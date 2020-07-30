@@ -32,7 +32,7 @@ const Testimonial = props  => {
         <p>{props.text}</p>
       </div>
       <div className="testimonial-info">
-          <div>
+          <div style={{width: "100%"}}>
             <p><strong>{props.testimonialName}</strong></p>
             <div className="testimonial-info-work">
               <p>{props.testimonialTagline}</p>

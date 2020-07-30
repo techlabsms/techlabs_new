@@ -36,13 +36,13 @@
 .testimonial-info-work {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     .gatsby-image-wrapper {
-        min-height: 1rem;
-        min-width: 10rem;
         margin-left: .3em;
+        min-width: 10rem;
     }
     img {
-        height: 78% !important;
+        object-fit: contain !important;
     }
 }
 
@@ -57,12 +57,6 @@
     
         p {
             font-size: 1.5em;
-        }
-    }
-
-    .testimonial-info-work {
-        img {
-            height: 80% !important;
         }
     }
 }
@@ -84,10 +78,11 @@
 
     .testimonial-info {
         p {
-            font-size: .8rem;
+            font-size: .7rem;
         }
         .gatsby-image-wrapper {
             min-width: 5rem;
+            min-height: 1rem;
         }
         > img {
             max-height: 4rem;
@@ -100,6 +95,7 @@
         align-items: unset !important;
         img {
             height: 60% !important;
+            object-position: right !important;
         }
     }
 }
