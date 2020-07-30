@@ -104,27 +104,26 @@ const Projects = () => {
         <div className="col-md-4 py-5 justify-content-center align-self-center">
           <div className="card h-75 mt-5">
             <h3 className="text-center projects--heading">
-              <span className="highlighted">Smart-City</span>
+              <span className="highlighted">War of Talents</span>
             </h3>
             <div className="card-body">
               <div className="row">
                 <p className="projects--text">
-                  Analysis of the bicycle infrastructure in Münster to identify
-                  bottlenecks which might slow down the traffic.
+                A plattform thats wants to revolutionize job selection process of employees and the employer.
                 </p>
                 <div className="row w-100">
                   <div className="col-2">
                     <img src={ds} alt="" />
                   </div>
                   <div className="col-10">
-                    <p>Data Science</p>
+                    <p>UX-Design</p>
                   </div>
                 </div>
               </div>
               <div className="mt-5">
                 <Button
                   text="More information"
-                  link="https://medium.com/techlabsms/smart-city-visualizing-bike-traffic-in-m%C3%BCnster-af8445cca8db"
+                  link="https://medium.com/techlabsms/war-of-talents-5c090d590a1f"
                   isExternal={true}
                   primary={true}
                 />

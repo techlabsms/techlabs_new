@@ -1,0 +1,101 @@
+// style for DIV with quotation marks and quote text
+
+.testimonial-quote {
+    display: flex;
+    margin-top: 1rem;
+    img {
+        width: 7.5em;
+        height: 3em;
+    }
+
+    p {
+        max-width: 90%;
+        font-size: 1.8em;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        text-align: justify;
+    }
+}
+
+// style for DIV with Testimonial avatar
+
+.testimonial-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    .gatsby-image-wrapper {
+        min-width: 6rem;
+        margin-left: 1em;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.testimonial-info-work {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .gatsby-image-wrapper {
+        margin-left: .3em;
+        min-width: 10rem;
+    }
+    img {
+        object-fit: contain !important;
+    }
+}
+
+// medium devices
+
+@media (max-width: 768px) {
+    .testimonial-quote {
+        img {
+            width: 7.5em;
+            height: 2.5em;
+        }
+    
+        p {
+            font-size: 1.5em;
+        }
+    }
+}
+
+// small devices
+
+@media (max-width: 576px) {
+    .testimonial-quote {
+        img {
+            width: 2em;
+            height: 1.5em;
+        }
+        p {
+            max-width: 75%;
+            font-size: 1em;
+            margin-right: 1rem;
+        }
+    }
+
+    .testimonial-info {
+        p {
+            font-size: .7rem;
+        }
+        .gatsby-image-wrapper {
+            min-width: 5rem;
+            min-height: 1rem;
+        }
+        > img {
+            max-height: 4rem;
+            margin-left: 1em;
+        }
+    }
+
+    .testimonial-info-work {
+        flex-direction: column;
+        align-items: unset !important;
+        img {
+            height: 60% !important;
+            object-position: right !important;
+        }
+    }
+}
