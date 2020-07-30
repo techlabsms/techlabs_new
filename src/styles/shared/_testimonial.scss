@@ -31,17 +31,18 @@
     p {
         margin-bottom: 0;
     }
-    .testimonial-info-work {
-        display: flex;
-        align-items: center;
-        .gatsby-image-wrapper {
-            min-height: 1rem;
-            min-width: 10rem;
-            margin-left: .3em;
-        }
-        img {
-            height: 78% !important;
-        }
+}
+
+.testimonial-info-work {
+    display: flex;
+    align-items: center;
+    .gatsby-image-wrapper {
+        min-height: 1rem;
+        min-width: 10rem;
+        margin-left: .3em;
+    }
+    img {
+        height: 78% !important;
     }
 }
 
@@ -97,5 +98,8 @@
     .testimonial-info-work {
         flex-direction: column;
         align-items: unset !important;
+        img {
+            height: 60% !important;
+        }
     }
 }
