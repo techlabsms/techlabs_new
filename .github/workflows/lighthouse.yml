@@ -2,7 +2,7 @@ name: lighthouse staging
 on:
   push:
     branches:
-      - feature/lighthouse_audit
+      - develop
 
 jobs:
   audit:
