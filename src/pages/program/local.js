@@ -19,8 +19,6 @@ import KeyBenefits from "../../components/shared/KeyBenefits"
 import Button from "../../components/smallComponents/Button"
 import Table from "../../components/program/Table"
 import Testimonial from "../../components/shared/Testimonial"
-// import Accenture from "../../assets/images/accenture.png"
-// import Timothee from "../../assets/images/timothee.png"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 
