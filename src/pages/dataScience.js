@@ -16,6 +16,8 @@ import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
 import Layout from "../components/Layout/Layout"
+import Testimonial from "../components/shared/Testimonial"
+
 
 class dataScience extends Component {
   render() {
@@ -56,7 +58,15 @@ class dataScience extends Component {
                   The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
             image={david}
           />
-          <p>Here testimonial!</p>
+          <Testimonial
+            heading="What our partners say"
+            subheading="Read what our partners think about TechLabs!"
+            text="TechLabs allows participants the chance to learn something innovative and to connect directly to companies. A great combination and partner!"
+            testimonialAvatar={data.katharina.childImageSharp.fluid}
+            testimonialName="Katharina Schamber"
+            testimonialTagline="Application Development Specialist @"
+            testimonialLogo={data.accenture.childImageSharp.fluid}
+          />
           <Projects />
           <CallToAction />
           <FirstImpression
