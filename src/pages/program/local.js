@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
 import Navbar from "../../components/Layout/Navbar"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
@@ -17,11 +18,13 @@ import ProgrammMobil from "../../assets/programmMobil.png"
 import KeyBenefits from "../../components/shared/KeyBenefits"
 import Button from "../../components/smallComponents/Button"
 import Table from "../../components/program/Table"
+import Testimonial from "../../components/shared/Testimonial"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 class local extends Component {
   render() {
+    const { data } = this.props
     return (
       <div>
         <Navbar />
@@ -147,6 +150,15 @@ class local extends Component {
               <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
             }
           />
+          <Testimonial
+            heading="What our partners say"
+            subheading="Read here what our partners think about the skills you learn at TechLabs!"
+            text="Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods."
+            testimonialAvatar={data.timothee.childImageSharp.fluid}
+            testimonialName="Timothée Clolus"
+            testimonialTagline="Front end Developer @"
+            testimonialLogo={data.accenture.childImageSharp.fluid}
+          />
           <Process />
           <LearnMore
             heading="Learn More"
@@ -193,3 +205,25 @@ class local extends Component {
 }
 
 export default local
+
+
+export const fluidImageLocal = graphql`
+  fragment fluidImageLocal on File {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    timothee: file(relativePath: { eq: "timothee.png" }) {
+      ...fluidImageLocal
+    }
+    accenture: file(relativePath: { eq: "accenture.png" }) {
+      ...fluidImageLocal
+    }
+  }
+`

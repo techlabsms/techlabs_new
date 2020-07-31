@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
 import ProgrammHero from "../components/program/ProgrammHero"
 import Faq from "../components/shared/Faq"
 import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
@@ -15,9 +16,12 @@ import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
 import Layout from "../components/Layout/Layout"
+import Testimonial from "../components/shared/Testimonial"
+
 
 class dataScience extends Component {
   render() {
+    const { data } = this.props
     return (
       <Layout>
         <div className="container-fluid">
@@ -53,6 +57,15 @@ class dataScience extends Component {
                   Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction.
                   The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
             image={david}
+          />
+          <Testimonial
+            heading="What our partners say"
+            subheading="Read what our partners think about TechLabs!"
+            text="TechLabs allows participants the chance to learn something innovative and to connect directly to companies. A great combination and partner!"
+            testimonialAvatar={data.katharina.childImageSharp.fluid}
+            testimonialName="Katharina Schamber"
+            testimonialTagline="Application Development Specialist @"
+            testimonialLogo={data.accenture.childImageSharp.fluid}
           />
           <Projects />
           <CallToAction />
@@ -94,3 +107,25 @@ class dataScience extends Component {
 }
 
 export default dataScience
+
+
+export const fluidImageLocal = graphql`
+  fragment fluidImageLocal on File {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    katharina: file(relativePath: { eq: "katharina.png" }) {
+      ...fluidImageLocal
+    }
+    accenture: file(relativePath: { eq: "accenture.png" }) {
+      ...fluidImageLocal
+    }
+  }
+`
