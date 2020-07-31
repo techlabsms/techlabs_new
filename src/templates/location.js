@@ -14,6 +14,9 @@ import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+import ds from "../assets/ds.png"
+import ai from "../assets/ai.png"
+import web from "../assets/web.png"
 
 class location extends Component {
   render() {
@@ -27,11 +30,45 @@ class location extends Component {
               style={{ backgroundImage: `url(${location.image.file.url})` }}
             >
               <div className="row">
-                <div className="col-md-12 col-lg-5 border-0 location-card mt-5 py-5 position-absolute">
+                <div className="col-md-12 col-lg-5 border-0 location-card mt-4 py-5 position-absolute">
+                  <div className="row text-right fixed-top p-2">
+                    <div className="col-md-12">
+                      {location.avaiableTracks.web && (
+                        <img
+                          src={web}
+                          alt="web development"
+                          width="15"
+                          className="mr-2"
+                        />
+                      )}
+                      {location.avaiableTracks.ai && (
+                        <img
+                          src={ai}
+                          alt=""
+                          width="15"
+                          className="mr-2"
+                          alt="ai"
+                        />
+                      )}
+                      {location.avaiableTracks.data && (
+                        <img
+                          src={ds}
+                          alt=""
+                          width="15"
+                          className="mr-2"
+                          alt="data science"
+                        />
+                      )}
+                      {location.avaiableTracks.ux && (
+                        <img src={web} width="15" className="mr-2" alt="ux" />
+                      )}
+                    </div>
+                  </div>
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
                     {location.heading}
                   </h1>
+
                   <div className="row">
                     <div className="col">
                       {location.isOpen ? (
@@ -211,6 +248,7 @@ export const pageQuery = graphql`
         title
       }
     }
+
     contentfulLocationPage(heading: { eq: $heading }) {
       heading
       icon {
@@ -285,6 +323,12 @@ export const pageQuery = graphql`
           }
           title
         }
+      }
+      avaiableTracks {
+        ai
+        data
+        ux
+        web
       }
       partners {
         name
