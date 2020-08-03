@@ -1,0 +1,16 @@
+.tooltip {
+  &--modal {
+    right: auto;
+    bottom: auto;
+    position: relative;
+    padding: 2px;
+    text-align: center;
+    width: 10%;
+    transform: translate(-100%, -50%);
+    border: none;
+    color: #fff;
+    background-color: #fb1d5c;
+    border-radius: 3px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
+  }
+}
