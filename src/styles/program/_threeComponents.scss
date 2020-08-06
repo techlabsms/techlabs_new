@@ -9,7 +9,7 @@
     height: 300px;
     border-radius: 300px;
     opacity: 30%;
-    -webkit-opacity: 0.3;
+    --webkit-opacity: 0.3;
     transition: all 0.3s ease-in;
     position: relative;
     z-index: 0;
@@ -45,7 +45,7 @@
   &--circle:hover {
     transform: scale(1.7);
     opacity: 100%;
-    -webkit-opacity: 1;
+    --webkit-opacity: 1;
     z-index: 2;
     animation: none;
     & > div {
