@@ -33,6 +33,7 @@ class index extends React.Component {
 
   render() {
     const { data, intl } = this.props
+    console.log(intl.messages["landingpage.googlechallenge.heading"])
     return (
       <Layout>
         <div className="container-fluid">

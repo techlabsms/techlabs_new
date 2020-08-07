@@ -146,5 +146,9 @@
   {
     "id": "landingpage.digital.shaper.part2",
     "defaultMessage": " - and that completely free for everyone!"
+  },
+  {
+    "id": "landingpage.googlechallenge.heading",
+    "defaultMessage": "TEST!"
   }
 ]
