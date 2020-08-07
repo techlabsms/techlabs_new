@@ -13,12 +13,13 @@ import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "../components/landingpage/applicationPeriod"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "../components/Layout/Layout"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 class index extends React.Component {
+
   componentDidMount() {
     console.log(
       "%cTechLabs",
@@ -29,8 +30,9 @@ class index extends React.Component {
       "font-family:'helvetica'; font-weight:100;"
     )
   }
+
   render() {
-    const { data } = this.props
+    const { data, intl } = this.props
     return (
       <Layout>
         <div className="container-fluid">
@@ -353,7 +355,7 @@ class index extends React.Component {
   }
 }
 
-export default index
+export default injectIntl(index)
 
 export const fluidImage = graphql`
   fragment fluidImage on File {
