@@ -253,9 +253,17 @@ class index extends React.Component {
           />
 
           <RightImageSectionHeading
-            heading="Award-Winning Concept"
-            subheading="Google Impact Challenge 2018!"
-            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin. Today over 100 people joined TechLabs on a voluntary basis to spread the idea."
+            heading={<FormattedMessage
+              id={"landingpage.googlechallenge.heading"}
+            />}
+            subheading={<FormattedMessage
+            id={"landingpage.googlechallenge.subheading"}
+            />}
+            text={
+              <FormattedMessage
+              id={"landingpage.googlechallenge.text"}
+            />
+            }
             image={gic}
             hasButton={true}
             buttonText="Read more"
