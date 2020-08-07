@@ -36,6 +36,7 @@ class index extends React.Component {
     return (
       <Layout>
         <div className="container-fluid">
+          {/* header section */}
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
@@ -69,7 +70,7 @@ class index extends React.Component {
               </div>
             </div>
           </section>
-
+          {/* winner of GIC and partner logos */}
           <section className="gic py-5">
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
@@ -85,7 +86,7 @@ class index extends React.Component {
               linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
-
+          {/* what we offer */}
           <section className="py-5 my-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
@@ -232,12 +233,12 @@ class index extends React.Component {
               </div>
             </BackgroundImage>
           </section>
-
+          {/* application deadlines                       */}
           <ApplicationPeriod
             wave={data.wave.childImageSharp.fluid}
             locationData={data.allContentfulLocationPage.edges}
           />
-
+          {/* our community slider */}
           <Slider
             imageOne={data.jin.childImageSharp.fluid}
             imageOneMobil={data.jin_mobil.childImageSharp.fixed}
