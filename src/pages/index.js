@@ -270,15 +270,17 @@ class index extends React.Component {
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
           <Quote
-            heading="The TechLabs Journey"
-            subheading="What awaits you at TechLabs"
-            text="Get up to speed learning tech skills in one semester by means
-                  of our program that combines Online Learning, Project Work,
-                  and TechLabs Community Meetings. Independent of the background
-                  and prior knowledge - anyone can participate and learn
-                  tech-skills. At TechLabs we don’t want money to be an issue.
-                  That’s why our programs are free of charge. We help you to
-                  complete your own tech project and qualify for tech roles."
+            heading={<FormattedMessage
+              id={"landingpage.quote.nils.heading"}
+            />}
+            subheading={<FormattedMessage
+              id={"landingpage.quote.nils.subheading"}
+              />}
+            text={
+              <FormattedMessage
+              id={"landingpage.quote.nils.text"}
+            />
+            }
             photo={data.nils.childImageSharp.fixed}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
