@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import "../../styles/landingpage/_applicationPeriod.scss"
 import Dropdown from "../shared/dropdown"
 import localeData from "../../intl"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, IntlProvider } from "gatsby-plugin-intl"
 
 import ApplicationCountdown from "../applyPage/ApplicationCountdown"
 import {
@@ -18,8 +18,7 @@ import dayjs from "dayjs"
 import Img from "gatsby-image"
 
 class ApplicationPeriod extends Component {
-  defaultLocale = "en"
-  messages = localeData[this.defaultLocale]
+  messages = localeData[this.props.locale]
   state = {
     country: null,
     city: null,

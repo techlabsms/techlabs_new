@@ -33,7 +33,6 @@ class index extends React.Component {
 
   render() {
     const { data, intl } = this.props
-    console.log(intl.messages["landingpage.googlechallenge.heading"])
     return (
       <Layout>
         <div className="container-fluid">
@@ -248,6 +247,7 @@ class index extends React.Component {
           <ApplicationPeriod
             wave={data.wave.childImageSharp.fluid}
             locationData={data.allContentfulLocationPage.edges}
+            locale={intl.locale}
           />
           {/* our community slider */}
           <Slider
