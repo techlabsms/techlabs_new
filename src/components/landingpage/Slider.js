@@ -5,6 +5,8 @@ import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Modal from "react-modal"
 import Img from "gatsby-image"
+import { FormattedMessage } from "gatsby-plugin-intl"
+import { values } from "lodash"
 
 class Slider extends Component {
   constructor() {
@@ -102,8 +104,12 @@ class Slider extends Component {
         <Container>
           <div className="d-none d-md-block">
             <Heading
-              heading="Our Community"
-              subheading="Find out what our participants experienced at TechLabs!"
+              heading={<FormattedMessage
+                id={"landingpage.slider.heading"}
+              />}
+              subheading={<FormattedMessage
+                id={"landingpage.slider.subheading"}
+              />}
             />
             <div className="row">
               <div
@@ -151,10 +157,15 @@ class Slider extends Component {
                 <img src={Quote} alt="" className="mt-5 w-50" />
               </div>
               <div className="col-12 col-lg-6">
-                <p className="slider--pre">TESTIMONIALS</p>
+                <p className="slider--pre">
+                {<FormattedMessage
+                  id={"landingpage.slider.pre"}
+                />}
+                </p>
                 <h2 className="slider--title mt-4">
-                  TechLabs taught me <br />
-                  how to code
+                {<FormattedMessage
+                  id={"landingpage.slider.title"}
+                />}
                 </h2>
 
                 <p className="slider--text mt-5 pb-5">
@@ -176,7 +187,13 @@ class Slider extends Component {
                     <span role="img" aria-label="thumbs up">
                       👍🏻
                     </span>
-                    {` read about ${testimonials[number].name}´s project`}
+                    {<FormattedMessage
+                      id={"landingpage.slider.button"}
+                      values={{
+                        name: testimonials[number].name
+                      }}
+                    />}
+                    {/* {` read about ${testimonials[number].name}´s project`} */}
                   </a>
                 )}
                 <div className="row mt-5">
