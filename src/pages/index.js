@@ -241,11 +241,20 @@ class index extends React.Component {
           />
           {/* our community slider */}
           <Slider
+            quoteOne={<FormattedMessage
+              id={"landingpage.slider.jin.text"}
+            />}
             imageOne={data.jin.childImageSharp.fluid}
             imageOneMobil={data.jin_mobil.childImageSharp.fixed}
             imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp.fluid}
+            quoteTwo={<FormattedMessage
+              id={"landingpage.slider.hümeyra.text"}
+            />}
             imageTwo={data.huemeyra.childImageSharp.fluid}
             imageTwoMobil={data.huemeyra_mobil.childImageSharp.fixed}
+            quoteThree={<FormattedMessage
+              id={"landingpage.slider.miriam.text"}
+            />}
             imageThree={data.miriam.childImageSharp.fluid}
             imageThreeMobil={data.miriam_mobil.childImageSharp.fixed}
             imageThreeThumbnail={

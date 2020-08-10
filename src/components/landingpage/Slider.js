@@ -29,8 +29,7 @@ class Slider extends Component {
           index: 0,
           name: "Jin Rhee",
           role: "Business Administration",
-          text:
-            "TechLabs gave me enough knowledge and confidence to enroll and participate in a hackathon. We created a web application for productivity and got the third place.",
+          text: this.props.quoteOne,
           image: this.props.imageOne,
           image_mobil: this.props.imageOneMobil,
           image_mobil_thumbnail: this.props.imageOneThumbnail,
@@ -45,8 +44,7 @@ class Slider extends Component {
           index: 1,
           name: "Hümeyra Husseini",
           role: "Student Molecular Biomedicine",
-          text:
-            "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
+          text: this.props.quoteTwo,
           image: this.props.imageTwo,
           link:
             "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
@@ -59,8 +57,7 @@ class Slider extends Component {
           index: 2,
           name: "Miriam Gercken",
           role: "Student Marketing",
-          text:
-            "When I decided to achieve some tech knowledge, I didn’t know where to start. At TechLabs, there are people who know what they are doing, can help me to get started, and then also help me to achieve my goals.",
+          text: this.props.quoteThree,
           image: this.props.imageThree,
           image_mobil: this.props.imageThreeMobil,
           image_mobil_thumbnail: this.props.imageThreeThumbnail,
