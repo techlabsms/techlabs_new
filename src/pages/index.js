@@ -58,8 +58,18 @@ class index extends React.Component {
                     </span>
                   </p>
                   <div className="mt-5">
-                    <Button text="Program" primary={false} link="/program" />
-                    <Button text="About" primary={true} link="/about" />
+                    <Button 
+                    text={
+                      <FormattedMessage id={"landingpage.button.program"} />
+                      } 
+                    primary={false} 
+                    link="/program" />
+                    <Button 
+                    text={
+                      <FormattedMessage id={"landingpage.button.about"} />
+                      } 
+                    primary={true} 
+                    link="/about" />
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
@@ -276,7 +286,9 @@ class index extends React.Component {
             }
             image={gic}
             hasButton={true}
-            buttonText="Read more"
+            buttonText={
+              <FormattedMessage id={"landingpage.button.read_more"} />
+            } 
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
           <Quote
