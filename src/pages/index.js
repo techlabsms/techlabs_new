@@ -338,19 +338,24 @@ class index extends React.Component {
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
               <Heading
-                heading="Learn More"
-                subheading="Check out our locations and our Digital Shaper Program!"
+                heading={
+                  <FormattedMessage id={"landingpage.learn_more.heading"} />
+                }
+                subheading={
+                  <FormattedMessage id={"landingpage.learn_more.subheading"} />
+                }
               />
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Locations →</h2>
+                      <h2 className="mt-3 color-red">{
+                        <FormattedMessage id={"landingpage.learn_more.locations.h2"} />
+                    }</h2>
                       <p className="color-gl">
-                        Take a look at what is currently happening in our local
-                        tech communities. Your town is still missing? Bring
-                        TechLabs to your city, let’s build Digital Shapers
-                        together.
+                      {
+                        <FormattedMessage id={"landingpage.learn_more.locations.text"} />
+                      }
                       </p>
                     </div>
                   </Link>
@@ -358,11 +363,13 @@ class index extends React.Component {
                 <div className="col-md-6 mt-3">
                   <Link to="/program" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Program →</h2>
+                      <h2 className="mt-3 color-red">{
+                        <FormattedMessage id={"landingpage.learn_more.program.h2"} />
+                      }</h2>
                       <p className="color-gl">
-                        Not sure which learning track is the right one for you?
-                        Check out our program and get more information about
-                        each of our tracks.
+                      {
+                        <FormattedMessage id={"landingpage.learn_more.program.text"} />
+                      }
                       </p>
                     </div>
                   </Link>
