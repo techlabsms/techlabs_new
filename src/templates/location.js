@@ -17,10 +17,27 @@ import PartnerLogos from "../components/locations/partnerLogos"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
+import Tooltip from "../components/smallComponents/Tooltip"
 
 class location extends Component {
+  state = {
+    modalIsOpen: false,
+    x: 0,
+    y: 0,
+    text: "Web Dev",
+  }
+
+  handleOpenToolTip(e, track) {
+    this.setState({
+      modalIsOpen: true,
+      x: e.clientX,
+      y: e.clientY,
+      text: track,
+    })
+  }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
+    const { modalIsOpen, x, y, text } = this.state
     return (
       <Layout>
         <section className="container-fluid">
@@ -29,41 +46,81 @@ class location extends Component {
               className="location-hero"
               style={{ backgroundImage: `url(${location.image.file.url})` }}
             >
+              <Tooltip modalIsOpen={modalIsOpen} x={x} y={y} text={text} />
               <div className="row">
                 <div className="col-md-12 col-lg-5 border-0 location-card mt-4 py-5 position-absolute">
-                  <div className="row text-right fixed-top p-2">
+                  <div className="row text-right fixed-top-absolute py-3">
                     <div className="col-md-12">
+                      <small className="text-muted mr-4">
+                        Available Tracks:
+                      </small>
                       {location.avaiableTracks.web && (
                         <img
                           src={web}
                           alt="web development"
-                          width="15"
-                          className="mr-2"
+                          width="20"
+                          className="mr-3"
+                          onMouseOver={e =>
+                            this.handleOpenToolTip(e, "Web Dev")
+                          }
+                          onMouseLeave={() =>
+                            this.setState({
+                              modalIsOpen: false,
+                            })
+                          }
                         />
                       )}
                       {location.avaiableTracks.ai && (
                         <img
                           src={ai}
                           alt=""
-                          width="15"
-                          className="mr-2"
+                          width="20"
+                          className="mr-3"
                           alt="ai"
+                          onMouseOver={e => this.handleOpenToolTip(e, "AI")}
+                          onMouseLeave={() =>
+                            this.setState({
+                              modalIsOpen: false,
+                            })
+                          }
                         />
                       )}
                       {location.avaiableTracks.data && (
                         <img
                           src={ds}
                           alt=""
-                          width="15"
-                          className="mr-2"
+                          width="20"
+                          className="mr-3"
                           alt="data science"
+                          onMouseOver={e =>
+                            this.handleOpenToolTip(e, "Data Science")
+                          }
+                          onMouseLeave={() =>
+                            this.setState({
+                              modalIsOpen: false,
+                            })
+                          }
                         />
                       )}
                       {location.avaiableTracks.ux && (
-                        <img src={web} width="15" className="mr-2" alt="ux" />
+                        <img
+                          src={web}
+                          width="20"
+                          className="mr-3"
+                          alt="ux"
+                          onMouseOver={e =>
+                            this.handleOpenToolTip(e, "UX Design")
+                          }
+                          onMouseLeave={() =>
+                            this.setState({
+                              modalIsOpen: false,
+                            })
+                          }
+                        />
                       )}
                     </div>
                   </div>
+
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
                     {location.heading}
