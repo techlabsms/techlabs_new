@@ -210,6 +210,10 @@
   "landingpage.partnerlogos.text": "Unser wachsendes Partnernetzwerk",
   "landingpage.slider.heading": "Unsere Community",
   "landingpage.slider.subheading": "[TBD]Find out what our participants experienced at TechLabs!",
+  "landingpage.slider.pre": "TESTIMONIALS",
+  "landingpage.slider.title": "TechLabs hat mir beigebracht, wie man programmiert",
+  "landingpage.slider.testimonial.text": "",
+  "landingpage.slider.button": "mehr über {name}s projekt",
  
   "location.aachen": "Aachen",
   "location.barcelona": "Barcelona",
