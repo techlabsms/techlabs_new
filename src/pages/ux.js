@@ -93,7 +93,7 @@ class ux extends Component {
             <div className="row">
               <div className="col text-center">
                 <Link to="/faq" className="btn btn-primary">
-                  More Questions?
+                  <FormattedMessage id={"faq.button"}/>
                 </Link>
               </div>
             </div>
