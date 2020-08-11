@@ -13,8 +13,7 @@ import Heading from "../smallComponents/Heading"
 
 
 class ChooseCity extends Component {
-  defaultLocale = "en"
-  messages = localeData[this.defaultLocale]
+  messages = localeData[this.props.locale]
 
   state = {
     atEnd: false,

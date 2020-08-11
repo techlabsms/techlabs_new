@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 // components
 import Layout from "../components/Layout/Layout"
@@ -32,6 +32,7 @@ class apply extends Component {
 
   render() {
     const { isClicked } = this.state
+    const { intl } = this.props
     return (
       <Layout>
         <ApplicationHero
@@ -44,6 +45,7 @@ class apply extends Component {
           subheading={
             <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
           }
+          locale={intl.locale}
           handleClick={(isClicked, value, available, link) => {
             this.setState({
               isClicked,
@@ -125,7 +127,7 @@ class apply extends Component {
   }
 }
 
-export default apply
+export default injectIntl(apply)
 
 export const pageQuery = graphql`
   query {
