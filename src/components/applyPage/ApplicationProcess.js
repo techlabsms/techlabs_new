@@ -46,11 +46,10 @@ class ApplicationProcess extends React.Component {
                   backgroundImage: `url(${prerectangle})`,
                 }}
               >
-                <h3 className="applProcess--heading">Online Application</h3>
+                <h3 className="applProcess--heading"><FormattedMessage id={"applypage.applicationProcess.step1.heading"}/></h3>
               </div>
               <p className="px-3 d-block d-md-none">
-                We look through your application and check whether your
-                motivation fits our requirements!
+                <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
               </p>
             </div>
             <div className="col-md-4">
@@ -60,11 +59,12 @@ class ApplicationProcess extends React.Component {
                   backgroundImage: `url(${prerectangle})`,
                 }}
               >
-                <h3 className="applProcess--heading">Feedback Process</h3>
+                <h3 className="applProcess--heading">
+                  <FormattedMessage id={"applypage.applicationProcess.step2.heading"}/>
+                </h3>
               </div>
               <p className="px-3 d-block d-md-none">
-                After looking through all applications, we quickly get back to
-                you with our final feedback!
+                 <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
               </p>
             </div>
             <div className="col-md-4">
@@ -74,31 +74,29 @@ class ApplicationProcess extends React.Component {
                   backgroundImage: `url(${prerectangle})`,
                 }}
               >
-                <h3 className="applProcess--heading">Kick-Off</h3>
+                <h3 className="applProcess--heading">
+                   <FormattedMessage id={"applypage.applicationProcess.step3.heading"}/>
+                </h3>
               </div>
               <p className="px-3 d-block d-md-none">
-                Congratulations – you are part of our TechLabs Community. Let’s
-                start learning together!
+                 <FormattedMessage id={"applypage.applicationProcess.step3.text"}/>
               </p>
             </div>
           </div>
           <div className="row mt-3">
             <div className="col-md-4">
               <p className="px-3 d-none d-md-block">
-                We look through your application and check whether your
-                motivation fits our requirements!
+                <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
               </p>
             </div>
             <div className="col-md-4">
               <p className="px-3 d-none d-md-block">
-                After looking through all applications, we quickly get back to
-                you with our final feedback!
+                 <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
               </p>
             </div>
             <div className="col-md-4">
               <p className="px-3 d-none d-md-block">
-                Congratulations – you are part of our TechLabs Community. Let’s
-                start learning together!
+                 <FormattedMessage id={"applypage.applicationProcess.step3.text"}/>
               </p>
             </div>
           </div>
@@ -123,14 +121,13 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>1. Online Application</h3>
+                    <h3>1. <FormattedMessage id={"applypage.applicationProcess.step1.heading"}/></h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                      We look through your application and check whether your
-                      motivation fits our requirements!
+                    <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
                     </p>
                   </div>
                 </div>
@@ -155,14 +152,15 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>2. Feedback Process</h3>
+                    <h3>2. 
+                      <FormattedMessage id={"applypage.applicationProcess.step2.heading"}/>
+                    </h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                      After looking through all applications, we quickly get
-                      back to you with our final feedback!
+                    <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
                     </p>
                   </div>
                 </div>
@@ -172,7 +170,7 @@ class ApplicationProcess extends React.Component {
                       onClick={() => this.handleLeftClick()}
                       className="applProcess--card-btn"
                     >
-                      <img src={arrowLeft} alt="" /> First Step
+                      <img src={arrowLeft} alt="" />  <FormattedMessage id={"applypage.applicationProcess.firstStep"}/>
                     </button>
                   </div>
                   <div className="col-6">
@@ -180,7 +178,7 @@ class ApplicationProcess extends React.Component {
                       onClick={() => this.handleRightClick()}
                       className="applProcess--card-btn"
                     >
-                      Next Step <img src={arrowRight} alt="" />
+                       <FormattedMessage id={"applypage.applicationProcess.nextStep"}/> <img src={arrowRight} alt="" />
                     </button>
                   </div>
                 </div>
@@ -195,14 +193,15 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>3. Kick-Off</h3>
+                    <h3>3. 
+                       <FormattedMessage id={"applypage.applicationProcess.step3.heading"}/>
+                    </h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                      Congratulations – you are part of our TechLabs Community.
-                      Let’s start learning together!
+                    <FormattedMessage id={"applypage.applicationProcess.step3.text"}/>
                     </p>
                   </div>
                 </div>
@@ -213,7 +212,7 @@ class ApplicationProcess extends React.Component {
                       onClick={() => this.handleLeftClick()}
                       className="applProcess--card-btn"
                     >
-                      <img src={arrowLeft} alt="" /> Second Step
+                      <img src={arrowLeft} alt="" />  <FormattedMessage id={"applypage.applicationProcess.secondStep"}/>
                     </button>
                   </div>
                 </div>
