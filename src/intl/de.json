@@ -246,7 +246,19 @@
   "programmHero.info.participants.long": "Über 250 Absolventen",
   "programmHero.info.participants.short": "250+ Absolventen",
 
-
+  "projects.heading": "Projekte unserer Teilnehmer",
+  "projects.subheading": "Lass dich inspirieren von diesen abgeschlossenen Projekten!",
+  "projects.first.heading": "Financial Planner",
+  "projects.first.text": "Eine Application, die deine gesamten Finanztransaktionen verfolgt.",
+  "projects.second.heading": "The zeb Project",
+  "projects.second.text": "Eine Application, die Marke und das Modell eines Autos aus einem Foto erkennt, und die wichtigsten statistischen Merkmale des Gebrauchtwagens identifiziert.",
+  "projects.third.heading": "War of Talents",
+  "projects.third.text": "Eine Plattform, die den Prozess der Stellenauswahl für Arbeitnehmer und Arbeitgeber revolutionieren will.",
+  "projects.tech.webdev": "Web-Entwicklung",
+  "projects.tech.ai": "Künstliche Intelligenz",
+  "projects.tech.ds": "Data Science",
+  "projects.tech.ux": "UX Design",
+  "projects.button": "Mehr Informationen",
 
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",
