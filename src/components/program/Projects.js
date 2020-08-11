@@ -1,10 +1,18 @@
 import React from "react"
-import ai from "../../assets/ai.png"
-import web from "../../assets/web.png"
-import ds from "../../assets/ds.png"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
+
+// assets
+import ai from "../../assets/ai.png"
+import web from "../../assets/web.png"
+import ds from "../../assets/ds.png"
+
 
 const Projects = () => {
   return (
