@@ -14,6 +14,8 @@ const Tooltip = ({ modalIsOpen, closeModal, text, x, y }) => {
           content: {
             top: `${y}px`,
             left: `${x}px`,
+            maxWidth: "100px",
+            transform: "translate(-100%,50%)",
           },
           overlay: {
             backgroundColor: "none",
