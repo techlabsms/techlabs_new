@@ -1,4 +1,11 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Layout from "../components/Layout/Layout"
 import ProgrammHero from "../components/program/ProgrammHero"
 import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
 import RightImageSection from "../components/shared/RightImageSection"
@@ -6,15 +13,15 @@ import LeftImageSection from "../components/shared/LeftImageSection"
 import Projects from "../components/program/Projects"
 import CallToAction from "../components/shared/CallToAction"
 import FirstImpression from "../components/foundYourOwn/FirstImpression"
+import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
+
+// assets
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
 import webDevCover from "../assets/wd_cover.png"
 import background from "../assets/ds_background.png"
-import Faq from "../components/shared/Faq"
-import { Link } from "gatsby"
 import backgroundMobil from "../assets/courseMobil.png"
-import Layout from "../components/Layout/Layout"
 
 class web extends Component {
   render() {
@@ -68,16 +75,16 @@ class web extends Component {
           />
           <Faq>
             <FaqQuestion
-              question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
+              question={<FormattedMessage id={"faq_1.question"}/>}
+              answer={<FormattedMessage id={"faq_1.answer"}/>}
             />
             <FaqQuestion
-              question="What do you look for in an applicant?"
-              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
+              question={<FormattedMessage id={"faq_2.question"}/>}
+              answer={<FormattedMessage id={"faq_2.answer"}/>}
             />
             <FaqQuestion
-              question="How much time is required to become Digital Shaper?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
+              question={<FormattedMessage id={"faq_3.question"}/>}
+              answer={<FormattedMessage id={"faq_3.answer"}/>}
             />
           </Faq>
           <div className="container pb-5">
