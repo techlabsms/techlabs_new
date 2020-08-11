@@ -135,6 +135,15 @@
   "program.local.academy.third.text": "In the Artificial Intelligence track you will learn about the possibilities of current AI-techniques, attain Python skills, and build first image recognition applications.",
   "program.local.academy.fourth.name": "User Experience Design",
   "program.local.academy.fourth.text": "Learn UX Design with practical examples and use the opportunity to build a personal tech portfolio Find out what the key values are for designing an enjoyable user experience.",
+
+  "program.local.learn_more.heading": "Learn More",
+  "program.local.learn_more.subheading": "Get more information about our different learning tracks!",
+  "program.local.learn_more.firstProject": "Web Development",
+  "program.local.learn_more.secondProject": "Data Science",
+  "program.local.learn_more.thirdProject": "Artificial Intelligence",
+  "program.local.learn_more.fourthProject": "User Experience Design",
+  "program.local.learn_more.button": "Learn more",
+  
   "program.local.threeComponents.heading": "The Core Concept",
   "program.local.threeComponents.subheading": "Our blended learning concept consists of three components",
 

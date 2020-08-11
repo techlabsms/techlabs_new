@@ -301,6 +301,16 @@
   "program.local.academy.third.text": "Im Track 'Künstliche Intelligenz' lernst Du die Möglichkeiten aktueller KI-Technologie kennen, erwirbst Python-Kenntnisse und baust erste Bilderkennungsanwendungen.",
   "program.local.academy.fourth.name": "User Experience Design",
   "program.local.academy.fourth.text": "Lerne UX Design anhand praktischer Beispiele kennen und nutze die Gelegenheit, ein persönliches Design-Portfolio zusammenzustellen. Finde heraus, welche Kriterien für die Gestaltung einer angenehmen Benutzererfahrung wichtig sind.",
+
+
+  "program.local.learn_more.heading": "Erfahre mehr",
+  "program.local.learn_more.subheading": "Erfahre mehr über unsere Tracks!",
+  "program.local.learn_more.firstProject": "Web-Entwicklung",
+  "program.local.learn_more.secondProject": "Data Science",
+  "program.local.learn_more.thirdProject": "Künstliche Intelligenz",
+  "program.local.learn_more.fourthProject": "User Experience Design",
+  "program.local.learn_more.button": "Erfahre mehr",
+
   "program.local.threeComponents.heading": "Das Kernkonzept",
   "program.local.threeComponents.subheading": "Unser Blended-Learning-Konzept besteht aus drei Komponenten",
 
