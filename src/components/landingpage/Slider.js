@@ -1,12 +1,17 @@
 import React, { Component } from "react"
-import Arrow from "../../assets/arrow.svg"
-import Quote from "../../assets/quote.png"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
+
+// plugin & external
 import Modal from "react-modal"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { values } from "lodash"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
+
+// assets
+import Arrow from "../../assets/arrow.svg"
+import Quote from "../../assets/quote.png"
 
 class Slider extends Component {
   constructor() {

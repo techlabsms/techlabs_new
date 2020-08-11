@@ -1,9 +1,12 @@
 import React from "react"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
 import { Link } from "gatsby"
 
+// plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
 
 const Table = ({
   heading,

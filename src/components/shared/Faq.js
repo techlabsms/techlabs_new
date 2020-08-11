@@ -1,9 +1,11 @@
 import React from "react"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
 
+// plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
 
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
 
 const Faq = props => {
   return (

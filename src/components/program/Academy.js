@@ -1,13 +1,17 @@
 import React, { Component } from "react"
+
+// plugins 
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
+
+// assets
 import DataScience from "../../assets/dashboard.png"
 import WebDev from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
-
-import { FormattedMessage } from "gatsby-plugin-intl"
-
 
 class Academy extends Component {
   state = {

@@ -1,9 +1,12 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components 
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
-
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 const LearnMore = ({
   heading,

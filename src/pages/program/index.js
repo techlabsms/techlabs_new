@@ -1,18 +1,24 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Navbar from "../../components/Layout/Navbar"
+import Footer from "../../components/Layout/Footer"
+import Button from "../../components/smallComponents/Button"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
 import LearnMore from "../../components/program/LearnMore"
-import background from "../../assets/p_background.png"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
-import DataScience from "../../assets/dashboard.png"
-import web from "../../assets/webdevpro.png"
-import Footer from "../../components/Layout/Footer"
-import ProgrammMobil from "../../assets/programmMobil.png"
-import Button from "../../components/smallComponents/Button"
 
-import { FormattedMessage } from "gatsby-plugin-intl"
+
+// assets
+import DataScience from "../../assets/dashboard.png"
+import background from "../../assets/p_background.png"
+import ProgrammMobil from "../../assets/programmMobil.png"
+import web from "../../assets/webdevpro.png"
 
 const index = () => {
   return (

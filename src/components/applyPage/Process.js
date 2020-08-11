@@ -1,4 +1,13 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Container from "../smallComponents/Container"
+import Heading from "../smallComponents/Heading"
+
+// assets
 import process from "../../assets/process.png"
 import learn from "../../assets/learnBlack.svg"
 import orientation from "../../assets/orientationBlack.svg"
@@ -7,10 +16,7 @@ import hackathon from "../../assets/hackathonBlack.svg"
 import certificate from "../../assets/certificateBlack.svg"
 import dotLine from "../../assets/dotLine.svg"
 import dot from "../../assets/dot.svg"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
 
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 const Process = () => {
   return (

@@ -1,26 +1,33 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Navbar from "../../components/Layout/Navbar"
-import ProgrammHero from "../../components/program/ProgrammHero"
+import Footer from "../../components/Layout/Footer"
+import Button from "../../components/smallComponents/Button"
 import Academy from "../../components/program/Academy"
-import ThreeComponents from "../../components/program/ThreeComponents"
-import LearnMore from "../../components/program/LearnMore"
-import background from "../../assets/p_background.png"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
+import KeyBenefits from "../../components/shared/KeyBenefits"
+import LearnMore from "../../components/program/LearnMore"
+import ProgrammHero from "../../components/program/ProgrammHero"
 import Process from "../../components/applyPage/Process"
+import Table from "../../components/program/Table"
+import Testimonial from "../../components/shared/Testimonial"
+import ThreeComponents from "../../components/program/ThreeComponents"
+
+
+ // assets
+import background from "../../assets/p_background.png"
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
-import Footer from "../../components/Layout/Footer"
 import ProgrammMobil from "../../assets/programmMobil.png"
-import KeyBenefits from "../../components/shared/KeyBenefits"
-import Button from "../../components/smallComponents/Button"
-import Table from "../../components/program/Table"
-import Testimonial from "../../components/shared/Testimonial"
 
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 class local extends Component {
   render() {
