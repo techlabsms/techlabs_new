@@ -10,46 +10,45 @@ import dot from "../../assets/dot.svg"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
+import { FormattedMessage } from "gatsby-plugin-intl"
+
 const Process = () => {
   return (
     <Container>
       <Heading
-        heading="Your Learning Journey"
-        subheading="Explore the TechLabs Journey from start to finish!"
+        heading={<FormattedMessage id={"program.journey.heading"}/>}
+        subheading={<FormattedMessage id={"program.journey.subheading"}/>}
       />
       <div className="d-none d-lg-block">
         <div className="div">
           <div className="row">
             <div className="col-12 col-md-4 d-none d-lg-block">
               <h2 className="process--title">
-                <span className="process--title-number">1. </span>Orientation
-                Week
+                <span className="process--title-number">1. </span>
+                {<FormattedMessage id={"program.local.journey.1.heading"}/>}
               </h2>
               <p className="process--text">
-                Inform yourself about the different learning tracks that
-                TechLabs offers and select your favorite one!
+                {<FormattedMessage id={"program.local.journey.1.text"}/>}
               </p>
             </div>
 
             <div className="col-12 col-md-4 d-none d-lg-block">
               <h2 className="process--title">
-                <span className="process--title-number">3. </span>Project
-                Kickoff
+                <span className="process--title-number">3. </span>
+                {<FormattedMessage id={"program.local.journey.3.heading"}/>}
               </h2>
               <p className="process--text">
-                Choose the project that interests you the most and work on it in
-                a small interdisciplinary team for the upcoming months!
+                {<FormattedMessage id={"program.local.journey.3.text"}/>}
               </p>
             </div>
 
             <div className="col-12 col-md-4 d-none d-lg-block">
               <h2 className="process--title">
-                <span className="process--title-number">5. </span>Completion of
-                the Project
+                <span className="process--title-number">5. </span>
+                {<FormattedMessage id={"program.local.journey.5.heading"}/>}
               </h2>
               <p className="process--text">
-                Earn a well-respected certificate by completing your group
-                project and presenting your final results.
+                {<FormattedMessage id={"program.local.journey.5.text"}/>}
               </p>
             </div>
           </div>
@@ -62,21 +61,20 @@ const Process = () => {
             <div className="col-2" />
             <div className="col-12 col-md-4  d-none d-lg-block">
               <h2 className="process--title">
-                <span className="process--title-number">2. </span>Learning
+                <span className="process--title-number">2. </span>
+                {<FormattedMessage id={"program.local.journey.2.heading"}/>}
               </h2>
               <p className="process--text">
-                Get a personalized learning path and learn how to code. Meet up
-                with other participants at local community events and workshops.
+                {<FormattedMessage id={"program.local.journey.2.text"}/>}
               </p>
             </div>
             <div className="col-12 col-md-4  d-none d-lg-block">
               <h2 className="process--title">
-                <span className="process--title-number">4. </span>Project
-                Hackathon
+                <span className="process--title-number">4. </span>
+                {<FormattedMessage id={"program.local.journey.4.heading"}/>}
               </h2>
               <p className="process--text">
-                Catch up with your team and work on the project that you have
-                chosen. Get guidance from our Mentors!
+                {<FormattedMessage id={"program.local.journey.4.text"}/>}
               </p>
             </div>
             <div className="col-2" />
@@ -92,10 +90,11 @@ const Process = () => {
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
-            <h4 className="process--h4">Orientation Week</h4>
+            <h4 className="process--h4">
+              {<FormattedMessage id={"program.local.journey.1.heading"}/>}
+            </h4>
             <p className="process--text-mobil">
-              Inform yourself about the three Learning Tracks that TechLabs
-              offers and choose your favorite track!
+              {<FormattedMessage id={"program.local.journey.1.text"}/>}
             </p>
           </div>
         </div>
@@ -107,10 +106,11 @@ const Process = () => {
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
-            <h4 className="process--h4">Online Course</h4>
+            <h4 className="process--h4">
+              {<FormattedMessage id={"program.local.journey.2.heading"}/>}
+            </h4>
             <p className="process--text-mobil">
-              Get a personalized learning path and learn how to code. Meet up
-              with other participants at local community events and workshops.
+              {<FormattedMessage id={"program.local.journey.2.text"}/>}
             </p>
           </div>
         </div>
@@ -122,10 +122,11 @@ const Process = () => {
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
-            <h4 className="process--h4">Project Kickoff</h4>
+            <h4 className="process--h4">
+              {<FormattedMessage id={"program.local.journey.3.heading"}/>}
+            </h4>
             <p className="process--text-mobil">
-              Choose the project that interests you the most and work on it in a
-              small interdisciplinary team for the upcoming months!
+              {<FormattedMessage id={"program.local.journey.3.text"}/>}
             </p>
           </div>
         </div>
@@ -137,10 +138,11 @@ const Process = () => {
             <img src={dotLine} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
-            <h4 className="process--h4">Project Hackathon</h4>
+            <h4 className="process--h4">
+              {<FormattedMessage id={"program.local.journey.4.heading"}/>}
+            </h4>
             <p className="process--text-mobil">
-              Catch up with your team and work on the project that you have
-              chosen. Get guidance from our Mentors!
+              {<FormattedMessage id={"program.local.journey.4.text"}/>}
             </p>
           </div>
         </div>
@@ -152,10 +154,11 @@ const Process = () => {
             <img src={dot} alt="" className="h-100" />
           </div>
           <div className="col-7 ml-2">
-            <h4 className="process--h4">Completion of the Project</h4>
+            <h4 className="process--h4">
+              {<FormattedMessage id={"program.local.journey.5.heading"}/>}
+            </h4>
             <p className="process--text-mobil">
-              Earn a well-respected certificate by completing your group project
-              and presenting your final results.
+              {<FormattedMessage id={"program.local.journey.5.text"}/>}
             </p>
           </div>
         </div>

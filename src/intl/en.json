@@ -147,8 +147,8 @@
   "program.local.threeComponents.heading": "The Core Concept",
   "program.local.threeComponents.subheading": "Our blended learning concept consists of three components",
 
-  "program.local.journey.heading": "Your Learning Journey",
-  "program.local.journey.subheading": "Explore the TechLabs Journey from start to finish!",
+  "program.journey.heading": "Your Learning Journey",
+  "program.journey.subheading": "Explore the TechLabs Journey from start to finish!",
   "program.local.journey.1.heading": "Orientation Week",
   "program.local.journey.1.text": "Inform yourself about the different learning tracks that TechLabs offers and select your favorite one!",
   "program.local.journey.2.heading": "Learning",
@@ -208,6 +208,12 @@
   "program.local.threeComponents.second.text": "Our participants learn tech skills in one of our online learning tracks. For each of the tracks, our curriculum experts carefully compiled the best online learning resources available in various formats. Because we want to make sure that both a coding beginner or already experienced techie can learn something new in our program, we individualize our participant’s learning paths based on prior knowledge and learning goals.",
   "program.local.threeComponents.third.heading": "Project Work",
   "program.local.threeComponents.third.text": "The overarching goal of the online learning component of our program is that the learning resources of our tracks enable our participants to take part in their own tech project in which they solve an open problem. Our mentors are experts in their respective field and are happy support the project groups in case of technical issues and questions regarding the project scope or project management.",
+
+  "testimonial.heading": "What our partners say",
+  "program.local.testimonial.subheading": "Read here what our partners think about the skills you learn at TechLabs!",
+  "program.local.timothee.quote": "Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods.",
+
+
   "program.index.table.heading": "What kind of Programs do we offer?",
   "program.index.table.subheading": "At Techlabs you can study completly online or learn on campus!"
 }

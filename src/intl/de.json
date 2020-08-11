@@ -314,8 +314,8 @@
   "program.local.threeComponents.heading": "Das Kernkonzept",
   "program.local.threeComponents.subheading": "Unser Blended-Learning-Konzept besteht aus drei Komponenten",
 
-  "program.local.journey.heading": "Dein Learning Journey",
-  "program.local.journey.subheading": "Entdecke die TechLabs Journey von Anfang bis Ende!",
+  "program.journey.heading": "Dein Learning Journey",
+  "program.journey.subheading": "Entdecke die TechLabs Journey von Anfang bis Ende!",
   "program.local.journey.1.heading": "Orientierungswoche",
   "program.local.journey.1.text": "Informiere dich über die verschiedenen Lernwege, die TechLabs anbietet, und wählen deinen bevorzugten aus!",
   "program.local.journey.2.heading": "Lernen",
@@ -374,6 +374,12 @@
   "program.local.threeComponents.second.text": "Unsere Teilnehmer lernen technische Fertigkeiten in einem unserer Online-Lernkurse. Für jeden der Tracks haben unsere Lehrplanexperten sorgfältig die besten Online-Lernressourcen in verschiedenen Formaten zusammengestellt. Da wir sicherstellen wollen, dass sowohl ein Programmieranfänger als auch ein bereits erfahrener Programmierer etwas Neues in unserem Programm lernen kann, individualisieren wir die Lernpfade unserer Teilnehmer auf der Grundlage von Vorkenntnissen und Lernzielen.",
   "program.local.threeComponents.third.heading": "Projekte",
   "program.local.threeComponents.third.text": "Das übergreifende Ziel der Online-Lernkomponente unseres Programms ist es, dass die Lernressourcen unserer Tracks es unseren Teilnehmern ermöglichen, an ihrem eigenen Tech-Projekt teilzuhaben, in dem sie ein offenes Problem lösen. Unsere Mentoren sind Experten auf ihrem jeweiligen Gebiet und unterstützen die Projektgruppen gerne bei technischen Fragen und Fragen zum Projektumfang oder zum Projektmanagement.",
+
+  "testimonial.heading": "What our partners say",
+  "program.local.testimonial.subheading": "Read here what our partners think about the skills you learn at TechLabs!",
+  "program.local.timothee.quote": "Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods.",
+
+  
   "program.index.table.heading": "Welche Arten von Programmen bieten wir an?",
   "program.index.table.subheading": "Bei Techlabs kannst Du vollständig online studieren oder Teil von lokalen Gemeinschaften werden!"
 }
