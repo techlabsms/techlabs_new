@@ -1,22 +1,29 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import ProgrammHero from "../components/program/ProgrammHero"
-import Faq from "../components/shared/Faq"
-import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
-import RightImageSection from "../components/shared/RightImageSection"
-import LeftImageSection from "../components/shared/LeftImageSection"
-import Projects from "../components/program/Projects"
+import { Link } from "gatsby"
+
+// plugins && external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Layout from "../components/Layout/Layout"
 import CallToAction from "../components/shared/CallToAction"
-import FirstImpression from "../components/foundYourOwn/FirstImpression"
+import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
+import FirstImpression from "../components/foundYourOwn/FirstImpression"
+import ProgrammHero from "../components/program/ProgrammHero"
+import LeftImageSection from "../components/shared/LeftImageSection"
+import RightImageSection from "../components/shared/RightImageSection"
+import Projects from "../components/program/Projects"
+import Testimonial from "../components/shared/Testimonial"
+import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
+
+// assets
 import dsCover from "../assets/ds_cover.png"
 import david from "../assets/david.png"
 import dashboard from "../assets/dashboard.png"
-import { Link } from "gatsby"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
-import Layout from "../components/Layout/Layout"
-import Testimonial from "../components/shared/Testimonial"
 
 
 class dataScience extends Component {
