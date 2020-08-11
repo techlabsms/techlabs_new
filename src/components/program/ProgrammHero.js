@@ -57,7 +57,7 @@ const ProgrammHero = ({
                     </h2>
                     <div className="row pl-5">
                       <div className="col">
-                        <h4>Time</h4>
+                        <h4><FormattedMessage id={"programmHero.info.time.heading"}/></h4>
                         <div className="section-divider" />
                         <div className="row">
                           <div className="col-2">
@@ -69,9 +69,9 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              6 months program
+                              <FormattedMessage id={"programmHero.info.time.first"}/>
                               <br />
-                              5 hours per week
+                              <FormattedMessage id={"programmHero.info.time.second"}/>
                             </p>
                           </div>
                         </div>
@@ -79,7 +79,7 @@ const ProgrammHero = ({
                     </div>
                     <div className="row pl-5">
                       <div className="col">
-                        <h4>Certificate</h4>
+                        <h4><FormattedMessage id={"programmHero.info.certificate.heading"}/></h4>
                         <div className="section-divider" />
                         <div className="row">
                           <div className="col-2">
@@ -91,8 +91,8 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              Receive a graduation certificate <br />
-                              by presenting your project
+                              <FormattedMessage id={"programmHero.info.certificate.first"}/> <br />
+                              <FormattedMessage id={"programmHero.info.certificate.second"}/>
                             </p>
                           </div>
                         </div>
@@ -100,7 +100,9 @@ const ProgrammHero = ({
                     </div>
                     <div className="row pl-5">
                       <div className="col">
-                        <h4>Participants</h4>
+                        <h4>
+                          <FormattedMessage id={"programmHero.info.participants.heading"}/>
+                        </h4>
                         <div className="section-divider" />
                         <div className="row">
                           <div className="col-2">
@@ -111,7 +113,9 @@ const ProgrammHero = ({
                             />
                           </div>
                           <div className="col-10">
-                            <p>Over 250 graduates</p>
+                            <p>
+                              <FormattedMessage id={"programmHero.info.participants.long"}/>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -129,14 +133,14 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                          Time
+                          <FormattedMessage id={"programmHero.info.time.heading"}/>
                         </h2>
                       </div>
                       <div className="col-6">
                         <p>
-                          6 Months Program
+                          <FormattedMessage id={"programmHero.info.time.first"}/>
                           <br />
-                          5 hours per Week
+                          <FormattedMessage id={"programmHero.info.time.second"}/>
                         </p>
                       </div>
                     </div>
@@ -146,12 +150,12 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                          Certificate
+                        <FormattedMessage id={"programmHero.info.certificate.heading"}/>
                         </h2>
                       </div>
                       <div className="col-6">
                         <p>
-                          Get a graduation certificate by submitting a project
+                          <FormattedMessage id={"programmHero.info.certificate.short"}/>                        
                         </p>
                       </div>
                     </div>
@@ -161,11 +165,13 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                          Participants
+                          <FormattedMessage id={"programmHero.info.participants.heading"}/>
                         </h2>
                       </div>
                       <div className="col-6">
-                        <p className="mt-2">Over 250 grads</p>
+                        <p className="mt-2">
+                          <FormattedMessage id={"programmHero.info.participants.short"}/>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -201,28 +207,28 @@ const ProgrammHero = ({
                 <div className="programmHero--card_mobil">
                   <div className="row">
                     <div className="col-4">
-                      <h1 className="programmHero--card-title_mobil">Time</h1>
+                      <h1 className="programmHero--card-title_mobil"><FormattedMessage id={"programmHero.info.time.heading"}/></h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        5 hours / Week <br /> 6 Month Program
+                      <FormattedMessage id={"programmHero.info.time.second"}/> <br /> <FormattedMessage id={"programmHero.info.time.first"}/>
                       </p>
                     </div>
                     <div className="col-4">
                       <h1 className="programmHero--card-title_mobil">
-                        Certificate
+                      <FormattedMessage id={"programmHero.info.certificate.heading"}/>
                       </h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        Get a graduation certificate by submitting a project
+                        <FormattedMessage id={"programmHero.info.certificate.short"}/>
                       </p>
                     </div>
                     <div className="col-4">
                       <h1 className="programmHero--card-title_mobil">
-                        Participants
+                      <FormattedMessage id={"programmHero.info.participants.heading"}/>
                       </h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        Over 250 grads
+                        <FormattedMessage id={"programmHero.info.participants.short"}/>
                       </p>
                     </div>
                   </div>

@@ -33,7 +33,18 @@
   "dataScience.first_impression.FirstImpression.secondHeading":"",
   "dataScience.first_impression.FirstImpression.secondText":"",
  
-  
+  "programmHero.info.time.heading": "Time",
+  "programmHero.info.time.first": "6 months program",
+  "programmHero.info.time.second": "5 hours per week",
+  "programmHero.info.certificate.heading": "Certificate",
+  "programmHero.info.certificate.first": "Receive a graduation certificate",
+  "programmHero.info.certificate.second": "by presenting your project",
+  "programmHero.info.certificate.short": "Get a graduation certificate by submitting a project",
+  "programmHero.info.participants.heading": "Participants",
+  "programmHero.info.participants.long": "Over 250 graduates",
+  "programmHero.info.participants.short": "Over 250 grads",
+
+
   "landingpage.button.program": "Program",
   "landingpage.button.about": "About",
   "landingpage.button.read_more": "Read more",

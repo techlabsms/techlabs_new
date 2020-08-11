@@ -234,6 +234,20 @@
   "programs.learn_more.subheading": "Erfahre mehr über die Programme!",
   "programs.learn_more.button": "Mehr erfahren",
 
+   
+  "programmHero.info.time.heading": "Zeit",
+  "programmHero.info.time.first": "6 Monate Programm",
+  "programmHero.info.time.second": "5 Stunden / Woche",
+  "programmHero.info.certificate.heading": "Zertifikat",
+  "programmHero.info.certificate.first": "Erhalte ein Abschlusszertifikat, ",
+  "programmHero.info.certificate.second": "nachdem du dein Projekt präsentierst",
+  "programmHero.info.certificate.short": "Erhalte ein Abschlusszertifikat nach Projekteinreichung",
+  "programmHero.info.participants.heading": "Teilnehmer",
+  "programmHero.info.participants.long": "Über 250 Absolventen",
+  "programmHero.info.participants.short": "250+ Absolventen",
+
+
+
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",
   "faq_1.question": "Wie bewerbe ich mich für das Digital Shaper Programm?",
