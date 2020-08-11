@@ -58,6 +58,12 @@
   "projects.tech.ux": "UX Design",
   "projects.button": "More information",
 
+  "callToAction.first": "You can´t wait to acquire the most",
+  "callToAction.second": " in demand tech skills?",
+  "callToAction.third": "Are you ready ",
+  "callToAction.fourth": "to learn?",
+  "callToAction.button": "Apply now",
+
   "landingpage.button.program": "Program",
   "landingpage.button.about": "About",
   "landingpage.button.read_more": "Read more",
