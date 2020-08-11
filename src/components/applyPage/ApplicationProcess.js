@@ -38,7 +38,9 @@ class ApplicationProcess extends React.Component {
       <>
         <div className="container d-none d-lg-block my-5 py-5">
           <Heading heading={heading} subheading={subheading} />
+          {/* large screens */}
           <div className="row mt-4">
+            {/* step 1  */}
             <div className="col-md-4">
               <div
                 className=" applProcess--rectangle"
@@ -46,12 +48,15 @@ class ApplicationProcess extends React.Component {
                   backgroundImage: `url(${prerectangle})`,
                 }}
               >
-                <h3 className="applProcess--heading"><FormattedMessage id={"applypage.applicationProcess.step1.heading"}/></h3>
+                <h3 className="applProcess--heading">
+                  <FormattedMessage id={"applypage.applicationProcess.step1.heading"}/>
+                </h3>
               </div>
               <p className="px-3 d-block d-md-none">
                 <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
               </p>
             </div>
+            {/* step 2 */}
             <div className="col-md-4">
               <div
                 className=" applProcess--rectangle"
@@ -67,6 +72,7 @@ class ApplicationProcess extends React.Component {
                  <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
               </p>
             </div>
+            {/* step 3 */}
             <div className="col-md-4">
               <div
                 className=" applProcess--rectangle"
@@ -121,13 +127,15 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>1. <FormattedMessage id={"applypage.applicationProcess.step1.heading"}/></h3>
+                    <h3>
+                      1. <FormattedMessage id={"applypage.applicationProcess.step1.heading"}/>
+                    </h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                    <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
+                      <FormattedMessage id={"applypage.applicationProcess.step1.text"}/>
                     </p>
                   </div>
                 </div>
@@ -137,7 +145,8 @@ class ApplicationProcess extends React.Component {
                       onClick={() => this.handleRightClick()}
                       className="applProcess--card-btn"
                     >
-                      Next Step <img src={arrowRight} alt="" />
+                       <FormattedMessage id={"applypage.applicationProcess.nextStep"}/> 
+                       <img src={arrowRight} alt="" />
                     </button>
                   </div>
                 </div>
@@ -152,15 +161,15 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>2. 
-                      <FormattedMessage id={"applypage.applicationProcess.step2.heading"}/>
+                    <h3>
+                      2. <FormattedMessage id={"applypage.applicationProcess.step2.heading"}/>
                     </h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                    <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
+                      <FormattedMessage id={"applypage.applicationProcess.step2.text"}/>
                     </p>
                   </div>
                 </div>
@@ -170,7 +179,7 @@ class ApplicationProcess extends React.Component {
                       onClick={() => this.handleLeftClick()}
                       className="applProcess--card-btn"
                     >
-                      <img src={arrowLeft} alt="" />  <FormattedMessage id={"applypage.applicationProcess.firstStep"}/>
+                      <img src={arrowLeft} alt="" /> <FormattedMessage id={"applypage.applicationProcess.firstStep"}/>
                     </button>
                   </div>
                   <div className="col-6">
@@ -193,19 +202,18 @@ class ApplicationProcess extends React.Component {
               <div className="applProcess--card">
                 <div className="row">
                   <div className="col">
-                    <h3>3. 
-                       <FormattedMessage id={"applypage.applicationProcess.step3.heading"}/>
+                    <h3>
+                      3. <FormattedMessage id={"applypage.applicationProcess.step3.heading"}/>
                     </h3>
                   </div>
                 </div>
                 <div className="row h-50">
                   <div className="col">
                     <p className="px-3">
-                    <FormattedMessage id={"applypage.applicationProcess.step3.text"}/>
+                      <FormattedMessage id={"applypage.applicationProcess.step3.text"}/>
                     </p>
                   </div>
                 </div>
-
                 <div className="row d-flex align-items-end">
                   <div className="col">
                     <button
