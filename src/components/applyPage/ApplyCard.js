@@ -1,14 +1,20 @@
 import React, { useState } from "react"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+import dayjs from "dayjs"
+
+// components
 import ApplicationCountdown from "./ApplicationCountdown"
 
+// assets
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
 import dswhite from "../../assets/ds_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import dayjs from "dayjs"
+
 
 const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   const [isClicked, setIsClicked] = useState(false)
@@ -104,7 +110,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                 )}
               </div>
             </div>
-            <p>Available Tracks</p>
+            <p>
+              <FormattedMessage id="applypage.applyCard.availableTracks"/>
+            </p>
             <div className="row px-2 my-2">
               <div className="col">
                 {cityValues.avaiableTracks.ai && (
@@ -116,13 +124,13 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                           ? aiwhite
                           : ai
                       }
-                      alt="artificial intelligence"
+                      alt="Artificial Intelligence"
                       width="15"
                       height="15"
                       className="mr-2"
                     />
                     <p className="chooseCity--subject">
-                      Artifical Intelligence
+                      <FormattedMessage id="projects.tech.ai"/>  
                     </p>
                   </div>
                 )}
@@ -135,12 +143,14 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                           ? dswhite
                           : ds
                       }
-                      alt="data science"
+                      alt="Data Science"
                       width="15"
                       height="15"
                       className="mr-2"
                     />
-                    <p className="chooseCity--subject">Data Science</p>
+                    <p className="chooseCity--subject">
+                      <FormattedMessage id="projects.tech.ds"/>
+                    </p>
                   </div>
                 )}
               </div>
@@ -154,12 +164,14 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                           ? webwhite
                           : web
                       }
-                      alt="artificial intelligence"
+                      alt="Web Development"
                       width="15"
                       height="15"
                       className="mr-2"
                     />
-                    <p className="chooseCity--subject">Web Development</p>
+                    <p className="chooseCity--subject">
+                      <FormattedMessage id="projects.tech.webdev"/>
+                    </p>
                   </div>
                 )}
                 {cityValues.avaiableTracks.ux && (
@@ -171,12 +183,14 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                           ? webwhite
                           : web
                       }
-                      alt="data science"
+                      alt="UX Design"
                       width="15"
                       height="15"
                       className="mr-2"
                     />
-                    <p className="chooseCity--subject">UX Design</p>
+                    <p className="chooseCity--subject">
+                      <FormattedMessage id="projects.tech.ux"/>
+                    </p>
                   </div>
                 )}
               </div>
