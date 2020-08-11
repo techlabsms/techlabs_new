@@ -58,7 +58,7 @@
   "ai.more.LeftImageSection.text":"Der KI-Track ist in verschiedenen Versionen erhältlich. Du kannst den Deep-Learning-Teil mit einer Auffrischung Deiner Python- und Maschinenkenntnisse kombinieren. Trotz dieser Auffrischung solltest Du bereits über einige Kenntnisse in Python und Machine Learning verfügen. Du erwirbst sowohl theoretisches Wissen als auch praktische Erfahrung. Die Hauptanwendungen sind Bildklassifikation, Objekterkennung und Text-Mining. Darüber hinaus wirst Du neuronale Netze einsetzen, um Objekte in einem Bild zu erkennen und zu klassifizieren sowie interessante Muster in Textdaten zu finden (z.B. Amazon Rezensionen). Neben der Anwendung enthält der Track Informationen über die wichtigsten mathematischen Grundlagen neuronaler Netze. Dazu gehören Backpropagation, Gradientenabstieg und Vektorisierung von Wörtern.",
   "ai.first_impression.FirstImpression.heading":"Verschaffe Dir einen ersten Eindruck",
   "ai.first_impression.FirstImpression.subheading":"Schaue dir unseren Einstiegskurs an, den jeder belegen kann!",
-  "ai.first_impression.FirstImpression.firstHeading":"Einfrührung Künstliche Intelligenz",
+  "ai.first_impression.FirstImpression.firstHeading":"Einführung Künstliche Intelligenz",
   "ai.first_impression.FirstImpression.firstText":"Schaue Dir unseren freiverfügbaren Einstiegskurs an, den jeder belegen kann!",
   
   "applypage.headline.ApplicationHero.headingFirst":"Bewerbung",
