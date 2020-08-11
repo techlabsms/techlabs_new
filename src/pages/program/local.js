@@ -161,18 +161,18 @@ class local extends Component {
           />
           <Process />
           <LearnMore
-            heading="Learn More"
-            subheading="Get more information about the three different learning tracks!"
-            firstProjectHeading="Web Development"
+            heading={<FormattedMessage id={"program.local.learn_more.heading"}/>}
+            subheading={<FormattedMessage id={"program.local.learn_more.subheading"}/>}
+            firstProjectHeading={<FormattedMessage id={"program.local.learn_more.firstProject"}/>}
             firstProjectImage={web}
             firstLink="/web"
-            secondProjectHeading="Data Science"
+            secondProjectHeading={<FormattedMessage id={"program.local.learn_more.secondProject"}/>}
             secondProjectImage={DataScience}
             secondLink="/dataScience"
-            thirdProjectHeading="Artificial Intelligence"
+            thirdProjectHeading={<FormattedMessage id={"program.local.learn_more.thirdProject"}/>}
             thirdProjectImage={AI}
             thirdLink="/ai"
-            fourthProjectHeading="User Experience Design"
+            fourthProjectHeading={<FormattedMessage id={"program.local.learn_more.fourthProject"}/>}
             fourthProjectImage={UX}
             fourthLink="/ux"
           />
