@@ -3,6 +3,8 @@ import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import { Link } from "gatsby"
 
+import { FormattedMessage } from "gatsby-plugin-intl"
+
 const Table = ({
   heading,
   subheading,
@@ -30,99 +32,125 @@ const Table = ({
           </tr>
           <tr>
             <td>
-              <strong>Time</strong>
+              <strong>
+                <FormattedMessage
+                id={"program.local.table.row1.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
-                2 Month Program
-                <br />6 hours/ week
+              <FormattedMessage
+                id={"program.local.table.row1.col2"}/>
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <p>
-                5 Month Program
-                <br />
-                3-5 hours/ week
+              <FormattedMessage
+                id={"program.local.table.row1.col3"}/>
               </p>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Who is eligable to apply?</strong>
+              <strong>
+              <FormattedMessage
+                id={"program.local.table.row2.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
-              Everybody from anywhere in the world.
+            <FormattedMessage
+                id={"program.local.table.row2.col2"}/>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
-              Everybody who is living next to one of our locations and is able
-              to participate at local events.
+            <FormattedMessage
+                id={"program.local.table.row2.col3"}/>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>What is included?</strong>
+              <strong>
+              <FormattedMessage
+                id={"program.local.table.row3.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  <FormattedMessage
+                  id={"program.local.table.row3.col2.1"}/>
                 </li>
-                <li className="tableComponent--checkmark">Online Q&A</li>
                 <li className="tableComponent--checkmark">
-                  Bootcamp Certificate
+                  <FormattedMessage
+                  id={"program.local.table.row3.col2.2"}/>
+                </li>
+                <li className="tableComponent--checkmark">
+                  <FormattedMessage
+                  id={"program.local.table.row3.col2.3"}/>
                 </li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.1"}/>
                 </li>
                 <li className="tableComponent--checkmark">
-                  Mentorship on campus
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.2"}/>
                 </li>
-                <li className="tableComponent--checkmark">Local Events</li>
                 <li className="tableComponent--checkmark">
-                  Digital Shaper Certificate
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.3"}/>
+                </li>
+                <li className="tableComponent--checkmark">
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.4"}/>
                 </li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Which tracks are open?</strong>
+              <strong>
+                <FormattedMessage
+                  id={"program.local.table.row4.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Web Development</li>
-                <li>Data Science (Python)</li>
-                <li>AI</li>
-                <li>UX Design</li>
+                <li><FormattedMessage id={"program.local.table.row4.col2.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col2.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col2.3"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col2.4"}/></li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li>Premium Web Development</li>
-                <li>Premium Data Science <br/>(Python & R)</li>
-                <li>Premium AI</li>
-                <li>Premium UX Design</li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.3"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.4"}/></li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>What is main difference?</strong>
+              <strong>
+              <FormattedMessage
+                  id={"program.local.table.row5.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Online Community </li>
-                <li>Complete a Coding Challenge</li>
+                <li><FormattedMessage id={"program.local.table.row5.col2.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col2.2"}/></li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li>Local Community and Mentors</li>
-                <li>Complete a Team Project</li>
+                <li><FormattedMessage id={"program.local.table.row5.col3.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col3.2"}/></li>
               </ul>
             </td>
           </tr>
