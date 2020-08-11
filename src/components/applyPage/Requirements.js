@@ -1,7 +1,15 @@
 import React from "react"
-import locationsImg from "../../assets/locations.png"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+
+// assets
+import locationsImg from "../../assets/locations.png"
+
 
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (

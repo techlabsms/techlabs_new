@@ -1,22 +1,30 @@
 import React from "react"
+import { graphql } from "gatsby"
+
+// plugins & external
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
+
+// components
 import Slider from "../components/landingpage/Slider"
 import RightImageSectionHeading from "../components/shared/RightImageSectionHeading"
 import PartnerLogos from "../components/landingpage/PartnerLogos"
-import GIC from "../assets/gic.svg"
 import KeyBenefits from "../components/shared/KeyBenefits"
 import Quote from "../components/shared/Quote"
-import gic from "../assets/gic_team.png"
-import { Link, graphql } from "gatsby"
-import "../styles/_main.scss"
-import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "../components/landingpage/applicationPeriod"
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "../components/Layout/Layout"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
+
+// assets
+import GIC from "../assets/gic.svg"
+import gic from "../assets/gic_team.png"
+
+// styles 
+import "../styles/_main.scss"
+import "../styles/bootstrap.min.css"
 
 class index extends React.Component {
 

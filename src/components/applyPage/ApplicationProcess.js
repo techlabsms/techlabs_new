@@ -1,8 +1,15 @@
 import React from "react"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Heading from "../smallComponents/Heading"
+
+// assets
 import prerectangle from "../../assets/precatngle.png"
 import arrowRight from "../../assets/arrowRight.png"
 import arrowLeft from "../../assets/arrowLeft.png"
-import Heading from "../smallComponents/Heading"
 
 class ApplicationProcess extends React.Component {
   state = {

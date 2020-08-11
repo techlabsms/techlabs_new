@@ -62,7 +62,7 @@
   "ai.first_impression.FirstImpression.firstText":"Schaue Dir unseren freiverfügbaren Einstiegskurs an, den jeder belegen kann!",
   
   "applypage.headline.ApplicationHero.headingFirst":"Bewerbung",
-  "applypage.headline.ApplicationHero.intro":"Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program.",
+  "applypage.headline.ApplicationHero.intro":"TBD",
   "applypage.requirements.heading":"Application Requirements",
   "applypage.requirements.subheading":"Worauf achten wir bei einer Bewerbung?",
   "applypage.applicationProcess.heading":"Bewerbungsprozess",
@@ -211,6 +211,7 @@
   "location.aachen": "Aachen",
   "location.barcelona": "Barcelona",
   "location.berlin": "Berlin",
+  "location.munich": "München",
   "location.city": "Stadt",
   "location.copenhagen": "Kopenhagen",
   "location.country": "Land",
@@ -265,11 +266,14 @@
   "callToAction.third": "Bist du bereit, ",
   "callToAction.fourth": "das Lernen anzufangen?",
   "callToAction.button": "Bewirb dich jetzt",
+  "callToAction.button.closed": "Bewerbung geschlossen",
+
 
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",
   "faq_1.question": "Wie bewerbe ich mich für das Digital Shaper Programm?",
   "faq_1.answer": "Dies kann direkt auf unserer Bewerbungsseite erfolgen. Beachte dafür die Bewerbungsfrist für den jeweiligen  Standort.",
+  "faq_1.applypage.answer": "Dies kann direkt über unser Antragsformular für den jeweiligen Standort erfolgen.",
   "faq_2.question": "Worauf achtet ihr bei einer Bewerbung?",
   "faq_2.answer": "Bei TechLabs wollen wir verstehen, welche Motive hinter Deiner Bewerbung stecken. Also zögere nicht, Dich unabhängig von Deinem Studienhintergrund und Deinen Vorkenntnissen zu bewerben. Es gibt keine richtigen Antworten auf unsere Fragen.",
   "faq_3.question": "Wie viel Zeit wird benötigt, um das Digital Shaper Zertifikat zu erhalten?",
