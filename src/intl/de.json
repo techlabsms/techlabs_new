@@ -260,6 +260,12 @@
   "projects.tech.ux": "UX Design",
   "projects.button": "Mehr Informationen",
 
+  "callToAction.first": "Kannst du es kaum abwarten,",
+  "callToAction.second": " die meistgefragten Tech-Skills zu erwerben?",
+  "callToAction.third": "Bist du bereit, ",
+  "callToAction.fourth": "das Lernen anzufangen?",
+  "callToAction.button": "Bewirb dich jetzt",
+
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",
   "faq_1.question": "Wie bewerbe ich mich für das Digital Shaper Programm?",
