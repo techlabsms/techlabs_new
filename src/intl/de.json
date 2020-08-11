@@ -294,6 +294,21 @@
   "callToAction.button.closed": "Bewerbung geschlossen",
 
 
+  "layout.locations": "Standorte",
+  "layout.program": "Programm",
+  "layout.dsp": "Digital Shaper-Programm",
+  "layout.webdev": "Web-Entwicklung",
+  "layout.ai": "Künstliche Intelligenz",
+  "layout.openPositions": "Offene Stellen",
+  "navbar.locations.all": "Alle Standorte",
+  "navbar.locations.becomeFounder": "Werde Co-Founder",
+  "navbar.about": "Über uns",
+  "footer.about_us": "Über uns",
+  "footer.terms": "Terms",
+  "footer.terms.privacy": "Datenschutzerklärung",
+  "footer.terms.imprint": "Impressum",
+
+
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",
   "faq_1.question": "Wie bewerbe ich mich für das Digital Shaper Programm?",
