@@ -6,6 +6,7 @@ import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
 import Layout from "../components/Layout/Layout"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 class foundYourOwn extends Component {
   render() {
@@ -16,28 +17,27 @@ class foundYourOwn extends Component {
             <div className="row">
               <div className="col-md-6 my-auto xs-margin-right">
                 <h1 className="display-5 foundYourOwn--heading">
-                  Bring TechLabs to <br />
-                  <span className="foundYourOwn--highlight">your own city</span>
+                  <FormattedMessage id="foundYourOwn.headline.text1" /> <br />
+                  <span className="foundYourOwn--highlight">
+                    <FormattedMessage id="foundYourOwn.headline.text2" />
+                  </span>
                 </h1>
                 <p className="mb-4 margin-top-15 margin-bottom-2 foundYourOwn--subtitle">
-                  Become a Co-Founder of TechLabs
+                  <FormattedMessage id="foundYourOwn.subheading.text" />
                 </p>
                 <ul className="foundYourOwn--list mb-4">
                   <li>
-                    You are looking for a new challenge and are passionate about
-                    tech?
+                    <FormattedMessage id="foundYourOwn.list.entry1.text" />
                   </li>
                   <li>
-                    You always wanted to found an initiative yourself and turn
-                    own ideas into action?
+                    <FormattedMessage id="foundYourOwn.list.entry2.text" />
                   </li>
                   <li>
-                    You want to help others on a voluntary basis prepare for the
-                    challenges of tomorrow?
+                    <FormattedMessage id="foundYourOwn.list.entry3.text" />
                   </li>
                 </ul>
                 <h3 className="foundYourOwn--cta-first my-5">
-                  Perfect, let’s make a difference! Together.
+                  <FormattedMessage id="foundYourOwn.heading3.text" />
                 </h3>
               </div>
               <div className="col-md-6">
@@ -54,29 +54,22 @@ class foundYourOwn extends Component {
           <div className="container">
             <div className="row">
               <h2 className="ml-3">
-                You are looking for a new challenge and are{" "}
+                <FormattedMessage id="foundYourOwn.challenge.heading.text1" />{" "}
                 <span className="foundYourOwn--cta">
-                  passionate about Tech?
+                  <FormattedMessage id="foundYourOwn.challenge.heading.text2" />{" "}
                 </span>
               </h2>
             </div>
             <div className="row mt-3">
               <div class="card mb-3">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 d-flex justify-content-center">
                     <img src={PictureOne} class="card-img" alt="..." />
                   </div>
                   <div class="col-md-6">
                     <div class="card-body">
                       <p class="foundYourOwn--card-text ml-3 mr-3 mt-5">
-                        We at TechLabs dream of a world with no digital
-                        illiterates. A world full of tech-savvy individuals who
-                        approach the challenges of our time with a digital and
-                        entrepreneurial mindset. In order to achieve this, we
-                        aim to turn as many young people as possible into
-                        Digital Shapers, which necessarily requires a global
-                        approach. Let’s join forces to shape the future of tech
-                        education!
+                        <FormattedMessage id="foundYourOwn.challenge.card.text" />{" "}
                       </p>
                     </div>
                   </div>
@@ -85,8 +78,11 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                You want to found an initiative yourself and turn own ideas
-                <span className="foundYourOwn--cta"> into action?</span>
+                <FormattedMessage id="foundYourOwn.initiative.heading.text1" />
+                <span className="foundYourOwn--cta">
+                  {" "}
+                  <FormattedMessage id="foundYourOwn.initiative.heading.text2" />
+                </span>
               </h2>
             </div>
             <div className="row mt-3">
@@ -95,19 +91,11 @@ class foundYourOwn extends Component {
                   <div class="col-md-6 ">
                     <div class="card-body ">
                       <p class="foundYourOwn--card-text mr-3 ml-3 mt-5">
-                        Found a new TechLabs location in your city and be part
-                        of our extensive network to leverage your engagement,
-                        expertise, and ideas. Create a local tech community,
-                        organize workshops and coding sessions, establish
-                        cooperations with local supporters – your possibilities
-                        are endless. We not only support you in creating your
-                        own location but also offer a unique platform for you
-                        and your team to make an impact even beyond the local
-                        level!
+                        <FormattedMessage id="foundYourOwn.initiative.card.text" />
                       </p>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 d-flex justify-content-center">
                     <img src={PictureTwo} class="card-img" alt="..." />
                   </div>
                 </div>
@@ -115,30 +103,22 @@ class foundYourOwn extends Component {
             </div>
             <div className="row my-5">
               <h2 className="ml-3">
-                You want to support others prepare for the challenges
-                <span className="foundYourOwn--cta"> of tomorrow?</span>
+                <FormattedMessage id="foundYourOwn.prepare.heading.text1" />{" "}
+                <span className="foundYourOwn--cta">
+                  <FormattedMessage id="foundYourOwn.prepare.heading.text2" />
+                </span>
               </h2>
             </div>
             <div className="row mt-3">
               <div class="card mb-3">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 d-flex justify-content-center">
                     <img src={PictureThree} class="card-img" alt="..." />
                   </div>
                   <div class="col-md-6">
                     <div class="card-body">
                       <p class="foundYourOwn--card-text ml-3 mr-3 mt-3">
-                        As a TechLabs Co-Founder, your mission is to build a new
-                        location from scratch. To create the best possible
-                        learning environment, our approach combines online
-                        courses, offline communities, and a project phase. In
-                        addition to these core elements, we put huge emphasis on
-                        the individual character of each location. Think of
-                        TechLabs as a proven concept consisting of a variety of
-                        building blocks to choose from. By compiling these
-                        different blocks according to your preferences, you can
-                        create your very own version of TechLabs. Your location
-                        is your project!
+                        <FormattedMessage id="foundYourOwn.prepare.card.text" />
                       </p>
                     </div>
                   </div>
@@ -155,9 +135,9 @@ class foundYourOwn extends Component {
               </div>
               <div className="col-6">
                 <h1 className="foundYourOwn--last">
-                  You can’t wait to open your{" "}
+                  <FormattedMessage id="foundYourOwn.wait.heading.text1" />{" "}
                   <span className="foundYourOwn--cta">
-                    own TechLabs location?
+                    <FormattedMessage id="foundYourOwn.wait.heading.text2" />
                   </span>
                 </h1>
               </div>
@@ -177,7 +157,7 @@ class foundYourOwn extends Component {
                   className="btn btn-primary d-inline"
                   href="mailto:bizdev@techlabs.org?subject=Found your own location"
                 >
-                  Contact us
+                  <FormattedMessage id="foundYourOwn.calltoAction.text" />
                 </a>
               </div>
             </div>
