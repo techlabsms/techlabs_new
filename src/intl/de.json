@@ -78,6 +78,7 @@
   "dataScience.why.RightImageSection.heading":"Warum Data Science?",
   "dataScience.why.RightImageSection.subheading":"Datenwissenschaftler - Der gefragteste Job im 21. Jahrhundert!",
   "dataScience.why.RightImageSection.text":"'Daten sind das neue Öl - ein einprägsamer Satz, der bereits 2006 ausgesprochen wurde und mit der Zeit immer wichtiger wird. Was macht Unternehmen wie Google, Baidu oder Amazon so mächtig? Es ist die Datenmenge, die sie besitzen, und die Mitarbeiter, die diese Daten analysieren können. Das entstehende Datenvolumen sowie die Anzahl der Unternehmen, die dieses Datenwachstum jedes Jahr exponentiell nutzen wollen. In diesem Meer von immer mehr Daten, die darauf warten, entdeckt zu werden, gibt es schöne und interessante Einblicke, und die Datenwissenschaft ist der Schlüssel, um all diese verborgenen Erkenntnisse zu entschlüsseln. Daher steigt die Nachfrage nach Datenwissenschaftlern.",
+  "whatYouWillLearn.heading": "Was wirst du lernen?",
   "dataScience.learn.WhatYouWillLearn.intro":"Data Science ist ein multidisziplinärer Bereich. Im Kern geht es darum, aus Daten wertvolle Erkenntnisse zu gewinnen.",
   "dataScience.learn.WhatYouWillLearn.first":"Wie man Modelle des maschinellen Lernens anwendet, um Probleme wie Churn-Prognose oder Kundensegmentierung zu lösen.",
   "dataScience.learn.WhatYouWillLearn.second":"Analysiere Rohdaten zur Gewinnung nützlicher Erkenntnisse",
@@ -92,7 +93,8 @@
   "dataScience.first_impression.FirstImpression.firstText":"Beginne mit unserem kostenlosen Kurs, um die Grundlagen im Bereich Data Science mit Python zu erlernen und um festzustellen, ob das Digital Shaper Program zu Dir passt!",
   "dataScience.first_impression.FirstImpression.secondHeading":"Einführung in Data Science mit R",
   "dataScience.first_impression.FirstImpression.secondText":"Beginne mit unserem kostenlosen Kurs, um die Grundlagen im Bereich Data Science mit R zu erlernen und um festzustellen, ob das Digital Shaper Program zu Dir passt!",
- 
+  "dataScience.first_impression.FirstImpression.button": "Los geht's",
+
 
   "foundYourOwn.headline.text1":"Bringt TechLabs in ",
   "foundYourOwn.headline.text2":"Deine Stadt",
@@ -372,7 +374,8 @@
   "testimonial.heading": "Was unsere Partner sagen",
   "program.local.testimonial.subheading": "Entdecke, was unsere Partner über die Fähigkeiten denken, die du bei TechLabs erlernst!",
   "program.local.timothee.quote": "Tolles Konzept - ich treffe gerne junge interessierte Menschen aus verschiedenen Bereichen, die sich für digitale Themen und effiziente Arbeitsmethoden interessieren.",
-
+  "dataScience.testimonial.subheading": "Entdecke, was unsere Partner über TechLabs denken!",
+  "dataScience.katharina.quote": "TechLabs bietet den Teilnehmern die Möglichkeit, Innovation zu lernen und direkt mit Unternehmen in Kontakt zu treten. Eine großartige Kombination und Partner!",
 
   "program.index.table.heading": "Welche Arten von Programmen bieten wir an?",
   "program.index.table.subheading": "Bei Techlabs kannst Du vollständig online studieren oder Teil von lokalen Gemeinschaften werden!"

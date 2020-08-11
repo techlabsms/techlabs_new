@@ -1,8 +1,15 @@
 import React from "react"
+
+// plugins && external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import ArrowButton from "../smallComponents/ArrowButton"
+
+// assets
 import clock from "../../assets/clock.png"
 import diploma from "../../assets/diploma.png"
 import profile from "../../assets/profile.png"
-import ArrowButton from "../smallComponents/ArrowButton"
 
 const ProgrammHero = ({
   headingFirst,

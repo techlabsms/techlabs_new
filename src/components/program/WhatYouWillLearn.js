@@ -1,11 +1,18 @@
 import React from "react"
+
+// plugins && external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
 const WhatYouWillLearn = ({ intro, first, second, third, fourth }) => {
   return (
     <Container>
-      <Heading heading="What Will You Learn?" subheading={intro} />
+      <Heading 
+      heading={<FormattedMessage id={"whatYouWillLearn.heading"}/>} 
+      subheading={intro} />
 
       <div className="row">
         <div className="col">

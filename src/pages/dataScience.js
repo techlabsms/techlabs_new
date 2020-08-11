@@ -33,42 +33,38 @@ class dataScience extends Component {
       <Layout>
         <div className="container-fluid">
           <ProgrammHero
-            headingFirst="Data"
-            headingSecond=" Science"
+            headingFirst={<FormattedMessage id={"dataScience.headline.ProgrammHero.headingFirst"}/>}
+            headingSecond={<FormattedMessage id={"dataScience.headline.ProgrammHero.headingSecond"}/>}
             showCard={true}
             background={background}
-            intro="Inform yourself here about our Data Science track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate."
+            intro={<FormattedMessage id={"dataScience.headline.ProgrammHero.intro"}/>}
             backgroundMobil={backgroundMobil}
           />
         </div>
         <div className="container">
           <RightImageSection
-            heading="Why Data Science?"
-            subheading="Data Scientist - The most in demand job in the 21st century!"
-            text="“Data is the new oil” - a catchy phrase already said in 2006, which becomes more important over time. What makes companies like Google, Baidu or Amazon so powerful? It’s the amount of data they possess and the employees that are able to analyze it. 
-                  The data volume that is created as well as the number of companies that want to use this data growth exponentially every year. There are beautiful and interesting insights hidden in this sea of ever increasing data, waiting to be discovered and Data Science is the key to decipher all these hidden insights. Therefore the demand for data scientists is increasing. 
-                  Data Science is a pretty versatile field. Data Scientist are demanded in almost ever field you can imagine, such as HealthCare, Banking, Logistics, E-Commerce and many more. Hence, as a data scientist you are able to solve a lot of different problems, gain important knowledge and deliver value to other people and your business."
+            heading={<FormattedMessage id={"dataScience.why.RightImageSection.heading"}/>}
+            subheading={<FormattedMessage id={"dataScience.why.RightImageSection.subheading"}/>}
+            text={<FormattedMessage id={"dataScience.why.RightImageSection.text"}/>}
             image={dsCover}
           />
           <WhatYouWillLearn
-            intro="Data Science is a multidisciplinary domain. In it’s core it is the task of finding valuable insights from data."
-            first="How to apply machine learning models to solve problems like churn prediction or customer segmentation"
-            second="Exploration of raw data to gain useful insights"
-            third="General programming knowledge in R or Python"
-            fourth="How to present your results in a structured and visually appealing way"
+            intro={<FormattedMessage id={"dataScience.learn.WhatYouWillLearn.intro"}/>}
+            first={<FormattedMessage id={"dataScience.learn.WhatYouWillLearn.first"}/>}
+            second={<FormattedMessage id={"dataScience.learn.WhatYouWillLearn.second"}/>}
+            third={<FormattedMessage id={"dataScience.learn.WhatYouWillLearn.third"}/>}
+            fourth={<FormattedMessage id={"dataScience.learn.WhatYouWillLearn.fourth"}/>}
           />
           <LeftImageSection
-            heading="More about the Track"
-            subheading="Learn data science - hands-on or theory - R or Python - your choice"
-            text="It doesn't matter if you are a beginner or already have some experience. The program is designed so that you can choose which level of experience you want to start with, whether you want to do hands-on or theory courses and whether you prefer to program in Python or R. You decide.
-                  Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction.
-                  The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses."
+            heading={<FormattedMessage id={"dataScience.more.LeftImageSection.heading"}/>}
+            subheading={<FormattedMessage id={"dataScience.more.LeftImageSection.subheading"}/>}
+            text={<FormattedMessage id={"dataScience.more.LeftImageSection.text"}/>}
             image={david}
           />
           <Testimonial
-            heading="What our partners say"
-            subheading="Read what our partners think about TechLabs!"
-            text="TechLabs allows participants the chance to learn something innovative and to connect directly to companies. A great combination and partner!"
+            heading={<FormattedMessage id={"testimonial.heading"}/>}
+            subheading={<FormattedMessage id={"dataScience.testimonial.subheading"}/>}
+            text={<FormattedMessage id={"dataScience.katharina.quote"}/>}
             testimonialAvatar={data.katharina.childImageSharp.fluid}
             testimonialName="Katharina Schamber"
             testimonialTagline="Application Development Specialist @"
@@ -77,32 +73,33 @@ class dataScience extends Component {
           <Projects />
           <CallToAction />
           <FirstImpression
-            heading="Get a First impression"
-            subheading="Check out our curriculum that is open for everybody!"
-            firstHeading="Introduction to Data Science with Python"
+            heading={<FormattedMessage id={"dataScience.first_impression.FirstImpression.heading"}/>}
+            subheading={<FormattedMessage id={"dataScience.first_impression.FirstImpression.subheading"}/>}
+            firstHeading={<FormattedMessage id={"dataScience.first_impression.FirstImpression.firstHeading"}/>}
             firstImage={dashboard}
-            firstText="Start with our free track and learn the fundamentals of Data Science with Python now and see if you want to join the Digital Shaper Program!"
+            firstText={<FormattedMessage id={"dataScience.first_impression.FirstImpression.firstText"}/>}
             firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
           />
+
           <Faq>
             <FaqQuestion
-              question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
+              question={<FormattedMessage id={"faq_1.question"}/>}
+              answer={<FormattedMessage id={"faq_1.answer"}/>}
             />
             <FaqQuestion
-              question="What do you look for in an applicant?"
-              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
+              question={<FormattedMessage id={"faq_2.question"}/>}
+              answer={<FormattedMessage id={"faq_2.answer"}/>}
             />
             <FaqQuestion
-              question="How much time is required to become Digital Shaper?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
+              question={<FormattedMessage id={"faq_3.question"}/>}
+              answer={<FormattedMessage id={"faq_3.answer"}/>}
             />
           </Faq>
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
                 <Link to="/faq" className="btn btn-primary">
-                  More Questions?
+                  <FormattedMessage id={"faq.button"}/>
                 </Link>
               </div>
             </div>
