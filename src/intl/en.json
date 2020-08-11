@@ -150,6 +150,7 @@
   "navbar.locations.becomeFounder": "Become a Co-Founder",
   "navbar.about": "About",
   "navbar.blog": "Blog",
+  "navbar.slack": "Join our Slack",
   "footer.about_us": "About us",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -258,7 +259,8 @@
   "applypage.moreinformation.subheading":"Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!",
   "applypage.text.start_now":"Start now",
   
-  "programs.heading": "Our Learning Programs",
+  "programs.heading.1": "Our learning ",
+  "programs.heading.2": "Programs",
   "programs.subheading": "Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now.",
   "programs.techlabs_academy.subheading": "Explore our courses and choose the one that suits you the most!",
   "programs.learn_more.subheading": "Get more information about the programs!",

@@ -26,8 +26,8 @@ const index = () => {
       <div>
         <Navbar />
         <ProgrammHero
-          headingFirst="Our Learning"
-          headingSecond="Programs"
+          headingFirst={<FormattedMessage id={"programs.heading.1"} />}
+          headingSecond={<FormattedMessage id={"programs.heading.2"} />}
           intro={
             <FormattedMessage id={"programs.subheading"} />
           }

@@ -255,7 +255,8 @@
   "applypage.choose.your.city.subtitle": "Momentan sind wir vertreten in Muenster, Copenhagen, Barcelona, Medellín, Curitiba, Berlin, Dortmund und Aachen!",
   "location.dortmund": "Dortmund",
 
-  "programs.heading": "Unsere Lernprogramme",
+  "programs.heading.1": "Unsere ",
+  "programs.heading.2": "Lernprogramme",
   "programs.subheading": "Unser Programm bietet Dir die effektivste Möglichkeit, Domänenwissen im technischen Bereich aufzubauen. Unser Blended-Learning-Konzept kombiniert Online-Lernen, Projektarbeit und TechLabs Community Events. Entdecke unser Programm jetzt.",
   "programs.techlabs_academy.subheading": "Erkunde unsere Kurse und wähle denjenigen, der Dir am besten passt!",
   "programs.learn_more.subheading": "Erfahre mehr über die Programme!",
@@ -308,6 +309,7 @@
   "navbar.locations.becomeFounder": "Werde Co-Founder",
   "navbar.about": "Über uns",
   "navbar.blog": "Blog",
+  "navbar.slack": "Unser Slack",
   "footer.about_us": "Über uns",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
