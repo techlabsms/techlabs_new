@@ -78,26 +78,26 @@ const index = () => {
           <Faq>
             <FaqQuestion
               question={
-                <FormattedMessage id={"programs.faq_1.question"}/>
+                <FormattedMessage id={"faq_1.question"}/>
               }
               answer={
-                <FormattedMessage id={"programs.faq_1.answer"}/>
+                <FormattedMessage id={"faq_1.answer"}/>
               }
             />
             <FaqQuestion
               question={
-                <FormattedMessage id={"programs.faq_2.question"}/>
+                <FormattedMessage id={"faq_2.question"}/>
               }
               answer={
-                <FormattedMessage id={"programs.faq_2.answer"}/>
+                <FormattedMessage id={"faq_2.answer"}/>
               }
             />
             <FaqQuestion
               question={
-                <FormattedMessage id={"programs.faq_3.question"}/>
+                <FormattedMessage id={"faq_3.question"}/>
               }
               answer={
-                <FormattedMessage id={"programs.faq_3.answer"}/>
+                <FormattedMessage id={"faq_3.answer"}/>
               }
             />
           </Faq>
@@ -106,7 +106,7 @@ const index = () => {
               <div className="col text-center">
                 <Button 
                 text={
-                  <FormattedMessage id={"programs.faq.button"}/>
+                  <FormattedMessage id={"faq.button"}/>
                 }
                 link="/faq" 
                 primary={true} />

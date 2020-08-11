@@ -12,10 +12,10 @@ const Faq = props => {
         <div className="row my-3">
           <Heading 
           heading={
-            <FormattedMessage id={"programs.faq.heading"}/>
+            <FormattedMessage id={"faq.heading"}/>
           }
           subheading={
-            <FormattedMessage id={"programs.faq.subheading"}/>
+            <FormattedMessage id={"faq.subheading"}/>
           } />
         </div>
         <div className="row">
