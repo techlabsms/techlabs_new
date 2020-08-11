@@ -22,7 +22,9 @@ const index = () => {
         <ProgrammHero
           headingFirst="Our Learning"
           headingSecond="Programs"
-          intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
+          intro={
+            <FormattedMessage id={"programs.subheading"} />
+          }
           background={background}
           backgroundMobil={ProgrammMobil}
         />
@@ -54,33 +56,60 @@ const index = () => {
             }
           />
           <LearnMore
-            heading="Learn More"
-            subheading="Get more information about the programs!"
+            heading={
+              <FormattedMessage id={"landingpage.learn_more.heading"} />
+            } 
+            subheading={
+              <FormattedMessage id={"programs.learn_more.subheading"} />
+            } 
             firstProjectHeading="Local Digital Shaper Program"
             firstProjectImage={web}
             firstLink="/program/local"
+            firstButtonText={
+              <FormattedMessage id={"programs.learn_more.button"}/>
+            }
             secondProjectHeading="#codeathome Bootcamp"
             secondProjectImage={DataScience}
             secondLink="/program/remote"
+            secondButtonText={
+              <FormattedMessage id={"programs.learn_more.button"}/>
+            }
           />
           <Faq>
             <FaqQuestion
-              question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
+              question={
+                <FormattedMessage id={"programs.faq_1.question"}/>
+              }
+              answer={
+                <FormattedMessage id={"programs.faq_1.answer"}/>
+              }
             />
             <FaqQuestion
-              question="What should I write in my application to be accepted?"
-              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
+              question={
+                <FormattedMessage id={"programs.faq_2.question"}/>
+              }
+              answer={
+                <FormattedMessage id={"programs.faq_2.answer"}/>
+              }
             />
             <FaqQuestion
-              question="How can I imagine the time required?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
+              question={
+                <FormattedMessage id={"programs.faq_3.question"}/>
+              }
+              answer={
+                <FormattedMessage id={"programs.faq_3.answer"}/>
+              }
             />
           </Faq>
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button text="More Questions?" link="/faq" primary={true} />
+                <Button 
+                text={
+                  <FormattedMessage id={"programs.faq.button"}/>
+                }
+                link="/faq" 
+                primary={true} />
               </div>
             </div>
           </div>

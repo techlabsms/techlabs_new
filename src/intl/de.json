@@ -238,9 +238,22 @@
   "applypage.choose.your.city.title": "Wähle Deine Stadt",
   "applypage.choose.your.city.subtitle": "Momentan sind wir vertreten in Muenster, Copenhagen, Barcelona, Medellín, Curitiba, Berlin, Dortmund und Aachen!",
   "location.dortmund": "Dortmund",
+
+  "programs.heading": "Unsere Lernprogramme",
+  "programs.subheading": "Unser Programm bietet Dir die effektivste Möglichkeit, Domänenwissen im technischen Bereich aufzubauen. Unser Blended-Learning-Konzept kombiniert Online-Lernen, Projektarbeit und TechLabs Community Events. Entdecke unser Programm jetzt.",
+  "programs.techlabs_academy.subheading": "Erkunde unsere Kurse und wähle denjenigen, der Dir am besten passt!",
+  "programs.learn_more.subheading": "Erfahre mehr über die Programme!",
+  "programs.learn_more.button": "Mehr erfahren",
+  "programs.faq.heading": "FAQ",
+  "programs.faq.subheading": "Hast Du weitere Fragen?",
+  "programs.faq_1.question": "Wie kann ich mich für das Digital Shaper-Programm bewerben?",
+  "programs.faq_1.answer": "Dies kannst Du direkt auf unserer Bewerbungsseite tun. Achte darauf, die Bewerbungsfrist für Ihren Standort nachzuschlagen.",
+  "programs.faq_2.question": "Wasprograms.learn_more.subheading muss ich in meiner Bewerbung schreiben, um angenommen zu werden?",
+  "programs.faq_2.answer": "Bei TechLabs möchten wir verstehen, warum Du motiviert bist, an unserem Programm teilzunehmen. Wir bauen ein lebendiges und interdisziplinäres Team auf, also zöger nicht, Dich unabhängig von Deinem Studienhintergrund und Deinen Vorkenntnissen zu bewerben. Es gibt keine richtige Antwort auf unsere Fragen.",
+  "programs.faq_3.question": "Wie kann ich mir die benötigte Zeit vorstellen?",
+  "programs.faq_3.answer": "Im Allgemeinen ist das Lernen ein individueller Prozess. Dennoch empfehlen wir Dir, regelmäßig an Deinem Lehrplan zu arbeiten. Unsere Lernmaterialien haben eine Gesamtdauer von über 50 Stunden. Bitte bedenke auch, dass die Projektphase in der Regel mit einem erhöhten Koordinationsaufwand mit Deinem Projektteam verbunden ist. Die investierte Zeit wird sich in jedem Fall lohnen!",
+  "programs.faq.button": "Weitere Fragen?",
  
-
-
   "program.remote.rightImageSection.topText": "Lass Dich nicht vom Virus davon abhalten, neue Fähigkeiten zu erlernen!",
   "program.remote.rightImageSection.heading": "Mache mit bei unserem digitalen #codeathome Bootcamp",
   "program.remote.rightImageSection.text": "Aufgrund des Corona-Virus haben wir ein neues Programm entwickelt. Lerne Datenwissenschaft, Künstliche Intelligenz, Webentwicklung und User Experience Design mit Hilfe unseres bahnbrechenden Programms Remote Digital Shaper, das für jeden völlig kostenlos ist! Das Programm beginnt am Montag",

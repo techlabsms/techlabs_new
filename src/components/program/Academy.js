@@ -6,6 +6,9 @@ import UX from "../../assets/UX.png"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+
 class Academy extends Component {
   state = {
     images: [DataScience, WebDev, AI, UX],
@@ -34,7 +37,10 @@ class Academy extends Component {
       <Container>
         <Heading
           heading="TechLabs Academy"
-          subheading="Explore our courses and choose the one that suits you the most!"
+
+          subheading={
+            <FormattedMessage id={"programs.techlabs_academy.subheading"} />
+          }
         />
         <div className="row mt-5 d-flex mb-5">
           <div className="col align-self-center text-center d-none d-lg-block">
