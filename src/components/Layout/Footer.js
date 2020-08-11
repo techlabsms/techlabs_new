@@ -170,11 +170,11 @@ const Footer = props => {
                     <FormattedMessage id="footer.terms"/>
                   </h5>
                   <Link className="foot-a" to="/privacyPolicy">
-                    <FormattedMessage id="footer.privacyPolicy"/>
+                    <FormattedMessage id="footer.terms.privacy"/>
                   </Link>
                   <br />
                   <Link className="foot-a" to="/imprint">
-                    <FormattedMessage id="footer.imprint"/>
+                    <FormattedMessage id="footer.terms.imprint"/>
                   </Link>
                 </div>
               </div>
