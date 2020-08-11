@@ -3,8 +3,21 @@ import Logo from "../../assets/tl-logo-white.svg"
 import PayPal from "../../assets/paypal.svg"
 import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulLocationPage {
+        edges {
+          node {
+            heading
+          }
+        }
+      }
+    }
+  `)
+  const { edges } = data.allContentfulLocationPage
   return (
     <>
       <CookieConsent
@@ -64,30 +77,17 @@ const Footer = props => {
                     Locations
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    <Link to="/location/Muenster" className="noDec">
-                      <li className="footer-tl--subMenu-link">Muenster</li>
-                    </Link>
-                    <Link to="/location/Copenhagen" className="noDec">
-                      <li className="footer-tl--subMenu-link">Copenhagen</li>
-                    </Link>
-                    <Link to="/location/Barcelona" className="noDec">
-                      <li className="footer-tl--subMenu-link">Barcelona</li>
-                    </Link>
-                    <Link to="/location/Medellín" className="noDec">
-                      <li className="footer-tl--subMenu-link">Medellín</li>
-                    </Link>
-                    <Link to="/location/Berlin" className="noDec">
-                      <li className="footer-tl--subMenu-link">Berlin</li>
-                    </Link>
-                    <Link to="/location/Curitiba" className="noDec">
-                      <li className="footer-tl--subMenu-link">Curitiba</li>
-                    </Link>
-                    <Link to="/location/Aachen" className="noDec">
-                      <li className="footer-tl--subMenu-link">Aachen</li>
-                    </Link>
-                    <Link to="/location/Dortmund" className="noDec">
-                      <li className="footer-tl--subMenu-link">Dortmund</li>
-                    </Link>
+                    {edges.map(location => (
+                      <Link
+                        to={`/location/${location.node.heading}`}
+                        className="noDec"
+                        key={location.node.heading}
+                      >
+                        <li className="footer-tl--subMenu-link">
+                          {location.node.heading}
+                        </li>
+                      </Link>
+                    ))}
                   </ul>
                   <Link className="foot-a" to="/faq">
                     FAQ
