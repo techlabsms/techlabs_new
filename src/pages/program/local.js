@@ -31,7 +31,7 @@ class local extends Component {
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond="Program"
-          intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
+          intro={<FormattedMessage id={"programs.subheading"}/>}
           background={background}
           backgroundMobil={ProgrammMobil}
         />
@@ -151,9 +151,9 @@ class local extends Component {
             }
           />
           <Testimonial
-            heading="What our partners say"
-            subheading="Read here what our partners think about the skills you learn at TechLabs!"
-            text="Great concept — I like to meet young interested people from various fields who are eager to learn about digital topics and efficient working methods."
+            heading={<FormattedMessage id={"testimonial.heading"}/>}
+            subheading={<FormattedMessage id={"program.local.testimonial.subheading"}/>}
+            text={<FormattedMessage id={"program.local.timothee.quote"}/>}
             testimonialAvatar={data.timothee.childImageSharp.fluid}
             testimonialName="Timothée Clolus"
             testimonialTagline="Front end Developer @"
