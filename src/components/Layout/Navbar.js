@@ -1,14 +1,23 @@
 import React from "react"
-import "../../styles/_main.scss"
-import logo from "../../assets/tl-logo.svg"
-import MobileNav from "./MobileNav"
 import Headroom from "react-headroom"
-import Head from "./Head"
 import { Link } from "gatsby"
+import "jquery"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import MobileNav from "./MobileNav"
+import Head from "./Head"
+
+// assets
+import logo from "../../assets/tl-logo.svg"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import "jquery"
+
+// styles
+import "../../styles/_main.scss"
 
 class Navbar extends React.Component {
   state = {
@@ -39,7 +48,7 @@ class Navbar extends React.Component {
                     data-toggle="dropdown"
                     activeClassName="navLink--active"
                   >
-                    Locations
+                    <FormattedMessage id="layout.locations"/>
                   </Link>
                   <div className="dropdown-menu">
                     <Link
@@ -47,14 +56,14 @@ class Navbar extends React.Component {
                       to="/locations"
                       activeClassName="navLink--active"
                     >
-                      All locations
+                      <FormattedMessage id="navbar.locations.all"/>
                     </Link>
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
                       activeClassName="navLink--active"
                     >
-                      Become a Co-Founder
+                      <FormattedMessage id="navbar.locations.becomeFounder"/>
                     </Link>
                   </div>
                 </li>
@@ -65,7 +74,7 @@ class Navbar extends React.Component {
                     data-toggle="dropdown"
                     activeClassName="navLink--active"
                   >
-                    Program
+                    <FormattedMessage id="layout.program"/>
                   </Link>
                   <div className="dropdown-menu">
                     <Link
@@ -73,14 +82,14 @@ class Navbar extends React.Component {
                       to="/program/local"
                       activeClassName="navLink--active"
                     >
-                      Digital Shaper Program
+                      <FormattedMessage id="layout.dsp"/>
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/program/remote"
                       activeClassName="navLink--active"
                     >
-                      codeathome Bootcamp
+                      <FormattedMessage id="layout.codeathome"/>
                     </Link>
                     <div className="dropdown-divider" />
                     <Link
@@ -89,7 +98,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={ds} alt="Data Science" className="mr-3" />
-                      Data Science
+                      <FormattedMessage id="layout.ds"/>
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -97,7 +106,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={web} alt="web development" className="mr-3" />
-                      Web Development
+                      <FormattedMessage id="layout.webdev"/>
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -105,7 +114,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={ai} alt="ai" className="mr-3" />
-                      Artificial Intelligence
+                      <FormattedMessage id="layout.ai"/>
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -113,7 +122,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={web} alt="UX Design" className="mr-3" />
-                      User Experience Design
+                      <FormattedMessage id="layout.ux"/>
                     </Link>
                   </div>
                 </li>
@@ -123,7 +132,7 @@ class Navbar extends React.Component {
                     to="/about"
                     activeClassName="navLink--active"
                   >
-                    About
+                    <FormattedMessage id="navbar.about"/>
                   </Link>
                 </li>
 
@@ -134,7 +143,7 @@ class Navbar extends React.Component {
                     rel="noopener noreferrer"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    Open Positions
+                    <FormattedMessage id="layout.openPositions"/>
                   </a>
                 </li>
 
@@ -144,7 +153,7 @@ class Navbar extends React.Component {
                     to="/blog"
                     activeClassName="navLink--active"
                   >
-                    Blog
+                    <FormattedMessage id="navbar.blog"/>
                   </Link>
                 </li>
 
@@ -154,7 +163,7 @@ class Navbar extends React.Component {
                     to="/apply"
                     activeClassName="navLink--active"
                   >
-                    Apply now
+                    <FormattedMessage id="callToAction.button"/>
                   </Link>
                 </li>
               </ul>

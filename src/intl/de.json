@@ -233,6 +233,7 @@
   "landingpage.slider.hümeyra.text": "Der persönliche Lernweg, den das TechLabs-Team zusammengestellt hat, ermöglichte es mir, ohne technischen Hintergrund zu beginnen, mit dem KI-Track zu beginnen, die notwendigen Programmierfähigkeiten zu erlernen und ein Verständnis für Machine Learning zu entwickeln. Endlich kann ich eine Brücke zwischen Biomedizin und KI schlagen.",
   "landingpage.slider.miriam.text": "Als ich beschloss, mir etwas technisches Wissen anzueignen, wusste ich nicht, wo ich anfangen sollte. Bei TechLabs gibt es Leute, die wissen, was sie tun, die mir beim Einstieg helfen können und die mir dann auch helfen, meine Ziele zu erreichen.",  
   "landingpage.slider.button": "mehr über {name}s projekt",
+  
   "location.aachen": "Aachen",
   "location.barcelona": "Barcelona",
   "location.berlin": "Berlin",
@@ -290,7 +291,7 @@
   "callToAction.second": " die meistgefragten Tech-Skills zu erwerben?",
   "callToAction.third": "Bist du bereit, ",
   "callToAction.fourth": "das Lernen anzufangen?",
-  "callToAction.button": "Bewirb dich jetzt",
+  "callToAction.button": "Jetzt bewerben",
   "callToAction.button.closed": "Bewerbung geschlossen",
 
 
@@ -307,7 +308,8 @@
   "footer.terms": "Terms",
   "footer.terms.privacy": "Datenschutzerklärung",
   "footer.terms.imprint": "Impressum",
-
+  "footer.cookies": "Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern.",
+  "footer.cookies.more": "Mehr Informationen",
 
   "faq.heading": "FAQ",
   "faq.subheading": "Hast Du weitere Fragen?",

@@ -1,8 +1,13 @@
 import React from "react"
-import Logo from "../../assets/tl-logo-white.svg"
-import PayPal from "../../assets/paypal.svg"
 import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// assets
+import Logo from "../../assets/tl-logo-white.svg"
+import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
   return (
@@ -28,7 +33,7 @@ const Footer = props => {
         declineButtonText="I decline"
         setDeclineCookie={false}
       >
-        This website uses cookies to enhance the user experience.{" "}
+        <FormattedMessage id="footer.cookies"/>{" "}
         <span role="img" aria-label="cookie">
           🍪
         </span>{" "}
@@ -37,7 +42,7 @@ const Footer = props => {
           to="/privacyPolicy"
           style={{ color: "white", textDecoration: "underline" }}
         >
-          More Information
+          <FormattedMessage id="footer.cookies.more"/>
         </Link>
       </CookieConsent>
       <div className="footer-tl">
@@ -58,89 +63,118 @@ const Footer = props => {
               <div className="row">
                 <div className="col-lg-4">
                   <Link to="/about" className="noDec">
-                    <h5 className="line-height-0 white-font my-2">About us</h5>
+                    <h5 className="line-height-0 white-font my-2">
+                    <FormattedMessage id="footer.about_us"/>
+                    </h5>
                   </Link>
                   <Link className="foot-a" to="/locations">
-                    Locations
+                    <FormattedMessage id="layout.locations"/>
                   </Link>
                   <ul className="footer-tl--subMenu">
                     <Link to="/location/Muenster" className="noDec">
-                      <li className="footer-tl--subMenu-link">Muenster</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.muenster"/>
+                      </li>
                     </Link>
                     <Link to="/location/Copenhagen" className="noDec">
-                      <li className="footer-tl--subMenu-link">Copenhagen</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.copenhagen"/>
+                      </li>
                     </Link>
                     <Link to="/location/Barcelona" className="noDec">
-                      <li className="footer-tl--subMenu-link">Barcelona</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.barcelona"/>
+                      </li>
                     </Link>
                     <Link to="/location/Medellín" className="noDec">
-                      <li className="footer-tl--subMenu-link">Medellín</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.medellin"/>
+                      </li>
                     </Link>
                     <Link to="/location/Berlin" className="noDec">
-                      <li className="footer-tl--subMenu-link">Berlin</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.berlin"/>
+                      </li>
                     </Link>
                     <Link to="/location/Curitiba" className="noDec">
-                      <li className="footer-tl--subMenu-link">Curitiba</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.curitiba"/>
+                      </li>
                     </Link>
                     <Link to="/location/Aachen" className="noDec">
-                      <li className="footer-tl--subMenu-link">Aachen</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.aachen"/>
+                      </li>
                     </Link>
                     <Link to="/location/Dortmund" className="noDec">
-                      <li className="footer-tl--subMenu-link">Dortmund</li>
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.dortmund"/>
+                      </li>
+                    </Link>
+                    <Link to="/location/Munich" className="noDec">
+                      <li className="footer-tl--subMenu-link">
+                        <FormattedMessage id="location.munich"/>
+                      </li>
                     </Link>
                   </ul>
                   <Link className="foot-a" to="/faq">
-                    FAQ
+                    <FormattedMessage id="footer.faq"/>
                   </Link>
                   <br />
                   <a
                     className="foot-a"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    Open positions
+                    <FormattedMessage id="layout.openPositions"/>
                   </a>
                   <br />
                 </div>
                 <div className="col-lg-4">
                   <Link to="/program" className="noDec">
-                    <h5 className="line-height-0 white-font my-2">Program</h5>
+                    <h5 className="line-height-0 white-font my-2">
+                     <FormattedMessage id="layout.program"/>
+                    </h5>
                   </Link>
                   <br />
                   <Link to="/program/local" className="noDec">
-                    Program
+                    <FormattedMessage id="layout.dsp"/>
                   </Link>
                   <br />
                   <Link to="/program/remote" className="noDec">
-                    codeathome Bootcamp
+                    <FormattedMessage id="layout.codeathome"/>
                   </Link>
                   <br />
                   <br />
-                  <h5 className="line-height-0 white-font my-2">Tracks</h5>
+                  <h5 className="line-height-0 white-font my-2">
+                    <FormattedMessage id="footer.tracks"/>
+                  </h5>
                   <Link className="foot-a" to="/dataScience">
-                    Data Science
+                    <FormattedMessage id="layout.ds"/>
                   </Link>
                   <br />
                   <Link className="foot-a" to="/web">
-                    Web Development
+                    <FormattedMessage id="layout.webdev"/>
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ai">
-                    Artificial Intelligence
+                    <FormattedMessage id="layout.ai"/>
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ux">
-                    User Experience Design
+                    <FormattedMessage id="layout.ux"/>
                   </Link>
                   <br />
                 </div>
                 <div className="col-lg-4">
-                  <h5 className="line-height-0 white-font my-2">Terms</h5>
+                  <h5 className="line-height-0 white-font my-2">
+                    <FormattedMessage id="footer.terms"/>
+                  </h5>
                   <Link className="foot-a" to="/privacyPolicy">
-                    Privacy Policy
+                    <FormattedMessage id="footer.privacyPolicy"/>
                   </Link>
                   <br />
                   <Link className="foot-a" to="/imprint">
-                    Imprint
+                    <FormattedMessage id="footer.imprint"/>
                   </Link>
                 </div>
               </div>

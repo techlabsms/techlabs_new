@@ -156,7 +156,8 @@
   "footer.terms": "Terms",
   "footer.terms.privacy": "Privacy policy",
   "footer.terms.imprint": "Imprint",
-
+  "footer.cookies": "This website uses cookies to enhance the user experience.",
+  "footer.cookies.more": "More information",
 
   "landingpage.button.program": "Program",
   "landingpage.button.about": "About",
@@ -216,7 +217,7 @@
   "location.country.spain": "Spain",
   "location.country.remote": "Global",
   "location.curitiba": "Curitiba",
-  "location.medellín": "Medellin",
+  "location.medellin": "Medellin",
   "location.muenster": "Münster",
   "location.remote": "Remote",
   
