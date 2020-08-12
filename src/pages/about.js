@@ -1,21 +1,28 @@
 import React, { Component } from "react"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Layout from "../components/Layout/Layout"
 import ProgrammHero from "../components/program/ProgrammHero"
-import Background from "../assets/about_background.png"
 import RightImageSectionHeading from "../components/shared/RightImageSectionHeading"
 import RightImageSection from "../components/shared/RightImageSection"
 import LeftImageSectionHeading from "../components/shared/LeftImageSectionHeading"
 import CoreValues from "../components/program/CoreValues"
 import Quote from "../components/shared/Quote"
+import ThreeCard from "../components/smallComponents/ThreeCard"
+
+// assets
+import Background from "../assets/about_background.png"
 import WhyWeDo from "../assets/wwd.png"
 import google from "../assets/google.png"
 import mission from "../assets/mission.png"
 import teamStairs from "../assets/teamStairs.png"
 import join from "../assets/join.png"
-import ThreeCard from "../components/smallComponents/ThreeCard"
 import MAP from "../assets/map_small.png"
 import Lina from "../assets/lina.png"
 import Background_mobil from "../assets/about_mobil.png"
-import Layout from "../components/Layout/Layout"
 
 class about extends Component {
   render() {
