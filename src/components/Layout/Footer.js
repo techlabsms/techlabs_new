@@ -5,6 +5,9 @@ import CookieConsent from "react-cookie-consent"
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
 
+// components
+import Language from "../language"
+
 // assets
 import Logo from "../../assets/tl-logo-white.svg"
 import PayPal from "../../assets/paypal.svg"
@@ -52,12 +55,7 @@ const Footer = props => {
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
-              <button className="px-3 py-1 my-3 footer--btn">
-                <span role="img" aria-label="english">
-                  🇬🇧
-                </span>{" "}
-                English
-              </button>
+              <Language/>
             </div>
             <div className="col-lg-8">
               <div className="row">
