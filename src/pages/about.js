@@ -29,12 +29,12 @@ class about extends Component {
     return (
       <Layout>
         <ProgrammHero
-          headingFirst="About"
-          headingSecond="TechLabs"
-          intro="We dream of a world full of digital shapers. Individuals who use technological tools to approach the challenges of our time with a digital and entrepreneurial mindset."
+          headingFirst={<FormattedMessage id="about.about.program_hero.headingFirst"/>}
+          headingSecond={<FormattedMessage id="about.about.program_hero.headingSecond"/>}
+          intro={<FormattedMessage id="about.about.program_hero.intro"/>}
           background={Background}
           backgroundMobil={Background_mobil}
-          secondintro="Learn more about us and our vision."
+          secondintro={<FormattedMessage id="about.about.program_hero.secondIntro"/>}
           href="test"
         />
         <RightImageSectionHeading
