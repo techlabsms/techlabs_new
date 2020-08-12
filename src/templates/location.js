@@ -58,7 +58,7 @@ class location extends Component {
                         <img
                           src={web}
                           alt="web development"
-                          width="20"
+                          width="25"
                           className="mr-3"
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Web Dev")
@@ -74,7 +74,7 @@ class location extends Component {
                         <img
                           src={ai}
                           alt=""
-                          width="20"
+                          width="25"
                           className="mr-3"
                           alt="ai"
                           onMouseOver={e => this.handleOpenToolTip(e, "AI")}
@@ -89,7 +89,7 @@ class location extends Component {
                         <img
                           src={ds}
                           alt=""
-                          width="20"
+                          width="25"
                           className="mr-3"
                           alt="data science"
                           onMouseOver={e =>
@@ -105,7 +105,7 @@ class location extends Component {
                       {location.avaiableTracks.ux && (
                         <img
                           src={web}
-                          width="20"
+                          width="25"
                           className="mr-3"
                           alt="ux"
                           onMouseOver={e =>
