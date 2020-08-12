@@ -34,9 +34,10 @@ class about extends Component {
           intro={<FormattedMessage id="about.about.program_hero.intro"/>}
           background={Background}
           backgroundMobil={Background_mobil}
-          secondintro={<FormattedMessage id="about.about.program_hero.secondIntro"/>}
-          href="test"
+          secondintro={<FormattedMessage id="about.about.program_hero.secondintro"/>}
+          href="why"
         />
+        <span id="why"></span>
         <RightImageSectionHeading
           heading={<FormattedMessage id="about.why.RightImageSectionHeading.heading"/>}
           subheading={<FormattedMessage id="about.why.RightImageSectionHeading.subheading"/>}

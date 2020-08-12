@@ -16,7 +16,7 @@ const CoreValues = () => {
             <h1 className="text-right coreValues--heading">
               <span>  
                 <FormattedMessage id="corevalues.heading.1"/>
-              </span> <FormattedMessage id="corevalues.heading2"/>
+              </span> <FormattedMessage id="corevalues.heading.2"/>
             </h1>
           </div>
           <div className="col-md-12 col-lg-8 pl-3 mt-auto mb-auto">
