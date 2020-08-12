@@ -1,7 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// assets
 import clock from "../../assets/clock.svg"
 import techlabs from "../../assets/tl-icon-whitebg.svg"
+
+// styles
 import "../../styles/blog/_blogCard.scss"
 
 const BlogCard = ({ article }) => {
@@ -20,7 +27,7 @@ const BlogCard = ({ article }) => {
                 <div className="col-md-4">
                   <p className="ml-3">
                     <img src={clock} alt="clock" className="mr-3" />
-                    {article.readTime}min read
+                    {article.readTime}<FormattedMessage id="blogcard.time"/>
                   </p>
                 </div>
                 <div className="col-md-8">

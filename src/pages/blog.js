@@ -1,6 +1,11 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
 import get from "lodash/get"
+
+// components
 import BlogCard from "../components/blog/BlogCard"
 import Layout from "../components/Layout/Layout"
 
@@ -11,7 +16,9 @@ class blog extends Component {
       <Layout>
         <div className="container">
           <div className="row mt-5">
-            <h2>Recent articles</h2>
+            <h2>
+              <FormattedMessage id="blog.heading"/>
+            </h2>
           </div>
           <div className="row">
             {articles.map(({ node }) => {
