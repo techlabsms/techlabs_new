@@ -1,10 +1,9 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 
 // plugins & external
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // assets
 import Slack from "../../assets/slack.png"

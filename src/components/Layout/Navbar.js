@@ -1,10 +1,9 @@
 import React from "react"
 import Headroom from "react-headroom"
-import { Link } from "gatsby"
 import "jquery"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import MobileNav from "./MobileNav"

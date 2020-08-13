@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Language from "../language"
