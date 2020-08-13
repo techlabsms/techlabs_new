@@ -83,28 +83,16 @@ const index = () => {
           />
           <Faq>
             <FaqQuestion
-              question={
-                <FormattedMessage id={"faq_1.question"}/>
-              }
-              answer={
-                <FormattedMessage id={"faq_1.answer"}/>
-              }
+              question="faq_1.question"
+              answer="faq_1.answer"
             />
             <FaqQuestion
-              question={
-                <FormattedMessage id={"faq_2.question"}/>
-              }
-              answer={
-                <FormattedMessage id={"faq_2.answer"}/>
-              }
+              question="faq_2.question"
+              answer="faq_2.answer"
             />
             <FaqQuestion
-              question={
-                <FormattedMessage id={"faq_3.question"}/>
-              }
-              answer={
-                <FormattedMessage id={"faq_3.answer"}/>
-              }
+              question="faq_3.question"
+              answer="faq_3.answer"
             />
           </Faq>
           <div className="container pb-5">
