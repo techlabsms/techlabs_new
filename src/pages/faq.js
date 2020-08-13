@@ -100,7 +100,7 @@ class faq extends Component {
               <input
                 type="search"
                 className="faq--search mt-2"
-                placeholder="Search question"
+                placeholder={<FormattedMessage id="faq.search.placeholder"/>}
                 onChange={e => {
                   this.setState({
                     search: e.target.value,
