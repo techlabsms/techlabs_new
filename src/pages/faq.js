@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 // components
 import FaqQuestion from "../components/shared/FaqQuestion"
@@ -84,6 +84,8 @@ class faq extends Component {
     search: "",
   }
   render() {
+    const { intl } = this.props
+    const placeholder = intl.formatMessage({id: 'faq.search.placeholder'})
     const { questions, search } = this.state
 
     const filteredQuestions = questions.filter(question => {
@@ -100,7 +102,7 @@ class faq extends Component {
               <input
                 type="search"
                 className="faq--search mt-2"
-                placeholder={<FormattedMessage id="faq.search.placeholder"/>}
+                placeholder={placeholder}
                 onChange={e => {
                   this.setState({
                     search: e.target.value,
@@ -122,4 +124,4 @@ class faq extends Component {
   }
 }
 
-export default faq
+export default injectIntl(faq)
