@@ -47,6 +47,8 @@ tbd
 
 You found something that has to be different? Something is broken? Please report it here: <a href="https://www.notion.so/techlabs/f246cf2457594f7a969ed04603696304?v=7da9c1ea7b964c9b9a6eed40fcc32594">Report issue</a>
 
+## Lighthouse 
+![lighthouse staging](https://github.com/techlabsms/techlabs_new/workflows/lighthouse%20staging/badge.svg)
 
 ## Questions? 
 
