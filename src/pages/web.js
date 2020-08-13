@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Layout from "../components/Layout/Layout"
