@@ -35,7 +35,7 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
                 2 Month Program
-                <br />6-10hours/week
+                <br />10hours/week
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -81,7 +81,10 @@ const Table = ({
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  Free Learning ProgramTrack Personalisation
+                </li>
+                <li className="tableComponent--checkmark">
+                  Track Personalisation
                 </li>
                 <li className="tableComponent--checkmark">
                   Mentorship on campus
@@ -123,12 +126,14 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li>Access from everywhere </li>
-                <li>Complete a Coding Challenge</li>
+                <li>Online Community and Mentors</li>
+                <li>Online Team Project</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li>Local Community and Mentors</li>
+                <li>Local Community</li>
+                <li>Access to local Mentors</li>
                 <li>Complete a Team Project</li>
               </ul>
             </td>
@@ -155,16 +160,7 @@ const Table = ({
                     Apply
                   </a>
                 ) : (
-                  <Link
-                    className={
-                      activeProgram === "remote"
-                        ? "btn btn-secondary"
-                        : "btn btn-primary"
-                    }
-                    to="/program/remote"
-                  >
-                    Learn more
-                  </Link>
+                 
                 )}
               </td>
               <td
