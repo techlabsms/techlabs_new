@@ -72,11 +72,13 @@ class Academy extends Component {
                 <p class={index === 0 ? "d-block" : "d-none"}>
                   {firstTrackText}
                 </p>
-                <div className="d-flex justify-content-end">
-                  <Link to={firstTrackLink} className="a-white next-link">
-                    Learn more
-                  </Link>
-                </div>
+                {firstTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={firstTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -102,14 +104,17 @@ class Academy extends Component {
                 tabIndex={0}
               >
                 <h4 className="academy--card-title">{secondTrack}</h4>
+
                 <p class={index === 1 ? "d-block" : "d-none"}>
                   {secondTrackText}
                 </p>
-                <div className="d-flex justify-content-end">
-                  <Link to={secondTrackLink} className="a-white next-link">
-                    Learn more
-                  </Link>
-                </div>
+                {secondTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={secondTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -138,11 +143,13 @@ class Academy extends Component {
                 <p class={index === 2 ? "d-block" : "d-none"}>
                   {thirdTrackText}
                 </p>
-                <div className="d-flex justify-content-end">
-                  <Link to={thirdTrackLink} className="a-white next-link">
-                    Learn more
-                  </Link>
-                </div>
+                {thirdTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={thirdTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -172,11 +179,13 @@ class Academy extends Component {
                 <p class={index === 3 ? "d-block" : "d-none"}>
                   {fourthTrackText}
                 </p>
-                <div className="d-flex justify-content-end">
-                  <Link to={fourthTrackLink} className="a-white next-link">
-                    Learn more
-                  </Link>
-                </div>
+                {fourthTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={fourthTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>
