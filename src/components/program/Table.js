@@ -35,7 +35,7 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
                 2 Month Program
-                <br />10hours/week
+                <br />6-10hours/week
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -81,10 +81,7 @@ const Table = ({
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning ProgramTrack Personalisation
-                </li>
-                <li className="tableComponent--checkmark">
-                  Track Personalisation
+                  Free Learning Program
                 </li>
                 <li className="tableComponent--checkmark">
                   Mentorship on campus
@@ -160,7 +157,16 @@ const Table = ({
                     Apply
                   </a>
                 ) : (
-                 
+                  <Link
+                    className={
+                      activeProgram === "remote"
+                        ? "btn btn-secondary"
+                        : "btn btn-primary"
+                    }
+                    to="/program/remote"
+                  >
+                    Learn more
+                  </Link>
                 )}
               </td>
               <td

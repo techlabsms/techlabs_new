@@ -38,7 +38,7 @@ class Academy extends Component {
     return (
       <Container>
         <Heading
-          heading="TechLabs Academy"
+          heading="Learning Tracks"
           subheading="Explore our courses and choose the one that suits you the most!"
         />
         <div className="row mt-5 d-flex mb-5">
