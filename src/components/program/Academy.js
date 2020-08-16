@@ -5,6 +5,7 @@ import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+import { Link } from "gatsby"
 
 class Academy extends Component {
   state = {
@@ -23,12 +24,16 @@ class Academy extends Component {
     const {
       firstTrack,
       firstTrackText,
+      firstTrackLink,
       secondTrack,
       secondTrackText,
+      secondTrackLink,
       thirdTrack,
       thirdTrackText,
+      thirdTrackLink,
       fourthTrack,
       fourthTrackText,
+      fourthTrackLink,
     } = this.props
     return (
       <Container>
@@ -67,6 +72,11 @@ class Academy extends Component {
                 <p class={index === 0 ? "d-block" : "d-none"}>
                   {firstTrackText}
                 </p>
+                <div className="d-flex justify-content-end">
+                  <Link to={firstTrackLink} className="a-white next-link">
+                    Learn more
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="row">
@@ -95,6 +105,11 @@ class Academy extends Component {
                 <p class={index === 1 ? "d-block" : "d-none"}>
                   {secondTrackText}
                 </p>
+                <div className="d-flex justify-content-end">
+                  <Link to={secondTrackLink} className="a-white next-link">
+                    Learn more
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="row">
@@ -123,6 +138,11 @@ class Academy extends Component {
                 <p class={index === 2 ? "d-block" : "d-none"}>
                   {thirdTrackText}
                 </p>
+                <div className="d-flex justify-content-end">
+                  <Link to={thirdTrackLink} className="a-white next-link">
+                    Learn more
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="row">
@@ -152,6 +172,11 @@ class Academy extends Component {
                 <p class={index === 3 ? "d-block" : "d-none"}>
                   {fourthTrackText}
                 </p>
+                <div className="d-flex justify-content-end">
+                  <Link to={fourthTrackLink} className="a-white next-link">
+                    Learn more
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
