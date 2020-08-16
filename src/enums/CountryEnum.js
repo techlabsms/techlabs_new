@@ -63,8 +63,10 @@ export const CityCountryEnum = {
   REMOTE: [
     {
       value: "location.remote",
-      applicationStart: null,
-      applicationEnd: null,
+      applicationStart: "2020-08-15",
+      applicationEnd: "2020-08-24",
+      applicationLink: "https://techlabsorg.typeform.com/to/tSKG8BBE",
+      heading: "Remote",
       availableTracks: {
         ai: true,
         web: true,
