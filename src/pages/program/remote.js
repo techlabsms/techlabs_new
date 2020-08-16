@@ -19,7 +19,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout/Layout"
 import Hero from "../../components/program/remote/Hero"
-import KeyFacts from "../../components/program/remote/KeyFacts"
+import KeyFacts from "../../components/program/remote/keyFacts"
 
 class remote extends Component {
   startDateString = date => {
