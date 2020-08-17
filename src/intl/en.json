@@ -30,6 +30,19 @@
   "about.foundyorown.RightImageSectionHeading.text":"If you are willing to shape the future of tech education and want to create your own TechLabs location, reach out! Let's work together and build something great!",
   "about.foundyorown.RightImageSectionHeading.buttonText":"More Information",
 
+  "allLocations.heading.1": "Discover our ",
+  "allLocations.heading.2": "Locations",
+  "allLocations.intro": "TechLabs is a set of enthusiastic, driven, and passionate individuals who have joined forces to turn as many people as possible into Digital Shapers. Exciting meetups, hackathons, socials, and workshops await you. Discover the TechLabs world here",
+  "allLocations.placeholder": "Search location",
+  "allLocations.locations.heading": "TechLabs Locations",
+  "allLocations.locations.subheading": "Check out our current tech communities!",
+  "allLocations.city.heading.1": "Your city",
+  "allLocations.city.heading.2": "is not on the map?",
+  "allLocations.city.text.1": "If you are willing to shape the future of tech education and want to create your own TechLabs location on a voluntary basis, reach out! Let’s work together and",
+  "allLocations.city.text.2": "build something great!",
+  "allLocations.city.btn": "More information",
+
+
   "app.landingpage.applicationperiod.check": "Check",
   "app.landingpage.applicationperiod.deadline.apply": "Apply",
   "app.landingpage.applicationperiod.deadline.end": "Our Application ends in:",

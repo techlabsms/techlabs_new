@@ -1,15 +1,23 @@
 import React, { Component } from "react"
-import locationsImg from "../assets/locations.png"
-import "../styles/_main.scss"
-import LocationCard from "../components/locations/LocationCard"
 import { graphql } from "gatsby"
+
+// plugins & external
 import get from "lodash/get"
-import MAPLOC from "../assets/mapLoc.png"
+
+// components
+import LocationCard from "../components/locations/LocationCard"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import ArrowButton from "../components/smallComponents/ArrowButton"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
+
+// assets
+import locationsImg from "../assets/locations.png"
+import MAPLOC from "../assets/mapLoc.png"
+
+// styles
+import "../styles/_main.scss"
 
 class Locations extends Component {
   constructor() {
