@@ -293,7 +293,6 @@ class remote extends Component {
             answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and suggest about  6 hours per week."
           />
         </Faq>
-        <Footer />
       </Layout>
     )
   }
