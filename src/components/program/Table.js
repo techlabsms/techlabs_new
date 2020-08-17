@@ -35,14 +35,14 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
                 2 Month Program
-                <br />6 hours/ week
+                <br />6-10hours/week
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <p>
                 5 Month Program
                 <br />
-                3-5 hours/ week
+                3-5 hours/week
               </p>
             </td>
           </tr>
@@ -67,7 +67,12 @@ const Table = ({
                 <li className="tableComponent--checkmark">
                   Free Learning Program
                 </li>
-                <li className="tableComponent--checkmark">Online Q&A</li>
+                <li className="tableComponent--checkmark">
+                  Online Mentorship
+                </li>
+                <li className="tableComponent--checkmark">
+                  Online Events
+                </li>
                 <li className="tableComponent--checkmark">
                   Bootcamp Certificate
                 </li>
@@ -81,7 +86,9 @@ const Table = ({
                 <li className="tableComponent--checkmark">
                   Mentorship on campus
                 </li>
-                <li className="tableComponent--checkmark">Local Events</li>
+                <li className="tableComponent--checkmark">
+                  Local Events
+                </li>
                 <li className="tableComponent--checkmark">
                   Digital Shaper Certificate
                 </li>
@@ -115,13 +122,15 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Online Community </li>
-                <li>Complete a Coding Challenge</li>
+                <li>Access from everywhere </li>
+                <li>Online Community and Mentors</li>
+                <li>Online Team Project</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li>Local Community and Mentors</li>
+                <li>Local Community</li>
+                <li>Access to local Mentors</li>
                 <li>Complete a Team Project</li>
               </ul>
             </td>
