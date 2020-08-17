@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // assets
 import clock from "../../assets/clock.svg"

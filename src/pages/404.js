@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout/Layout"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import "../styles/_404.scss"
 
 class NotFound extends Component {

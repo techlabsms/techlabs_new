@@ -1,6 +1,6 @@
 import React from "react"
 import pin from "../../assets/placemark.svg"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 
 const LocationCard = ({ imgTop, city, icon }) => {
   return (
