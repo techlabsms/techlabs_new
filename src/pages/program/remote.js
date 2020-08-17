@@ -1,8 +1,5 @@
 import React from "react"
-import Navbar from "../../components/Layout/Navbar"
 import Academy from "../../components/program/Academy"
-import RightImageSectionHeading from "../../components/shared/RightImageSectionHeading"
-import Remote from "../../assets/program/remote.png"
 import ThreeComponents from "../../components/program/ThreeComponents"
 import KeyBenefits from "../../components/shared/KeyBenefits"
 import DataScience from "../../assets/dashboard.png"
@@ -20,69 +17,74 @@ import FaqQuestion from "../../components/shared/FaqQuestion"
 import Newsletter from "../../components/program/newsletter"
 import { graphql } from "gatsby"
 
+import Layout from "../../components/Layout/Layout"
+import Hero from "../../components/program/remote/Hero"
+import KeyFacts from "../../components/program/remote/keyFacts"
+
 class remote extends Component {
+  startDateString = date => {
+    const newDate = date.split("-")
+    return `${newDate[2]}.${newDate[1]}.${newDate[0]}`
+  }
   render() {
     const { data } = this.props
+    const {
+      heroHeading,
+      intro,
+      startDate,
+      nextDate,
+      newsletterVisible,
+    } = data.page.edges[0].node
+
     return (
-      <div>
-        <Navbar />
-        <div className="pb-5"></div>
+      <Layout>
+        <Hero
+          headingFirst="#codeathome"
+          headingSecond="bootcamp"
+          headingIntro={heroHeading}
+          intro={intro.content[0].content[0].value}
+          applicationStart={this.startDateString(startDate)}
+          nextBootcampStart={this.startDateString(nextDate)}
+          img={data.remote.childImageSharp.fluid}
+          link="https://techlabsorg.typeform.com/to/tSKG8BBE"
+        />
+        <KeyFacts
+          facts={[
+            {
+              heading: "remote",
+              text:
+                "The Bootcamp is fully remote so that you can participate independet from your location",
+            },
+            {
+              heading: "8 weeks",
+              text:
+                "8 weeks of coding and group work is waiting for you to shape your career path",
+            },
+            {
+              heading: "4 tracks",
+              text:
+                "You can choose out of 4 Tracks: Data Science, Web Development, User Experience Design and AI",
+            },
+            {
+              heading: "for Free",
+              text:
+                "The #codeathome Bootcamp is completely free for you (thanks to our sponsors)",
+            },
+            {
+              heading: "together",
+              text:
+                "You are going to learn to code within an motivating community and with the support of our mentors",
+            },
+          ]}
+        />
+        {newsletterVisible && (
+          <Newsletter
+            image={data.newsletterImage.childImageSharp.fluid}
+            title="Want to know when the next application period starts?"
+            subtitle="Subscribe to our email list to get notified!"
+          />
+        )}
         <div className="container">
-          <RightImageSectionHeading
-            topText={
-              <FormattedMessage
-                id={"program.remote.rightImageSection.topText"}
-              />
-            }
-            heading={
-              <FormattedMessage
-                id={"program.remote.rightImageSection.heading"}
-              />
-            }
-            text={
-              <FormattedMessage id={"program.remote.rightImageSection.text"} />
-            }
-            hasButton={false}
-            // TODO: Add correct link and import from enum
-            buttonText="Apply now"
-            buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
-            image={Remote}
-          />
-          <Academy
-            firstTrack={
-              <FormattedMessage id={"program.remote.academy.first.name"} />
-            }
-            firstTrackText={
-              <FormattedMessage id={"program.remote.academy.first.text"} />
-            }
-            secondTrack={
-              <FormattedMessage id={"program.remote.academy.second.name"} />
-            }
-            secondTrackText={
-              <FormattedMessage id={"program.remote.academy.second.text"} />
-            }
-            thirdTrack={
-              <FormattedMessage id={"program.remote.academy.third.name"} />
-            }
-            thirdTrackText={
-              <FormattedMessage id={"program.remote.academy.third.text"} />
-            }
-            fourthTrack={
-              <FormattedMessage id={"program.remote.academy.fourth.name"} />
-            }
-            fourthTrackText={
-              <FormattedMessage id={"program.remote.academy.fourth.text"} />
-            }
-          />
-          <Table
-            heading={<FormattedMessage id={"program.remote.table.heading"} />}
-            subheading={
-              <FormattedMessage id={"program.remote.table.subheading"} />
-            }
-            activeProgram="remote"
-            hasButton={false}
-            buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
-          />
           <ThreeComponents
             heading={
               <FormattedMessage id={"program.remote.threeComponents.heading"} />
@@ -123,6 +125,37 @@ class remote extends Component {
               />
             }
           />
+          <Academy
+            firstTrack={
+              <FormattedMessage id={"program.remote.academy.first.name"} />
+            }
+            firstTrackText={
+              <FormattedMessage id={"program.remote.academy.first.text"} />
+            }
+            firstTrackLink="/dataScience"
+            secondTrack={
+              <FormattedMessage id={"program.remote.academy.second.name"} />
+            }
+            secondTrackText={
+              <FormattedMessage id={"program.remote.academy.second.text"} />
+            }
+            secondTrackLink="/web"
+            thirdTrack={
+              <FormattedMessage id={"program.remote.academy.third.name"} />
+            }
+            thirdTrackText={
+              <FormattedMessage id={"program.remote.academy.third.text"} />
+            }
+            thirdTrackLink="/ai"
+            fourthTrack={
+              <FormattedMessage id={"program.remote.academy.fourth.name"} />
+            }
+            fourthTrackText={
+              <FormattedMessage id={"program.remote.academy.fourth.text"} />
+            }
+            fourthTrackLink="/ux"
+          />
+
           <KeyBenefits
             heading={
               <FormattedMessage id={"program.remote.keyBenefits.heading"} />
@@ -163,6 +196,15 @@ class remote extends Component {
               <FormattedMessage id={"program.remote.keyBenefits.fourth.text"} />
             }
           />
+          <Table
+            heading={<FormattedMessage id={"program.remote.table.heading"} />}
+            subheading={
+              <FormattedMessage id={"program.remote.table.subheading"} />
+            }
+            activeProgram="remote"
+            hasButton={false}
+            buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
+          />
           <LearnMore
             heading={
               <FormattedMessage id={"program.remote.learnMore.heading"} />
@@ -198,11 +240,6 @@ class remote extends Component {
             }
             fourthProjectImage={UX}
             fourthLink="/ux"
-          />
-          <Newsletter
-            image={data.newsletterImage.childImageSharp.fluid}
-            title="Want to know when the next application period starts?"
-            subtitle="Subscribe to our email list to get notified!"
           />
         </div>
 
@@ -256,8 +293,7 @@ class remote extends Component {
             answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and suggest about  6 hours per week."
           />
         </Faq>
-        <Footer />
-      </div>
+      </Layout>
     )
   }
 }
@@ -278,6 +314,26 @@ export const pageQuery = graphql`
   query {
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
+    }
+    remote: file(relativePath: { eq: "remote.png" }) {
+      ...fluidImage
+    }
+    page: allContentfulCodeAtHome {
+      edges {
+        node {
+          heroHeading
+          intro {
+            content {
+              content {
+                value
+              }
+            }
+          }
+          nextDate
+          startDate
+          newsletterVisible
+        }
+      }
     }
   }
 `

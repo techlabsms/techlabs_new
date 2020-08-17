@@ -41,6 +41,9 @@
 @import "./locations/partnerLogos";
 @import "./program/newsletter";
 @import "./shared/testimonial";
+@import "./shared/tooltip";
+@import "./program/remote/hero";
+@import "./program/remote/keyFacts";
 
 h1,
 h2,
@@ -63,7 +66,14 @@ body {
   color: $color-g;
 }
 
-.a-black:hover {
+.next-link:after {
+  content: "\226B";
+  position: relative;
+  left: 5px;
+}
+
+.a-black:hover,
+.a-white:hover {
   text-decoration: none;
 }
 

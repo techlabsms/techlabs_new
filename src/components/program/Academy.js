@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 // plugins 
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -30,18 +30,21 @@ class Academy extends Component {
     const {
       firstTrack,
       firstTrackText,
+      firstTrackLink,
       secondTrack,
       secondTrackText,
+      secondTrackLink,
       thirdTrack,
       thirdTrackText,
+      thirdTrackLink,
       fourthTrack,
       fourthTrackText,
+      fourthTrackLink,
     } = this.props
     return (
       <Container>
         <Heading
-          heading="TechLabs Academy"
-
+          heading="Learning Tracks"
           subheading={
             <FormattedMessage id={"programs.techlabs_academy.subheading"} />
           }
@@ -77,6 +80,13 @@ class Academy extends Component {
                 <p class={index === 0 ? "d-block" : "d-none"}>
                   {firstTrackText}
                 </p>
+                {firstTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={firstTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -102,9 +112,17 @@ class Academy extends Component {
                 tabIndex={0}
               >
                 <h4 className="academy--card-title">{secondTrack}</h4>
+
                 <p class={index === 1 ? "d-block" : "d-none"}>
                   {secondTrackText}
                 </p>
+                {secondTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={secondTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -133,6 +151,13 @@ class Academy extends Component {
                 <p class={index === 2 ? "d-block" : "d-none"}>
                   {thirdTrackText}
                 </p>
+                {thirdTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={thirdTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
             <div className="row">
@@ -162,6 +187,13 @@ class Academy extends Component {
                 <p class={index === 3 ? "d-block" : "d-none"}>
                   {fourthTrackText}
                 </p>
+                {fourthTrackLink && (
+                  <div className="d-flex justify-content-end">
+                    <Link to={fourthTrackLink} className="a-white next-link">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>

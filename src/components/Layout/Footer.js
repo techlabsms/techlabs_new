@@ -1,5 +1,6 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
+import { graphql, useStaticQuery } from "gatsby"
 
 // plugins
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -12,6 +13,18 @@ import Logo from "../../assets/tl-logo-white.svg"
 import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulLocationPage {
+        edges {
+          node {
+            heading
+          }
+        }
+      }
+    }
+  `)
+  const { edges } = data.allContentfulLocationPage
   return (
     <>
       <CookieConsent
@@ -68,51 +81,17 @@ const Footer = props => {
                     <FormattedMessage id="layout.locations"/>
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    <Link to="/location/Muenster" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.muenster"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Copenhagen" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.copenhagen"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Barcelona" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.barcelona"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Medellín" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.medellin"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Berlin" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.berlin"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Curitiba" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.curitiba"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Aachen" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.aachen"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Dortmund" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.dortmund"/>
-                      </li>
-                    </Link>
-                    <Link to="/location/Munich" className="noDec">
-                      <li className="footer-tl--subMenu-link">
-                        <FormattedMessage id="location.munich"/>
-                      </li>
-                    </Link>
+                    {edges.map(location => (
+                      <Link
+                        to={`/location/${location.node.heading}`}
+                        className="noDec"
+                        key={location.node.heading}
+                      >
+                        <li className="footer-tl--subMenu-link">
+                          {location.node.heading}
+                        </li>
+                      </Link>
+                    ))}
                   </ul>
                   <Link className="foot-a" to="/faq">
                     <FormattedMessage id="footer.faq"/>

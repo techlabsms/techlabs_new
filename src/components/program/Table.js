@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -90,6 +89,10 @@ const Table = ({
                   <FormattedMessage
                   id={"program.local.table.row3.col2.3"}/>
                 </li>
+                <li className="tableComponent--checkmark">
+                  <FormattedMessage
+                  id={"program.local.table.row3.col2.4"}/>
+                </li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -148,12 +151,14 @@ const Table = ({
               <ul>
                 <li><FormattedMessage id={"program.local.table.row5.col2.1"}/></li>
                 <li><FormattedMessage id={"program.local.table.row5.col2.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col2.3"}/></li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li><FormattedMessage id={"program.local.table.row5.col3.1"}/></li>
                 <li><FormattedMessage id={"program.local.table.row5.col3.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col3.3"}/></li>
               </ul>
             </td>
           </tr>
