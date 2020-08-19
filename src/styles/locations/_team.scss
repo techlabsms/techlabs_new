@@ -10,9 +10,10 @@
     flex-direction: column;
     text-align: center;
     margin: 1.5rem auto;
-  }
-  :nth-child(4) {
-    flex-grow: 1;
+    :nth-child(4) {
+      flex-grow: 1;
+      opacity: .7;
+    }
   }
   &--name {
     font-size: 25px;
@@ -20,5 +21,15 @@
   }
   .get-in-contact {
     margin-top: 1.5rem;
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+    a {
+      padding: 1rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
