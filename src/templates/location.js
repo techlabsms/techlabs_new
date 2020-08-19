@@ -1,23 +1,27 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
+
+// components
 import LeftImageSection from "../components/shared/LeftImageSection"
 import RightImageSection from "../components/shared/RightImageSection"
 import DatesCalendar from "../components/locations/DatesCalendar"
 import Follow from "../components/locations/Follow"
 import Team from "../components/locations/Team"
-import teamspirit from "../assets/teamspirit.png"
-import pin2 from "../assets/pin2.png"
-import getDirection from "../assets/get-directions-button.png"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+import Tooltip from "../components/smallComponents/Tooltip"
+
+// assets
+import teamspirit from "../assets/teamspirit.png"
+import pin2 from "../assets/pin2.png"
+import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
-import Tooltip from "../components/smallComponents/Tooltip"
 
 class location extends Component {
   state = {
@@ -380,6 +384,8 @@ export const pageQuery = graphql`
           }
           title
         }
+        role
+        roleDescription
       }
       avaiableTracks {
         ai
