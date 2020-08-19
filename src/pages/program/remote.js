@@ -1,25 +1,29 @@
 import React from "react"
+import { Component } from "react"
+import { graphql } from "gatsby"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Academy from "../../components/program/Academy"
 import ThreeComponents from "../../components/program/ThreeComponents"
 import KeyBenefits from "../../components/shared/KeyBenefits"
+import LearnMore from "../../components/program/LearnMore"
+import Footer from "../../components/Layout/Footer"
+import Table from "../../components/program/Table"
+import Faq from "../../components/shared/Faq"
+import FaqQuestion from "../../components/shared/FaqQuestion"
+import Newsletter from "../../components/program/newsletter"
+import Layout from "../../components/Layout/Layout"
+import Hero from "../../components/program/remote/Hero"
+import KeyFacts from "../../components/program/remote/keyFacts"
+
+// assets
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
-import LearnMore from "../../components/program/LearnMore"
-import Footer from "../../components/Layout/Footer"
-
-import { FormattedMessage } from "gatsby-plugin-intl"
-import Table from "../../components/program/Table"
-import { Component } from "react"
-import Faq from "../../components/shared/Faq"
-import FaqQuestion from "../../components/shared/FaqQuestion"
-import Newsletter from "../../components/program/newsletter"
-import { graphql } from "gatsby"
-
-import Layout from "../../components/Layout/Layout"
-import Hero from "../../components/program/remote/Hero"
-import KeyFacts from "../../components/program/remote/keyFacts"
 
 class remote extends Component {
   startDateString = date => {
