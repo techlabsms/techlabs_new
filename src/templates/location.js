@@ -380,6 +380,7 @@ export const pageQuery = graphql`
         linkedIn
         name
         role
+        roleDescription
         image {
           sizes(quality: 100) {
             ...GatsbyContentfulSizes_withWebp
