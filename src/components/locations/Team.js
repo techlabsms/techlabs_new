@@ -34,8 +34,8 @@ const Team = ({ city, team }) => {
               <h3 className="team--name text-center">
                 <span className="highlighted">{teamMember.name}</span>
               </h3>
-              <p>Role</p>
-              <p>Description</p>
+              <p>{teamMember.role}</p>
+              <p>{teamMember.roleDescription}</p>
               <div className="mt-4">
                 <a
                   href={teamMember.linkedIn}
