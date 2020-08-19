@@ -325,7 +325,12 @@ export const pageQuery = graphql`
     page: allContentfulCodeAtHome {
       edges {
         node {
-          pageTitle
+          pageTitle { 
+            pageTitle {
+              heading1,
+              heading2
+            }
+          }
           heroHeading
           intro {
             content {
@@ -337,11 +342,56 @@ export const pageQuery = graphql`
           nextDate
           startDate
           newsletterVisible
-          keyFacts
-          concept
-          keyBenefits
-          whatIsIncluded
-          faq
+          keyFacts { 
+            facts {
+              heading,
+              text
+            }
+          }
+          concept { 
+            concept {
+              heading,
+              text
+            }
+          }
+          keyBenefits { 
+            keyBenefits {
+              heading,
+              text
+            }
+          }
+          whatIsIncluded { 
+            whatIsIncluded {
+              time {
+                hours,
+                month
+              }
+              who,
+              what {
+                _1,
+                _2,
+                _3,
+                _4
+              }
+              tracks {
+                _1,
+                _2,
+                _3,
+                _4
+              },
+              difference {
+                _1,
+                _2,
+                _3,
+              }
+            }
+          }
+          faq {
+            question
+            answer {
+              answer
+            }
+          }
         }
       }
     }
