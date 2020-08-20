@@ -167,6 +167,7 @@ class remote extends Component {
             activeProgram="remote"
             hasButton={false}
             buttonLink="https://techlabsorg.typeform.com/to/o08v5Y"
+            codeathome={whatIsIncluded}
           />
           <LearnMore
             heading={
