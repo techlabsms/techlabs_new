@@ -69,6 +69,7 @@ class local extends Component {
             }
             activeProgram="local"
             hasButton={false}
+            codeathome={data.page.edges[0].node.whatIsIncluded}
           />
           <ThreeComponents
             heading={
@@ -224,6 +225,38 @@ export const pageQuery = graphql`
     }
     accenture: file(relativePath: { eq: "accenture.png" }) {
       ...fluidImageLocal
+    }
+    page: allContentfulCodeAtHome {
+      edges {
+        node {
+          whatIsIncluded { 
+            whatIsIncluded {
+              time {
+                hours,
+                month
+              }
+              who,
+              what {
+                _1,
+                _2,
+                _3,
+                _4
+              }
+              tracks {
+                _1,
+                _2,
+                _3,
+                _4
+              },
+              difference {
+                _1,
+                _2,
+                _3,
+              }
+            }
+          }
+        }
+      }
     }
   }
 `
