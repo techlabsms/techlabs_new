@@ -16,7 +16,7 @@ const Follow = ({
 }) => {
   return (
     <Container>
-      <div className="row mt-5">
+      <div className="row mt-3">
         <Heading heading={heading} subheading={subheading} />
       </div>
       <div className="row my-5 d-flex justify-content-center">
