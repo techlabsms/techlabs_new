@@ -48,8 +48,8 @@ class remote extends Component {
     return (
       <Layout>
         <Hero
-          headingFirst="#codeathome"
-          headingSecond="bootcamp"
+          headingFirst={pageTitle.pageTitle.heading1}
+          headingSecond={pageTitle.pageTitle.heading2}
           headingIntro={heroHeading}
           intro={intro.content[0].content[0].value}
           applicationStart={this.startDateString(startDate)}
