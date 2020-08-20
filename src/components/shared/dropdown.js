@@ -11,13 +11,14 @@ class Dropdown extends React.Component {
         }
         return (
             <div style={style}>
-                <select onChange={this.handleChange} id={"dropdown-select" + id} style={{width: "100%"}}
+                <select onBlur={this.handleChange} id={"dropdown-select" + id} style={{width: "100%"}}
                         className="dropdown-select">
                     {optionValues}
                 </select>
             </div>
         )
     }
+
 
     handleChange = () => {
         const selectElement =
