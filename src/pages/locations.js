@@ -72,6 +72,7 @@ class Locations extends Component {
                   <div className="col-md-4 d-flex">
                     <input
                       type="search"
+                      aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
                       placeholder="Search location"
                       onChange={e => {
