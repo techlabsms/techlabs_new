@@ -7,7 +7,6 @@ import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
 import LearnMore from "../../components/program/LearnMore"
-import Footer from "../../components/Layout/Footer"
 
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Table from "../../components/program/Table"

@@ -77,11 +77,11 @@ const Footer = props => {
                     Locations
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    {edges.map(location => (
+                    {edges.map((location, index) => (
                       <Link
                         to={`/location/${location.node.heading}`}
                         className="noDec"
-                        key={location.node.heading}
+                        key={index}
                       >
                         <li className="footer-tl--subMenu-link">
                           {location.node.heading}
