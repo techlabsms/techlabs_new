@@ -104,28 +104,28 @@ class remote extends Component {
             firstTrackText={
               tracks.tracks[0].text
             }
-            firstTrackLink="/dataScience"
+            firstTrackLink={ tracks.tracks[0].link }
             secondTrack={
               tracks.tracks[1].heading
             }
             secondTrackText={
               tracks.tracks[1].text
             }
-            secondTrackLink="/web"
+            secondTrackLink={ tracks.tracks[1].link }
             thirdTrack={
               tracks.tracks[2].heading
             }
             thirdTrackText={
               tracks.tracks[2].text
             }
-            thirdTrackLink="/ai"
+            thirdTrackLink={ tracks.tracks[2].link }
             fourthTrack={
               tracks.tracks[3].heading
             }
             fourthTrackText={
               tracks.tracks[3].text
             }
-            fourthTrackLink="/ux"
+            fourthTrackLink={ tracks.tracks[3].link }
           />
 
           <KeyBenefits
