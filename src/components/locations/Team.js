@@ -19,11 +19,11 @@ const Team = ({ city, team }) => {
         heading="Our Board Members"
         subheading={`The People behind ${city}`}
       />
-      <div className="row d-flex d-justify-content-center">
+      <div className="team">
         {team &&
           team.map(teamMember => (
             <div
-              className="col-12 col-md-3 text-center my-4 d-flex flex-column justify-content-center"
+              className="col-12 col-md-3"
               key={teamMember.name}
             >
               <Img
@@ -31,14 +31,16 @@ const Team = ({ city, team }) => {
                 alt={teamMember.image.title}
                 style={circleImage}
               />
-              <h3 className="team--name text-center">
-                <span className="highlighted">{teamMember.name}</span>
+              <h3 className="team--name">
+                <span>{teamMember.name}</span>
               </h3>
-              <div className="mt-4">
+              <p>{teamMember.role}</p>
+              <p>{teamMember.roleDescription}</p>
+              <div className="get-in-contact">
                 <a
                   href={teamMember.linkedIn}
                   target="_blank"
-                  className="a-black"
+                  className="highlighted"
                   rel="noreferrer"
                 >
                   Get in contact

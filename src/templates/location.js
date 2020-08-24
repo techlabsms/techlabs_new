@@ -1,23 +1,27 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
+
+// components
 import LeftImageSection from "../components/shared/LeftImageSection"
 import RightImageSection from "../components/shared/RightImageSection"
 import DatesCalendar from "../components/locations/DatesCalendar"
 import Follow from "../components/locations/Follow"
 import Team from "../components/locations/Team"
-import teamspirit from "../assets/teamspirit.png"
-import pin2 from "../assets/pin2.png"
-import getDirection from "../assets/get-directions-button.png"
+import Tooltip from "../components/smallComponents/Tooltip"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+
+// assets
+import teamspirit from "../assets/teamspirit.png"
+import pin2 from "../assets/pin2.png"
+import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
-import Tooltip from "../components/smallComponents/Tooltip"
 
 class location extends Component {
   state = {
@@ -37,6 +41,7 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
+    console.log(location)
     const { modalIsOpen, x, y, text } = this.state
     return (
       <Layout>
@@ -63,43 +68,50 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Web Dev")
                           }
+                          onFocus={e => 
+                            this.handleOpenToolTip(e, "Web Dev")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
                             })
                           }
+                          role="presentation"
                         />
                       )}
                       {location.avaiableTracks.ai && (
                         <img
                           src={ai}
-                          alt=""
                           width="25"
                           className="mr-3"
                           alt="ai"
                           onMouseOver={e => this.handleOpenToolTip(e, "AI")}
+                          onFocus={e => 
+                            this.handleOpenToolTip(e, "AI")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
                             })
                           }
+                          role="presentation"
                         />
                       )}
                       {location.avaiableTracks.data && (
                         <img
                           src={ds}
-                          alt=""
                           width="25"
                           className="mr-3"
                           alt="data science"
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Data Science")
                           }
+                          onFocus={e => 
+                            this.handleOpenToolTip(e, "Data Science")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
                             })
                           }
+                          role="presentation"
                         />
                       )}
                       {location.avaiableTracks.ux && (
@@ -111,11 +123,14 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "UX Design")
                           }
+                          onFocus={e => 
+                            this.handleOpenToolTip(e, "UX Design")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
                             })
                           }
+                          role="presentation"
                         />
                       )}
                     </div>
@@ -374,12 +389,14 @@ export const pageQuery = graphql`
       team {
         linkedIn
         name
+        role
+        roleDescription
         image {
           sizes(quality: 100) {
             ...GatsbyContentfulSizes_withWebp
           }
           title
-        }
+        }        
       }
       avaiableTracks {
         ai

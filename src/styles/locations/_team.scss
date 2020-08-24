@@ -1,8 +1,36 @@
 @import "../variables";
 
 .team {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  >* {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1.5rem auto;
+    :nth-child(4) {
+      flex-grow: 1;
+      opacity: .7;
+    }
+  }
   &--name {
     font-size: 25px;
     line-height: 29px;
+  }
+  .get-in-contact {
+    margin-top: 1.5rem;
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+    a {
+      padding: 1rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -21,7 +21,7 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
               <a
                 href={partner.partnerLink}
                 target="_blank"
-                rel="no-refrerr"
+                rel="noopener noreferrer"
                 className="aNone"
               >
                 <div className="partner--card mb-4">
