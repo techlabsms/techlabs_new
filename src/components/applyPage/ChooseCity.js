@@ -9,6 +9,8 @@ class ChooseCity extends Component {
   defaultLocale = "en"
   messages = localeData[this.defaultLocale]
 
+  allCountries = []
+
   state = {
     atEnd: false,
     country: "location.country.germany",
@@ -43,6 +45,27 @@ class ChooseCity extends Component {
         })
       }
     }
+
+    // TODO: Add dates to contentful
+    const remote = {
+      node: {
+        location: "Remote",
+        country: "Remote",
+        value: "location.remote",
+        applicationStart: "2020-08-15",
+        applicationEnd: "2020-08-24",
+        applicationLink: "https://techlabsorg.typeform.com/to/tSKG8BBE",
+        heading: "Remote",
+        avaiableTracks: {
+          ai: true,
+          web: true,
+          dataScience: true,
+          ux: true,
+        },
+      },
+    }
+
+    this.props.countries.push(remote)
   }
 
   render() {
