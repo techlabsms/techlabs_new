@@ -279,7 +279,8 @@ export const pageQuery = graphql`
           tracks {
             tracks {
               heading,
-              text
+              text,
+              link
             }
           }
           keyBenefits { 
