@@ -41,6 +41,7 @@ class remote extends Component {
       newsletterVisible,
       keyFacts,
       concept,
+      tracks,
       keyBenefits,
       whatIsIncluded,
       faq
