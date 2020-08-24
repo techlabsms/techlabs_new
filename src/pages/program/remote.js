@@ -99,31 +99,31 @@ class remote extends Component {
           />
           <Academy
             firstTrack={
-              <FormattedMessage id={"program.remote.academy.first.name"} />
+              tracks.tracks[0].heading
             }
             firstTrackText={
-              <FormattedMessage id={"program.remote.academy.first.text"} />
+              tracks.tracks[0].text
             }
             firstTrackLink="/dataScience"
             secondTrack={
-              <FormattedMessage id={"program.remote.academy.second.name"} />
+              tracks.tracks[1].heading
             }
             secondTrackText={
-              <FormattedMessage id={"program.remote.academy.second.text"} />
+              tracks.tracks[1].text
             }
             secondTrackLink="/web"
             thirdTrack={
-              <FormattedMessage id={"program.remote.academy.third.name"} />
+              tracks.tracks[2].heading
             }
             thirdTrackText={
-              <FormattedMessage id={"program.remote.academy.third.text"} />
+              tracks.tracks[2].text
             }
             thirdTrackLink="/ai"
             fourthTrack={
-              <FormattedMessage id={"program.remote.academy.fourth.name"} />
+              tracks.tracks[3].heading
             }
             fourthTrackText={
-              <FormattedMessage id={"program.remote.academy.fourth.text"} />
+              tracks.tracks[3].text
             }
             fourthTrackLink="/ux"
           />
