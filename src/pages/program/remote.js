@@ -35,7 +35,7 @@ class remote extends Component {
       nextDate,
       newsletterVisible,
     } = data.page.edges[0].node
-
+    console.log(data)
     return (
       <Layout>
         <Hero
