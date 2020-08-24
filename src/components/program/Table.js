@@ -11,7 +11,6 @@ const Table = ({
   buttonLink,
   codeathome
 }) => {
-  console.log(codeathome)
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
