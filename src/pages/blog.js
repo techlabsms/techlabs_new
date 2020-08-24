@@ -28,7 +28,7 @@ export default blog
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allContentfulBlogPost {
+    allContentfulBlogPost(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           title
