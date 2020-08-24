@@ -275,6 +275,12 @@ export const pageQuery = graphql`
               text
             }
           }
+          tracks {
+            tracks {
+              heading,
+              text
+            }
+          }
           keyBenefits { 
             keyBenefits {
               heading,
