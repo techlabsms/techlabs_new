@@ -111,7 +111,7 @@ export default apply
 
 export const pageQuery = graphql`
   query {
-    allContentfulLocationPage {
+    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           heading
