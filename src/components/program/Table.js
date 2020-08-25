@@ -16,7 +16,7 @@ const Table = ({
       <div className="row tableComponent py-5">
         <table className="table">
           <tr>
-            <th></th>
+            <th aria-label="empty"></th>
             <th className={activeProgram === "remote" ? "active" : ""}>
               <h3 className={activeProgram === "remote" ? "" : "color-red"}>
                 #codeathome Bootcamp

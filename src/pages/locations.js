@@ -1,15 +1,21 @@
 import React, { Component } from "react"
-import locationsImg from "../assets/locations.png"
-import "../styles/_main.scss"
-import LocationCard from "../components/locations/LocationCard"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import MAPLOC from "../assets/mapLoc.png"
+
+// components
+import LocationCard from "../components/locations/LocationCard"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import ArrowButton from "../components/smallComponents/ArrowButton"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
+
+// assets
+import locationsImg from "../assets/locations.png"
+import MAPLOC from "../assets/mapLoc.png"
+
+// style
+import "../styles/_main.scss"
 
 class Locations extends Component {
   constructor() {
@@ -72,6 +78,7 @@ class Locations extends Component {
                   <div className="col-md-4 d-flex">
                     <input
                       type="search"
+                      aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
                       placeholder="Search location"
                       onChange={e => {
@@ -146,7 +153,7 @@ export default Locations
 
 export const pageQuery = graphql`
   query LocationPageQuery {
-    allContentfulLocationPage {
+    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           heading

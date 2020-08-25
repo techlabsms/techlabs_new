@@ -97,6 +97,7 @@ class faq extends Component {
               <input
                 type="search"
                 className="faq--search mt-2"
+                aria-label="Search question"
                 placeholder="Search question"
                 onChange={e => {
                   this.setState({
@@ -107,10 +108,11 @@ class faq extends Component {
             </div>
           </div>
           <div className="row" />
-          {filteredQuestions.map(question => (
+          {filteredQuestions.map((question, index) => (
             <FaqQuestion
               question={question.question}
               answer={question.answer}
+              key={index}
             />
           ))}
         </div>
