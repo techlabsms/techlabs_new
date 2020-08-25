@@ -15,7 +15,7 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulDates {
+      allContentfulDates(filter: { node_locale: { eq: "en-US" } }) {
         edges {
           node {
             location {

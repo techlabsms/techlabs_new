@@ -10,6 +10,7 @@ import Academy from "../../components/program/Academy"
 import ThreeComponents from "../../components/program/ThreeComponents"
 import KeyBenefits from "../../components/shared/KeyBenefits"
 import LearnMore from "../../components/program/LearnMore"
+import Footer from "../../components/Layout/Footer"
 import Table from "../../components/program/Table"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
@@ -57,9 +58,7 @@ class remote extends Component {
           img={data.remote.childImageSharp.fluid}
           link="https://techlabsorg.typeform.com/to/tSKG8BBE"
         />
-        <KeyFacts
-          facts={keyFacts.facts}
-        />
+        <KeyFacts facts={keyFacts.facts} />
         {newsletterVisible && (
           <Newsletter
             image={data.newsletterImage.childImageSharp.fluid}
@@ -77,24 +76,12 @@ class remote extends Component {
                 id={"program.remote.threeComponents.subheading"}
               />
             }
-            firstHeading={
-              concept.concept[0].heading
-            }
-            firstText={
-              concept.concept[0].text
-            }
-            secondHeading={
-              concept.concept[1].heading
-            }
-            secondText={
-              concept.concept[1].text
-            }
-            thirdHeading={
-              concept.concept[2].heading
-            }
-            thirdText={
-              concept.concept[2].text
-            }
+            firstHeading={concept.concept[0].heading}
+            firstText={concept.concept[0].text}
+            secondHeading={concept.concept[1].heading}
+            secondText={concept.concept[1].text}
+            thirdHeading={concept.concept[2].heading}
+            thirdText={concept.concept[2].text}
           />
           <Academy
             firstTrack={
@@ -134,30 +121,14 @@ class remote extends Component {
             subheading={
               <FormattedMessage id={"program.remote.keyBenefits.subheading"} />
             }
-            firstHeading={
-              keyBenefits.keyBenefits[0].heading
-            }
-            firstText={
-              keyBenefits.keyBenefits[0].text
-            }
-            secondHeading={
-              keyBenefits.keyBenefits[1].heading
-            }
-            secondText={
-              keyBenefits.keyBenefits[1].text
-            }
-            thirdHeading={
-              keyBenefits.keyBenefits[2].heading
-            }
-            thirdText={
-              keyBenefits.keyBenefits[2].text
-            }
-            fourthHeading={
-              keyBenefits.keyBenefits[3].heading
-            }
-            fourthText={
-              keyBenefits.keyBenefits[3].text
-            }
+            firstHeading={keyBenefits.keyBenefits[0].heading}
+            firstText={keyBenefits.keyBenefits[0].text}
+            secondHeading={keyBenefits.keyBenefits[1].heading}
+            secondText={keyBenefits.keyBenefits[1].text}
+            thirdHeading={keyBenefits.keyBenefits[2].heading}
+            thirdText={keyBenefits.keyBenefits[2].text}
+            fourthHeading={keyBenefits.keyBenefits[3].heading}
+            fourthText={keyBenefits.keyBenefits[3].text}
           />
           <Table
             heading={<FormattedMessage id={"program.remote.table.heading"} />}
@@ -211,12 +182,11 @@ class remote extends Component {
           {faq.map(faq => {
             return (
               <FaqQuestion
-              question={faq.question}
-              answer={faq.answer.json.content[0].content[0].value}
-              />)
-              }
+                question={faq.question}
+                answer={faq.answer.json.content[0].content[0].value}
+              />
             )
-          }
+          })}
         </Faq>
       </Layout>
     )
@@ -243,12 +213,12 @@ export const pageQuery = graphql`
     remote: file(relativePath: { eq: "remote.png" }) {
       ...fluidImage
     }
-    page: allContentfulCodeAtHome {
+    page: allContentfulCodeAtHome(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
-          pageTitle { 
+          pageTitle {
             pageTitle {
-              heading1,
+              heading1
               heading2
             }
           }
@@ -263,54 +233,47 @@ export const pageQuery = graphql`
           nextDate
           startDate
           newsletterVisible
-          keyFacts { 
+          keyFacts {
             facts {
-              heading,
+              heading
               text
             }
           }
-          concept { 
+          concept {
             concept {
-              heading,
+              heading
               text
             }
           }
-          tracks {
-            tracks {
-              heading,
-              text,
-              link
-            }
-          }
-          keyBenefits { 
+          keyBenefits {
             keyBenefits {
-              heading,
+              heading
               text
             }
           }
-          whatIsIncluded { 
+          whatIsIncluded {
             whatIsIncluded {
               time {
-                hours,
+                hours
                 month
               }
-              who,
+              who
               what {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
               }
               tracks {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
-              },
+              }
               difference {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
               }
             }
           }
