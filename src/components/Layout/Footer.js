@@ -3,7 +3,7 @@ import CookieConsent from "react-cookie-consent"
 import { graphql, useStaticQuery } from "gatsby"
 
 // plugins
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Language from "../language"
@@ -14,17 +14,21 @@ import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
   const data = useStaticQuery(graphql`
-    query($locale: String) {
-      allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
+    query {
+      allContentfulLocationPage {
         edges {
           node {
             heading
+            node_locale
           }
         }
       }
     }
   `)
+  const locale = props.intl.locale
+
   const { edges } = data.allContentfulLocationPage
+
   return (
     <>
       <CookieConsent
@@ -82,6 +86,7 @@ const Footer = props => {
                   </Link>
                   <ul className="footer-tl--subMenu">
                     {edges.map((location, index) => (
+                      location.node.node_locale === locale &&
                       <Link
                         to={`/location/${location.node.heading}`}
                         className="noDec"
@@ -172,4 +177,4 @@ const Footer = props => {
   )
 }
 
-export default Footer
+export default injectIntl(Footer)
