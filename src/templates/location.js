@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 
+// plugins & external
+import { injectIntl } from "gatsby-plugin-intl"
+
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
 import RightImageSection from "../components/shared/RightImageSection"
@@ -41,8 +44,8 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
-    console.log(location)
     const { modalIsOpen, x, y, text } = this.state
+    const { intl } = this.props
     return (
       <Layout>
         <section className="container-fluid">
@@ -311,17 +314,19 @@ class location extends Component {
   }
 }
 
-export default location
+export default injectIntl(location)
 
 export const pageQuery = graphql`
-  query LocationByHeading($heading: String!) {
+  query LocationByHeading($heading: String!, $locale: String) {
     site {
       siteMetadata {
         title
       }
     }
 
-    contentfulLocationPage(heading: { eq: $heading }) {
+    contentfulLocationPage(
+      heading: { eq: $heading },
+      node_locale: { eq: $locale }) {
       heading
       icon {
         file {
