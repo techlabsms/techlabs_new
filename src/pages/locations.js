@@ -32,7 +32,7 @@ class Locations extends Component {
     const { intl } = this.props
     const placeholder = intl.formatMessage({id: 'allLocations.placeholder'})
     const locations = get(this, "props.data.allContentfulLocationPage.edges")
-
+    console.log(intl)
     //Filtering the locations for a fake search
     const filteredLocations = locations.filter(location => {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
