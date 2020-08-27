@@ -195,6 +195,10 @@
   "callToAction.button": "Apply now",
   "callToAction.button.closed": "Application currently closed",
 
+  "datesCalendar.heading": "Important Dates",
+  "datesCalendar.subheading": "Erhalte einen Überblick über alle Veranstaltungen und Termine in {city}",
+  "datesCalendar.noEvents": "Für diesen Monat sind keine Veranstaltungen geplant",
+
   "layout.locations": "Locations",
   "layout.program": "Program",
   "layout.dsp": "Digital Shaper Program",
@@ -284,11 +288,13 @@
   "location.availableTracks": "Available Tracks:",
   "location.nextApplication": "Next application phase:",
   "location.nextBatch": "Next Batch will be announced soon",
+  "location.follow.heading": "Follow Us:",
+  "location.follow.subheading": "Stay up to date!",
   "location.openPositions.heading": "Join the Team",
   "location.openPositions.subheading": "Interested in joining our team?",
   "location.openPositions.text": "You are dreaming of a world with no digital illiterates and are passionate about tech? As a TechLabs Management-Team member you can actively support others in learning tech. Reach out and join the TechLabs family.",
   "location.openPositions.button": "Open Positions",
-  "location.office.heading": "Our Office -",
+  "location.office.heading": "Our Office - {officeName}",
   "location.office.subheading": "Checkout our Workspace",
   "location.office.visit": "Come & visit",
   "location.office.directions": "Get Directions",
@@ -499,5 +505,10 @@
   "foundYourOwn.prepare.card.text": "As a TechLabs Co-Founder, your mission is to build a new location from scratch. To create the best possible learning environment, our approach combines online courses, offline communities, and a project phase. In addition to these core elements, we put huge emphasis on the individual character of each location. Think of TechLabs as a proven concept consisting of a variety of  building blocks to choose from. By compiling these different blocks according to your preferences, you can create your very own version of TechLabs. Your location is your project!",
   "foundYourOwn.wait.heading.text1": "You can’t wait to open your",
   "foundYourOwn.wait.heading.text2": "own TechLabs location?",
-  "foundYourOwn.calltoAction.text": "Contact us"
+  "foundYourOwn.calltoAction.text": "Contact us",
+
+
+  "team.heading": "Our Board Members",
+  "team.subheading": "The People behind {city}",
+  "team.contactButton": "Get in contact"
 }

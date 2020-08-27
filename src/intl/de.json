@@ -277,13 +277,15 @@
   "location.availableTracks": "Verfügbare Tracks:",
   "location.nextApplication": "Nächste Bewerbungsphase:",
   "location.nextBatch": "Der nächste Batch wird bald angekündigt",
+  "location.follow.heading": "Folge uns:",
+  "location.follow.subheading": "Bleib auf dem Laufenden!",
   "location.openPositions.heading": "Werde ein Teil des Teams",
   "location.openPositions.subheading": "Du möchtest Teil unseres Teams werden?",
   "location.openPositions.text": "Du träumst von einer Welt voller digitaler Gestalter und hast eine Leidenschaft für Technologie? Als Mitglied des TechLabs Management-Teams arbeitest Du ehrenamtlich, um andere beim Erlernen neuer Technologien zu unterstützen. Werde Teil der TechLabs-Familie und schließe dich uns auf unserer Mission an.",
   "location.openPositions.button": "Offene Stellen",
-  "location.office.heading": "Unser Office -",
+  "location.office.heading": "Unser Office - {officeName}",
   "location.office.subheading": "Check unser Workspace aus",
-  "location.office.visit": "Besuch uns",
+  "location.office.visit": "Besuch uns hier:",
   "location.office.directions": "Anfahrtsbeschreibung",
   "location.partners.heading": "Unsere Partner",
   "location.partners.subheading": "Unser Standort wir stolz unterstützt von",
@@ -331,6 +333,10 @@
   "callToAction.fourth": "das Lernen anzufangen?",
   "callToAction.button": "Jetzt bewerben",
   "callToAction.button.closed": "Bewerbung geschlossen",
+
+  "datesCalendar.heading": "Wichtige Daten",
+  "datesCalendar.subheading": "",
+  "datesCalendar.noEvents": "",
 
   "layout.locations": "Standorte",
   "layout.program": "Programm",
@@ -500,5 +506,9 @@
   "dataScience.katharina.quote": "TechLabs bietet den Teilnehmern die Möglichkeit, Innovation zu lernen und direkt mit Unternehmen in Kontakt zu treten. Eine großartige Kombination und Partner!",
 
   "program.index.table.heading": "Welche Arten von Programmen bieten wir an?",
-  "program.index.table.subheading": "Bei Techlabs kannst Du vollständig online studieren oder Teil von lokalen Gemeinschaften werden!"
+  "program.index.table.subheading": "Bei Techlabs kannst Du vollständig online studieren oder Teil von lokalen Gemeinschaften werden!",
+
+  "team.heading": "Unsere Vorstandsmitglieder",
+  "team.subheading": "Das Team hinter {city}",
+  "team.contactButton": "Kontakt"
 }
