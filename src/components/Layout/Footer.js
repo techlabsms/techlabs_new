@@ -93,7 +93,7 @@ const Footer = props => {
                         key={index}
                       >
                         <li className="footer-tl--subMenu-link">
-                          {location.node.heading}
+                          <FormattedMessage id={'location.' + location.node.heading.toLowerCase()}/>
                         </li>
                       </Link>
                     ))}
