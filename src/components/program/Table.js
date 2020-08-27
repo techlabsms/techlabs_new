@@ -13,6 +13,7 @@ const Table = ({
   activeProgram,
   hasButton,
   buttonLink,
+  codeathome
 }) => {
   return (
     <Container>
@@ -20,7 +21,7 @@ const Table = ({
       <div className="row tableComponent py-5">
         <table className="table">
           <tr>
-            <th></th>
+            <th aria-label="empty"></th>
             <th className={activeProgram === "remote" ? "active" : ""}>
               <h3 className={activeProgram === "remote" ? "" : "color-red"}>
                 #codeathome Bootcamp
@@ -41,8 +42,8 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
-              <FormattedMessage
-                id={"program.local.table.row1.col2"}/>
+                {codeathome.whatIsIncluded[0].time.month}
+                <br />{codeathome.whatIsIncluded[0].time.hours}
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -60,8 +61,7 @@ const Table = ({
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
-            <FormattedMessage
-                id={"program.local.table.row2.col2"}/>
+              {codeathome.whatIsIncluded[1].who}
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
             <FormattedMessage
@@ -78,20 +78,16 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                  id={"program.local.table.row3.col2.1"}/>
+                  {codeathome.whatIsIncluded[2].what._1}
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                  id={"program.local.table.row3.col2.2"}/>
+                  {codeathome.whatIsIncluded[2].what._2}
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                  id={"program.local.table.row3.col2.3"}/>
+                  {codeathome.whatIsIncluded[2].what._3}
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                  id={"program.local.table.row3.col2.4"}/>
+                  {codeathome.whatIsIncluded[2].what._4}
                 </li>
               </ul>
             </td>
@@ -125,10 +121,10 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li><FormattedMessage id={"program.local.table.row4.col2.1"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col2.2"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col2.3"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col2.4"}/></li>
+                <li>{codeathome.whatIsIncluded[3].tracks._1}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._2}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._3}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._4}</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -149,9 +145,9 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li><FormattedMessage id={"program.local.table.row5.col2.1"}/></li>
-                <li><FormattedMessage id={"program.local.table.row5.col2.2"}/></li>
-                <li><FormattedMessage id={"program.local.table.row5.col2.3"}/></li>
+                <li>{codeathome.whatIsIncluded[4].difference._1}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._2}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._3}</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>

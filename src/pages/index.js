@@ -476,7 +476,7 @@ export const pageQuery = graphql`
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
     }
-    allContentfulLocationPage {
+    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           heading

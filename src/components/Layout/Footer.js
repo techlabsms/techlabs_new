@@ -15,7 +15,7 @@ import PayPal from "../../assets/paypal.svg"
 const Footer = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulLocationPage {
+      allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
         edges {
           node {
             heading
@@ -81,11 +81,11 @@ const Footer = props => {
                     <FormattedMessage id="layout.locations"/>
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    {edges.map(location => (
+                    {edges.map((location, index) => (
                       <Link
                         to={`/location/${location.node.heading}`}
                         className="noDec"
-                        key={location.node.heading}
+                        key={index}
                       >
                         <li className="footer-tl--subMenu-link">
                           {location.node.heading}

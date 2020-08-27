@@ -17,7 +17,7 @@ import Layout from "../components/Layout/Layout"
 import locationsImg from "../assets/locations.png"
 import MAPLOC from "../assets/mapLoc.png"
 
-// styles
+// style
 import "../styles/_main.scss"
 
 class Locations extends Component {
@@ -80,6 +80,7 @@ class Locations extends Component {
                   <div className="col-md-4 d-flex">
                     <input
                       type="search"
+                      aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
                       placeholder={placeholder}
                       onChange={e => {
@@ -151,7 +152,7 @@ export default injectIntl(Locations)
 
 export const pageQuery = graphql`
   query LocationPageQuery {
-    allContentfulLocationPage {
+    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           heading
