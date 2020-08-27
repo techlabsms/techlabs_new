@@ -206,14 +206,14 @@ export const fluidImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query {
+  query($locale: String) {
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
     remote: file(relativePath: { eq: "remote.png" }) {
       ...fluidImage
     }
-    page: allContentfulCodeAtHome(filter: { node_locale: { eq: "en-US" } }) {
+    page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           pageTitle {
@@ -228,6 +228,13 @@ export const pageQuery = graphql`
               content {
                 value
               }
+            }
+          }
+          tracks {
+            tracks {
+              heading 
+              link
+              text
             }
           }
           nextDate
