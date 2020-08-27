@@ -118,8 +118,8 @@ class apply extends Component {
 export default injectIntl(apply)
 
 export const pageQuery = graphql`
-  query {
-    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
+  query($locale: String) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading

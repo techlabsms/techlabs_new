@@ -425,7 +425,7 @@ export const fixedImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query {
+  query($locale: String) {
     imageOne: file(relativePath: { eq: "startPage.png" }) {
       ...fluidImage
     }
@@ -476,7 +476,7 @@ export const pageQuery = graphql`
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
     }
-    allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading
