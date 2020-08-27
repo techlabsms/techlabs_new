@@ -386,6 +386,8 @@
   "program.remote.learnMore.fourthProjectHeading": "User Experience Design",
   "program.remote.table.heading": "What is included in the #codeathome Bootcamp?",
   "program.remote.table.subheading": "See the difference between the Local Digital Shaper Program and the Codeathome Bootcamp!",
+
+  "program.local.programmhero.headingSecond": "Program",
   "program.local.academy.first.name": "Data Science",
   "program.local.academy.first.text": "In the Data Science track you will learn basic coding skills in R or Python and apply them directly to Data Science tasks — from data import to data preparation and visualization to building advanced machine learning models for classification and Web Development",
   "program.local.academy.second.name": "Web Development",

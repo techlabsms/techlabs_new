@@ -407,6 +407,7 @@
   "program.remote.table.subheading": "Der Unterschied zwischen dem Local Digital Shaper Program und dem Codeathome Bootcamp?",
   "program.remote.threeComponents.first.heading": "Online-Lernen",
 
+  "program.local.programmhero.headingSecond": "Programm",
   "program.local.academy.first.name": "Data Science",
   "program.local.academy.first.text": "Im Kurs 'Data Science' lernst Du grundlegende Programmierfähigkeiten in R oder Python und wendest diese direkt auf datenwissenschaftliche Aufgaben an - vom Datenimport über die Datenaufbereitung und -visualisierung bis hin zur Erstellung fortgeschrittener maschineller Lernmodelle für die Klassifizierung und Regressionen.",
   "program.local.academy.second.name": "Web-Entwicklung",

@@ -38,7 +38,7 @@ class local extends Component {
         <Navbar />
         <ProgrammHero
           headingFirst="Digital Shaper"
-          headingSecond="Program"
+          headingSecond={<FormattedMessage id={"program.local.programmhero.headingSecond"}/>}
           intro={<FormattedMessage id={"programs.subheading"}/>}
           background={background}
           backgroundMobil={ProgrammMobil}
