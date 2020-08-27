@@ -140,7 +140,7 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    {<FormattedMessage id={'location.' + location.heading.toLowerCase()}/> || location.heading}
+                    <FormattedMessage id={'location.' + location.heading.toLowerCase()}/>
                   </h1>
 
                   <div className="row">
