@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import get from "lodash/get"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 // components
 import Navbar from "../components/Layout/Navbar"
@@ -16,6 +16,7 @@ import clock from "../assets/clock.svg"
 class BlogPostTemplate extends Component {
   render() {
     const post = get(this.props, "data.contentfulBlogPost")
+    const { intl } = this.props
     return (
       <div>
         <Navbar />
@@ -77,16 +78,16 @@ class BlogPostTemplate extends Component {
   }
 }
 
-export default BlogPostTemplate
+export default injectIntl(BlogPostTemplate)
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!, $locale: String) {
     site {
       siteMetadata {
         title
       }
     }
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulBlogPost(slug: { eq: $slug }, node_locale: { eq: $locale }) {
       title
       slug
       readTime
