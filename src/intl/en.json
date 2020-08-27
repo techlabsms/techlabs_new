@@ -511,5 +511,17 @@
 
   "team.heading": "Our Board Members",
   "team.subheading": "The People behind {city}",
-  "team.contactButton": "Get in contact"
+  "team.contactButton": "Get in contact",
+
+  "404.subheading": "As a techie you know what it means…",
+  "404.definition": "Definition:",
+  "404.text.1": "The ",
+  "404.text.2": "HTTP 404",
+  "404.text.3": ", 404 Not Found, 404, Page Not Found, or Server",
+  "404.text.4": "Not Found error message",
+  "404.text.5": " is a Hypertext Transfer Protocol (HTTP) standard response code, in computer network communications, to indicate that the browser was able to communicate with a given server, but the server",
+  "404.text.6": "could not find what was requested.",
+  "404.text.7": "The website hosting server will typically generate a \"404 Not Found\" web page when a user attempts to follow a broken or dead link; hence the 404 error is one of the most recognizable errors encountered on the World Wide Web.",
+  "404.learnTech": "Learn tech",
+  "404.home": "Return home"
 }
