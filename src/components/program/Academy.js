@@ -83,7 +83,7 @@ class Academy extends Component {
                 {firstTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={firstTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -119,7 +119,7 @@ class Academy extends Component {
                 {secondTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={secondTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -154,7 +154,7 @@ class Academy extends Component {
                 {thirdTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={thirdTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -190,7 +190,7 @@ class Academy extends Component {
                 {fourthTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={fourthTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
