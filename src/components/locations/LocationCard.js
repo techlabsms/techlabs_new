@@ -1,6 +1,10 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
+
+// assets
 import pin from "../../assets/placemark.svg"
-import { Link } from "gatsby-plugin-intl"
 
 const LocationCard = ({ imgTop, city, icon }) => {
   return (
@@ -21,7 +25,7 @@ const LocationCard = ({ imgTop, city, icon }) => {
                 className="text-muted mt-3 pl-3 pr-3 ml-2 d-inline-block"
               />
               <h3 className="text-muted mt-4 d-inline-block align-middle">
-                {city}
+                {<FormattedMessage id={'location.' + city.toLowerCase()}/> || city}
               </h3>
             </div>
             <div className="col-4 text-right">
