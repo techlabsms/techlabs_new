@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import { Helmet } from "react-helmet"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 // assets
 import favicon16 from "../../assets/tl-favicon16.png"

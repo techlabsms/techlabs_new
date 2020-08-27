@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 // plugins & external
 import localeData from "../../intl"
-import { FormattedMessage, IntlProvider } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import dayjs from "dayjs"
 import Img from "gatsby-image"
 

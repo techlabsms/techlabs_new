@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import Img from "gatsby-image"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"

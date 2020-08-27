@@ -50,7 +50,7 @@ class foundYourOwn extends Component {
             </div>
           </div>
         </section>
-        <section class="foundYourOwn--cards">
+        <section className="foundYourOwn--cards">
           <div className="container">
             <div className="row">
               <h2 className="ml-3">
@@ -61,14 +61,14 @@ class foundYourOwn extends Component {
               </h2>
             </div>
             <div className="row mt-3">
-              <div class="card mb-3">
-                <div class="row">
-                  <div class="col-md-6 d-flex justify-content-center">
-                    <img src={PictureOne} class="card-img" alt="..." />
+              <div className="card mb-3">
+                <div className="row">
+                  <div className="col-md-6 d-flex justify-content-center">
+                    <img src={PictureOne} className="card-img" alt="..." />
                   </div>
-                  <div class="col-md-6">
-                    <div class="card-body">
-                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-5">
+                  <div className="col-md-6">
+                    <div className="card-body">
+                      <p className="foundYourOwn--card-text ml-3 mr-3 mt-5">
                         <FormattedMessage id="foundYourOwn.challenge.card.text" />{" "}
                       </p>
                     </div>
@@ -86,17 +86,17 @@ class foundYourOwn extends Component {
               </h2>
             </div>
             <div className="row mt-3">
-              <div class="card mb-3">
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="card-body ">
-                      <p class="foundYourOwn--card-text mr-3 ml-3 mt-5">
+              <div className="card mb-3">
+                <div className="row">
+                  <div className="col-md-6 ">
+                    <div className="card-body ">
+                      <p className="foundYourOwn--card-text mr-3 ml-3 mt-5">
                         <FormattedMessage id="foundYourOwn.initiative.card.text" />
                       </p>
                     </div>
                   </div>
-                  <div class="col-md-6 d-flex justify-content-center">
-                    <img src={PictureTwo} class="card-img" alt="..." />
+                  <div className="col-md-6 d-flex justify-content-center">
+                    <img src={PictureTwo} className="card-img" alt="..." />
                   </div>
                 </div>
               </div>
@@ -110,14 +110,14 @@ class foundYourOwn extends Component {
               </h2>
             </div>
             <div className="row mt-3">
-              <div class="card mb-3">
-                <div class="row">
-                  <div class="col-md-6 d-flex justify-content-center">
-                    <img src={PictureThree} class="card-img" alt="..." />
+              <div className="card mb-3">
+                <div className="row">
+                  <div className="col-md-6 d-flex justify-content-center">
+                    <img src={PictureThree} className="card-img" alt="..." />
                   </div>
-                  <div class="col-md-6">
-                    <div class="card-body">
-                      <p class="foundYourOwn--card-text ml-3 mr-3 mt-3">
+                  <div className="col-md-6">
+                    <div className="card-body">
+                      <p className="foundYourOwn--card-text ml-3 mr-3 mt-3">
                         <FormattedMessage id="foundYourOwn.prepare.card.text" />
                       </p>
                     </div>

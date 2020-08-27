@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-intl"
 
 // components
 import FaqQuestion from "../components/shared/FaqQuestion"
@@ -103,7 +103,7 @@ class faq extends Component {
                 type="search"
                 className="faq--search mt-2"
                 aria-label="Search question"
-                placeholder="Search question"
+                placeholder={placeholder}
                 onChange={e => {
                   this.setState({
                     search: e.target.value,

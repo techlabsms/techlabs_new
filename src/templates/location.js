@@ -45,7 +45,6 @@ class location extends Component {
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
     const { modalIsOpen, x, y, text } = this.state
-    const { intl } = this.props
     return (
       <Layout>
         <section className="container-fluid">
