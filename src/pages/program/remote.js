@@ -213,7 +213,7 @@ export const pageQuery = graphql`
     remote: file(relativePath: { eq: "remote.png" }) {
       ...fluidImage
     }
-    page: allContentfulCodeAtHome(filter: { node_locale: { eq: "en-US" } }) {
+    page: allContentfulCodeAtHome(filter: { node_locale: { eq: "en" } }) {
       edges {
         node {
           pageTitle {
@@ -275,6 +275,13 @@ export const pageQuery = graphql`
                 _2
                 _3
               }
+            }
+          }
+          tracks {
+            tracks {
+              link
+              text
+              heading
             }
           }
           faq {
