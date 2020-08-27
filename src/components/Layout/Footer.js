@@ -14,8 +14,8 @@ import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
   const data = useStaticQuery(graphql`
-    query {
-      allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
+    query($locale: String) {
+      allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
         edges {
           node {
             heading
