@@ -196,8 +196,8 @@
   "callToAction.button.closed": "Application currently closed",
 
   "datesCalendar.heading": "Important Dates",
-  "datesCalendar.subheading": "Erhalte einen Überblick über alle Veranstaltungen und Termine in {city}",
-  "datesCalendar.noEvents": "Für diesen Monat sind keine Veranstaltungen geplant",
+  "datesCalendar.subheading": "Get an overview all Events and Deadlines in {city}",
+  "datesCalendar.noEvents": "There are no events scheduled for this month",
 
   "layout.locations": "Locations",
   "layout.program": "Program",

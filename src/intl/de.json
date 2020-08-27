@@ -335,8 +335,8 @@
   "callToAction.button.closed": "Bewerbung geschlossen",
 
   "datesCalendar.heading": "Wichtige Daten",
-  "datesCalendar.subheading": "",
-  "datesCalendar.noEvents": "",
+  "datesCalendar.subheading": "Erhalte einen Überblick über alle Veranstaltungen und Termine in {city}",
+  "datesCalendar.noEvents": "Für diesen Monat sind keine Veranstaltungen geplant",
 
   "layout.locations": "Standorte",
   "layout.program": "Programm",
