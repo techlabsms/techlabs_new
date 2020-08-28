@@ -284,6 +284,13 @@ export const pageQuery = graphql`
               }
             }
           }
+          tracks {
+            tracks {
+              link
+              text
+              heading
+            }
+          }
           faq {
             question
             answer {
