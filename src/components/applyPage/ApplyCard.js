@@ -4,6 +4,7 @@ import ApplicationCountdown from "./ApplicationCountdown"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
+import ux from "../../assets/UX.svg"
 import dswhite from "../../assets/ds_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
@@ -154,7 +155,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                           ? webwhite
                           : web
                       }
-                      alt="artificial intelligence"
+                      alt="Web Development"
                       width="15"
                       height="15"
                       className="mr-2"
@@ -169,9 +170,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                         isClicked &&
                         clickedCityValue === cityValues.heading.toLowerCase()
                           ? webwhite
-                          : web
+                          : ux
                       }
-                      alt="data science"
+                      alt="UX Design"
                       width="15"
                       height="15"
                       className="mr-2"
