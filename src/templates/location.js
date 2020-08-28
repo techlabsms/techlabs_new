@@ -42,7 +42,6 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
-    console.log(location)
     const { modalIsOpen, x, y, text } = this.state
     return (
       <Layout>
