@@ -1,25 +1,32 @@
-import Heading from "../smallComponents/Heading"
 import React, { Component } from "react"
-import "../../styles/landingpage/_applicationPeriod.scss"
-import Dropdown from "../shared/dropdown"
+
+// plugins & external
 import localeData from "../../intl"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import dayjs from "dayjs"
+import Img from "gatsby-image"
 
+// components
+import Heading from "../smallComponents/Heading"
+import Dropdown from "../shared/dropdown"
 import ApplicationCountdown from "../applyPage/ApplicationCountdown"
+
+// style 
+import "../../styles/landingpage/_applicationPeriod.scss"
+
 import {
   CityCountryEnum,
   CountryEnum,
   getCity,
 } from "../../enums/CountryEnum.js"
+
+// functions
 import { getLogo } from "../../enums/LogoEnum"
 import { getCityValues } from "../../enums/CountryEnum"
-import dayjs from "dayjs"
 
-import Img from "gatsby-image"
 
 class ApplicationPeriod extends Component {
-  defaultLocale = "en"
-  messages = localeData[this.defaultLocale]
+  messages = localeData[this.props.locale]
   state = {
     country: null,
     city: null,

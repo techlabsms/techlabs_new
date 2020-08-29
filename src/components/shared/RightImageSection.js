@@ -1,4 +1,6 @@
 import React from "react"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"

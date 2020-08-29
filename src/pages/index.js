@@ -1,24 +1,33 @@
 import React from "react"
+import { graphql } from "gatsby"
+
+// plugins & external
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
+
+// components
 import Slider from "../components/landingpage/Slider"
 import RightImageSectionHeading from "../components/shared/RightImageSectionHeading"
 import PartnerLogos from "../components/landingpage/PartnerLogos"
-import GIC from "../assets/gic.svg"
 import KeyBenefits from "../components/shared/KeyBenefits"
 import Quote from "../components/shared/Quote"
-import gic from "../assets/gic_team.png"
-import { Link, graphql } from "gatsby"
-import "../styles/_main.scss"
-import "../styles/bootstrap.min.css"
 import Heading from "../components/smallComponents/Heading"
 import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "../components/landingpage/applicationPeriod"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "../components/Layout/Layout"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
+
+// assets
+import GIC from "../assets/gic.svg"
+import gic from "../assets/gic_team.png"
+
+// styles 
+import "../styles/_main.scss"
+import "../styles/bootstrap.min.css"
 
 class index extends React.Component {
+
   componentDidMount() {
     console.log(
       "%cTechLabs",
@@ -29,11 +38,13 @@ class index extends React.Component {
       "font-family:'helvetica'; font-weight:100;"
     )
   }
+
   render() {
-    const { data } = this.props
+    const { data, intl } = this.props
     return (
       <Layout>
         <div className="container-fluid">
+          {/* header section */}
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
@@ -54,8 +65,18 @@ class index extends React.Component {
                     </span>
                   </p>
                   <div className="mt-5">
-                    <Button text="Program" primary={false} link="/program" />
-                    <Button text="About" primary={true} link="/about" />
+                    <Button 
+                    text={
+                      <FormattedMessage id={"landingpage.button.program"} />
+                      } 
+                    primary={false} 
+                    link="/program" />
+                    <Button 
+                    text={
+                      <FormattedMessage id={"landingpage.button.about"} />
+                      } 
+                    primary={true} 
+                    link="/about" />
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
@@ -67,7 +88,7 @@ class index extends React.Component {
               </div>
             </div>
           </section>
-
+          {/* winner of GIC and partner logos */}
           <section className="gic py-5">
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
@@ -83,7 +104,7 @@ class index extends React.Component {
               linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
-
+          {/* what we offer */}
           <section className="py-5 my-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
@@ -230,18 +251,28 @@ class index extends React.Component {
               </div>
             </BackgroundImage>
           </section>
-
+          {/* application deadlines                       */}
           <ApplicationPeriod
             wave={data.wave.childImageSharp.fluid}
             locationData={data.allContentfulLocationPage.edges}
+            locale={intl.locale}
           />
-
+          {/* our community slider */}
           <Slider
+            quoteOne={<FormattedMessage
+              id={"landingpage.slider.jin.text"}
+            />}
             imageOne={data.jin.childImageSharp.fluid}
             imageOneMobil={data.jin_mobil.childImageSharp.fixed}
             imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp.fluid}
+            quoteTwo={<FormattedMessage
+              id={"landingpage.slider.hümeyra.text"}
+            />}
             imageTwo={data.huemeyra.childImageSharp.fluid}
             imageTwoMobil={data.huemeyra_mobil.childImageSharp.fixed}
+            quoteThree={<FormattedMessage
+              id={"landingpage.slider.miriam.text"}
+            />}
             imageThree={data.miriam.childImageSharp.fluid}
             imageThreeMobil={data.miriam_mobil.childImageSharp.fixed}
             imageThreeThumbnail={
@@ -250,24 +281,36 @@ class index extends React.Component {
           />
 
           <RightImageSectionHeading
-            heading="Award-Winning Concept"
-            subheading="Google Impact Challenge 2018!"
-            text="TechLabs - the idea has convinced: The non-profit startup TechLabs offers students the opportunity to broaden and deepen their tech skills – all free of charge! In 2018, the project was awarded as TechLabs won 20,000 EUR in the final of the Google Impact Challenge in Berlin. Today over 100 people joined TechLabs on a voluntary basis to spread the idea."
+            heading={<FormattedMessage
+              id={"landingpage.googlechallenge.heading"}
+            />}
+            subheading={<FormattedMessage
+            id={"landingpage.googlechallenge.subheading"}
+            />}
+            text={
+              <FormattedMessage
+              id={"landingpage.googlechallenge.text"}
+            />
+            }
             image={gic}
             hasButton={true}
-            buttonText="Read more"
+            buttonText={
+              <FormattedMessage id={"landingpage.button.read_more"} />
+            } 
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
           <Quote
-            heading="The TechLabs Journey"
-            subheading="What awaits you at TechLabs"
-            text="Get up to speed learning tech skills in one semester by means
-                  of our program that combines Online Learning, Project Work,
-                  and TechLabs Community Meetings. Independent of the background
-                  and prior knowledge - anyone can participate and learn
-                  tech-skills. At TechLabs we don’t want money to be an issue.
-                  That’s why our programs are free of charge. We help you to
-                  complete your own tech project and qualify for tech roles."
+            heading={<FormattedMessage
+              id={"landingpage.quote.nils.heading"}
+            />}
+            subheading={<FormattedMessage
+              id={"landingpage.quote.nils.subheading"}
+              />}
+            text={
+              <FormattedMessage
+              id={"landingpage.quote.nils.text"}
+            />
+            }
             photo={data.nils.childImageSharp.fixed}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
@@ -315,19 +358,24 @@ class index extends React.Component {
           <section className="container-fluid mt-5 background h-100 py-5">
             <Container>
               <Heading
-                heading="Learn More"
-                subheading="Check out our locations and our Digital Shaper Program!"
+                heading={
+                  <FormattedMessage id={"landingpage.learn_more.heading"} />
+                }
+                subheading={
+                  <FormattedMessage id={"landingpage.learn_more.subheading"} />
+                }
               />
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Locations →</h2>
+                      <h2 className="mt-3 color-red">{
+                        <FormattedMessage id={"landingpage.learn_more.locations.h2"} />
+                    }</h2>
                       <p className="color-gl">
-                        Take a look at what is currently happening in our local
-                        tech communities. Your town is still missing? Bring
-                        TechLabs to your city, let’s build Digital Shapers
-                        together.
+                      {
+                        <FormattedMessage id={"landingpage.learn_more.locations.text"} />
+                      }
                       </p>
                     </div>
                   </Link>
@@ -335,11 +383,13 @@ class index extends React.Component {
                 <div className="col-md-6 mt-3">
                   <Link to="/program" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">Program →</h2>
+                      <h2 className="mt-3 color-red">{
+                        <FormattedMessage id={"landingpage.learn_more.program.h2"} />
+                      }</h2>
                       <p className="color-gl">
-                        Not sure which learning track is the right one for you?
-                        Check out our program and get more information about
-                        each of our tracks.
+                      {
+                        <FormattedMessage id={"landingpage.learn_more.program.text"} />
+                      }
                       </p>
                     </div>
                   </Link>
@@ -353,7 +403,7 @@ class index extends React.Component {
   }
 }
 
-export default index
+export default injectIntl(index)
 
 export const fluidImage = graphql`
   fragment fluidImage on File {
@@ -375,7 +425,7 @@ export const fixedImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query {
+  query($locale: String) {
     imageOne: file(relativePath: { eq: "startPage.png" }) {
       ...fluidImage
     }
@@ -426,7 +476,7 @@ export const pageQuery = graphql`
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
     }
-    allContentfulLocationPage {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading

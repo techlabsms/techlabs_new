@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+
+// plugins & external
 import get from "lodash/get"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 // components
 import LocationCard from "../components/locations/LocationCard"
@@ -26,9 +29,9 @@ class Locations extends Component {
   }
   render() {
     const { search } = this.state
-
+    const { intl } = this.props
+    const placeholder = intl.formatMessage({id: 'allLocations.placeholder'})
     const locations = get(this, "props.data.allContentfulLocationPage.edges")
-
     //Filtering the locations for a fake search
     const filteredLocations = locations.filter(location => {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
@@ -42,15 +45,13 @@ class Locations extends Component {
                 <div className="row margin-top-bot padding-location">
                   <div className="col-md-5 col-lg-5 border-0 text-left">
                     <h1 className="pb-5 display-4">
-                      Discover our <br />{" "}
-                      <span className="highlighted">Locations</span>
+                     <FormattedMessage id="allLocations.heading.1"/> <br />{" "}
+                      <span className="highlighted">
+                        <FormattedMessage id="allLocations.heading.2"/>
+                      </span>
                     </h1>
                     <p className="programmHero--intro">
-                      TechLabs is a set of enthusiastic, driven, and passionate
-                      individuals who have joined forces to turn as many people
-                      as possible into Digital Shapers. Exciting meetups,
-                      hackathons, socials, and workshops await you. Discover the
-                      TechLabs world here
+                      <FormattedMessage id="allLocations.intro"/>
                     </p>
                     <ArrowButton href="locations-list" />
                   </div>
@@ -70,8 +71,8 @@ class Locations extends Component {
                 <div className="row">
                   <div className="col-md-8">
                     <Heading
-                      heading="TechLabs Locations"
-                      subheading="Check out our current tech communities!"
+                      heading={<FormattedMessage id="allLocations.locations.heading"/>}
+                      subheading={<FormattedMessage id="allLocations.locations.subheading"/>}
                     />
                   </div>
 
@@ -80,7 +81,7 @@ class Locations extends Component {
                       type="search"
                       aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
-                      placeholder="Search location"
+                      placeholder={placeholder}
                       onChange={e => {
                         this.setState({
                           search: e.target.value,
@@ -109,21 +110,18 @@ class Locations extends Component {
                       <div class="col-md-6 order-2 order-md-1">
                         <div class="card-body">
                           <h2>
-                            <span className="highlighted mt-5">Your city</span>{" "}
-                            is not on the map?
+                            <span className="highlighted mt-5"><FormattedMessage id="allLocations.city.heading.1"/></span>{" "}
+                            <FormattedMessage id="allLocations.city.heading.2"/>
                           </h2>
                           <p class="locations--card-text mt-5 mr-3 mt-2">
-                            If you are willing to shape the future of tech
-                            education and want to create your own TechLabs
-                            location on a voluntary basis, reach out! Let’s work
-                            together and{" "}
+                            <FormattedMessage id="allLocations.city.text.1"/>{" "}
                             <span className="highlighted">
-                              build something great!
+                              <FormattedMessage id="allLocations.city.text.2"/>
                             </span>
                           </p>
                           <div className="mt-5">
                             <Button
-                              text="More information"
+                              text={<FormattedMessage id="allLocations.city.btn"/>}
                               link="/foundYourOwn"
                               primary={true}
                             />
@@ -149,11 +147,11 @@ class Locations extends Component {
   }
 }
 
-export default Locations
+export default injectIntl(Locations)
 
 export const pageQuery = graphql`
-  query LocationPageQuery {
-    allContentfulLocationPage {
+  query LocationPageQuery($locale: String) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading

@@ -1,13 +1,19 @@
 import React, { Component } from "react"
+
+// plugins & external
 import localeData from "../../intl"
-import Heading from "../smallComponents/Heading"
-import { CountryEnum, getCity } from "../../enums/CountryEnum"
+
+// components
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
+import { CountryEnum, getCity } from "../../enums/CountryEnum"
+import Heading from "../smallComponents/Heading"
+
+// assets
+
 
 class ChooseCity extends Component {
-  defaultLocale = "en"
-  messages = localeData[this.defaultLocale]
+  messages = localeData[this.props.locale]
 
   allCountries = []
 

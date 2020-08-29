@@ -1,10 +1,17 @@
 import React, { Component } from "react"
-import Arrow from "../../assets/arrow.svg"
-import Quote from "../../assets/quote.png"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
+
+// plugin & external
 import Modal from "react-modal"
 import Img from "gatsby-image"
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
+
+// assets
+import Arrow from "../../assets/arrow.svg"
+import Quote from "../../assets/quote.png"
 
 class Slider extends Component {
   constructor() {
@@ -27,8 +34,7 @@ class Slider extends Component {
           index: 0,
           name: "Jin Rhee",
           role: "Business Administration",
-          text:
-            "TechLabs gave me enough knowledge and confidence to enroll and participate in a hackathon. We created a web application for productivity and got the third place.",
+          text: this.props.quoteOne,
           image: this.props.imageOne,
           image_mobil: this.props.imageOneMobil,
           image_mobil_thumbnail: this.props.imageOneThumbnail,
@@ -43,8 +49,7 @@ class Slider extends Component {
           index: 1,
           name: "Hümeyra Husseini",
           role: "Student Molecular Biomedicine",
-          text:
-            "Starting without a tech background, the personal learning path that the TechLabs team put together allowed me to get started with the AI track, learn the necessary coding skills, and develop an understanding of machine learning. Finally, I can build a bridge between biomedicine and AI.",
+          text: this.props.quoteTwo,
           image: this.props.imageTwo,
           link:
             "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
@@ -57,8 +62,7 @@ class Slider extends Component {
           index: 2,
           name: "Miriam Gercken",
           role: "Student Marketing",
-          text:
-            "When I decided to achieve some tech knowledge, I didn’t know where to start. At TechLabs, there are people who know what they are doing, can help me to get started, and then also help me to achieve my goals.",
+          text: this.props.quoteThree,
           image: this.props.imageThree,
           image_mobil: this.props.imageThreeMobil,
           image_mobil_thumbnail: this.props.imageThreeThumbnail,
@@ -102,8 +106,12 @@ class Slider extends Component {
         <Container>
           <div className="d-none d-md-block">
             <Heading
-              heading="Our Community"
-              subheading="Find out what our participants experienced at TechLabs!"
+              heading={<FormattedMessage
+                id={"landingpage.slider.heading"}
+              />}
+              subheading={<FormattedMessage
+                id={"landingpage.slider.subheading"}
+              />}
             />
             <div className="row">
               <div
@@ -151,10 +159,15 @@ class Slider extends Component {
                 <img src={Quote} alt="" className="mt-5 w-50" />
               </div>
               <div className="col-12 col-lg-6">
-                <p className="slider--pre">TESTIMONIALS</p>
+                <p className="slider--pre">
+                {<FormattedMessage
+                  id={"landingpage.slider.pre"}
+                />}
+                </p>
                 <h2 className="slider--title mt-4">
-                  TechLabs taught me <br />
-                  how to code
+                {<FormattedMessage
+                  id={"landingpage.slider.title"}
+                />}
                 </h2>
 
                 <p className="slider--text mt-5 pb-5">
@@ -176,7 +189,13 @@ class Slider extends Component {
                     <span role="img" aria-label="thumbs up">
                       👍🏻
                     </span>
-                    {` read about ${testimonials[number].name}´s project`}
+                    {<FormattedMessage
+                      id={"landingpage.slider.button"}
+                      values={{
+                        name: testimonials[number].name
+                      }}
+                    />}
+                    {/* {` read about ${testimonials[number].name}´s project`} */}
                   </a>
                 )}
                 <div className="row mt-5">

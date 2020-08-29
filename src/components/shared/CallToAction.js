@@ -1,8 +1,17 @@
 import React from "react"
-import ArrowsLeft from "../../assets/arrows.png"
-import ArrowsRight from "../../assets/arrowsRight.png"
+
+// plugin & external
+
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
+
+// assets
+import ArrowsLeft from "../../assets/arrows.png"
+import ArrowsRight from "../../assets/arrowsRight.png"
+
 
 const CallToAction = () => {
   return (
@@ -18,8 +27,10 @@ const CallToAction = () => {
           </div>
           <div className="col-6 col-md-6">
             <h1 className="foundYourOwn--last text-center text-md-left  callToAction--text">
-              You can´t wait to acquire the most{" "}
-              <span className="foundYourOwn--cta"> in demand tech skills?</span>
+              <FormattedMessage id={"callToAction.first"}/>{" "}
+              <span className="foundYourOwn--cta">
+                <FormattedMessage id={"callToAction.second"}/>
+              </span>
               <img
                 src={ArrowsRight}
                 alt="arrow"
@@ -45,7 +56,10 @@ const CallToAction = () => {
           </div>
           <div className="col-6 col-md-4">
             <h1 className="foundYourOwn--last text-center callToAction--text">
-              Are you ready <span className="foundYourOwn--cta">to learn?</span>
+              <FormattedMessage id={"callToAction.third"}/> 
+              <span className="foundYourOwn--cta">
+                <FormattedMessage id={"callToAction.fourth"}/>
+              </span>
             </h1>
           </div>
           <div className="col-3 col-md-1">
@@ -60,7 +74,10 @@ const CallToAction = () => {
         <div className="container my-5 pb-5">
           <div className="row text-center mt-5">
             <div className="col-12">
-              <Button text="Apply now" primary={true} link="/apply" />
+              <Button 
+              text={<FormattedMessage id={"callToAction.button"}/>} 
+              primary={true} 
+              link="/apply" />
             </div>
           </div>
         </div>

@@ -1,7 +1,11 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
-import { Link } from "gatsby"
 
 const Table = ({
   heading,
@@ -9,6 +13,7 @@ const Table = ({
   activeProgram,
   hasButton,
   buttonLink,
+  codeathome
 }) => {
   return (
     <Container>
@@ -30,108 +35,126 @@ const Table = ({
           </tr>
           <tr>
             <td>
-              <strong>Time</strong>
+              <strong>
+                <FormattedMessage
+                id={"program.local.table.row1.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
-                2 Month Program
-                <br />6-10hours/week
+                {codeathome.whatIsIncluded[0].time.month}
+                <br />{codeathome.whatIsIncluded[0].time.hours}
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <p>
-                5 Month Program
-                <br />
-                3-5 hours/week
+              <FormattedMessage
+                id={"program.local.table.row1.col3"}/>
               </p>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Who is eligable to apply?</strong>
+              <strong>
+              <FormattedMessage
+                id={"program.local.table.row2.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
-              Everybody from anywhere in the world.
+              {codeathome.whatIsIncluded[1].who}
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
-              Everybody who is living next to one of our locations and is able
-              to participate at local events.
+            <FormattedMessage
+                id={"program.local.table.row2.col3"}/>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>What is included?</strong>
+              <strong>
+              <FormattedMessage
+                id={"program.local.table.row3.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  {codeathome.whatIsIncluded[2].what._1}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Online Mentorship
+                  {codeathome.whatIsIncluded[2].what._2}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Online Events
+                  {codeathome.whatIsIncluded[2].what._3}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Bootcamp Certificate
+                  {codeathome.whatIsIncluded[2].what._4}
                 </li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.1"}/>
                 </li>
                 <li className="tableComponent--checkmark">
-                  Mentorship on campus
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.2"}/>
                 </li>
                 <li className="tableComponent--checkmark">
-                  Local Events
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.3"}/>
                 </li>
                 <li className="tableComponent--checkmark">
-                  Digital Shaper Certificate
+                  <FormattedMessage
+                    id={"program.local.table.row3.col3.4"}/>
                 </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong>Which tracks are open?</strong>
-            </td>
-            <td className={activeProgram === "remote" ? "active" : ""}>
-              <ul>
-                <li>Web Development</li>
-                <li>Data Science (Python)</li>
-                <li>AI</li>
-                <li>UX Design</li>
-              </ul>
-            </td>
-            <td className={activeProgram === "local" ? "active-right" : ""}>
-              <ul>
-                <li>Premium Web Development</li>
-                <li>Premium Data Science <br/>(Python & R)</li>
-                <li>Premium AI</li>
-                <li>Premium UX Design</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>What is main difference?</strong>
+              <strong>
+                <FormattedMessage
+                  id={"program.local.table.row4.col1"}/>
+              </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Access from everywhere </li>
-                <li>Online Community and Mentors</li>
-                <li>Online Team Project</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._1}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._2}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._3}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._4}</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li>Local Community</li>
-                <li>Access to local Mentors</li>
-                <li>Complete a Team Project</li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.3"}/></li>
+                <li><FormattedMessage id={"program.local.table.row4.col3.4"}/></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>
+              <FormattedMessage
+                  id={"program.local.table.row5.col1"}/>
+              </strong>
+            </td>
+            <td className={activeProgram === "remote" ? "active" : ""}>
+              <ul>
+                <li>{codeathome.whatIsIncluded[4].difference._1}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._2}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._3}</li>
+              </ul>
+            </td>
+            <td className={activeProgram === "local" ? "active-right" : ""}>
+              <ul>
+                <li><FormattedMessage id={"program.local.table.row5.col3.1"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col3.2"}/></li>
+                <li><FormattedMessage id={"program.local.table.row5.col3.3"}/></li>
               </ul>
             </td>
           </tr>
