@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { useState, useEffect } from "react"
 
 // plugins & external
 import localeData from "../../intl"
@@ -11,121 +11,55 @@ import Heading from "../smallComponents/Heading"
 
 // assets
 
+const ChooseCity = ({
+  heading,
+  subheading,
+  countries,
+  handleClick,
+  clickedCityValue,
+}) => {
+  const [countryOptions, setCountryOptions] = useState([])
+  const [choosenCountry, setChoosenCountry] = useState("Remote")
 
-class ChooseCity extends Component {
-  messages = localeData[this.props.locale]
-
-  allCountries = []
-
-  state = {
-    atEnd: false,
-    country: "location.country.germany",
-    city: null,
+  countries.forEach(c => {
+    const { country } = c.node
+    if (countryOptions.includes(country)) {
+      return
+    } else {
+      setCountryOptions([...countryOptions, country])
+    }
+  })
+  const dropdown_style = {
+    marginBottom: "1em",
+    width: "25%",
   }
 
-  handleCountryChange = country => {
-    this.setState({ country: country })
-    this.setCity(country)
-    this.props.handleClick(false)
-  }
+  const filteredCountries = countries.filter(locations => {
+    return locations.node.country.toLowerCase() === choosenCountry.toLowerCase()
+  })
 
-  setCity = country => {
-    const values = []
-    const cities = getCity(country)
-    if (cities) {
-      cities.forEach(value => {
-        values.push({ value: value.value, label: this.messages[value.value] })
-      })
-    }
-    this.setState({ cityOptions: values, city: values[0].value })
-  }
-
-  componentDidMount() {
-    window.onscroll = () => {
-      if (
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 200
-      ) {
-        this.setState({
-          atEnd: true,
-        })
-      }
-    }
-
-    // TODO: Add dates to contentful
-    const remote = {
-      node: {
-        location: "Remote",
-        country: "Remote",
-        value: "location.remote",
-        applicationStart: "2020-08-15",
-        applicationEnd: "2020-08-24",
-        applicationLink: "https://techlabsorg.typeform.com/to/tSKG8BBE",
-        heading: "Remote",
-        avaiableTracks: {
-          ai: true,
-          web: true,
-          dataScience: true,
-          ux: true,
-        },
-      },
-    }
-
-    this.props.countries.push(remote)
-  }
-
-  render() {
-    const { heading, subheading } = this.props
-
-    const dropdown_style = {
-      marginBottom: "1em",
-      width: "25%",
-    }
-
-    const countryOptions = [
-      { value: CountryEnum.GERMANY, label: this.messages[CountryEnum.GERMANY] },
-      { value: CountryEnum.SPAIN, label: this.messages[CountryEnum.SPAIN] },
-      { value: CountryEnum.DENMARK, label: this.messages[CountryEnum.DENMARK] },
-      {
-        value: CountryEnum.COLOMBIA,
-        label: this.messages[CountryEnum.COLOMBIA],
-      },
-      { value: CountryEnum.BRAZIL, label: this.messages[CountryEnum.BRAZIL] },
-      { value: CountryEnum.REMOTE, label: this.messages[CountryEnum.REMOTE] },
-    ]
-
-    const countryKey = "germany"
-
-    const filteredCountries = this.props.countries.filter(locations => {
-      return (
-        locations.node.country.toLowerCase() ===
-        this.state.country.split(".")[2]
-      )
-    })
-    return (
-      <div className="container">
-        <Heading heading={heading} subheading={subheading} />
-        <Dropdown
-          options={countryOptions}
-          id={countryKey}
-          style={dropdown_style}
-          onSelect={this.handleCountryChange}
-        />
-        <div className="row">
-          {filteredCountries.map(country => (
-            <ApplyCard
-              cityValues={country.node}
-              key={country.node.heading}
-              handleClick={(isClicked, value, available, link) => {
-                this.props.handleClick(isClicked, value, available, link)
-              }}
-              clickedCityValue={this.props.clickedCityValue}
-            />
-          ))}
-        </div>
+  return (
+    <div className="container">
+      <Heading heading={heading} subheading={subheading} />
+      <Dropdown
+        options={countryOptions}
+        style={dropdown_style}
+        onSelect={option => setChoosenCountry(option)}
+      />
+      <div className="row">
+        {filteredCountries.map(country => (
+          <ApplyCard
+            cityValues={country.node}
+            key={country.node.heading}
+            handleClick={(isClicked, value, available, link) => {
+              handleClick(isClicked, value, available, link)
+            }}
+            clickedCityValue={clickedCityValue}
+          />
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ChooseCity
