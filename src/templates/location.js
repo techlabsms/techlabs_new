@@ -59,7 +59,7 @@ class location extends Component {
                   <div className="row text-right fixed-top-absolute py-3">
                     <div className="col-md-12">
                       <small className="text-muted mr-4">
-                        <FormattedMessage id="location.availableTracks"/>
+                        <FormattedMessage id="location.availableTracks" />
                       </small>
                       {location.avaiableTracks.web && (
                         <img
@@ -70,8 +70,7 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Web Dev")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "Web Dev")}
+                          onFocus={e => this.handleOpenToolTip(e, "Web Dev")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -87,8 +86,7 @@ class location extends Component {
                           className="mr-3"
                           alt="ai"
                           onMouseOver={e => this.handleOpenToolTip(e, "AI")}
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "AI")}
+                          onFocus={e => this.handleOpenToolTip(e, "AI")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -106,8 +104,9 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Data Science")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "Data Science")}
+                          onFocus={e =>
+                            this.handleOpenToolTip(e, "Data Science")
+                          }
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -125,8 +124,7 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "UX Design")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "UX Design")}
+                          onFocus={e => this.handleOpenToolTip(e, "UX Design")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -140,21 +138,23 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    <FormattedMessage id={'location.' + location.heading.toLowerCase()}/>
+                    <FormattedMessage
+                      id={"location." + location.heading.toLowerCase()}
+                    />
                   </h1>
 
                   <div className="row">
                     <div className="col">
                       {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          <FormattedMessage id="location.nextApplication"/>{" "}
+                          <FormattedMessage id="location.nextApplication" />{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
                         </p>
                       ) : (
                         <p className="text-muted batch-text">
-                          <FormattedMessage id="location.nextBatch"/>
+                          <FormattedMessage id="location.nextBatch" />
                         </p>
                       )}
                     </div>
@@ -163,13 +163,17 @@ class location extends Component {
                   {location.isOpen ? (
                     <>
                       <Button
-                        text={<FormattedMessage id="about.join.RightImageSectionHeading.buttonText"/>}
+                        text={
+                          <FormattedMessage id="about.join.RightImageSectionHeading.buttonText" />
+                        }
                         link={`${location.applicationLink}`}
                         isExternal={true}
                         primary={true}
                       />
                       <Button
-                        text={<FormattedMessage id="foundYourOwn.calltoAction.text"/>}
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
                         primary={false}
                         isExternal={true}
                         link={`mailto:${location.email}`}
@@ -178,7 +182,9 @@ class location extends Component {
                   ) : (
                     <>
                       <Button
-                        text={<FormattedMessage id="foundYourOwn.calltoAction.text"/>}
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
                         primary={true}
                         isExternal={true}
                         link={`mailto:${location.email}`}
@@ -237,8 +243,8 @@ class location extends Component {
               />
             )}
             <Follow
-              heading={<FormattedMessage id="location.follow.heading"/>}
-              subheading={<FormattedMessage id="location.follow.subheading"/>}
+              heading={<FormattedMessage id="location.follow.heading" />}
+              subheading={<FormattedMessage id="location.follow.subheading" />}
               facebookLink={location.facebookUrl}
               instagramLink={location.instagramUrl}
               linkedInLink={location.linkedinUrl}
@@ -247,20 +253,31 @@ class location extends Component {
           </section>
           {location.openPositionsLink && (
             <RightImageSection
-              heading={<FormattedMessage id="location.openPositions.heading"/>}
-              subheading={<FormattedMessage id="location.openPositions.subheading"/>}
-              text={<FormattedMessage id="location.openPositions.text"/>}
+              heading={<FormattedMessage id="location.openPositions.heading" />}
+              subheading={
+                <FormattedMessage id="location.openPositions.subheading" />
+              }
+              text={<FormattedMessage id="location.openPositions.text" />}
               image={teamspirit}
               hasButton={true}
               buttonLink={location.openPositionsLink}
-              buttonText={<FormattedMessage id="location.openPositions.button"/>}
+              buttonText={
+                <FormattedMessage id="location.openPositions.button" />
+              }
             />
           )}
           {location.officeName && (
             <Container>
               <Heading
-                heading={<FormattedMessage id="location.office.heading" values={{ officeName: location.officeName }}/>}
-                subheading={<FormattedMessage id="location.office.subheading"/>}
+                heading={
+                  <FormattedMessage
+                    id="location.office.heading"
+                    values={{ officeName: location.officeName }}
+                  />
+                }
+                subheading={
+                  <FormattedMessage id="location.office.subheading" />
+                }
               />
               <div className="row">
                 <div
@@ -271,7 +288,8 @@ class location extends Component {
                 >
                   <div className="w-75 office--card position-absolute">
                     <h3 className="office--heading">
-                      <FormattedMessage id="location.office.visit"/> {location.officeName}
+                      <FormattedMessage id="location.office.visit" />{" "}
+                      {location.officeName}
                     </h3>
                     <div className="row mt-4">
                       <img src={pin2} alt="pin" className="h-75 mx-3" />
@@ -285,7 +303,7 @@ class location extends Component {
                         href={location.officeLink}
                         className="d-inline noDec office--smalltext"
                       >
-                        <FormattedMessage id="location.office.directions"/>
+                        <FormattedMessage id="location.office.directions" />
                       </a>
                     </div>
                   </div>
@@ -302,8 +320,10 @@ class location extends Component {
           )}
           {location.partners && (
             <PartnerLogos
-              heading={<FormattedMessage id="location.partners.heading"/>}
-              subheading={<FormattedMessage id="location.partners.subheading"/>}
+              heading={<FormattedMessage id="location.partners.heading" />}
+              subheading={
+                <FormattedMessage id="location.partners.subheading" />
+              }
               partners={location.partners}
             />
           )}
@@ -324,8 +344,9 @@ export const pageQuery = graphql`
     }
 
     contentfulLocationPage(
-      heading: { eq: $heading },
-      node_locale: { eq: $locale }) {
+      heading: { eq: $heading }
+      node_locale: { eq: $locale }
+    ) {
       heading
       icon {
         file {
@@ -394,13 +415,12 @@ export const pageQuery = graphql`
         linkedIn
         name
         role
-        roleDescription
         image {
           sizes(quality: 100) {
             ...GatsbyContentfulSizes_withWebp
           }
           title
-        }        
+        }
       }
       avaiableTracks {
         ai
