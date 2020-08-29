@@ -1,5 +1,9 @@
 import React, { Component } from "react"
 import { Helmet } from "react-helmet"
+
+// plugins
+
+// assets
 import favicon16 from "../../assets/tl-favicon16.png"
 import favicon32 from "../../assets/tl-favicon32.png"
 import favicon64 from "../../assets/tl-favicon64.png"

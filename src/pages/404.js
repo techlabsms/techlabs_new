@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout/Layout"
-import { Link } from "gatsby"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import "../styles/_404.scss"
 
 class NotFound extends Component {
@@ -17,7 +17,7 @@ class NotFound extends Component {
           </div>
           <div className="row">
             <div className="col text-center">
-              <p>As a techie you know what it means…</p>
+              <p><FormattedMessage id="404.subheading"/></p>
             </div>
           </div>
           <div className="notFound--definition">
@@ -27,34 +27,29 @@ class NotFound extends Component {
                   <span role="img" aria-label="emoji">
                     🤓{" "}
                   </span>
-                  Definiton:
+                  <FormattedMessage id="404.definition"/>
                 </h3>
               </div>
             </div>
             <div className="row mt-2">
               <div className="col notFound--definition">
-                The <span className="hashtag">HTTP 404</span>, 404 Not Found,
-                404, Page Not Found, or Server{" "}
-                <span className="hashtag">Not Found error message</span> is a
-                Hypertext Transfer Protocol (HTTP) standard response code, in
-                computer network communications, to indicate that the browser
-                was able to communicate with a given server, but the server{" "}
+              <FormattedMessage id="404.text.1"/><span className="hashtag">
+                <FormattedMessage id="404.text.2"/>
+              </span><FormattedMessage id="404.text.3"/>{" "}
+                <span className="hashtag"><FormattedMessage id="404.text.4"/></span><FormattedMessage id="404.text.5"/>{" "}
                 <span className="hashtag">
-                  could not find what was requested.
+                  <FormattedMessage id="404.text.6"/>
                 </span>{" "}
-                The website hosting server will typically generate a "404 Not
-                Found" web page when a user attempts to follow a broken or dead
-                link; hence the 404 error is one of the most recognizable errors
-                encountered on the World Wide Web.
+                  <FormattedMessage id="404.text.7"/>
               </div>
             </div>
             <div className="row">
               <div className="col mt-5">
                 <Link className="btn btn-primary" to="/">
-                  Learn tech
+                  <FormattedMessage id="404.learnTech"/>
                 </Link>
                 <Link className="btn btn-secondary" to="/">
-                  Return home
+                  <FormattedMessage id="404.home"/>
                 </Link>
               </div>
             </div>

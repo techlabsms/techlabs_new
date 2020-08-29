@@ -1,7 +1,12 @@
 import React from "react"
+import Img from "gatsby-image"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
-import Img from "gatsby-image"
 
 const circleImage = {
   borderRadius: "300px",
@@ -16,8 +21,8 @@ const Team = ({ city, team }) => {
   return (
     <Container>
       <Heading
-        heading="Our Board Members"
-        subheading={`The People behind ${city}`}
+        heading={<FormattedMessage id="team.heading"/>}
+        subheading={<FormattedMessage id="team.subheading" values={{ city: city }}/>}
       />
       <div className="team">
         {team &&
@@ -43,7 +48,7 @@ const Team = ({ city, team }) => {
                   className="highlighted"
                   rel="noreferrer"
                 >
-                  Get in contact
+                  <FormattedMessage id="team.contactButton"/>
                 </a>
               </div>
             </div>

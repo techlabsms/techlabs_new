@@ -1,5 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+
+// plugins & external
+import { Link } from "gatsby-plugin-intl"
 
 const Button = ({ text, primary, link, isExternal, style }) => {
   return (

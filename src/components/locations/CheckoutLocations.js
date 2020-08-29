@@ -1,8 +1,12 @@
 import React from "react"
+import { Link } from "gatsby-plugin-intl"
+
+// components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
+
+// assets
 import Frame from "../../assets/Frame.png"
-import { Link } from "gatsby"
 
 const CheckoutLocations = () => {
   return (

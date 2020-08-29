@@ -1,4 +1,10 @@
 import React, { Component } from "react"
+import { graphql } from "gatsby"
+
+// plugins & external
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Layout from "../components/Layout/Layout"
 import ApplicationHero from "../components/applyPage/ApplicationHero"
 import ChooseCity from "../components/applyPage/ChooseCity"
@@ -8,13 +14,13 @@ import ApplicationProcess from "../components/applyPage/ApplicationProcess"
 import CallToActionApplication from "../components/applyPage/CallToActionApplication"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
+import LearnMore from "../components/program/LearnMore"
+
+// assets
 import AI from "../assets/ai-robot.png"
 import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
-import LearnMore from "../components/program/LearnMore"
 import UX from "../assets/UX.png"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
 
 class apply extends Component {
   state = {
@@ -26,18 +32,20 @@ class apply extends Component {
 
   render() {
     const { isClicked } = this.state
+    const { intl } = this.props
     return (
       <Layout>
         <ApplicationHero
           background={applicationHero}
-          headingFirst="Application"
-          intro="Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program."
+          headingFirst={<FormattedMessage id={"applypage.headline.ApplicationHero.headingFirst"}/>}
+          intro={<FormattedMessage id={"applypage.headline.ApplicationHero.intro"}/>}
         />
         <ChooseCity
           heading={<FormattedMessage id={"applypage.choose.your.city.title"} />}
           subheading={
             <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
           }
+          locale={intl.locale}
           handleClick={(isClicked, value, available, link) => {
             this.setState({
               isClicked,
@@ -51,53 +59,53 @@ class apply extends Component {
         />
         <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
-            heading="Application Requirements"
-            subheading="What we are looking for in an applicant?"
+            heading={<FormattedMessage id={"applypage.requirements.heading"} />}
+            subheading={<FormattedMessage id={"applypage.requirements.subheading"} />}
             link={this.state.link}
             isOpen={this.state.available}
           />
           <ApplicationProcess
-            heading="Application Process"
-            subheading="What are the steps for a successful application?"
+            heading={<FormattedMessage id={"applypage.applicationProcess.heading"} />}
+            subheading={<FormattedMessage id={"applypage.applicationProcess.subheading"} />}
           />
           <div className="container">
             <CallToActionApplication
               isOpen={this.state.available}
               link={this.state.link}
-            />
+            />          
             <LearnMore
-              heading="Missed the deadline?"
-              subheading="Get a first impression of what it’s like to study Data Science, Web Development, AI, or UX. Prepare yourself before the next Kick-Off!"
-              firstProjectHeading="Web Development"
+              heading={<FormattedMessage id={"applypage.moreinformation.heading"}/>}
+              subheading={<FormattedMessage id={"applypage.moreinformation.subheading"}/>}
+              firstProjectHeading={<FormattedMessage id={"projects.tech.webdev"}/>}
               firstProjectImage={Web}
               firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              firstButtonText="Start now"
-              secondProjectHeading="Data Science"
+              firstButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
+              secondProjectHeading={<FormattedMessage id={"projects.tech.ds"}/>}
               secondProjectImage={Ds}
               secondLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              secondButtonText="Start now"
-              thirdProjectHeading="Artificial Intelligence"
+              secondButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
+              thirdProjectHeading={<FormattedMessage id={"projects.tech.ai"}/>}
               thirdProjectImage={AI}
               thirdLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              thirdButtonText="Start now"
-              fourthProjectHeading="User Experience Design"
+              thirdButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
+              fourthProjectHeading={<FormattedMessage id={"projects.tech.ux"}/>}
               fourthProjectImage={UX}
               fourthLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              fourthButtonText="Start now"
+              fourthButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
               externalLink={true}
             />
             <Faq>
               <FaqQuestion
-                question="How do I apply for the Digital Shaper Program?"
-                answer="This can be done directly via our application form for the respective location."
+                question="faq_1.question"
+                answer="faq_1.applypage.answer"
               />
               <FaqQuestion
-                question="What should I write in my application to be accepted?"
-                answer="At TechLabs we want to get to know you and your motivation better. Thats why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question."
+                question="faq_2.question"
+                answer="faq_2.answer"
               />
               <FaqQuestion
-                question="How can I imagine the time required?"
-                answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum and allow for about 5 hours per week. Please also bear in mind that the project phase can mean increased coordination effort with your project team. In any case, the invested time will be worth it."
+                question="faq_3.question"
+                answer="faq_3.answer"
               />
             </Faq>
           </div>
@@ -107,11 +115,11 @@ class apply extends Component {
   }
 }
 
-export default apply
+export default injectIntl(apply)
 
 export const pageQuery = graphql`
-  query {
-    allContentfulLocationPage(filter: { node_locale: { eq: "en" } }) {
+  query($locale: String) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading
