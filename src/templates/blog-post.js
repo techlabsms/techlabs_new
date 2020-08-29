@@ -1,10 +1,17 @@
 import React, { Component } from "react"
-import Navbar from "../components/Layout/Navbar"
+import { graphql } from "gatsby"
+
+// plugins & external
 import get from "lodash/get"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Navbar from "../components/Layout/Navbar"
+import Footer from "../components/Layout/Footer"
+
+// assets
 import techlabs from "../assets/tl-icon-whitebg.svg"
 import clock from "../assets/clock.svg"
-import Footer from "../components/Layout/Footer"
-import { graphql } from "gatsby"
 
 class BlogPostTemplate extends Component {
   render() {
@@ -38,7 +45,7 @@ class BlogPostTemplate extends Component {
             <div className="col-md-4 px-4">
               <p>
                 <img src={clock} alt="clock" className="mr-3" />
-                {post.readTime}min read
+                {post.readTime}<FormattedMessage id="blogcard.time"/>
               </p>
             </div>
             <div className="col-8">
@@ -70,7 +77,7 @@ class BlogPostTemplate extends Component {
   }
 }
 
-export default BlogPostTemplate
+export default injectIntl(BlogPostTemplate)
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

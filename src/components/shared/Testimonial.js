@@ -1,12 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Container from "../smallComponents/Container"
-import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
 
-// import Quote from "../../assets/quote.png"
-// ({ heading, subheading, text, testimonialAvatar, testimonialName, testimonialTagline, testimonialLogo })
+// components
+import Container from "../smallComponents/Container"
+import Heading from "../smallComponents/Heading"
 
 const Testimonial = props  => {
   const data = useStaticQuery(graphql`

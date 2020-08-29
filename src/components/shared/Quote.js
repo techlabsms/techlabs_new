@@ -1,7 +1,9 @@
 import React from "react"
+import Img from "gatsby-image"
+
+//components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
-import Img from "gatsby-image"
 
 const Quote = ({ heading, subheading, text, photo, name, job }) => {
   return (
@@ -19,7 +21,7 @@ const Quote = ({ heading, subheading, text, photo, name, job }) => {
             <div className="col-3 text-left d-flex justify-content-center align-content-center">
               <Img
                 fixed={photo}
-                alt="nils"
+                alt={name}
                 style={{
                   marginTop: "auto",
                   marginBottom: "auto",
@@ -40,3 +42,4 @@ const Quote = ({ heading, subheading, text, photo, name, job }) => {
 }
 
 export default Quote
+

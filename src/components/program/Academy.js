@@ -1,11 +1,17 @@
 import React, { Component } from "react"
+
+// plugins 
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
+
+// assets
 import DataScience from "../../assets/dashboard.png"
 import WebDev from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/UX.png"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
-import { Link } from "gatsby"
 
 class Academy extends Component {
   state = {
@@ -39,7 +45,9 @@ class Academy extends Component {
       <Container>
         <Heading
           heading="Learning Tracks"
-          subheading="Explore our courses and choose the one that suits you the most!"
+          subheading={
+            <FormattedMessage id={"programs.techlabs_academy.subheading"} />
+          }
         />
         <div className="row mt-5 d-flex mb-5">
           <div className="col align-self-center text-center d-none d-lg-block">
@@ -75,7 +83,7 @@ class Academy extends Component {
                 {firstTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={firstTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -111,7 +119,7 @@ class Academy extends Component {
                 {secondTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={secondTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -146,7 +154,7 @@ class Academy extends Component {
                 {thirdTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={thirdTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}
@@ -182,7 +190,7 @@ class Academy extends Component {
                 {fourthTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={fourthTrackLink} className="a-white next-link">
-                      Learn more
+                      <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
                 )}

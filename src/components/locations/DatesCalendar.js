@@ -1,10 +1,15 @@
 import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 import Date from "./Date"
 import dayjs from "dayjs"
 import Arrow from "../../assets/arrow.svg"
-import { graphql, useStaticQuery } from "gatsby"
 
 const DatesCalendar = ({ eventsPage, city, mail }) => {
   const month = getNextFiveMonth()
@@ -14,8 +19,8 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
   const [index, setIndex] = useState(0)
 
   const data = useStaticQuery(graphql`
-    query {
-      allContentfulDates(filter: { node_locale: { eq: "en" } }) {
+    query($locale: String) {
+      allContentfulDates(filter: { node_locale: { eq: $locale } }) {
         edges {
           node {
             location {
@@ -109,8 +114,8 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
   return (
     <Container className="datesCalendar">
       <Heading
-        heading="Important Dates"
-        subheading={`Get an overview all Events and Deadlines in ${city}`}
+        heading={<FormattedMessage id="datesCalendar.heading"/>}
+        subheading={<FormattedMessage id="datesCalendar.subheading" values={{city: city}}/>}
       />
       <div className="datesCalendar--card">
         <div className="row">
@@ -196,7 +201,7 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
                 <>
                   {Object.keys(dates[currentMonth]).length === 0 ? (
                     <div className="col-md-12 text-center mt-4">
-                      <h4>There a no events scheduled for this month</h4>
+                      <h4><FormattedMessage id="datesCalendar.noEvents"/></h4>
                     </div>
                   ) : (
                     <>

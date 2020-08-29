@@ -1,6 +1,11 @@
 import React from "react"
-import Container from "../smallComponents/Container"
+
+// plugin & external
 import Img from "gatsby-image"
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Container from "../smallComponents/Container"
 
 const PartnerLogos = ({
   logoOne,
@@ -17,8 +22,9 @@ const PartnerLogos = ({
       <div className="row my-5 d-flex h-100 partnerLogos">
         <div className="col-md-3 col-12 text-center text-md-left justify-content-center align-self-center">
           <p className="partnerLogos--text my-5">
-            Some Partners - <br />
-            we worked with
+          {<FormattedMessage
+              id={"landingpage.partnerlogos.text"}
+            />}
           </p>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
@@ -27,7 +33,7 @@ const PartnerLogos = ({
           </a>
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">
-          <a href={linkPartnerThree}>
+          <a href={linkPartnerTwo}>
             <Img
               fluid={logoTwo}
               alt="partner logo"

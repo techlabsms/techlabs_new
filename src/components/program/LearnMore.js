@@ -1,4 +1,9 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components 
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
@@ -24,6 +29,7 @@ const LearnMore = ({
   fourthProjectImage,
   externalLink,
 }) => {
+  const learnMoreButton = <FormattedMessage id={"program.local.learn_more.button"}/>
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -38,7 +44,7 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
-              text={firstButtonText || "Learn more"}
+              text={firstButtonText || learnMoreButton}
               primary={true}
               link={firstLink}
               isExternal={externalLink || false}
@@ -56,7 +62,7 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
-              text={secondButtonText || "Learn more"}
+              text={secondButtonText || learnMoreButton}
               primary={true}
               link={secondLink}
               isExternal={externalLink || false}
@@ -75,7 +81,7 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
-                text={thirdButtonText || "Learn more"}
+                text={thirdButtonText || learnMoreButton}
                 primary={true}
                 link={thirdLink}
                 isExternal={externalLink || false}
@@ -95,7 +101,7 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
-                text={fourthButtonText || "Learn more"}
+                text={fourthButtonText || learnMoreButton}
                 primary={true}
                 link={fourthLink}
                 isExternal={externalLink || false}

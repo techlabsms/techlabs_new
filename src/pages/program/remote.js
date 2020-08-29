@@ -10,7 +10,6 @@ import Academy from "../../components/program/Academy"
 import ThreeComponents from "../../components/program/ThreeComponents"
 import KeyBenefits from "../../components/shared/KeyBenefits"
 import LearnMore from "../../components/program/LearnMore"
-import Footer from "../../components/Layout/Footer"
 import Table from "../../components/program/Table"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
@@ -44,7 +43,7 @@ class remote extends Component {
       tracks,
       keyBenefits,
       whatIsIncluded,
-      faq
+      faq,
     } = data.page.edges[0].node
     return (
       <Layout>
@@ -84,34 +83,18 @@ class remote extends Component {
             thirdText={concept.concept[2].text}
           />
           <Academy
-            firstTrack={
-              tracks.tracks[0].heading
-            }
-            firstTrackText={
-              tracks.tracks[0].text
-            }
-            firstTrackLink={ tracks.tracks[0].link }
-            secondTrack={
-              tracks.tracks[1].heading
-            }
-            secondTrackText={
-              tracks.tracks[1].text
-            }
-            secondTrackLink={ tracks.tracks[1].link }
-            thirdTrack={
-              tracks.tracks[2].heading
-            }
-            thirdTrackText={
-              tracks.tracks[2].text
-            }
-            thirdTrackLink={ tracks.tracks[2].link }
-            fourthTrack={
-              tracks.tracks[3].heading
-            }
-            fourthTrackText={
-              tracks.tracks[3].text
-            }
-            fourthTrackLink={ tracks.tracks[3].link }
+            firstTrack={tracks.tracks[0].heading}
+            firstTrackText={tracks.tracks[0].text}
+            firstTrackLink={tracks.tracks[0].link}
+            secondTrack={tracks.tracks[1].heading}
+            secondTrackText={tracks.tracks[1].text}
+            secondTrackLink={tracks.tracks[1].link}
+            thirdTrack={tracks.tracks[2].heading}
+            thirdTrackText={tracks.tracks[2].text}
+            thirdTrackLink={tracks.tracks[2].link}
+            fourthTrack={tracks.tracks[3].heading}
+            fourthTrackText={tracks.tracks[3].text}
+            fourthTrackLink={tracks.tracks[3].link}
           />
 
           <KeyBenefits
@@ -206,14 +189,14 @@ export const fluidImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query {
+  query($locale: String) {
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
     remote: file(relativePath: { eq: "remote.png" }) {
       ...fluidImage
     }
-    page: allContentfulCodeAtHome(filter: { node_locale: { eq: "en" } }) {
+    page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           pageTitle {
@@ -228,6 +211,13 @@ export const pageQuery = graphql`
               content {
                 value
               }
+            }
+          }
+          tracks {
+            tracks {
+              heading
+              link
+              text
             }
           }
           nextDate
