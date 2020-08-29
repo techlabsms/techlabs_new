@@ -1,30 +1,38 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Navbar from "../../components/Layout/Navbar"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
 import ThreeComponents from "../../components/program/ThreeComponents"
 import LearnMore from "../../components/program/LearnMore"
-import background from "../../assets/p_background.png"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
 import Process from "../../components/applyPage/Process"
-import DataScience from "../../assets/dashboard.png"
-import web from "../../assets/webdevpro.png"
-import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
 import Footer from "../../components/Layout/Footer"
-import ProgrammMobil from "../../assets/programmMobil.png"
 import KeyBenefits from "../../components/shared/KeyBenefits"
 import Button from "../../components/smallComponents/Button"
 import Table from "../../components/program/Table"
 import Testimonial from "../../components/shared/Testimonial"
 
-import { FormattedMessage } from "gatsby-plugin-intl"
+// assets
+import background from "../../assets/p_background.png"
+import DataScience from "../../assets/dashboard.png"
+import web from "../../assets/webdevpro.png"
+import AI from "../../assets/ai-robot.png"
+import UX from "../../assets/UX.png"
+import ProgrammMobil from "../../assets/programmMobil.png"
 
 class local extends Component {
   render() {
     const { data } = this.props
+    const {
+      whatIsIncluded,
+    } = data.page.edges[0].node
     return (
       <div>
         <Navbar />
@@ -69,6 +77,7 @@ class local extends Component {
             }
             activeProgram="local"
             hasButton={false}
+            codeathome={whatIsIncluded}
           />
           <ThreeComponents
             heading={
@@ -224,6 +233,38 @@ export const pageQuery = graphql`
     }
     accenture: file(relativePath: { eq: "accenture.png" }) {
       ...fluidImageLocal
+    }
+    page: allContentfulCodeAtHome {
+      edges {
+        node {
+          whatIsIncluded { 
+            whatIsIncluded {
+              time {
+                hours,
+                month
+              }
+              who,
+              what {
+                _1,
+                _2,
+                _3,
+                _4
+              }
+              tracks {
+                _1,
+                _2,
+                _3,
+                _4
+              },
+              difference {
+                _1,
+                _2,
+                _3,
+              }
+            }
+          }
+        }
+      }
     }
   }
 `

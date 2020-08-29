@@ -8,7 +8,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const Footer = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulLocationPage(filter: { node_locale: { eq: "en-US" } }) {
+      allContentfulLocationPage(filter: { node_locale: { eq: "en" } }) {
         edges {
           node {
             heading

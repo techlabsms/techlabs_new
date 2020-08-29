@@ -9,6 +9,7 @@ const Table = ({
   activeProgram,
   hasButton,
   buttonLink,
+  codeathome
 }) => {
   return (
     <Container>
@@ -34,8 +35,8 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
-                2 Month Program
-                <br />6-10hours/week
+                {codeathome.whatIsIncluded[0].time.month}
+                <br />{codeathome.whatIsIncluded[0].time.hours}
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -51,7 +52,7 @@ const Table = ({
               <strong>Who is eligable to apply?</strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
-              Everybody from anywhere in the world.
+              {codeathome.whatIsIncluded[1].who}
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               Everybody who is living next to one of our locations and is able
@@ -65,16 +66,16 @@ const Table = ({
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  Free Learning Program
+                  {codeathome.whatIsIncluded[2].what._1}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Online Mentorship
+                  {codeathome.whatIsIncluded[2].what._2}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Online Events
+                  {codeathome.whatIsIncluded[2].what._3}
                 </li>
                 <li className="tableComponent--checkmark">
-                  Bootcamp Certificate
+                  {codeathome.whatIsIncluded[2].what._4}
                 </li>
               </ul>
             </td>
@@ -101,10 +102,10 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Web Development</li>
-                <li>Data Science (Python)</li>
-                <li>AI</li>
-                <li>UX Design</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._1}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._2}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._3}</li>
+                <li>{codeathome.whatIsIncluded[3].tracks._4}</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
@@ -122,9 +123,9 @@ const Table = ({
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <ul>
-                <li>Access from everywhere </li>
-                <li>Online Community and Mentors</li>
-                <li>Online Team Project</li>
+                <li>{codeathome.whatIsIncluded[4].difference._1}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._2}</li>
+                <li>{codeathome.whatIsIncluded[4].difference._3}</li>
               </ul>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
