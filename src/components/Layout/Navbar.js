@@ -14,6 +14,8 @@ import logo from "../../assets/tl-logo.svg"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
+import ux from "../../assets/UX.svg"
+import "jquery"
 
 // styles
 import "../../styles/_main.scss"
@@ -120,7 +122,7 @@ class Navbar extends React.Component {
                       to="/ux"
                       activeClassName="navLink--active"
                     >
-                      <img src={web} alt="UX Design" className="mr-3" />
+                      <img src={ux} alt="UX Design" className="mr-3" />
                       <FormattedMessage id="layout.ux"/>
                     </Link>
                   </div>

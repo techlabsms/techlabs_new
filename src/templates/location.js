@@ -25,6 +25,7 @@ import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
+import ux from "../assets/UX.svg"
 
 class location extends Component {
   state = {
@@ -117,7 +118,7 @@ class location extends Component {
                       )}
                       {location.avaiableTracks.ux && (
                         <img
-                          src={web}
+                          src={ux}
                           width="25"
                           className="mr-3"
                           alt="ux"
