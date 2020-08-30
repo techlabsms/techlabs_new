@@ -22,12 +22,11 @@ import Layout from "../components/Layout/Layout"
 import GIC from "../assets/gic.svg"
 import gic from "../assets/gic_team.png"
 
-// styles 
+// styles
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 
 class index extends React.Component {
-
   componentDidMount() {
     console.log(
       "%cTechLabs",
@@ -41,6 +40,32 @@ class index extends React.Component {
 
   render() {
     const { data, intl } = this.props
+
+    const codeAtHome = [
+      {
+        node: {
+          location: "Remote",
+          country: "Remote",
+          heading: "Remote",
+          applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
+          applicationEnd: this.props.data.codeAtHome.edges[0].node
+            .applicationEnd,
+          applicationLink: this.props.data.codeAtHome.edges[0].node
+            .applicationLink,
+          heading: "Remote",
+          avaiableTracks: {
+            ai: true,
+            web: true,
+            dataScience: true,
+            ux: true,
+          },
+        },
+      },
+    ]
+
+    const allCountries = this.props.data.allContentfulLocationPage.edges.concat(
+      codeAtHome
+    )
     return (
       <Layout>
         <div className="container-fluid">
@@ -65,18 +90,20 @@ class index extends React.Component {
                     </span>
                   </p>
                   <div className="mt-5">
-                    <Button 
-                    text={
-                      <FormattedMessage id={"landingpage.button.program"} />
-                      } 
-                    primary={false} 
-                    link="/program" />
-                    <Button 
-                    text={
-                      <FormattedMessage id={"landingpage.button.about"} />
-                      } 
-                    primary={true} 
-                    link="/about" />
+                    <Button
+                      text={
+                        <FormattedMessage id={"landingpage.button.program"} />
+                      }
+                      primary={false}
+                      link="/program"
+                    />
+                    <Button
+                      text={
+                        <FormattedMessage id={"landingpage.button.about"} />
+                      }
+                      primary={true}
+                      link="/about"
+                    />
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
@@ -254,25 +281,23 @@ class index extends React.Component {
           {/* application deadlines                       */}
           <ApplicationPeriod
             wave={data.wave.childImageSharp.fluid}
-            locationData={data.allContentfulLocationPage.edges}
+            locationData={allCountries}
             locale={intl.locale}
           />
           {/* our community slider */}
           <Slider
-            quoteOne={<FormattedMessage
-              id={"landingpage.slider.jin.text"}
-            />}
+            quoteOne={<FormattedMessage id={"landingpage.slider.jin.text"} />}
             imageOne={data.jin.childImageSharp.fluid}
             imageOneMobil={data.jin_mobil.childImageSharp.fixed}
             imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp.fluid}
-            quoteTwo={<FormattedMessage
-              id={"landingpage.slider.hümeyra.text"}
-            />}
+            quoteTwo={
+              <FormattedMessage id={"landingpage.slider.hümeyra.text"} />
+            }
             imageTwo={data.huemeyra.childImageSharp.fluid}
             imageTwoMobil={data.huemeyra_mobil.childImageSharp.fixed}
-            quoteThree={<FormattedMessage
-              id={"landingpage.slider.miriam.text"}
-            />}
+            quoteThree={
+              <FormattedMessage id={"landingpage.slider.miriam.text"} />
+            }
             imageThree={data.miriam.childImageSharp.fluid}
             imageThreeMobil={data.miriam_mobil.childImageSharp.fixed}
             imageThreeThumbnail={
@@ -281,36 +306,26 @@ class index extends React.Component {
           />
 
           <RightImageSectionHeading
-            heading={<FormattedMessage
-              id={"landingpage.googlechallenge.heading"}
-            />}
-            subheading={<FormattedMessage
-            id={"landingpage.googlechallenge.subheading"}
-            />}
-            text={
-              <FormattedMessage
-              id={"landingpage.googlechallenge.text"}
-            />
+            heading={
+              <FormattedMessage id={"landingpage.googlechallenge.heading"} />
             }
+            subheading={
+              <FormattedMessage id={"landingpage.googlechallenge.subheading"} />
+            }
+            text={<FormattedMessage id={"landingpage.googlechallenge.text"} />}
             image={gic}
             hasButton={true}
             buttonText={
               <FormattedMessage id={"landingpage.button.read_more"} />
-            } 
+            }
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
           />
           <Quote
-            heading={<FormattedMessage
-              id={"landingpage.quote.nils.heading"}
-            />}
-            subheading={<FormattedMessage
-              id={"landingpage.quote.nils.subheading"}
-              />}
-            text={
-              <FormattedMessage
-              id={"landingpage.quote.nils.text"}
-            />
+            heading={<FormattedMessage id={"landingpage.quote.nils.heading"} />}
+            subheading={
+              <FormattedMessage id={"landingpage.quote.nils.subheading"} />
             }
+            text={<FormattedMessage id={"landingpage.quote.nils.text"} />}
             photo={data.nils.childImageSharp.fixed}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
@@ -369,13 +384,19 @@ class index extends React.Component {
                 <div className="col-md-6 mt-3">
                   <Link to="/locations" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">{
-                        <FormattedMessage id={"landingpage.learn_more.locations.h2"} />
-                    }</h2>
+                      <h2 className="mt-3 color-red">
+                        {
+                          <FormattedMessage
+                            id={"landingpage.learn_more.locations.h2"}
+                          />
+                        }
+                      </h2>
                       <p className="color-gl">
-                      {
-                        <FormattedMessage id={"landingpage.learn_more.locations.text"} />
-                      }
+                        {
+                          <FormattedMessage
+                            id={"landingpage.learn_more.locations.text"}
+                          />
+                        }
                       </p>
                     </div>
                   </Link>
@@ -383,13 +404,19 @@ class index extends React.Component {
                 <div className="col-md-6 mt-3">
                   <Link to="/program" className="noDec">
                     <div className="card">
-                      <h2 className="mt-3 color-red">{
-                        <FormattedMessage id={"landingpage.learn_more.program.h2"} />
-                      }</h2>
+                      <h2 className="mt-3 color-red">
+                        {
+                          <FormattedMessage
+                            id={"landingpage.learn_more.program.h2"}
+                          />
+                        }
+                      </h2>
                       <p className="color-gl">
-                      {
-                        <FormattedMessage id={"landingpage.learn_more.program.text"} />
-                      }
+                        {
+                          <FormattedMessage
+                            id={"landingpage.learn_more.program.text"}
+                          />
+                        }
                       </p>
                     </div>
                   </Link>
@@ -482,6 +509,15 @@ export const pageQuery = graphql`
           heading
           country
           applicationStart
+          applicationEnd
+          applicationLink
+        }
+      }
+    }
+    codeAtHome: allContentfulCodeAtHome {
+      edges {
+        node {
+          startDate
           applicationEnd
           applicationLink
         }
