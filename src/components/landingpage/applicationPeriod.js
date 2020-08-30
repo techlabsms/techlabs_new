@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 // plugins & external
 import localeData from "../../intl"
@@ -17,8 +17,8 @@ import "../../styles/landingpage/_applicationPeriod.scss"
 const ApplicationPeriod = ({ locationData, wave }) => {
   // state
   const [countryOptions, setCountryOptions] = useState([])
-  const [cityOptions, setCityOptions] = useState([])
-  const [country, setCountry] = useState("Germany")
+  const [cityOptions, setCityOptions] = useState(["Bitte wählen"])
+  const [country, setCountry] = useState()
   const [city, setCity] = useState()
   const [cityData, setCityData] = useState()
   const [available, setAvailable] = useState()
@@ -59,33 +59,27 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     updateDate(choosenCityData)
   }
 
-  const formatDate = date => {
-    let d = new Date(date),
-      month = "" + (d.getMonth() + 1),
-      day = "" + d.getDate(),
-      year = d.getFullYear()
-
-    if (month.length < 2) month = "0" + month
-    if (day.length < 2) day = "0" + day
-
-    return [year, month, day].join(".")
-  }
-
   const updateDate = cityData => {
     const now = dayjs(Date.now())
 
     if (!cityData || cityData[0].node.applicationStart === null) {
       setAvailable(false)
     } else {
-      setOpen(now.isAfter(dayjs(cityData[0].node.applicationStart)))
-      if (open) {
-        // setDate(cityData[0].node.applicationEnd)
+      // is the start date after today?
+      if (now.isAfter(dayjs(cityData[0].node.applicationStart))) {
+        // is the end date after today?
         if (now.isAfter(dayjs(cityData[0].node.applicationEnd))) {
           setAvailable(false)
+          setOpen(false)
+        } else {
+          setAvailable(true)
+          setOpen(true)
+          setDate(cityData[0].node.applicationEnd)
         }
       } else {
-        setDate(cityData[0].node.applicationEnd)
         setAvailable(true)
+        setOpen(false)
+        setDate(cityData[0].node.applicationStart)
       }
     }
   }
@@ -98,6 +92,11 @@ const ApplicationPeriod = ({ locationData, wave }) => {
       setCountryOptions([...countryOptions, country])
     }
   })
+
+  // useEffect - mount
+  useEffect(() => {
+    updateAvailableCities(countryOptions[0])
+  }, [])
 
   return (
     <section className="py-5 my-5">
@@ -128,24 +127,17 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                   options={cityOptions}
                   style={dropdown_style}
                   onSelect={city => {
-                    console.log(city)
                     setCity(city)
                     updateCityData(city)
                   }}
                 />
-                <button className="btn btn-primary d-inline">
-                  <FormattedMessage
-                    id={"app.landingpage.applicationperiod.check"}
-                  />
-                </button>
               </div>
               <div className="p-2 col-sm-8 mt-5 ">
                 <div className="card h-100 center no-padding">
-                  <h1 className="card-title-black">{city}</h1>
+                  <h1 className="card-title-black">{city} </h1>
                   <br />
                   {available ? (
                     <>
-                      {" "}
                       {open ? (
                         <p className="card-subtitle-grey">
                           <FormattedMessage
@@ -167,11 +159,11 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                         <ApplicationCountdown date={date} />
                       </div>
                       <span className="card-discover">
-                        {/* {open ? (
+                        {open ? (
                           <a
                             className="btn btn-primary d-inline apply-button"
                             type="submit"
-                            href={cityValues.applicationLink}
+                            href={cityData.node[0].applicationLink}
                           >
                             <FormattedMessage
                               id={
@@ -181,7 +173,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                           </a>
                         ) : (
                           <> </>
-                        )} */}
+                        )}
                       </span>
                     </>
                   ) : (
@@ -205,24 +197,5 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     </section>
   )
 }
-
-// handleCountryChange = country => {
-//   this.setState({ country: country })
-//   this.setCity(country)
-// }
-// handleCityChange = city => {
-//   this.setState({ city: city })
-// }
-
-// setCity = country => {
-//   const values = []
-//   const cities = getCity(country)
-//   if (cities) {
-//     cities.forEach(value => {
-//       values.push({ value: value.value, label: this.messages[value.value] })
-//     })
-//   }
-//   this.setState({ cityOptions: values, city: values[0].value })
-// }
 
 export default ApplicationPeriod
