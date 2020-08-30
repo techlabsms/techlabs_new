@@ -46,13 +46,12 @@ class index extends React.Component {
         node: {
           location: "Remote",
           country: "Remote",
-          heading: "Remote",
+          heading: "CodeAtHome",
           applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
           applicationEnd: this.props.data.codeAtHome.edges[0].node
             .applicationEnd,
           applicationLink: this.props.data.codeAtHome.edges[0].node
             .applicationLink,
-          heading: "Remote",
           avaiableTracks: {
             ai: true,
             web: true,
