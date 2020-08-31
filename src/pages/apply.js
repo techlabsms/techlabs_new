@@ -33,12 +33,44 @@ class apply extends Component {
   render() {
     const { isClicked } = this.state
     const { intl } = this.props
+
+    const codeAtHome = [
+      {
+        node: {
+          location: "Remote",
+          country: "Remote",
+          applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
+          applicationEnd: this.props.data.codeAtHome.edges[0].node
+            .applicationEnd,
+          applicationLink: this.props.data.codeAtHome.edges[0].node
+            .applicationLink,
+          heading: "Remote",
+          avaiableTracks: {
+            ai: true,
+            web: true,
+            dataScience: true,
+            ux: true,
+          },
+        },
+      },
+    ]
+
+    const allCountries = this.props.data.allContentfulLocationPage.edges.concat(
+      codeAtHome
+    )
+
     return (
       <Layout>
         <ApplicationHero
           background={applicationHero}
-          headingFirst={<FormattedMessage id={"applypage.headline.ApplicationHero.headingFirst"}/>}
-          intro={<FormattedMessage id={"applypage.headline.ApplicationHero.intro"}/>}
+          headingFirst={
+            <FormattedMessage
+              id={"applypage.headline.ApplicationHero.headingFirst"}
+            />
+          }
+          intro={
+            <FormattedMessage id={"applypage.headline.ApplicationHero.intro"} />
+          }
         />
         <ChooseCity
           heading={<FormattedMessage id={"applypage.choose.your.city.title"} />}
@@ -55,43 +87,69 @@ class apply extends Component {
             })
           }}
           clickedCityValue={this.state.cityValue}
-          countries={this.props.data.allContentfulLocationPage.edges}
+          countries={allCountries}
         />
         <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
             heading={<FormattedMessage id={"applypage.requirements.heading"} />}
-            subheading={<FormattedMessage id={"applypage.requirements.subheading"} />}
+            subheading={
+              <FormattedMessage id={"applypage.requirements.subheading"} />
+            }
             link={this.state.link}
             isOpen={this.state.available}
           />
           <ApplicationProcess
-            heading={<FormattedMessage id={"applypage.applicationProcess.heading"} />}
-            subheading={<FormattedMessage id={"applypage.applicationProcess.subheading"} />}
+            heading={
+              <FormattedMessage id={"applypage.applicationProcess.heading"} />
+            }
+            subheading={
+              <FormattedMessage
+                id={"applypage.applicationProcess.subheading"}
+              />
+            }
           />
           <div className="container">
             <CallToActionApplication
               isOpen={this.state.available}
               link={this.state.link}
-            />          
+            />
             <LearnMore
-              heading={<FormattedMessage id={"applypage.moreinformation.heading"}/>}
-              subheading={<FormattedMessage id={"applypage.moreinformation.subheading"}/>}
-              firstProjectHeading={<FormattedMessage id={"projects.tech.webdev"}/>}
+              heading={
+                <FormattedMessage id={"applypage.moreinformation.heading"} />
+              }
+              subheading={
+                <FormattedMessage id={"applypage.moreinformation.subheading"} />
+              }
+              firstProjectHeading={
+                <FormattedMessage id={"projects.tech.webdev"} />
+              }
               firstProjectImage={Web}
               firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              firstButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
-              secondProjectHeading={<FormattedMessage id={"projects.tech.ds"}/>}
+              firstButtonText={
+                <FormattedMessage id={"applypage.text.start_now"} />
+              }
+              secondProjectHeading={
+                <FormattedMessage id={"projects.tech.ds"} />
+              }
               secondProjectImage={Ds}
               secondLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              secondButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
-              thirdProjectHeading={<FormattedMessage id={"projects.tech.ai"}/>}
+              secondButtonText={
+                <FormattedMessage id={"applypage.text.start_now"} />
+              }
+              thirdProjectHeading={<FormattedMessage id={"projects.tech.ai"} />}
               thirdProjectImage={AI}
               thirdLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              thirdButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
-              fourthProjectHeading={<FormattedMessage id={"projects.tech.ux"}/>}
+              thirdButtonText={
+                <FormattedMessage id={"applypage.text.start_now"} />
+              }
+              fourthProjectHeading={
+                <FormattedMessage id={"projects.tech.ux"} />
+              }
               fourthProjectImage={UX}
               fourthLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              fourthButtonText={<FormattedMessage id={"applypage.text.start_now"}/>}
+              fourthButtonText={
+                <FormattedMessage id={"applypage.text.start_now"} />
+              }
               externalLink={true}
             />
             <Faq>
@@ -99,14 +157,8 @@ class apply extends Component {
                 question="faq_1.question"
                 answer="faq_1.applypage.answer"
               />
-              <FaqQuestion
-                question="faq_2.question"
-                answer="faq_2.answer"
-              />
-              <FaqQuestion
-                question="faq_3.question"
-                answer="faq_3.answer"
-              />
+              <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
+              <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
             </Faq>
           </div>
         </div>
@@ -133,6 +185,15 @@ export const pageQuery = graphql`
             data
             ux
           }
+        }
+      }
+    }
+    codeAtHome: allContentfulCodeAtHome {
+      edges {
+        node {
+          startDate
+          applicationEnd
+          applicationLink
         }
       }
     }

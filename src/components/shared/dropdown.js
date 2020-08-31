@@ -1,31 +1,24 @@
-import * as React from "react";
+import React, { useState } from "react"
 
-class Dropdown extends React.Component {
-
-    render() {
-        const {options, style, id} = this.props;
-        const optionValues = [];
-        for (let i = 0; i < options.length; i++) {
-            optionValues.push(
-                <option key={i} value={options[i].value}>{options[i].label}</option>)
-        }
-        return (
-            <div style={style}>
-                <select onBlur={this.handleChange} id={"dropdown-select" + id} style={{width: "100%"}}
-                        className="dropdown-select">
-                    {optionValues}
-                </select>
-            </div>
-        )
-    }
-
-
-    handleChange = () => {
-        const selectElement =
-            document.querySelector('#dropdown-select' + this.props.id);
-        const output = selectElement.options[selectElement.selectedIndex].value;
-        this.props.onSelect(output);
-    };
+const Dropdown = ({ options, style, onSelect }) => {
+  const [choosenOption, setChoosenOption] = useState()
+  return (
+    <div style={style}>
+      <select
+        style={{ width: "100%" }}
+        className="dropdown-select"
+        onChange={e => {
+          setChoosenOption(e.target.value)
+          onSelect(e.target.value)
+        }}
+        value={choosenOption}
+      >
+        {options.map(option => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+    </div>
+  )
 }
 
 export default Dropdown
