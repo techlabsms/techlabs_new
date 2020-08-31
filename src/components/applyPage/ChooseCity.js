@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 // plugins & external
 import localeData from "../../intl"
@@ -6,7 +6,6 @@ import localeData from "../../intl"
 // components
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
-import { CountryEnum, getCity } from "../../enums/CountryEnum"
 import Heading from "../smallComponents/Heading"
 
 // assets
