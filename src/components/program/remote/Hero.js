@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import Heading from "../../smallComponents/Heading"
 import Button from "../../smallComponents/Button"
 import Img from "gatsby-image"
@@ -39,13 +40,13 @@ const Hero = ({
           <div className="row">
             <div className="col-md-9">
               <p className="hero-remote-date">
-                Bootcamp application starts:{" "}
+                <FormattedMessage id="program.remote.hero.applicationStart"/>{" "}
                 <span className="hero-remote-date-highlighted">
                   {applicationStart}
                 </span>
               </p>
               <p className="hero-remote-date">
-                Next Bootcamp starts:{" "}
+              <FormattedMessage id="program.remote.hero.bootcampStart"/>{" "}
                 <span className="hero-remote-date-highlighted">
                   {nextBootcampStart}
                 </span>
@@ -53,7 +54,7 @@ const Hero = ({
             </div>
             <div className="col-md-3 d-flex justify-content-center align-items-center">
               <Button
-                text="Apply now"
+                text={<FormattedMessage id="program.remote.hero.button"/>}
                 isExternal={true}
                 link={link}
                 primary={true}

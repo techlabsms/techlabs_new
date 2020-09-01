@@ -1,4 +1,9 @@
 import React from "react"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
@@ -33,7 +38,9 @@ const FirstImpression = ({
             </p>
             <div className="text-center">
               <a href={firstLink} className="noDec">
-                <div className="firstImpression--card-btn">Start now</div>
+                <div className="firstImpression--card-btn">
+                  <FormattedMessage id={"dataScience.first_impression.FirstImpression.button"}/>
+                </div>
               </a>
             </div>
           </div>
@@ -61,7 +68,9 @@ const FirstImpression = ({
                 </p>
                 <div className="text-center">
                   <a href={secondLink} className="noDec">
-                    <div className="firstImpression--card-btn">Start now</div>
+                    <div className="firstImpression--card-btn">
+                      <FormattedMessage id={"dataScience.first_impression.FirstImpression.button"}/>
+                    </div>
                   </a>
                 </div>
               </div>

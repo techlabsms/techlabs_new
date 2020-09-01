@@ -1,4 +1,9 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
@@ -7,7 +12,13 @@ const Faq = props => {
     <Container>
       <div className="container">
         <div className="row my-3">
-          <Heading heading="FAQ´s" subheading="Do you have more questions?" />
+          <Heading 
+          heading={
+            <FormattedMessage id={"faq.heading"}/>
+          }
+          subheading={
+            <FormattedMessage id={"faq.subheading"}/>
+          } />
         </div>
         <div className="row">
           <div className="col">{props.children}</div>

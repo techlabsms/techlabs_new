@@ -1,23 +1,34 @@
 import React from "react"
-import Logo from "../../assets/tl-logo-white.svg"
-import PayPal from "../../assets/paypal.svg"
-import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent"
 import { graphql, useStaticQuery } from "gatsby"
+
+// plugins
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+
+// components
+import Language from "../language"
+
+// assets
+import Logo from "../../assets/tl-logo-white.svg"
+import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulLocationPage(filter: { node_locale: { eq: "en" } }) {
+      allContentfulLocationPage {
         edges {
           node {
             heading
+            node_locale
           }
         }
       }
     }
   `)
+  const locale = props.intl.locale
+
   const { edges } = data.allContentfulLocationPage
+
   return (
     <>
       <CookieConsent
@@ -41,7 +52,7 @@ const Footer = props => {
         declineButtonText="I decline"
         setDeclineCookie={false}
       >
-        This website uses cookies to enhance the user experience.{" "}
+        <FormattedMessage id="footer.cookies" />{" "}
         <span role="img" aria-label="cookie">
           🍪
         </span>{" "}
@@ -50,7 +61,7 @@ const Footer = props => {
           to="/privacyPolicy"
           style={{ color: "white", textDecoration: "underline" }}
         >
-          More Information
+          <FormattedMessage id="footer.cookies.more" />
         </Link>
       </CookieConsent>
       <div className="footer-tl">
@@ -60,87 +71,98 @@ const Footer = props => {
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
-              <button className="px-3 py-1 my-3 footer--btn">
-                <span role="img" aria-label="english">
-                  🇬🇧
-                </span>{" "}
-                English
-              </button>
+              {/* <Language/> */}
             </div>
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-4">
                   <Link to="/about" className="noDec">
-                    <h5 className="line-height-0 white-font my-2">About us</h5>
+                    <h5 className="line-height-0 white-font my-2">
+                      <FormattedMessage id="footer.about_us" />
+                    </h5>
                   </Link>
                   <Link className="foot-a" to="/locations">
-                    Locations
+                    <FormattedMessage id="layout.locations" />
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    {edges.map((location, index) => (
-                      <Link
-                        to={`/location/${location.node.heading}`}
-                        className="noDec"
-                        key={index}
-                      >
-                        <li className="footer-tl--subMenu-link">
-                          {location.node.heading}
-                        </li>
-                      </Link>
-                    ))}
+                    {edges.map(
+                      (location, index) =>
+                        location.node.node_locale === locale && (
+                          <Link
+                            to={`/location/${location.node.heading}`}
+                            className="noDec"
+                            key={index}
+                          >
+                            <li className="footer-tl--subMenu-link">
+                              <FormattedMessage
+                                id={
+                                  "location." +
+                                  location.node.heading.toLowerCase()
+                                }
+                              />
+                            </li>
+                          </Link>
+                        )
+                    )}
                   </ul>
                   <Link className="foot-a" to="/faq">
-                    FAQ
+                    <FormattedMessage id="footer.faq" />
                   </Link>
                   <br />
                   <a
                     className="foot-a"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    Open positions
+                    <FormattedMessage id="layout.openPositions" />
                   </a>
                   <br />
                 </div>
                 <div className="col-lg-4">
                   <Link to="/program" className="noDec">
-                    <h5 className="line-height-0 white-font my-2">Program</h5>
+                    <h5 className="line-height-0 white-font my-2">
+                      <FormattedMessage id="layout.program" />
+                    </h5>
                   </Link>
                   <br />
                   <Link to="/program/local" className="noDec">
-                    Program
+                    <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
                   <Link to="/program/remote" className="noDec">
-                    codeathome Bootcamp
+                    <FormattedMessage id="layout.codeathome" />
                   </Link>
                   <br />
                   <br />
-                  <h5 className="line-height-0 white-font my-2">Tracks</h5>
+                  <h5 className="line-height-0 white-font my-2">
+                    <FormattedMessage id="footer.tracks" />
+                  </h5>
                   <Link className="foot-a" to="/dataScience">
-                    Data Science
+                    <FormattedMessage id="layout.ds" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/web">
-                    Web Development
+                    <FormattedMessage id="layout.webdev" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ai">
-                    Artificial Intelligence
+                    <FormattedMessage id="layout.ai" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ux">
-                    User Experience Design
+                    <FormattedMessage id="layout.ux" />
                   </Link>
                   <br />
                 </div>
                 <div className="col-lg-4">
-                  <h5 className="line-height-0 white-font my-2">Terms</h5>
+                  <h5 className="line-height-0 white-font my-2">
+                    <FormattedMessage id="footer.terms" />
+                  </h5>
                   <Link className="foot-a" to="/privacyPolicy">
-                    Privacy Policy
+                    <FormattedMessage id="footer.terms.privacy" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/imprint">
-                    Imprint
+                    <FormattedMessage id="footer.terms.imprint" />
                   </Link>
                 </div>
               </div>
@@ -162,4 +184,4 @@ const Footer = props => {
   )
 }
 
-export default Footer
+export default injectIntl(Footer)

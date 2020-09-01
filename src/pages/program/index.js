@@ -1,18 +1,24 @@
 import React from "react"
+
+// plugins
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Navbar from "../../components/Layout/Navbar"
+import Footer from "../../components/Layout/Footer"
+import Button from "../../components/smallComponents/Button"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
 import LearnMore from "../../components/program/LearnMore"
-import background from "../../assets/p_background.png"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
-import DataScience from "../../assets/dashboard.png"
-import web from "../../assets/webdevpro.png"
-import Footer from "../../components/Layout/Footer"
-import ProgrammMobil from "../../assets/programmMobil.png"
-import Button from "../../components/smallComponents/Button"
 
-import { FormattedMessage } from "gatsby-plugin-intl"
+
+// assets
+import DataScience from "../../assets/dashboard.png"
+import background from "../../assets/p_background.png"
+import ProgrammMobil from "../../assets/programmMobil.png"
+import web from "../../assets/webdevpro.png"
 
 const index = () => {
   return (
@@ -20,9 +26,11 @@ const index = () => {
       <div>
         <Navbar />
         <ProgrammHero
-          headingFirst="Our Learning"
-          headingSecond="Programs"
-          intro="Our program provides you with the most effective way to build domain knowledge in the tech sphere. Our blended-learning concept combines Online Learning, Project Work, and TechLabs Community Events. Discover our program now."
+          headingFirst={<FormattedMessage id={"programs.heading.1"} />}
+          headingSecond={<FormattedMessage id={"programs.heading.2"} />}
+          intro={
+            <FormattedMessage id={"programs.subheading"} />
+          }
           background={background}
           backgroundMobil={ProgrammMobil}
         />
@@ -54,33 +62,48 @@ const index = () => {
             }
           />
           <LearnMore
-            heading="Learn More"
-            subheading="Get more information about the programs!"
+            heading={
+              <FormattedMessage id={"landingpage.learn_more.heading"} />
+            } 
+            subheading={
+              <FormattedMessage id={"programs.learn_more.subheading"} />
+            } 
             firstProjectHeading="Local Digital Shaper Program"
             firstProjectImage={web}
             firstLink="/program/local"
+            firstButtonText={
+              <FormattedMessage id={"programs.learn_more.button"}/>
+            }
             secondProjectHeading="#codeathome Bootcamp"
             secondProjectImage={DataScience}
             secondLink="/program/remote"
+            secondButtonText={
+              <FormattedMessage id={"programs.learn_more.button"}/>
+            }
           />
           <Faq>
             <FaqQuestion
-              question="How do I apply for the Digital Shaper Program?"
-              answer="This can be done directly on our application page. Make sure to look up the application deadline for your location."
+              question="faq_1.question"
+              answer="faq_1.answer"
             />
             <FaqQuestion
-              question="What should I write in my application to be accepted?"
-              answer="At TechLabs we want to understand why you are motivated to join our program. We are building a vibrant and interdisciplinary team, so don’t hesitate to apply independent of your study background and previous knowledge. There is no such thing as the right answer to our questions."
+              question="faq_2.question"
+              answer="faq_2.answer"
             />
             <FaqQuestion
-              question="How can I imagine the time required?"
-              answer="In general, learning is an individual process. Nevertheless, we recommend that you work regularly on your curriculum. Our learning materials have a total duration of 50+ hours. Please also bear in mind that the project phase is usually linked to increased coordination effort with your project team. In any case, the invested time will be worth it!"
+              question="faq_3.question"
+              answer="faq_3.answer"
             />
           </Faq>
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button text="More Questions?" link="/faq" primary={true} />
+                <Button 
+                text={
+                  <FormattedMessage id={"faq.button"}/>
+                }
+                link="/faq" 
+                primary={true} />
               </div>
             </div>
           </div>

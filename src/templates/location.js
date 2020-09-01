@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 
+// plugins & external
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
 import RightImageSection from "../components/shared/RightImageSection"
@@ -22,6 +25,7 @@ import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
+import ux from "../assets/UX.svg"
 
 class location extends Component {
   state = {
@@ -41,7 +45,6 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
-    console.log(location)
     const { modalIsOpen, x, y, text } = this.state
     return (
       <Layout>
@@ -57,7 +60,7 @@ class location extends Component {
                   <div className="row text-right fixed-top-absolute py-3">
                     <div className="col-md-12">
                       <small className="text-muted mr-4">
-                        Available Tracks:
+                        <FormattedMessage id="location.availableTracks" />
                       </small>
                       {location.avaiableTracks.web && (
                         <img
@@ -115,7 +118,7 @@ class location extends Component {
                       )}
                       {location.avaiableTracks.ux && (
                         <img
-                          src={web}
+                          src={ux}
                           width="25"
                           className="mr-3"
                           alt="ux"
@@ -136,21 +139,23 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    {location.heading}
+                    <FormattedMessage
+                      id={"location." + location.heading.toLowerCase()}
+                    />
                   </h1>
 
                   <div className="row">
                     <div className="col">
                       {location.isOpen ? (
                         <p className="text-muted batch-text">
-                          Next application phase:{" "}
+                          <FormattedMessage id="location.nextApplication" />{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
                         </p>
                       ) : (
                         <p className="text-muted batch-text">
-                          Next Batch will be announced soon
+                          <FormattedMessage id="location.nextBatch" />
                         </p>
                       )}
                     </div>
@@ -159,13 +164,17 @@ class location extends Component {
                   {location.isOpen ? (
                     <>
                       <Button
-                        text="Apply now"
+                        text={
+                          <FormattedMessage id="about.join.RightImageSectionHeading.buttonText" />
+                        }
                         link={`${location.applicationLink}`}
                         isExternal={true}
                         primary={true}
                       />
                       <Button
-                        text="Contact us"
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
                         primary={false}
                         isExternal={true}
                         link={`mailto:${location.email}`}
@@ -174,7 +183,9 @@ class location extends Component {
                   ) : (
                     <>
                       <Button
-                        text="Contact us"
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
                         primary={true}
                         isExternal={true}
                         link={`mailto:${location.email}`}
@@ -233,8 +244,8 @@ class location extends Component {
               />
             )}
             <Follow
-              heading="Follow Us:"
-              subheading="Stay up to date!"
+              heading={<FormattedMessage id="location.follow.heading" />}
+              subheading={<FormattedMessage id="location.follow.subheading" />}
               facebookLink={location.facebookUrl}
               instagramLink={location.instagramUrl}
               linkedInLink={location.linkedinUrl}
@@ -243,20 +254,31 @@ class location extends Component {
           </section>
           {location.openPositionsLink && (
             <RightImageSection
-              heading="Join the Team"
-              subheading="Interested in joining our team?"
-              text="You are dreaming of a world with no digital illiterates and are passionate about tech? As a TechLabs Management-Team member you can actively support others in learning tech. Reach out and join the TechLabs family. "
+              heading={<FormattedMessage id="location.openPositions.heading" />}
+              subheading={
+                <FormattedMessage id="location.openPositions.subheading" />
+              }
+              text={<FormattedMessage id="location.openPositions.text" />}
               image={teamspirit}
               hasButton={true}
               buttonLink={location.openPositionsLink}
-              buttonText="Open Positions"
+              buttonText={
+                <FormattedMessage id="location.openPositions.button" />
+              }
             />
           )}
           {location.officeName && (
             <Container>
               <Heading
-                heading={`Our Office - ${location.officeName}`}
-                subheading="Checkout our Workspace"
+                heading={
+                  <FormattedMessage
+                    id="location.office.heading"
+                    values={{ officeName: location.officeName }}
+                  />
+                }
+                subheading={
+                  <FormattedMessage id="location.office.subheading" />
+                }
               />
               <div className="row">
                 <div
@@ -267,7 +289,8 @@ class location extends Component {
                 >
                   <div className="w-75 office--card position-absolute">
                     <h3 className="office--heading">
-                      Come & visit {location.officeName}
+                      <FormattedMessage id="location.office.visit" />{" "}
+                      {location.officeName}
                     </h3>
                     <div className="row mt-4">
                       <img src={pin2} alt="pin" className="h-75 mx-3" />
@@ -281,7 +304,7 @@ class location extends Component {
                         href={location.officeLink}
                         className="d-inline noDec office--smalltext"
                       >
-                        Get Directions
+                        <FormattedMessage id="location.office.directions" />
                       </a>
                     </div>
                   </div>
@@ -298,8 +321,10 @@ class location extends Component {
           )}
           {location.partners && (
             <PartnerLogos
-              heading="Our Partners"
-              subheading="Our location is proudly supported"
+              heading={<FormattedMessage id="location.partners.heading" />}
+              subheading={
+                <FormattedMessage id="location.partners.subheading" />
+              }
               partners={location.partners}
             />
           )}
@@ -309,17 +334,20 @@ class location extends Component {
   }
 }
 
-export default location
+export default injectIntl(location)
 
 export const pageQuery = graphql`
-  query LocationByHeading($heading: String!) {
+  query LocationByHeading($heading: String!, $locale: String) {
     site {
       siteMetadata {
         title
       }
     }
 
-    contentfulLocationPage(heading: { eq: $heading }) {
+    contentfulLocationPage(
+      heading: { eq: $heading }
+      node_locale: { eq: $locale }
+    ) {
       heading
       icon {
         file {

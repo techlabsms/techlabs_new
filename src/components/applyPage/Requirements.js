@@ -1,7 +1,15 @@
 import React from "react"
-import locationsImg from "../../assets/locations.png"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+
+// assets
+import locationsImg from "../../assets/locations.png"
+
 
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
@@ -12,54 +20,47 @@ const Requirements = ({ heading, subheading, link, isOpen }) => {
           <ol className="requirements--list">
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-                Motivation
+              <FormattedMessage id="applypage.requirements.motivation.1"/> 
               </span>{" "}
-              - Are you motivated to learn tech skills online? <br />
-              The online learning program requires you to learn independently!
+              <FormattedMessage id="applypage.requirements.motivation.2"/>  <br />
+              <FormattedMessage id="applypage.requirements.motivation.3"/> 
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-                Drive
+              <FormattedMessage id="applypage.requirements.drive.1"/> 
               </span>{" "}
-              - Do you have the drive to push and finish a group project during
-              your semester? <br />
-              During the project phase, you need to work efficiently within a
-              small team to apply your knowledge!
+              <FormattedMessage id="applypage.requirements.drive.2"/><br />
+              <FormattedMessage id="applypage.requirements.drive.3"/> 
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-                Community
+              <FormattedMessage id="applypage.requirements.community.1"/> 
               </span>{" "}
-              - Do you enjoy connecting with our community during events or
-              within our slack? <br />
-              We offer local events that live from active participation to
-              create a unique network
+              <FormattedMessage id="applypage.requirements.community.2"/><br />
+              <FormattedMessage id="applypage.requirements.community.3"/> 
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-                English
+              <FormattedMessage id="applypage.requirements.english.1"/> 
               </span>{" "}
-              - Are your english skills sufficient? <br />
-              To have a great learning experience you should also be able to
-              understand English materials!
+              <FormattedMessage id="applypage.requirements.english.2"/><br />
+              <FormattedMessage id="applypage.requirements.english.3"/> 
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-                Time-Management
+              <FormattedMessage id="applypage.requirements.time.1"/> 
               </span>{" "}
-              - Are you committed to spend enough time to participate in our
-              program? <br />
-              To become a Digital Shaper you should invest 50+ hours online and
-              offline!
+              <FormattedMessage id="applypage.requirements.time.2"/><br />
+              <FormattedMessage id="applypage.requirements.time.3"/> 
             </li>
           </ol>
           {isOpen ? (
             <a href={link} className="a-white btn btn-primary mt-4">
-              Apply now
+              <FormattedMessage id={"callToAction.button"}/>
             </a>
           ) : (
             <button className="btn btn-primary mt-4" disabled>
-              Application currently closed
+              <FormattedMessage id="callToAction.button.closed"/>
             </button>
           )}
         </div>
