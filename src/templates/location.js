@@ -68,8 +68,7 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Web Dev")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "Web Dev")}
+                          onFocus={e => this.handleOpenToolTip(e, "Web Dev")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -85,8 +84,7 @@ class location extends Component {
                           className="mr-3"
                           alt="ai"
                           onMouseOver={e => this.handleOpenToolTip(e, "AI")}
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "AI")}
+                          onFocus={e => this.handleOpenToolTip(e, "AI")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -104,8 +102,9 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "Data Science")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "Data Science")}
+                          onFocus={e =>
+                            this.handleOpenToolTip(e, "Data Science")
+                          }
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -123,8 +122,7 @@ class location extends Component {
                           onMouseOver={e =>
                             this.handleOpenToolTip(e, "UX Design")
                           }
-                          onFocus={e => 
-                            this.handleOpenToolTip(e, "UX Design")}
+                          onFocus={e => this.handleOpenToolTip(e, "UX Design")}
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,
@@ -390,13 +388,12 @@ export const pageQuery = graphql`
         linkedIn
         name
         role
-        roleDescription
         image {
           sizes(quality: 100) {
             ...GatsbyContentfulSizes_withWebp
           }
           title
-        }        
+        }
       }
       avaiableTracks {
         ai
