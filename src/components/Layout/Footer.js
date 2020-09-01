@@ -52,7 +52,7 @@ const Footer = props => {
         declineButtonText="I decline"
         setDeclineCookie={false}
       >
-        <FormattedMessage id="footer.cookies"/>{" "}
+        <FormattedMessage id="footer.cookies" />{" "}
         <span role="img" aria-label="cookie">
           🍪
         </span>{" "}
@@ -61,7 +61,7 @@ const Footer = props => {
           to="/privacyPolicy"
           style={{ color: "white", textDecoration: "underline" }}
         >
-          <FormattedMessage id="footer.cookies.more"/>
+          <FormattedMessage id="footer.cookies.more" />
         </Link>
       </CookieConsent>
       <div className="footer-tl">
@@ -71,91 +71,98 @@ const Footer = props => {
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
-              <Language/>
+              {/* <Language/> */}
             </div>
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-4">
                   <Link to="/about" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
-                    <FormattedMessage id="footer.about_us"/>
+                      <FormattedMessage id="footer.about_us" />
                     </h5>
                   </Link>
                   <Link className="foot-a" to="/locations">
-                    <FormattedMessage id="layout.locations"/>
+                    <FormattedMessage id="layout.locations" />
                   </Link>
                   <ul className="footer-tl--subMenu">
-                    {edges.map((location, index) => (
-                      location.node.node_locale === locale &&
-                      <Link
-                        to={`/location/${location.node.heading}`}
-                        className="noDec"
-                        key={index}
-                      >
-                        <li className="footer-tl--subMenu-link">
-                          <FormattedMessage id={'location.' + location.node.heading.toLowerCase()}/>
-                        </li>
-                      </Link>
-                    ))}
+                    {edges.map(
+                      (location, index) =>
+                        location.node.node_locale === locale && (
+                          <Link
+                            to={`/location/${location.node.heading}`}
+                            className="noDec"
+                            key={index}
+                          >
+                            <li className="footer-tl--subMenu-link">
+                              <FormattedMessage
+                                id={
+                                  "location." +
+                                  location.node.heading.toLowerCase()
+                                }
+                              />
+                            </li>
+                          </Link>
+                        )
+                    )}
                   </ul>
                   <Link className="foot-a" to="/faq">
-                    <FormattedMessage id="footer.faq"/>
+                    <FormattedMessage id="footer.faq" />
                   </Link>
                   <br />
                   <a
                     className="foot-a"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    <FormattedMessage id="layout.openPositions"/>
+                    <FormattedMessage id="layout.openPositions" />
                   </a>
                   <br />
                 </div>
                 <div className="col-lg-4">
                   <Link to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
-                     <FormattedMessage id="layout.program"/>
+                      <FormattedMessage id="layout.program" />
                     </h5>
                   </Link>
                   <br />
                   <Link to="/program/local" className="noDec">
-                    <FormattedMessage id="layout.dsp"/>
+                    <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
                   <Link to="/program/remote" className="noDec">
-                    <FormattedMessage id="layout.codeathome"/>
+                    <FormattedMessage id="layout.codeathome" />
                   </Link>
                   <br />
                   <br />
                   <h5 className="line-height-0 white-font my-2">
-                    <FormattedMessage id="footer.tracks"/>
+                    <FormattedMessage id="footer.tracks" />
                   </h5>
                   <Link className="foot-a" to="/dataScience">
-                    <FormattedMessage id="layout.ds"/>
+                    <FormattedMessage id="layout.ds" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/web">
-                    <FormattedMessage id="layout.webdev"/>
+                    <FormattedMessage id="layout.webdev" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ai">
-                    <FormattedMessage id="layout.ai"/>
+                    <FormattedMessage id="layout.ai" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/ux">
-                    <FormattedMessage id="layout.ux"/>
+                    <FormattedMessage id="layout.ux" />
                   </Link>
                   <br />
                 </div>
                 <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">
-                    <FormattedMessage id="footer.terms"/>
+                    <FormattedMessage id="footer.terms" />
                   </h5>
                   <Link className="foot-a" to="/privacyPolicy">
-                    <FormattedMessage id="footer.terms.privacy"/>
+                    <FormattedMessage id="footer.terms.privacy" />
                   </Link>
                   <br />
                   <Link className="foot-a" to="/imprint">
-                    <FormattedMessage id="footer.terms.imprint"/>
+                    <FormattedMessage id="footer.terms.imprint" />
                   </Link>
                 </div>
               </div>
