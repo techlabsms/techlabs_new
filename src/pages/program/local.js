@@ -230,14 +230,14 @@ export const fluidImageLocal = graphql`
 `
 
 export const pageQuery = graphql`
-  query {
+  query($locale: String) {
     timothee: file(relativePath: { eq: "timothee.png" }) {
       ...fluidImageLocal
     }
     accenture: file(relativePath: { eq: "accenture.png" }) {
       ...fluidImageLocal
     }
-    page: allContentfulCodeAtHome {
+    page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           whatIsIncluded { 
