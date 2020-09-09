@@ -52,14 +52,14 @@ const Hero = ({
                 </span>
               </p>
             </div>
-            <div className="col-md-3 d-flex justify-content-center align-items-center">
+            {/* <div className="col-md-3 d-flex justify-content-center align-items-center">
               <Button
                 text={<FormattedMessage id="program.remote.hero.button"/>}
                 isExternal={true}
                 link={link}
                 primary={true}
               ></Button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-md-6 my-auto">
