@@ -208,33 +208,36 @@ class location extends Component {
               <LeftImageSection
                 heading={location.firstEntryTitle}
                 subheading={location.firstEntrySubtitle}
-                text={location.firstEntryText.json.content[0].content[0].value}
+                text={location.firstEntryTextAsMd.childMarkdownRemark.html}
                 image={location.firstEntryImage.file.url}
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
+                html
               />
             )}
             {location.secondEntryTitle && (
               <RightImageSection
                 heading={location.secondEntryTitle}
                 subheading={location.secondEntrySubtitle}
-                text={location.secondEntryText.json.content[0].content[0].value}
+                text={location.secondEntryTextAsMd.childMarkdownRemark.html}
                 image={location.secondEntryImage.file.url}
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
+                html
               />
             )}
             {location.thirdEntryTitle && (
               <LeftImageSection
                 heading={location.thirdEntryTitle}
                 subheading={location.thirdEntrySubtitle}
-                text={location.thirdEntryText.json.content[0].content[0].value}
+                text={location.thirdEntryTextAsMd.childMarkdownRemark.html}
                 image={location.thirdEntryImage.file.url}
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
+                html
               />
             )}
             {location.team != null && (
@@ -367,8 +370,10 @@ export const pageQuery = graphql`
       mediumUrl
       firstEntryTitle
       firstEntrySubtitle
-      firstEntryText {
-        json
+      firstEntryTextAsMd {
+        childMarkdownRemark {
+          html
+        }
       }
       firstEntryImage {
         file {
@@ -377,8 +382,11 @@ export const pageQuery = graphql`
       }
       secondEntryTitle
       secondEntrySubtitle
-      secondEntryText {
-        json
+
+      secondEntryTextAsMd {
+        childMarkdownRemark {
+          html
+        }
       }
       secondEntryImage {
         file {
@@ -387,10 +395,12 @@ export const pageQuery = graphql`
       }
       thirdEntryTitle
       thirdEntrySubtitle
-      thirdEntryText {
-        json
-      }
 
+      thirdEntryTextAsMd {
+        childMarkdownRemark {
+          html
+        }
+      }
       thirdEntryImage {
         file {
           url
