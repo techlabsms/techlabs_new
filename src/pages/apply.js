@@ -75,7 +75,7 @@ class apply extends Component {
         <ChooseCity
           heading={<FormattedMessage id={"applypage.choose.your.city.title"} />}
           subheading={
-            <FormattedMessage id={"applypage.choose.your.city.subtitle"} />
+            <FormattedMessage id={"applypage.choose.your.city.subtitle"} values={{ count: (allCountries.length - 1) }}/>
           }
           locale={intl.locale}
           handleClick={(isClicked, value, available, link) => {

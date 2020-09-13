@@ -259,8 +259,7 @@ class index extends React.Component {
                             }
                           </p>
                           <p className="text-muted pb-4">
-                            We currently have local communities in different
-                            locations from all over the world.
+                            <FormattedMessage id="landingpage.location.text"/>
                           </p>
                           <span className="card-discover">
                             {
