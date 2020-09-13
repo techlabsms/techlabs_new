@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
