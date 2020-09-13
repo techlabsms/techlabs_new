@@ -9,6 +9,7 @@ const LeftImageSection = ({
   image,
   float,
   leftPartSize,
+  html = false,
   rightPartSize,
 }) => {
   return (
@@ -23,7 +24,16 @@ const LeftImageSection = ({
                 alt=""
                 className="w-50 img-fluid float-left pr-3 pb-2 pt-2 mr-3"
               />
-              <p className="basicSection--text">{text}</p>
+              {html ? (
+                <div
+                  className="basicSection--text"
+                  dangerouslySetInnerHTML={{
+                    __html: text,
+                  }}
+                ></div>
+              ) : (
+                <p className="basicSection--text">{text}</p>
+              )}
             </div>
           </div>
           {/* Stops the floating - resolved positioning issues*/}
