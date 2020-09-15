@@ -50,7 +50,16 @@ const RightImageSection = ({
       )}
       <div className={float ? "row mt-5 d-md-none" : "row mt-5"}>
         <div className={`col-md-${leftPartSize || 7} order-2 order-md-1`}>
-          <p className="basicSection--text">{text}</p>
+          {html ? (
+            <div
+              className="basicSection--text"
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            ></div>
+          ) : (
+            <p className="basicSection--text">{text}</p>
+          )}
           {hasButton && (
             <div className="row mt-5 ml-2">
               <Button
