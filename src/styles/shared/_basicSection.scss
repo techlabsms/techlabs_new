@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .basicSection {
   &--sub {
@@ -11,5 +11,9 @@
     line-height: 35px;
     text-align: justify;
     color: $color-gl;
+
+    p > a {
+      color: $color-p;
+    }
   }
 }

@@ -1,8 +1,5 @@
 import React, { useState } from "react"
 
-// plugins & external
-import localeData from "../../intl"
-
 // components
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
