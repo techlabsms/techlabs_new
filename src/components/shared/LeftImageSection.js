@@ -49,7 +49,16 @@ const LeftImageSection = ({
           <img src={image} alt="" className="w-100" />
         </div>
         <div className={`col-md-${rightPartSize || 7}`}>
-          <p className="basicSection--text">{text}</p>
+          {html ? (
+            <div
+              className="basicSection--text"
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            ></div>
+          ) : (
+            <p className="basicSection--text">{text}</p>
+          )}
         </div>
       </div>
     </Container>
