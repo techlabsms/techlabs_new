@@ -117,11 +117,17 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                 <Dropdown
                   options={countryOptions}
                   style={dropdown_style}
-                  onSelect={country => {
+                  onSelect={(country, e) => {
+                    e.preventDefault()
+                    trackCustomEvent({
+                    category: "Dropdown",
+                    action: "Select",
+                    label: `lp_deadline_${country}`
+                  })
                     setCountry(country)
                     updateAvailableCities(country)
                   }}
-                />
+                />                                     
                 <Dropdown
                   options={cityOptions}
                   style={dropdown_style}

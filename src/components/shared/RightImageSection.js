@@ -17,6 +17,8 @@ const RightImageSection = ({
   html = false,
   leftPartSize,
   rightPartSize,
+  galocation,
+  gasection
 }) => {
   return (
     <Container>
@@ -67,6 +69,14 @@ const RightImageSection = ({
                 isExternal={true}
                 link={buttonLink}
                 primary={true}
+                onClick={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: `${galocation}_${gasection}`,
+                  })
+                }}
               />
             </div>
           )}

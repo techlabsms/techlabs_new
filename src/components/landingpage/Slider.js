@@ -122,7 +122,16 @@ class Slider extends Component {
                 }
               >
                 <div
-                  onClick={testimonials[number].video ? this.openModal : ""}
+                  onClick={e => {
+                    e.preventDefault()
+                    trackCustomEvent({
+                      category: "YoutubeVideo",
+                      action: "Click",
+                      label: `lp_video_${testimonials[number].name}`,
+                    })
+                    testimonials[number].video ? this.openModal : ""
+                    }
+                  }
                   onKeyDown={() => null}
                   role="button"
                   tabIndex={0}
@@ -185,6 +194,14 @@ class Slider extends Component {
                     className="slider--button mt-2"
                     href={testimonials[number].link}
                     target="blank"
+                    onClick={e => {
+                      e.preventDefault()
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: `lp_projekt_${testimonials[number].name}`,
+                      })
+                    }}
                   >
                     <span role="img" aria-label="thumbs up">
                       👍🏻
@@ -239,8 +256,12 @@ class Slider extends Component {
           </div>
           <div className="d-md-none">
             <Heading
-              heading="Our Community"
-              subheading="Find out what our participants experienced at TechLabs!"
+              heading={<FormattedMessage
+                id={"landingpage.slider.heading"}
+              />}
+              subheading={<FormattedMessage
+                id={"landingpage.slider.subheading"}
+              />}
             />
             <div className="row">
               <div className="col-2 text-center">
@@ -248,7 +269,7 @@ class Slider extends Component {
               </div>
               <div className="col-8">
                 <h4 className="slider--title-mobil mt-2">
-                  TechLabs taught me how to code
+                <FormattedMessage id="landingpage.slider.title"/>
                 </h4>
               </div>
             </div>
@@ -258,7 +279,16 @@ class Slider extends Component {
                 {testimonials[number].video ? (
                   <div className="text-center my-4">
                     <div
-                      onClick={testimonials[number].video ? this.openModal : ""}
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "YoutubeVideo",
+                          action: "Click",
+                          label: `lp_video_${testimonials[number].name}`,
+                        })
+                        testimonials[number].video ? this.openModal : ""
+                        }
+                      }
                       onKeyDown={() => null}
                       role="button"
                       tabIndex={0}

@@ -95,6 +95,14 @@ class index extends React.Component {
                       }
                       primary={false}
                       link="/program"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_hero_program",
+                        })
+                      }}
                     />
                     <Button
                       text={
@@ -102,6 +110,14 @@ class index extends React.Component {
                       }
                       primary={true}
                       link="/about"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_hero_about",
+                        })
+                      }}
                     />
                   </div>
                 </div>
@@ -157,7 +173,18 @@ class index extends React.Component {
                   </div>
                   <div className="d-flex col-lg-7 flex-wrap">
                     <div className="p-2 col-sm-6 mt-5">
-                      <Link to="/program" className="card-a">
+                      <Link 
+                      to="/program" 
+                      className="card-a"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_wwo_program_one",
+                        })
+                      }}
+                      >
                         <div className="card h-100">
                           <h1 className="card-title">16</h1> <br />
                           <p className="card-subtitle">
@@ -185,7 +212,18 @@ class index extends React.Component {
                       </Link>
                     </div>
                     <div className="p-2 col-sm-6 mt-5">
-                      <Link to="/program" className="card-a">
+                      <Link 
+                      to="/program" 
+                      className="card-a"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_wwo_program_two",
+                        })
+                      }}
+                      >
                         <div className="card h-100">
                           <h1 className="card-title">4</h1> <br />
                           <p className="card-subtitle">
@@ -213,7 +251,17 @@ class index extends React.Component {
                       </Link>
                     </div>
                     <div className="p-2 col-sm-6 mt-5">
-                      <Link to="/locations" className="card-a">
+                      <Link 
+                      to="/locations" 
+                      className="card-a"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_wwo_locations_one",
+                        })
+                      }}>
                         <div className="card h-100">
                           <h1 className="card-title">300+</h1> <br />
                           <p className="card-subtitle">
@@ -245,7 +293,18 @@ class index extends React.Component {
                       </Link>
                     </div>
                     <div className="p-2 col-sm-6 mt-5">
-                      <Link to="/locations" className="card-a">
+                      <Link 
+                      to="/locations" 
+                      className="card-a"
+                      onClick={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: "lp_wwo_locations_two",
+                        })
+                      }}
+                      >
                         <div className="card h-100">
                           <h1 className="card-title">
                             {data.allContentfulLocationPage.edges.length}
@@ -317,6 +376,8 @@ class index extends React.Component {
               <FormattedMessage id={"landingpage.button.read_more"} />
             }
             buttonLink="https://www.wn.de/Muenster/3342867-Muensteraner-bei-Google-Impact-Challenge-ausgezeichnet-Non-Profit-Startup-Techlabs-gewinnt-20.000-Euro-Foerderpreis"
+            galocation="lp"
+            gasection="googleimpact"
           />
           <Quote
             heading={<FormattedMessage id={"landingpage.quote.nils.heading"} />}
@@ -380,7 +441,18 @@ class index extends React.Component {
               />
               <div className="row h-100">
                 <div className="col-md-6 mt-3">
-                  <Link to="/locations" className="noDec">
+                  <Link 
+                  to="/locations" 
+                  className="noDec"
+                  onClick={e => {
+                    e.preventDefault()
+                    trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: "lp_lm_locations",
+                    })
+                  }}
+                  >
                     <div className="card">
                       <h2 className="mt-3 color-red">
                         {
@@ -400,7 +472,17 @@ class index extends React.Component {
                   </Link>
                 </div>
                 <div className="col-md-6 mt-3">
-                  <Link to="/program" className="noDec">
+                  <Link 
+                  to="/program" 
+                  className="noDec"
+                  onClick={e => {
+                    e.preventDefault()
+                    trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: "lp_lm_program",
+                    })
+                  }}>
                     <div className="card">
                       <h2 className="mt-3 color-red">
                         {
