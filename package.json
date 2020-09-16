@@ -27,6 +27,7 @@
     "bluebird": "^3.7.2",
     "bootstrap": "^4.5.0",
     "dayjs": "^1.8.28",
+    "dotenv": "^8.2.0",
     "env": "0.0.2",
     "gatsby": "^2.23.3",
     "gatsby-background-image": "^0.10.2",
