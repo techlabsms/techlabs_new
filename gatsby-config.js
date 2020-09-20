@@ -1,3 +1,11 @@
+
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -21,7 +29,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `zb5zx2adqx5t`,
-        accessToken: `920E3JZQNSjINbGuuNGDFOZ1n08Y1s4WEyvSysjgGO4`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
