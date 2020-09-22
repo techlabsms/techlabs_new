@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout"
 
 const privacyPolicy = () => {
   return (
-    <Layout>
+    <Layout gaLabel="privacy">
       <div className="container mt-5">
         <div>
           <h3>Privacy Policy TechLabs e. V. </h3>

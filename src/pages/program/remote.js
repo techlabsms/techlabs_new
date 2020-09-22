@@ -46,7 +46,7 @@ class remote extends Component {
       faq,
     } = data.page.edges[0].node
     return (
-      <Layout>
+      <Layout gaLabel="cahb">
         <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}

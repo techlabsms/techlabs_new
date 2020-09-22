@@ -60,7 +60,7 @@ class apply extends Component {
     )
 
     return (
-      <Layout>
+      <Layout gaLabel="apply">
         <ApplicationHero
           background={applicationHero}
           headingFirst={

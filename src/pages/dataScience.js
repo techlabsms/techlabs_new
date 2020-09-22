@@ -29,7 +29,7 @@ class dataScience extends Component {
   render() {
     const { data } = this.props
     return (
-      <Layout>
+      <Layout gaLabel="ds">
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"dataScience.headline.ProgrammHero.headingFirst"}/>}

@@ -35,7 +35,7 @@ class local extends Component {
     } = data.page.edges[0].node
     return (
       <div>
-        <Navbar />
+        <Navbar gaLabel="ldsp"/>
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond={<FormattedMessage id={"program.local.programmhero.headingSecond"}/>}
@@ -210,7 +210,7 @@ class local extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer gaLabel="ldsp"/>
       </div>
     )
   }

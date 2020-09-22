@@ -27,7 +27,7 @@ import Background_mobil from "../assets/about_mobil.png"
 class about extends Component {
   render() {
     return (
-      <Layout>
+      <Layout gaLabel="about">
         <ProgrammHero
           headingFirst={<FormattedMessage id="about.about.program_hero.headingFirst"/>}
           headingSecond={<FormattedMessage id="about.about.program_hero.headingSecond"/>}

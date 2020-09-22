@@ -37,7 +37,7 @@ class Locations extends Component {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <Layout>
+      <Layout gaLabel="lo">
         <div className="locations">
           <div className="container-fluid">
             <section className="section-picture">

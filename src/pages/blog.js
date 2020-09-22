@@ -13,7 +13,7 @@ class blog extends Component {
   render() {
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <Layout>
+      <Layout gaLabel="blog">
         <div className="container">
           <div className="row mt-5">
             <h2>

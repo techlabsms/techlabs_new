@@ -25,7 +25,7 @@ import backgroundMobil from "../assets/courseMobil.png"
 class ai extends Component {
   render() {
     return (
-      <Layout>
+      <Layout gaLabel="ai">
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"ai.ai.programmhero.headingFirst"}/>}

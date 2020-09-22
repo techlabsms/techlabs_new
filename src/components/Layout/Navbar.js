@@ -26,18 +26,9 @@ class Navbar extends React.Component {
     isOpen: false,
   }
   render() {
-    let page = '';
-    if (window.location.pathname === '/') {
-      this.page = 'lp'
-    } else if (window.location.pathname === '/locations') {
-      this.page = 'lo'
-    } else if (window.location.pathname === '/foundYourOwn') {
-      this.page = 'cofounder'
-    } else if (window.location.pathname.includes('/location/')) {
-      this.page = window.location.pathname.match(/[A-Z].*/).join()
-    }
-
+    const page = this.props.gaLabel
     const { isOpen } = this.state
+    console.log(page)
     return (
       <>
         <Head />

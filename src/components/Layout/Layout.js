@@ -2,12 +2,12 @@ import React from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, gaLabel }) => {
   return (
     <>
-      <Navbar />
+      <Navbar gaLabel={gaLabel}/>
       {children}
-      <Footer />
+      <Footer gaLabel={gaLabel}/>
     </>
   )
 }

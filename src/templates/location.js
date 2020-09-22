@@ -47,7 +47,7 @@ class location extends Component {
     const location = get(this.props, "data.contentfulLocationPage")
     const { modalIsOpen, x, y, text } = this.state
     return (
-      <Layout>
+      <Layout gaLabel={location.heading}>
         <section className="container-fluid">
           <section>
             <div

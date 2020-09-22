@@ -25,7 +25,7 @@ import backgroundMobil from "../assets/courseMobil.png"
 class ux extends Component {
   render() {
     return (
-      <Layout>
+      <Layout gaLabel="ux">
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"ux.headline.ProgrammHero.headingFirst"}/>}

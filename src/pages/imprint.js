@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout"
 class imprint extends Component {
   render() {
     return (
-      <Layout>
+      <Layout gaLabel="imprint">
         <div className="container">
           <h1 className="mt-3">Impressum</h1>
           <p>

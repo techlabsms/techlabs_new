@@ -11,7 +11,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 class foundYourOwn extends Component {
   render() {
     return (
-      <Layout>
+      <Layout gaLabel="cofounder">
         <section className="foundYourOwn-hero py-5">
           <div className="container py-5">
             <div className="row">

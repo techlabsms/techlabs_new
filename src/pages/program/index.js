@@ -24,7 +24,7 @@ const index = () => {
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar gaLabel="p"/>
         <ProgrammHero
           headingFirst={<FormattedMessage id={"programs.heading.1"} />}
           headingSecond={<FormattedMessage id={"programs.heading.2"} />}
@@ -108,7 +108,7 @@ const index = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer gaLabel="p"/>
       </div>
     </>
   )

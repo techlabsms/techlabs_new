@@ -67,7 +67,7 @@ class index extends React.Component {
       codeAtHome
     )
     return (
-      <Layout>
+      <Layout gaLabel="lp">
         <div className="container-fluid">
           {/* header section */}
           <section className="py-5 padding-top-15">

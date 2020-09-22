@@ -92,7 +92,7 @@ class faq extends Component {
       return question.question.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <Layout>
+      <Layout gaLabel="faq">
         <div className="container">
           <div className="row py-5">
             <div className="col-8">
