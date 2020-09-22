@@ -168,7 +168,6 @@ class index extends React.Component {
                       to="/program" 
                       className="card-a"
                       onClick={e => {
-                        console.log(e)
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
