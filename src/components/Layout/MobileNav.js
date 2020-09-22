@@ -4,6 +4,7 @@ import React, { Component } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // assets
 import Slack from "../../assets/slack.png"
@@ -18,12 +19,31 @@ class MobileNav extends Component {
     programOpen: false,
   }
   render() {
+    let page = '';
+    if (window.location.pathname === '/') {
+      this.page = 'lp'
+    } else if (window.location.pathname === '/locations') {
+      this.page = 'lo'
+    } else if (window.location.pathname === '/foundYourOwn') {
+      this.page = 'cofounder'
+    } else if (window.location.pathname.includes('/location/')) {
+      this.page = window.location.pathname.match(/[A-Z].*/).join()
+    }
     const { programOpen } = this.state
     return (
       <>
         <div className="mobileNav  d-lg-none d-xl-none">
           <ul className="navbar-nav ml-auto d-sm-block d-md-block">
-            <Link to="/locations" activeClassName="navLink--active">
+            <Link 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: `${this.page}_navbar_locations`,
+              })
+            }}
+            to="/locations" 
+            activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
                   <FormattedMessage id="layout.locations"/>
@@ -54,6 +74,13 @@ class MobileNav extends Component {
               {programOpen && (
                 <ul className="mobileNav--subMenu">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: `${this.page}_navbar_program`,
+                      })
+                    }}
                     to="/program"
                     className="color-gl"
                     activeClassName="navLink--active"
@@ -119,7 +146,16 @@ class MobileNav extends Component {
               )}
             </li>
 
-            <Link to="/about" activeClassName="navLink--active">
+            <Link 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: `${this.page}_navbar_about`,
+              })
+            }}
+            to="/about" 
+            activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
                   <FormattedMessage id="navbar.about"/>
