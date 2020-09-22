@@ -4,6 +4,7 @@ import React, { Component } from "react"
 import Modal from "react-modal"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -95,8 +96,10 @@ class Slider extends Component {
     this.setState({ modalIsOpen: false })
   }
 
-  openModal() {
-    this.setState({ modalIsOpen: true })
+  openModal(video) {
+    if(video) {
+      this.setState({ modalIsOpen: true })
+    }
   }
 
   render() {
@@ -123,14 +126,14 @@ class Slider extends Component {
               >
                 <div
                   onClick={e => {
+                    this.openModal(testimonials[number].video)
                     e.preventDefault()
                     trackCustomEvent({
                       category: "YoutubeVideo",
                       action: "Click",
                       label: `lp_video_${testimonials[number].name}`,
                     })
-                    testimonials[number].video ? this.openModal : ""
-                    }
+                  }
                   }
                   onKeyDown={() => null}
                   role="button"
@@ -281,12 +284,12 @@ class Slider extends Component {
                     <div
                       onClick={e => {
                         e.preventDefault()
+                        this.openModal(testimonials[number].video)
                         trackCustomEvent({
                           category: "YoutubeVideo",
                           action: "Click",
                           label: `lp_video_${testimonials[number].name}`,
                         })
-                        testimonials[number].video ? this.openModal : ""
                         }
                       }
                       onKeyDown={() => null}

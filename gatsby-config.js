@@ -15,6 +15,14 @@ module.exports = {
     image: `/assets/tl-favicon.svg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-149157011-1",
+        head: true,
+        anonymize: true,
+      },
+    },
     `gatsby-plugin-sass`,
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -60,12 +68,6 @@ module.exports = {
         defaultLanguage: `en`,
         // option to redirect to `/ko` when connecting `/`
         redirect: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-149157011-1",
       },
     },
   ],

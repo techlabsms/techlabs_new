@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import dayjs from "dayjs"
 import Img from "gatsby-image"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -117,13 +118,12 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                 <Dropdown
                   options={countryOptions}
                   style={dropdown_style}
-                  onSelect={(country, e) => {
-                    e.preventDefault()
+                  onSelect={country => {
                     trackCustomEvent({
                     category: "Dropdown",
                     action: "Select",
                     label: `lp_deadline_${country}`
-                  })
+                    })
                     setCountry(country)
                     updateAvailableCities(country)
                   }}

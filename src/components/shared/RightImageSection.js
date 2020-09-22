@@ -1,4 +1,5 @@
 import React from "react"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -69,14 +70,9 @@ const RightImageSection = ({
                 isExternal={true}
                 link={buttonLink}
                 primary={true}
-                onClick={e => {
-                  e.preventDefault()
-                  trackCustomEvent({
-                  category: "Button",
-                  action: "Click",
-                  label: `${galocation}_${gasection}`,
-                  })
-                }}
+                category="Button"
+                action="Click"
+                label={galocation +  '_' + gasection}
               />
             </div>
           )}

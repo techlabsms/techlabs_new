@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
@@ -37,7 +38,7 @@ class index extends React.Component {
       "font-family:'helvetica'; font-weight:100;"
     )
   }
-
+  
   render() {
     const { data, intl } = this.props
 
@@ -95,14 +96,9 @@ class index extends React.Component {
                       }
                       primary={false}
                       link="/program"
-                      onClick={e => {
-                        e.preventDefault()
-                        trackCustomEvent({
-                          category: "Button",
-                          action: "Click",
-                          label: "lp_hero_program",
-                        })
-                      }}
+                      category="Button"
+                      action="Click"
+                      label="lp_hero_program"
                     />
                     <Button
                       text={
@@ -110,14 +106,9 @@ class index extends React.Component {
                       }
                       primary={true}
                       link="/about"
-                      onClick={e => {
-                        e.preventDefault()
-                        trackCustomEvent({
-                          category: "Button",
-                          action: "Click",
-                          label: "lp_hero_about",
-                        })
-                      }}
+                      category="Button"
+                      action="Click"
+                      label="lp_hero_about"
                     />
                   </div>
                 </div>
@@ -177,7 +168,7 @@ class index extends React.Component {
                       to="/program" 
                       className="card-a"
                       onClick={e => {
-                        e.preventDefault()
+                        console.log(e)
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
@@ -216,7 +207,6 @@ class index extends React.Component {
                       to="/program" 
                       className="card-a"
                       onClick={e => {
-                        e.preventDefault()
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
@@ -255,13 +245,13 @@ class index extends React.Component {
                       to="/locations" 
                       className="card-a"
                       onClick={e => {
-                        e.preventDefault()
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
                           label: "lp_wwo_locations_one",
                         })
-                      }}>
+                      }}
+                      >
                         <div className="card h-100">
                           <h1 className="card-title">300+</h1> <br />
                           <p className="card-subtitle">
@@ -297,7 +287,6 @@ class index extends React.Component {
                       to="/locations" 
                       className="card-a"
                       onClick={e => {
-                        e.preventDefault()
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
@@ -445,7 +434,6 @@ class index extends React.Component {
                   to="/locations" 
                   className="noDec"
                   onClick={e => {
-                    e.preventDefault()
                     trackCustomEvent({
                     category: "Button",
                     action: "Click",
@@ -476,7 +464,6 @@ class index extends React.Component {
                   to="/program" 
                   className="noDec"
                   onClick={e => {
-                    e.preventDefault()
                     trackCustomEvent({
                     category: "Button",
                     action: "Click",
