@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -43,6 +44,13 @@ const Team = ({ city, team }) => {
               <p>{teamMember.roleDescription}</p>
               <div className="get-in-contact">
                 <a
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: city + "_getInContact",
+                    })
+                  }}
                   href={teamMember.linkedIn}
                   target="_blank"
                   className="highlighted"

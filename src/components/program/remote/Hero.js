@@ -1,5 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import Heading from "../../smallComponents/Heading"
 import Img from "gatsby-image"
 
@@ -53,6 +54,13 @@ const Hero = ({
             </div>
             {/* <div className="col-md-3 d-flex justify-content-center align-items-center">
               <Button
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: "cahb_apply",
+                  })
+                }}
                 text={<FormattedMessage id="program.remote.hero.button"/>}
                 isExternal={true}
                 link={link}

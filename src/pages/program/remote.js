@@ -95,6 +95,7 @@ class remote extends Component {
             fourthTrack={tracks.tracks[3].heading}
             fourthTrackText={tracks.tracks[3].text}
             fourthTrackLink={tracks.tracks[3].link}
+            page="cahb"
           />
 
           <KeyBenefits
@@ -158,6 +159,10 @@ class remote extends Component {
             }
             fourthProjectImage={UX}
             fourthLink="/ux"
+            firstButtonLabel="ldsp_lm_wd"
+            secondButtonLabel="ldsp_lm_ds"
+            thirdButtonLabel="ldsp_lm_ai"
+            fourthButtonLabel="ldsp_lm_ux"
           />
         </div>
 

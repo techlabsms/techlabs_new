@@ -2,6 +2,7 @@ import React from "react"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Navbar from "../../components/Layout/Navbar"
@@ -36,6 +37,7 @@ const index = () => {
         />
         <div className="container">
           <Academy
+            page="p"
             firstTrack={
               <FormattedMessage id={"program.local.academy.first.name"} />
             }
@@ -80,6 +82,8 @@ const index = () => {
             secondButtonText={
               <FormattedMessage id={"programs.learn_more.button"}/>
             }
+            firstButtonLabel="p_lm_ldsp"
+            secondButtonLabel="p_lm_c@hb"
           />
           <Faq>
             <FaqQuestion
@@ -99,6 +103,13 @@ const index = () => {
             <div className="row">
               <div className="col text-center">
                 <Button 
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: "p_faq_mq",
+                  })
+                }}
                 text={
                   <FormattedMessage id={"faq.button"}/>
                 }

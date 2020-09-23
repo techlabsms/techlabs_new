@@ -1,7 +1,10 @@
 import React from "react"
+import Img from "gatsby-image"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
+// components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
-import Img from "gatsby-image"
 
 const Newsletter = ({ image, title, subtitle }) => {
   return (
@@ -76,6 +79,13 @@ const Newsletter = ({ image, title, subtitle }) => {
               ></div>
             </div>
             <input
+              onClick={e => {
+                trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: "cahb_sub"
+                })
+              }}
               type="submit"
               value="Subscribe"
               name="subscribe"

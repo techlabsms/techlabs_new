@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 // plugins & external
 import get from "lodash/get"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import LocationCard from "../components/locations/LocationCard"
@@ -87,6 +88,14 @@ class Locations extends Component {
                           search: e.target.value,
                         })
                       }}
+                      onSubmit={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Search",
+                          action: "Search",
+                          label: "lo_search",
+                        })
+                      }}
                     />
                   </div>
                 </div>
@@ -121,6 +130,13 @@ class Locations extends Component {
                           </p>
                           <div className="mt-5">
                             <Button
+                              onClick={e => {
+                                trackCustomEvent({
+                                  category: "Button",
+                                  action: "Click",
+                                  label: "lo_cofounder",
+                                })
+                              }}
                               text={<FormattedMessage id="allLocations.city.btn"/>}
                               link="/foundYourOwn"
                               primary={true}

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Navbar from "../../components/Layout/Navbar"
@@ -69,6 +70,7 @@ class local extends Component {
             fourthTrackText={
               <FormattedMessage id={"program.local.academy.fourth.text"} />
             }
+            page="ldsp"
           />
           <Table
             heading={<FormattedMessage id={"program.local.table.heading"} />}
@@ -184,6 +186,10 @@ class local extends Component {
             fourthProjectHeading={<FormattedMessage id={"program.local.learn_more.fourthProject"}/>}
             fourthProjectImage={UX}
             fourthLink="/ux"
+            firstButtonLabel="ldsp_lm_wd"
+            secondButtonLabel="ldsp_lm_ds"
+            thirdButtonLabel="ldsp_lm_ai"
+            fourthButtonLabel="ldsp_lm_ux"
           />
           <Faq>
             <FaqQuestion
@@ -203,6 +209,13 @@ class local extends Component {
             <div className="row">
               <div className="col text-center">
                 <Button 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: "ldsp_faq_mq",
+                    })
+                  }}
                   text={<FormattedMessage id={"faq.button"}/>}
                   link="/faq" 
                   primary={true} />

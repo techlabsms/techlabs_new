@@ -4,6 +4,7 @@ import get from "lodash/get"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
@@ -164,6 +165,13 @@ class location extends Component {
                   {location.isOpen ? (
                     <>
                       <Button
+                        onClick={e => {
+                          trackCustomEvent({
+                            category: "Button",
+                            action: "Click",
+                            label: location.heading + "_apply",
+                          })
+                        }}
                         text={
                           <FormattedMessage id="about.join.RightImageSectionHeading.buttonText" />
                         }
@@ -172,6 +180,13 @@ class location extends Component {
                         primary={true}
                       />
                       <Button
+                        onClick={e => {
+                          trackCustomEvent({
+                            category: "Button",
+                            action: "Click",
+                            label: location.heading + "_contactUs",
+                          })
+                        }}
                         text={
                           <FormattedMessage id="foundYourOwn.calltoAction.text" />
                         }
@@ -183,6 +198,13 @@ class location extends Component {
                   ) : (
                     <>
                       <Button
+                        onClick={e => {
+                          trackCustomEvent({
+                            category: "Button",
+                            action: "Click",
+                            label: location.heading + "_contactUs",
+                          })
+                        }}
                         text={
                           <FormattedMessage id="foundYourOwn.calltoAction.text" />
                         }
@@ -253,6 +275,7 @@ class location extends Component {
               instagramLink={location.instagramUrl}
               linkedInLink={location.linkedinUrl}
               mediumLink={location.mediumUrl}
+              city={location.heading}
             />
           </section>
           {location.openPositionsLink && (
@@ -268,6 +291,8 @@ class location extends Component {
               buttonText={
                 <FormattedMessage id="location.openPositions.button" />
               }
+              galocation={location.heading}
+              gasection="openPositions"
             />
           )}
           {location.officeName && (

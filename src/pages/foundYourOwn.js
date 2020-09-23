@@ -1,12 +1,19 @@
 import React, { Component } from "react"
+
+// plugins & external
+import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
+// components
+import Layout from "../components/Layout/Layout"
+
+//assets
 import MAP from "../assets/world.png"
 import PictureOne from "../assets/fyo1.png"
 import PictureTwo from "../assets/pic2.png"
 import PictureThree from "../assets/fyo3.png"
 import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
-import Layout from "../components/Layout/Layout"
-import { FormattedMessage } from "gatsby-plugin-intl"
 
 class foundYourOwn extends Component {
   render() {
@@ -154,6 +161,13 @@ class foundYourOwn extends Component {
             <div className="row text-center mt-5">
               <div className="col">
                 <a
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: "cofounder_contact",
+                    })
+                  }}
                   className="btn btn-primary d-inline"
                   href="mailto:bizdev@techlabs.org?subject=Found your own location"
                 >

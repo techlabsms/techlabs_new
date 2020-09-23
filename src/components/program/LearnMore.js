@@ -2,6 +2,7 @@ import React from "react"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components 
 import Heading from "../smallComponents/Heading"
@@ -28,6 +29,10 @@ const LearnMore = ({
   fourthButtonText,
   fourthProjectImage,
   externalLink,
+  firstButtonLabel,
+  secondButtonLabel,
+  thirdButtonLabel,
+  fourthButtonLabel
 }) => {
   const learnMoreButton = <FormattedMessage id={"program.local.learn_more.button"}/>
   return (
@@ -44,6 +49,13 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
+              onClick={e => {
+                trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: firstButtonLabel
+                })
+              }}
               text={firstButtonText || learnMoreButton}
               primary={true}
               link={firstLink}
@@ -62,6 +74,13 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
+              onClick={e => {
+                trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: secondButtonLabel
+                })
+              }}
               text={secondButtonText || learnMoreButton}
               primary={true}
               link={secondLink}
@@ -81,6 +100,13 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: thirdButtonLabel
+                  })
+                }}
                 text={thirdButtonText || learnMoreButton}
                 primary={true}
                 link={thirdLink}
@@ -101,6 +127,13 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: fourthButtonLabel
+                  })
+                }}
                 text={fourthButtonText || learnMoreButton}
                 primary={true}
                 link={fourthLink}
