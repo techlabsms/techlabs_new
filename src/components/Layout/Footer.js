@@ -27,19 +27,9 @@ const Footer = props => {
     }
   `)
   const locale = props.intl.locale
-
+  // const page = props.gaLabel
   const { edges } = data.allContentfulLocationPage
 
-  const gaTracking = (link) => {
-    const page = props.gaLabel
-    return (
-      trackCustomEvent({
-        category: "Button",
-        action: "Click",
-        label: `${page}_footer_${link}`,
-      })
-    )
-  }
   return (
     <>
       <CookieConsent
@@ -95,7 +85,13 @@ const Footer = props => {
                     </h5>
                   </Link>
                   <Link 
-                  onClick={gaTracking('locations')}
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_locations`,
+                  //   })
+                  // }
                   className="foot-a" 
                   to="/locations">
                     <FormattedMessage id="layout.locations" />
@@ -105,7 +101,13 @@ const Footer = props => {
                       (location, index) =>
                         location.node.node_locale === locale && (
                           <Link
-                            onClick={gaTracking(location.node.heading)}
+                            // onClick={
+                            //   trackCustomEvent({
+                            //     category: "Button",
+                            //     action: "Click",
+                            //     label: `${page}_footer_${location.node.heading}`,
+                            //   })
+                            // }
                             to={`/location/${location.node.heading}`}
                             className="noDec"
                             key={index}
@@ -123,13 +125,25 @@ const Footer = props => {
                     )}
                   </ul>
                   <Link 
-                  onClick={gaTracking('faq')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_faq`,
+                  //   })
+                  // } 
                   className="foot-a" to="/faq">
                     <FormattedMessage id="footer.faq" />
                   </Link>
                   <br />
                   <a
-                    onClick={gaTracking('openpositions')}
+                    // onClick={
+                    //   trackCustomEvent({
+                    //     category: "Button",
+                    //     action: "Click",
+                    //     label: `${page}_footer_openpositions`,
+                    //   })
+                    // } 
                     className="foot-a"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
@@ -139,7 +153,13 @@ const Footer = props => {
                 </div>
                 <div className="col-lg-4">
                   <Link 
-                  onClick={gaTracking('program')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_program`,
+                  //   })
+                  // } 
                   to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
                       <FormattedMessage id="layout.program" />
@@ -147,13 +167,25 @@ const Footer = props => {
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('dsp')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_dsp`,
+                  //   })
+                  // } 
                   to="/program/local" className="noDec">
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('codeathome')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_codeathome`,
+                  //   })
+                  // } 
                   to="/program/remote" className="noDec">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
@@ -163,25 +195,49 @@ const Footer = props => {
                     <FormattedMessage id="footer.tracks" />
                   </h5>
                   <Link 
-                  onClick={gaTracking('ds')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_ds`,
+                  //   })
+                  // } 
                   className="foot-a" to="/dataScience">
                     <FormattedMessage id="layout.ds" />
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('wd')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_wd`,
+                  //   })
+                  // } 
                   className="foot-a" to="/web">
                     <FormattedMessage id="layout.webdev" />
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('ai')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_ai`,
+                  //   })
+                  // } 
                   className="foot-a" to="/ai">
                     <FormattedMessage id="layout.ai" />
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('ux')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_ux`,
+                  //   })
+                  // } 
                   className="foot-a" to="/ux">
                     <FormattedMessage id="layout.ux" />
                   </Link>
@@ -192,13 +248,25 @@ const Footer = props => {
                     <FormattedMessage id="footer.terms" />
                   </h5>
                   <Link 
-                  onClick={gaTracking('privacypolicy')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_privacy`,
+                  //   })
+                  // } 
                   className="foot-a" to="/privacyPolicy">
                     <FormattedMessage id="footer.terms.privacy" />
                   </Link>
                   <br />
                   <Link 
-                  onClick={gaTracking('imprint')} 
+                  // onClick={
+                  //   trackCustomEvent({
+                  //     category: "Button",
+                  //     action: "Click",
+                  //     label: `${page}_footer_imprint`,
+                  //   })
+                  // } 
                   className="foot-a" to="/imprint">
                     <FormattedMessage id="footer.terms.imprint" />
                   </Link>

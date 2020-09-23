@@ -7,7 +7,7 @@ const Layout = ({ children, gaLabel }) => {
     <>
       <Navbar gaLabel={gaLabel}/>
       {children}
-      <Footer gaLabel={gaLabel}/>
+      <Footer />
     </>
   )
 }

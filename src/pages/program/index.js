@@ -108,7 +108,7 @@ const index = () => {
             </div>
           </div>
         </div>
-        <Footer gaLabel="p"/>
+        <Footer />
       </div>
     </>
   )

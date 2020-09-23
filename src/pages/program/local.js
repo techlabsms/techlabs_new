@@ -210,7 +210,7 @@ class local extends Component {
             </div>
           </div>
         </div>
-        <Footer gaLabel="ldsp"/>
+        <Footer />
       </div>
     )
   }
