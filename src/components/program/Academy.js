@@ -67,11 +67,12 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseEnter={e => {
+                onMouseOver={e => {
+                  e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
                     action: "Hover",
-                    label: page + "lt_ds",
+                    label: page + "_lt_ds",
                   })
                 }}
                 className="academy--card w-100"
@@ -96,7 +97,7 @@ class Academy extends Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: page + "lt_ds",
+                        label: page + "_lt_ds",
                       })
                     }}
                     to={firstTrackLink} className="a-white next-link">
@@ -117,11 +118,12 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseEnter={e => {
+                onMouseOver={e => {
+                  e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
                     action: "Hover",
-                    label: page + "lt_wd",
+                    label: page + "_lt_wd",
                   })
                 }}
                 className="academy--card w-100"
@@ -147,7 +149,7 @@ class Academy extends Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: page + "lt_wd",
+                        label: page + "_lt_wd",
                       })
                     }}
                     to={secondTrackLink} className="a-white next-link">
@@ -168,11 +170,12 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseEnter={e => {
+                onMouseOver={e => {
+                  e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
                     action: "Hover",
-                    label: page + "lt_ai",
+                    label: page + "_lt_ai",
                   })
                 }}
                 className="academy--card w-100"
@@ -197,7 +200,7 @@ class Academy extends Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: page + "lt_ai",
+                        label: page + "_lt_ai",
                       })
                     }}
                     to={thirdTrackLink} className="a-white next-link">
@@ -218,11 +221,12 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseEnter={e => {
+                onMouseOver={e => {
+                  e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
                     action: "Hover",
-                    label: page + "lt_ux",
+                    label: page + "_lt_ux",
                   })
                 }}
                 className="academy--card w-100"
@@ -248,7 +252,7 @@ class Academy extends Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: page + "lt_ux",
+                        label: page + "_lt_ux",
                       })
                     }}
                     to={fourthTrackLink} className="a-white next-link">
