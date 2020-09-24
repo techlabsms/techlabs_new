@@ -17,7 +17,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   // state
   const [countryOptions, setCountryOptions] = useState([])
   const [cityOptions, setCityOptions] = useState(["Bitte wählen"])
-  const [country, setCountry] = useState()
+
   const [city, setCity] = useState()
   const [cityData, setCityData] = useState()
   const [available, setAvailable] = useState()
@@ -118,7 +118,6 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                   options={countryOptions}
                   style={dropdown_style}
                   onSelect={country => {
-                    setCountry(country)
                     updateAvailableCities(country)
                   }}
                 />
