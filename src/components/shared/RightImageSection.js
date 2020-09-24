@@ -66,13 +66,17 @@ const RightImageSection = ({
           {hasButton && (
             <div className="row mt-5 ml-2">
               <Button
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: galocation +  '_' + gasection,
+                  })
+                }}
                 text={buttonText}
                 isExternal={true}
                 link={buttonLink}
                 primary={true}
-                category="Button"
-                action="Click"
-                label={galocation +  '_' + gasection}
               />
             </div>
           )}

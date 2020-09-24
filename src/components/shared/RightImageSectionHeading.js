@@ -1,4 +1,7 @@
 import React from "react"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
@@ -14,6 +17,8 @@ const RightImageSectionHeading = ({
   rightSize,
   topText,
   infoText,
+  galocation,
+  gasection
 }) => {
   return (
     <Container>
@@ -29,7 +34,16 @@ const RightImageSectionHeading = ({
             <div className="basicSection--text">{text}</div>
             {hasButton && (
               <div className="row mt-5 ml-2">
-                <a className="btn btn-primary d-inline" href={buttonLink}>
+                <a 
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: galocation +  '_' + gasection,
+                  })
+                  console.log('success')
+                }}
+                className="btn btn-primary d-inline" href={buttonLink}>
                   {buttonText}
                 </a>
               </div>

@@ -5,18 +5,11 @@ import { Link } from "gatsby-plugin-intl"
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 
-const Button = ({ text, primary, link, isExternal, style, category, action, label }) => {
+const Button = ({ text, primary, link, isExternal, style }) => {
   return (
     <>
       {!isExternal ? (
         <Link
-          onClick={e => {
-            trackCustomEvent({
-              category: category,
-              action: action,
-              label: label,
-            })
-          }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           to={link}
         >
@@ -24,15 +17,10 @@ const Button = ({ text, primary, link, isExternal, style, category, action, labe
         </Link>
       ) : (
         <a
-          onClick={e => {
-            trackCustomEvent({
-              category: category,
-              action: action,
-              label: label,
-            })
-          }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           href={link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {text}
         </a>
