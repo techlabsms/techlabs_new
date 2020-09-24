@@ -239,7 +239,7 @@ class Navbar extends React.Component {
               {/* mobile view */}
             </div>
           </nav>
-          {isOpen && <MobileNav />}
+          {isOpen && <MobileNav gaLabel={this.page} />}
         </Headroom>
       </>
     )

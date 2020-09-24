@@ -198,7 +198,6 @@ class Slider extends Component {
                     href={testimonials[number].link}
                     target="blank"
                     onClick={e => {
-                      e.preventDefault()
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",

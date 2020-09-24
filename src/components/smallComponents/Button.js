@@ -10,8 +10,6 @@ const Button = ({ text, primary, link, isExternal, style, category, action, labe
     <>
       {!isExternal ? (
         <Link
-          className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
-          to={link}
           onClick={e => {
             trackCustomEvent({
               category: category,
@@ -19,6 +17,8 @@ const Button = ({ text, primary, link, isExternal, style, category, action, labe
               label: label,
             })
           }}
+          className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
+          to={link}
         >
           {text}
         </Link>
