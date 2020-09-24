@@ -26,7 +26,7 @@ class Navbar extends React.Component {
     isOpen: false,
   }
   render() {
-    const page = this.props.gaLabel
+    let page = this.props.gaLabel
     const { isOpen } = this.state
     console.log(page)
     return (
@@ -39,7 +39,7 @@ class Navbar extends React.Component {
               trackCustomEvent({
                 category: "Button",
                 action: "Click",
-                label: `${this.page}_navbar_logo`,
+                label: page + '_navbar_logo',
               })
             }}
             className="navbar-brand" 
@@ -60,7 +60,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_locations`,
+                        label: page + '_navbar_locations',
                       })
                     }}
                     className="nav-link"
@@ -76,7 +76,7 @@ class Navbar extends React.Component {
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
-                          label: `${this.page}_navbar_locations`,
+                          label: page + '_navbar_locations',
                         })
                       }}
                       className="dropdown-item dropdown-item-corr"
@@ -90,7 +90,7 @@ class Navbar extends React.Component {
                         trackCustomEvent({
                           category: "Button",
                           action: "Click",
-                          label: `${this.page}_navbar_foundyourown`,
+                          label: page + '_navbar_foundyourown',
                         })
                       }}
                       className="dropdown-item dropdown-item-corr"
@@ -107,7 +107,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_program`,
+                        label: page + '_navbar_program',
                       })
                     }}
                     to="/program"
@@ -173,7 +173,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_about`,
+                        label: page + '_navbar_about',
                       })
                     }}
                     className="nav-link"
@@ -190,7 +190,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_openposition`,
+                        label: page + '_navbar_openpositions',
                       })
                     }}
                     className="nav-link"
@@ -208,7 +208,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_blog`,
+                        label: page + '_navbar_blog',
                       })
                     }}
                     className="nav-link"
@@ -225,7 +225,7 @@ class Navbar extends React.Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: `${this.page}_navbar_apply`,
+                        label: page + '_navbar_apply',
                       })
                     }}
                     className="nav-button"
@@ -239,7 +239,7 @@ class Navbar extends React.Component {
               {/* mobile view */}
             </div>
           </nav>
-          {isOpen && <MobileNav gaLabel={this.page} />}
+          {isOpen && <MobileNav gaLabel={page} />}
         </Headroom>
       </>
     )
