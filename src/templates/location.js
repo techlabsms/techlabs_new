@@ -165,34 +165,24 @@ class location extends Component {
                   {location.isOpen ? (
                     <>
                       <Button
-                        onClick={e => {
-                          trackCustomEvent({
-                            category: "Button",
-                            action: "Click",
-                            label: location.heading + "_apply",
-                          })
-                        }}
                         text={
                           <FormattedMessage id="about.join.RightImageSectionHeading.buttonText" />
                         }
                         link={`${location.applicationLink}`}
                         isExternal={true}
                         primary={true}
+                        gaLocation={location.heading}
+                        gaSection="apply"
                       />
                       <Button
-                        onClick={e => {
-                          trackCustomEvent({
-                            category: "Button",
-                            action: "Click",
-                            label: location.heading + "_contactUs",
-                          })
-                        }}
                         text={
                           <FormattedMessage id="foundYourOwn.calltoAction.text" />
                         }
                         primary={false}
                         isExternal={true}
                         link={`mailto:${location.email}`}
+                        gaLocation={location.heading}
+                        gaSection="contactUs"
                       />
                     </>
                   ) : (

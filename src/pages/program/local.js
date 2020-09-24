@@ -186,10 +186,11 @@ class local extends Component {
             fourthProjectHeading={<FormattedMessage id={"program.local.learn_more.fourthProject"}/>}
             fourthProjectImage={UX}
             fourthLink="/ux"
-            firstButtonLabel="ldsp_lm_wd"
-            secondButtonLabel="ldsp_lm_ds"
-            thirdButtonLabel="ldsp_lm_ai"
-            fourthButtonLabel="ldsp_lm_ux"
+            firstButtonSection="lm_wd"
+            secondButtonSection="lm_ds"
+            thirdButtonSection="lm_ai"
+            fourthButtonSection="lm_ux"
+            gaLocation="ldsp"
           />
           <Faq>
             <FaqQuestion
@@ -209,16 +210,11 @@ class local extends Component {
             <div className="row">
               <div className="col text-center">
                 <Button 
-                  onClick={e => {
-                    trackCustomEvent({
-                      category: "Button",
-                      action: "Click",
-                      label: "ldsp_faq_mq",
-                    })
-                  }}
                   text={<FormattedMessage id={"faq.button"}/>}
                   link="/faq" 
-                  primary={true} />
+                  primary={true}
+                  gaLocation="ldsp"
+                  gaSection="faq_mq" />
               </div>
             </div>
           </div>

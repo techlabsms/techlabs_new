@@ -29,10 +29,11 @@ const LearnMore = ({
   fourthButtonText,
   fourthProjectImage,
   externalLink,
-  firstButtonLabel,
-  secondButtonLabel,
-  thirdButtonLabel,
-  fourthButtonLabel
+  gaLocation,
+  firstButtonSection,
+  secondButtonSection,
+  thirdButtonSection,
+  fourthButtonSection
 }) => {
   const learnMoreButton = <FormattedMessage id={"program.local.learn_more.button"}/>
   return (
@@ -49,17 +50,12 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
-              onClick={e => {
-                trackCustomEvent({
-                  category: "Button",
-                  action: "Click",
-                  label: firstButtonLabel
-                })
-              }}
               text={firstButtonText || learnMoreButton}
               primary={true}
               link={firstLink}
               isExternal={externalLink || false}
+              gaLocation={gaLocation}
+              gaSection={firstButtonSection}
             />
           </div>
         </div>
@@ -74,17 +70,12 @@ const LearnMore = ({
           </div>
           <div className="col-md-5 text-center text-md-right py-4">
             <Button
-              onClick={e => {
-                trackCustomEvent({
-                  category: "Button",
-                  action: "Click",
-                  label: secondButtonLabel
-                })
-              }}
               text={secondButtonText || learnMoreButton}
               primary={true}
               link={secondLink}
               isExternal={externalLink || false}
+              gaLocation={gaLocation}
+              gaSection={secondButtonSection}
             />
           </div>
         </div>
@@ -100,17 +91,12 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
-                onClick={e => {
-                  trackCustomEvent({
-                    category: "Button",
-                    action: "Click",
-                    label: thirdButtonLabel
-                  })
-                }}
                 text={thirdButtonText || learnMoreButton}
                 primary={true}
                 link={thirdLink}
                 isExternal={externalLink || false}
+                gaLocation={gaLocation}
+                gaSection={thirdButtonSection}
               />
             </div>
           </div>
@@ -127,17 +113,12 @@ const LearnMore = ({
             </div>
             <div className="col-md-5 text-center text-md-right py-4">
               <Button
-                onClick={e => {
-                  trackCustomEvent({
-                    category: "Button",
-                    action: "Click",
-                    label: fourthButtonLabel
-                  })
-                }}
                 text={fourthButtonText || learnMoreButton}
                 primary={true}
                 link={fourthLink}
                 isExternal={externalLink || false}
+                gaLocation={gaLocation}
+                gaSection={fourthButtonSection}
               />
             </div>
           </div>

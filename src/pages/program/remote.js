@@ -159,10 +159,11 @@ class remote extends Component {
             }
             fourthProjectImage={UX}
             fourthLink="/ux"
-            firstButtonLabel="ldsp_lm_wd"
-            secondButtonLabel="ldsp_lm_ds"
-            thirdButtonLabel="ldsp_lm_ai"
-            fourthButtonLabel="ldsp_lm_ux"
+            firstButtonSection="lm_wd"
+            secondButtonSection="lm_ds"
+            thirdButtonSection="lm_ai"
+            fourthButtonSection="lm_ux"
+            gaLocation="cahb"
           />
         </div>
 

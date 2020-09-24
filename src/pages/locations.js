@@ -79,6 +79,14 @@ class Locations extends Component {
 
                   <div className="col-md-4 d-flex">
                     <input
+                      onFocus={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Search",
+                          action: "Search",
+                          label: "lo_search",
+                        })
+                      }}
                       type="search"
                       aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
@@ -86,14 +94,6 @@ class Locations extends Component {
                       onChange={e => {
                         this.setState({
                           search: e.target.value,
-                        })
-                      }}
-                      onSubmit={e => {
-                        e.preventDefault()
-                        trackCustomEvent({
-                          category: "Search",
-                          action: "Search",
-                          label: "lo_search",
                         })
                       }}
                     />
@@ -130,16 +130,11 @@ class Locations extends Component {
                           </p>
                           <div className="mt-5">
                             <Button
-                              onClick={e => {
-                                trackCustomEvent({
-                                  category: "Button",
-                                  action: "Click",
-                                  label: "lo_cofounder",
-                                })
-                              }}
                               text={<FormattedMessage id="allLocations.city.btn"/>}
                               link="/foundYourOwn"
                               primary={true}
+                              gaLocation="lo"
+                              gaSection="cofounder"
                             />
                           </div>
                         </div>

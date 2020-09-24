@@ -82,8 +82,9 @@ const index = () => {
             secondButtonText={
               <FormattedMessage id={"programs.learn_more.button"}/>
             }
-            firstButtonLabel="p_lm_ldsp"
-            secondButtonLabel="p_lm_c@hb"
+            firstButtonSection="lm_ldsp"
+            secondButtonSection="lm_c@hb"
+            gaLocation="p"
           />
           <Faq>
             <FaqQuestion
@@ -103,18 +104,13 @@ const index = () => {
             <div className="row">
               <div className="col text-center">
                 <Button 
-                onClick={e => {
-                  trackCustomEvent({
-                    category: "Button",
-                    action: "Click",
-                    label: "p_faq_mq",
-                  })
-                }}
                 text={
                   <FormattedMessage id={"faq.button"}/>
                 }
                 link="/faq" 
-                primary={true} />
+                primary={true}
+                gaLocation="p"
+                gaSection="faq_mq" />
               </div>
             </div>
           </div>
