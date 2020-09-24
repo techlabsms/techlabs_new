@@ -209,7 +209,9 @@ class location extends Component {
                 heading={location.firstEntryTitle}
                 subheading={location.firstEntrySubtitle}
                 text={location.firstEntryTextAsMd.childMarkdownRemark.html}
-                image={location.firstEntryImage.file.url}
+                image={
+                  location.firstEntryImage && location.firstEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
