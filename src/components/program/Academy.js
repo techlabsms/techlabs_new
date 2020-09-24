@@ -67,7 +67,7 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseOver={e => {
+                onPointerEnter={e => {
                   e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
@@ -118,7 +118,7 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseOver={e => {
+                onPointerEnter={e => {
                   e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
@@ -170,7 +170,7 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseOver={e => {
+                onPointerEnter={e => {
                   e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
@@ -221,7 +221,7 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
-                onMouseOver={e => {
+                onPointerEnter={e => {
                   e.preventDefault()
                   trackCustomEvent({
                     category: "Hover",
