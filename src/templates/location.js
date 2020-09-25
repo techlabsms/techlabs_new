@@ -223,7 +223,10 @@ class location extends Component {
                 heading={location.secondEntryTitle}
                 subheading={location.secondEntrySubtitle}
                 text={location.secondEntryTextAsMd.childMarkdownRemark.html}
-                image={location.secondEntryImage.file.url}
+                image={
+                  location.secondEntryImage &&
+                  location.secondEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
@@ -235,7 +238,9 @@ class location extends Component {
                 heading={location.thirdEntryTitle}
                 subheading={location.thirdEntrySubtitle}
                 text={location.thirdEntryTextAsMd.childMarkdownRemark.html}
-                image={location.thirdEntryImage.file.url}
+                image={
+                  location.thirdEntryImage && location.thirdEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
