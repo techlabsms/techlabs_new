@@ -95,7 +95,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   // useEffect - mount
   useEffect(() => {
     updateAvailableCities(countryOptions[0])
-  }, [countryOptions, updateAvailableCities])
+  }, [])
 
   return (
     <section className="py-5 my-5">
