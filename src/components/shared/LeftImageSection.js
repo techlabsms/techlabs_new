@@ -38,7 +38,7 @@ const LeftImageSection = ({
               )}
             </div>
           </div>
-          {/* Stops the floating - resolved positioning issues*/}Ì
+          {/* Stops the floating - resolved positioning issues*/}
           <div
             style={{
               clear: "both",
