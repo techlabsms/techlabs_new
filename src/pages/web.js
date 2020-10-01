@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Layout from "../components/Layout/Layout"
@@ -62,8 +63,8 @@ class web extends Component {
             text={<FormattedMessage id={"web.more.LeftImageSection.text"}/>}
             image={david}
           />
-          <Projects />
-          <CallToAction />
+          <Projects gaLocation="wd"/>
+          <CallToAction gaLocation="wd"/>
           <FirstImpression
             heading={<FormattedMessage id={"web.first_impression.FirstImpression.heading"}/>}
             subheading={<FormattedMessage id={"web.first_impression.FirstImpression.subheading"}/>}
@@ -71,6 +72,7 @@ class web extends Component {
             firstImage={dashboard}
             firstText={<FormattedMessage id={"web.first_impression.FirstImpression.firstText"}/>}
             firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
+            gaLabel="wd_ft_start"
           />
           <Faq>
             <FaqQuestion
@@ -89,7 +91,16 @@ class web extends Component {
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Link to="/faq" className="btn btn-primary">
+                <Link 
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: 'wd_faq_mq'
+                  })
+                }}
+                to="/faq" 
+                className="btn btn-primary">
                   <FormattedMessage id={"faq.button"}/>
                 </Link>
               </div>

@@ -2,6 +2,7 @@ import React from "react"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -18,6 +19,7 @@ const FirstImpression = ({
   secondImage,
   secondText,
   secondLink,
+  gaLabel
 }) => {
   return (
     <Container>
@@ -37,7 +39,16 @@ const FirstImpression = ({
               {firstText}
             </p>
             <div className="text-center">
-              <a href={firstLink} className="noDec">
+              <a 
+              onClick={e => {
+                trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: gaLabel
+                })
+              }}
+              href={firstLink} 
+              className="noDec">
                 <div className="firstImpression--card-btn">
                   <FormattedMessage id={"dataScience.first_impression.FirstImpression.button"}/>
                 </div>
@@ -67,7 +78,16 @@ const FirstImpression = ({
                   {secondText}
                 </p>
                 <div className="text-center">
-                  <a href={secondLink} className="noDec">
+                  <a 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: gaLabel
+                    })
+                  }}
+                  href={secondLink} 
+                  className="noDec">
                     <div className="firstImpression--card-btn">
                       <FormattedMessage id={"dataScience.first_impression.FirstImpression.button"}/>
                     </div>

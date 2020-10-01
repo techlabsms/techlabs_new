@@ -13,7 +13,8 @@ import ArrowsLeft from "../../assets/arrows.png"
 import ArrowsRight from "../../assets/arrowsRight.png"
 
 
-const CallToAction = () => {
+const CallToAction = props => {
+  const gaLocation = this.props.gaLocation
   return (
     <Container>
       <section className="callToAction">
@@ -75,6 +76,8 @@ const CallToAction = () => {
           <div className="row text-center mt-5">
             <div className="col-12">
               <Button 
+              gaLocation={gaLocation}
+              gaSection="apply"
               text={<FormattedMessage id={"callToAction.button"}/>} 
               primary={true} 
               link="/apply" />

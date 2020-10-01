@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import ProgrammHero from "../components/program/ProgrammHero"
@@ -62,8 +63,8 @@ class ai extends Component {
             text={<FormattedMessage id={"ai.more.LeftImageSection.text"}/>}
             image={david}
           />
-          <Projects />
-          <CallToAction />
+          <Projects gaLocation="ai"/>
+          <CallToAction gaLocation="ai"/>
           <FirstImpression
             heading={<FormattedMessage id={"ai.first_impression.FirstImpression.heading"}/>}
             subheading={<FormattedMessage id={"ai.first_impression.FirstImpression.subheading"}/>}
@@ -71,6 +72,7 @@ class ai extends Component {
             firstImage={robot}
             firstText={<FormattedMessage id={"ai.first_impression.FirstImpression.firstText"}/>}
             firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
+            gaLabel="ai_ft_start"
           />
            <Faq>
             <FaqQuestion
@@ -89,7 +91,16 @@ class ai extends Component {
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Link to="/faq" className="btn btn-primary">
+                <Link 
+                onClick={e => {
+                  trackCustomEvent({
+                    category: "Button",
+                    action: "Click",
+                    label: 'ai_faq_mq'
+                  })
+                }}
+                to="/faq" 
+                className="btn btn-primary">
                   <FormattedMessage id={"faq.button"}/>                
                 </Link>
               </div>

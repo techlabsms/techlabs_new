@@ -14,7 +14,8 @@ import web from "../../assets/web.png"
 import ds from "../../assets/ds.png"
 
 
-const Projects = () => {
+const Projects = props => {
+  const gaLocation = this.props.gaLocation
   return (
     <Container>
       <Heading
@@ -53,6 +54,8 @@ const Projects = () => {
               </div>
               <div className="mt-5">
                 <Button
+                  gaLocation={gaLocation}
+                  gaSection="p_fp"
                   text={<FormattedMessage id={"projects.button"}/>}
                   link="https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256"
                   isExternal={true}
@@ -101,6 +104,8 @@ const Projects = () => {
               </div>
               <div className="mt-5">
                 <Button
+                  gaLocation={gaLocation}
+                  gaSection="p_zeb"
                   text={<FormattedMessage id={"projects.button"}/>}
                   link="https://medium.com/techlabsms/zeb-project-f239ac0abc8c"
                   isExternal={true}
@@ -133,6 +138,8 @@ const Projects = () => {
               </div>
               <div className="mt-5">
                 <Button
+                  gaLocation={gaLocation}
+                  gaSection="p_wt"
                   text={<FormattedMessage id={"projects.button"}/>}
                   link="https://medium.com/techlabsms/war-of-talents-5c090d590a1f"
                   isExternal={true}
