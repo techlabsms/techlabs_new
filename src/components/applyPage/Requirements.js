@@ -2,6 +2,7 @@ import React from "react"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -11,7 +12,7 @@ import Container from "../smallComponents/Container"
 import locationsImg from "../../assets/locations.png"
 
 
-const Requirements = ({ heading, subheading, link, isOpen }) => {
+const Requirements = ({ heading, subheading, link, isOpen, gaLabel }) => {
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -55,7 +56,16 @@ const Requirements = ({ heading, subheading, link, isOpen }) => {
             </li>
           </ol>
           {isOpen ? (
-            <a href={link} className="a-white btn btn-primary mt-4">
+            <a 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: gaLabel
+              })
+            }} 
+            href={link} 
+            className="a-white btn btn-primary mt-4">
               <FormattedMessage id={"callToAction.button"}/>
             </a>
           ) : (

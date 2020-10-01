@@ -2,6 +2,7 @@ import React from "react"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Container from "../smallComponents/Container"
@@ -10,7 +11,7 @@ import Container from "../smallComponents/Container"
 import ArrowsLeft from "../../assets/arrows.png"
 import ArrowsRight from "../../assets/arrowsRight.png"
 
-const CallToActionApplication = ({ isOpen, link }) => {
+const CallToActionApplication = ({ isOpen, link, gaLabel }) => {
   return (
     <Container>
       <section className="callToAction">
@@ -68,7 +69,16 @@ const CallToActionApplication = ({ isOpen, link }) => {
             <div className="col">
               {isOpen ? (
                 <button className="btn btn-primary mt-4">
-                  <a href={link} className="a-white">
+                  <a 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: gaLabel
+                    })
+                  }}
+                  href={link} 
+                  className="a-white">
                     <FormattedMessage id={"callToAction.button"}/>
                   </a>
                 </button>

@@ -88,6 +88,7 @@ class apply extends Component {
           }}
           clickedCityValue={this.state.cityValue}
           countries={allCountries}
+          gaLabel="ap_cc"
         />
         <div className={isClicked ? "d-block" : "d-none"}>
           <Requirements
@@ -97,6 +98,7 @@ class apply extends Component {
             }
             link={this.state.link}
             isOpen={this.state.available}
+            gaLabel="ap_cc_apply"
           />
           <ApplicationProcess
             heading={
@@ -112,6 +114,7 @@ class apply extends Component {
             <CallToActionApplication
               isOpen={this.state.available}
               link={this.state.link}
+              gaLabel="ap_apply"
             />
             <LearnMore
               heading={
@@ -151,6 +154,11 @@ class apply extends Component {
                 <FormattedMessage id={"applypage.text.start_now"} />
               }
               externalLink={true}
+              gaLocation="ap"
+              firstButtonSection="ft_wd"
+              secondButtonSection="ft_ds"
+              thirdButtonSection="ft_ai"
+              fourthButtonSection="ft_ux"
             />
             <Faq>
               <FaqQuestion

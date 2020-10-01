@@ -98,6 +98,8 @@ class about extends Component {
           buttonLink="https://www.notion.so/techlabs/Work-at-TechLabs-16fa32d54d2d41a48ece59c6d28ed403"
           leftSize="5"
           rightSize="7"
+          galocation="ab"
+          gasection="t_apply"
         />
         <RightImageSection
           heading={<FormattedMessage id="about.foundyorown.RightImageSectionHeading.heading"/>}
@@ -109,6 +111,8 @@ class about extends Component {
           float={false}
           leftPartSize="8"
           rightPartSize="4"
+          galocation="ab"
+          gasection="f_mi"
         />
       </Layout>
     )

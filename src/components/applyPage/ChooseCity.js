@@ -13,6 +13,7 @@ const ChooseCity = ({
   countries,
   handleClick,
   clickedCityValue,
+  gaLabel
 }) => {
   const [countryOptions, setCountryOptions] = useState([])
   const [choosenCountry, setChoosenCountry] = useState("Remote")
@@ -38,6 +39,15 @@ const ChooseCity = ({
     <div className="container">
       <Heading heading={heading} subheading={subheading} />
       <Dropdown
+        onSelect={country => {
+          trackCustomEvent({
+          category: "Dropdown",
+          action: "Select",
+          label: gaLabel + '_' + country
+          })
+          setCountry(country)
+          updateAvailableCities(country)
+        }}
         options={countryOptions}
         style={dropdown_style}
         onSelect={option => setChoosenCountry(option)}
