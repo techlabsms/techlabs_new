@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -14,12 +13,7 @@ class blog extends Component {
   render() {
     const articles = get(this, "props.data.allContentfulBlogPost.edges")
     return (
-      <Layout gaLabel="blog">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Blog</title>
-          <link rel="canonical" href="https://www.techlabs.org/blog" />
-        </Helmet>
+      <Layout gaLabel="blog" pageTitle="Blog">
         <div className="container">
           <div className="row mt-5">
             <h2>

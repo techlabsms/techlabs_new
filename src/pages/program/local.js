@@ -36,12 +36,11 @@ class local extends Component {
     } = data.page.edges[0].node
     return (
       <div>
+        <Navbar gaLabel="ldsp"/>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Local</title>
-          <link rel="canonical" href="https://www.techlabs.org/local" />
+          <title>Local | TechLabs - We Build. Digital. Shapers.</title>
         </Helmet>
-        <Navbar gaLabel="ldsp"/>
         <ProgrammHero
           headingFirst="Digital Shaper"
           headingSecond={<FormattedMessage id={"program.local.programmhero.headingSecond"}/>}

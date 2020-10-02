@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import { Helmet } from "react-helmet" 
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
@@ -49,12 +48,7 @@ class location extends Component {
     const location = get(this.props, "data.contentfulLocationPage")
     const { modalIsOpen, x, y, text } = this.state
     return (
-      <Layout gaLabel={location.heading}>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>{location.heading}</title>
-          <link rel="canonical" href={'https://www.techlabs.org/' + location.heading} />
-        </Helmet>
+      <Layout gaLabel={location.heading} pageTitle={location.heading}>
         <section className="container-fluid">
           <section>
             <div

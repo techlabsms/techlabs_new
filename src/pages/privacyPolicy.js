@@ -1,15 +1,9 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import Layout from "../components/Layout/Layout"
 
 const privacyPolicy = () => {
   return (
-    <Layout gaLabel="privacy">
-      <Helmet>
-          <meta charSet="utf-8" />
-          <title>Privacy Policy</title>
-          <link rel="canonical" href="https://www.techlabs.org/privacyPolicy" />
-        </Helmet>
+    <Layout gaLabel="privacy" pageTitle="Privacy Policy">
       <div className="container mt-5">
         <div>
           <h3>Privacy Policy TechLabs e. V. </h3>

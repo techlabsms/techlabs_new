@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import get from "lodash/get"
@@ -39,12 +38,7 @@ class Locations extends Component {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <Layout gaLabel="lo">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Locations</title>
-          <link rel="canonical" href="https://www.techlabs.org/locations" />
-        </Helmet>
+      <Layout gaLabel="lo" pageTitle="Locations">
         <div className="locations">
           <div className="container-fluid">
             <section className="section-picture">

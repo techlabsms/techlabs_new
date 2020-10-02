@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import { injectIntl } from "gatsby-plugin-intl"
@@ -93,12 +92,7 @@ class faq extends Component {
       return question.question.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <Layout gaLabel="faq">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>FAQ</title>
-          <link rel="canonical" href="https://www.techlabs.org/faq" />
-        </Helmet>
+      <Layout gaLabel="faq" pageTitle="FAQ">
         <div className="container">
           <div className="row py-5">
             <div className="col-8">

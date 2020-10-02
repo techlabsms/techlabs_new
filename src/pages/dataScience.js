@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import { Helmet } from"react-helmet"
 
 // plugins && external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -31,12 +30,7 @@ class dataScience extends Component {
   render() {
     const { data } = this.props
     return (
-      <Layout gaLabel="ds">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Data Science</title>
-          <link rel="canonical" href="https://www.techlabs.org/dataScience" />
-        </Helmet>
+      <Layout gaLabel="ds" pageTitle="Data Science">
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"dataScience.headline.ProgrammHero.headingFirst"}/>}

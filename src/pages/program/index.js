@@ -25,12 +25,12 @@ const index = () => {
   return (
     <>
       <div>
+        <Navbar gaLabel="p"/>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Program</title>
+          <title>Program | TechLabs - We Build. Digital. Shapers.</title>
           <link rel="canonical" href="https://www.techlabs.org/program" />
         </Helmet>
-        <Navbar gaLabel="p"/>
         <ProgrammHero
           headingFirst={<FormattedMessage id={"programs.heading.1"} />}
           headingSecond={<FormattedMessage id={"programs.heading.2"} />}

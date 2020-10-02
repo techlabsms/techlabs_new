@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -27,12 +26,7 @@ import backgroundMobil from "../assets/courseMobil.png"
 class ai extends Component {
   render() {
     return (
-      <Layout gaLabel="ai">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Artificial Intelligence</title>
-          <link rel="canonical" href="https://www.techlabs.org/ai" />
-        </Helmet>
+      <Layout gaLabel="ai" pageTitle="Artificial Intelligence">
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"ai.ai.programmhero.headingFirst"}/>}

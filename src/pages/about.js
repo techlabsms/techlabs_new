@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -28,12 +27,7 @@ import Background_mobil from "../assets/about_mobil.png"
 class about extends Component {
   render() {
     return (
-      <Layout gaLabel="about">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>About</title>
-          <link rel="canonical" href="https://www.techlabs.org/about" />
-        </Helmet>
+      <Layout gaLabel="about" pageTitle="About">
         <ProgrammHero
           headingFirst={<FormattedMessage id="about.about.program_hero.headingFirst"/>}
           headingSecond={<FormattedMessage id="about.about.program_hero.headingSecond"/>}

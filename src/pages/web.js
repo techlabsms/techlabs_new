@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -27,12 +26,7 @@ import backgroundMobil from "../assets/courseMobil.png"
 class web extends Component {
   render() {
     return (
-      <Layout gaLabel="wd">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Web Development</title>
-          <link rel="canonical" href="https://www.techlabs.org/web" />
-        </Helmet>
+      <Layout gaLabel="wd" pageTitle="Web Development">
         <div className="container-fluid">
         <ProgrammHero
             headingFirst={<FormattedMessage id={"web.headline.ProgrammHero.headingFirst"}/>}
