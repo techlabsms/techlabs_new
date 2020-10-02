@@ -15,7 +15,7 @@ import ds from "../../assets/ds.png"
 
 
 const Projects = props => {
-  const gaLocation = this.props.gaLocation
+  const gaLocation = props.gaLocation
   return (
     <Container>
       <Heading

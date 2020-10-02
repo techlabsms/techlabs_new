@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import ApplyCard from "./ApplyCard"
@@ -39,18 +40,16 @@ const ChooseCity = ({
     <div className="container">
       <Heading heading={heading} subheading={subheading} />
       <Dropdown
-        onSelect={country => {
+        onSelect={option => {
           trackCustomEvent({
           category: "Dropdown",
           action: "Select",
-          label: gaLabel + '_' + country
+          label: gaLabel + '_' + option
           })
-          setCountry(country)
-          updateAvailableCities(country)
+          setChoosenCountry(option)
         }}
         options={countryOptions}
         style={dropdown_style}
-        onSelect={option => setChoosenCountry(option)}
       />
       <div className="row">
         {filteredCountries.map(country => (

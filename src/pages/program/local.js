@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Navbar from "../../components/Layout/Navbar"

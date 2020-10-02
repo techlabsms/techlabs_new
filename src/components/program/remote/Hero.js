@@ -1,6 +1,5 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import Heading from "../../smallComponents/Heading"
 import Img from "gatsby-image"
 

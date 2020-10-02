@@ -2,7 +2,6 @@ import React from "react"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components 
 import Heading from "../smallComponents/Heading"

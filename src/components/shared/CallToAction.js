@@ -14,7 +14,7 @@ import ArrowsRight from "../../assets/arrowsRight.png"
 
 
 const CallToAction = props => {
-  const gaLocation = this.props.gaLocation
+  const gaLocation = props.gaLocation
   return (
     <Container>
       <section className="callToAction">
