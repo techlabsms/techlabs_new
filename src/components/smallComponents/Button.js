@@ -16,7 +16,6 @@ const Button = ({ text, primary, link, isExternal, style, gaLocation, gaSection 
               action: "Click",
               label: gaLocation + '_' + gaSection,
             })
-            console.log('success')
           }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           to={link}
@@ -31,7 +30,6 @@ const Button = ({ text, primary, link, isExternal, style, gaLocation, gaSection 
               action: "Click",
               label: gaLocation + '_' + gaSection,
             })
-            console.log('success')
           }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           href={link}

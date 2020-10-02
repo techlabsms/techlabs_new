@@ -27,7 +27,7 @@ const Footer = props => {
     }
   `)
   const locale = props.intl.locale
-  // const page = props.gaLabel
+  const page = props.gaLabel
   const { edges } = data.allContentfulLocationPage
 
   return (
@@ -85,13 +85,13 @@ const Footer = props => {
                     </h5>
                   </Link>
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_locations`,
-                  //   })
-                  // }
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_locations'
+                    })
+                  }} 
                   className="foot-a" 
                   to="/locations">
                     <FormattedMessage id="layout.locations" />
@@ -101,13 +101,13 @@ const Footer = props => {
                       (location, index) =>
                         location.node.node_locale === locale && (
                           <Link
-                            // onClick={
-                            //   trackCustomEvent({
-                            //     category: "Button",
-                            //     action: "Click",
-                            //     label: `${page}_footer_${location.node.heading}`,
-                            //   })
-                            // }
+                            onClick={e => {
+                              trackCustomEvent({
+                                category: "Button",
+                                action: "Click",
+                                label: page + '_footer_' + location.node.heading
+                              })
+                            }} 
                             to={`/location/${location.node.heading}`}
                             className="noDec"
                             key={index}
@@ -125,25 +125,25 @@ const Footer = props => {
                     )}
                   </ul>
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_faq`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_faq'
+                    })
+                  }} 
                   className="foot-a" to="/faq">
                     <FormattedMessage id="footer.faq" />
                   </Link>
                   <br />
                   <a
-                    // onClick={
-                    //   trackCustomEvent({
-                    //     category: "Button",
-                    //     action: "Click",
-                    //     label: `${page}_footer_openpositions`,
-                    //   })
-                    // } 
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_footer_openpositions'
+                      })
+                    }} 
                     className="foot-a"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
@@ -153,13 +153,13 @@ const Footer = props => {
                 </div>
                 <div className="col-lg-4">
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_program`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_program'
+                    })
+                  }} 
                   to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
                       <FormattedMessage id="layout.program" />
@@ -167,25 +167,25 @@ const Footer = props => {
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_dsp`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_dsp'
+                    })
+                  }} 
                   to="/program/local" className="noDec">
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_codeathome`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_codeathome'
+                    })
+                  }} 
                   to="/program/remote" className="noDec">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
@@ -195,49 +195,49 @@ const Footer = props => {
                     <FormattedMessage id="footer.tracks" />
                   </h5>
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_ds`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_ds'
+                    })
+                  }} 
                   className="foot-a" to="/dataScience">
                     <FormattedMessage id="layout.ds" />
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_wd`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_wd'
+                    })
+                  }} 
                   className="foot-a" to="/web">
                     <FormattedMessage id="layout.webdev" />
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_ai`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_ai'
+                    })
+                  }} 
                   className="foot-a" to="/ai">
                     <FormattedMessage id="layout.ai" />
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_ux`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_ux'
+                    })
+                  }} 
                   className="foot-a" to="/ux">
                     <FormattedMessage id="layout.ux" />
                   </Link>
@@ -248,25 +248,25 @@ const Footer = props => {
                     <FormattedMessage id="footer.terms" />
                   </h5>
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_privacy`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_privacy'
+                    })
+                  }} 
                   className="foot-a" to="/privacyPolicy">
                     <FormattedMessage id="footer.terms.privacy" />
                   </Link>
                   <br />
                   <Link 
-                  // onClick={
-                  //   trackCustomEvent({
-                  //     category: "Button",
-                  //     action: "Click",
-                  //     label: `${page}_footer_imprint`,
-                  //   })
-                  // } 
+                  onClick={e => {
+                    trackCustomEvent({
+                      category: "Button",
+                      action: "Click",
+                      label: page + '_footer_imprint'
+                    })
+                  }} 
                   className="foot-a" to="/imprint">
                     <FormattedMessage id="footer.terms.imprint" />
                   </Link>

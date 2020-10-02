@@ -15,7 +15,6 @@ class ApplicationCountdown extends Component {
     componentDidMount() {
         this.interval = setInterval(() => {
             const now = dayjs();
-            console.log(now)
             if (dayjs(this.props.date).isBefore(now)) {
                 this.setState({
                     isEnd: false,

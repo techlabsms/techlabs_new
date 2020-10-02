@@ -41,7 +41,6 @@ const RightImageSectionHeading = ({
                     action: "Click",
                     label: galocation +  '_' + gasection,
                   })
-                  console.log('success')
                 }}
                 className="btn btn-primary d-inline" href={buttonLink}>
                   {buttonText}

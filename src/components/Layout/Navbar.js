@@ -28,7 +28,6 @@ class Navbar extends React.Component {
   render() {
     let page = this.props.gaLabel
     const { isOpen } = this.state
-    console.log(page)
     return (
       <>
         <Head />
