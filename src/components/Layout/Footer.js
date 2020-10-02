@@ -72,7 +72,7 @@ const Footer = props => {
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
-              {/* <Language/> */}
+              <Language />
             </div>
             <div className="col-lg-8">
               <div className="row">

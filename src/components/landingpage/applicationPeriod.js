@@ -18,7 +18,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   // state
   const [countryOptions, setCountryOptions] = useState([])
   const [cityOptions, setCityOptions] = useState(["Bitte wählen"])
-  const [country, setCountry] = useState()
+
   const [city, setCity] = useState()
   const [cityData, setCityData] = useState()
   const [available, setAvailable] = useState()
@@ -124,7 +124,6 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                     action: "Select",
                     label: `lp_deadline_${country}`
                     })
-                    setCountry(country)
                     updateAvailableCities(country)
                   }}
                 />                                     
