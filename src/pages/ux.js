@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -27,6 +28,11 @@ class ux extends Component {
   render() {
     return (
       <Layout gaLabel="ux">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>User Experience Design</title>
+          <link rel="canonical" href="https://www.techlabs.org/ux" />
+        </Helmet>
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={<FormattedMessage id={"ux.headline.ProgrammHero.headingFirst"}/>}

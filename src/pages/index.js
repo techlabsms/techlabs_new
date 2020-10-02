@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -68,6 +69,11 @@ class index extends React.Component {
     )
     return (
       <Layout gaLabel="lp">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Landingpage</title>
+          <link rel="canonical" href="https://www.techlabs.org/" />
+        </Helmet>
         <div className="container-fluid">
           {/* header section */}
           <section className="py-5 padding-top-15">

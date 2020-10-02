@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -24,6 +25,11 @@ const index = () => {
   return (
     <>
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Program</title>
+          <link rel="canonical" href="https://www.techlabs.org/program" />
+        </Helmet>
         <Navbar gaLabel="p"/>
         <ProgrammHero
           headingFirst={<FormattedMessage id={"programs.heading.1"} />}

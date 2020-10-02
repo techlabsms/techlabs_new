@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -19,6 +20,11 @@ class foundYourOwn extends Component {
   render() {
     return (
       <Layout gaLabel="cofounder">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Found Your Own</title>
+          <link rel="canonical" href="https://www.techlabs.org/foundYourOwn" />
+        </Helmet>
         <section className="foundYourOwn-hero py-5">
           <div className="container py-5">
             <div className="row">

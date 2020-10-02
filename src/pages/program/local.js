@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -35,6 +36,11 @@ class local extends Component {
     } = data.page.edges[0].node
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Local</title>
+          <link rel="canonical" href="https://www.techlabs.org/local" />
+        </Helmet>
         <Navbar gaLabel="ldsp"/>
         <ProgrammHero
           headingFirst="Digital Shaper"

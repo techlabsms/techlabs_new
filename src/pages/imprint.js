@@ -1,10 +1,16 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout/Layout"
 
 class imprint extends Component {
   render() {
     return (
       <Layout gaLabel="imprint">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Imprint</title>
+          <link rel="canonical" href="https://www.techlabs.org/imprint" />
+        </Helmet>
         <div className="container">
           <h1 className="mt-3">Impressum</h1>
           <p>

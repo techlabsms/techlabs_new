@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
@@ -61,6 +62,11 @@ class apply extends Component {
 
     return (
       <Layout gaLabel="apply">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Apply</title>
+          <link rel="canonical" href="https://www.techlabs.org/apply" />
+        </Helmet>
         <ApplicationHero
           background={applicationHero}
           headingFirst={

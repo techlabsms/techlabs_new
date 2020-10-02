@@ -1,6 +1,7 @@
 import React from "react"
 import { Component } from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -47,6 +48,11 @@ class remote extends Component {
     } = data.page.edges[0].node
     return (
       <Layout gaLabel="cahb">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Codeathome</title>
+          <link rel="canonical" href="https://www.techlabs.org/remote" />
+        </Helmet>
         <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}

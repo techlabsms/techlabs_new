@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet"
 
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -28,6 +29,11 @@ class about extends Component {
   render() {
     return (
       <Layout gaLabel="about">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>About</title>
+          <link rel="canonical" href="https://www.techlabs.org/about" />
+        </Helmet>
         <ProgrammHero
           headingFirst={<FormattedMessage id="about.about.program_hero.headingFirst"/>}
           headingSecond={<FormattedMessage id="about.about.program_hero.headingSecond"/>}
