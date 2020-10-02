@@ -19,7 +19,7 @@ class MobileNav extends Component {
     programOpen: false,
   }
   render() {
-    let page = this.props.gaLabel;
+    const page = this.props.gaLabel;
 
     const { programOpen } = this.state
     return (
@@ -31,7 +31,7 @@ class MobileNav extends Component {
               trackCustomEvent({
                 category: "Button",
                 action: "Click",
-                label: this.page + '_navbar_locations',
+                label: page + '_navbar_locations',
               })
             }}
             to="/locations" 
@@ -70,7 +70,7 @@ class MobileNav extends Component {
                       trackCustomEvent({
                         category: "Button",
                         action: "Click",
-                        label: this.page + '_navbar_program',
+                        label: page + '_navbar_program',
                       })
                     }}
                     to="/program"
@@ -143,7 +143,7 @@ class MobileNav extends Component {
               trackCustomEvent({
                 category: "Button",
                 action: "Click",
-                label: this.page + '_navbar_about',
+                label: page + '_navbar_about',
               })
             }}
             to="/about" 
