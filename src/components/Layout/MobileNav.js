@@ -140,12 +140,24 @@ class MobileNav extends Component {
                 </h3>
               </li>
             </Link>
-            {/*<Link to="/apply" activeClassName="navLink--active">
+
+            <a
+              href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
+              activeClassName="navLink--active"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <li className="nav-item">
+                <h3 className="nav-link mobileNav--link">
+                  <FormattedMessage id="layout.openPositions" />
+                </h3>
+              </li>
+            </a>
+            <Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Apply Now</h3>
               </li>
-            </Link>*/}
-            <br />
+            </Link>
           </ul>
         </div>
       </>
