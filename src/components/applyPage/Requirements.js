@@ -58,11 +58,13 @@ const Requirements = ({ heading, subheading, link, isOpen, gaLabel }) => {
           {isOpen ? (
             <a 
             onClick={e => {
-              trackCustomEvent({
-                category: "Button",
-                action: "Click",
-                label: gaLabel
-              })
+              if (gaLabel) {
+                trackCustomEvent({
+                  category: "Button",
+                  action: "Click",
+                  label: gaLabel
+                })
+              }
             }} 
             href={link} 
             className="a-white btn btn-primary mt-4">

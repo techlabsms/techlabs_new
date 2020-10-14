@@ -11,11 +11,13 @@ const Button = ({ text, primary, link, isExternal, style, gaLocation, gaSection 
       {!isExternal ? (
         <Link
           onClick={e => {
-            trackCustomEvent({
-              category: "Button",
-              action: "Click",
-              label: gaLocation + '_' + gaSection,
-            })
+            if (gaLocation && gaSection) {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: gaLocation + '_' + gaSection,
+              })
+            }
           }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           to={link}
@@ -25,11 +27,13 @@ const Button = ({ text, primary, link, isExternal, style, gaLocation, gaSection 
       ) : (
         <a
           onClick={e => {
-            trackCustomEvent({
-              category: "Button",
-              action: "Click",
-              label: gaLocation + '_' + gaSection,
-            })
+            if (gaLocation && gaSection) {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: gaLocation + '_' + gaSection,
+              })
+            }
           }}
           className={`btn btn-${primary ? "primary" : "secondary"} d-inline ${style}`}
           href={link}
