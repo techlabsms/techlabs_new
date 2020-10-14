@@ -70,6 +70,5 @@ module.exports = {
         redirect: false,
       },
     },
-    `gatsby-plugin-react-helmet`,
   ],
 }

@@ -37,7 +37,6 @@
     "gatsby-plugin-google-tagmanager": "^2.3.5",
     "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-intl": "^0.3.3",
-    "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-source-contentful": "^2.3.15",
