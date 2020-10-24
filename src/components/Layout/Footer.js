@@ -123,16 +123,13 @@ const Footer = props => {
                       <FormattedMessage id="layout.program" />
                     </h5>
                   </Link>
-                  <br />
-                  <Link to="/program/local" className="noDec">
+                  <Link to="/program/local" className="foot-a">
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
-                  <Link to="/program/remote" className="noDec">
+                  <Link to="/program/remote" className="foot-a">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
-                  <br />
-                  <br />
                   <h5 className="line-height-0 white-font my-2">
                     <FormattedMessage id="footer.tracks" />
                   </h5>
