@@ -7,7 +7,6 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // assets
-import Slack from "../../assets/slack.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"

@@ -1,13 +1,10 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 // components
 import Layout from "../../components/Layout/Layout"
-import Navbar from "../../components/Layout/Navbar"
-import Footer from "../../components/Layout/Footer"
 import Button from "../../components/smallComponents/Button"
 import ProgrammHero from "../../components/program/ProgrammHero"
 import Academy from "../../components/program/Academy"
