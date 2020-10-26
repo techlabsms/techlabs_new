@@ -1,4 +1,3 @@
-
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
@@ -70,5 +69,18 @@ module.exports = {
         redirect: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `TechLabs - We Build. Digital. Shapers.`,
+        short_name: `TechLabs`,
+        start_url: `/`,
+        background_color: `#fb1d5c`,
+        theme_color: `#fb1d5c`,
+        display: `standalone`,
+        icon: `src/assets/tl-favicon.svg`, // This path is relative to the root of the site
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

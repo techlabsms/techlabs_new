@@ -174,7 +174,7 @@ const Footer = props => {
                       label: page + '_footer_dsp'
                     })
                   }} 
-                  to="/program/local" className="noDec">
+                  to="/program/local" className="foot-a">
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
@@ -186,11 +186,9 @@ const Footer = props => {
                       label: page + '_footer_codeathome'
                     })
                   }} 
-                  to="/program/remote" className="noDec">
+                  to="/program/remote" className="foot-a">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
-                  <br />
-                  <br />
                   <h5 className="line-height-0 white-font my-2">
                     <FormattedMessage id="footer.tracks" />
                   </h5>

@@ -1,11 +1,8 @@
-
-
 //colors
 $color-p: #fb1d5c !important;
 $color-g: #303030 !important;
-$color-gl: #8B9FA8 !important;
-$color-background: #FEE9EF;
-
+$color-gl: #8b9fa8 !important;
+$color-background: #fee9ef;
 
 /**
  * @license
@@ -28,43 +25,42 @@ $color-background: #FEE9EF;
  * © 2019 MyFonts Inc
 */
 
-
 /* @import must be at top of file, otherwise CSS will not work */
-
 
 //fonts
 @font-face {
-  font-family: 'Proxima-Nova-Semibold';
+  font-family: "Proxima-Nova-Semibold";
   src: url("../assets/webfonts/Proxima-Nova-Semibold.eot");
-  src: url("../assets/webfonts/Proxima-Nova-Semibold.eot?#iefix") format("embedded-opentype"),
+  src: url("../assets/webfonts/Proxima-Nova-Semibold.eot?#iefix")
+      format("embedded-opentype"),
     url("../assets/webfonts/Proxima-Nova-Semibold.woff2") format("woff2"),
     url("../assets/webfonts/Proxima-Nova-Semibold.woff") format("woff"),
     url("../assets/webfonts/Proxima-Nova-Semibold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Proxima-Nova';
+  font-family: "Proxima-Nova";
   src: url("../assets/webfonts/3978CF_0_0.eot");
-  src: url("../assets/webfonts/Proxima-Nova-Regular.eot?#iefix") format("embedded-opentype"),
+  src: url("../assets/webfonts/Proxima-Nova-Regular.eot?#iefix")
+      format("embedded-opentype"),
     url("../assets/webfonts/Proxima-Nova-Regular.woff2") format("woff2"),
     url("../assets/webfonts/Proxima-Nova-Regular.woff") format("woff"),
     url("../assets/webfonts/Proxima-Nova-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Gilroy-ExtraBold';
+  font-family: "Gilroy-ExtraBold";
   src: url("../assets/webfonts/3978CF_0_0.eot");
-  src: url("../assets/webfonts/3978CF_0_0.eot?#iefix") format("embedded-opentype"),
+  src: url("../assets/webfonts/3978CF_0_0.eot?#iefix")
+      format("embedded-opentype"),
     url("../assets/webfonts/3978CF_0_0.woff2") format("woff2"),
     url("../assets/webfonts/3978CF_0_0.woff") format("woff"),
     url("../assets/webfonts/3978CF_0_0.ttf") format("truetype");
+  font-display: swap;
 }
 
-
-
 $font-h: "Gilroy-Extrabold" !important;
-$font-p: 'Proxima-Nova' !important;
-$font-pp: 'Proxima-Nova-Semibold' !important;
-
-
+$font-p: "Proxima-Nova" !important;
+$font-pp: "Proxima-Nova-Semibold" !important;

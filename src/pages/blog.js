@@ -16,9 +16,11 @@ class blog extends Component {
       <Layout gaLabel="blog" pageTitle="Blog">
         <div className="container">
           <div className="row mt-5">
-            <h2>
-              <FormattedMessage id="blog.heading"/>
-            </h2>
+            <div className= "col">
+              <h2>
+                <FormattedMessage id="blog.heading"/>
+              </h2>
+            </div>  
           </div>
           <div className="row">
             {articles.map(({ node }) => {
