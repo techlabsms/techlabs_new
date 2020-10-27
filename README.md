@@ -31,6 +31,13 @@ Currentliy the only pages that are generated are /location. In the templates fol
 
 Any change in the content of the location pages has to be done through contentful.
 
+## Translation
+
+Please make sure to add static text both in german and english. Therefore you have to add a formattedMessage with the key to the json in intl/de.json and intl/en.json.
+
+Example:
+`<FormattedMessage id="about.about.program_hero.headingSecond" />`
+
 ## Technical Setup
 
 - React as a Frontend Framework (<a href="https://reactjs.org/docs/getting-started.html">DOCS</a>)
