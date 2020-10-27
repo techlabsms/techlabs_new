@@ -25,6 +25,12 @@ Staging branch automatically deploys to the staging environment and the producti
 
 We use Contentful as a CMS (Content Management System). There you can edit the location page of your TechLabs Community and add the BlogPosts.
 
+## Location Pages
+
+Currentliy the only pages that are generated are /location. In the templates folder you could find the template for the pages, which are generated from the gatsby-node file.
+
+Any change in the content of the location pages has to be done through contentful.
+
 ## Technical Setup
 
 - React as a Frontend Framework (<a href="https://reactjs.org/docs/getting-started.html">DOCS</a>)
