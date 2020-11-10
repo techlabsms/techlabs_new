@@ -6,10 +6,10 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 // assets
 import pin from "../../assets/placemark.svg"
 
-const LocationCard = ({ imgTop, city, icon }) => {
+const LocationCard = ({ imgTop, city, icon, slug }) => {
   return (
     <div className="col-md-6 mt-3">
-      <Link to={`/location/${city}`}>
+      <Link to={`/location/${slug}`}>
         <div className="locations--card">
           <div
             className="locations--card-img"

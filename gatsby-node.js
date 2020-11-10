@@ -36,6 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
               edges{
                 node{
                   heading
+                  slug
                 }
               }
             }
@@ -59,8 +60,9 @@ exports.createPages = ({ graphql, actions }) => {
 
         result.data.location.edges.forEach( edge => {
           const heading = edge.node.heading
+          const slug = edge.node.slug
           createPage({
-            path: `/location/${heading}`,
+            path: `/location/${slug}`,
             component: location,
             context: {
               heading: heading

@@ -96,12 +96,14 @@ class Locations extends Component {
                     <LocationCard
                       imgTop={location.node.image.file.url}
                       city={location.node.heading}
+                      slug={location.node.slug}
                       icon={location.node.icon.file.url}
                     />
                   ))}
                 </div>
               </div>
             </section>
+            {/* your city is not on the map? */}
             <Container>
               <div className="row">
                 <div className="col">
@@ -154,6 +156,7 @@ export const pageQuery = graphql`
     allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
+          slug
           heading
           image {
             file {
