@@ -28,6 +28,11 @@ const LearnMore = ({
   fourthButtonText,
   fourthProjectImage,
   externalLink,
+  gaLocation,
+  firstButtonSection,
+  secondButtonSection,
+  thirdButtonSection,
+  fourthButtonSection
 }) => {
   const learnMoreButton = <FormattedMessage id={"program.local.learn_more.button"}/>
   return (
@@ -48,6 +53,8 @@ const LearnMore = ({
               primary={true}
               link={firstLink}
               isExternal={externalLink || false}
+              gaLocation={gaLocation}
+              gaSection={firstButtonSection}
             />
           </div>
         </div>
@@ -66,6 +73,8 @@ const LearnMore = ({
               primary={true}
               link={secondLink}
               isExternal={externalLink || false}
+              gaLocation={gaLocation}
+              gaSection={secondButtonSection}
             />
           </div>
         </div>
@@ -85,6 +94,8 @@ const LearnMore = ({
                 primary={true}
                 link={thirdLink}
                 isExternal={externalLink || false}
+                gaLocation={gaLocation}
+                gaSection={thirdButtonSection}
               />
             </div>
           </div>
@@ -105,6 +116,8 @@ const LearnMore = ({
                 primary={true}
                 link={fourthLink}
                 isExternal={externalLink || false}
+                gaLocation={gaLocation}
+                gaSection={fourthButtonSection}
               />
             </div>
           </div>

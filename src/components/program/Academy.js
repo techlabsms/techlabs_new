@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 // plugins 
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -40,6 +41,7 @@ class Academy extends Component {
       fourthTrack,
       fourthTrackText,
       fourthTrackLink,
+      page
     } = this.props
     return (
       <Container>
@@ -65,6 +67,14 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
+                onPointerEnter={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                    category: "Hover",
+                    action: "Hover",
+                    label: page + "_lt_ds",
+                  })
+                }}
                 className="academy--card w-100"
                 onMouseEnter={() => this.indexHandler(0)}
                 onTouchStart={() => this.indexHandler(0)}
@@ -82,7 +92,15 @@ class Academy extends Component {
                 </p>
                 {firstTrackLink && (
                   <div className="d-flex justify-content-end">
-                    <Link to={firstTrackLink} className="a-white next-link">
+                    <Link 
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + "_lt_ds",
+                      })
+                    }}
+                    to={firstTrackLink} className="a-white next-link">
                       <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
@@ -100,6 +118,14 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
+                onPointerEnter={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                    category: "Hover",
+                    action: "Hover",
+                    label: page + "_lt_wd",
+                  })
+                }}
                 className="academy--card w-100"
                 onMouseEnter={() => this.indexHandler(1)}
                 onTouchStart={() => this.indexHandler(1)}
@@ -118,7 +144,15 @@ class Academy extends Component {
                 </p>
                 {secondTrackLink && (
                   <div className="d-flex justify-content-end">
-                    <Link to={secondTrackLink} className="a-white next-link">
+                    <Link 
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + "_lt_wd",
+                      })
+                    }}
+                    to={secondTrackLink} className="a-white next-link">
                       <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
@@ -136,6 +170,14 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
+                onPointerEnter={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                    category: "Hover",
+                    action: "Hover",
+                    label: page + "_lt_ai",
+                  })
+                }}
                 className="academy--card w-100"
                 onMouseEnter={() => this.indexHandler(2)}
                 onTouchStart={() => this.indexHandler(2)}
@@ -153,7 +195,15 @@ class Academy extends Component {
                 </p>
                 {thirdTrackLink && (
                   <div className="d-flex justify-content-end">
-                    <Link to={thirdTrackLink} className="a-white next-link">
+                    <Link 
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + "_lt_ai",
+                      })
+                    }}
+                    to={thirdTrackLink} className="a-white next-link">
                       <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>
@@ -171,6 +221,14 @@ class Academy extends Component {
                 <img src={images[index]} alt="web" className="w-75 py-5" />
               </div>
               <div
+                onPointerEnter={e => {
+                  e.preventDefault()
+                  trackCustomEvent({
+                    category: "Hover",
+                    action: "Hover",
+                    label: page + "_lt_ux",
+                  })
+                }}
                 className="academy--card w-100"
                 onMouseEnter={() => this.indexHandler(3)}
                 onTouchStart={() => this.indexHandler(3)}
@@ -189,7 +247,15 @@ class Academy extends Component {
                 </p>
                 {fourthTrackLink && (
                   <div className="d-flex justify-content-end">
-                    <Link to={fourthTrackLink} className="a-white next-link">
+                    <Link 
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + "_lt_ux",
+                      })
+                    }}
+                    to={fourthTrackLink} className="a-white next-link">
                       <FormattedMessage id="programs.learn_more.button"/>
                     </Link>
                   </div>

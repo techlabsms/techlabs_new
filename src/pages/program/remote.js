@@ -46,7 +46,7 @@ class remote extends Component {
       faq,
     } = data.page.edges[0].node
     return (
-      <Layout>
+      <Layout gaLabel="cahb" pageTitle="Codeathome">
         <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}
@@ -95,6 +95,7 @@ class remote extends Component {
             fourthTrack={tracks.tracks[3].heading}
             fourthTrackText={tracks.tracks[3].text}
             fourthTrackLink={tracks.tracks[3].link}
+            page="cahb"
           />
 
           <KeyBenefits
@@ -158,6 +159,11 @@ class remote extends Component {
             }
             fourthProjectImage={UX}
             fourthLink="/ux"
+            firstButtonSection="lm_wd"
+            secondButtonSection="lm_ds"
+            thirdButtonSection="lm_ai"
+            fourthButtonSection="lm_ux"
+            gaLocation="cahb"
           />
         </div>
 

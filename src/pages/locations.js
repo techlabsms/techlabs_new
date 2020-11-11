@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 // plugins & external
 import get from "lodash/get"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import LocationCard from "../components/locations/LocationCard"
@@ -37,7 +38,7 @@ class Locations extends Component {
       return location.node.heading.toLowerCase().includes(search.toLowerCase())
     })
     return (
-      <Layout>
+      <Layout gaLabel="lo" pageTitle="Locations">
         <div className="locations">
           <div className="container-fluid">
             <section className="section-picture">
@@ -78,6 +79,14 @@ class Locations extends Component {
 
                   <div className="col-md-4 d-flex">
                     <input
+                      onFocus={e => {
+                        e.preventDefault()
+                        trackCustomEvent({
+                          category: "Search",
+                          action: "Search",
+                          label: "lo_search",
+                        })
+                      }}
                       type="search"
                       aria-label="Search location"
                       className="locations--search mt-2 w-100 mb-4 align-self-center"
@@ -124,6 +133,8 @@ class Locations extends Component {
                               text={<FormattedMessage id="allLocations.city.btn"/>}
                               link="/foundYourOwn"
                               primary={true}
+                              gaLocation="lo"
+                              gaSection="cofounder"
                             />
                           </div>
                         </div>

@@ -14,6 +14,14 @@ module.exports = {
     image: `/assets/tl-favicon.svg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        head: true,
+        anonymize: true,
+      },
+    },
     `gatsby-plugin-sass`,
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",

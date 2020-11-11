@@ -4,6 +4,7 @@ import React, { Component } from "react"
 import Modal from "react-modal"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -95,8 +96,10 @@ class Slider extends Component {
     this.setState({ modalIsOpen: false })
   }
 
-  openModal() {
-    this.setState({ modalIsOpen: true })
+  openModal(video) {
+    if(video) {
+      this.setState({ modalIsOpen: true })
+    }
   }
 
   render() {
@@ -122,7 +125,16 @@ class Slider extends Component {
                 }
               >
                 <div
-                  onClick={testimonials[number].video ? this.openModal : ""}
+                  onClick={e => {
+                    this.openModal(testimonials[number].video)
+                    e.preventDefault()
+                    trackCustomEvent({
+                      category: "YoutubeVideo",
+                      action: "Click",
+                      label: `lp_video_${testimonials[number].name}`,
+                    })
+                  }
+                  }
                   onKeyDown={() => null}
                   role="button"
                   tabIndex={0}
@@ -185,6 +197,13 @@ class Slider extends Component {
                     className="slider--button mt-2"
                     href={testimonials[number].link}
                     target="blank"
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: `lp_projekt_${testimonials[number].name}`,
+                      })
+                    }}
                   >
                     <span role="img" aria-label="thumbs up">
                       👍🏻
@@ -239,8 +258,12 @@ class Slider extends Component {
           </div>
           <div className="d-md-none">
             <Heading
-              heading="Our Community"
-              subheading="Find out what our participants experienced at TechLabs!"
+              heading={<FormattedMessage
+                id={"landingpage.slider.heading"}
+              />}
+              subheading={<FormattedMessage
+                id={"landingpage.slider.subheading"}
+              />}
             />
             <div className="row">
               <div className="col-2 text-center">
@@ -248,7 +271,7 @@ class Slider extends Component {
               </div>
               <div className="col-8">
                 <h4 className="slider--title-mobil mt-2">
-                  TechLabs taught me how to code
+                <FormattedMessage id="landingpage.slider.title"/>
                 </h4>
               </div>
             </div>
@@ -258,7 +281,16 @@ class Slider extends Component {
                 {testimonials[number].video ? (
                   <div className="text-center my-4">
                     <div
-                      onClick={testimonials[number].video ? this.openModal : ""}
+                      onClick={e => {
+                        e.preventDefault()
+                        this.openModal(testimonials[number].video)
+                        trackCustomEvent({
+                          category: "YoutubeVideo",
+                          action: "Click",
+                          label: `lp_video_${testimonials[number].name}`,
+                        })
+                        }
+                      }
                       onKeyDown={() => null}
                       role="button"
                       tabIndex={0}

@@ -4,6 +4,7 @@ import get from "lodash/get"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
@@ -47,7 +48,7 @@ class location extends Component {
     const location = get(this.props, "data.contentfulLocationPage")
     const { modalIsOpen, x, y, text } = this.state
     return (
-      <Layout>
+      <Layout gaLabel={location.heading} pageTitle={location.heading}>
         <section className="container-fluid">
           <section>
             <div
@@ -170,6 +171,8 @@ class location extends Component {
                         link={`${location.applicationLink}`}
                         isExternal={true}
                         primary={true}
+                        gaLocation={location.heading}
+                        gaSection="apply"
                       />
                       <Button
                         text={
@@ -178,11 +181,20 @@ class location extends Component {
                         primary={false}
                         isExternal={true}
                         link={`mailto:${location.email}`}
+                        gaLocation={location.heading}
+                        gaSection="contactUs"
                       />
                     </>
                   ) : (
                     <>
                       <Button
+                        onClick={e => {
+                          trackCustomEvent({
+                            category: "Button",
+                            action: "Click",
+                            label: location.heading + "_contactUs",
+                          })
+                        }}
                         text={
                           <FormattedMessage id="foundYourOwn.calltoAction.text" />
                         }
@@ -260,6 +272,7 @@ class location extends Component {
               instagramLink={location.instagramUrl}
               linkedInLink={location.linkedinUrl}
               mediumLink={location.mediumUrl}
+              city={location.heading}
             />
           </section>
           {location.openPositionsLink && (
@@ -275,6 +288,8 @@ class location extends Component {
               buttonText={
                 <FormattedMessage id="location.openPositions.button" />
               }
+              galocation={location.heading}
+              gasection="openPositions"
             />
           )}
           {location.officeName && (

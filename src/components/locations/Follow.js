@@ -1,10 +1,18 @@
 import React from "react"
+
+// plugins & external
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
+// components
+import Heading from "../smallComponents/Heading"
+import Container from "../smallComponents/Container"
+
+// assets
 import facebook from "../../assets/facebook.png"
 import instagram from "../../assets/instagram.png"
 import linkedin from "../../assets/linkedin.png"
 import medium from "../../assets/medium.png"
-import Heading from "../smallComponents/Heading"
-import Container from "../smallComponents/Container"
+
 
 const Follow = ({
   heading,
@@ -13,6 +21,7 @@ const Follow = ({
   instagramLink,
   linkedInLink,
   mediumLink,
+  city
 }) => {
   return (
     <Container>
@@ -22,7 +31,15 @@ const Follow = ({
       <div className="row my-5 d-flex justify-content-center">
         {facebookLink && (
           <div className="col-sm-6 col-md-3 d-flex justify-content-center mt-4">
-            <a href={facebookLink}>
+            <a 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: city + "_facebook",
+              })
+            }}
+            href={facebookLink}>
               <div className="follow--circle text-center">
                 <img src={facebook} alt="" className="follow--facebook" />
               </div>
@@ -31,7 +48,15 @@ const Follow = ({
         )}
         {instagramLink && (
           <div className="col-sm-6 col-md-3 d-flex justify-content-center mt-4">
-            <a href={instagramLink}>
+            <a 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: city + "_instagram",
+              })
+            }}
+            href={instagramLink}>
               <div className="follow--circle text-center">
                 <img src={instagram} alt="" className="follow--img" />
               </div>
@@ -40,7 +65,15 @@ const Follow = ({
         )}
         {linkedInLink && (
           <div className="col-sm-6 col-md-3 d-flex justify-content-center mt-4">
-            <a href={linkedInLink}>
+            <a
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: city + "_linkedin",
+              })
+            }} 
+            href={linkedInLink}>
               <div className="follow--circle text-center">
                 <img src={linkedin} alt="" className="follow--img" />
               </div>
@@ -49,7 +82,15 @@ const Follow = ({
         )}
         {mediumLink && (
           <div className="col-sm-6 col-md-3 d-flex justify-content-center mt-4">
-            <a href={mediumLink}>
+            <a 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: city + "_medium",
+              })
+            }}
+            href={mediumLink}>
               <div className="follow--circle text-center">
                 <img src={medium} alt="" className="follow--img" />
               </div>

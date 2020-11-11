@@ -17,6 +17,8 @@ const RightImageSection = ({
   html = false,
   leftPartSize,
   rightPartSize,
+  galocation,
+  gasection
 }) => {
   return (
     <Container>
@@ -69,6 +71,8 @@ const RightImageSection = ({
                 isExternal={true}
                 link={buttonLink}
                 primary={true}
+                gaLocation={galocation}
+                gaSection={gasection}
               />
             </div>
           )}

@@ -26,7 +26,7 @@ class about extends Component {
   render() {
     const { data } = this.props
     return (
-      <Layout>
+      <Layout gaLabel="about" pageTitle="About">
         <ProgrammHero
           headingFirst={
             <FormattedMessage id="about.about.program_hero.headingFirst" />
@@ -147,6 +147,8 @@ class about extends Component {
           buttonLink="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
           leftSize="5"
           rightSize="7"
+          galocation="ab"
+          gasection="t_apply"
         />
         <RightImageSection
           heading={
@@ -164,6 +166,8 @@ class about extends Component {
           float={false}
           leftPartSize="8"
           rightPartSize="4"
+          galocation="ab"
+          gasection="f_mi"
         />
       </Layout>
     )

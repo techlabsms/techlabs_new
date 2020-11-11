@@ -4,6 +4,7 @@ import "jquery"
 
 // plugins
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // components
 import MobileNav from "./MobileNav"
@@ -25,13 +26,23 @@ class Navbar extends React.Component {
     isOpen: false,
   }
   render() {
+    let page = this.props.gaLabel
     const { isOpen } = this.state
     return (
       <>
         <Head />
         <Headroom disableInlineStyles={true}>
           <nav className="navbar navbar-expand-lg navbar-light navbar-add">
-            <Link className="navbar-brand" to="/">
+            <Link 
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: page + '_navbar_logo',
+              })
+            }}
+            className="navbar-brand" 
+            to="/">
               <img src={logo} className="tl-logo" alt="tl-logo" />
             </Link>
             <button
@@ -44,6 +55,13 @@ class Navbar extends React.Component {
               <ul className="navbar-nav ml-auto d-none d-lg-flex">
                 <li className="nav-item dropdown">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_locations',
+                      })
+                    }}
                     className="nav-link"
                     to="/locations"
                     data-toggle="dropdown"
@@ -53,6 +71,13 @@ class Navbar extends React.Component {
                   </Link>
                   <div className="dropdown-menu">
                     <Link
+                      onClick={e => {
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: page + '_navbar_locations',
+                        })
+                      }}
                       className="dropdown-item dropdown-item-corr"
                       to="/locations"
                       activeClassName="navLink--active"
@@ -60,6 +85,13 @@ class Navbar extends React.Component {
                       <FormattedMessage id="navbar.locations.all"/>
                     </Link>
                     <Link
+                      onClick={e => {
+                        trackCustomEvent({
+                          category: "Button",
+                          action: "Click",
+                          label: page + '_navbar_foundyourown',
+                        })
+                      }}
                       className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
                       activeClassName="navLink--active"
@@ -70,6 +102,13 @@ class Navbar extends React.Component {
                 </li>
                 <li className="nav-item dropdown">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_program',
+                      })
+                    }}
                     to="/program"
                     className="nav-link"
                     data-toggle="dropdown"
@@ -129,6 +168,13 @@ class Navbar extends React.Component {
                 </li>
                 <li className="nav-item">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_about',
+                      })
+                    }}
                     className="nav-link"
                     to="/about"
                     activeClassName="navLink--active"
@@ -139,6 +185,13 @@ class Navbar extends React.Component {
 
                 <li className="nav-item">
                   <a
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_openpositions',
+                      })
+                    }}
                     className="nav-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -150,6 +203,13 @@ class Navbar extends React.Component {
 
                 <li className="nav-item">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_blog',
+                      })
+                    }}
                     className="nav-link"
                     to="/blog"
                     activeClassName="navLink--active"
@@ -160,6 +220,13 @@ class Navbar extends React.Component {
 
                 <li className="nav-item ml-3">
                   <Link
+                    onClick={e => {
+                      trackCustomEvent({
+                        category: "Button",
+                        action: "Click",
+                        label: page + '_navbar_apply',
+                      })
+                    }}
                     className="nav-button"
                     to="/apply"
                     activeClassName="navLink--active"
@@ -171,7 +238,7 @@ class Navbar extends React.Component {
               {/* mobile view */}
             </div>
           </nav>
-          {isOpen && <MobileNav />}
+          {isOpen && <MobileNav gaLabel={page} />}
         </Headroom>
       </>
     )
