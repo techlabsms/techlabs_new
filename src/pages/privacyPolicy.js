@@ -429,7 +429,7 @@ const privacyPolicy = () => {
           obligation is prohibited. Contact data for sending unsolicited email
           addresses or telephone numbers Advertising and information materials
           are hereby objected to. The Operators of the pages expressly reserve
-          the right to take legal action in the the case of unsolicited sending
+          the right to take legal action in the case of unsolicited sending
           of advertising information, such as by Spam emails, before.
           <br />
           <br />
