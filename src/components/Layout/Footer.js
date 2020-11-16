@@ -72,6 +72,7 @@ const Footer = props => {
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
               <Language />
+              <br />
             </div>
             <div className="col-lg-8">
               <div className="row">
@@ -84,7 +85,8 @@ const Footer = props => {
                   <Link className="foot-a" to="/locations">
                     <FormattedMessage id="layout.locations" />
                   </Link>
-                  <ul className="footer-tl--subMenu">
+                  {/* commented out locations that where stretching the footer height */}
+                  {/* <ul className="footer-tl--subMenu">
                     {edges.map(
                       (location, index) =>
                         location.node.node_locale === locale && (
@@ -104,7 +106,8 @@ const Footer = props => {
                           </Link>
                         )
                     )}
-                  </ul>
+                  </ul> */}
+                  <br />
                   <Link className="foot-a" to="/faq">
                     <FormattedMessage id="footer.faq" />
                   </Link>
@@ -116,8 +119,6 @@ const Footer = props => {
                     <FormattedMessage id="layout.openPositions" />
                   </a>
                   <br />
-                </div>
-                <div className="col-lg-4">
                   <Link to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
                       <FormattedMessage id="layout.program" />
@@ -130,6 +131,8 @@ const Footer = props => {
                   <Link to="/program/remote" className="foot-a">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
+                </div>
+                <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">
                     <FormattedMessage id="footer.tracks" />
                   </h5>
