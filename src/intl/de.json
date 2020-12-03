@@ -525,5 +525,10 @@
   "404.text.6": "der Server aber nicht finden konnte, was angefordert wurde.",
   "404.text.7": "Der Website-Hosting-Server erzeugt normalerweise eine \"404 Not Found\"-Webseite, wenn ein Benutzer versucht, einem defekten oder toten Link zu folgen; daher ist der 404-Fehler einer der am besten erkennbaren Fehler, die im World Wide Web auftreten.",
   "404.learnTech": "Tech lernen",
-  "404.home": "Zur Homepage"
+  "404.home": "Zur Homepage",
+
+  "talk.when": "Wann?",
+  "talk.where": "Wo?",
+  "talk.interested": "Interessiert?",
+  "talk.notified": "Werde benachrichtigt über zukünftige TechLabs Talks"
 }
