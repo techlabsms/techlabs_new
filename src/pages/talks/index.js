@@ -63,6 +63,12 @@ const Index = ({ data }) => {
             allowfullscreen
           ></iframe>
         </div>
+        <div className="talk-video">
+          <iframe
+            src="https://vimeo.com/event/484993/chat/"
+            frameborder="0"
+          ></iframe>
+        </div>
       </div>
       <div className="container-fluid talk__newsletter">
         <div className="container">
