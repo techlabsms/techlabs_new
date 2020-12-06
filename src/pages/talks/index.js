@@ -1,11 +1,11 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Layout from "../components/Layout/Layout"
-import { SectionDivider } from "../components/smallComponents/Heading"
+import Layout from "../../components/Layout/Layout"
+import { SectionDivider } from "../../components/smallComponents/Heading"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-const Talks = ({ data }) => {
+const Index = ({ data }) => {
   return (
     <Layout>
       <div className="container talk py-5">
@@ -115,7 +115,7 @@ const Talks = ({ data }) => {
   )
 }
 
-export default Talks
+export default Index
 
 export const pageQuery = graphql`
   query($locale: String) {
