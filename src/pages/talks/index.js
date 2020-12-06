@@ -69,6 +69,7 @@ const Index = ({ data }) => {
         </h1>
         <div className="talk-video">
           <iframe
+            title="video"
             src={data.content.videoLink}
             frameborder="0"
             allow="autoplay; fullscreen"
@@ -77,6 +78,7 @@ const Index = ({ data }) => {
         </div>
         <div className="talk-video">
           <iframe
+            title="chat"
             src="https://vimeo.com/event/484993/chat/"
             frameborder="0"
           ></iframe>
