@@ -261,6 +261,10 @@ body {
   padding-top: 1.7rem !important;
   background-color: rgb(250, 250, 250);
   font-family: $font-pp;
+  position: relative;
+  width: 100%;
+  top: 0px;
+  z-index: 500;
 }
 
 .slack-icon {

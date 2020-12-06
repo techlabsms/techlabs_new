@@ -1,11 +1,12 @@
 import React from "react"
 
-const Promo = ({ text }) => {
+const Promo = ({ text, hideAnnoucement }) => {
   return (
     <>
       <section className="promo">
-        <div className="container center">
+        <div className="container d-flex justify-content-between">
           <p className="no-margin-block">{text}</p>
+          <a onClick={() => hideAnnoucement()}>close</a>
         </div>
       </section>
     </>
