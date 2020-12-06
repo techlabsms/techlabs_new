@@ -85,50 +85,20 @@ const Index = ({ data }) => {
       <div className="container-fluid talk__newsletter">
         <div className="container">
           <div className="row py-5">
-            <div className="col-md-6">
-              <h2 className="text-white">
-                <FormattedMessage id={"talk.interested"}>
-                  Interested?
-                </FormattedMessage>
-              </h2>
-              <p>
+            <div className="col-md-12 text-white text-center">
+              <h2>
                 <FormattedMessage id={"talk.notified"}>
                   Get notified about future TechLabs Talks
                 </FormattedMessage>
-              </p>
-            </div>
-            <div className="col-md-6">
-              <form
-                action="https://techlabs.us7.list-manage.com/subscribe/post"
-                method="POST"
+              </h2>
+              <a
+                className="btn btn-secondary my-4"
+                href="http://eepurl.com/hjx355"
               >
-                <div className="form-group">
-                  <label for="exampleInputEmail1" className="text-white">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="MERGE1"
-                    aria-describedby="emailHelp"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputEmail1" className="text-white">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="MERGE2"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                  />
-                </div>
-                <div className="text-center mt-5">
-                  <input type="submit" class="btn btn-secondary" />
-                </div>
-              </form>
+                <FormattedMessage id={"talk.register"}>
+                  Register here
+                </FormattedMessage>
+              </a>
             </div>
           </div>
         </div>
