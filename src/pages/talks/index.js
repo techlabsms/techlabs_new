@@ -1,30 +1,41 @@
 import { graphql } from "gatsby"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../../components/Layout/Layout"
-import { SectionDivider } from "../../components/smallComponents/Heading"
+
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import LearnMore from "../../components/landingpage/learnMore"
 
 const Index = ({ data }) => {
+  const [width, setWidth] = useState()
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      setWidth(window.innerWidth)
+    }
+  }, [setWidth])
   return (
     <Layout>
       <div className="container talk py-5">
         <div className="row">
           <div className="col-md-6">
             <h1>
-              <span className="talk__tl">Tech</span>Labs{" "}
-              <span className="highlighted">Talks</span>
+              <span className="talk__tl">Tech</span>Labs Talks
             </h1>
-            <p className="talk__subtitle">{data.content.subtitle}</p>
-            <SectionDivider />
+            <h2 className="talk__tl--sm">{data.content.subtitle}</h2>
+            <div className="row my-4">
+              <div className="col-md-5 talk__speaker--names">
+                <h5>{data.content.speakers[0].name}</h5>
+                <h5 className="talk__tl">{data.content.speakers[0].company}</h5>
+              </div>
+              <div className="col-md-6">
+                <h5>{data.content.speakers[1].name}</h5>
+                <h5 className="talk__tl">{data.content.speakers[1].company}</h5>
+              </div>
+            </div>
             <p className="talk__instruction">
-              <FormattedMessage id={"talk.when"}>When?</FormattedMessage>{" "}
-              <span>{data.content.when}</span>
-            </p>
-            <p className="talk__instruction">
-              <FormattedMessage id={"talk.where"}>Where?</FormattedMessage>{" "}
-              <span>{data.content.where}</span>
+              <span>{data.content.when.split(" ")[0]}</span>{" "}
+              {data.content.when.split(" ")[1]}
             </p>
           </div>
           <div className="col-md-6">
@@ -33,29 +44,29 @@ const Index = ({ data }) => {
                 <Img
                   alt={data.content.speakers[0].name}
                   fluid={data.content.speakers[0].image.fluid}
+                  className="talk__speaker"
                   style={{
-                    width: "250px",
+                    width: width > 600 ? "250px" : "150px",
                   }}
                 />
-                <h5>{data.content.speakers[0].name}</h5>
-                <p>{data.content.speakers[0].company}</p>
               </div>
               <div className="talk__speaker--card">
                 <Img
                   alt={data.content.speakers[1].name}
                   fluid={data.content.speakers[1].image.fluid}
                   style={{
-                    width: "250px",
+                    width: width > 600 ? "250px" : "150px",
                   }}
                 />
-                <h5>{data.content.speakers[1].name}</h5>
-                <p>{data.content.speakers[1].company}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mb-5 py-5 talk">
+      <div className="container mb-5 py-5 talk text-center">
+        <h1>
+          <span className="talk__tl">Live</span>Talk
+        </h1>
         <div className="talk-video">
           <iframe
             src={data.content.videoLink}
@@ -87,15 +98,18 @@ const Index = ({ data }) => {
               </p>
             </div>
             <div className="col-md-6">
-              <form>
+              <form
+                action="https://techlabs.us7.list-manage.com/subscribe/post"
+                method="POST"
+              >
                 <div className="form-group">
                   <label for="exampleInputEmail1" className="text-white">
                     Name
                   </label>
                   <input
-                    type="email"
+                    type="text"
                     className="form-control"
-                    id="exampleInputEmail1"
+                    id="MERGE1"
                     aria-describedby="emailHelp"
                   />
                 </div>
@@ -106,12 +120,13 @@ const Index = ({ data }) => {
                   <input
                     type="email"
                     className="form-control"
+                    id="MERGE2"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                   />
                 </div>
                 <div className="text-center mt-5">
-                  <button class="btn btn-secondary">Submit</button>
+                  <input type="submit" class="btn btn-secondary" />
                 </div>
               </form>
             </div>

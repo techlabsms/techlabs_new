@@ -2,10 +2,13 @@
 
 .talk {
   h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
   &__tl {
     color: $color-p;
+    &--sm {
+      font-size: 60px;
+    }
   }
   &__subtitle {
     font-weight: bold;
@@ -15,6 +18,7 @@
   &__instruction {
     font-weight: 600;
     font-size: 25px;
+    font-family: $font-h;
     > span {
       color: $color-p;
     }
@@ -60,6 +64,7 @@
     &--card:hover {
       transform: scale(1.02);
     }
+
     @for $i from 0 through 4 {
       $c: $i + 1;
       &--card:nth-child(#{$c}) {
@@ -70,6 +75,9 @@
         margin: 10px;
         transition: all 0.1s ease-in;
         left: 190px * $i;
+        @media (max-width: $xs) {
+          left: 110px * $i;
+        }
         > h5 {
           background-color: $color-background;
           padding: 5px 7px;
