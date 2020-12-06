@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const SectionDivider = styled.div`
+export const SectionDivider = styled.div`
   height: 0.3rem;
   width: 3.5rem;
   background-color: #fb1d5c;

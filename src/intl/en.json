@@ -522,5 +522,11 @@
   "404.text.6": "could not find what was requested.",
   "404.text.7": "The website hosting server will typically generate a \"404 Not Found\" web page when a user attempts to follow a broken or dead link; hence the 404 error is one of the most recognizable errors encountered on the World Wide Web.",
   "404.learnTech": "Learn tech",
-  "404.home": "Return home"
+  "404.home": "Return home",
+
+  "talk.when": "When?",
+  "talk.where": "Where?",
+  "talk.interested": "Interested?",
+  "talk.notified": "Get notified about future TechLabs Talks",
+  "talk.register": "Register here"
 }

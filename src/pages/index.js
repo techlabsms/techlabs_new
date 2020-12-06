@@ -13,7 +13,6 @@ import PartnerLogos from "../components/landingpage/PartnerLogos"
 import KeyBenefits from "../components/shared/KeyBenefits"
 import Quote from "../components/shared/Quote"
 import Heading from "../components/smallComponents/Heading"
-import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "../components/landingpage/applicationPeriod"
 import Layout from "../components/Layout/Layout"
@@ -24,6 +23,7 @@ import GIC from "../assets/gic.svg"
 // styles
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
+import LearnMore from "../components/landingpage/learnMore"
 
 class index extends React.Component {
   componentDidMount() {
@@ -367,71 +367,9 @@ class index extends React.Component {
               <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
             }
           />
-          <section className="container-fluid mt-5 background h-100 py-5">
-            <BackgroundImage
-              fluid={data.background_location.childImageSharp.fluid}
-              style={{
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <Container>
-                <Heading
-                  heading={
-                    <FormattedMessage id={"landingpage.learn_more.heading"} />
-                  }
-                  subheading={
-                    <FormattedMessage
-                      id={"landingpage.learn_more.subheading"}
-                    />
-                  }
-                />
-                <div className="row h-100">
-                  <div className="col-md-6 mt-3">
-                    <Link to="/locations" className="noDec">
-                      <div className="card">
-                        <h2 className="mt-3 color-red">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.learn_more.locations.h2"}
-                            />
-                          }
-                        </h2>
-                        <p className="color-gl">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.learn_more.locations.text"}
-                            />
-                          }
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="col-md-6 mt-3">
-                    <Link to="/program" className="noDec">
-                      <div className="card">
-                        <h2 className="mt-3 color-red">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.learn_more.program.h2"}
-                            />
-                          }
-                        </h2>
-                        <p className="color-gl">
-                          {
-                            <FormattedMessage
-                              id={"landingpage.learn_more.program.text"}
-                            />
-                          }
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </Container>
-            </BackgroundImage>
-          </section>
+          <LearnMore
+            backgroundImage={data.background_location.childImageSharp.fluid}
+          />
         </div>
       </Layout>
     )
