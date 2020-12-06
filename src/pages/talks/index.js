@@ -4,6 +4,7 @@ import Layout from "../../components/Layout/Layout"
 import { SectionDivider } from "../../components/smallComponents/Heading"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import LearnMore from "../../components/landingpage/learnMore"
 
 const Index = ({ data }) => {
   return (
@@ -117,11 +118,24 @@ const Index = ({ data }) => {
           </div>
         </div>
       </div>
+      <LearnMore
+        backgroundImage={data.background_location.childImageSharp.fluid}
+      />
     </Layout>
   )
 }
 
 export default Index
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 
 export const pageQuery = graphql`
   query($locale: String) {
@@ -140,6 +154,11 @@ export const pageQuery = graphql`
         }
         company
       }
+    }
+    background_location: file(
+      relativePath: { eq: "background_locations.png" }
+    ) {
+      ...fluidImage
     }
   }
 `
