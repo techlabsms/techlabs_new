@@ -29,7 +29,14 @@ class Navbar extends React.Component {
     return (
       <>
         <Head />
-        <Headroom disableInlineStyles={true}>
+        <Headroom
+          style={{
+            webkitTransition: "all .2s ease-in-out",
+            mozTransition: "all .2s ease-in-out",
+            oTransition: "all .2s ease-in-out",
+            transition: "all .2s ease-in-out",
+          }}
+        >
           <nav className="navbar navbar-expand-lg navbar-light navbar-add">
             <Link className="navbar-brand" to="/">
               <img src={logo} className="tl-logo" alt="tl-logo" />
@@ -49,7 +56,7 @@ class Navbar extends React.Component {
                     data-toggle="dropdown"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="layout.locations"/>
+                    <FormattedMessage id="layout.locations" />
                   </Link>
                   <div className="dropdown-menu">
                     <Link
@@ -57,14 +64,14 @@ class Navbar extends React.Component {
                       to="/locations"
                       activeClassName="navLink--active"
                     >
-                      <FormattedMessage id="navbar.locations.all"/>
+                      <FormattedMessage id="navbar.locations.all" />
                     </Link>
                     <Link
                       className="dropdown-item dropdown-item-corr"
                       to="/foundYourOwn"
                       activeClassName="navLink--active"
                     >
-                      <FormattedMessage id="navbar.locations.becomeFounder"/>
+                      <FormattedMessage id="navbar.locations.becomeFounder" />
                     </Link>
                   </div>
                 </li>
@@ -75,7 +82,7 @@ class Navbar extends React.Component {
                     data-toggle="dropdown"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="layout.program"/>
+                    <FormattedMessage id="layout.program" />
                   </Link>
                   <div className="dropdown-menu">
                     <Link
@@ -83,14 +90,14 @@ class Navbar extends React.Component {
                       to="/program/local"
                       activeClassName="navLink--active"
                     >
-                      <FormattedMessage id="layout.dsp"/>
+                      <FormattedMessage id="layout.dsp" />
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
                       to="/program/remote"
                       activeClassName="navLink--active"
                     >
-                      <FormattedMessage id="layout.codeathome"/>
+                      <FormattedMessage id="layout.codeathome" />
                     </Link>
                     <div className="dropdown-divider" />
                     <Link
@@ -99,7 +106,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={ds} alt="Data Science" className="mr-3" />
-                      <FormattedMessage id="layout.ds"/>
+                      <FormattedMessage id="layout.ds" />
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -107,7 +114,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={web} alt="web development" className="mr-3" />
-                      <FormattedMessage id="layout.webdev"/>
+                      <FormattedMessage id="layout.webdev" />
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -115,7 +122,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={ai} alt="ai" className="mr-3" />
-                      <FormattedMessage id="layout.ai"/>
+                      <FormattedMessage id="layout.ai" />
                     </Link>
                     <Link
                       className="dropdown-item-corr dropdown-item"
@@ -123,7 +130,7 @@ class Navbar extends React.Component {
                       activeClassName="navLink--active"
                     >
                       <img src={ux} alt="UX Design" className="mr-3" />
-                      <FormattedMessage id="layout.ux"/>
+                      <FormattedMessage id="layout.ux" />
                     </Link>
                   </div>
                 </li>
@@ -133,7 +140,7 @@ class Navbar extends React.Component {
                     to="/about"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="navbar.about"/>
+                    <FormattedMessage id="navbar.about" />
                   </Link>
                 </li>
 
@@ -144,7 +151,7 @@ class Navbar extends React.Component {
                     rel="noopener noreferrer"
                     href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
                   >
-                    <FormattedMessage id="layout.openPositions"/>
+                    <FormattedMessage id="layout.openPositions" />
                   </a>
                 </li>
 
@@ -154,7 +161,7 @@ class Navbar extends React.Component {
                     to="/blog"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="navbar.blog"/>
+                    <FormattedMessage id="navbar.blog" />
                   </Link>
                 </li>
 
@@ -164,7 +171,7 @@ class Navbar extends React.Component {
                     to="/apply"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="callToAction.button"/>
+                    <FormattedMessage id="callToAction.button" />
                   </Link>
                 </li>
               </ul>
