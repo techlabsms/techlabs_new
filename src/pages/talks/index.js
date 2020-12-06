@@ -8,6 +8,7 @@ import LearnMore from "../../components/landingpage/learnMore"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
+  const [chatOpen, setChatOpen] = useState(false)
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
@@ -76,13 +77,23 @@ const Index = ({ data }) => {
             allowfullscreen
           ></iframe>
         </div>
-        <div className="talk-video">
-          <iframe
-            title="chat"
-            src="https://vimeo.com/event/484993/chat/"
-            frameborder="0"
-          ></iframe>
-        </div>
+        <button
+          class="btn btn-primary my-5"
+          onClick={() => {
+            setChatOpen(!chatOpen)
+          }}
+        >
+          {chatOpen ? "Close Chat" : "Open Chat"}
+        </button>
+        {chatOpen && (
+          <div className="talk-video">
+            <iframe
+              title="chat"
+              src="https://vimeo.com/event/484993/chat/"
+              frameborder="0"
+            ></iframe>
+          </div>
+        )}
       </div>
       <div className="container-fluid talk__newsletter">
         <div className="container">
