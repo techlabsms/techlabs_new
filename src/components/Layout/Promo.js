@@ -6,7 +6,9 @@ const Promo = ({ text, hideAnnoucement }) => {
       <section className="promo">
         <div className="container d-flex justify-content-between">
           <p className="no-margin-block">{text}</p>
-          <a onClick={() => hideAnnoucement()}>close</a>
+          <a classNamen="promo-close" onClick={() => hideAnnoucement()}>
+            close
+          </a>
         </div>
       </section>
     </>
