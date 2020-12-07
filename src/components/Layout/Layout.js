@@ -1,14 +1,26 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import Promo from "./Promo"
 
+const STATE_KEY = "TL-PROMO"
+
+sessionStorage.setItem(STATE_KEY, false)
+
 const Layout = ({ children }) => {
-  const [hasAnnouncement, setAnnouncement] = useState(false)
+  const getValue = () => {
+    return sessionStorage.getItem(STATE_KEY) === "true"
+  }
+  const [hasAnnouncement, setAnnouncement] = useState(getValue())
 
   const hideAnnoucement = () => {
     setAnnouncement(false)
+    sessionStorage.setItem(STATE_KEY, false)
   }
+
+  useEffect(() => {
+    sessionStorage.setItem(STATE_KEY, hasAnnouncement)
+  }, [hasAnnouncement])
   return (
     <>
       {hasAnnouncement ? (
