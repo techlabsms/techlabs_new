@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     sessionStorage.setItem(STATE_KEY, hasAnnouncement)
   }, [hasAnnouncement])
+
   return (
     <>
       {hasAnnouncement ? (
