@@ -6,7 +6,6 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // assets
-import Slack from "../../assets/slack.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
