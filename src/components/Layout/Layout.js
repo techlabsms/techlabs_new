@@ -5,11 +5,15 @@ import Promo from "./Promo"
 
 const STATE_KEY = "TL-PROMO"
 
-sessionStorage.setItem(STATE_KEY, false)
+if (typeof window !== "undefined") {
+  sessionStorage.setItem(STATE_KEY, false)
+}
 
 const Layout = ({ children }) => {
   const getValue = () => {
-    return sessionStorage.getItem(STATE_KEY) === "true"
+    if (typeof window !== "undefined") {
+      return sessionStorage.getItem(STATE_KEY) === "true"
+    }
   }
   const [hasAnnouncement, setAnnouncement] = useState(getValue())
 
@@ -19,7 +23,9 @@ const Layout = ({ children }) => {
   }
 
   useEffect(() => {
-    sessionStorage.setItem(STATE_KEY, hasAnnouncement)
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(STATE_KEY, hasAnnouncement)
+    }
   }, [hasAnnouncement])
 
   return (
