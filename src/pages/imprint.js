@@ -17,10 +17,9 @@ class imprint extends Component {
             Goebenstr. 14 <br />
             48151 Münster <br />
             <br />
-            E-Mail-Adresse: info@tech-labs.de <br />
+            E-Mail-Adresse: info@techlabs.org <br />
             <br />
-            Vorstand: David Middelbeck, Marius Vennemann, Jonas Wagner, Nils
-            Bahr <br />
+            Vorstand: David Middelbeck, Marius Vennemann, Rebecca Janßen, Jana Jeggle, Eric Grunenberg<br />
             Register und Registernummer: Amtsgericht Münster VR 5787 <br />
             <br />
             Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO: <br />
