@@ -360,7 +360,9 @@ export const pageQuery = graphql`
         title
       }
     }
-
+    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+      ...fluidImage
+    }
     contentfulLocationPage(
       heading: { eq: $heading }
       node_locale: { eq: $locale }
