@@ -196,7 +196,7 @@ class location extends Component {
               </div>
             </div>
           </section>
-          {/* {newsletterVisible && (
+          {/* {!isOpen && (
           <Newsletter
             image={data.newsletterImage.childImageSharp.fluid}
             title="Want to know when the next application period starts?"
@@ -377,7 +377,6 @@ export const pageQuery = graphql`
         }
       }
       isOpen
-      newsletterVisible
       nextBatchDate
       facebookUrl
       instagramUrl
