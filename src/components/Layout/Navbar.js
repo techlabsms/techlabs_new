@@ -155,16 +155,6 @@ class Navbar extends React.Component {
                   </a>
                 </li>
 
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/blog"
-                    activeClassName="navLink--active"
-                  >
-                    <FormattedMessage id="navbar.blog" />
-                  </Link>
-                </li>
-
                 <li className="nav-item ml-3">
                   <Link
                     className="nav-button"
