@@ -67,7 +67,7 @@ class index extends React.Component {
     return (
       <Layout>
         <div className="container-fluid">
-          {/* header section */}
+          {/* header section test */}
           <section className="py-5 padding-top-15">
             <div className="container">
               <div className="row">
