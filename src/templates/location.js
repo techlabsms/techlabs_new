@@ -196,6 +196,13 @@ class location extends Component {
               </div>
             </div>
           </section>
+          {/* {newsletterVisible && (
+          <Newsletter
+            image={data.newsletterImage.childImageSharp.fluid}
+            title="Want to know when the next application period starts?"
+            subtitle="Subscribe to our email list to get notified!"
+          />
+        )} */}
           <section className="container location">
             {location.hasCalendar && (
               <DatesCalendar
