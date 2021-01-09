@@ -377,6 +377,7 @@ export const pageQuery = graphql`
         }
       }
       isOpen
+      newsletterVisible
       nextBatchDate
       facebookUrl
       instagramUrl
