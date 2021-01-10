@@ -201,8 +201,7 @@ class location extends Component {
           {!location.isOpen && location.newsletterActive && (
           <Newsletter
             image={data.data.newsletterImage.childImageSharp.fluid}
-            title="Newsletter title - to change with contentful"
-            subtitle="Newsletter subtitle - to change with contentful"
+            actionLink=""
           />
         )}
           <section className="container location">

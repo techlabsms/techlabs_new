@@ -301,6 +301,8 @@
   "location.office.directions": "Get Directions",
   "location.partners.heading": "Our Partners",
   "location.partners.subheading": "Our location is proudly supported by",
+  "location.newsletter.title": "Want to know when the next application period starts?",
+  "location.newsletter.subtitle": "Subscribe to our email list to get notified!",
   "location.newsletter.name.label": "First Name*",
   "location.newsletter.name.placeholder": "Your Name",
   "location.newsletter.email.label": "Email*",

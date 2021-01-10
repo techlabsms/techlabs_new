@@ -9,18 +9,26 @@ import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 
 
-const Newsletter = ({ image, title, subtitle, intl }) => {
+const Newsletter = ({ image, actionLink, intl }) => {
   // translate placeholders with injectIntl
   const namePlaceholder = intl.formatMessage({id: 'location.newsletter.name.placeholder'})
   const emailPlaceholder = intl.formatMessage({id: 'location.newsletter.email.placeholder'})
   const subscribeButton = intl.formatMessage({id: 'location.newsletter.button'})
   return (
     <Container>
-      <Heading heading={title} subheading={subtitle}></Heading>
+      <Heading 
+      heading={
+        <FormattedMessage id={"location.newsletter.title"} />
+      }
+      subheading={
+        <FormattedMessage id={"location.newsletter.subtitle"} />
+      }>
+      </Heading>
       <div className="row">
         <div className="col-md-6 order-2 order-md-1 py-5 d-flex align-items-center">
           <form
-            action="https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41"
+            action={actionLink}
+            //https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
