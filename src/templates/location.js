@@ -198,7 +198,7 @@ class location extends Component {
               </div>
             </div>
           </section>
-          {!location.isOpen && (
+          {!location.isOpen && location.newsletterActive && (
           <Newsletter
             image={data.data.newsletterImage.childImageSharp.fluid}
             title="Newsletter title - to change with contentful"
@@ -391,6 +391,7 @@ export const pageQuery = graphql`
         }
       }
       isOpen
+      newsletterActive
       nextBatchDate
       facebookUrl
       instagramUrl
