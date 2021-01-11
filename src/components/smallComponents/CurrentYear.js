@@ -2,7 +2,7 @@ import React from "react"
 
 const CurrentYear = () => {
     return (
-        <span>{new Date().getFullYear()}</span>
+        <>{new Date().getFullYear()}</>
     )
 }
 

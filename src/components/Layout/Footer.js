@@ -177,7 +177,7 @@ const Footer = props => {
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
-            <p className="footer-tl--copy">&copy; TechLabs e.V. <CurrentYear /> </p>
+            <p className="footer-tl--copy">&copy; TechLabs e. V. <CurrentYear /> </p>
           </div>
         </div>
       </div>
