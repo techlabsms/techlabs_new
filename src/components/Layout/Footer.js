@@ -1,5 +1,6 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
+import CurrentYear from "../smallComponents/CurrentYear"
 import { graphql, useStaticQuery } from "gatsby"
 
 // plugins
@@ -176,7 +177,7 @@ const Footer = props => {
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
-            <p className="footer-tl--copy">&copy; TechLabs e.V. 2020</p>
+            <p className="footer-tl--copy">&copy; TechLabs e. V. <CurrentYear /> </p>
           </div>
         </div>
       </div>
