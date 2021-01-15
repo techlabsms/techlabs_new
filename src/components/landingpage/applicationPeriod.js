@@ -54,6 +54,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     const choosenCityData = locationData.filter(
       c => c.node.heading.toLowerCase() === city.toLowerCase()
     )
+
     setCityData(choosenCityData)
     updateDate(choosenCityData)
   }
@@ -169,9 +170,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                               }
                             />
                           </a>
-                        ) : (
-                          <> </>
-                        )}
+                        ) : null}
                       </span>
                     </>
                   ) : (
