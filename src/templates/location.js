@@ -201,7 +201,7 @@ class location extends Component {
           {!location.isOpen && location.newsletterActive && (
           <Newsletter
             image={data.data.newsletterImage.childImageSharp.fluid}
-            actionLink=""
+            actionLink={data.location.newsletterLink}
           />
         )}
           <section className="container location">
@@ -391,6 +391,7 @@ export const pageQuery = graphql`
       }
       isOpen
       newsletterActive
+      newsletterLink
       nextBatchDate
       facebookUrl
       instagramUrl
