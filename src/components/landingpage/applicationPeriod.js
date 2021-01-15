@@ -54,7 +54,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     const choosenCityData = locationData.filter(
       c => c.node.heading.toLowerCase() === city.toLowerCase()
     )
-    console.log(choosenCityData)
+
     setCityData(choosenCityData)
     updateDate(choosenCityData)
   }
