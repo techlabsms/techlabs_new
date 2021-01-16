@@ -34,30 +34,7 @@ class apply extends Component {
     const { isClicked } = this.state
     const { intl } = this.props
 
-    const codeAtHome = [
-      {
-        node: {
-          location: "Remote",
-          country: "Remote",
-          applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
-          applicationEnd: this.props.data.codeAtHome.edges[0].node
-            .applicationEnd,
-          applicationLink: this.props.data.codeAtHome.edges[0].node
-            .applicationLink,
-          heading: "Remote",
-          avaiableTracks: {
-            ai: true,
-            web: true,
-            data: true,
-            ux: true,
-          },
-        },
-      },
-    ]
-
-    const allCountries = this.props.data.allContentfulLocationPage.edges.concat(
-      codeAtHome
-    )
+    const allCountries = this.props.data.allContentfulLocationPage.edges
 
     return (
       <Layout>
