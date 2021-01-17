@@ -66,6 +66,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "gatsby-plugin-eslint": "^2.0.8",
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
