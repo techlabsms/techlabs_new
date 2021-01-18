@@ -28,7 +28,6 @@ const Newsletter = ({ image, actionLink, intl }) => {
         <div className="col-md-6 order-2 order-md-1 py-5 d-flex align-items-center">
           <form
             action={actionLink}
-            //https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
