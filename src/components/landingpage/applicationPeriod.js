@@ -54,6 +54,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     const choosenCityData = locationData.filter(
       c => c.node.heading.toLowerCase() === city.toLowerCase()
     )
+
     setCityData(choosenCityData)
     updateDate(choosenCityData)
   }
@@ -161,7 +162,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                           <a
                             className="btn btn-primary d-inline apply-button"
                             type="submit"
-                            href={cityData.node[0].applicationLink}
+                            href={cityData[0].node.applicationLink}
                           >
                             <FormattedMessage
                               id={
@@ -169,9 +170,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                               }
                             />
                           </a>
-                        ) : (
-                          <> </>
-                        )}
+                        ) : null}
                       </span>
                     </>
                   ) : (

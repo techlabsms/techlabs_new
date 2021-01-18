@@ -132,14 +132,6 @@ class MobileNav extends Component {
               </li>
             </Link>
 
-            <Link to="/blog" activeClassName="navLink--active">
-              <li className="nav-item">
-                <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="navbar.blog" />
-                </h3>
-              </li>
-            </Link>
-
             <a
               href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
               activeClassName="navLink--active"
