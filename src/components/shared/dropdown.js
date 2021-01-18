@@ -7,7 +7,7 @@ const Dropdown = ({ options, style, onSelect }) => {
       <select
         style={{ width: "100%" }}
         className="dropdown-select"
-        onChange={e => {
+        onBlur={e => {
           setChoosenOption(e.target.value)
           onSelect(e.target.value)
         }}
