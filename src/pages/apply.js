@@ -168,14 +168,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    codeAtHome: allContentfulCodeAtHome {
-      edges {
-        node {
-          startDate
-          applicationEnd
-          applicationLink
-        }
-      }
-    }
   }
 `
