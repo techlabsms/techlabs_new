@@ -17,6 +17,7 @@ import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+import Newsletter from "../components/program/newsletter"
 
 // assets
 import teamspirit from "../assets/teamspirit.png"
@@ -45,6 +46,7 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
+    const data = this.props
     const { modalIsOpen, x, y, text } = this.state
     return (
       <Layout>
@@ -139,9 +141,7 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    <FormattedMessage
-                      id={"location." + location.heading.toLowerCase()}
-                    />
+                    {location.heading}
                   </h1>
 
                   <div className="row">
@@ -196,6 +196,12 @@ class location extends Component {
               </div>
             </div>
           </section>
+          {!location.isOpen && location.newsletterActive && (
+          <Newsletter
+            image={data.data.newsletterImage.childImageSharp.fluid}
+            actionLink={data.location.newsletterLink}
+          />
+        )}
           <section className="container location">
             {location.hasCalendar && (
               <DatesCalendar
@@ -253,14 +259,21 @@ class location extends Component {
                 team={location.team}
               />
             )}
-            <Follow
-              heading={<FormattedMessage id="location.follow.heading" />}
-              subheading={<FormattedMessage id="location.follow.subheading" />}
-              facebookLink={location.facebookUrl}
-              instagramLink={location.instagramUrl}
-              linkedInLink={location.linkedinUrl}
-              mediumLink={location.mediumUrl}
-            />
+            {location.facebookUrl !== null ||
+            location.instagramUrl !== null ||
+            location.linkedinUrl !== null ||
+            location.mediumUrl !== null ? (
+              <Follow
+                heading={<FormattedMessage id="location.follow.heading" />}
+                subheading={
+                  <FormattedMessage id="location.follow.subheading" />
+                }
+                facebookLink={location.facebookUrl}
+                instagramLink={location.instagramUrl}
+                linkedInLink={location.linkedinUrl}
+                mediumLink={location.mediumUrl}
+              />
+            ) : null}
           </section>
           {location.openPositionsLink && (
             <RightImageSection
@@ -346,14 +359,26 @@ class location extends Component {
 
 export default injectIntl(location)
 
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
 export const pageQuery = graphql`
   query LocationByHeading($heading: String!, $locale: String) {
+    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+      ...fluidImage
+    }
     site {
       siteMetadata {
         title
       }
     }
-
     contentfulLocationPage(
       heading: { eq: $heading }
       node_locale: { eq: $locale }
@@ -370,6 +395,8 @@ export const pageQuery = graphql`
         }
       }
       isOpen
+      newsletterActive
+      newsletterLink
       nextBatchDate
       facebookUrl
       instagramUrl

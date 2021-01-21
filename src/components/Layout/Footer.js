@@ -1,7 +1,6 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
 import CurrentYear from "../smallComponents/CurrentYear"
-import { graphql, useStaticQuery } from "gatsby"
 
 // plugins
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -14,22 +13,6 @@ import Logo from "../../assets/tl-logo-white.svg"
 import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulLocationPage {
-        edges {
-          node {
-            heading
-            node_locale
-          }
-        }
-      }
-    }
-  `)
-  const locale = props.intl.locale
-
-  const { edges } = data.allContentfulLocationPage
-
   return (
     <>
       <CookieConsent
@@ -177,7 +160,9 @@ const Footer = props => {
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
-            <p className="footer-tl--copy">&copy; TechLabs e. V. <CurrentYear /> </p>
+            <p className="footer-tl--copy">
+              &copy; TechLabs e. V. <CurrentYear />{" "}
+            </p>
           </div>
         </div>
       </div>

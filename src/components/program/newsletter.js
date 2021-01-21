@@ -1,16 +1,33 @@
 import React from "react"
-import Container from "../smallComponents/Container"
-import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
 
-const Newsletter = ({ image, title, subtitle }) => {
+// plugins & external
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+
+// components
+import Container from "../smallComponents/Container"
+import Heading from "../smallComponents/Heading"
+
+
+const Newsletter = ({ image, actionLink, intl }) => {
+  // translate placeholders with injectIntl
+  const namePlaceholder = intl.formatMessage({id: 'location.newsletter.name.placeholder'})
+  const emailPlaceholder = intl.formatMessage({id: 'location.newsletter.email.placeholder'})
+  const subscribeButton = intl.formatMessage({id: 'location.newsletter.button'})
   return (
     <Container>
-      <Heading heading={title} subheading={subtitle}></Heading>
+      <Heading 
+      heading={
+        <FormattedMessage id={"location.newsletter.title"} />
+      }
+      subheading={
+        <FormattedMessage id={"location.newsletter.subtitle"} />
+      }>
+      </Heading>
       <div className="row">
         <div className="col-md-6 order-2 order-md-1 py-5 d-flex align-items-center">
           <form
-            action="https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41"
+            action={actionLink}
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
@@ -20,22 +37,26 @@ const Newsletter = ({ image, title, subtitle }) => {
             className="w-100"
           >
             <div className="form-group">
-              <label for="mce-FNAME">First Name*</label>
+              <label for="mce-FNAME">
+                <FormattedMessage id={"location.newsletter.name.label"}/>
+              </label>
               <input
                 type="text"
                 name="FNAME"
                 className="form-control"
                 id="mce-FNAME"
-                placeholder="Your Name"
+                placeholder={namePlaceholder}
                 required
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email*</label>
+              <label for="exampleInputEmail1">
+                <FormattedMessage id={"location.newsletter.email.label"}/>
+              </label>
               <input
                 type="email"
                 className="form-control"
-                placeholder="Your Email"
+                placeholder={emailPlaceholder}
                 id="mce-EMAIL"
                 aria-describedby="emailHelp"
                 name="EMAIL"
@@ -57,8 +78,7 @@ const Newsletter = ({ image, title, subtitle }) => {
                     for="mce-group[13885]-13885-0"
                     className="form-check-label"
                   >
-                    I agree that TechLabs could use my information to stay in
-                    contact, send news and information.
+                    <FormattedMessage id={"location.newsletter.privacy"}/>
                   </label>
                 </li>
               </ul>
@@ -77,7 +97,7 @@ const Newsletter = ({ image, title, subtitle }) => {
             </div>
             <input
               type="submit"
-              value="Subscribe"
+              value={subscribeButton}
               name="subscribe"
               id="mc-embedded-subscribe"
               class="btn btn-primary"
@@ -98,4 +118,4 @@ const Newsletter = ({ image, title, subtitle }) => {
   )
 }
 
-export default Newsletter
+export default injectIntl(Newsletter)

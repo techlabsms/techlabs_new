@@ -142,6 +142,8 @@
   &--icon {
     color: black;
     transition: all 0.2s ease;
+    max-width: 45px;
+    max-height: 45px;
   }
 
   &--icon:hover {
