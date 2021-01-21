@@ -40,30 +40,7 @@ class index extends React.Component {
   render() {
     const { data, intl } = this.props
 
-    const codeAtHome = [
-      {
-        node: {
-          location: "Remote",
-          country: "Remote",
-          heading: "CodeAtHome",
-          applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
-          applicationEnd: this.props.data.codeAtHome.edges[0].node
-            .applicationEnd,
-          applicationLink: this.props.data.codeAtHome.edges[0].node
-            .applicationLink,
-          avaiableTracks: {
-            ai: true,
-            web: true,
-            dataScience: true,
-            ux: true,
-          },
-        },
-      },
-    ]
-
-    const allCountries = this.props.data.allContentfulLocationPage.edges.concat(
-      codeAtHome
-    )
+    const allCountries = this.props.data.allContentfulLocationPage.edges
     return (
       <Layout>
         <div className="container-fluid">
@@ -463,15 +440,6 @@ export const pageQuery = graphql`
           heading
           country
           applicationStart
-          applicationEnd
-          applicationLink
-        }
-      }
-    }
-    codeAtHome: allContentfulCodeAtHome {
-      edges {
-        node {
-          startDate
           applicationEnd
           applicationLink
         }

@@ -141,9 +141,7 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    <FormattedMessage
-                      id={"location." + location.heading.toLowerCase()}
-                    />
+                    {location.heading}
                   </h1>
 
                   <div className="row">
@@ -261,14 +259,21 @@ class location extends Component {
                 team={location.team}
               />
             )}
-            <Follow
-              heading={<FormattedMessage id="location.follow.heading" />}
-              subheading={<FormattedMessage id="location.follow.subheading" />}
-              facebookLink={location.facebookUrl}
-              instagramLink={location.instagramUrl}
-              linkedInLink={location.linkedinUrl}
-              mediumLink={location.mediumUrl}
-            />
+            {location.facebookUrl !== null ||
+            location.instagramUrl !== null ||
+            location.linkedinUrl !== null ||
+            location.mediumUrl !== null ? (
+              <Follow
+                heading={<FormattedMessage id="location.follow.heading" />}
+                subheading={
+                  <FormattedMessage id="location.follow.subheading" />
+                }
+                facebookLink={location.facebookUrl}
+                instagramLink={location.instagramUrl}
+                linkedInLink={location.linkedinUrl}
+                mediumLink={location.mediumUrl}
+              />
+            ) : null}
           </section>
           {location.openPositionsLink && (
             <RightImageSection
