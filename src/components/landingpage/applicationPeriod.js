@@ -28,6 +28,8 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   const wave_style = {
     width: "100%",
     zIndex: "-1",
+    bottom: "-220px",
+    marginBottom: "15vh",
   }
 
   const dropdown_style = {
