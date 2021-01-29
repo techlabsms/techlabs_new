@@ -197,11 +197,11 @@ class location extends Component {
             </div>
           </section>
           {!location.isOpen && location.newsletterActive && (
-          <Newsletter
-            image={data.data.newsletterImage.childImageSharp.fluid}
-            actionLink={data.location.newsletterLink}
-          />
-        )}
+            <Newsletter
+              image={data.data.newsletterImage.childImageSharp.fluid}
+              actionLink={data.location.newsletterLink}
+            />
+          )}
           <section className="container location">
             {location.hasCalendar && (
               <DatesCalendar
@@ -307,7 +307,9 @@ class location extends Component {
                 <div
                   className="col-md-7 office--img"
                   style={{
-                    backgroundImage: `url(${location.officeImg.file.url})`,
+                    backgroundImage: location.officeImg
+                      ? `url(${location.officeImg.file.url})`
+                      : null,
                   }}
                 >
                   <div className="w-75 office--card position-absolute">
@@ -332,13 +334,15 @@ class location extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-5">
-                  <div className="row pl-5 d-flex h-100 mt-5 pr-5">
-                    <p className="align-self-center justify-content-center office--text">
-                      {location.officeText.json.content[0].content[0].value}
-                    </p>
+                {location.officeText ? (
+                  <div className="col-md-5">
+                    <div className="row pl-5 d-flex h-100 mt-5 pr-5">
+                      <p className="align-self-center justify-content-center office--text">
+                        {location.officeText.json.content[0].content[0].value}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </div>
             </Container>
           )}
