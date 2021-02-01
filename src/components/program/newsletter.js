@@ -36,7 +36,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
             novalidate
             className="w-100"
           >
-            {/* <div className="form-group">
+            <div className="form-group">
               <label for="mce-FNAME">
                 <FormattedMessage id={"location.newsletter.name.label"}/>
               </label>
@@ -48,7 +48,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
                 placeholder={namePlaceholder}
                 required
               />
-            </div> */}
+            </div>
             <div class="form-group">
               <label for="exampleInputEmail1">
                 <FormattedMessage id={"location.newsletter.email.label"}/>
@@ -95,16 +95,13 @@ const Newsletter = ({ image, actionLink, intl }) => {
                 style={{ display: "block" }}
               ></div>
             </div>
-            <a href={actionLink} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              {subscribeButton}
-            </a>
-            {/* <input
+            <input
               type="submit"
               value={subscribeButton}
               name="subscribe"
               id="mc-embedded-subscribe"
               class="btn btn-primary"
-            /> */}
+            />
           </form>
         </div>
         <div className="col-md-6 order-1 order-md-2 py-5">
