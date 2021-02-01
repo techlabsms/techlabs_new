@@ -95,7 +95,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
                 style={{ display: "block" }}
               ></div>
             </div>
-            <a href="http://eepurl.com/hoMg7j" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <a href={actionLink} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
               {subscribeButton}
             </a>
             {/* <input
