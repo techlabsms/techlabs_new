@@ -199,7 +199,7 @@ class location extends Component {
           {!location.isOpen && location.newsletterActive && (
             <Newsletter
               image={data.data.newsletterImage.childImageSharp.fluid}
-              actionLink={data.location.newsletterLink}
+              actionLink={location.newsletterLink}
             />
           )}
           <section className="container location">
