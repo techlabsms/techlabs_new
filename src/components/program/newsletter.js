@@ -87,12 +87,12 @@ const Newsletter = ({ image, actionLink, intl }) => {
               <div
                 className="response"
                 id="mce-error-response"
-                style={{ display: "block" }}
+                style={{ display: "none" }}
               ></div>
               <div
                 className="response"
                 id="mce-success-response"
-                style={{ display: "block" }}
+                style={{ display: "none" }}
               ></div>
             </div>
             <input
