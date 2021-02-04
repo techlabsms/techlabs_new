@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Richard Menning",
   "scripts": {
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -26,6 +26,7 @@
     "babel-plugin-react-intl": "^5.1.18",
     "bluebird": "^3.7.2",
     "bootstrap": "^4.5.0",
+    "cross-env": "^7.0.3",
     "dayjs": "^1.8.28",
     "dotenv": "^8.2.0",
     "env": "0.0.2",
