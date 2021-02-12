@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { Link } from "gatsby-plugin-intl"
 
 // assets
 import pin from "../../assets/placemark.svg"
