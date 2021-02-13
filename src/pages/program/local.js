@@ -245,29 +245,29 @@ export const pageQuery = graphql`
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
-          whatIsIncluded { 
+          whatIsIncluded {
             whatIsIncluded {
               time {
-                hours,
+                hours
                 month
               }
-              who,
+              who
               what {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
               }
               tracks {
-                _1,accint.png
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
-              },
+              }
               difference {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
               }
             }
           }
