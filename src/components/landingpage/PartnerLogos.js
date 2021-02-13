@@ -29,7 +29,17 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerOne}>
-            <Img alt="partner logo" fluid={logoOne} />
+            <Img 
+              alt="partner logo" 
+              fluid={logoOne} 
+              imgStyle={{
+                width: "90%",
+                objectFit: "contain",
+                margin: "0px 5px",
+                alignSelf: "center",
+              }}
+              className="partnerLogos--img img-fluid"
+            />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">

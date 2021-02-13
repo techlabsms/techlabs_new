@@ -19,7 +19,6 @@ import Background from "../assets/about_background.png"
 import google from "../assets/google.png"
 import teamStairs from "../assets/teamStairs.png"
 import MAP from "../assets/map_small.png"
-import Lina from "../assets/lina.png"
 import Background_mobil from "../assets/about_mobil.png"
 
 class about extends Component {
@@ -106,13 +105,13 @@ class about extends Component {
           }
         />
         <Quote
-          heading={<FormattedMessage id="quote.lina.heading" />}
-          subheading={<FormattedMessage id="quote.lina.subheading" />}
+          heading={<FormattedMessage id="quote.headofmarketing.heading" />}
+          subheading={<FormattedMessage id="quote.headofmarketing.subheading" />}
           showHeading={false}
-          text={<FormattedMessage id="quote.lina.text" />}
-          name="Lina Oechsner"
-          job={<FormattedMessage id="quote.lina.job" />}
-          photo={Lina}
+          text={<FormattedMessage id="quote.headofmarketing.text" />}
+          name="Julian Junghöfer"
+          job={<FormattedMessage id="quote.headofmarketing.job" />}
+          photo={data.julian.childImageSharp.fixed}
         />
         <CoreValues />
         <LeftImageSectionHeading
@@ -181,6 +180,16 @@ export const fluidImage = graphql`
     }
   }
 `
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    childImageSharp {
+      fixed(width: 50, height: 50) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 
 export const pageQuery = graphql`
   query {
@@ -192,6 +201,9 @@ export const pageQuery = graphql`
     }
     join: file(relativePath: { eq: "join.png" }) {
       ...fluidImage
+    }
+    julian: file(relativePath: { eq: "julian.png" }) {
+    ...fixedImage
     }
   }
 `
