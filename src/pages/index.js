@@ -96,7 +96,7 @@ class index extends React.Component {
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
             <PartnerLogos
-              logoOne={data.accenture.childImageSharp.fluid}
+              logoOne={data.accint.childImageSharp.fluid}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
               logoTwo={data.sopra.childImageSharp.fluid}
               linkPartnerTwo="https://www.soprasteria.de/de"
@@ -379,7 +379,7 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "startPage.png" }) {
       ...fluidImage
     }
-    accenture: file(relativePath: { eq: "accenture.png" }) {
+    accint: file(relativePath: { eq: "accint.png" }) {
       ...fluidImage
     }
     sopra: file(relativePath: { eq: "sopra.png" }) {
