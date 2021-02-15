@@ -5,6 +5,7 @@
     list-style: none;
     counter-reset: li;
     &_item::before {
+      @include heading;
       content: counter(li);
       font-size: 30px;
       line-height: 28px;
@@ -12,8 +13,6 @@
       width: 1em;
       margin-left: -1.5em;
       text-align: center;
-      font-weight: bold;
-      font-family: $font-h;
     }
     &_item {
       counter-increment: li;
@@ -21,8 +20,8 @@
   }
 
   &--text_first {
+    @include heading;
     font-size: 20px;
     line-height: 28px;
-    font-family: $font-h;
   }
 }

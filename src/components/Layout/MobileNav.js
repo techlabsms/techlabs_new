@@ -9,7 +9,7 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/UX.svg"
+import ux from "../../assets/ux-icon.png"
 
 class MobileNav extends Component {
   state = {
@@ -86,7 +86,11 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ds} alt="data science" className="mr-3" />
+                      <img
+                        src={ds}
+                        alt="data science"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.ds" />
                     </li>
                   </Link>
@@ -96,7 +100,11 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={web} alt="web development" className="mr-3" />
+                      <img
+                        src={web}
+                        alt="web development"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.webdev" />
                     </li>
                   </Link>
@@ -106,7 +114,7 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ai} alt="ai" className="mr-3" />
+                      <img src={ai} alt="ai" className="mr-3 track-logo" />
                       <FormattedMessage id="layout.ai" />
                     </li>
                   </Link>
@@ -116,7 +124,11 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ux} alt="ux design" className="mr-3" />
+                      <img
+                        src={ux}
+                        alt="ux design"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.ux" />
                     </li>
                   </Link>

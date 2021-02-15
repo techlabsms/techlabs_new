@@ -11,14 +11,12 @@
     }
   }
   &__subtitle {
-    font-weight: bold;
+    @include heading;
     font-size: 32px;
-    font-family: $font-h;
   }
   &__instruction {
-    font-weight: 600;
+    @include paragraph;
     font-size: 25px;
-    font-family: $font-h;
     > span {
       color: $color-p;
     }

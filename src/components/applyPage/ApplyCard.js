@@ -11,10 +11,11 @@ import ApplicationCountdown from "./ApplicationCountdown"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/UX.svg"
+import ux from "../../assets/ux-icon.png"
 import dswhite from "../../assets/ds_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
+import uxwhite from "../../assets/ux_white.png"
 
 const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   const [isClicked, setIsClicked] = useState(false)
@@ -93,7 +94,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                         />
                       </p>
                     )}
-                    <div className="text-muted pb-4">
+                    <div className="pb-4">
                       <ApplicationCountdown date={date} isSmall={true} />
                     </div>
                   </>
@@ -176,7 +177,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       src={
                         isClicked &&
                         clickedCityValue === cityValues.heading.toLowerCase()
-                          ? webwhite
+                          ? uxwhite
                           : ux
                       }
                       alt="UX Design"

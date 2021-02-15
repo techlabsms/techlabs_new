@@ -51,12 +51,17 @@ h2,
 h3,
 h5,
 h6 {
-  font-family: $font-h;
+  @include heading;
 }
 
 body {
-  font-family: $font-p;
+  @include paragraph;
   font-size: 17px !important;
+}
+
+.subheadline {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .a-white {
@@ -79,7 +84,7 @@ body {
 }
 
 .tl-logo {
-  height: 20px;
+  height: 40px;
 }
 
 .navbar-add {
@@ -87,6 +92,11 @@ body {
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
+}
+
+.track-logo {
+  width: 25px;
+  height: 25px;
 }
 
 .navbar {
@@ -227,7 +237,7 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   color: white !important;
-  background-color: #fb1d5c;
+  background-color: $color-p;
   perspective: 1000px;
   text-decoration: none;
 }
@@ -269,7 +279,7 @@ body {
   background: linear-gradient(
     90.01deg,
     rgba(251, 29, 92, 0.69) -0.55%,
-    #fb1d5c 100%
+    $color-p 100%
   );
   font-family: $font-pp;
   position: relative;
@@ -415,8 +425,8 @@ body {
 }
 
 .btn {
+  @include heading;
   font-size: 17px !important;
-  font-family: $font-h;
   padding-left: 2.4em !important;
   padding-right: 2.4em !important;
   padding-top: 1em !important;
@@ -455,7 +465,7 @@ body {
 }
 
 .hashtag {
-  color: #303030;
+  color: $color-g;
   background: #fff19b;
   padding: 2px 2px 2px;
   border-radius: 5px;

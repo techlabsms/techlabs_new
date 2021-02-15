@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react"
 
 // plugins & external
@@ -156,7 +157,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                           />
                         </p>
                       )}
-                      <div className="text-muted">
+                      <div>
                         <ApplicationCountdown date={date} />
                       </div>
                       <span className="card-discover">

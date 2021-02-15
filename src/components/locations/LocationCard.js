@@ -9,7 +9,7 @@ import pin from "../../assets/placemark.svg"
 const LocationCard = ({ imgTop, city, icon, slug }) => {
   return (
     <div className="col-md-6 mt-3">
-      <Link to={`/location/${slug}`}>
+      <Link to={`/location/${slug}`} className="locations--card__link">
         <div className="locations--card">
           <div
             className="locations--card-img"
@@ -22,11 +22,9 @@ const LocationCard = ({ imgTop, city, icon, slug }) => {
               <img
                 src={pin}
                 alt="placemark"
-                className="text-muted mt-3 pl-3 pr-3 ml-2 d-inline-block"
+                className="mt-3 pl-3 pr-3 ml-2 d-inline-block"
               />
-              <h3 className="text-muted mt-4 d-inline-block align-middle">
-                {city}
-              </h3>
+              <h3 className="mt-4 d-inline-block align-middle">{city}</h3>
             </div>
             <div className="col-4 text-right d-flex justify-content-center align-items-center">
               <img
