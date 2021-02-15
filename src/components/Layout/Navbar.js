@@ -14,7 +14,7 @@ import logo from "../../assets/tl-logo.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/UX.svg"
+import ux from "../../assets/ux.png"
 import "jquery"
 
 // styles
@@ -105,7 +105,11 @@ class Navbar extends React.Component {
                       to="/dataScience"
                       activeClassName="navLink--active"
                     >
-                      <img src={ds} alt="Data Science" className="mr-3" />
+                      <img
+                        src={ds}
+                        alt="Data Science"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.ds" />
                     </Link>
                     <Link
@@ -113,7 +117,11 @@ class Navbar extends React.Component {
                       to="/web"
                       activeClassName="navLink--active"
                     >
-                      <img src={web} alt="web development" className="mr-3" />
+                      <img
+                        src={web}
+                        alt="web development"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.webdev" />
                     </Link>
                     <Link
@@ -121,7 +129,7 @@ class Navbar extends React.Component {
                       to="/ai"
                       activeClassName="navLink--active"
                     >
-                      <img src={ai} alt="ai" className="mr-3" />
+                      <img src={ai} alt="ai" className="mr-3 track-logo" />
                       <FormattedMessage id="layout.ai" />
                     </Link>
                     <Link
@@ -129,7 +137,11 @@ class Navbar extends React.Component {
                       to="/ux"
                       activeClassName="navLink--active"
                     >
-                      <img src={ux} alt="UX Design" className="mr-3" />
+                      <img
+                        src={ux}
+                        alt="UX Design"
+                        className="mr-3 track-logo"
+                      />
                       <FormattedMessage id="layout.ux" />
                     </Link>
                   </div>
