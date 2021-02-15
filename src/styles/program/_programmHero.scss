@@ -12,7 +12,7 @@
     font-weight: 500;
     font-size: 75px;
     line-height: 85px;
-    color: #fb1d5c !important;
+    color: $color-p !important;
     width: 40%;
     &-mobil {
       width: 40%;
@@ -44,7 +44,7 @@
     /* or 175% */
     width: 70%;
     text-align: justify;
-    color: #8b9fa8;
+    color: $color-gl;
     margin-top: 20%;
     &-second {
       font-size: 20px;
@@ -52,7 +52,7 @@
       /* or 175% */
       width: 70%;
       text-align: justify;
-      color: #8b9fa8;
+      color: $color-gl;
       margin-top: 5%;
     }
   }

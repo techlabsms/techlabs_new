@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .footer-tl {
   background-image: url("../assets/footer-tl-2.svg");
@@ -7,8 +7,8 @@
   background-size: contain;
   width: 100%;
   padding-top: 35.33%;
-  background-color: #fb1d5c;
-  font-size: .9rem;
+  background-color: $color-p;
+  font-size: 0.9rem;
   .footer-content {
     margin-top: 20%;
     padding-top: 15%;
@@ -22,7 +22,7 @@
   }
   .cred {
     margin-top: -20% !important;
-    background-color: #fb1d5c;
+    background-color: $color-p;
   }
   .foot-a {
     text-decoration: none;
@@ -36,7 +36,7 @@
     width: 12rem;
   }
   a {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   button {
     background: #ffffff;
@@ -56,10 +56,10 @@
     }
   }
 
-  a{
+  a {
     color: white !important;
   }
-  &--copy{
+  &--copy {
     color: white !important;
     font-size: 10px;
   }
@@ -71,15 +71,15 @@
   }
   a {
     text-align: center;
-    color: #fb1d5c !important;
+    color: $color-p !important;
     cursor: pointer;
     font-weight: 700;
     line-height: 1.5;
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
   .dropdown-menu {
-    padding: .5rem 0 !important;
+    padding: 0.5rem 0 !important;
   }
 }

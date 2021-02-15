@@ -93,7 +93,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                         />
                       </p>
                     )}
-                    <div className="text-muted pb-4">
+                    <div className="pb-4">
                       <ApplicationCountdown date={date} isSmall={true} />
                     </div>
                   </>

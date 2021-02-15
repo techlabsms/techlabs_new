@@ -143,7 +143,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.weeks.of.coding.text"}
@@ -171,7 +171,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
+                          <p className=" pb-4">
                             {
                               <FormattedMessage
                                 id={"landingpage.what.digital.tracks.text"}
@@ -199,7 +199,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.community.members.text"}
@@ -234,7 +234,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
+                          <p className="pb-4">
                             <FormattedMessage id="landingpage.location.text" />
                           </p>
                           <span className="card-discover">

@@ -61,7 +61,7 @@ class location extends Component {
                 <div className="col-md-12 col-lg-5 border-0 location-card mt-4 py-5 position-absolute">
                   <div className="row text-right fixed-top-absolute py-3">
                     <div className="col-md-12">
-                      <small className="text-muted mr-4">
+                      <small className="mr-4">
                         <FormattedMessage id="location.availableTracks" />
                       </small>
                       {location.avaiableTracks.web && (
@@ -147,14 +147,14 @@ class location extends Component {
                   <div className="row">
                     <div className="col">
                       {location.isOpen ? (
-                        <p className="text-muted batch-text">
+                        <p className="batch-text">
                           <FormattedMessage id="location.nextApplication" />{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
                         </p>
                       ) : (
-                        <p className="text-muted batch-text">
+                        <p className="batch-text">
                           <FormattedMessage id="location.nextBatch" />
                         </p>
                       )}

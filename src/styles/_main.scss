@@ -59,6 +59,11 @@ body {
   font-size: 17px !important;
 }
 
+.subheadline {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 .a-white {
   color: white !important;
 }
@@ -227,7 +232,7 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   color: white !important;
-  background-color: #fb1d5c;
+  background-color: $color-p;
   perspective: 1000px;
   text-decoration: none;
 }
@@ -269,7 +274,7 @@ body {
   background: linear-gradient(
     90.01deg,
     rgba(251, 29, 92, 0.69) -0.55%,
-    #fb1d5c 100%
+    $color-p 100%
   );
   font-family: $font-pp;
   position: relative;
@@ -455,7 +460,7 @@ body {
 }
 
 .hashtag {
-  color: #303030;
+  color: $color-g;
   background: #fff19b;
   padding: 2px 2px 2px;
   border-radius: 5px;

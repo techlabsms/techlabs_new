@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Text = styled.p`
   font-size: 20px;
   line-height: 35px;
-  color: #8b9fa8;
+  color: #464646;
 `
 
 const ThreeCard = ({

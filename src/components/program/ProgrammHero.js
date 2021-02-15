@@ -33,7 +33,7 @@ const ProgrammHero = ({
           <div className="row">
             <div className="col-md-12 col-lg-6">
               <h1 className="display-5 mt-5 programmHero--heading">
-                <span className="programmHero--highlighted-first">
+                <span className="programmHero--highlighted-first highlighted">
                   {headingFirst}
                 </span>
                 <br />
@@ -57,7 +57,11 @@ const ProgrammHero = ({
                     </h2>
                     <div className="row pl-5">
                       <div className="col">
-                        <h4><FormattedMessage id={"programmHero.info.time.heading"}/></h4>
+                        <h4>
+                          <FormattedMessage
+                            id={"programmHero.info.time.heading"}
+                          />
+                        </h4>
                         <div className="section-divider" />
                         <div className="row">
                           <div className="col-2">
@@ -69,9 +73,13 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              <FormattedMessage id={"programmHero.info.time.first"}/>
+                              <FormattedMessage
+                                id={"programmHero.info.time.first"}
+                              />
                               <br />
-                              <FormattedMessage id={"programmHero.info.time.second"}/>
+                              <FormattedMessage
+                                id={"programmHero.info.time.second"}
+                              />
                             </p>
                           </div>
                         </div>
@@ -79,7 +87,11 @@ const ProgrammHero = ({
                     </div>
                     <div className="row pl-5">
                       <div className="col">
-                        <h4><FormattedMessage id={"programmHero.info.certificate.heading"}/></h4>
+                        <h4>
+                          <FormattedMessage
+                            id={"programmHero.info.certificate.heading"}
+                          />
+                        </h4>
                         <div className="section-divider" />
                         <div className="row">
                           <div className="col-2">
@@ -91,8 +103,13 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              <FormattedMessage id={"programmHero.info.certificate.first"}/> <br />
-                              <FormattedMessage id={"programmHero.info.certificate.second"}/>
+                              <FormattedMessage
+                                id={"programmHero.info.certificate.first"}
+                              />{" "}
+                              <br />
+                              <FormattedMessage
+                                id={"programmHero.info.certificate.second"}
+                              />
                             </p>
                           </div>
                         </div>
@@ -101,7 +118,9 @@ const ProgrammHero = ({
                     <div className="row pl-5">
                       <div className="col">
                         <h4>
-                          <FormattedMessage id={"programmHero.info.participants.heading"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.participants.heading"}
+                          />
                         </h4>
                         <div className="section-divider" />
                         <div className="row">
@@ -114,7 +133,9 @@ const ProgrammHero = ({
                           </div>
                           <div className="col-10">
                             <p>
-                              <FormattedMessage id={"programmHero.info.participants.long"}/>
+                              <FormattedMessage
+                                id={"programmHero.info.participants.long"}
+                              />
                             </p>
                           </div>
                         </div>
@@ -133,14 +154,20 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                          <FormattedMessage id={"programmHero.info.time.heading"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.time.heading"}
+                          />
                         </h2>
                       </div>
                       <div className="col-6">
                         <p>
-                          <FormattedMessage id={"programmHero.info.time.first"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.time.first"}
+                          />
                           <br />
-                          <FormattedMessage id={"programmHero.info.time.second"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.time.second"}
+                          />
                         </p>
                       </div>
                     </div>
@@ -150,12 +177,16 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                        <FormattedMessage id={"programmHero.info.certificate.heading"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.certificate.heading"}
+                          />
                         </h2>
                       </div>
                       <div className="col-6">
                         <p>
-                          <FormattedMessage id={"programmHero.info.certificate.short"}/>                        
+                          <FormattedMessage
+                            id={"programmHero.info.certificate.short"}
+                          />
                         </p>
                       </div>
                     </div>
@@ -165,12 +196,16 @@ const ProgrammHero = ({
                       </div>
                       <div className="col-4">
                         <h2 className="programmHero--card-heading-second mt-2">
-                          <FormattedMessage id={"programmHero.info.participants.heading"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.participants.heading"}
+                          />
                         </h2>
                       </div>
                       <div className="col-6">
                         <p className="mt-2">
-                          <FormattedMessage id={"programmHero.info.participants.short"}/>
+                          <FormattedMessage
+                            id={"programmHero.info.participants.short"}
+                          />
                         </p>
                       </div>
                     </div>
@@ -207,28 +242,44 @@ const ProgrammHero = ({
                 <div className="programmHero--card_mobil">
                   <div className="row">
                     <div className="col-4">
-                      <h1 className="programmHero--card-title_mobil"><FormattedMessage id={"programmHero.info.time.heading"}/></h1>
+                      <h1 className="programmHero--card-title_mobil">
+                        <FormattedMessage
+                          id={"programmHero.info.time.heading"}
+                        />
+                      </h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                      <FormattedMessage id={"programmHero.info.time.second"}/> <br /> <FormattedMessage id={"programmHero.info.time.first"}/>
+                        <FormattedMessage
+                          id={"programmHero.info.time.second"}
+                        />{" "}
+                        <br />{" "}
+                        <FormattedMessage id={"programmHero.info.time.first"} />
                       </p>
                     </div>
                     <div className="col-4">
                       <h1 className="programmHero--card-title_mobil">
-                      <FormattedMessage id={"programmHero.info.certificate.heading"}/>
+                        <FormattedMessage
+                          id={"programmHero.info.certificate.heading"}
+                        />
                       </h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        <FormattedMessage id={"programmHero.info.certificate.short"}/>
+                        <FormattedMessage
+                          id={"programmHero.info.certificate.short"}
+                        />
                       </p>
                     </div>
                     <div className="col-4">
                       <h1 className="programmHero--card-title_mobil">
-                      <FormattedMessage id={"programmHero.info.participants.heading"}/>
+                        <FormattedMessage
+                          id={"programmHero.info.participants.heading"}
+                        />
                       </h1>
                       <div className="section-divider_mobil" />
                       <p className="programmHero--card-subtitle_mobil">
-                        <FormattedMessage id={"programmHero.info.participants.short"}/>
+                        <FormattedMessage
+                          id={"programmHero.info.participants.short"}
+                        />
                       </p>
                     </div>
                   </div>
