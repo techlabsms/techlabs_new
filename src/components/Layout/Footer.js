@@ -9,17 +9,17 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Language from "../language"
 
 // assets
-import Logo from "../../assets/tl-logo-white.svg"
+import Logo from "../../assets/tl-logo-white.png"
 import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
   return (
     <>
       <CookieConsent
-        style={{ backgroundColor: "#fb1d5c", color: "white" }}
+        style={{ backgroundColor: "#fa1e5a", color: "white" }}
         location="top"
         buttonStyle={{
-          color: "#fb1d5c",
+          color: "#fa1e5a",
           borderRadius: "6px",
           backgroundColor: "white",
           padding: ".8rem 1.5rem",
@@ -28,7 +28,7 @@ const Footer = props => {
           color: "white",
           borderRadius: "6px",
           border: "2px solid white",
-          backgroundColor: "#fb1d5c",
+          backgroundColor: "#fa1e5a",
           padding: ".8rem 1.5rem",
         }}
         expires={90}

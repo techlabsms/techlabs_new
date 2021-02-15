@@ -68,14 +68,14 @@
   }
 
   &--hero-btn {
+    @include heading;
     border-radius: 60px;
     background: $color-p;
     border: 0px solid !important;
     transition: all 0.7s ease !important;
     font-size: 17px !important;
-    font-family: $font-h;
     text-align: center;
-    padding: 0.7em 0.6em !important;
+    padding: 0.6em 0.6em !important;
     :hover {
       transform: translateY(4px);
     }
@@ -106,9 +106,6 @@
     box-shadow: 0 32px 40px -16px rgba(30, 49, 71, 0.2);
     border-radius: 7px;
     border: 0px solid;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
     min-height: 400px;
@@ -120,7 +117,10 @@
       background-color: #fee9ef;
       color: $color-p;
       width: 80%;
-      text-align: center;
+    }
+
+    &__link {
+      color: $color-g;
     }
   }
 

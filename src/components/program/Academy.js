@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-// plugins 
+// plugins
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
@@ -11,7 +11,7 @@ import Container from "../smallComponents/Container"
 import DataScience from "../../assets/dashboard.png"
 import WebDev from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 
 class Academy extends Component {
   state = {
@@ -69,7 +69,7 @@ class Academy extends Component {
                 onMouseEnter={() => this.indexHandler(0)}
                 onTouchStart={() => this.indexHandler(0)}
                 style={{
-                  backgroundColor: `${index === 0 ? "#fb1d5c" : "white"}`,
+                  backgroundColor: `${index === 0 ? "#fa1e5a" : "white"}`,
                   color: `${index === 0 ? "white" : "black"}`,
                   transform: `${index === 0 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
@@ -83,7 +83,7 @@ class Academy extends Component {
                 {firstTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={firstTrackLink} className="a-white next-link">
-                      <FormattedMessage id="programs.learn_more.button"/>
+                      <FormattedMessage id="programs.learn_more.button" />
                     </Link>
                   </div>
                 )}
@@ -104,7 +104,7 @@ class Academy extends Component {
                 onMouseEnter={() => this.indexHandler(1)}
                 onTouchStart={() => this.indexHandler(1)}
                 style={{
-                  backgroundColor: `${index === 1 ? "#fb1d5c" : "white"}`,
+                  backgroundColor: `${index === 1 ? "#fa1e5a" : "white"}`,
                   color: `${index === 1 ? "white" : "black"}`,
                   transform: `${index === 1 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
@@ -119,7 +119,7 @@ class Academy extends Component {
                 {secondTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={secondTrackLink} className="a-white next-link">
-                      <FormattedMessage id="programs.learn_more.button"/>
+                      <FormattedMessage id="programs.learn_more.button" />
                     </Link>
                   </div>
                 )}
@@ -140,7 +140,7 @@ class Academy extends Component {
                 onMouseEnter={() => this.indexHandler(2)}
                 onTouchStart={() => this.indexHandler(2)}
                 style={{
-                  backgroundColor: `${index === 2 ? "#fb1d5c" : "white"}`,
+                  backgroundColor: `${index === 2 ? "#fa1e5a" : "white"}`,
                   color: `${index === 2 ? "white" : "black"}`,
                   transform: `${index === 2 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
@@ -154,7 +154,7 @@ class Academy extends Component {
                 {thirdTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={thirdTrackLink} className="a-white next-link">
-                      <FormattedMessage id="programs.learn_more.button"/>
+                      <FormattedMessage id="programs.learn_more.button" />
                     </Link>
                   </div>
                 )}
@@ -175,7 +175,7 @@ class Academy extends Component {
                 onMouseEnter={() => this.indexHandler(3)}
                 onTouchStart={() => this.indexHandler(3)}
                 style={{
-                  backgroundColor: `${index === 3 ? "#fb1d5c" : "white"}`,
+                  backgroundColor: `${index === 3 ? "#fa1e5a" : "white"}`,
                   color: `${index === 3 ? "white" : "black"}`,
                   transform: `${index === 3 ? "scale(1.05)" : "scale(1.0)"}`,
                 }}
@@ -190,7 +190,7 @@ class Academy extends Component {
                 {fourthTrackLink && (
                   <div className="d-flex justify-content-end">
                     <Link to={fourthTrackLink} className="a-white next-link">
-                      <FormattedMessage id="programs.learn_more.button"/>
+                      <FormattedMessage id="programs.learn_more.button" />
                     </Link>
                   </div>
                 )}

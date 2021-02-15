@@ -22,7 +22,7 @@ import KeyFacts from "../../components/program/remote/keyFacts"
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 
 class remote extends Component {
   startDateString = date => {

@@ -85,6 +85,7 @@ class index extends React.Component {
                   <Img
                     alt="commmunity"
                     fluid={data.imageOne.childImageSharp.fluid}
+                    fadeIn={false}
                   />
                 </div>
               </div>
@@ -110,6 +111,7 @@ class index extends React.Component {
           <section className="py-5 my-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
+              fadeIn={false}
               style={{
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -143,7 +145,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.weeks.of.coding.text"}
@@ -171,7 +173,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
+                          <p className=" pb-4">
                             {
                               <FormattedMessage
                                 id={"landingpage.what.digital.tracks.text"}
@@ -199,7 +201,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.community.members.text"}
@@ -234,7 +236,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
+                          <p className="pb-4">
                             <FormattedMessage id="landingpage.location.text" />
                           </p>
                           <span className="card-discover">

@@ -30,7 +30,7 @@ class Locations extends Component {
   render() {
     const { search } = this.state
     const { intl } = this.props
-    const placeholder = intl.formatMessage({id: 'allLocations.placeholder'})
+    const placeholder = intl.formatMessage({ id: "allLocations.placeholder" })
     const locations = get(this, "props.data.allContentfulLocationPage.edges")
     //Filtering the locations for a fake search
     const filteredLocations = locations.filter(location => {
@@ -45,13 +45,13 @@ class Locations extends Component {
                 <div className="row margin-top-bot padding-location">
                   <div className="col-md-5 col-lg-5 border-0 text-left">
                     <h1 className="pb-5 display-4">
-                     <FormattedMessage id="allLocations.heading.1"/> <br />{" "}
+                      <FormattedMessage id="allLocations.heading.1" /> <br />{" "}
                       <span className="highlighted">
-                        <FormattedMessage id="allLocations.heading.2"/>
+                        <FormattedMessage id="allLocations.heading.2" />
                       </span>
                     </h1>
                     <p className="programmHero--intro">
-                      <FormattedMessage id="allLocations.intro"/>
+                      <FormattedMessage id="allLocations.intro" />
                     </p>
                     <ArrowButton href="locations-list" />
                   </div>
@@ -71,8 +71,12 @@ class Locations extends Component {
                 <div className="row">
                   <div className="col-md-8">
                     <Heading
-                      heading={<FormattedMessage id="allLocations.locations.heading"/>}
-                      subheading={<FormattedMessage id="allLocations.locations.subheading"/>}
+                      heading={
+                        <FormattedMessage id="allLocations.locations.heading" />
+                      }
+                      subheading={
+                        <FormattedMessage id="allLocations.locations.subheading" />
+                      }
                     />
                   </div>
 
@@ -98,6 +102,7 @@ class Locations extends Component {
                       city={location.node.heading}
                       slug={location.node.slug}
                       icon={location.node.icon.file.url}
+                      key={location.node.heading}
                     />
                   ))}
                 </div>
@@ -112,18 +117,22 @@ class Locations extends Component {
                       <div class="col-md-6 order-2 order-md-1">
                         <div class="card-body">
                           <h2>
-                            <span className="highlighted mt-5"><FormattedMessage id="allLocations.city.heading.1"/></span>{" "}
-                            <FormattedMessage id="allLocations.city.heading.2"/>
+                            <span className="highlighted mt-5">
+                              <FormattedMessage id="allLocations.city.heading.1" />
+                            </span>{" "}
+                            <FormattedMessage id="allLocations.city.heading.2" />
                           </h2>
-                          <p class="locations--card-text mt-5 mr-3 mt-2">
-                            <FormattedMessage id="allLocations.city.text.1"/>{" "}
+                          <p className="locations--card-text mt-5 mr-3 mt-2">
+                            <FormattedMessage id="allLocations.city.text.1" />{" "}
                             <span className="highlighted">
-                              <FormattedMessage id="allLocations.city.text.2"/>
+                              <FormattedMessage id="allLocations.city.text.2" />
                             </span>
                           </p>
                           <div className="mt-5">
                             <Button
-                              text={<FormattedMessage id="allLocations.city.btn"/>}
+                              text={
+                                <FormattedMessage id="allLocations.city.btn" />
+                              }
                               link="/foundYourOwn"
                               primary={true}
                             />
