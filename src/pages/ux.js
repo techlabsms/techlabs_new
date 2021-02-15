@@ -16,7 +16,7 @@ import FaqQuestion from "../components/shared/FaqQuestion"
 import Layout from "../components/Layout/Layout"
 
 // assets
-import UX from "../assets/ux.png"
+import UX from "../assets/ux-icon.png"
 import UX2 from "../assets/ux-image.png"
 import david from "../assets/david.png"
 import background from "../assets/ds_background.png"
