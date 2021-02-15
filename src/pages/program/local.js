@@ -24,7 +24,7 @@ import background from "../../assets/p_background.png"
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 import ProgrammMobil from "../../assets/programmMobil.png"
 
 class local extends Component {

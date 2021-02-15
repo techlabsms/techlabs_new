@@ -11,7 +11,7 @@ import Container from "../smallComponents/Container"
 import DataScience from "../../assets/dashboard.png"
 import WebDev from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 
 class Academy extends Component {
   state = {

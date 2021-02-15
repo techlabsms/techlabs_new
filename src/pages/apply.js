@@ -20,7 +20,7 @@ import LearnMore from "../components/program/LearnMore"
 import AI from "../assets/ai-robot.png"
 import Web from "../assets/webdevpro.png"
 import Ds from "../assets/dashboard.png"
-import UX from "../assets/UX.png"
+import UX from "../assets/ux-image.png"
 
 class apply extends Component {
   state = {
