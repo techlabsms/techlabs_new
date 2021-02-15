@@ -9,7 +9,7 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Language from "../language"
 
 // assets
-import Logo from "../../assets/tl-logo-white.svg"
+import Logo from "../../assets/tl-logo-white.png"
 import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {

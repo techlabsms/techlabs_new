@@ -10,7 +10,7 @@ import MobileNav from "./MobileNav"
 import Head from "./Head"
 
 // assets
-import logo from "../../assets/tl-logo.svg"
+import logo from "../../assets/tl-logo.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
