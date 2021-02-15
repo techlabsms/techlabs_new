@@ -51,11 +51,11 @@ h2,
 h3,
 h5,
 h6 {
-  font-family: $font-h;
+  @include heading;
 }
 
 body {
-  font-family: $font-p;
+  @include paragraph;
   font-size: 17px !important;
 }
 
@@ -420,8 +420,8 @@ body {
 }
 
 .btn {
+  @include heading;
   font-size: 17px !important;
-  font-family: $font-h;
   padding-left: 2.4em !important;
   padding-right: 2.4em !important;
   padding-top: 1em !important;

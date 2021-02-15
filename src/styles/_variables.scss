@@ -1,69 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,500;1,700&display=swap");
+
 //colors
 $color-p: #fa1e5a !important;
 $color-g: #464646 !important;
 $color-gl: #464646 !important;
 $color-background: #f7f7fb;
 
-/**
- * @license
- * MyFonts Webfont Build ID 3766479, 2019-05-28T01:38:10-0400
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: Gilroy-ExtraBold by Radomir Tinkov
- * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/extra-bold/
- * Copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
- * Licensed pageviews: Unlimited
- * 
- * 
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3766479
- * 
- * © 2019 MyFonts Inc
-*/
+$font-h: "Livvic", sans-serif !important;
+$font-p: "Livvic", sans-serif !important;
+$font-pp: "Livvic", sans-serif !important;
 
-/* @import must be at top of file, otherwise CSS will not work */
-
-//fonts
-@font-face {
-  font-family: "Proxima-Nova-Semibold";
-  src: url("../assets/webfonts/Proxima-Nova-Semibold.eot");
-  src: url("../assets/webfonts/Proxima-Nova-Semibold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/webfonts/Proxima-Nova-Semibold.woff2") format("woff2"),
-    url("../assets/webfonts/Proxima-Nova-Semibold.woff") format("woff"),
-    url("../assets/webfonts/Proxima-Nova-Semibold.ttf") format("truetype");
-  font-display: swap;
+@mixin heading {
+  font-family: "Livvic", sans-serif !important;
+  font-weight: 700 !important;
 }
 
-@font-face {
-  font-family: "Proxima-Nova";
-  src: url("../assets/webfonts/3978CF_0_0.eot");
-  src: url("../assets/webfonts/Proxima-Nova-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/webfonts/Proxima-Nova-Regular.woff2") format("woff2"),
-    url("../assets/webfonts/Proxima-Nova-Regular.woff") format("woff"),
-    url("../assets/webfonts/Proxima-Nova-Regular.ttf") format("truetype");
-  font-display: swap;
+@mixin paragraph {
+  font-family: "Livvic", sans-serif !important;
+  font-weight: 300 !important;
 }
-
-@font-face {
-  font-family: "Gilroy-ExtraBold";
-  src: url("../assets/webfonts/3978CF_0_0.eot");
-  src: url("../assets/webfonts/3978CF_0_0.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/webfonts/3978CF_0_0.woff2") format("woff2"),
-    url("../assets/webfonts/3978CF_0_0.woff") format("woff"),
-    url("../assets/webfonts/3978CF_0_0.ttf") format("truetype");
-  font-display: swap;
-}
-
-$font-h: "Gilroy-Extrabold" !important;
-$font-p: "Proxima-Nova" !important;
-$font-pp: "Proxima-Nova-Semibold" !important;
 
 // breakpoints
 $xs: 576px;

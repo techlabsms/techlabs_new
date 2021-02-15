@@ -2,12 +2,11 @@
 
 .key-facts {
   &-highlighted {
+    @include heading;
     background: #fee9ef;
     border-radius: 6px;
-    font-weight: bold;
     font-size: 32px;
     line-height: 39px;
-    font-family: $font-h;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     color: $color-p;
