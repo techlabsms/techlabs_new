@@ -12,7 +12,7 @@ import Button from "../smallComponents/Button"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
 import ds from "../../assets/ds.png"
-import ux from "../../assets/ux.png"
+import ux from "../../assets/ux-icon.png"
 
 const Projects = () => {
   return (

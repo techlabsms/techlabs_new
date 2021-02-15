@@ -9,7 +9,7 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/ux.png"
+import ux from "../../assets/ux-icon.png"
 
 class MobileNav extends Component {
   state = {
