@@ -85,6 +85,7 @@ class index extends React.Component {
                   <Img
                     alt="commmunity"
                     fluid={data.imageOne.childImageSharp.fluid}
+                    fadeIn={false}
                   />
                 </div>
               </div>
@@ -110,6 +111,7 @@ class index extends React.Component {
           <section className="py-5 my-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
+              fadeIn={false}
               style={{
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
