@@ -10,12 +10,12 @@
 
   &--heading {
     font-weight: 500;
-    font-size: 75px;
-    line-height: 85px;
+    font-size: 54px;
+    line-height: 75px;
     color: $color-p !important;
-    width: 40%;
+    width: 80%;
     &-mobil {
-      width: 40%;
+      width: 70%;
     }
   }
 
@@ -24,16 +24,33 @@
       background-color: $color-background;
       width: 55%;
       &-mobil {
-        background-color: rgba(254, 233, 239, 0.8);
         width: 55%;
-        color: $color-p;
+        line-height: 1.5 !important;
+        font-weight: bold;
+        padding-bottom: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        background-color: #fee9ef;
+        color: #fa1e5a !important;
+        text-align: center;
+        border-radius: 6px;
       }
     }
     &-second {
       color: black;
       &-mobil {
-        background-color: rgba(254, 233, 239, 0.8);
         width: 55%;
+        line-height: 1.5 !important;
+        font-weight: bold;
+        padding-bottom: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        background-color: #fee9ef;
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 20px;
       }
     }
   }
@@ -45,7 +62,7 @@
     width: 70%;
     text-align: justify;
     color: $color-gl;
-    margin-top: 20%;
+    margin-top: 5%;
     &-second {
       font-size: 20px;
       line-height: 35px;
@@ -88,8 +105,8 @@
 
   @media (max-width: 767px) {
     &--heading {
-      font-size: 45px;
-      line-height: 55px;
+      font-size: 54px;
+      line-height: 75px;
     }
 
     &--intro {

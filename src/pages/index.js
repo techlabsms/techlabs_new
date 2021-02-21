@@ -53,12 +53,11 @@ class index extends React.Component {
                     We Build.
                     <br />
                     <span className="highlighted lh-90">Digital. </span>
-                    <br />
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
                     <FormattedMessage id={"landingpage.digital.shaper.part1"} />
-                    <span className="text-bold">
+                    <span className="text-bold-pink">
                       <FormattedMessage
                         id={"landingpage.digital.shaper.part2"}
                       />
@@ -108,7 +107,7 @@ class index extends React.Component {
             />
           </section>
           {/* what we offer */}
-          <section className="py-5 my-5">
+          <section className="mt-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
               fadeIn={false}
