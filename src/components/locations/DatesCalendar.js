@@ -114,8 +114,13 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
   return (
     <Container className="datesCalendar">
       <Heading
-        heading={<FormattedMessage id="datesCalendar.heading"/>}
-        subheading={<FormattedMessage id="datesCalendar.subheading" values={{city: city}}/>}
+        heading={<FormattedMessage id="datesCalendar.heading" />}
+        subheading={
+          <FormattedMessage
+            id="datesCalendar.subheading"
+            values={{ city: city }}
+          />
+        }
       />
       <div className="datesCalendar--card">
         <div className="row">
@@ -139,85 +144,121 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
         <div className="row">
           <div className="col">
             <div className="row">
-              {Object.keys(dates[currentMonth]).length > 5 ? (
+              {dates[currentMonth] !== null ? (
                 <>
-                  <div
-                    className="col-md-1 d-flex justify-content-center"
-                    onKeyDown={() => null}
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => {
-                      index.length >= index ? setIndex(index - 1) : setIndex(0)
-                    }}
-                  >
-                    <img
-                      src={Arrow}
-                      className="w-50 mb-4 datesCalendar--arrow-left"
-                      alt="arrow left"
-                    />
-                  </div>
-                  <Date
-                    month={currentMonth}
-                    event={dates[currentMonth][index]}
-                    mail={mail}
-                  />
-                  <Date
-                    month={currentMonth}
-                    event={dates[currentMonth][index + 1]}
-                    mail={mail}
-                  />
-                  <Date
-                    month={currentMonth}
-                    event={dates[currentMonth][index + 2]}
-                    mail={mail}
-                  />
-                  <Date
-                    month={currentMonth}
-                    event={dates[currentMonth][index + 3]}
-                    mail={mail}
-                  />
-                  <Date
-                    month={currentMonth}
-                    event={dates[currentMonth][index + 4]}
-                    mail={mail}
-                  />
-                  <div
-                    className="col-md-1 d-flex justify-content-center"
-                    onClick={() => {
-                      index.length <= index ? setIndex(index + 1) : setIndex(0)
-                    }}
-                    onKeyDown={() => null}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <img
-                      src={Arrow}
-                      className="w-50 mb-4 datesCalendar--arrow-right"
-                      alt="arrow right"
-                    />
-                  </div>
-                </>
-              ) : (
-                <>
-                  {Object.keys(dates[currentMonth]).length === 0 ? (
-                    <div className="col-md-12 text-center mt-4">
-                      <h4><FormattedMessage id="datesCalendar.noEvents"/></h4>
-                    </div>
+                  {Object.keys(dates[currentMonth]).length > 5 ? (
+                    <>
+                      <div
+                        className="col-md-1 d-flex justify-content-center"
+                        onKeyDown={() => null}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => {
+                          index.length >= index
+                            ? setIndex(index - 1)
+                            : setIndex(0)
+                        }}
+                      >
+                        <img
+                          src={Arrow}
+                          className="w-50 mb-4 datesCalendar--arrow-left"
+                          alt="arrow left"
+                        />
+                      </div>
+                      <Date
+                        month={currentMonth}
+                        event={
+                          dates[currentMonth] !== null
+                            ? dates[currentMonth][index]
+                            : []
+                        }
+                        mail={mail}
+                      />
+                      <Date
+                        month={currentMonth}
+                        event={
+                          dates[currentMonth] !== null
+                            ? dates[currentMonth][index + 1]
+                            : []
+                        }
+                        mail={mail}
+                      />
+                      <Date
+                        month={currentMonth}
+                        event={
+                          dates[currentMonth] !== null
+                            ? dates[currentMonth][index + 2]
+                            : []
+                        }
+                        mail={mail}
+                      />
+                      <Date
+                        month={currentMonth}
+                        event={
+                          dates[currentMonth] !== null
+                            ? dates[currentMonth][index + 3]
+                            : []
+                        }
+                        mail={mail}
+                      />
+                      <Date
+                        month={currentMonth}
+                        event={
+                          dates[currentMonth] !== null
+                            ? dates[currentMonth][index + 4]
+                            : []
+                        }
+                        mail={mail}
+                      />
+                      <div
+                        className="col-md-1 d-flex justify-content-center"
+                        onClick={() => {
+                          index.length <= index
+                            ? setIndex(index + 1)
+                            : setIndex(0)
+                        }}
+                        onKeyDown={() => null}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <img
+                          src={Arrow}
+                          className="w-50 mb-4 datesCalendar--arrow-right"
+                          alt="arrow right"
+                        />
+                      </div>
+                    </>
                   ) : (
                     <>
-                      <div className="col-md-1" />
-                      {dates[currentMonth].map(event => (
-                        <Date
-                          month={currentMonth}
-                          event={event}
-                          mail={mail}
-                          key={event.id}
-                        />
-                      ))}
-                      <div className="col-md-1" />
+                      {Object.keys(dates[currentMonth]).length === 0 ? (
+                        <div className="col-md-12 text-center mt-4">
+                          <h4>
+                            <FormattedMessage id="datesCalendar.noEvents" />
+                          </h4>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="col-md-1" />
+                          {dates[currentMonth].map(event => (
+                            <Date
+                              month={currentMonth}
+                              event={event}
+                              mail={mail}
+                              key={event.id}
+                            />
+                          ))}
+                          <div className="col-md-1" />
+                        </>
+                      )}
                     </>
                   )}
                 </>
+              ) : (
+                <div className="col-md-12 text-center mt-4">
+                  <h4>
+                    <FormattedMessage id="datesCalendar.noEvents" />
+                  </h4>
+                </div>
               )}
             </div>
           </div>

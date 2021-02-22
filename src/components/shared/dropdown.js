@@ -11,6 +11,10 @@ const Dropdown = ({ options, style, onSelect }) => {
           setChoosenOption(e.target.value)
           onSelect(e.target.value)
         }}
+        onChange={e => {
+          setChoosenOption(e.target.value)
+          onSelect(e.target.value)
+        }}
         value={choosenOption}
       >
         {options.map(option => (

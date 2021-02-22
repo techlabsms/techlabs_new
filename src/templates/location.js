@@ -46,8 +46,13 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
+    const dates = get(this.props, "data.dates")
     const data = this.props
     const { modalIsOpen, x, y, text } = this.state
+    const hasCalendarType = dates.edges.find(
+      dates => dates.node.location.heading === location.heading
+    )
+
     return (
       <Layout>
         <section className="container-fluid">
@@ -203,13 +208,13 @@ class location extends Component {
             />
           )}
           <section className="container location">
-            {location.hasCalendar && (
+            {location.hasCalendar && hasCalendarType !== undefined ? (
               <DatesCalendar
                 eventsPage={location.eventsPage}
                 city={location.heading}
                 mail={location.email}
               />
-            )}
+            ) : null}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}
@@ -483,6 +488,15 @@ export const pageQuery = graphql`
         logo {
           sizes(quality: 100) {
             ...GatsbyContentfulSizes_withWebp
+          }
+        }
+      }
+    }
+    dates: allContentfulDates(filter: { node_locale: { eq: $locale } }) {
+      edges {
+        node {
+          location {
+            heading
           }
         }
       }
