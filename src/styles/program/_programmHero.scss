@@ -12,7 +12,7 @@
     font-weight: 500;
     font-size: 54px;
     line-height: 75px;
-    color: $color-p !important;
+    color: $color-p;
     width: 80%;
     &-mobil {
       width: 70%;
@@ -25,14 +25,14 @@
       width: 55%;
       &-mobil {
         width: 55%;
-        line-height: 1.5 !important;
+        line-height: 1.5;
         font-weight: bold;
-        padding-bottom: 0.5rem !important;
-        padding-top: 0.5rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         background-color: #fee9ef;
-        color: #fa1e5a !important;
+        color: #fa1e5a;
         text-align: center;
         border-radius: 6px;
       }
@@ -41,12 +41,12 @@
       color: black;
       &-mobil {
         width: 55%;
-        line-height: 1.5 !important;
+        line-height: 1.5;
         font-weight: bold;
-        padding-bottom: 0.5rem !important;
-        padding-top: 0.5rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         background-color: #fee9ef;
         text-align: center;
         border-radius: 6px;
@@ -98,7 +98,7 @@
       background: #ffffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 7px;
-      border: 0px solid !important;
+      border: 0px solid;
       padding: 0.5em;
     }
   }
