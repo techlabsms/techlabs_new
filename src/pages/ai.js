@@ -10,7 +10,6 @@ import RightImageSection from "../components/shared/RightImageSection"
 import LeftImageSection from "../components/shared/LeftImageSection"
 import Projects from "../components/program/Projects"
 import CallToAction from "../components/shared/CallToAction"
-import FirstImpression from "../components/foundYourOwn/FirstImpression"
 import FaqQuestion from "../components/shared/FaqQuestion"
 import Faq from "../components/shared/Faq"
 import Layout from "../components/Layout/Layout"
@@ -64,14 +63,6 @@ class ai extends Component {
           />
           <Projects />
           <CallToAction />
-          <FirstImpression
-            heading={<FormattedMessage id={"ai.first_impression.FirstImpression.heading"}/>}
-            subheading={<FormattedMessage id={"ai.first_impression.FirstImpression.subheading"}/>}
-            firstHeading={<FormattedMessage id={"ai.first_impression.FirstImpression.firstHeading"}/>}
-            firstImage={robot}
-            firstText={<FormattedMessage id={"ai.first_impression.FirstImpression.firstText"}/>}
-            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-          />
            <Faq>
             <FaqQuestion
               question="faq_1.question"
