@@ -159,6 +159,7 @@ export const pageQuery = graphql`
           applicationStart
           applicationEnd
           applicationLink
+          isOpen
           avaiableTracks {
             ai
             web
