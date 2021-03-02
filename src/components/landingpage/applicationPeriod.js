@@ -74,7 +74,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
         if (now.isAfter(dayjs(cityData[0].node.applicationEnd))) {
           setAvailable(false)
           setOpen(false)
-        } else {
+        } else if (cityData.isOpen) {
           setAvailable(true)
           setOpen(true)
           setDate(cityData[0].node.applicationEnd)

@@ -24,7 +24,11 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   let available = true
   let now = dayjs(Date.now())
 
-  if (!cityValues || cityValues.applicationStart === null) {
+  if (
+    !cityValues ||
+    cityValues.applicationStart === null ||
+    !cityValues.isOpen
+  ) {
     available = false
   } else {
     open = now.isAfter(dayjs(cityValues.applicationStart))
