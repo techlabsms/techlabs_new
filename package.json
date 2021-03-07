@@ -13,7 +13,9 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "gatsby build && gh-pages -d public",
-    "i18n": "node ./translationRunner.js"
+    "i18n": "node ./translationRunner.js",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
@@ -67,9 +69,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "cypress": "^6.6.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "gh-pages": "^2.2.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "start-server-and-test": "^1.12.0"
   },
   "repository": {
     "type": "git",
