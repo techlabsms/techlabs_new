@@ -14,13 +14,6 @@ import ApplicationProcess from "../components/applyPage/ApplicationProcess"
 import CallToActionApplication from "../components/applyPage/CallToActionApplication"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
-import LearnMore from "../components/program/LearnMore"
-
-// assets
-import AI from "../assets/ai-robot.png"
-import Web from "../assets/webdevpro.png"
-import Ds from "../assets/dashboard.png"
-import UX from "../assets/ux-image.png"
 
 class apply extends Component {
   state = {
@@ -92,45 +85,6 @@ class apply extends Component {
             <CallToActionApplication
               isOpen={this.state.available}
               link={this.state.link}
-            />
-            <LearnMore
-              heading={
-                <FormattedMessage id={"applypage.moreinformation.heading"} />
-              }
-              subheading={
-                <FormattedMessage id={"applypage.moreinformation.subheading"} />
-              }
-              firstProjectHeading={
-                <FormattedMessage id={"projects.tech.webdev"} />
-              }
-              firstProjectImage={Web}
-              firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              firstButtonText={
-                <FormattedMessage id={"applypage.text.start_now"} />
-              }
-              secondProjectHeading={
-                <FormattedMessage id={"projects.tech.ds"} />
-              }
-              secondProjectImage={Ds}
-              secondLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              secondButtonText={
-                <FormattedMessage id={"applypage.text.start_now"} />
-              }
-              thirdProjectHeading={<FormattedMessage id={"projects.tech.ai"} />}
-              thirdProjectImage={AI}
-              thirdLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              thirdButtonText={
-                <FormattedMessage id={"applypage.text.start_now"} />
-              }
-              fourthProjectHeading={
-                <FormattedMessage id={"projects.tech.ux"} />
-              }
-              fourthProjectImage={UX}
-              fourthLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-              fourthButtonText={
-                <FormattedMessage id={"applypage.text.start_now"} />
-              }
-              externalLink={true}
             />
             <Faq>
               <FaqQuestion

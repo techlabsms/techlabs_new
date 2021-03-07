@@ -19,7 +19,6 @@ import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
 // assets
 import dsCover from "../assets/ds_cover.png"
 import david from "../assets/david.png"
-import dashboard from "../assets/dashboard.png"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
 
