@@ -517,5 +517,9 @@
   "talk.where": "Where?",
   "talk.interested": "Interested?",
   "talk.notified": "Get notified about future TechLabs Talks",
-  "talk.register": "Register here"
+  "talk.register": "Register here",
+
+  "en":"English",
+  "de":"German",
+  "pt":"Portuguese"
 }

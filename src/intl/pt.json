@@ -520,5 +520,15 @@
    "404.text.6": "não foi capaz de encontrar o que foi solicitado.",
    "404.text.7": "O servidor de hospedagem do site normalmente gera uma página da web \"404 Não encontrado\"quando um usuário tenta seguir um link quebrado ou inativo; portanto, o erro 404 é um dos erros mais reconhecíveis encontrados na World Wide Web. ",
    "404.learnTech": "Aprenda tecnologia",
-   "404.home": "Voltar para a página inicial"
+   "404.home": "Voltar para a página inicial",
+
+   "talk.when": "Quando?",
+    "talk.where": "Onde?",
+    "talk.interested": "Interesse?",
+    "talk.notified": "Seja notificado sobre os futuros TechLabs Talks",
+    "talk.register": "Registe-se aqui",
+
+    "en":"Inglês",
+    "de":"Alemão",
+    "pt":"Português"
 }
