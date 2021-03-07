@@ -518,7 +518,7 @@
    "404.text.4": "Servidor não encontrado",
    "404.text.5": "é um código de resposta padrão do Hypertext Transfer Protocol (HTTP), em comunicações de rede de computadores, para indicar que o navegador foi capaz de se comunicar com um determinado servidor, mas o servidor",
    "404.text.6": "não foi capaz de encontrar o que foi solicitado.",
-   "404.text.7": "O servidor de hospedagem do site normalmente gera uma página da web \" 404 Não encontrado \ "quando um usuário tenta seguir um link quebrado ou inativo; portanto, o erro 404 é um dos erros mais reconhecíveis encontrados na World Wide Web. ",
+   "404.text.7": "O servidor de hospedagem do site normalmente gera uma página da web \"404 Não encontrado\"quando um usuário tenta seguir um link quebrado ou inativo; portanto, o erro 404 é um dos erros mais reconhecíveis encontrados na World Wide Web. ",
    "404.learnTech": "Aprenda tecnologia",
    "404.home": "Voltar para a página inicial"
 }
