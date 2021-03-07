@@ -68,10 +68,6 @@
   "ai.more.LeftImageSection.heading": "Mehr über den Track",
   "ai.more.LeftImageSection.subheading": "Lerne neuronale Netze kennen und arbeite mit den Hintergrunddaten in unseren individualisierten Tracks!",
   "ai.more.LeftImageSection.text": "Der KI-Track ist in verschiedenen Versionen erhältlich. Du kannst den Deep-Learning-Teil mit einer Auffrischung deiner Python- und Maschinenkenntnisse kombinieren. Trotz dieser Auffrischung solltest du bereits über einige Kenntnisse in Python und Machine Learning verfügen. Du erwirbst sowohl theoretisches Wissen als auch praktische Erfahrung. Die Hauptanwendungen sind Bildklassifikation, Objekterkennung und Text-Mining. Darüber hinaus wirst du neuronale Netze einsetzen, um Objekte in einem Bild zu erkennen und zu klassifizieren sowie interessante Muster in Textdaten zu finden (z.B. Amazon Rezensionen). Neben der Anwendung enthält der Track Informationen über die wichtigsten mathematischen Grundlagen neuronaler Netze. Dazu gehören Backpropagation, Gradientenabstieg und die Vektorisierung von Wörtern.",
-  "ai.first_impression.FirstImpression.heading": "Verschaffe dir einen ersten Eindruck",
-  "ai.first_impression.FirstImpression.subheading": "Schaue dir unseren Einstiegskurs an, den jeder kostenlos belegen kann!",
-  "ai.first_impression.FirstImpression.firstHeading": "Einführung Künstliche Intelligenz",
-  "ai.first_impression.FirstImpression.firstText": "Schaue dir unseren freiverfügbaren Einstiegskurs an, den jeder belegen kann!",
 
   "applypage.headline.ApplicationHero.headingFirst": "Bewerbung",
   "applypage.headline.ApplicationHero.intro": "Willst du die modernste Technik erlernen? Willst du Teil einer motivierten Community sein? Bewirb dich jetzt für das TechLabs Digital Shaper-Programm.",
@@ -123,13 +119,6 @@
   "dataScience.more.LeftImageSection.heading": "Mehr über den Lerntrack",
   "dataScience.more.LeftImageSection.subheading": "Lerne Data Science - Praxis oder Theorie - R oder Python - Du hast die Wahl!",
   "dataScience.more.LeftImageSection.text": "Es spielt keine Rolle, ob du Anfänger bist oder bereits erste Erfahrung hast. Das Programm ist so konzipiert, dass jeder - egal mit welchen Vorkenntnissen - beginnen kann. Wir bieten praktische und theoretische Kurse in den Programmiersprachen R und Python und erstellen für jeden Teilnehmer je nach Präferenzen einen individuellen Lerntrack. Sowohl im praktischen als auch im theoretischen Teil werden zunächst grundlegende Programmierübungen durchgeführt, um die gewählte Programmiersprache kennenzulernen. Der praktische Teil richtet sich an Personen, die lernen wollen, wie man schnell maschinelle Lernalgorithmen zur Problemlösung einsetzt, ohne in den mathematischen Hintergrund einzutauchen. Der Theoriekurs beinhaltet Materialien und Übungen, die den theoretischen (mathematischen) Hintergrund verschiedener Algorithmen wie lineare und logistische Regression, neuronale Netze oder Dimensionsreduktion abdecken. Zu den Tracks gehören auch TechLabs Notebooks, in denen man das Wissen vertiefen und die in den Online-Kursen erworbenen Kenntnisse anwenden kann.",
-  "dataScience.first_impression.FirstImpression.heading": "Verschaffe dir einen ersten Eindruck",
-  "dataScience.first_impression.FirstImpression.subheading": "Schaue dir unseren Einstiegskurs an, den jeder kostenlos belegen kann!",
-  "dataScience.first_impression.FirstImpression.firstHeading": "Einführung in Data Science mit Python",
-  "dataScience.first_impression.FirstImpression.firstText": "Beginne mit unserem kostenlosen Kurs, um die Grundlagen im Bereich Data Science mit Python zu erlernen und um festzustellen, ob das Digital Shaper Program zu dir passt!",
-  "dataScience.first_impression.FirstImpression.secondHeading": "Einführung in Data Science mit R",
-  "dataScience.first_impression.FirstImpression.secondText": "Beginne mit unserem kostenlosen Kurs, um die Grundlagen im Bereich Data Science mit R zu erlernen und um festzustellen, ob das Digital Shaper Program zu dir passt!",
-  "dataScience.first_impression.FirstImpression.button": "Los geht's",
 
   "foundYourOwn.headline.text1": "Bring TechLabs in ",
   "foundYourOwn.headline.text2": "Deine Stadt",
@@ -169,11 +158,7 @@
   "ux.more.LeftImageSection.heading": "Mehr Informationen zum Lerntrack",
   "ux.more.LeftImageSection.subheading": "Großartiges Design wird geboren, gepflegt und weiterentwickelt - und das in einem systematischen, lernfähigen Prozess!",
   "ux.more.LeftImageSection.text": "Innerhalb des Tracks erkundest du den Prozess der Erstellung eines Produktkonzeptes, das auf den Bedürfnissen der Benutzer basiert und entwickelst hierzu ein aussagekräftiges Design, dass diese Bedürfnisse erfüllt. Sammle praktische Erfahrungen mit Techniken wie Prototyping, Szenario- und Personalentwicklung sowie Wireframing, die dir helfen, dein Verständnis von dem, was die Benutzer benötigen, in eine überzeugende Benutzererfahrung umzusetzen. Darüber hinaus verwandelst du deine Ideen in interaktive Prototypen, die mit potenziellen Anwendern getestet und iterativ in ein hochwertiges Design umgesetzt werden.",
-  "ux.first_impression.FirstImpression.heading": "Verschaffe dir einen ersten Eindruck",
-  "ux.first_impression.FirstImpression.subheading": "Schaue dir unseren Einstiegskurs an, den jeder kostenlos belegen kann!",
-  "ux.first_impression.FirstImpression.firstHeading": "Einführung in User Experience Design",
-  "ux.first_impression.FirstImpression.firstText": "Beginne mit unserem kostenlosen Kurs und lerne die Grundlagen von UX Design, um herauszufinden, ob das Digital Shaper Programm zu dir passt!",
-
+  
   "web.headline.ProgrammHero.headingFirst": "Web",
   "web.headline.ProgrammHero.headingSecond": " Development",
   "web.headline.ProgrammHero.intro": "Informiere dich über unseren Web Development Track. Beginne deine Lernreise als Teilnehmer des nächsten TechLabs Jahrgangs in der Stadt deiner Wahl. Erwerbe Tech Skills mithilfe unserer individuellen Lerntracks, unseren lokalen Veranstaltungen und professioneller Unterstützung durch unsere erfahrenen Mentoren. Innerhalb von sechs Monaten beendest du ein Tech-Projekt und erhältst unser Digital Shaper Zertifikat.",
@@ -191,11 +176,7 @@
   "web.more.LeftImageSection.heading": "Mehr Informationen zum Lerntrack",
   "web.more.LeftImageSection.subheading": "Lerne die Technologien und Frameworks kennen, die für die Webentwicklung eingesetzt werden können.",
   "web.more.LeftImageSection.text": "Unser Web Development Track ist für Anfänger und Fortgeschrittene geeignet. Als Anfänger werden wir dich mit den Grundprinzipien der Informatik vertraut machen. Du wirst auch mehr über die Tools und Technologien erfahren, die für die Erstellung von Webseiten und Anwendungen erforderlich sind. Genauer gesagt, wirst du Kenntnisse in HTML5, Cascading Style Sheets (CSS) und JavaScript erwerben. Darüber hinaus erfährst du mehr über gängige Frameworks und lernst die Unterschiede zwischen den Begriffen Frontend und Backend kennen. Am Ende bist du in der Lage, Full-Stack-Anwendungen zu entwickeln! Als fortgeschrittener Anfänger verbessern wir deine Programmiertechniken und deine Programmierkenntnisse in JavaScript. Außerdem lernst du mittels Node.JS unglaublich schnelle Anwendungen zu programmieren. Wenn du bereits einige Erfahrungen im Bereich Data Science gesammelt hast, werden wir dir auch zeigen, wie du Daten mit D3.js effizient anzeigen kannst.",
-  "web.first_impression.FirstImpression.heading": "Verschaffe dir einen ersten Eindruck",
-  "web.first_impression.FirstImpression.subheading": "Schaue dir unseren Einstiegskurs an, den jeder kostenlos belegen kann!",
-  "web.first_impression.FirstImpression.firstHeading": "Einführung in die Webentwicklung",
-  "web.first_impression.FirstImpression.firstText": "Beginne mit unserem kostenlosen Kurs, um die Grundlagen der Webentwicklung zu erlernen und um festzustellen, ob das Digital Shaper Program zu dir passt!",
-
+  
   "quote.headofmarketing.heading": "Hilf anderen",
   "quote.headofmarketing.subheading": "Mach den Unterschied",
   "quote.headofmarketing.text": "Anderen dabei zu helfen, die Fähigkeiten zu entwickeln, die sie brauchen, um etwas zu bewirken, und zu sehen, wie sie dabei erfolgreich sind, ist eine der lohnendsten Erfahrungen. Deshalb verlangen wir keine Gegenleistung und arbeiten auf freiwilliger Basis.",
