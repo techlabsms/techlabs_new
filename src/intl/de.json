@@ -520,9 +520,5 @@
   "talk.where": "Wo?",
   "talk.interested": "Interessiert?",
   "talk.notified": "Werde benachrichtigt über zukünftige TechLabs Talks",
-  "talk.register": "Hier registrieren",
-
-  "en":"Englisch",
-  "de":"Deutsch",
-  "pt":"Portugiesisch"
+  "talk.register": "Hier registrieren"
 }

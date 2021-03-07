@@ -5,7 +5,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 const languageName = {
   en: "English",
   de: "Deutsch",
-  pt: "Portuguese",
+  pt: "Português"
 }
 
 const Language = () => (
