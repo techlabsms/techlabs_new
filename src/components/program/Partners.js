@@ -22,7 +22,7 @@ const Partners = ({
         <div className="col-md-9">
           <p className="partner--quote">{quoteText}</p>
         </div>
-        <div className="col-md-1" className="text-left">
+        <div className="col-md-1 text-left">
           <img src={quote} alt="qoute sign" className="partner--quote-sign" />
         </div>
       </div>
