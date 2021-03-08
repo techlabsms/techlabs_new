@@ -9,7 +9,6 @@ import Layout from "../components/Layout/Layout"
 import CallToAction from "../components/shared/CallToAction"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
-import FirstImpression from "../components/foundYourOwn/FirstImpression"
 import ProgrammHero from "../components/program/ProgrammHero"
 import LeftImageSection from "../components/shared/LeftImageSection"
 import RightImageSection from "../components/shared/RightImageSection"
@@ -20,7 +19,6 @@ import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
 // assets
 import dsCover from "../assets/ds_cover.png"
 import david from "../assets/david.png"
-import dashboard from "../assets/dashboard.png"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
 
@@ -124,31 +122,6 @@ class dataScience extends Component {
           />
           <Projects />
           <CallToAction />
-          <FirstImpression
-            heading={
-              <FormattedMessage
-                id={"dataScience.first_impression.FirstImpression.heading"}
-              />
-            }
-            subheading={
-              <FormattedMessage
-                id={"dataScience.first_impression.FirstImpression.subheading"}
-              />
-            }
-            firstHeading={
-              <FormattedMessage
-                id={"dataScience.first_impression.FirstImpression.firstHeading"}
-              />
-            }
-            firstImage={dashboard}
-            firstText={
-              <FormattedMessage
-                id={"dataScience.first_impression.FirstImpression.firstText"}
-              />
-            }
-            firstLink="https://app.edyoucated.org/invitation/team/c6a5346d-035c-4a98-bf1b-13c36fe25eb3"
-          />
-
           <Faq>
             <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
             <FaqQuestion question="faq_2.question" answer="faq_2.answer" />

@@ -4,8 +4,8 @@ import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
 
 const logoStyles = {
-  width: "100%",
-  height: "50%",
+  width: "120px",
+  height: "auto",
   marginLeft: "auto",
   marginRight: "auto",
 }
@@ -24,8 +24,8 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
                 rel="noopener noreferrer"
                 className="aNone"
               >
-                <div className="partner--card mb-4">
-                  <h6 className="pb-3">{partner.name}</h6>
+                <div className="partner--card mb-4 h-100 d-flex justify-content-center">
+                  <h6 className="mb-3">{partner.name}</h6>
                   <Img
                     sizes={partner.logo.sizes}
                     alt={partner.logo.title}

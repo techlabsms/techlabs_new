@@ -46,7 +46,7 @@ class Locations extends Component {
                   <div className="col-md-5 col-lg-5 border-0 text-left">
                     <h1 className="pb-5 display-4">
                       <FormattedMessage id="allLocations.heading.1" /> <br />{" "}
-                      <span className="highlighted">
+                      <span className="highlighted lh-90">
                         <FormattedMessage id="allLocations.heading.2" />
                       </span>
                     </h1>

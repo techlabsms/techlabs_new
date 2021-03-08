@@ -142,6 +142,11 @@ body {
   font-weight: bolder;
 }
 
+.text-bold-pink {
+  color: $color-p;
+  font-weight: bolder;
+}
+
 //dropdown
 .dropdown:hover > .dropdown-menu {
   display: block;
@@ -365,20 +370,20 @@ body {
 }
 
 .nav-button {
+  font-weight: bolder;
   padding-left: 2em !important;
   padding-right: 2em !important;
   padding-top: 0.6em !important;
   padding-bottom: 0.6em !important;
   margin-right: 1.5rem;
-  border: 1px solid $color-p;
+  background: $color-p;
   border-radius: 5px;
-  color: $color-p;
+  color: white !important;
 }
 
 .nav-button:hover {
   text-decoration: none;
-  background: $color-p;
-  color: white !important;
+  background: #fa4b7a !important;
   transition: all 0.4s ease 0s;
 }
 
@@ -444,6 +449,10 @@ body {
   border-radius: 5px;
   border: 0px solid !important;
   transition: 0.3s ease-in-out !important;
+}
+
+.btn-primary:hover {
+  background: #fa4b7a !important;
 }
 
 .btn-secondary {
@@ -581,14 +590,15 @@ body {
 }
 
 .section-divider {
-  height: 0.3rem;
-  width: 3.5rem;
+  height: 0.6rem;
+  width: 5.5rem;
   background-color: $color-p;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .section-divider_mobil {
-  height: 0.2rem;
+  height: 0.3rem;
   width: 2.5rem;
   background-color: $color-p;
   margin-bottom: 0.8rem;
@@ -602,7 +612,7 @@ body {
 }
 
 .display-4 {
-  font-size: 4rem !important;
+  font-size: 54px !important;
   margin-bottom: 0.3rem;
 }
 
@@ -610,6 +620,8 @@ body {
   font-weight: bold;
   padding-bottom: 0.5rem !important;
   padding-top: 0.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
   background-color: #fee9ef;
   color: $color-p;
   width: 80%;
