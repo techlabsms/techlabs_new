@@ -4,12 +4,13 @@ const path = require('path')
 // pages locale
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
+  page.context.intl.language === 'pt' ? locale = 'en' : locale = page.context.intl.language
   deletePage(page)
   createPage({
       ...page,
       context: {
           ...page.context,
-          locale: page.context.intl.language,
+          locale: locale,
       },
   })
 }
