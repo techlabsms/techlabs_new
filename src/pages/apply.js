@@ -16,7 +16,6 @@ import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
 import ApplyNewsletter from "../components/applyPage/ApplyNewsletter"
 
-
 class apply extends Component {
   state = {
     isClicked: false,
