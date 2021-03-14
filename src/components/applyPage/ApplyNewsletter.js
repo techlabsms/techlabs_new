@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
@@ -6,15 +6,14 @@ import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 // components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
-// import ChooseCity from "./ChooseCity"
 
 
-const ApplyNewsletter = ({ actionLink, intl }) => {
+const ApplyNewsletter = ({ actionLink, intl, allCountries }) => {
   // translate placeholders with injectIntl
   const namePlaceholder = intl.formatMessage({id: 'applypage.newsletter.name.placeholder'})
   const emailPlaceholder = intl.formatMessage({id: 'applypage.newsletter.email.placeholder'})
   const subscribeButton = intl.formatMessage({id: 'applypage.newsletter.button'})
-  
+
   return (
     <Container>
       <Heading 
@@ -68,32 +67,17 @@ const ApplyNewsletter = ({ actionLink, intl }) => {
               <label for="">
                 <FormattedMessage id={"applypage.newsletter.location.label"}/>
               </label>
-              <select>
-                <option selected value="cococnut">c</option>
-                <option value="d">d</option>
-              </select>
-              {/*
-              <ChooseCity
-                heading={<FormattedMessage id={"applypage.choose.your.city.title"} />}
-                subheading={
-                  <FormattedMessage
-                    id={"applypage.choose.your.city.subtitle"}
-                    values={{ count: allCountries.length - 1 }}
-                  />
-                }
-                locale={intl.locale}
-                handleClick={(isClicked, value, available, link) => {
-                  this.setState({
-                    isClicked,
-                    cityValue: value,
-                    available,
-                    link,
-                  })
-                }}
-                clickedCityValue={this.state.cityValue}
-                countries={allCountries}
-              />
-              */}
+              <div style={{paddingTop: "5px"}}>
+                <select
+                  className="dropdown-select"
+                >
+                  {allCountries.map(locationoption => (
+                    <option key={locationoption.node.heading} value={locationoption.node.heading}>
+                      {locationoption.node.heading}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
             <div className="form-group">
               <ul className="newsletter-checkbox">

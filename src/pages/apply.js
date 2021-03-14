@@ -89,6 +89,7 @@ class apply extends Component {
               link={this.state.link}
             />
             <ApplyNewsletter 
+              allCountries={allCountries}
               actionLink={"https://techlabs.org"}
             />
             <Faq>
