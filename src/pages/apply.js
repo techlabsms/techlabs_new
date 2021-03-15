@@ -14,6 +14,7 @@ import ApplicationProcess from "../components/applyPage/ApplicationProcess"
 import CallToActionApplication from "../components/applyPage/CallToActionApplication"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
+import ApplyNewsletter from "../components/applyPage/ApplyNewsletter"
 
 class apply extends Component {
   state = {
@@ -85,6 +86,10 @@ class apply extends Component {
             <CallToActionApplication
               isOpen={this.state.available}
               link={this.state.link}
+            />
+            <ApplyNewsletter 
+              allCountries={allCountries}
+              actionLink={"https://techlabs.org"}
             />
             <Faq>
               <FaqQuestion
