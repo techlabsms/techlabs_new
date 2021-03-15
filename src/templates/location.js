@@ -481,8 +481,8 @@ export const pageQuery = graphql`
         name
         role
         image {
-          sizes(quality: 100) {
-            ...GatsbyContentfulSizes_withWebp
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid
           }
           title
         }
@@ -497,8 +497,8 @@ export const pageQuery = graphql`
         name
         partnerLink
         logo {
-          sizes(quality: 100) {
-            ...GatsbyContentfulSizes_withWebp
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid
           }
         }
       }

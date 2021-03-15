@@ -27,7 +27,7 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
                 <div className="partner--card mb-4 h-100 d-flex justify-content-center">
                   <h6 className="mb-3">{partner.name}</h6>
                   <Img
-                    sizes={partner.logo.sizes}
+                    fluid={partner.logo.fluid}
                     alt={partner.logo.title}
                     style={logoStyles}
                   />

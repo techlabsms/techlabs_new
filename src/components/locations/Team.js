@@ -21,18 +21,17 @@ const Team = ({ city, team }) => {
   return (
     <Container>
       <Heading
-        heading={<FormattedMessage id="team.heading"/>}
-        subheading={<FormattedMessage id="team.subheading" values={{ city: city }}/>}
+        heading={<FormattedMessage id="team.heading" />}
+        subheading={
+          <FormattedMessage id="team.subheading" values={{ city: city }} />
+        }
       />
       <div className="team">
         {team &&
           team.map(teamMember => (
-            <div
-              className="col-12 col-md-3"
-              key={teamMember.name}
-            >
+            <div className="col-12 col-md-3" key={teamMember.name}>
               <Img
-                sizes={teamMember.image.sizes}
+                fluid={teamMember.image.fluid}
                 alt={teamMember.image.title}
                 style={circleImage}
               />
@@ -48,7 +47,7 @@ const Team = ({ city, team }) => {
                   className="highlighted"
                   rel="noreferrer"
                 >
-                  <FormattedMessage id="team.contactButton"/>
+                  <FormattedMessage id="team.contactButton" />
                 </a>
               </div>
             </div>
