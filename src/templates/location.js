@@ -4,6 +4,7 @@ import get from "lodash/get"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import dayjs from "dayjs"
 
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
@@ -52,6 +53,14 @@ class location extends Component {
     const hasCalendarType = dates.edges.find(
       dates => dates.node.location.heading === location.heading
     )
+
+    const now = dayjs(Date.now())
+    const isCurrentlyOpen = () => {
+      return (
+        now.isAfter(dayjs(location.applicationStart)) &&
+        now.isBefore(dayjs(location.applicationEnd))
+      )
+    }
 
     return (
       <Layout>
@@ -151,7 +160,7 @@ class location extends Component {
 
                   <div className="row">
                     <div className="col">
-                      {location.isOpen ? (
+                      {isCurrentlyOpen ? (
                         <p className="batch-text">
                           <FormattedMessage id="location.nextApplication" />{" "}
                           <span className="a-black">
@@ -166,7 +175,18 @@ class location extends Component {
                     </div>
                   </div>
 
-                  {location.isOpen ? (
+                  {isCurrentlyOpen ? (
+                    <>
+                      <Button
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
+                        primary={true}
+                        isExternal={true}
+                        link={`mailto:${location.email}`}
+                      />
+                    </>
+                  ) : (
                     <>
                       <Button
                         text={
@@ -185,23 +205,12 @@ class location extends Component {
                         link={`mailto:${location.email}`}
                       />
                     </>
-                  ) : (
-                    <>
-                      <Button
-                        text={
-                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
-                        }
-                        primary={true}
-                        isExternal={true}
-                        link={`mailto:${location.email}`}
-                      />
-                    </>
                   )}
                 </div>
               </div>
             </div>
           </section>
-          {!location.isOpen && location.newsletterActive && (
+          {location.newsletterActive && (
             <Newsletter
               image={data.data.newsletterImage.childImageSharp.fluid}
               actionLink={location.newsletterLink}
@@ -462,6 +471,8 @@ export const pageQuery = graphql`
       }
       officeLink
       applicationLink
+      applicationStart
+      applicationEnd
       email
       usesTeam
       hasCalendar
