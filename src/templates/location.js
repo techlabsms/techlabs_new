@@ -318,26 +318,32 @@ class location extends Component {
                 }
               />
               <div className="row">
-                <div
-                  className="col-md-7 office--img"
-                  style={{
-                    backgroundImage: location.officeImg
-                      ? `url(${location.officeImg.file.url})`
-                      : null,
-                  }}
-                >
-                  <div className="w-75 office--card position-absolute">
+                <div className="col-md-7">
+                  <div
+                    className="office--img"
+                    style={{
+                      backgroundImage: location.officeImg
+                        ? `url(${location.officeImg.file.url})`
+                        : null,
+                    }}
+                  >
+                  </div>
+                  
+                </div>
+                {location.officeText ? (
+                  <div className="col-md-5">
+                    <div className="office--card">
                     <h3 className="office--heading">
                       <FormattedMessage id="location.office.visit" />{" "}
                       {location.officeName}
                     </h3>
-                    <div className="row mt-4">
+                    <div className="row mt-3">
                       <img src={pin2} alt="pin" className="h-75 mx-3" />
                       <p className=" office--smalltext">
                         {location.officeAdress}
                       </p>
                     </div>
-                    <div className="row mt-2">
+                    <div className="row">
                       <img src={getDirection} alt="pin" className="h-75 mx-3" />
                       <a
                         href={location.officeLink}
@@ -347,10 +353,7 @@ class location extends Component {
                       </a>
                     </div>
                   </div>
-                </div>
-                {location.officeText ? (
-                  <div className="col-md-5">
-                    <div className="row pl-5 d-flex h-100 mt-5 pr-5">
+                    <div className="px-2 d-flex">
                       <p className="align-self-center justify-content-center office--text">
                         {location.officeText.json.content[0].content[0].value}
                       </p>

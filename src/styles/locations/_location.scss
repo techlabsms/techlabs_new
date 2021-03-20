@@ -165,22 +165,14 @@
   &--img {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35vh;
+    height: 65vh;
+    min-height: 580px;
   }
   &--card {
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    box-shadow: 0 5px 25px -5px rgba(15, 18, 63, 0) !important;
-    transition: box-shadow 0.5s;
-    background-color: #ffffff;
-    will-change: transform;
-    box-shadow: 10px 0px 20px rgba(30, 49, 71, 0.206692);
-    border-top-left-radius: 6px;
-    padding: 1rem;
+    padding: 1rem .5rem;
   }
   &--heading {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 28px;
   }
   &--smalltext {
@@ -198,17 +190,28 @@
     color: $color-gl;
   }
 
-  @media (max-width: 767px) {
-    &--img {
-      height: 70vh;
-    }
-
+  @media (max-width: 1000px) {
     &--smalltext {
       font-size: 12px;
     }
+  }
+
+  @media (max-width: 767px) {
+    &--img {
+      height: 30vh;
+    }
 
     &--heading {
-      font-size: 20px;
+      font-size: 18px;
+    }
+  }
+
+
+
+  @media (min-width: 1200px) {
+    &--img {
+      height: 40vh;
+      min-height: 500px;
     }
   }
 }
