@@ -175,7 +175,7 @@ class location extends Component {
                     </div>
                   </div>
 
-                  {isCurrentlyOpen ? (
+                  {!isCurrentlyOpen ? (
                     <>
                       <Button
                         text={
