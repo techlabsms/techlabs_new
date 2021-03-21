@@ -11,7 +11,7 @@ import Heading from "../components/smallComponents/Heading"
 import ApplicationHero from "../components/applyPage/ApplicationHero"
 import ApplyCheckout from "../components/applyPage/ApplyCheckout"
 import ChooseCity from "../components/applyPage/ChooseCity"
-import TypeFormEmbedd from "../components/applyPage/TypeformEbedd"
+import TypeFormEmbedd from "../components/applyPage/TypeformEmbedd"
 
 const NewApply = props => {
   const [value, setValue] = useState({
@@ -81,52 +81,54 @@ const NewApply = props => {
       </section>
       <ApplyCheckout
         stepOne={
-          <div className="container">
-            <Heading
-              heading="Requirements"
-              subheading="What we are looking for in an applicant"
-            />
-            <div className="row mt-3">
-              <div className="col-md-6">
-                <h5>
+          <div className="container d-flex justify-content-center">
+            <div className="pt-5 mt-5">
+              <Heading
+                heading="Requirements"
+                subheading="What we are looking for in an applicant"
+              />
+              <div className="row mt-3">
+                <div className="col-md-6">
+                  <h5>
+                    <span className="highlighted">Motivation</span>
+                  </h5>
+                  <p>
+                    Are you motivated to learn tech skills online? The online
+                    learning program requires you to learn independently!
+                  </p>
+                </div>
+                <div className="col-md-6">
                   <span className="highlighted">Motivation</span>
-                </h5>
-                <p>
-                  Are you motivated to learn tech skills online? The online
-                  learning program requires you to learn independently!
-                </p>
+                  <p>
+                    Are you motivated to learn tech skills online? The online
+                    learning program requires you to learn independently!
+                  </p>
+                </div>
               </div>
-              <div className="col-md-6">
-                <span className="highlighted">Motivation</span>
-                <p>
-                  Are you motivated to learn tech skills online? The online
-                  learning program requires you to learn independently!
-                </p>
+              <div className="row mt-3">
+                <div className="col-md-6">
+                  <span className="highlighted">Motivation</span>
+                  <p>
+                    Are you motivated to learn tech skills online? The online
+                    learning program requires you to learn independently!
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <span className="highlighted">Motivation</span>
+                  <p>
+                    Are you motivated to learn tech skills online? The online
+                    learning program requires you to learn independently!
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="row mt-3">
-              <div className="col-md-6">
-                <span className="highlighted">Motivation</span>
-                <p>
-                  Are you motivated to learn tech skills online? The online
-                  learning program requires you to learn independently!
-                </p>
-              </div>
-              <div className="col-md-6">
-                <span className="highlighted">Motivation</span>
-                <p>
-                  Are you motivated to learn tech skills online? The online
-                  learning program requires you to learn independently!
-                </p>
-              </div>
-            </div>
-            <div className="row mt-3">
-              <div className="col-md-6">
-                <span className="highlighted">Motivation</span>
-                <p>
-                  Are you motivated to learn tech skills online? The online
-                  learning program requires you to learn independently!
-                </p>
+              <div className="row mt-3">
+                <div className="col-md-6">
+                  <span className="highlighted">Motivation</span>
+                  <p>
+                    Are you motivated to learn tech skills online? The online
+                    learning program requires you to learn independently!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -155,7 +157,9 @@ const NewApply = props => {
             countries={allCountries}
           />
         }
-        stepThree={<TypeFormEmbedd />}
+        stepThree={
+          <TypeFormEmbedd url="https://techlabsorg.typeform.com/to/PXpeuj0P" />
+        }
       ></ApplyCheckout>
     </Layout>
   )
