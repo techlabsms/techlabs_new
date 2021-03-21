@@ -19,6 +19,7 @@
 @import "./program/academy";
 @import "./program/threeComponents";
 @import "./applyPage/process";
+@import "./applyPage/explainer";
 @import "./locations/team";
 @import "./locations/news";
 @import "./locations/follow";
@@ -30,6 +31,7 @@
 @import "./applyPage/applicationHero";
 @import "./applyPage/requirements";
 @import "./applyPage/applicationProcess";
+@import "./applyPage/checkout";
 @import "./locations/dates";
 @import "./applyPage/chooseCity";
 @import "./locations/joinCommunity";
@@ -618,10 +620,8 @@ body {
 
 .highlighted {
   font-weight: bold;
-  padding-bottom: 0.5rem !important;
-  padding-top: 0.5rem !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+  padding-left: .2rem !important;
+  padding-right: .2rem !important;
   background-color: #fee9ef;
   color: $color-p;
   width: 80%;

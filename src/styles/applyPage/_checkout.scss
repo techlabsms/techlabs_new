@@ -1,0 +1,70 @@
+.c-checkout {
+    position: relative;
+    margin-top: 80px;
+    min-height: 40vh;
+}
+
+.c-tracker {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 70%;
+    background-color: rgba(139, 159, 168, 0.4);
+    &__num {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 101%;
+        font-size: 18px;
+        transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        @include paragraph;
+        &--centered {
+            top: 50%;
+            transform: translate(50%, -50%);
+            font-size: 35px;
+            background-color: #fff;
+            @include heading;
+        }
+        &--bottom {
+            top: calc(100% + 10px);
+            display: block;
+            position: relative;
+            left: -250%;
+        }
+        &--top {
+            top: -60px;
+            display: block;
+            position: relative;
+            left: -250%;
+        }
+    }
+&__animation {
+    animation: fadeUp .4s ease-in-out;
+    animation-delay: 150ms;
+    &--up {
+        animation: fadeIn .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    } to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
