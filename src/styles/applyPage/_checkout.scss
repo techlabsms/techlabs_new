@@ -12,6 +12,8 @@
     width: 2px;
     height: 70%;
     background-color: rgba(139, 159, 168, 0.4);
+
+
     &__num {
         position: absolute;
         right: 50%;
@@ -37,7 +39,7 @@
             top: -60px;
             display: block;
             position: relative;
-            left: -250%;
+            left: -150%;
         }
     }
 &__animation {

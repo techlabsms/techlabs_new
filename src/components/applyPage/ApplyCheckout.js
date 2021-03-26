@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react"
 
 const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
@@ -22,9 +24,25 @@ const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
   return (
     <section className="c-checkout">
       <div className="c-tracker">
-        <h5 className={`c-tracker__num ${getCurrentStep(1)}`}>1</h5>
-        <h5 className={`c-tracker__num ${getCurrentStep(2)}`}>2</h5>
-        <h5 className={`c-tracker__num ${getCurrentStep(3)}`}>3</h5>
+        <h5
+          className={`c-tracker__num ${getCurrentStep(1)}`}
+          onClick={() => setCurrentStep(1)}
+        >
+          1
+        </h5>
+
+        <h5
+          className={`c-tracker__num ${getCurrentStep(2)}`}
+          onClick={() => setCurrentStep(2)}
+        >
+          2
+        </h5>
+        <h5
+          className={`c-tracker__num ${getCurrentStep(3)}`}
+          onClick={() => setCurrentStep(3)}
+        >
+          3
+        </h5>
       </div>
       {currentStep === 1 ? <div id="1">{stepOne}</div> : null}
       {currentStep === 2 ? (
