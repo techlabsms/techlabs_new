@@ -20,6 +20,8 @@ const NewApply = props => {
     link: "",
     available: false,
   })
+  const [currentStep, setCurrentStep] = useState(1)
+
   const allCountries = props.data.allContentfulLocationPage.edges
   const { intl } = props
   return (
@@ -80,6 +82,8 @@ const NewApply = props => {
         </div>
       </section>
       <ApplyCheckout
+        currentStep={currentStep}
+        setCurrentStep={num => setCurrentStep(num)}
         stepOne={
           <div className="container d-flex justify-content-center">
             <div className="pt-5 mt-5">
@@ -152,6 +156,7 @@ const NewApply = props => {
                 available,
                 link,
               })
+              setCurrentStep(currentStep + 1)
             }}
             clickedCityValue={value}
             countries={allCountries}

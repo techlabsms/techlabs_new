@@ -3,9 +3,13 @@
 import React, { useState } from "react"
 import arrowDown from "../../assets/arrowDown.svg"
 
-const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
-  const [currentStep, setCurrentStep] = useState(1)
-
+const ApplyCheckout = ({
+  currentStep,
+  setCurrentStep,
+  stepOne,
+  stepTwo,
+  stepThree,
+}) => {
   const getCurrentStep = num => {
     if (num === currentStep) {
       return "c-tracker__num--centered"
