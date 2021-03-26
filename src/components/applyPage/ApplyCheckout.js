@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react"
+import arrowDown from "../../assets/arrowDown.svg"
 
 const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
   const [currentStep, setCurrentStep] = useState(1)
@@ -15,10 +16,14 @@ const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
     }
   }
 
-  const handleClick = num => {
+  const handleClick = (num, direction) => {
     document.getElementById(num).classList = "c-tracker__animation"
     setTimeout(() => {
-      setCurrentStep(currentStep + 1)
+      if (direction === "UP" && currentStep > 0) {
+        setCurrentStep(currentStep - 1)
+      } else {
+        setCurrentStep(currentStep + 1)
+      }
     }, 500)
   }
   return (
@@ -55,9 +60,24 @@ const ApplyCheckout = ({ stepOne, stepTwo, stepThree }) => {
           {stepThree}
         </div>
       ) : null}
-      <div className="container mt-5">
-        <button onClick={() => handleClick(currentStep)}>Next</button>
-      </div>
+      {currentStep !== 3 ? (
+        <div className="container mt-5">
+          <button
+            onClick={() => handleClick(currentStep, "UP")}
+            className={
+              currentStep === 1 ? "c-tracker__btn--disabled" : "c-tracker__btn"
+            }
+          >
+            <img src={arrowDown} alt="arrow-down" className="c-tracker__img" />
+          </button>
+          <button
+            onClick={() => handleClick(currentStep, "DOWN")}
+            className="c-tracker__btn c-tracker__btn--right"
+          >
+            <img src={arrowDown} alt="arrow-down" />
+          </button>
+        </div>
+      ) : null}
     </section>
   )
 }

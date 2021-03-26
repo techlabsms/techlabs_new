@@ -1,3 +1,5 @@
+@import '../variables';
+
 .c-checkout {
     position: relative;
     margin-top: 80px;
@@ -41,6 +43,34 @@
             position: relative;
             left: -150%;
         }
+    }
+
+    &__btn{
+        background-color: $color-p;
+        border: none; 
+        padding: 5px 15px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+
+        &--right {
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+        }
+
+        &--disabled {
+            background-color: $color-gl;
+            border: none; 
+            padding: 5px 15px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+    }
+    &__img {
+        transform: rotate(-180deg);
+        margin-bottom: 2px;
     }
 &__animation {
     animation: fadeUp .4s ease-in-out;
