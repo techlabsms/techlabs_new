@@ -164,9 +164,7 @@ const NewApply = props => {
             countries={allCountries}
           />
         }
-        stepThree={
-          <TypeFormEmbedd url="https://techlabsorg.typeform.com/to/PXpeuj0P" />
-        }
+        stepThree={<TypeFormEmbedd url={value.link} />}
       ></ApplyCheckout>
       <Faq>
         <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
