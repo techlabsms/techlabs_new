@@ -29,11 +29,9 @@ const NewApply = props => {
   return (
     <Layout>
       <ApplicationHero
-        heading="Application"
-        subheading="Apply now for one of our Bootcamps"
-        text="Do you want to learn state-of-the-art tech? Do you want to be part
-        of a thriving community? Apply now for the TechLabs Digital Shaper
-        Program. This is how the application works:"
+        heading={<FormattedMessage id={"applypage.headline"} />}
+        subheading={<FormattedMessage id={"applypage.subheadline"} />}
+        text={<FormattedMessage id={"applypage.introText"} />}
       />
 
       <section className="c-explainer container">
@@ -59,26 +57,31 @@ const NewApply = props => {
         </div>
         <div className="c-explainer__layout">
           <div className="c-explainer__text c-explainer__text--one">
-            <h5>Choose Track and City</h5>
+            <h5>
+              <FormattedMessage id={"applypage.steps.first.heading"} />
+            </h5>
             <p>
-              Inform yourself about our program and the 4 available tracks.
-              Choose one you want to apply for.
+              <FormattedMessage id={"applypage.steps.first.text"} />
               <br />
-              <Link to="/program">More about the tracks</Link>
+              <Link to="/program">
+                <FormattedMessage id={"applypage.steps.first.link"} />
+              </Link>
             </p>
           </div>
           <div className="c-explainer__text c-explainer__text--two">
-            <h5>Online Application</h5>
+            <h5>
+              <FormattedMessage id={"applypage.steps.second.heading"} />
+            </h5>
             <p>
-              Apply online! We look through your application and check whether
-              your motivation fits our requirements!
+              <FormattedMessage id={"applypage.steps.second.text"} />
             </p>
           </div>
           <div className="c-explainer__text c-explainer__text--three">
-            <h5>Feedback Process</h5>
+            <h5>
+              <FormattedMessage id={"applypage.steps.third.heading"} />
+            </h5>
             <p>
-              After looking through all applications, we quickly get back to you
-              with our final feedback!
+              <FormattedMessage id={"applypage.steps.third.heading"} />
             </p>
           </div>
         </div>
@@ -90,49 +93,86 @@ const NewApply = props => {
           <div className="container d-flex justify-content-center">
             <div className="pt-5 mt-5">
               <Heading
-                heading="Requirements"
-                subheading="What we are looking for in an applicant"
+                heading={
+                  <FormattedMessage id={"applypage.checkout.first.heading"} />
+                }
+                subheading={
+                  <FormattedMessage
+                    id={"applypage.checkout.first.subheading"}
+                  />
+                }
               />
               <div className="row mt-3">
                 <div className="col-md-6">
                   <h5>
-                    <span className="highlighted">Motivation</span>
+                    <span className="highlighted">
+                      <FormattedMessage
+                        id={"applypage.requirements.motivation.title"}
+                      />
+                    </span>
                   </h5>
                   <p>
-                    Are you motivated to learn tech skills online? The online
-                    learning program requires you to learn independently!
+                    <FormattedMessage
+                      id={"applypage.requirements.motivation.text"}
+                    />
                   </p>
                 </div>
                 <div className="col-md-6">
-                  <span className="highlighted">Motivation</span>
+                  <h5>
+                    <span className="highlighted">
+                      <FormattedMessage
+                        id={"applypage.requirements.english.title"}
+                      />
+                    </span>
+                  </h5>
                   <p>
-                    Are you motivated to learn tech skills online? The online
-                    learning program requires you to learn independently!
-                  </p>
-                </div>
-              </div>
-              <div className="row mt-3">
-                <div className="col-md-6">
-                  <span className="highlighted">Motivation</span>
-                  <p>
-                    Are you motivated to learn tech skills online? The online
-                    learning program requires you to learn independently!
-                  </p>
-                </div>
-                <div className="col-md-6">
-                  <span className="highlighted">Motivation</span>
-                  <p>
-                    Are you motivated to learn tech skills online? The online
-                    learning program requires you to learn independently!
+                    <FormattedMessage
+                      id={"applypage.requirements.english.text"}
+                    />
                   </p>
                 </div>
               </div>
               <div className="row mt-3">
                 <div className="col-md-6">
-                  <span className="highlighted">Motivation</span>
+                  <h5>
+                    <span className="highlighted">
+                      <FormattedMessage
+                        id={"applypage.requirements.drive.title"}
+                      />
+                    </span>
+                  </h5>
                   <p>
-                    Are you motivated to learn tech skills online? The online
-                    learning program requires you to learn independently!
+                    <FormattedMessage
+                      id={"applypage.requirements.drive.text"}
+                    />
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <h5>
+                    <span className="highlighted">
+                      <FormattedMessage
+                        id={"applypage.requirements.time.title"}
+                      />
+                    </span>
+                  </h5>
+                  <p>
+                    <FormattedMessage id={"applypage.requirements.time.text"} />
+                  </p>
+                </div>
+              </div>
+              <div className="row mt-3">
+                <div className="col-md-6">
+                  <h5>
+                    <span className="highlighted">
+                      <FormattedMessage
+                        id={"applypage.requirements.community.title"}
+                      />
+                    </span>
+                  </h5>
+                  <p>
+                    <FormattedMessage
+                      id={"applypage.requirements.community.text"}
+                    />
                   </p>
                 </div>
               </div>
