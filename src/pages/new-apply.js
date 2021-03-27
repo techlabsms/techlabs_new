@@ -12,6 +12,8 @@ import ApplicationHero from "../components/applyPage/ApplicationHero"
 import ApplyCheckout from "../components/applyPage/ApplyCheckout"
 import ChooseCity from "../components/applyPage/ChooseCity"
 import TypeFormEmbedd from "../components/applyPage/TypeformEmbedd"
+import Faq from "../components/shared/Faq"
+import FaqQuestion from "../components/shared/FaqQuestion"
 
 const NewApply = props => {
   const [value, setValue] = useState({
@@ -166,6 +168,11 @@ const NewApply = props => {
           <TypeFormEmbedd url="https://techlabsorg.typeform.com/to/PXpeuj0P" />
         }
       ></ApplyCheckout>
+      <Faq>
+        <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
+        <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
+        <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
+      </Faq>
     </Layout>
   )
 }
