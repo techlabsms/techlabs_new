@@ -6,6 +6,7 @@ import arrowDown from "../../assets/arrowDown.svg"
 const ApplyCheckout = ({
   currentStep,
   setCurrentStep,
+  city,
   stepOne,
   stepTwo,
   stepThree,
@@ -75,8 +76,16 @@ const ApplyCheckout = ({
             <img src={arrowDown} alt="arrow-down" className="c-tracker__img" />
           </button>
           <button
-            onClick={() => handleClick(currentStep, "DOWN")}
-            className="c-tracker__btn c-tracker__btn--right"
+            onClick={() => {
+              if (city !== "" || currentStep === 1) {
+                handleClick(currentStep, "DOWN")
+              }
+            }}
+            className={
+              city !== "" || currentStep !== 1
+                ? "c-tracker__btn--disabled--right c-tracker__btn--right"
+                : "c-tracker__btn c-tracker__btn--right"
+            }
           >
             <img src={arrowDown} alt="arrow-down" />
           </button>

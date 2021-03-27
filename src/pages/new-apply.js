@@ -89,6 +89,7 @@ const NewApply = props => {
       <ApplyCheckout
         currentStep={currentStep}
         setCurrentStep={num => setCurrentStep(num)}
+        city={value.cityValue}
         stepOne={
           <div className="container d-flex justify-content-center">
             <div className="pt-5 mt-5">

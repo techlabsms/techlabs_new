@@ -65,6 +65,15 @@
             padding: 5px 15px;
             border-bottom-left-radius: 5px;
             border-top-left-radius: 5px;
+            &--right {
+                background-color: $color-gl;
+                border: none; 
+                padding: 5px 15px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+            }
         }
 
     }
