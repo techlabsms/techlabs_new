@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 // plugins & external
@@ -14,6 +13,7 @@ import ChooseCity from "../components/applyPage/ChooseCity"
 import TypeFormEmbedd from "../components/applyPage/TypeformEmbedd"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
+import Explainer from "../components/applyPage/Explainer"
 
 const NewApply = props => {
   const [value, setValue] = useState({
@@ -34,58 +34,8 @@ const NewApply = props => {
         text={<FormattedMessage id={"applypage.introText"} />}
       />
 
-      <section className="c-explainer container">
-        <div className="c-explainer__layout">
-          <div className="c-explainer__number c-explainer__number--one">
-            <div className="c-explainer__circle">1</div>
-            <div className="c-explainer__circle--background"></div>
-          </div>
-          <div className="c-explainer__line">
-            <div className="c-explainer__line--connector "></div>
-          </div>
-          <div className="c-explainer__number c-explainer__number--two">
-            <div className="c-explainer__circle">2</div>
-            <div className="c-explainer__circle--background"></div>
-          </div>
-          <div className="c-explainer__line">
-            <div className="c-explainer__line--connector"></div>
-          </div>
-          <div className="c-explainer__number c-explainer__number--three">
-            <div className="c-explainer__circle">3</div>
-            <div className="c-explainer__circle--background"></div>
-          </div>
-        </div>
-        <div className="c-explainer__layout">
-          <div className="c-explainer__text c-explainer__text--one">
-            <h5>
-              <FormattedMessage id={"applypage.steps.first.heading"} />
-            </h5>
-            <p>
-              <FormattedMessage id={"applypage.steps.first.text"} />
-              <br />
-              <Link to="/program">
-                <FormattedMessage id={"applypage.steps.first.link"} />
-              </Link>
-            </p>
-          </div>
-          <div className="c-explainer__text c-explainer__text--two">
-            <h5>
-              <FormattedMessage id={"applypage.steps.second.heading"} />
-            </h5>
-            <p>
-              <FormattedMessage id={"applypage.steps.second.text"} />
-            </p>
-          </div>
-          <div className="c-explainer__text c-explainer__text--three">
-            <h5>
-              <FormattedMessage id={"applypage.steps.third.heading"} />
-            </h5>
-            <p>
-              <FormattedMessage id={"applypage.steps.third.heading"} />
-            </p>
-          </div>
-        </div>
-      </section>
+      <Explainer />
+
       <ApplyCheckout
         currentStep={currentStep}
         setCurrentStep={num => setCurrentStep(num)}
