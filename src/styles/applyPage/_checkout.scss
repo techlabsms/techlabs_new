@@ -24,24 +24,38 @@
         font-size: 18px;
         transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1);
         @include paragraph;
+
         &--centered {
             top: 50%;
             transform: translate(50%, -50%);
             font-size: 35px;
             background-color: #fff;
             @include heading;
+
+     
         }
         &--bottom {
             top: calc(100% + 10px);
             display: block;
             position: relative;
             left: -250%;
+            @media (max-width: 767px) {
+                position: relative;
+                display: inline-block;
+                transform: translateX(-50%);
+                left: calc(50% - 42px);
+                top: -27px;
+                padding: 0px 10px;
+                background-color: white;
+          }
         }
         &--top {
             top: -60px;
             display: block;
             position: relative;
             left: -150%;
+
+       
         }
     }
 
