@@ -21,8 +21,8 @@ const Projects = () => {
         heading={<FormattedMessage id={"projects.heading"} />}
         subheading={<FormattedMessage id={"projects.subheading"} />}
       />
-      <div className="row d-flex">
-        <div className="col-md-4 py-5 justify-content-center align-self-center">
+      <div className="row d-flex justify-content-center">
+        <div className="col-md-6 col-xl-4 py-1 justify-content-center align-self-center">
           <div className="card h-75 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">
@@ -66,7 +66,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 py-5 justify-content-center align-self-center">
+        <div className="col-md-6 col-xl-4 py-1 justify-content-center align-self-center">
           <div className="card h-100 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">
@@ -125,7 +125,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 py-5 justify-content-center align-self-center">
+        <div className="col-md-6 col-xl-4 py-1 justify-content-center align-self-center">
           <div className="card h-75 mt-5">
             <h3 className="text-center projects--heading">
               <span className="highlighted">
