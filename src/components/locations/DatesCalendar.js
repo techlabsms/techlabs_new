@@ -152,7 +152,7 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="row">
+            <div className="row justify-content-center mt-3">
               {dates[currentMonth] !== null ? (
                 <>
                   {Object.keys(dates[currentMonth]).length > 5 ? (
