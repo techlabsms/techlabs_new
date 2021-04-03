@@ -111,6 +111,19 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
 
   const dates = locationDates[0].node
 
+  const getMonthClassNames = (date, index) => {
+    let classNames = "col " 
+    console.log(index)
+    if (currentMonth === date.format("MMMM").toLowerCase()) {
+      classNames += 'datesCalendar--dates_active'
+    } else if (index > 2) {
+      classNames += 'datesCalendar--dates' + ' d-none d-md-block'
+    } else {
+      classNames += 'datesCalendar--dates'
+    }
+    return classNames
+  }
+
   return (
     <Container className="datesCalendar">
       <Heading
@@ -124,13 +137,9 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
       />
       <div className="datesCalendar--card">
         <div className="row">
-          {month.map(date => (
+          {month.map((date, index) => (
             <div
-              className={
-                currentMonth === date.format("MMMM").toLowerCase()
-                  ? "col datesCalendar--dates_active"
-                  : "col datesCalendar--dates"
-              }
+              className={getMonthClassNames(date, index)}
               key={date.month()}
               onClick={() => setCurrentMonth(date.format("MMMM").toLowerCase())}
               onKeyDown={() => null}
@@ -143,7 +152,7 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
         </div>
         <div className="row">
           <div className="col">
-            <div className="row">
+            <div className="row justify-content-center mt-3">
               {dates[currentMonth] !== null ? (
                 <>
                   {Object.keys(dates[currentMonth]).length > 5 ? (
