@@ -14,9 +14,15 @@ const ChooseCity = ({
   handleClick,
   clickedCityValue,
 }) => {
+  let width = 0
+
+  if (typeof window !== `undefined`) {
+    width = window.innerWidth
+  }
+
   const [countryOptions, setCountryOptions] = useState([])
   const [choosenCountry, setChoosenCountry] = useState("Brazil")
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(width)
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth)
