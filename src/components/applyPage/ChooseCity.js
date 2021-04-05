@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 // components
 import ApplyCard from "./ApplyCard"
@@ -16,6 +16,18 @@ const ChooseCity = ({
 }) => {
   const [countryOptions, setCountryOptions] = useState([])
   const [choosenCountry, setChoosenCountry] = useState("Brazil")
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
 
   countries.forEach(c => {
     const { country } = c.node
@@ -27,7 +39,7 @@ const ChooseCity = ({
   })
   const dropdown_style = {
     marginBottom: "1em",
-    width: "25%",
+    width: windowWidth < 768 ? "100%" : "25%",
   }
 
   const filteredCountries = countries.filter(locations => {
