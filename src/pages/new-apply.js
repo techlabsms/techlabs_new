@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
@@ -23,6 +23,19 @@ const NewApply = props => {
     available: false,
   })
   const [currentStep, setCurrentStep] = useState(1)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [showAll, setShowAll] = useState(false)
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
 
   const allCountries = props.data.allContentfulLocationPage.edges
   const { intl } = props
@@ -98,35 +111,47 @@ const NewApply = props => {
                     />
                   </p>
                 </div>
-                <div className="col-md-6">
-                  <h5>
-                    <span className="highlighted">
+                {windowWidth < 768 && !showAll ? null : (
+                  <div className="col-md-6">
+                    <h5>
+                      <span className="highlighted">
+                        <FormattedMessage
+                          id={"applypage.requirements.time.title"}
+                        />
+                      </span>
+                    </h5>
+                    <p>
                       <FormattedMessage
-                        id={"applypage.requirements.time.title"}
+                        id={"applypage.requirements.time.text"}
                       />
-                    </span>
-                  </h5>
-                  <p>
-                    <FormattedMessage id={"applypage.requirements.time.text"} />
-                  </p>
-                </div>
+                    </p>
+                  </div>
+                )}
               </div>
-              <div className="row mt-3">
-                <div className="col-md-6">
-                  <h5>
-                    <span className="highlighted">
+              {windowWidth < 768 && !showAll ? (
+                <div className="c-checkout__requirements">
+                  <button onClick={() => setShowAll(true)}>
+                    Show all Requirements
+                  </button>
+                </div>
+              ) : (
+                <div className="row mt-3">
+                  <div className="col-md-6">
+                    <h5>
+                      <span className="highlighted">
+                        <FormattedMessage
+                          id={"applypage.requirements.community.title"}
+                        />
+                      </span>
+                    </h5>
+                    <p>
                       <FormattedMessage
-                        id={"applypage.requirements.community.title"}
+                        id={"applypage.requirements.community.text"}
                       />
-                    </span>
-                  </h5>
-                  <p>
-                    <FormattedMessage
-                      id={"applypage.requirements.community.text"}
-                    />
-                  </p>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         }

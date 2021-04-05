@@ -4,6 +4,16 @@
     position: relative;
     margin-top: 80px;
     min-height: 80vh;
+
+    &__requirements {
+    text-align: center;
+    margin-top: 10px;
+       > button{
+            border: none;
+            background-color: unset;
+            color: $color-p;
+        }
+    }
 }
 
 .c-tracker {
