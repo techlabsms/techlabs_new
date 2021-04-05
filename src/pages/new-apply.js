@@ -22,8 +22,15 @@ const NewApply = props => {
     link: "",
     available: false,
   })
+
+  let width = 0
+
+  if (typeof window !== `undefined`) {
+    width = window.innerWidth
+  }
+
   const [currentStep, setCurrentStep] = useState(1)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(width)
   const [showAll, setShowAll] = useState(false)
 
   const handleResize = () => {
