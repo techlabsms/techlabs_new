@@ -15,7 +15,7 @@ const TypeformEmbedd = ({ url, isMobile }) => {
         style={{
           width: isMobile ? "95%" : "90%",
           height: isMobile ? "90%" : "80%",
-          top: "10%",
+          top: isMobile ? "30%" : "10%",
           position: "absolute",
           left: "50%",
           transform: "translateX(-50%)",

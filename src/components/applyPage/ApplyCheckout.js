@@ -49,7 +49,7 @@ const ApplyCheckout = ({
           2
         </h5>
         <h5
-          className={`c-tracker__num c-tracker__num--top`}
+          className={`c-tracker__num ${getCurrentStep(3)}`}
           onClick={() => setCurrentStep(3)}
         >
           3
