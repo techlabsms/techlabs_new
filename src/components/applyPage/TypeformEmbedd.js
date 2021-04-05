@@ -2,7 +2,7 @@ import React from "react"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
-const TypeformEmbedd = ({ url }) => {
+const TypeformEmbedd = ({ url, isMobile }) => {
   return (
     <div className="container relative c-typformEmbedd">
       <Heading
@@ -13,8 +13,8 @@ const TypeformEmbedd = ({ url }) => {
       <ReactTypeformEmbed
         url={url}
         style={{
-          width: "90%",
-          height: "80%",
+          width: isMobile ? "95%" : "90%",
+          height: isMobile ? "90%" : "80%",
           top: "10%",
           position: "absolute",
           left: "50%",
