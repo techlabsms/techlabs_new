@@ -53,6 +53,7 @@ const NewApply = props => {
         currentStep={currentStep}
         setCurrentStep={num => setCurrentStep(num)}
         city={value.cityValue}
+        isMobile={windowWidth < 768}
         stepOne={
           <div className="container d-flex justify-content-center">
             <div className="pt-5 mt-5">
@@ -180,7 +181,9 @@ const NewApply = props => {
             countries={allCountries}
           />
         }
-        stepThree={<TypeFormEmbedd url={value.link} />}
+        stepThree={
+          <TypeFormEmbedd url={value.link} isMobile={windowWidth < 768} />
+        }
       ></ApplyCheckout>
       <Faq>
         <FaqQuestion question="faq_1.question" answer="faq_1.answer" />

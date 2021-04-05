@@ -10,6 +10,7 @@ const ApplyCheckout = ({
   stepOne,
   stepTwo,
   stepThree,
+  isMobile,
 }) => {
   const getCurrentStep = num => {
     if (num === currentStep) {
@@ -82,7 +83,9 @@ const ApplyCheckout = ({
               ? `c-tracker__mobile-num c-tracker__mobile-num--active`
               : `c-tracker__mobile-num`
           }
-          onClick={() => setCurrentStep(3)}
+          onClick={() => {
+            if (city !== "") setCurrentStep(3)
+          }}
         >
           3
         </h5>
@@ -98,32 +101,54 @@ const ApplyCheckout = ({
           {stepThree}
         </div>
       ) : null}
-      {currentStep !== 3 ? (
-        <div className="container mt-5">
-          <button
-            onClick={() => handleClick(currentStep, "UP")}
-            className={
-              currentStep === 1 ? "c-tracker__btn--disabled" : "c-tracker__btn"
-            }
-          >
-            <img src={arrowDown} alt="arrow-down" className="c-tracker__img" />
-          </button>
+      {isMobile && currentStep !== 3 ? (
+        <div className="container mt-5 text-center">
           <button
             onClick={() => {
-              if (city !== "" || currentStep === 1) {
+              if (city !== "" || currentStep !== 2)
                 handleClick(currentStep, "DOWN")
-              }
             }}
-            className={
-              city !== "" || currentStep !== 1
-                ? "c-tracker__btn--disabled--right c-tracker__btn--right"
-                : "c-tracker__btn c-tracker__btn--right"
-            }
+            className="btn btn-primary"
           >
-            <img src={arrowDown} alt="arrow-down" />
+            Next Step
           </button>
         </div>
-      ) : null}
+      ) : (
+        <>
+          {currentStep !== 3 ? (
+            <div className="container mt-5">
+              <button
+                onClick={() => handleClick(currentStep, "UP")}
+                className={
+                  currentStep === 1
+                    ? "c-tracker__btn--disabled"
+                    : "c-tracker__btn"
+                }
+              >
+                <img
+                  src={arrowDown}
+                  alt="arrow-down"
+                  className="c-tracker__img"
+                />
+              </button>
+              <button
+                onClick={() => {
+                  if (city !== "" || currentStep === 1) {
+                    handleClick(currentStep, "DOWN")
+                  }
+                }}
+                className={
+                  city !== "" || currentStep !== 1
+                    ? "c-tracker__btn--disabled--right c-tracker__btn--right"
+                    : "c-tracker__btn c-tracker__btn--right"
+                }
+              >
+                <img src={arrowDown} alt="arrow-down" />
+              </button>
+            </div>
+          ) : null}
+        </>
+      )}
     </section>
   )
 }
