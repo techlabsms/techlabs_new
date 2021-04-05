@@ -38,7 +38,7 @@ const ApplyCheckout = ({
           className={`c-tracker__num ${getCurrentStep(1)}`}
           onClick={() => setCurrentStep(1)}
         >
-          1∫
+          1
         </h5>
 
         <h5
@@ -54,22 +54,34 @@ const ApplyCheckout = ({
           3
         </h5>
       </div>
-      <div className="c-tracker__mobile  d-md-none d-block">
+      <div className="c-tracker__mobile  d-md-none">
         <h5
-          className={`c-tracker__num ${getCurrentStep(1)}`}
+          className={
+            currentStep === 1
+              ? `c-tracker__mobile-num c-tracker__mobile-num--active`
+              : `c-tracker__mobile-num`
+          }
           onClick={() => setCurrentStep(1)}
         >
           1
         </h5>
 
         <h5
-          className={`c-tracker__num ${getCurrentStep(2)}`}
+          className={
+            currentStep === 2
+              ? `c-tracker__mobile-num c-tracker__mobile-num--active`
+              : `c-tracker__mobile-num`
+          }
           onClick={() => setCurrentStep(2)}
         >
           2
         </h5>
         <h5
-          className={`c-tracker__num c-tracker__num--top`}
+          className={
+            currentStep === 3
+              ? `c-tracker__mobile-num c-tracker__mobile-num--active`
+              : `c-tracker__mobile-num`
+          }
           onClick={() => setCurrentStep(3)}
         >
           3
