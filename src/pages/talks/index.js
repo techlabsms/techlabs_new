@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import LearnMore from "../../components/landingpage/learnMore"
 import Heading from "../../components/smallComponents/Heading"
-import TypeformEmbedd from "../../components/applyPage/TypeformEmbedd"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
@@ -18,16 +17,6 @@ const Index = ({ data }) => {
     }
   }, [setWidth])
 
-  const style = {
-    width: "90%",
-    height: "500px",
-    top: "140px",
-    position: "absolute",
-    left: "50%",
-    transform: "translateX(-50%)",
-    maxWidth: "1140px",
-    zIndex: "unset",
-  }
   return (
     <Layout>
       <div className="container talk py-5">
