@@ -112,14 +112,14 @@ const DatesCalendar = ({ eventsPage, city, mail }) => {
   const dates = locationDates[0].node
 
   const getMonthClassNames = (date, index) => {
-    let classNames = "col " 
+    let classNames = "col "
     console.log(index)
     if (currentMonth === date.format("MMMM").toLowerCase()) {
-      classNames += 'datesCalendar--dates_active'
+      classNames += "datesCalendar--dates_active"
     } else if (index > 2) {
-      classNames += 'datesCalendar--dates' + ' d-none d-md-block'
+      classNames += "datesCalendar--dates d-none d-md-block"
     } else {
-      classNames += 'datesCalendar--dates'
+      classNames += "datesCalendar--dates"
     }
     return classNames
   }
