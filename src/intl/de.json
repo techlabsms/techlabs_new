@@ -158,7 +158,7 @@
   "ux.more.LeftImageSection.heading": "Mehr Informationen zum Lerntrack",
   "ux.more.LeftImageSection.subheading": "Großartiges Design wird geboren, gepflegt und weiterentwickelt - und das in einem systematischen, lernfähigen Prozess!",
   "ux.more.LeftImageSection.text": "Innerhalb des Tracks erkundest du den Prozess der Erstellung eines Produktkonzeptes, das auf den Bedürfnissen der Benutzer basiert und entwickelst hierzu ein aussagekräftiges Design, dass diese Bedürfnisse erfüllt. Sammle praktische Erfahrungen mit Techniken wie Prototyping, Szenario- und Personalentwicklung sowie Wireframing, die dir helfen, dein Verständnis von dem, was die Benutzer benötigen, in eine überzeugende Benutzererfahrung umzusetzen. Darüber hinaus verwandelst du deine Ideen in interaktive Prototypen, die mit potenziellen Anwendern getestet und iterativ in ein hochwertiges Design umgesetzt werden.",
-  
+
   "web.headline.ProgrammHero.headingFirst": "Web",
   "web.headline.ProgrammHero.headingSecond": " Development",
   "web.headline.ProgrammHero.intro": "Informiere dich über unseren Web Development Track. Beginne deine Lernreise als Teilnehmer des nächsten TechLabs Jahrgangs in der Stadt deiner Wahl. Erwerbe Tech Skills mithilfe unserer individuellen Lerntracks, unseren lokalen Veranstaltungen und professioneller Unterstützung durch unsere erfahrenen Mentoren. Innerhalb von sechs Monaten beendest du ein Tech-Projekt und erhältst unser Digital Shaper Zertifikat.",
@@ -176,7 +176,7 @@
   "web.more.LeftImageSection.heading": "Mehr Informationen zum Lerntrack",
   "web.more.LeftImageSection.subheading": "Lerne die Technologien und Frameworks kennen, die für die Webentwicklung eingesetzt werden können.",
   "web.more.LeftImageSection.text": "Unser Web Development Track ist für Anfänger und Fortgeschrittene geeignet. Als Anfänger werden wir dich mit den Grundprinzipien der Informatik vertraut machen. Du wirst auch mehr über die Tools und Technologien erfahren, die für die Erstellung von Webseiten und Anwendungen erforderlich sind. Genauer gesagt, wirst du Kenntnisse in HTML5, Cascading Style Sheets (CSS) und JavaScript erwerben. Darüber hinaus erfährst du mehr über gängige Frameworks und lernst die Unterschiede zwischen den Begriffen Frontend und Backend kennen. Am Ende bist du in der Lage, Full-Stack-Anwendungen zu entwickeln! Als fortgeschrittener Anfänger verbessern wir deine Programmiertechniken und deine Programmierkenntnisse in JavaScript. Außerdem lernst du mittels Node.JS unglaublich schnelle Anwendungen zu programmieren. Wenn du bereits einige Erfahrungen im Bereich Data Science gesammelt hast, werden wir dir auch zeigen, wie du Daten mit D3.js effizient anzeigen kannst.",
-  
+
   "quote.headofmarketing.heading": "Hilf anderen",
   "quote.headofmarketing.subheading": "Mach den Unterschied",
   "quote.headofmarketing.text": "Anderen dabei zu helfen, die Fähigkeiten zu entwickeln, die sie brauchen, um etwas zu bewirken, und zu sehen, wie sie dabei erfolgreich sind, ist eine der lohnendsten Erfahrungen. Deshalb verlangen wir keine Gegenleistung und arbeiten auf freiwilliger Basis.",
@@ -520,5 +520,8 @@
   "talk.where": "Wo?",
   "talk.interested": "Interessiert?",
   "talk.notified": "Werde benachrichtigt über zukünftige TechLabs Talks",
-  "talk.register": "Hier registrieren"
+  "talk.register": "Hier registrieren",
+  "talk.contact": "Kontaktieren",
+  "talk.contact.heading": "Tritt mit den Firmen in Kontakt",
+  "talk.contact.subheading": "Finde deinen nächsten Traumjob"
 }
