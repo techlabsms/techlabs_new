@@ -134,10 +134,10 @@ const Index = ({ data }) => {
                   alt="flapo"
                   width="50px"
                 />
-                <h4 className="my-3">Susanne Angelhorte</h4>
+                <h4 className="my-3">Philipp Epple</h4>
                 <a
                   className="talk__hr"
-                  href="mailto:cristina.ciorici@teampicnic.com"
+                  href="mailto:philipp.epple@flaschenpost.de"
                 >
                   <FormattedMessage id={"talk.contact"}>
                     Get in contact
