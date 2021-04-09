@@ -85,4 +85,20 @@
       }
     }
   }
+
+  &__hr {
+    color: $color-p;
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::before {
+      content: "@";
+      font-size: 20px;
+      @include heading;
+      position: relative;
+      left: -5px;
+      top: 2px;
+    }
+  }
 }

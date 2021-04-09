@@ -520,5 +520,8 @@
   "talk.where": "Wo?",
   "talk.interested": "Interessiert?",
   "talk.notified": "Werde benachrichtigt über zukünftige TechLabs Talks",
-  "talk.register": "Hier registrieren"
+  "talk.register": "Hier registrieren",
+  "talk.contact": "Kontaktieren",
+  "talk.contact.heading": "Tritt mit den Firmen in Kontakt",
+  "talk.contact.subheading": "Finde deinen nächsten Traumjob"
 }
