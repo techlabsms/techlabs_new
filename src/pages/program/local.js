@@ -24,22 +24,22 @@ import background from "../../assets/p_background.png"
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 import ProgrammMobil from "../../assets/programmMobil.png"
 
 class local extends Component {
   render() {
     const { data } = this.props
-    const {
-      whatIsIncluded,
-    } = data.page.edges[0].node
+    const { whatIsIncluded } = data.page.edges[0].node
     return (
       <div>
         <Navbar />
         <ProgrammHero
           headingFirst="Digital Shaper"
-          headingSecond={<FormattedMessage id={"program.local.programmhero.headingSecond"}/>}
-          intro={<FormattedMessage id={"programs.subheading"}/>}
+          headingSecond={
+            <FormattedMessage id={"program.local.programmhero.headingSecond"} />
+          }
+          intro={<FormattedMessage id={"programs.subheading"} />}
           background={background}
           backgroundMobil={ProgrammMobil}
         />
@@ -160,9 +160,11 @@ class local extends Component {
             }
           />
           <Testimonial
-            heading={<FormattedMessage id={"testimonial.heading"}/>}
-            subheading={<FormattedMessage id={"program.local.testimonial.subheading"}/>}
-            text={<FormattedMessage id={"program.local.timothee.quote"}/>}
+            heading={<FormattedMessage id={"testimonial.heading"} />}
+            subheading={
+              <FormattedMessage id={"program.local.testimonial.subheading"} />
+            }
+            text={<FormattedMessage id={"program.local.timothee.quote"} />}
             testimonialAvatar={data.timothee.childImageSharp.fluid}
             testimonialName="Timothée Clolus"
             testimonialTagline="Front end Developer @"
@@ -170,42 +172,46 @@ class local extends Component {
           />
           <Process />
           <LearnMore
-            heading={<FormattedMessage id={"program.local.learn_more.heading"}/>}
-            subheading={<FormattedMessage id={"program.local.learn_more.subheading"}/>}
-            firstProjectHeading={<FormattedMessage id={"program.local.learn_more.firstProject"}/>}
+            heading={
+              <FormattedMessage id={"program.local.learn_more.heading"} />
+            }
+            subheading={
+              <FormattedMessage id={"program.local.learn_more.subheading"} />
+            }
+            firstProjectHeading={
+              <FormattedMessage id={"program.local.learn_more.firstProject"} />
+            }
             firstProjectImage={web}
             firstLink="/web"
-            secondProjectHeading={<FormattedMessage id={"program.local.learn_more.secondProject"}/>}
+            secondProjectHeading={
+              <FormattedMessage id={"program.local.learn_more.secondProject"} />
+            }
             secondProjectImage={DataScience}
             secondLink="/dataScience"
-            thirdProjectHeading={<FormattedMessage id={"program.local.learn_more.thirdProject"}/>}
+            thirdProjectHeading={
+              <FormattedMessage id={"program.local.learn_more.thirdProject"} />
+            }
             thirdProjectImage={AI}
             thirdLink="/ai"
-            fourthProjectHeading={<FormattedMessage id={"program.local.learn_more.fourthProject"}/>}
+            fourthProjectHeading={
+              <FormattedMessage id={"program.local.learn_more.fourthProject"} />
+            }
             fourthProjectImage={UX}
             fourthLink="/ux"
           />
           <Faq>
-            <FaqQuestion
-              question="faq_1.question"
-              answer="faq_1.answer"
-            />
-            <FaqQuestion
-              question="faq_2.question"
-              answer="faq_2.answer"
-            />
-            <FaqQuestion
-              question="faq_3.question"
-              answer="faq_3.answer"
-            />
+            <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
+            <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
+            <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
           </Faq>
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button 
-                  text={<FormattedMessage id={"faq.button"}/>}
-                  link="/faq" 
-                  primary={true} />
+                <Button
+                  text={<FormattedMessage id={"faq.button"} />}
+                  link="/faq"
+                  primary={true}
+                />
               </div>
             </div>
           </div>
@@ -217,7 +223,6 @@ class local extends Component {
 }
 
 export default local
-
 
 export const fluidImageLocal = graphql`
   fragment fluidImageLocal on File {
@@ -234,35 +239,35 @@ export const pageQuery = graphql`
     timothee: file(relativePath: { eq: "timothee.png" }) {
       ...fluidImageLocal
     }
-    accenture: file(relativePath: { eq: "accenture.png" }) {
+    accenture: file(relativePath: { eq: "accint.png" }) {
       ...fluidImageLocal
     }
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
-          whatIsIncluded { 
+          whatIsIncluded {
             whatIsIncluded {
               time {
-                hours,
+                hours
                 month
               }
-              who,
+              who
               what {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
               }
               tracks {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
                 _4
-              },
+              }
               difference {
-                _1,
-                _2,
-                _3,
+                _1
+                _2
+                _3
               }
             }
           }

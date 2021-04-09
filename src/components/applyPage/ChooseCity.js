@@ -15,7 +15,7 @@ const ChooseCity = ({
   clickedCityValue,
 }) => {
   const [countryOptions, setCountryOptions] = useState([])
-  const [choosenCountry, setChoosenCountry] = useState("Remote")
+  const [choosenCountry, setChoosenCountry] = useState("Brazil")
 
   countries.forEach(c => {
     const { country } = c.node

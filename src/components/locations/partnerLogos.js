@@ -4,8 +4,8 @@ import Heading from "../smallComponents/Heading"
 import Img from "gatsby-image"
 
 const logoStyles = {
-  width: "100%",
-  height: "50%",
+  width: "120px",
+  height: "auto",
   marginLeft: "auto",
   marginRight: "auto",
 }
@@ -17,17 +17,17 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
       <div className="row mt-4">
         {partners &&
           partners.map(partner => (
-            <div className="col-md-3" key={partner.name}>
+            <div className="col-md-3 mt-3" key={partner.name}>
               <a
                 href={partner.partnerLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="aNone"
               >
-                <div className="partner--card mb-4">
-                  <h6 className="pb-3">{partner.name}</h6>
+                <div className="partner--card mb-4 h-100 d-flex justify-content-center">
+                  <h6 className="mb-3">{partner.name}</h6>
                   <Img
-                    sizes={partner.logo.sizes}
+                    fluid={partner.logo.fluid}
                     alt={partner.logo.title}
                     style={logoStyles}
                   />

@@ -18,7 +18,7 @@ const BlogCard = ({ article }) => {
           <div className="row mt-3">
             <div className="col-sm-12 col-lg-8">
               <div className="row">
-                <h3 className="text-muted mt-4 ml-4 mr-4 pl-3 pr-3 d-inline-block align-middle">
+                <h3 className="mt-4 ml-4 mr-4 pl-3 pr-3 d-inline-block align-middle">
                   {article.title}
                 </h3>
               </div>
@@ -26,7 +26,8 @@ const BlogCard = ({ article }) => {
                 <div className="col-md-4">
                   <p className="ml-3">
                     <img src={clock} alt="clock" className="mr-3" />
-                    {article.readTime}<FormattedMessage id="blogcard.time"/>
+                    {article.readTime}
+                    <FormattedMessage id="blogcard.time" />
                   </p>
                 </div>
                 <div className="col-md-8">

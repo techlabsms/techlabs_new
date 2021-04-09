@@ -11,11 +11,11 @@ import ApplicationCountdown from "./ApplicationCountdown"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/UX.svg"
+import ux from "../../assets/ux-icon.png"
 import dswhite from "../../assets/ds_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
-
+import uxwhite from "../../assets/ux_white.png"
 
 const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
   const [isClicked, setIsClicked] = useState(false)
@@ -64,11 +64,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
           >
             <div className="row">
               <div className="col-md-6">
-                <h4 className="chooseCity--heading">
-                  <FormattedMessage
-                    id={`location.${cityValues.heading.toLowerCase()}`}
-                  />
-                </h4>
+                <h4 className="chooseCity--heading">{cityValues.heading}</h4>
                 <div
                   className={
                     isClicked &&
@@ -98,7 +94,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                         />
                       </p>
                     )}
-                    <div className="text-muted pb-4">
+                    <div className="pb-4">
                       <ApplicationCountdown date={date} isSmall={true} />
                     </div>
                   </>
@@ -112,7 +108,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
               </div>
             </div>
             <p>
-              <FormattedMessage id="applypage.applyCard.availableTracks"/>
+              <FormattedMessage id="applypage.applyCard.availableTracks" />
             </p>
             <div className="row px-2 my-2">
               <div className="col">
@@ -131,7 +127,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       className="mr-2"
                     />
                     <p className="chooseCity--subject">
-                      <FormattedMessage id="projects.tech.ai"/>  
+                      <FormattedMessage id="projects.tech.ai" />
                     </p>
                   </div>
                 )}
@@ -150,7 +146,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       className="mr-2"
                     />
                     <p className="chooseCity--subject">
-                      <FormattedMessage id="projects.tech.ds"/>
+                      <FormattedMessage id="projects.tech.ds" />
                     </p>
                   </div>
                 )}
@@ -171,7 +167,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       className="mr-2"
                     />
                     <p className="chooseCity--subject">
-                      <FormattedMessage id="projects.tech.webdev"/>
+                      <FormattedMessage id="projects.tech.webdev" />
                     </p>
                   </div>
                 )}
@@ -181,7 +177,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       src={
                         isClicked &&
                         clickedCityValue === cityValues.heading.toLowerCase()
-                          ? webwhite
+                          ? uxwhite
                           : ux
                       }
                       alt="UX Design"
@@ -190,7 +186,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                       className="mr-2"
                     />
                     <p className="chooseCity--subject">
-                      <FormattedMessage id="projects.tech.ux"/>
+                      <FormattedMessage id="projects.tech.ux" />
                     </p>
                   </div>
                 )}

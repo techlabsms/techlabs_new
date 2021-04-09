@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Richard Menning",
   "scripts": {
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -26,7 +26,9 @@
     "babel-plugin-react-intl": "^5.1.18",
     "bluebird": "^3.7.2",
     "bootstrap": "^4.5.0",
+    "cross-env": "^7.0.3",
     "dayjs": "^1.8.28",
+    "dotenv": "^8.2.0",
     "env": "0.0.2",
     "gatsby": "^2.23.3",
     "gatsby-background-image": "^0.10.2",
@@ -35,6 +37,8 @@
     "gatsby-plugin-google-tagmanager": "^2.3.5",
     "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-intl": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.4.35",
+    "gatsby-plugin-offline": "^3.2.33",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-source-contentful": "^2.3.15",
@@ -58,11 +62,13 @@
     "react-overdrive": "0.0.10",
     "react-responsive-modal": "^4.0.1",
     "react-transition-group": "^4.4.1",
+    "react-typeform-embed": "^0.2.1",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "gatsby-plugin-eslint": "^2.0.8",
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },

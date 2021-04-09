@@ -22,7 +22,7 @@ import KeyFacts from "../../components/program/remote/keyFacts"
 import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
-import UX from "../../assets/UX.png"
+import UX from "../../assets/ux-image.png"
 
 class remote extends Component {
   startDateString = date => {
@@ -61,8 +61,7 @@ class remote extends Component {
         {newsletterVisible && (
           <Newsletter
             image={data.newsletterImage.childImageSharp.fluid}
-            title="Want to know when the next application period starts?"
-            subtitle="Subscribe to our email list to get notified!"
+            actionLink="https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41"
           />
         )}
         <div className="container">

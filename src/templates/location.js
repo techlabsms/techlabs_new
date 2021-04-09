@@ -4,6 +4,7 @@ import get from "lodash/get"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import dayjs from "dayjs"
 
 // components
 import LeftImageSection from "../components/shared/LeftImageSection"
@@ -17,6 +18,7 @@ import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import Layout from "../components/Layout/Layout"
 import PartnerLogos from "../components/locations/partnerLogos"
+import Newsletter from "../components/program/newsletter"
 
 // assets
 import teamspirit from "../assets/teamspirit.png"
@@ -25,7 +27,7 @@ import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
-import ux from "../assets/UX.svg"
+import ux from "../assets/ux-icon.png"
 
 class location extends Component {
   state = {
@@ -45,7 +47,21 @@ class location extends Component {
   }
   render() {
     const location = get(this.props, "data.contentfulLocationPage")
+    const dates = get(this.props, "data.dates")
+    const data = this.props
     const { modalIsOpen, x, y, text } = this.state
+    const hasCalendarType = dates.edges.find(
+      dates => dates.node.location.heading === location.heading
+    )
+
+    const now = dayjs(Date.now())
+    const isCurrentlyOpen = () => {
+      return (
+        now.isAfter(dayjs(location.applicationStart)) &&
+        now.isBefore(dayjs(location.applicationEnd))
+      )
+    }
+
     return (
       <Layout>
         <section className="container-fluid">
@@ -59,7 +75,7 @@ class location extends Component {
                 <div className="col-md-12 col-lg-5 border-0 location-card mt-4 py-5 position-absolute">
                   <div className="row text-right fixed-top-absolute py-3">
                     <div className="col-md-12">
-                      <small className="text-muted mr-4">
+                      <small className="mr-4">
                         <FormattedMessage id="location.availableTracks" />
                       </small>
                       {location.avaiableTracks.web && (
@@ -139,29 +155,38 @@ class location extends Component {
 
                   <h1 className="location-title">
                     <img src={location.icon.file.url} alt="" width="60" />{" "}
-                    <FormattedMessage
-                      id={"location." + location.heading.toLowerCase()}
-                    />
+                    {location.heading}
                   </h1>
 
                   <div className="row">
                     <div className="col">
-                      {location.isOpen ? (
-                        <p className="text-muted batch-text">
+                      {isCurrentlyOpen ? (
+                        <p className="batch-text">
                           <FormattedMessage id="location.nextApplication" />{" "}
                           <span className="a-black">
                             {location.nextBatchDate}
                           </span>
                         </p>
                       ) : (
-                        <p className="text-muted batch-text">
+                        <p className="batch-text">
                           <FormattedMessage id="location.nextBatch" />
                         </p>
                       )}
                     </div>
                   </div>
 
-                  {location.isOpen ? (
+                  {!isCurrentlyOpen ? (
+                    <>
+                      <Button
+                        text={
+                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
+                        }
+                        primary={true}
+                        isExternal={true}
+                        link={`mailto:${location.email}`}
+                      />
+                    </>
+                  ) : (
                     <>
                       <Button
                         text={
@@ -180,36 +205,33 @@ class location extends Component {
                         link={`mailto:${location.email}`}
                       />
                     </>
-                  ) : (
-                    <>
-                      <Button
-                        text={
-                          <FormattedMessage id="foundYourOwn.calltoAction.text" />
-                        }
-                        primary={true}
-                        isExternal={true}
-                        link={`mailto:${location.email}`}
-                      />
-                    </>
                   )}
                 </div>
               </div>
             </div>
           </section>
+          {location.newsletterActive && (
+            <Newsletter
+              image={data.data.newsletterImage.childImageSharp.fluid}
+              actionLink={location.newsletterLink}
+            />
+          )}
           <section className="container location">
-            {location.hasCalendar && (
+            {location.hasCalendar && hasCalendarType !== undefined ? (
               <DatesCalendar
                 eventsPage={location.eventsPage}
                 city={location.heading}
                 mail={location.email}
               />
-            )}
+            ) : null}
             {location.firstEntryTitle && (
               <LeftImageSection
                 heading={location.firstEntryTitle}
                 subheading={location.firstEntrySubtitle}
                 text={location.firstEntryTextAsMd.childMarkdownRemark.html}
-                image={location.firstEntryImage.file.url}
+                image={
+                  location.firstEntryImage && location.firstEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
@@ -221,7 +243,10 @@ class location extends Component {
                 heading={location.secondEntryTitle}
                 subheading={location.secondEntrySubtitle}
                 text={location.secondEntryTextAsMd.childMarkdownRemark.html}
-                image={location.secondEntryImage.file.url}
+                image={
+                  location.secondEntryImage &&
+                  location.secondEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
@@ -233,7 +258,9 @@ class location extends Component {
                 heading={location.thirdEntryTitle}
                 subheading={location.thirdEntrySubtitle}
                 text={location.thirdEntryTextAsMd.childMarkdownRemark.html}
-                image={location.thirdEntryImage.file.url}
+                image={
+                  location.thirdEntryImage && location.thirdEntryImage.file.url
+                }
                 leftPartSize="6"
                 rightPartSize="6"
                 float={true}
@@ -246,14 +273,21 @@ class location extends Component {
                 team={location.team}
               />
             )}
-            <Follow
-              heading={<FormattedMessage id="location.follow.heading" />}
-              subheading={<FormattedMessage id="location.follow.subheading" />}
-              facebookLink={location.facebookUrl}
-              instagramLink={location.instagramUrl}
-              linkedInLink={location.linkedinUrl}
-              mediumLink={location.mediumUrl}
-            />
+            {location.facebookUrl !== null ||
+            location.instagramUrl !== null ||
+            location.linkedinUrl !== null ||
+            location.mediumUrl !== null ? (
+              <Follow
+                heading={<FormattedMessage id="location.follow.heading" />}
+                subheading={
+                  <FormattedMessage id="location.follow.subheading" />
+                }
+                facebookLink={location.facebookUrl}
+                instagramLink={location.instagramUrl}
+                linkedInLink={location.linkedinUrl}
+                mediumLink={location.mediumUrl}
+              />
+            ) : null}
           </section>
           {location.openPositionsLink && (
             <RightImageSection
@@ -284,24 +318,32 @@ class location extends Component {
                 }
               />
               <div className="row">
-                <div
-                  className="col-md-7 office--img"
-                  style={{
-                    backgroundImage: `url(${location.officeImg.file.url})`,
-                  }}
-                >
-                  <div className="w-75 office--card position-absolute">
+                <div className="col-md-7">
+                  <div
+                    className="office--img"
+                    style={{
+                      backgroundImage: location.officeImg
+                        ? `url(${location.officeImg.file.url})`
+                        : null,
+                    }}
+                  >
+                  </div>
+                  
+                </div>
+                {location.officeText ? (
+                  <div className="col-md-5">
+                    <div className="office--card">
                     <h3 className="office--heading">
                       <FormattedMessage id="location.office.visit" />{" "}
                       {location.officeName}
                     </h3>
-                    <div className="row mt-4">
+                    <div className="row mt-3">
                       <img src={pin2} alt="pin" className="h-75 mx-3" />
                       <p className=" office--smalltext">
                         {location.officeAdress}
                       </p>
                     </div>
-                    <div className="row mt-2">
+                    <div className="row">
                       <img src={getDirection} alt="pin" className="h-75 mx-3" />
                       <a
                         href={location.officeLink}
@@ -311,14 +353,13 @@ class location extends Component {
                       </a>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-5">
-                  <div className="row pl-5 d-flex h-100 mt-5 pr-5">
-                    <p className="align-self-center justify-content-center office--text">
-                      {location.officeText.json.content[0].content[0].value}
-                    </p>
+                    <div className="px-2 d-flex">
+                      <p className="align-self-center justify-content-center office--text">
+                        {location.officeText.json.content[0].content[0].value}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </div>
             </Container>
           )}
@@ -339,14 +380,26 @@ class location extends Component {
 
 export default injectIntl(location)
 
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
 export const pageQuery = graphql`
   query LocationByHeading($heading: String!, $locale: String) {
+    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+      ...fluidImage
+    }
     site {
       siteMetadata {
         title
       }
     }
-
     contentfulLocationPage(
       heading: { eq: $heading }
       node_locale: { eq: $locale }
@@ -363,6 +416,8 @@ export const pageQuery = graphql`
         }
       }
       isOpen
+      newsletterActive
+      newsletterLink
       nextBatchDate
       facebookUrl
       instagramUrl
@@ -419,6 +474,8 @@ export const pageQuery = graphql`
       }
       officeLink
       applicationLink
+      applicationStart
+      applicationEnd
       email
       usesTeam
       hasCalendar
@@ -427,8 +484,8 @@ export const pageQuery = graphql`
         name
         role
         image {
-          sizes(quality: 100) {
-            ...GatsbyContentfulSizes_withWebp
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid
           }
           title
         }
@@ -443,8 +500,17 @@ export const pageQuery = graphql`
         name
         partnerLink
         logo {
-          sizes(quality: 100) {
-            ...GatsbyContentfulSizes_withWebp
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid
+          }
+        }
+      }
+    }
+    dates: allContentfulDates(filter: { node_locale: { eq: $locale } }) {
+      edges {
+        node {
+          location {
+            heading
           }
         }
       }

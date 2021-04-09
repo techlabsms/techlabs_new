@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react"
 
 // plugins & external
@@ -17,7 +18,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   // state
   const [countryOptions, setCountryOptions] = useState([])
   const [cityOptions, setCityOptions] = useState(["Bitte wählen"])
-  const [country, setCountry] = useState()
+
   const [city, setCity] = useState()
   const [cityData, setCityData] = useState()
   const [available, setAvailable] = useState()
@@ -28,6 +29,8 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   const wave_style = {
     width: "100%",
     zIndex: "-1",
+    bottom: "-220px",
+    marginBottom: "15vh",
   }
 
   const dropdown_style = {
@@ -54,6 +57,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     const choosenCityData = locationData.filter(
       c => c.node.heading.toLowerCase() === city.toLowerCase()
     )
+
     setCityData(choosenCityData)
     updateDate(choosenCityData)
   }
@@ -118,7 +122,6 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                   options={countryOptions}
                   style={dropdown_style}
                   onSelect={country => {
-                    setCountry(country)
                     updateAvailableCities(country)
                   }}
                 />
@@ -154,7 +157,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                           />
                         </p>
                       )}
-                      <div className="text-muted">
+                      <div>
                         <ApplicationCountdown date={date} />
                       </div>
                       <span className="card-discover">
@@ -170,9 +173,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                               }
                             />
                           </a>
-                        ) : (
-                          <> </>
-                        )}
+                        ) : null}
                       </span>
                     </>
                   ) : (

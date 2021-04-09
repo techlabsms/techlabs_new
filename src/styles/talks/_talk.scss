@@ -1,0 +1,104 @@
+@import "../variables";
+
+.talk {
+  h1 {
+    font-size: 60px;
+  }
+  &__tl {
+    color: $color-p;
+    &--sm {
+      font-size: 60px;
+    }
+  }
+  &__subtitle {
+    @include heading;
+    font-size: 32px;
+  }
+  &__instruction {
+    @include paragraph;
+    font-size: 25px;
+    > span {
+      color: $color-p;
+    }
+  }
+  &__newsletter {
+    p {
+      font-size: 30px;
+      width: 70%;
+      color: white;
+    }
+    input {
+      border: 1px solid white;
+      background-color: $color-p;
+      color: white !important;
+    }
+  }
+  &-video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__newsletter {
+    background-color: $color-p;
+  }
+  &__speaker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &--card:not(:first-child) {
+      position: absolute;
+    }
+    &--card:hover {
+      transform: scale(1.02);
+    }
+
+    @for $i from 0 through 4 {
+      $c: $i + 1;
+      &--card:nth-child(#{$c}) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        transition: all 0.1s ease-in;
+        left: 190px * $i;
+        @media (max-width: $xs) {
+          left: 110px * $i;
+        }
+        > h5 {
+          background-color: $color-background;
+          padding: 5px 7px;
+          border-radius: 6px;
+          color: $color-p;
+        }
+      }
+    }
+  }
+
+  &__hr {
+    color: $color-p;
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::before {
+      content: "@";
+      font-size: 20px;
+      @include heading;
+      position: relative;
+      left: -5px;
+      top: 2px;
+    }
+  }
+}

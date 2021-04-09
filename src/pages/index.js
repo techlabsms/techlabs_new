@@ -13,18 +13,17 @@ import PartnerLogos from "../components/landingpage/PartnerLogos"
 import KeyBenefits from "../components/shared/KeyBenefits"
 import Quote from "../components/shared/Quote"
 import Heading from "../components/smallComponents/Heading"
-import Container from "../components/smallComponents/Container"
 import Button from "../components/smallComponents/Button"
 import ApplicationPeriod from "../components/landingpage/applicationPeriod"
 import Layout from "../components/Layout/Layout"
 
 // assets
 import GIC from "../assets/gic.svg"
-import gic from "../assets/gic_team.png"
 
 // styles
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
+import LearnMore from "../components/landingpage/learnMore"
 
 class index extends React.Component {
   componentDidMount() {
@@ -41,30 +40,7 @@ class index extends React.Component {
   render() {
     const { data, intl } = this.props
 
-    const codeAtHome = [
-      {
-        node: {
-          location: "Remote",
-          country: "Remote",
-          heading: "CodeAtHome",
-          applicationStart: this.props.data.codeAtHome.edges[0].node.startDate,
-          applicationEnd: this.props.data.codeAtHome.edges[0].node
-            .applicationEnd,
-          applicationLink: this.props.data.codeAtHome.edges[0].node
-            .applicationLink,
-          avaiableTracks: {
-            ai: true,
-            web: true,
-            dataScience: true,
-            ux: true,
-          },
-        },
-      },
-    ]
-
-    const allCountries = this.props.data.allContentfulLocationPage.edges.concat(
-      codeAtHome
-    )
+    const allCountries = this.props.data.allContentfulLocationPage.edges
     return (
       <Layout>
         <div className="container-fluid">
@@ -77,12 +53,11 @@ class index extends React.Component {
                     We Build.
                     <br />
                     <span className="highlighted lh-90">Digital. </span>
-                    <br />
                     <span className="highlighted lh-90">Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
                     <FormattedMessage id={"landingpage.digital.shaper.part1"} />
-                    <span className="text-bold">
+                    <span className="text-bold-pink">
                       <FormattedMessage
                         id={"landingpage.digital.shaper.part2"}
                       />
@@ -109,6 +84,7 @@ class index extends React.Component {
                   <Img
                     alt="commmunity"
                     fluid={data.imageOne.childImageSharp.fluid}
+                    fadeIn={false}
                   />
                 </div>
               </div>
@@ -120,7 +96,7 @@ class index extends React.Component {
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
             <PartnerLogos
-              logoOne={data.accenture.childImageSharp.fluid}
+              logoOne={data.accint.childImageSharp.fluid}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
               logoTwo={data.sopra.childImageSharp.fluid}
               linkPartnerTwo="https://www.soprasteria.de/de"
@@ -131,9 +107,10 @@ class index extends React.Component {
             />
           </section>
           {/* what we offer */}
-          <section className="py-5 my-5">
+          <section className="mt-5">
             <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
+              fadeIn={false}
               style={{
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -167,7 +144,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.weeks.of.coding.text"}
@@ -195,7 +172,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
+                          <p className=" pb-4">
                             {
                               <FormattedMessage
                                 id={"landingpage.what.digital.tracks.text"}
@@ -223,7 +200,7 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted">
+                          <p>
                             {
                               <FormattedMessage
                                 id={"landingpage.what.community.members.text"}
@@ -258,8 +235,8 @@ class index extends React.Component {
                               />
                             }
                           </p>
-                          <p className="text-muted pb-4">
-                            <FormattedMessage id="landingpage.location.text"/>
+                          <p className="pb-4">
+                            <FormattedMessage id="landingpage.location.text" />
                           </p>
                           <span className="card-discover">
                             {
@@ -311,7 +288,7 @@ class index extends React.Component {
               <FormattedMessage id={"landingpage.googlechallenge.subheading"} />
             }
             text={<FormattedMessage id={"landingpage.googlechallenge.text"} />}
-            image={gic}
+            image={data.gic.childImageSharp.fluid}
             hasButton={true}
             buttonText={
               <FormattedMessage id={"landingpage.button.read_more"} />
@@ -368,60 +345,9 @@ class index extends React.Component {
               <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
             }
           />
-          <section className="container-fluid mt-5 background h-100 py-5">
-            <Container>
-              <Heading
-                heading={
-                  <FormattedMessage id={"landingpage.learn_more.heading"} />
-                }
-                subheading={
-                  <FormattedMessage id={"landingpage.learn_more.subheading"} />
-                }
-              />
-              <div className="row h-100">
-                <div className="col-md-6 mt-3">
-                  <Link to="/locations" className="noDec">
-                    <div className="card">
-                      <h2 className="mt-3 color-red">
-                        {
-                          <FormattedMessage
-                            id={"landingpage.learn_more.locations.h2"}
-                          />
-                        }
-                      </h2>
-                      <p className="color-gl">
-                        {
-                          <FormattedMessage
-                            id={"landingpage.learn_more.locations.text"}
-                          />
-                        }
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-md-6 mt-3">
-                  <Link to="/program" className="noDec">
-                    <div className="card">
-                      <h2 className="mt-3 color-red">
-                        {
-                          <FormattedMessage
-                            id={"landingpage.learn_more.program.h2"}
-                          />
-                        }
-                      </h2>
-                      <p className="color-gl">
-                        {
-                          <FormattedMessage
-                            id={"landingpage.learn_more.program.text"}
-                          />
-                        }
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </Container>
-          </section>
+          <LearnMore
+            backgroundImage={data.background_location.childImageSharp.fluid}
+          />
         </div>
       </Layout>
     )
@@ -454,7 +380,7 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "startPage.png" }) {
       ...fluidImage
     }
-    accenture: file(relativePath: { eq: "accenture.png" }) {
+    accint: file(relativePath: { eq: "accint.png" }) {
       ...fluidImage
     }
     sopra: file(relativePath: { eq: "sopra.png" }) {
@@ -501,21 +427,20 @@ export const pageQuery = graphql`
     nils: file(relativePath: { eq: "nils.png" }) {
       ...fixedImage
     }
+    gic: file(relativePath: { eq: "gic_team.png" }) {
+      ...fluidImage
+    }
+    background_location: file(
+      relativePath: { eq: "background_locations.png" }
+    ) {
+      ...fluidImage
+    }
     allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {
           heading
           country
           applicationStart
-          applicationEnd
-          applicationLink
-        }
-      }
-    }
-    codeAtHome: allContentfulCodeAtHome {
-      edges {
-        node {
-          startDate
           applicationEnd
           applicationLink
         }

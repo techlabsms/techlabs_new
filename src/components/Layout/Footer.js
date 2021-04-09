@@ -1,6 +1,6 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
-import { graphql, useStaticQuery } from "gatsby"
+import CurrentYear from "../smallComponents/CurrentYear"
 
 // plugins
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
@@ -9,33 +9,17 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Language from "../language"
 
 // assets
-import Logo from "../../assets/tl-logo-white.svg"
+import Logo from "../../assets/tl-logo-white.png"
 import PayPal from "../../assets/paypal.svg"
 
 const Footer = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulLocationPage {
-        edges {
-          node {
-            heading
-            node_locale
-          }
-        }
-      }
-    }
-  `)
-  const locale = props.intl.locale
-
-  const { edges } = data.allContentfulLocationPage
-
   return (
     <>
       <CookieConsent
-        style={{ backgroundColor: "#fb1d5c", color: "white" }}
+        style={{ backgroundColor: "#fa1e5a", color: "white" }}
         location="top"
         buttonStyle={{
-          color: "#fb1d5c",
+          color: "#fa1e5a",
           borderRadius: "6px",
           backgroundColor: "white",
           padding: ".8rem 1.5rem",
@@ -44,7 +28,7 @@ const Footer = props => {
           color: "white",
           borderRadius: "6px",
           border: "2px solid white",
-          backgroundColor: "#fb1d5c",
+          backgroundColor: "#fa1e5a",
           padding: ".8rem 1.5rem",
         }}
         expires={90}
@@ -71,7 +55,8 @@ const Footer = props => {
               <img src={Logo} alt="TechLabs e.v." className="logo-footer" />
               <br />
               <p className="white-font my-3">We Build. Digital. Shapers.</p>
-              {/* <Language/> */}
+              <Language />
+              <br />
             </div>
             <div className="col-lg-8">
               <div className="row">
@@ -84,7 +69,8 @@ const Footer = props => {
                   <Link className="foot-a" to="/locations">
                     <FormattedMessage id="layout.locations" />
                   </Link>
-                  <ul className="footer-tl--subMenu">
+                  {/* commented out locations that where stretching the footer height */}
+                  {/* <ul className="footer-tl--subMenu">
                     {edges.map(
                       (location, index) =>
                         location.node.node_locale === locale && (
@@ -104,7 +90,8 @@ const Footer = props => {
                           </Link>
                         )
                     )}
-                  </ul>
+                  </ul> */}
+                  <br />
                   <Link className="foot-a" to="/faq">
                     <FormattedMessage id="footer.faq" />
                   </Link>
@@ -116,23 +103,20 @@ const Footer = props => {
                     <FormattedMessage id="layout.openPositions" />
                   </a>
                   <br />
-                </div>
-                <div className="col-lg-4">
                   <Link to="/program" className="noDec">
                     <h5 className="line-height-0 white-font my-2">
                       <FormattedMessage id="layout.program" />
                     </h5>
                   </Link>
-                  <br />
-                  <Link to="/program/local" className="noDec">
+                  <Link to="/program/local" className="foot-a">
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
-                  <Link to="/program/remote" className="noDec">
+                  <Link to="/program/remote" className="foot-a">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
-                  <br />
-                  <br />
+                </div>
+                <div className="col-lg-4">
                   <h5 className="line-height-0 white-font my-2">
                     <FormattedMessage id="footer.tracks" />
                   </h5>
@@ -176,7 +160,9 @@ const Footer = props => {
                 <img src={PayPal} alt="" className="mt-3" />
               </a>
             </div>
-            <p className="footer-tl--copy">&copy; TechLabs e.V. 2020</p>
+            <p className="footer-tl--copy">
+              &copy; TechLabs e. V. <CurrentYear />{" "}
+            </p>
           </div>
         </div>
       </div>

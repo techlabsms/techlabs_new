@@ -6,11 +6,10 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // assets
-import Slack from "../../assets/slack.png"
 import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
-import ux from "../../assets/UX.svg"
+import ux from "../../assets/ux-icon.png"
 
 class MobileNav extends Component {
   state = {
@@ -26,7 +25,7 @@ class MobileNav extends Component {
             <Link to="/locations" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="layout.locations"/>
+                  <FormattedMessage id="layout.locations" />
                 </h3>
               </li>
             </Link>
@@ -44,7 +43,7 @@ class MobileNav extends Component {
                 tabIndex={0}
               >
                 <h3 className="nav-link mobileNav--link text-center">
-                  <FormattedMessage id="layout.program"/>
+                  <FormattedMessage id="layout.program" />
                   <FontAwesomeIcon
                     icon={faChevronDown}
                     className="mr-3 mt-1 ml-4"
@@ -58,21 +57,27 @@ class MobileNav extends Component {
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li><FormattedMessage id="layout.program"/></li>
+                    <li>
+                      <FormattedMessage id="layout.program" />
+                    </li>
                   </Link>
                   <Link
                     to="/program/local"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4"><FormattedMessage id="layout.dsp"/></li>
+                    <li className="my-4">
+                      <FormattedMessage id="layout.dsp" />
+                    </li>
                   </Link>
                   <Link
                     to="/program/remote"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
-                    <li className="my-4"><FormattedMessage id="layout.codeathome"/></li>
+                    <li className="my-4">
+                      <FormattedMessage id="layout.codeathome" />
+                    </li>
                   </Link>
                   <hr />
                   <Link
@@ -81,8 +86,12 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ds} alt="data science" className="mr-3" />
-                      <FormattedMessage id="layout.ds"/>
+                      <img
+                        src={ds}
+                        alt="data science"
+                        className="mr-3 track-logo"
+                      />
+                      <FormattedMessage id="layout.ds" />
                     </li>
                   </Link>
                   <Link
@@ -91,8 +100,12 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={web} alt="web development" className="mr-3" />
-                      <FormattedMessage id="layout.webdev"/>
+                      <img
+                        src={web}
+                        alt="web development"
+                        className="mr-3 track-logo"
+                      />
+                      <FormattedMessage id="layout.webdev" />
                     </li>
                   </Link>
                   <Link
@@ -101,8 +114,8 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ai} alt="ai" className="mr-3" />
-                      <FormattedMessage id="layout.ai"/>
+                      <img src={ai} alt="ai" className="mr-3 track-logo" />
+                      <FormattedMessage id="layout.ai" />
                     </li>
                   </Link>
                   <Link
@@ -111,8 +124,12 @@ class MobileNav extends Component {
                     activeClassName="navLink--active"
                   >
                     <li className="my-4">
-                      <img src={ux} alt="ux design" className="mr-3" />
-                      <FormattedMessage id="layout.ux"/>
+                      <img
+                        src={ux}
+                        alt="ux design"
+                        className="mr-3 track-logo"
+                      />
+                      <FormattedMessage id="layout.ux" />
                     </li>
                   </Link>
                 </ul>
@@ -122,45 +139,28 @@ class MobileNav extends Component {
             <Link to="/about" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="navbar.about"/>
+                  <FormattedMessage id="navbar.about" />
                 </h3>
               </li>
             </Link>
 
-            <Link to="/blog" activeClassName="navLink--active">
+            <a
+              href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
+              activeClassName="navLink--active"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="navbar.blog"/>
+                  <FormattedMessage id="layout.openPositions" />
                 </h3>
               </li>
-            </Link>
-            {/*<Link to="/apply" activeClassName="navLink--active">
+            </a>
+            <Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">Apply Now</h3>
               </li>
-            </Link>*/}
-            <br />
-            <li className="nav-item mt-2">
-              <div className="btn-slack_mobil d-flex align-items-center justify-content-center">
-                <a
-                  href="https://ms-techlabs.slack.com"
-                  target="_blank"
-                  className="noDec"
-                  rel="noopener noreferrer"
-                >
-                  <div className="row">
-                    <div className="col-2">
-                      <img src={Slack} alt="" className="slack-icon" />
-                    </div>
-                    <div className="col-10 text-center">
-                      <h4 className="btn-slack_mobil-h4">
-                        <FormattedMessage id="navbar.slack"/>
-                      </h4>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </li>
+            </Link>
           </ul>
         </div>
       </>
