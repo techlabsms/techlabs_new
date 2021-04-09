@@ -68,7 +68,7 @@
   "ai.more.LeftImageSection.heading": "More About the Track",
   "ai.more.LeftImageSection.subheading": "Get to know neural networks and work with the background data in our individualized tracks!",
   "ai.more.LeftImageSection.text": "The AI track comes in several versions. You can combine the deep learning part with some refreshment of your Python and machine learning knowledge. Despite this refreshment, you should already have some knowledge in Python and machine learning. You will acquire theoretical knowledge as well as practical experience. The primary applications are image classification, object detection and text mining. Furthermore, you will apply neural networks to detect objects in an image and classify those as well as find interesting patterns in text data (for example amazon reviews). Aside from the application, the track contains information about the most important mathematical foundation of neural networks. This includes back-propagation, gradient descent, and vectorizing of word.",
-  
+
   "ux.headline.ProgrammHero.headingFirst": "UX",
   "ux.headline.ProgrammHero.headingSecond": " Design",
   "ux.headline.ProgrammHero.intro": "Inform yourself here about our UX Design track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate.",
@@ -86,7 +86,7 @@
   "ux.more.LeftImageSection.heading": "More about the Track",
   "ux.more.LeftImageSection.subheading": "Great design is born, nurtured, and grown – all through a systematic, learnable process!",
   "ux.more.LeftImageSection.text": "Within the track, you will explore the process of taking a basic concept, grounded in user needs, and developing it into a design that will address those needs. You will gain hands-on experience with techniques such as prototyping, scenario and persona development as well as wireframing that will help you transform your understanding of what your users need into a compelling user experience. Additionally, you turn your ideas into interactive prototypes that can be tested with prospective users and iteratively turned into a high quality design.",
-  
+
   "web.headline.ProgrammHero.headingFirst": "Web",
   "web.headline.ProgrammHero.headingSecond": " Development",
   "web.headline.ProgrammHero.intro": "Inform yourself here about our Web Development track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks, local events, and professional mentoring. Within six months you will finish a tech project and be rewarded with our Digital Shaper certificate.",
@@ -104,7 +104,7 @@
   "web.more.LeftImageSection.heading": "More about the Track",
   "web.more.LeftImageSection.subheading": "Get to know the technologies and frameworks than can be used for Web Development.",
   "web.more.LeftImageSection.text": "Our Web Development track is suited for novices and advanced beginners. As a beginner you will be introduced to the basic principles of computer science. You will also learn more about the tools and technologies that are required for creating web pages and applications. To be more specific, you will acquire skills in HTML5, Cascading Style Sheets (CSS), and JavaScript. Additionally, you will also learn more about popular frameworks and get familiar with the differences between the terms frontend and backend. At the end, you are able to develop full-stack, both frontend and backend, applications! As an advanced beginner you will improve your Web Development techniques, your programming skills in JavaScript and you will learn to use Node.JS to program blazingly fast applications. If you previously gained some experience in Data Science you will also learn how to efficiently display that data using D3.js.",
-  
+
   "quote.headofmarketing.heading": "Helping Others",
   "quote.headofmarketing.subheading": "Make a difference",
   "quote.headofmarketing.text": "Helping others to develop the skills they need in order to make a difference and seeing them succeed is one of the most rewarding experiences. That’s why we are not asking for anything in return and work on a voluntary basis.",
@@ -138,7 +138,7 @@
   "dataScience.more.LeftImageSection.heading": "More about the Track",
   "dataScience.more.LeftImageSection.subheading": "Learn data science - hands-on or theory - R or Python - your choice",
   "dataScience.more.LeftImageSection.text": "It doesn't matter if you are a beginner or already have some experience. The program is designed so that you can choose which level of experience you want to start with, whether you want to do hands-on or theory courses and whether you prefer to program in Python or R. You decide. Both - the hands-on as well as theoretical - tracks include basic programming exercises at first to get to know the chosen programming language. The hands-on track is made for people who want to learn how to quickly apply machine learning algorithms to solve problems without a dive into the mathematical background. The theory track includes materials and exercises which covers the theoretical (mathematical) background of several algorithms like linear and logistic regression, neural networks or dimensionality reduction. The tracks also include TechLabs Notebooks where you can deepen the knowlegde and practice the skills you learned during the online courses.",
-  
+
   "programmHero.info.time.heading": "Time",
   "programmHero.info.time.first": "6 months program",
   "programmHero.info.time.second": "5 hours per week",
@@ -517,5 +517,8 @@
   "talk.where": "Where?",
   "talk.interested": "Interested?",
   "talk.notified": "Get notified about future TechLabs Talks",
-  "talk.register": "Register here"
+  "talk.register": "Register here",
+  "talk.contact": "Get in contact",
+  "talk.contact.heading": "Get in contact with the companies",
+  "talk.contact.subheading": "Find your next dream job in tech"
 }
