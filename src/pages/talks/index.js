@@ -118,7 +118,7 @@ const Index = ({ data }) => {
                   alt="picnic"
                   width="50px"
                 />
-                <h4 className="my-3">Christina Cioric</h4>
+                <h4 className="my-3">Cristina Cioric</h4>
                 <a
                   href="mailto:cristina.ciorici@teampicnic.com"
                   className="talk__hr"
