@@ -55,12 +55,9 @@ class location extends Component {
     )
 
     const now = dayjs(Date.now())
-    const isCurrentlyOpen = () => {
-      return (
-        now.isAfter(dayjs(location.applicationStart)) &&
-        now.isBefore(dayjs(location.applicationEnd))
-      )
-    }
+    const isCurrentlyOpen =
+      now.isAfter(dayjs(location.applicationStart)) &&
+      now.isBefore(dayjs(location.applicationEnd))
 
     return (
       <Layout>
@@ -326,33 +323,35 @@ class location extends Component {
                         ? `url(${location.officeImg.file.url})`
                         : null,
                     }}
-                  >
-                  </div>
-                  
+                  ></div>
                 </div>
                 {location.officeText ? (
                   <div className="col-md-5">
                     <div className="office--card">
-                    <h3 className="office--heading">
-                      <FormattedMessage id="location.office.visit" />{" "}
-                      {location.officeName}
-                    </h3>
-                    <div className="row mt-3">
-                      <img src={pin2} alt="pin" className="h-75 mx-3" />
-                      <p className=" office--smalltext">
-                        {location.officeAdress}
-                      </p>
+                      <h3 className="office--heading">
+                        <FormattedMessage id="location.office.visit" />{" "}
+                        {location.officeName}
+                      </h3>
+                      <div className="row mt-3">
+                        <img src={pin2} alt="pin" className="h-75 mx-3" />
+                        <p className=" office--smalltext">
+                          {location.officeAdress}
+                        </p>
+                      </div>
+                      <div className="row">
+                        <img
+                          src={getDirection}
+                          alt="pin"
+                          className="h-75 mx-3"
+                        />
+                        <a
+                          href={location.officeLink}
+                          className="d-inline noDec office--smalltext"
+                        >
+                          <FormattedMessage id="location.office.directions" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="row">
-                      <img src={getDirection} alt="pin" className="h-75 mx-3" />
-                      <a
-                        href={location.officeLink}
-                        className="d-inline noDec office--smalltext"
-                      >
-                        <FormattedMessage id="location.office.directions" />
-                      </a>
-                    </div>
-                  </div>
                     <div className="px-2 d-flex">
                       <p className="align-self-center justify-content-center office--text">
                         {location.officeText.json.content[0].content[0].value}
