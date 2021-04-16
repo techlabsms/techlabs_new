@@ -85,7 +85,7 @@ const Index = ({ data }) => {
             allowfullscreen
           ></iframe>
         </div>
-        <button
+        {/* <button
           class="btn btn-primary my-5"
           onClick={() => {
             setChatOpen(!chatOpen)
@@ -101,7 +101,7 @@ const Index = ({ data }) => {
               frameborder="0"
             ></iframe>
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="container my-5">
