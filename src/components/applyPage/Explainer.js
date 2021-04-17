@@ -102,9 +102,9 @@ const Explainer = () => {
             <p>
               <FormattedMessage id={"applypage.steps.first.text"} />
               <br />
-              <Link to="/program">
-                <FormattedMessage id={"applypage.steps.first.link"} />
-              </Link>
+                <Link to="/program">
+                  <FormattedMessage id={"applypage.steps.first.link"} />
+                </Link>
             </p>
           </div>
           <div className="c-explainer__text c-explainer__text--two">
