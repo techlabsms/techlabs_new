@@ -182,7 +182,9 @@ const NewApply = props => {
                 available,
                 link,
               })
-              setCurrentStep(currentStep + 1)
+              if (available) {
+                setCurrentStep(currentStep + 1)
+              }
             }}
             clickedCityValue={value}
             countries={allCountries}
