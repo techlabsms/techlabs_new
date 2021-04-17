@@ -283,7 +283,7 @@
   "location.newsletter.button": "Anmeldung",
 
   "applypage.choose.your.city.title": "Wähle deine Stadt",
-  "applypage.choose.your.city.subtitle": "Momentan sind wir in {count} Städten weltweit vertreten!",
+  "applypage.choose.your.city.subtitle": "Momentan sind wir in {count} Städten weltweit vertreten! Bitte wähle den Standort aus, bei dem du dich bewerben möchtest.",
   "programs.heading.1": "Unsere ",
   "programs.heading.2": "Lernprogramme",
   "programs.subheading": "Unser Programm bietet dir die effektivste Möglichkeit, Domänenwissen im technischen Bereich aufzubauen. Unser Blended-Learning-Konzept kombiniert Online-Lernen, Projektarbeit und TechLabs Community Events. Entdecke unser Programm jetzt.",
