@@ -101,7 +101,7 @@ const ApplyCheckout = ({
           {stepThree}
         </div>
       ) : null}
-      {isMobile && currentStep !== 3 ? (
+      {isMobile && currentStep === 1 ? (
         <div className="container mt-5 text-center">
           <button
             onClick={() => {
@@ -115,7 +115,7 @@ const ApplyCheckout = ({
         </div>
       ) : (
         <>
-          {currentStep !== 3 ? (
+          {currentStep === 1 ? (
             <div className="container mt-5">
               <button
                 onClick={() => handleClick(currentStep, "UP")}
