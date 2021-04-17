@@ -6,8 +6,8 @@ const TypeformEmbedd = ({ url, isMobile }) => {
   return (
     <div className="container relative c-typformEmbedd">
       <Heading
-        heading="Requirements"
-        subheading="What we are looking for in an applicant"
+        heading="Application Form"
+        subheading="Ready to apply? Please fill in the form below."
       />
 
       <ReactTypeformEmbed
