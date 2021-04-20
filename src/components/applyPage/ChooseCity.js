@@ -13,9 +13,12 @@ const ChooseCity = ({
   countries,
   handleClick,
   clickedCityValue,
+  locale,
 }) => {
   const [countryOptions, setCountryOptions] = useState([])
-  const [choosenCountry, setChoosenCountry] = useState("Brazil")
+  const [choosenCountry, setChoosenCountry] = useState(
+    locale === "de" ? "Brasilien" : "Brazil"
+  )
 
   countries.forEach(c => {
     const { country } = c.node
