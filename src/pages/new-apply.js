@@ -191,7 +191,19 @@ const NewApply = props => {
           />
         }
         stepThree={
-          <TypeFormEmbedd url={value.link} isMobile={windowWidth < 768} />
+          <TypeFormEmbedd 
+            heading={
+              <FormattedMessage
+              id={"applypage.typeformembedd.heading"}
+            />
+            }
+            subheading={
+              <FormattedMessage
+              id={"applypage.typeformembedd.subheading"}
+            />
+            }
+            url={value.link} isMobile={windowWidth < 768} 
+          />
         }
       ></ApplyCheckout>
       <Faq>

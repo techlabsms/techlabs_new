@@ -2,12 +2,12 @@ import React from "react"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
-const TypeformEmbedd = ({ url, isMobile }) => {
+const TypeformEmbedd = ({ url, isMobile, heading, subheading }) => {
   return (
     <div className="container relative c-typformEmbedd">
       <Heading
-        heading="Application Form"
-        subheading="Ready to apply? Please fill in the form below."
+        heading={heading}
+        subheading={subheading}
       />
 
       <div
