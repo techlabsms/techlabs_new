@@ -63,7 +63,7 @@ const NewApply = props => {
         isMobile={windowWidth < 768}
         stepOne={
           <div className="container d-flex justify-content-center">
-            <div className="pt-5 mt-5">
+            <div className="pt-5 mt-3">
               <Heading
                 heading={
                   <FormattedMessage id={"applypage.checkout.first.heading"} />
@@ -191,26 +191,25 @@ const NewApply = props => {
           />
         }
         stepThree={
-          <TypeFormEmbedd 
+          <TypeFormEmbedd
             heading={
-              <FormattedMessage
-              id={"applypage.typeformembedd.heading"}
-            />
+              <FormattedMessage id={"applypage.typeformembedd.heading"} />
             }
             subheading={
-              <FormattedMessage
-              id={"applypage.typeformembedd.subheading"}
-            />
+              <FormattedMessage id={"applypage.typeformembedd.subheading"} />
             }
-            url={value.link} isMobile={windowWidth < 768} 
+            url={value.link}
+            isMobile={windowWidth < 768}
           />
         }
       ></ApplyCheckout>
-      <Faq>
-        <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
-        <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
-        <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
-      </Faq>
+      <div className="mt-5 pt-5">
+        <Faq>
+          <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
+          <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
+          <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
+        </Faq>
+      </div>
     </Layout>
   )
 }

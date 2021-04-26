@@ -53,7 +53,7 @@ const ChooseCity = ({
   })
 
   return (
-    <div className="container">
+    <div className="container pt-5 mt-3">
       <Heading heading={heading} subheading={subheading} />
       <Dropdown
         options={countryOptions}
