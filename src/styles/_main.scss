@@ -20,6 +20,7 @@
 @import "./program/threeComponents";
 @import "./applyPage/process";
 @import "./applyPage/explainer";
+@import "./applyPage/typeformEmbedd";
 @import "./locations/team";
 @import "./locations/news";
 @import "./locations/follow";
@@ -620,8 +621,8 @@ body {
 
 .highlighted {
   font-weight: bold;
-  padding-left: .2rem !important;
-  padding-right: .2rem !important;
+  padding-left: 0.2rem !important;
+  padding-right: 0.2rem !important;
   background-color: #fee9ef;
   color: $color-p;
   width: 80%;
