@@ -118,35 +118,32 @@ const ApplyCheckout = ({
           {currentStep === 1 ? (
             <div className="container mt-5">
               <button
-                onClick={() => handleClick(currentStep, "UP")}
-                className={
-                  currentStep === 1
-                    ? "c-tracker__btn--disabled"
-                    : "c-tracker__btn"
-                }
+                onClick={() => {
+                  if (city !== "" || currentStep === 1) {
+                    handleClick(currentStep, "DOWN")
+                  }
+                }}
+                className="c-tracker__btn c-tracker__btn--right"
               >
+                <span>Next Step</span>
+                <img src={arrowDown} alt="arrow-down" />
+              </button>
+            </div>
+          ) : (
+            <div className="container mt-5">
+              <button
+                onClick={() => handleClick(currentStep, "UP")}
+                className="c-tracker__btn c-tracker__btn--right"
+              >
+                <span>Step back</span>
                 <img
                   src={arrowDown}
                   alt="arrow-down"
                   className="c-tracker__img"
                 />
               </button>
-              <button
-                onClick={() => {
-                  if (city !== "" || currentStep === 1) {
-                    handleClick(currentStep, "DOWN")
-                  }
-                }}
-                className={
-                  city !== "" || currentStep !== 1
-                    ? "c-tracker__btn--disabled--right c-tracker__btn--right"
-                    : "c-tracker__btn c-tracker__btn--right"
-                }
-              >
-                <img src={arrowDown} alt="arrow-down" />
-              </button>
             </div>
-          ) : null}
+          )}
         </>
       )}
     </section>
