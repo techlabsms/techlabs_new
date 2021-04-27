@@ -13,9 +13,8 @@ class imprint extends Component {
             Betreiber und Kontakt: <br />
             <br />
             <h6>TechLabs e. V.</h6>
-            c/o David Middelbeck <br />
-            Goebenstr. 14 <br />
-            48151 Münster <br />
+            Hafenweg 16<br />
+            48155 Münster <br />
             <br />
             E-Mail-Adresse: info@techlabs.org <br />
             <br />
