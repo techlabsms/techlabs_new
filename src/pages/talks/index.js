@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import React, { useEffect, useState } from "react"
 import Layout from "../../components/Layout/Layout"
+import OpenPositions from "../../components/talks/OpenPositions"
 
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
@@ -103,7 +104,7 @@ const Index = ({ data }) => {
           </div>
         )} */}
       </div>
-
+      <OpenPositions> </OpenPositions>
       <div className="container my-5">
         <div className="row">
           <div className="col">
