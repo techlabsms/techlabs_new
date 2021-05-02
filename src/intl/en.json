@@ -329,6 +329,8 @@
   "applypage.text.start_now": "Start now",
   "applypage.typeformembedd.heading": "Application Form",
   "applypage.typeformembedd.subheading": "Ready to apply? Please fill in the form below.",
+  "applypage.typeformembedd.notice": "If you have problems filling out the questionary, click",
+  "applypage.typeformembedd.link": "here",
 
   "applypage.headline": "Application",
   "applypage.subheadline": "Apply now for one of our Bootcamps",

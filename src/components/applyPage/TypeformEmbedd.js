@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "react-intl"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
@@ -28,14 +29,14 @@ const TypeformEmbedd = ({ url, isMobile, heading, subheading }) => {
               top: "105%",
             }}
           >
-            Open the form in a new Tab{" "}
+            <FormattedMessage id={"applypage.typeformembedd.notice"} />
             <a
               href={url}
               target="_blank"
               rel="noopener noreferrer"
               className="noDec navLink--active"
             >
-              Open Typeform
+              <FormattedMessage id={"applypage.typeformembedd.link"} />
             </a>
           </p>
         </div>

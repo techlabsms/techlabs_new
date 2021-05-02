@@ -105,6 +105,8 @@
   "applypage.text.start_now": "Jetzt Beginnen",
   "applypage.typeformembedd.heading": "Bewerbungsformular",
   "applypage.typeformembedd.subheading": "Fülle bitte das Formular aus, um dich zu bewerben.",
+  "applypage.typeformembedd.notice": "Solltest du Probleme haben das Formular zu öffnen klicke bitte",
+  "applypage.typeformembedd.link": "hier",
 
   "dataScience.headline.ProgrammHero.headingFirst": "Data",
   "dataScience.headline.ProgrammHero.headingSecond": " Science",
