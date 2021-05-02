@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
@@ -36,6 +36,7 @@ const TypeformEmbedd = ({ url, isMobile, heading, subheading }) => {
               rel="noopener noreferrer"
               className="noDec navLink--active"
             >
+              {" "}
               <FormattedMessage id={"applypage.typeformembedd.link"} />
             </a>
           </p>
