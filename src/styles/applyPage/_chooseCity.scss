@@ -12,6 +12,8 @@
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
+    position: relative;
+    overflow: hidden;
 
     &__disabled {
       background: lightgray;
@@ -89,4 +91,17 @@
     background-color: $color-p;
     color: white;
   }
+}
+
+.chooseCity--card__badge {
+  position: absolute;
+  background-color: $color-p;
+  top: 0;
+  right: 0;
+  padding: 1px 0px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: rotate(45deg) translate(25px, -10px);
 }
