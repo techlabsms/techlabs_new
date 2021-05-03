@@ -14,6 +14,7 @@ const ChooseCity = ({
   countries,
   handleClick,
   clickedCityValue,
+  locale,
 }) => {
   let width = 0
 
@@ -22,6 +23,7 @@ const ChooseCity = ({
   }
 
   const [countryOptions, setCountryOptions] = useState([])
+
   const [choosenCountry, setChoosenCountry] = useState("Brazil")
   const [windowWidth, setWindowWidth] = useState(width)
   let now = dayjs(Date.now())
@@ -50,6 +52,11 @@ const ChooseCity = ({
       }
     }
   }
+
+  const [choosenCountry, setChoosenCountry] = useState(
+    locale === "de" ? "Brasilien" : "Brazil"
+  )
+
 
   countries.forEach(c => {
     const { country } = c.node
