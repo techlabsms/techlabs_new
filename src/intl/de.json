@@ -201,7 +201,7 @@
 
   "landingpage.button.program": "Programm",
   "landingpage.button.about": "Über uns",
-  "landingpage.button.read_more": "Mehr dazu",
+  "landingpage.button.read_more": "Artikel lesen",
   "landingpage.digital.shaper.part1": "Lerne Data Science, Künstliche Intelligenz (AI), Web Development und User Experience Design mit Hilfe unseres revolutionären Digital Shaper-Programms, welches Online-Lernen, Projektarbeit in Kleingruppen sowie gemeinsame Events an einem unserer Standorte kombiniert ",
   "landingpage.digital.shaper.part2": "- und das völlig kostenlos für alle!",
   "landingpage.location.discover": "> Entdecke unsere Standorte",
@@ -276,7 +276,7 @@
   "location.office.visit": "Besuch uns hier:",
   "location.office.directions": "Anfahrtsbeschreibung",
   "location.partners.heading": "Unsere Partner",
-  "location.partners.subheading": "Unser Standort wir stolz unterstützt von",
+  "location.partners.subheading": "Unser Standort wird stolz unterstützt von",
   "location.newsletter.title": "Willst du wissen, wann die nächste Bewerbungsphase beginnt?",
   "location.newsletter.subtitle": "Melde dich für unseren Newsletter an, um benachrichtigt zu werden!",
   "location.newsletter.name.label": "Name*",
@@ -524,5 +524,8 @@
   "talk.where": "Wo?",
   "talk.interested": "Interessiert?",
   "talk.notified": "Werde benachrichtigt über zukünftige TechLabs Talks",
-  "talk.register": "Hier registrieren"
+  "talk.register": "Hier registrieren",
+  "talk.contact": "Kontaktieren",
+  "talk.contact.heading": "Tritt mit den Firmen in Kontakt",
+  "talk.contact.subheading": "Finde deinen nächsten Traumjob"
 }

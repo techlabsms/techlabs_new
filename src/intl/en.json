@@ -205,7 +205,7 @@
 
   "landingpage.button.program": "Program",
   "landingpage.button.about": "About",
-  "landingpage.button.read_more": "Read more",
+  "landingpage.button.read_more": "Read the article",
   "landingpage.digital.shaper.part1": "Learn Data Science, Artificial Intelligence, Web Development and User Experience Design by means of our pioneering Digital Shaper program that combines online learning, project work as well as community events at one of our locations",
   "landingpage.digital.shaper.part2": " - and completely free for everyone!",
   "landingpage.googlechallenge.heading": "Award-Winning Concept",
@@ -544,5 +544,8 @@
   "talk.where": "Where?",
   "talk.interested": "Interested?",
   "talk.notified": "Get notified about future TechLabs Talks",
-  "talk.register": "Register here"
+  "talk.register": "Register here",
+  "talk.contact": "Get in touch",
+  "talk.contact.heading": "Get in touch with the companies",
+  "talk.contact.subheading": "Find your next dream job in tech"
 }

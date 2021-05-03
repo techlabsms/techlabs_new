@@ -57,6 +57,10 @@ You found something that has to be different? Something is broken? Please report
 
 ![lighthouse staging](https://github.com/techlabsms/techlabs_new/workflows/lighthouse%20staging/badge.svg)
 
+## Passbolt 
+
+If you want to work on the website please consider to become a part of the techlabs organisation. Currently only TechLabs-Members could support this project. Either message <a href="mailto:richard.menning@techlabs.org">Richard</a> or get in contact with our HR department. 
+
 ## Questions?
 
 Please feel free to write a message to <a href="mailto:richard.menning@techlabs.org">Richard</a>

@@ -17,7 +17,7 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
       <div className="row mt-4">
         {partners &&
           partners.map(partner => (
-            <div className="col-md-3" key={partner.name}>
+            <div className="col-md-3 mt-3" key={partner.name}>
               <a
                 href={partner.partnerLink}
                 target="_blank"

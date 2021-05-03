@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import LearnMore from "../../components/landingpage/learnMore"
+import Heading from "../../components/smallComponents/Heading"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
@@ -15,6 +16,7 @@ const Index = ({ data }) => {
       setWidth(window.innerWidth)
     }
   }, [setWidth])
+
   return (
     <Layout>
       <div className="container talk py-5">
@@ -32,6 +34,12 @@ const Index = ({ data }) => {
               <div className="col-md-6">
                 <h5>{data.content.speakers[1].name}</h5>
                 <h5 className="talk__tl">{data.content.speakers[1].company}</h5>
+              </div>
+            </div>
+            <div className="row mb-4">
+              <div className="col talk__speaker--names">
+                <h5>Maren Greywe</h5>
+                <h5 className="talk__tl">Your Host</h5>
               </div>
             </div>
             <p className="talk__instruction">
@@ -77,7 +85,7 @@ const Index = ({ data }) => {
             allowfullscreen
           ></iframe>
         </div>
-        <button
+        {/* <button
           class="btn btn-primary my-5"
           onClick={() => {
             setChatOpen(!chatOpen)
@@ -93,8 +101,54 @@ const Index = ({ data }) => {
               frameborder="0"
             ></iframe>
           </div>
-        )}
+        )} */}
       </div>
+
+      <div className="container my-5">
+        <div className="row">
+          <div className="col">
+            <Heading
+              heading={<FormattedMessage id={"talk.contact.heading"} />}
+              subheading={<FormattedMessage id={"talk.contact.subheading"} />}
+            ></Heading>
+            <div className="row">
+              <div className="col-md-6 my-4 d-flex flex-column align-items-center text-center">
+                <img
+                  src="https://www.picnic.app/static/logo-af01e33d873e4fcaf56b8c86737bb43f.svg"
+                  alt="picnic"
+                  width="50px"
+                />
+                <h4 className="my-3">Cristina Cioric</h4>
+                <a
+                  href="mailto:cristina.ciorici@teampicnic.com"
+                  className="talk__hr"
+                >
+                  <FormattedMessage id={"talk.contact"}>
+                    Get in contact
+                  </FormattedMessage>
+                </a>
+              </div>
+              <div className="col-md-6 my-4 d-flex flex-column align-items-center text-center">
+                <img
+                  src="https://image.flaschenpost.de/CI/fp-logo.png"
+                  alt="flapo"
+                  width="50px"
+                />
+                <h4 className="my-3">Philipp Epple</h4>
+                <a
+                  className="talk__hr"
+                  href="mailto:philipp.epple@flaschenpost.de"
+                >
+                  <FormattedMessage id={"talk.contact"}>
+                    Get in contact
+                  </FormattedMessage>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container-fluid talk__newsletter">
         <div className="container">
           <div className="row py-5">
