@@ -15,7 +15,36 @@ const ChooseCity = ({
   clickedCityValue,
 }) => {
   const [countryOptions, setCountryOptions] = useState([])
-  const [choosenCountry, setChoosenCountry] = useState("Brazil")
+  const [choosenCountry, setChoosenCountry] = useState(
+    locale === "de" ? "Brasilien" : "Brazil"
+  )
+  const [windowWidth, setWindowWidth] = useState(width)
+  let now = dayjs(Date.now())
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
+
+  const isCurrentlyOpen = location => {
+    if (location.node.applicationStart === null) {
+      return false
+    } else {
+      if (now.isAfter(dayjs(location.node.applicationStart))) {
+        if (now.isAfter(dayjs(location.node.applicationEnd))) {
+          return false
+        }
+      } else {
+        return true
+      }
+    }
+  }
 
   countries.forEach(c => {
     const { country } = c.node
