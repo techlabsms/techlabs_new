@@ -192,7 +192,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                 )}
               </div>
             </div>
-            {available && <div className="chooseCity--card__badge">OPEN</div>}
+            {open && available && (
+              <div className="chooseCity--card__badge">OPEN</div>
+            )}
           </div>
         </a>
       </div>
