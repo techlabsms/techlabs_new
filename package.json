@@ -61,6 +61,7 @@
     "react-modal": "^3.11.2",
     "react-overdrive": "0.0.10",
     "react-responsive-modal": "^4.0.1",
+    "react-swipeable": "^6.1.0",
     "react-transition-group": "^4.4.1",
     "react-typeform-embed": "^0.2.1",
     "react-visibility-sensor": "^5.1.1",

@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 // components
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
 import Heading from "../smallComponents/Heading"
+import dayjs from "dayjs"
 
 // assets
 
@@ -15,10 +16,47 @@ const ChooseCity = ({
   clickedCityValue,
   locale,
 }) => {
+  let width = 0
+
+  if (typeof window !== `undefined`) {
+    width = window.innerWidth
+  }
+
   const [countryOptions, setCountryOptions] = useState([])
+
+  const [choosenCountry, setChoosenCountry] = useState("Brazil")
+  const [windowWidth, setWindowWidth] = useState(width)
+  let now = dayjs(Date.now())
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
+
+  const isCurrentlyOpen = location => {
+    if (location.node.applicationStart === null) {
+      return false
+    } else {
+      if (now.isAfter(dayjs(location.node.applicationStart))) {
+        if (now.isAfter(dayjs(location.node.applicationEnd))) {
+          return false
+        }
+      } else {
+        return true
+      }
+    }
+  }
+
   const [choosenCountry, setChoosenCountry] = useState(
     locale === "de" ? "Brasilien" : "Brazil"
   )
+
 
   countries.forEach(c => {
     const { country } = c.node
@@ -30,15 +68,25 @@ const ChooseCity = ({
   })
   const dropdown_style = {
     marginBottom: "1em",
-    width: "25%",
+    width: windowWidth < 768 ? "100%" : "25%",
   }
 
   const filteredCountries = countries.filter(locations => {
     return locations.node.country.toLowerCase() === choosenCountry.toLowerCase()
   })
 
+  const sortedCountries = filteredCountries.sort((a, b) => {
+    if (isCurrentlyOpen(a) && isCurrentlyOpen(b)) {
+      return -1
+    } else if (isCurrentlyOpen(a)) {
+      return -1
+    } else {
+      return 1
+    }
+  })
+
   return (
-    <div className="container">
+    <div className="container pt-5 mt-3">
       <Heading heading={heading} subheading={subheading} />
       <Dropdown
         options={countryOptions}
@@ -46,7 +94,7 @@ const ChooseCity = ({
         onSelect={option => setChoosenCountry(option)}
       />
       <div className="row">
-        {filteredCountries.map(country => (
+        {sortedCountries.map(country => (
           <ApplyCard
             cityValues={country.node}
             key={country.node.heading}

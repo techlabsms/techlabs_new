@@ -1,26 +1,21 @@
 import React from "react"
 
-const ApplicationHero = ({ headingFirst, intro, background }) => {
+const ApplicationHero = ({ heading, subheading, text }) => {
   return (
-    <>
-      <section
-        className="applicationHero--hero pb-5"
-        style={{
-          backgroundImage: `url(${background})`,
-        }}
-      >
-        <div className="container h-100" />
+    <section>
+      <div className="container">
         <div className="row">
-          <div className="col-0 col-md-7" />
-          <div className="col-12 col-md-5 text-justify pr-5">
-            <h2 className="applicationHero--heading applicationHero--highlighted">
-              {headingFirst}
+          <div className="col-md-6">
+            <h2 className="c-applicationHero__heading">
+              <span className="highlighted">{heading}</span>
             </h2>
-            <p className="applicationHero--intro">{intro}</p>
+            <h5 className="c-applicationHero__subheading">{subheading}</h5>
+            <div className="section-divider" />
+            <p>{text}</p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
 
