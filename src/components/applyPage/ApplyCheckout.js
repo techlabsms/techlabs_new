@@ -115,7 +115,7 @@ const ApplyCheckout = ({
         </div>
       ) : (
         <>
-          {currentStep === 1 ? (
+          {currentStep === 1 && (
             <div className="container mt-5">
               <button
                 onClick={() => {
@@ -129,7 +129,8 @@ const ApplyCheckout = ({
                 <img src={arrowDown} alt="arrow-down" />
               </button>
             </div>
-          ) : (
+          )}
+          {currentStep === 2 && (
             <div className="container mt-5">
               <button
                 onClick={() => handleClick(currentStep, "UP")}
