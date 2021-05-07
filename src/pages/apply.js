@@ -175,14 +175,14 @@ const Apply = props => {
               />
             }
             locale={intl.locale}
-            handleClick={(isClicked, value, available, link) => {
+            handleClick={(isClicked, value, available, open, link) => {
               setValue({
                 isClicked,
                 cityValue: value,
                 available,
                 link,
               })
-              if (available) {
+              if (available && open) {
                 setCurrentStep(currentStep + 1)
               }
             }}
