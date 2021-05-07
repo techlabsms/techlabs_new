@@ -34,7 +34,8 @@ const Footer = props => {
         expires={90}
         enableDeclineButton={true}
         declineButtonText="I decline"
-        setDeclineCookie={false}
+        setDeclineCookie={true}
+        cookieName="gatsby-gdpr-google-tagmanager"
       >
         <FormattedMessage id="footer.cookies" />{" "}
         <span role="img" aria-label="cookie">
