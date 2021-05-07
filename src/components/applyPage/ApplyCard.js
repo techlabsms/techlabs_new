@@ -45,9 +45,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
         <a href="#requirements" className="noDec aNone w-100">
           <div
             className={
-              isClicked && clickedCityValue === cityValues.heading.toLowerCase()
-                ? "chooseCity--clickedCard h-100"
-                : "chooseCity--card h-100"
+              available && open
+                ? "chooseCity--card h-100"
+                : "chooseCity--card chooseCity--card__disabled h-100"
             }
             onClick={() => {
               setIsClicked(!isClicked)
@@ -55,6 +55,7 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                 !isClicked,
                 cityValues.heading.toLowerCase(),
                 available,
+                open,
                 cityValues.applicationLink
               )
             }}
@@ -192,6 +193,9 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                 )}
               </div>
             </div>
+            {open && available && (
+              <div className="chooseCity--card__badge">OPEN</div>
+            )}
           </div>
         </a>
       </div>

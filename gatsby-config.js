@@ -34,18 +34,15 @@ module.exports = {
     `@contentful/gatsby-transformer-contentful-richtext`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        id: `GTM-T9RV4L2`,
-
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: `gatsby` },
+        googleTagManager: {
+          trackingId: "GTM-T9RV4L2", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-tagmanager", // default
+          dataLayerName: "gatsby", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
       },
     },
     {
