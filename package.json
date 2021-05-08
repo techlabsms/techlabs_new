@@ -4,7 +4,13 @@
   "description": "The official website for techlabs global",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Richard Menning",
+  "author": "TechLabs e.V.",
+  "contributors": [
+    "Richard Menning <richard.menning@techlabs.org>",
+    "Paola Barboglio <paola.barboglio@techlabs.org",
+    "Pia Schürmann <pia.schuermann@techlabs.org>",
+    "Luca Schnitter <luca.schnitter@techlabs.org>"
+  ],
   "scripts": {
     "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
@@ -12,7 +18,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public",
     "i18n": "node ./translationRunner.js"
   },
   "dependencies": {
