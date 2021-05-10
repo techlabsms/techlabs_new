@@ -200,6 +200,7 @@ const Apply = props => {
             }
             url={value.link}
             isMobile={windowWidth < 768}
+            city={value.cityValue}
           />
         }
       ></ApplyCheckout>
