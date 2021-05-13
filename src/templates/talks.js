@@ -11,6 +11,7 @@ import Heading from "../components/smallComponents/Heading"
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
   const [chatOpen, setChatOpen] = useState(false)
+  const hrmailto = "mailto:"
   
   useEffect(() => {
     if (typeof window !== `undefined`) {
@@ -107,7 +108,7 @@ const Index = ({ data }) => {
       <OpenPositions
         image={data.content.openPositions[0].companyIconAlternativeLink}
         jobName={data.content.openPositions[0].openPosition}
-        jobLink={data.content.openPositions[0].positionLink}
+        /*jobLink={data.content.openPositions[0].positionLink}*/
       > 
       </OpenPositions>
       <div className="container my-5">
@@ -124,9 +125,9 @@ const Index = ({ data }) => {
                   alt="picnic"
                   width="50px"
                 />
-                <h4 className="my-3">Cristina Cioric</h4>
+                <h4 className="my-3">{data.content.hrContacts[0].hrName}</h4>
                 <a
-                  href="mailto:cristina.ciorici@teampicnic.com"
+                  href={`${hrmailto}${data.content.hrContacts[0].hrMail}`}
                   className="talk__hr"
                 >
                   <FormattedMessage id={"talk.contact"}>
@@ -194,7 +195,12 @@ export const fluidImage = graphql`
     }
   }
 `
-
+/*
+wegen error rausgenommen:
+positionLink {
+  positionLink
+}
+*/
 export const pageQuery = graphql`
   query($slug: String!, $locale: String) {
     content: contentfulTalksPage(
@@ -220,9 +226,11 @@ export const pageQuery = graphql`
         companyIconAlternativeLink {
           companyIconAlternativeLink
         }
-        positionLink {
-          positionLink
-        }
+        
+      }
+      hrContacts {
+        hrName
+        hrMail
       }
     }
     background_location: file(
