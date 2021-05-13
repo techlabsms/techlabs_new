@@ -6,7 +6,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
-const OpenPositions = ({ heading, subheading }) => {
+const OpenPositions = ({ heading, subheading, image, jobName, jobLink}) => {
   return (
     <Container>
        <Heading
@@ -16,17 +16,17 @@ const OpenPositions = ({ heading, subheading }) => {
           <div className="row talk__positions">
             <div className="col-12 col-lg-6">
               <div className="row">
-                <Link to="/" className="noDec w-100">
+                <Link to={jobLink} className="noDec w-100">
                   <div className="card">
                     <div className="row">
                       <div className="col-2">
                         <img
-                          src="https://www.picnic.app/static/logo-af01e33d873e4fcaf56b8c86737bb43f.svg"
-                          alt="picnic"
+                          src={image}
+                          alt="company Logo"
                         />
                       </div> 
                       <div className="col-6">
-                        Testmanager 
+                        {jobName} 
                       </div>
                       <div className="col-3 px-2">
                         <FormattedMessage id={"talk.positions.learnmore"} />

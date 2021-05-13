@@ -11,7 +11,7 @@ import Heading from "../components/smallComponents/Heading"
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
   const [chatOpen, setChatOpen] = useState(false)
-
+  
   useEffect(() => {
     if (typeof window !== `undefined`) {
       setWidth(window.innerWidth)
@@ -104,7 +104,12 @@ const Index = ({ data }) => {
           </div>
         )} */}
       </div>
-      <OpenPositions> </OpenPositions>
+      <OpenPositions
+        image={data.content.companyIconAlternativeLink}
+        jobName={data.content.openPosition}
+        jobLink={data.content.positionLink}
+      > 
+      </OpenPositions>
       <div className="container my-5">
         <div className="row">
           <div className="col">
@@ -209,6 +214,16 @@ export const pageQuery = graphql`
           }
         }
         company
+      }
+      openPositions {
+        openPosition
+        companyIconAlternativeLink {
+          companyIconAlternativeLink
+        }
+        positionLink {
+          positionLink
+          id
+        }
       }
     }
     background_location: file(
