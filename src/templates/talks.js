@@ -100,38 +100,27 @@ const Index = ({ data }) => {
               subheading={<FormattedMessage id={"talk.contact.subheading"} />}
             ></Heading>
             <div className="row">
-              <div className="col-md-6 my-4 d-flex flex-column align-items-center text-center">
-                <img
-                  src="https://www.picnic.app/static/logo-af01e33d873e4fcaf56b8c86737bb43f.svg"
-                  alt="picnic"
-                  width="50px"
-                />
-                <h4 className="my-3">{data.content.hrContacts[0].hrName}</h4>
-                <a
-                  href={`${hrmailto}${data.content.hrContacts[0].hrMail}`}
-                  className="talk__hr"
+              {data.content.hrContacts.map(contacts => (
+                <div
+                  className="col-md-6 my-4 d-flex flex-column align-items-center text-center"
+                  key={contacts.hrName}
                 >
-                  <FormattedMessage id={"talk.contact"}>
-                    Get in contact
-                  </FormattedMessage>
-                </a>
-              </div>
-              <div className="col-md-6 my-4 d-flex flex-column align-items-center text-center">
-                <img
-                  src="https://image.flaschenpost.de/CI/fp-logo.png"
-                  alt="flapo"
-                  width="50px"
-                />
-                <h4 className="my-3">Philipp Epple</h4>
-                <a
-                  className="talk__hr"
-                  href="mailto:philipp.epple@flaschenpost.de"
-                >
-                  <FormattedMessage id={"talk.contact"}>
-                    Get in contact
-                  </FormattedMessage>
-                </a>
-              </div>
+                  <img
+                    src={contacts.hrLogo.file.url}
+                    alt="picnic"
+                    width="50px"
+                  />
+                  <h4 className="my-3">{contacts.hrName}</h4>
+                  <a
+                    href={`${hrmailto}${contacts.hrMail}`}
+                    className="talk__hr"
+                  >
+                    <FormattedMessage id={"talk.contact"}>
+                      Get in contact
+                    </FormattedMessage>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -211,6 +200,11 @@ export const pageQuery = graphql`
       hrContacts {
         hrName
         hrMail
+        hrLogo {
+          file {
+            url
+          }
+        }
       }
     }
     background_location: file(
