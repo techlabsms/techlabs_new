@@ -1,20 +1,6 @@
 @import "../variables";
 
 .chooseCity {
-  &--clickedCard {
-    background: $color-gl;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 7px;
-    border: 0px solid !important;
-    padding: 2em;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    transform-origin: bottom;
-    color: white;
-  }
-
   &--card {
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -26,9 +12,18 @@
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transform-origin: bottom;
+    position: relative;
+    overflow: hidden;
+
+    &__disabled {
+      background: lightgray;
+      opacity: 0.5;
+      &:hover {
+        cursor: default !important;
+      }
+    }
   }
 
-  &--clickedCard:hover,
   &--card:hover {
     cursor: pointer;
   }
@@ -96,4 +91,17 @@
     background-color: $color-p;
     color: white;
   }
+}
+
+.chooseCity--card__badge {
+  position: absolute;
+  background-color: $color-p;
+  top: 0;
+  right: 0;
+  padding: 1px 0px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: rotate(45deg) translate(25px, -10px);
 }
