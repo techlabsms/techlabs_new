@@ -10,9 +10,8 @@ import Heading from "../components/smallComponents/Heading"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
-  const [chatOpen, setChatOpen] = useState(false)
   const hrmailto = "mailto:"
-  
+
   useEffect(() => {
     if (typeof window !== `undefined`) {
       setWidth(window.innerWidth)
@@ -87,30 +86,12 @@ const Index = ({ data }) => {
             allowfullscreen
           ></iframe>
         </div>
-        {/* <button
-          class="btn btn-primary my-5"
-          onClick={() => {
-            setChatOpen(!chatOpen)
-          }}
-        >
-          {chatOpen ? "Close Chat" : "Open Chat"}
-        </button>
-        {chatOpen && (
-          <div className="talk-video">
-            <iframe
-              title="chat"
-              src="https://vimeo.com/event/484993/chat/"
-              frameborder="0"
-            ></iframe>
-          </div>
-        )} */}
       </div>
       <OpenPositions
         image={data.content.openPositions[0].companyIconAlternativeLink}
         jobName={data.content.openPositions[0].openPosition}
         /*jobLink={data.content.openPositions[0].positionLink}*/
-      > 
-      </OpenPositions>
+      ></OpenPositions>
       <div className="container my-5">
         <div className="row">
           <div className="col">
@@ -226,7 +207,6 @@ export const pageQuery = graphql`
         companyIconAlternativeLink {
           companyIconAlternativeLink
         }
-        
       }
       hrContacts {
         hrName
