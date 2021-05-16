@@ -165,12 +165,6 @@ export const fluidImage = graphql`
     }
   }
 `
-/*
-wegen error rausgenommen:
-positionLink {
-  positionLink
-}
-*/
 export const pageQuery = graphql`
   query($slug: String!, $locale: String) {
     content: contentfulTalksPage(
@@ -193,8 +187,11 @@ export const pageQuery = graphql`
       }
       openPositions {
         openPosition
-        companyIconAlternativeLink {
-          companyIconAlternativeLink
+        positionlink
+        companyIcon {
+          file {
+            url
+          }
         }
       }
       hrContacts {
