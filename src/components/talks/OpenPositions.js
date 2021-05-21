@@ -7,7 +7,6 @@ import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 
 const OpenPositions = ({jobs}) => {
-  {console.log(`${jobs[0].companyIcon.file.url}`)}
   return (
     <Container>
        <Heading
@@ -23,7 +22,7 @@ const OpenPositions = ({jobs}) => {
                     <div className="row">
                       <div className="col-2">
                         <img
-                          src={job.companyIcon}
+                          src={job.companyIcon.file.url}
                           alt="Icon"
                         />
                       </div> 
