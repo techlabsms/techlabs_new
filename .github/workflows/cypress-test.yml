@@ -8,10 +8,11 @@ jobs:
         uses: actions/checkout@v2
       - name: start server
         run: gatsby develop
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+        # Install NPM dependencies, cache them correctly
+        # and run all Cypress tests
         with:
+          build: npm run build
+          start: npm run serve
           spec: |
             cypress/integration/application
+          wait-on: https://localhost:8000
