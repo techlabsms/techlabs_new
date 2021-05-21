@@ -103,10 +103,17 @@
   }
 
   &__positions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 0 0 50%;
+    }
     & .card {
       height: 80px;
       padding: 1em;
-      margin: .3em .5em;
+      margin: .3em .1em;
       font-size: 18px;
     }
     & .row {

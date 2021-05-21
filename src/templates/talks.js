@@ -87,11 +87,7 @@ const Index = ({ data }) => {
           ></iframe>
         </div>
       </div>
-      <OpenPositions
-        image={data.content.openPositions[0].companyIconAlternativeLink}
-        jobName={data.content.openPositions[0].openPosition}
-        /*jobLink={data.content.openPositions[0].positionLink}*/
-      ></OpenPositions>
+      <OpenPositions jobs={data.content.openPositions}> </OpenPositions>
       <div className="container my-5">
         <div className="row">
           <div className="col">
