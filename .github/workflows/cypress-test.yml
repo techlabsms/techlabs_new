@@ -12,7 +12,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm run serve
+          start: npm run start
           spec: |
             cypress/integration/application
           wait-on: http://localhost:9000
