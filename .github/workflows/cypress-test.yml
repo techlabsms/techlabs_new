@@ -16,3 +16,5 @@ jobs:
           spec: |
             cypress/integration/application
           wait-on: https://localhost:8000
+        env:
+          CONTENTFUL_ACCESS_TOKEN: ${{ env.CONTENTFUL_ACCESS_TOKEN }}
