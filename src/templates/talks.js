@@ -87,7 +87,9 @@ const Index = ({ data }) => {
           ></iframe>
         </div>
       </div>
-      <OpenPositions jobs={data.content.openPositions}> </OpenPositions>
+      {data.content.openPositions && (
+        <OpenPositions jobs={data.content.openPositions}> </OpenPositions>
+      )}
       <div className="container my-5">
         <div className="row">
           <div className="col">
@@ -181,15 +183,15 @@ export const pageQuery = graphql`
         }
         company
       }
-      openPositions {
-        openPosition
-        positionlink
-        companyIcon {
-          file {
-            url
-          }
-        }
-      }
+      # openPositions {
+      #   openPosition
+      #   positionlink
+      #   companyIcon {
+      #     file {
+      #       url
+      #     }
+      #   }
+      # }
       hrContacts {
         hrName
         hrMail
