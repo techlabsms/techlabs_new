@@ -12,9 +12,10 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm run start
+          start: npm run serve
           spec: |
             cypress/integration/application
-          wait-on: http://localhost:8000
+          wait-on: http://localhost:9000
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+8
