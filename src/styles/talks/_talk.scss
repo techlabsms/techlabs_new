@@ -101,4 +101,53 @@
       top: 2px;
     }
   }
+
+  &__positions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 0 0 50%;
+    }
+    & .card {
+      height: 80px;
+      padding: 1em;
+      margin: .3em .1em;
+      font-size: 18px;
+    }
+    & .row {
+      line-height: 50px;
+    }
+    & a {
+      color: $color-gl;
+    }
+    & img {
+      width: 50px;
+    }
+    & .col-6 {
+      padding: 0em 0em;
+    }
+    & .col-3 {
+      text-align: right;
+      padding: 0em 2em;
+    }
+    & .col-1 {
+      text-align: center;
+      padding: 0em 2em;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .talk {
+    &__positions {
+      .card {
+        font-size: 14px;
+      }
+      .card .col-6 {
+        padding-left: .8em;
+      }
+    }
+  }
 }

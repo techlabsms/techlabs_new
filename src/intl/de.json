@@ -30,7 +30,7 @@
   "about.mission_values.ThreeCard.textThree": "Wir glauben, dass Lernen Vielfalt erfordert und am besten in einer lebendigen Gemeinschaft funktioniert. Daher wollen wir Menschen aus verschiedenen Disziplinen und mit unterschiedlichem kulturellen Hintergrund auf ihrem persönlichen Weg miteinander verbinden.",
   "about.who.LeftImageSectionHeading.heading": "Wer wir sind",
   "about.who.LeftImageSectionHeading.subheading": "Erfahre mehr über die Menschen hinter der Mission",
-  "about.who.LeftImageSectionHeading.text": "Was 2017 als eine Idee unserer sieben Gründungsmitglieder im Arbeitsbereich einer Bibliothek in Münster begann, ist zu einem wachsenden Team mit mehr als 170 Mitarbeitern geworden. Die inspirierende Arbeit, die jeder auf ehrenamtlicher Basis leistet, hilft TechLabs weiter zu florieren. TechLabs besteht aus Personen mit unterschiedlichsten Hintergründen, die sich über die gleiche Idee verbunden fühlen und die TechLabs Mission erreichen wollen.",
+  "about.who.LeftImageSectionHeading.text": "Was 2017 als eine Idee unserer sieben Gründungsmitglieder im Arbeitsbereich einer Bibliothek in Münster begann, ist zu einem wachsenden Team mit mehr als 300 Mitarbeitern geworden. Die inspirierende Arbeit, die jeder auf ehrenamtlicher Basis leistet, hilft TechLabs weiter zu florieren. TechLabs besteht aus Personen mit unterschiedlichsten Hintergründen, die sich über die gleiche Idee verbunden fühlen und die TechLabs Mission erreichen wollen.",
   "about.join.RightImageSectionHeading.heading": "Werde Teil des Teams",
   "about.join.RightImageSectionHeading.subheading": "Du möchtest Teil von TechLabs werden?",
   "about.join.RightImageSectionHeading.text": "Du träumst von einer Welt voller digitaler Gestalter und hast eine Leidenschaft für Technologie? Als Mitglied des TechLabs Management-Teams arbeitest du ehrenamtlich, um andere beim Erlernen neuer Technologien zu unterstützen. Werde Teil der TechLabs-Familie und schließe dich uns auf unserer Mission an.",
@@ -242,7 +242,7 @@
   "landingpage.what.weeks.of.coding.text": "Innerhalb von 12-16 Wochen erhältst du ein fundiertes Wissen im Bereich Programmieren und kannst dir durch unser innovatives Lernkonzept Tech Skills aneignen.",
   "landingpage.googlechallenge.heading": "Award-Winning Concept",
   "landingpage.googlechallenge.subheading": "Google Impact Challenge 2018!",
-  "landingpage.googlechallenge.text": "TechLabs - die Idee hat überzeugt: Das gemeinnützige Start-up TechLabs bietet Studenten die Möglichkeit, ihre technischen Fähigkeiten zu erweitern und zu vertiefen - und das alles kostenlos! Im Jahr 2018 wurde das Projekt mit einem Award ausgezeichnet, als TechLabs im Finale der Google Impact Challenge in Berlin 20.000 EUR gewann. Bis heute haben sich über 170 Freiwillige TechLabs angeschlossen, um die Idee zu verbreiten.",
+  "landingpage.googlechallenge.text": "TechLabs - die Idee hat überzeugt: Das gemeinnützige Start-up TechLabs bietet Studenten die Möglichkeit, ihre technischen Fähigkeiten zu erweitern und zu vertiefen - und das alles kostenlos! Im Jahr 2018 wurde das Projekt mit einem Award ausgezeichnet, als TechLabs im Finale der Google Impact Challenge in Berlin 20.000 EUR gewann. Bis heute haben sich über 300 Freiwillige TechLabs angeschlossen, um die Idee zu verbreiten.",
   "landingpage.quote.nils.heading": "Das TechLabs Lernkonzept",
   "landingpage.quote.nils.subheading": "Was dich bei TechLabs erwartet",
   "landingpage.quote.nils.text": "Mit unserem Programm, das Online-Lernen, Projektarbeit und TechLabs-Community-Meetings kombiniert, kannst du in einem Semester schneller lernen. Unabhängig von Hintergrund und Vorkenntnissen - jeder kann teilnehmen und Tech-Fähigkeiten erlernen. Bei TechLabs spielt Geld keine Rolle. Deshalb sind unsere Programme kostenfrei. Wir helfen dir, ein eigenes Technologieprojekt umzusetzen und dich für technische Aufgaben zu qualifizieren.",
@@ -549,5 +549,8 @@
   "talk.register": "Hier registrieren",
   "talk.contact": "Kontaktieren",
   "talk.contact.heading": "Tritt mit den Firmen in Kontakt",
-  "talk.contact.subheading": "Finde deinen nächsten Traumjob"
+  "talk.contact.subheading": "Finde deinen nächsten Traumjob",
+  "talk.positions.heading": "Jobs",
+  "talk.positions.subheading": "Bereit für eine neue Herausforderung?",
+  "talk.positions.learnmore": "Mehr dazu"
 }
