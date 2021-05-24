@@ -161,7 +161,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                         <ApplicationCountdown date={date} />
                       </div>
                       <span className="card-discover">
-                        {open ? (
+                        {open && cityData[0].node.applicationLink ? (
                           <a
                             className="btn btn-primary d-inline apply-button"
                             type="submit"

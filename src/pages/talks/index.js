@@ -9,6 +9,6 @@ const Index = ({ data }) => {
     }
   })
   return <Layout></Layout>
-}
+
 
 export default Index
