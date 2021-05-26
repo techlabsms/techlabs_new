@@ -49,6 +49,7 @@
     "gatsby-plugin-manifest": "^2.4.35",
     "gatsby-plugin-offline": "^3.2.33",
     "gatsby-plugin-sass": "^2.3.4",
+    "gatsby-plugin-seo": "^0.0.2",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-source-contentful": "^2.3.15",
     "gatsby-source-filesystem": "^2.3.11",
