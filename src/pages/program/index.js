@@ -13,24 +13,23 @@ import LearnMore from "../../components/program/LearnMore"
 import Faq from "../../components/shared/Faq"
 import FaqQuestion from "../../components/shared/FaqQuestion"
 
-
 // assets
 import DataScience from "../../assets/dashboard.png"
 import background from "../../assets/p_background.png"
 import ProgrammMobil from "../../assets/programmMobil.png"
 import web from "../../assets/webdevpro.png"
+import Seo from "../../components/Layout/Seo"
 
 const index = () => {
   return (
     <>
+      <Seo title="Program" />
       <div>
         <Navbar />
         <ProgrammHero
           headingFirst={<FormattedMessage id={"programs.heading.1"} />}
           headingSecond={<FormattedMessage id={"programs.heading.2"} />}
-          intro={
-            <FormattedMessage id={"programs.subheading"} />
-          }
+          intro={<FormattedMessage id={"programs.subheading"} />}
           background={background}
           backgroundMobil={ProgrammMobil}
         />
@@ -62,48 +61,36 @@ const index = () => {
             }
           />
           <LearnMore
-            heading={
-              <FormattedMessage id={"landingpage.learn_more.heading"} />
-            } 
+            heading={<FormattedMessage id={"landingpage.learn_more.heading"} />}
             subheading={
               <FormattedMessage id={"programs.learn_more.subheading"} />
-            } 
+            }
             firstProjectHeading="Local Digital Shaper Program"
             firstProjectImage={web}
             firstLink="/program/local"
             firstButtonText={
-              <FormattedMessage id={"programs.learn_more.button"}/>
+              <FormattedMessage id={"programs.learn_more.button"} />
             }
             secondProjectHeading="#codeathome Bootcamp"
             secondProjectImage={DataScience}
             secondLink="/program/remote"
             secondButtonText={
-              <FormattedMessage id={"programs.learn_more.button"}/>
+              <FormattedMessage id={"programs.learn_more.button"} />
             }
           />
           <Faq>
-            <FaqQuestion
-              question="faq_1.question"
-              answer="faq_1.answer"
-            />
-            <FaqQuestion
-              question="faq_2.question"
-              answer="faq_2.answer"
-            />
-            <FaqQuestion
-              question="faq_3.question"
-              answer="faq_3.answer"
-            />
+            <FaqQuestion question="faq_1.question" answer="faq_1.answer" />
+            <FaqQuestion question="faq_2.question" answer="faq_2.answer" />
+            <FaqQuestion question="faq_3.question" answer="faq_3.answer" />
           </Faq>
           <div className="container pb-5">
             <div className="row">
               <div className="col text-center">
-                <Button 
-                text={
-                  <FormattedMessage id={"faq.button"}/>
-                }
-                link="/faq" 
-                primary={true} />
+                <Button
+                  text={<FormattedMessage id={"faq.button"} />}
+                  link="/faq"
+                  primary={true}
+                />
               </div>
             </div>
           </div>

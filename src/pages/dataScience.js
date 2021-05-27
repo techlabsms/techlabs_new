@@ -15,6 +15,7 @@ import RightImageSection from "../components/shared/RightImageSection"
 import Projects from "../components/program/Projects"
 import Testimonial from "../components/shared/Testimonial"
 import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
+import Seo from "../components/Layout/Seo"
 
 // assets
 import dsCover from "../assets/ds_cover.png"
@@ -27,6 +28,11 @@ class dataScience extends Component {
     const { data } = this.props
     return (
       <Layout>
+        <Seo
+          title="Data Science Programm"
+          description="Inform yourself here about our Data Science track. Start your six months learning journey as a part of the next batch in the city of your choice."
+          image={dsCover}
+        />
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={
