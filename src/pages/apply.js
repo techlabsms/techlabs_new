@@ -14,6 +14,7 @@ import TypeFormEmbedd from "../components/applyPage/TypeformEmbedd"
 import Faq from "../components/shared/Faq"
 import FaqQuestion from "../components/shared/FaqQuestion"
 import Explainer from "../components/applyPage/Explainer"
+import Seo from "../components/Layout/Seo"
 
 const Apply = props => {
   const [value, setValue] = useState({
@@ -48,6 +49,7 @@ const Apply = props => {
   const { intl } = props
   return (
     <Layout>
+      <Seo title="Apply now" />
       <ApplicationHero
         heading={<FormattedMessage id={"applypage.headline"} />}
         subheading={<FormattedMessage id={"applypage.subheadline"} />}

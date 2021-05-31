@@ -23,6 +23,7 @@ import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/ux-image.png"
+import Seo from "../../components/Layout/Seo"
 
 class remote extends Component {
   startDateString = date => {
@@ -47,6 +48,7 @@ class remote extends Component {
     } = data.page.edges[0].node
     return (
       <Layout>
+        <Seo title="Remote Program" />
         <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}

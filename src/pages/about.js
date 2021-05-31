@@ -20,12 +20,14 @@ import google from "../assets/google.png"
 import teamStairs from "../assets/teamStairs.png"
 import MAP from "../assets/map_small.png"
 import Background_mobil from "../assets/about_mobil.png"
+import Seo from "../components/Layout/Seo"
 
 class about extends Component {
   render() {
     const { data } = this.props
     return (
       <Layout>
+        <Seo title="About the Organization" />
         <ProgrammHero
           headingFirst={
             <FormattedMessage id="about.about.program_hero.headingFirst" />
@@ -106,7 +108,9 @@ class about extends Component {
         />
         <Quote
           heading={<FormattedMessage id="quote.headofmarketing.heading" />}
-          subheading={<FormattedMessage id="quote.headofmarketing.subheading" />}
+          subheading={
+            <FormattedMessage id="quote.headofmarketing.subheading" />
+          }
           showHeading={false}
           text={<FormattedMessage id="quote.headofmarketing.text" />}
           name="Julian Junghöfer"
@@ -190,7 +194,6 @@ export const fixedImage = graphql`
   }
 `
 
-
 export const pageQuery = graphql`
   query {
     whyWeDo: file(relativePath: { eq: "wwd.png" }) {
@@ -203,7 +206,7 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     julian: file(relativePath: { eq: "julian.png" }) {
-    ...fixedImage
+      ...fixedImage
     }
   }
 `

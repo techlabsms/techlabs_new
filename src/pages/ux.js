@@ -20,11 +20,18 @@ import UX2 from "../assets/ux-image.png"
 import david from "../assets/david.png"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
+import Seo from "../components/Layout/Seo"
 
 class ux extends Component {
   render() {
     return (
       <Layout>
+        <Seo
+          title="User Experience Design"
+          description="Inform yourself here about our UX Design track. Start your six months learning journey as a part of the next batch in the city of your choice. Acquire state-of-the-art tech skills by using one of our individualized tracks"
+          image={UX2}
+        />
+
         <div className="container-fluid">
           <ProgrammHero
             headingFirst={

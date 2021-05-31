@@ -24,6 +24,9 @@ import GIC from "../assets/gic.svg"
 import "../styles/_main.scss"
 import "../styles/bootstrap.min.css"
 import LearnMore from "../components/landingpage/learnMore"
+import Seo from "../components/Layout/Seo"
+
+import OGImage from "../assets/images/startPage.png"
 
 class index extends React.Component {
   componentDidMount() {
@@ -43,6 +46,7 @@ class index extends React.Component {
     const allCountries = this.props.data.allContentfulLocationPage.edges
     return (
       <Layout>
+        <Seo locale={intl.locale} image={OGImage} />
         <div className="container-fluid">
           {/* header section */}
           <section className="py-5 padding-top-15">

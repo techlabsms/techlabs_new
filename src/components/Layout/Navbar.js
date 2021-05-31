@@ -1,5 +1,6 @@
 import React from "react"
 import Headroom from "react-headroom"
+import { Helmet } from "react-helmet"
 import "jquery"
 
 // plugins
@@ -7,7 +8,6 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import MobileNav from "./MobileNav"
-import Head from "./Head"
 
 // assets
 import logo from "../../assets/tl-logo.png"
@@ -16,6 +16,9 @@ import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
 import ux from "../../assets/ux-icon.png"
 import "jquery"
+import favicon16 from "../../assets/tl-favicon16.png"
+import favicon32 from "../../assets/tl-favicon32.png"
+import favicon64 from "../../assets/tl-favicon64.png"
 
 // styles
 import "../../styles/_main.scss"
@@ -28,7 +31,18 @@ class Navbar extends React.Component {
     const { isOpen } = this.state
     return (
       <>
-        <Head />
+        <Helmet>
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link
+            rel="shortcut icon"
+            type="image/png"
+            sizes="64x64"
+            href={favicon64}
+          />
+
+          <script src="https://embed.small.chat/TG9SCN33JGHR17BPSR.js" async />
+        </Helmet>
         <Headroom
           style={{
             webkitTransition: "all .2s ease-in-out",
