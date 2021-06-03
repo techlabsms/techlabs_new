@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Layout from "../components/Layout/Layout"
@@ -27,7 +27,7 @@ const talks = props => {
             <div className="talks-cards">
                 {talks.map(talk => {
                     return(
-                        <p>{talk.node.subtitle}</p>
+                        <Link to={talk.node.slug}>{talk.node.subtitle}</Link>
                         // implement cards here
                     )                    
                 })}
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         edges {
           node {
             subtitle
+            slug
             speakers {
               company
             }
