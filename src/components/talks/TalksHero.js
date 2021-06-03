@@ -2,7 +2,6 @@ import React, { Component } from "react"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
-import talks from "../../pages/talks"
 
 // assets
 import heroImage from "../../assets/talks/talksHero.png"
@@ -17,7 +16,7 @@ const TalksHero = (props) => {
                 <p><FormattedMessage id={"talks.heroText"}/></p>
             </div>
             <div className="talks-hero-img">
-                <img src={heroImage}/>
+                <img src={heroImage} alt="talks-graphic"/>
             </div>
         </div>
     )

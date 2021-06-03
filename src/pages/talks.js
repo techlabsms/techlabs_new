@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
+import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
@@ -10,7 +11,8 @@ import TalksHero from "../components/talks/TalksHero"
 // styles
 import "../styles/_main.scss"
 
-const talks = () => {
+const talks = props => {
+    const talks = props.data.allContentfulTalksPage.edges;
     return(
         <Layout>
             <TalksHero/>
@@ -23,10 +25,30 @@ const talks = () => {
                 ></input>
             </div>
             <div className="talks-cards">
-                
+                {talks.map(talk => {
+                    return(
+                        <p>{talk.node.subtitle}</p>
+                        // implement cards here
+                    )                    
+                })}
             </div>
         </Layout>
     )
 }
 
 export default injectIntl(talks)
+
+export const pageQuery = graphql`
+  query TalksPageQuery {
+    allContentfulTalksPage {
+        edges {
+          node {
+            subtitle
+            speakers {
+              company
+            }
+          }
+        }
+      }
+  }
+`
