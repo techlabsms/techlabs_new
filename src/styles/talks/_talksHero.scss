@@ -1,0 +1,57 @@
+@import "../variables";
+
+.talks-hero {
+max-width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  margin: 2vh 6vw;
+  > .talks-hero-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 3%;
+    h1 {
+      font-size: 3.5rem;
+    }
+    span {
+      padding: .6rem;
+      border-radius: 6px;
+      margin-left: -.5rem;
+      display: inline-block;
+      margin-top: .2rem;
+      background-color: $pink-background;
+      color: $color-p;
+    }
+    p {
+      margin-top: 2rem;
+      line-height: 1.5rem;
+    }
+  }
+  .talks-hero-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 4%;
+    img {
+        max-width: 35rem;
+    }
+    }
+  @media (max-width: 1280px) {
+    > div h1 {
+      font-size: 2.9rem;
+    }
+  }
+  @media (max-width: 768px) {
+    > div span {
+      display: unset;
+      padding: .3rem;
+      margin-left: unset;
+    }
+  }
+  @media (max-width: 600px) {
+    display: unset;
+  }
+}
