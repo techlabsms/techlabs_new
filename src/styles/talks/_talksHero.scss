@@ -36,22 +36,31 @@ max-width: 100vw;
     justify-content: center;
     padding: 0% 4%;
     img {
-        max-width: 35rem;
+        max-width: 33rem;
     }
     }
   @media (max-width: 1280px) {
-    > div h1 {
+    > .talks-hero-text h1 {
       font-size: 2.9rem;
     }
   }
   @media (max-width: 768px) {
-    > div span {
+    > .talks-hero-text span {
       display: unset;
       padding: .3rem;
-      margin-left: unset;
+      margin-left: 1rem;
+    }
+    .talks-hero-img {
+        img {
+            max-width: 20rem;
+        }
     }
   }
   @media (max-width: 600px) {
     display: unset;
+  }
+
+  @media (max-width: $xs) {
+      display: unset;
   }
 }
