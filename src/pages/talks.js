@@ -16,25 +16,27 @@ const talks = props => {
     const talks = props.data.allContentfulTalksPage.edges;
     return(
         <Layout>
-            <TalksHero/>
-            <div className="talks-searchbar">
-                <h4><FormattedMessage id="talks.previous"/></h4>
-                <input 
-                    placeholder="Search"
-                    onFocus={(e) => e.target.placeholder = ""} 
-                    onBlur={(e) => e.target.placeholder = "Search"}
-                ></input>
-            </div>
-            <div className="talks-cards">
-                {talks.map(talk => {
-                    return(
-                        <Link to={talk.node.slug}>
-                            <TalksCard
-                            title={talk.node.subtitle}
-                            speakers={talk.node.speakers}/>
-                        </Link>
-                    )                    
-                })}
+            <div className="talks-container">
+                <TalksHero/>
+                <div className="talks-searchbar">
+                    <h4><FormattedMessage id="talks.previous"/> ({talks.length})</h4>
+                    <input 
+                        placeholder="Search"
+                        onFocus={(e) => e.target.placeholder = ""} 
+                        onBlur={(e) => e.target.placeholder = "Search"}
+                    ></input>
+                </div>
+                <div className="talks-cards">
+                    {talks.map(talk => {
+                        return(
+                            <Link to={talk.node.slug}>
+                                <TalksCard
+                                title={talk.node.subtitle}
+                                speakers={talk.node.speakers}/>
+                            </Link>
+                        )                    
+                    })}
+                </div>
             </div>
         </Layout>
     )

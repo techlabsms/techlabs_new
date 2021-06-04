@@ -2,10 +2,20 @@
 @import "./_talksHero.scss";
 @import "./talksCard.scss";
 
+.talks-container {
+    > * {
+        max-width: 85vw;
+        margin: 1rem auto;
+    }
+}
+
+.talks-searchbar {
+    display: flex;
+    justify-content: space-between;
+}
+
 .talks-cards {
-  max-width: 85vw;
   display: grid;
-  margin: 1rem auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   > a:hover {
       color: white;
