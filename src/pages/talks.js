@@ -7,6 +7,7 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 // components
 import Layout from "../components/Layout/Layout"
 import TalksHero from "../components/talks/TalksHero"
+import TalksCard from "../components/talks/TalkCard"
 
 // styles
 import "../styles/_main.scss"
@@ -27,8 +28,11 @@ const talks = props => {
             <div className="talks-cards">
                 {talks.map(talk => {
                     return(
-                        <Link to={talk.node.slug}>{talk.node.subtitle}</Link>
-                        // implement cards here
+                        <Link to={talk.node.slug}>
+                            <TalksCard
+                            title={talk.node.subtitle}
+                            speakers={talk.node.speakers}/>
+                        </Link>
                     )                    
                 })}
             </div>

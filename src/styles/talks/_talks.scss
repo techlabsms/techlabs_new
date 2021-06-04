@@ -1,2 +1,32 @@
 @import "../variables";
 @import "./_talksHero.scss";
+@import "./talksCard.scss";
+
+.talks-cards {
+  max-width: 85vw;
+  display: grid;
+  margin: 1rem auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  > a:hover {
+      color: white;
+      text-decoration: none;
+  }
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    > * {
+      width: 26vw;
+      height: 15rem;
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    > * {
+      width: 40vw;
+      height: 14rem;
+    }
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

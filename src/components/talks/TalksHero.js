@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"

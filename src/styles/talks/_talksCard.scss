@@ -1,0 +1,41 @@
+@import "../variables";
+
+.talks-card {
+  box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  margin: 1.3rem;
+  min-height: 15rem;
+  background-color: #fff;
+  position: relative;
+
+  .talks-card-img {
+      position: absolute;
+      top: 0%;
+      img {
+        max-width: 10rem;
+        min-height: 5rem;
+      }
+  }
+  
+  .talks-card-bottom {
+      background-color: $color-p;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      > * {
+          padding: 0 .8rem;
+      }
+      h1{
+          font-size: 1.5rem;
+          line-height: .8rem;
+          padding-top: 1rem;
+      }
+      p {          
+          font-size: .8rem;
+          padding-bottom: 1rem;
+      }
+  }
+}
