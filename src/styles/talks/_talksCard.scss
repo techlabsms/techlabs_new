@@ -11,9 +11,15 @@
   .talks-card-img {
       position: absolute;
       top: 0%;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         max-width: 10rem;
         min-height: 5rem;
+        margin: .5rem auto;
       }
   }
   
@@ -31,7 +37,7 @@
       h1{
           font-size: 1.5rem;
           line-height: .8rem;
-          padding-top: 1rem;
+          padding-top: 1.3rem;
       }
       p {          
           font-size: .8rem;
