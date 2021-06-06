@@ -23,6 +23,7 @@ import DataScience from "../../assets/dashboard.png"
 import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/ux-image.png"
+import Seo from "../../components/Layout/Seo"
 
 class remote extends Component {
   startDateString = date => {
@@ -47,6 +48,7 @@ class remote extends Component {
     } = data.page.edges[0].node
     return (
       <Layout>
+        <Seo title="Remote Program" />
         <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}
@@ -192,7 +194,7 @@ export const pageQuery = graphql`
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
-    remote: file(relativePath: { eq: "remote-sticker.png" }) {
+    remote: file(relativePath: { eq: "remote.png" }) {
       ...fluidImage
     }
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {

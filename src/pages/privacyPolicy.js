@@ -1,9 +1,11 @@
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import React from "react"
 import Layout from "../components/Layout/Layout"
 
 const privacyPolicy = () => {
   return (
     <Layout>
+      <GatsbySeo noindex={true} />
       <div className="container mt-5">
         <div>
           <h3>Privacy Policy TechLabs e. V. </h3>
@@ -429,8 +431,8 @@ const privacyPolicy = () => {
           obligation is prohibited. Contact data for sending unsolicited email
           addresses or telephone numbers Advertising and information materials
           are hereby objected to. The Operators of the pages expressly reserve
-          the right to take legal action in the case of unsolicited sending
-          of advertising information, such as by Spam emails, before.
+          the right to take legal action in the case of unsolicited sending of
+          advertising information, such as by Spam emails, before.
           <br />
           <br />
           <h5 className="margin-b-0">

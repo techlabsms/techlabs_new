@@ -26,6 +26,7 @@ import web from "../../assets/webdevpro.png"
 import AI from "../../assets/ai-robot.png"
 import UX from "../../assets/ux-image.png"
 import ProgrammMobil from "../../assets/programmMobil.png"
+import Seo from "../../components/Layout/Seo"
 
 class local extends Component {
   render() {
@@ -33,6 +34,7 @@ class local extends Component {
     const { whatIsIncluded } = data.page.edges[0].node
     return (
       <div>
+        <Seo title="local programm" />
         <Navbar />
         <ProgrammHero
           headingFirst="Digital Shaper"

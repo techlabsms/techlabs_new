@@ -6,86 +6,73 @@ import { injectIntl } from "gatsby-plugin-intl"
 // components
 import FaqQuestion from "../components/shared/FaqQuestion"
 import Layout from "../components/Layout/Layout"
+import Seo from "../components/Layout/Seo"
 
 class faq extends Component {
   state = {
     questions: [
       {
         question: "faqpage.question1",
-        answer: "faqpage.answer1"
-          
+        answer: "faqpage.answer1",
       },
       {
         question: "faqpage.question2",
-        answer: "faqpage.answer2"
-          
+        answer: "faqpage.answer2",
       },
       {
         question: "faqpage.question3",
-        answer: "faqpage.answer3"
-          
+        answer: "faqpage.answer3",
       },
       {
         question: "faqpage.question4",
-        answer: "faqpage.answer4"
-          
+        answer: "faqpage.answer4",
       },
       {
         question: "faqpage.question5",
-        answer: "faqpage.answer5"
-          
+        answer: "faqpage.answer5",
       },
       {
         question: "faqpage.question6",
-        answer: "faqpage.answer6"
-          
+        answer: "faqpage.answer6",
       },
       {
         question: "faqpage.question7",
-        answer: "faqpage.answer7"
-          
+        answer: "faqpage.answer7",
       },
       {
         question: "faqpage.question8",
-        answer: "faqpage.answer8"
-          
+        answer: "faqpage.answer8",
       },
       {
         question: "faqpage.question9",
-        answer: "faqpage.answer9"
-          
+        answer: "faqpage.answer9",
       },
       {
         question: "faqpage.question10",
-        answer: "faqpage.answer10"
-          
+        answer: "faqpage.answer10",
       },
       {
         question: "faqpage.question11",
-        answer: "faqpage.answer11"
-          
+        answer: "faqpage.answer11",
       },
       {
         question: "faqpage.question12",
-        answer: "faqpage.answer12"
-          
+        answer: "faqpage.answer12",
       },
       {
         question: "faqpage.question13",
-        answer: "faqpage.answer13"
-          
+        answer: "faqpage.answer13",
       },
       {
         question: "faqpage.question14",
-        answer: "faqpage.answer14"
-          
+        answer: "faqpage.answer14",
       },
     ],
     search: "",
   }
   render() {
     const { intl } = this.props
-    const placeholder = intl.formatMessage({id: 'faq.search.placeholder'})
+    const placeholder = intl.formatMessage({ id: "faq.search.placeholder" })
     const { questions, search } = this.state
 
     const filteredQuestions = questions.filter(question => {
@@ -93,6 +80,7 @@ class faq extends Component {
     })
     return (
       <Layout>
+        <Seo title="FAQ" />
         <div className="container">
           <div className="row py-5">
             <div className="col-8">

@@ -19,6 +19,7 @@ import MAPLOC from "../assets/mapLoc.png"
 
 // style
 import "../styles/_main.scss"
+import Seo from "../components/Layout/Seo"
 
 class Locations extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class Locations extends Component {
     })
     return (
       <Layout>
+        <Seo title="Locations" description="See all available locations" />
         <div className="locations">
           <div className="container-fluid">
             <section className="section-picture">

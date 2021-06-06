@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import LearnMore from "../components/landingpage/learnMore"
 import Heading from "../components/smallComponents/Heading"
+import Seo from "../components/Layout/Seo"
 
 const Index = ({ data }) => {
   const [width, setWidth] = useState()
@@ -20,6 +21,7 @@ const Index = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={data.content.subtitle} />
       <div className="container talk py-5">
         <div className="row">
           <div className="col-md-6">

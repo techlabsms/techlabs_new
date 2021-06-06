@@ -28,6 +28,8 @@ import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
 import web from "../assets/web.png"
 import ux from "../assets/ux-icon.png"
+import Seo from "../components/Layout/Seo"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class location extends Component {
   state = {
@@ -61,6 +63,25 @@ class location extends Component {
 
     return (
       <Layout>
+        <Seo title={location.heading} locale={this.props.pageContext.locale} />
+        <GatsbySeo
+          openGraph={{
+            images: [
+              {
+                url: `http:${location.image.file.url}`,
+                width: 800,
+                height: 600,
+                alt: location.heading,
+              },
+              {
+                url: `http:${location.image.file.url}`,
+                width: 900,
+                height: 800,
+                alt: location.heading,
+              },
+            ],
+          }}
+        />
         <section className="container-fluid">
           <section>
             <div
