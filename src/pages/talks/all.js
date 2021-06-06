@@ -42,7 +42,7 @@ const All = props => {
         <div className="talks-cards">
           {filteredTalks.map(talk => {
             return (
-              <Link to={talk.node.slug}>
+              <Link to={`/talks/${talk.node.slug}`}>
                 <TalksCard
                   title={talk.node.subtitle}
                   speakers={talk.node.speakers}
