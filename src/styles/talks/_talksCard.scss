@@ -9,39 +9,37 @@
   position: relative;
 
   .talks-card-img {
-      position: absolute;
-      top: 0%;
-      width: 100%;
-      height: 60%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        max-width: 10rem;
-        min-height: 5rem;
-        margin: .5rem auto;
-      }
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin: 0.5rem auto;
+    }
   }
-  
+
   .talks-card-bottom {
-      background-color: $color-p;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      color: white;
-      border-bottom-left-radius: 7px;
-      border-bottom-right-radius: 7px;
-      > * {
-          padding: 0 .8rem;
-      }
-      h1{
-          font-size: 1.5rem;
-          line-height: .8rem;
-          padding-top: 1.3rem;
-      }
-      p {          
-          font-size: .8rem;
-          padding-bottom: 1rem;
-      }
+    background-color: $color-p;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    > * {
+      padding: 0 0.8rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 0.8rem;
+      padding-top: 1.3rem;
+    }
+    p {
+      font-size: 0.8rem;
+      padding-bottom: 1rem;
+    }
   }
 }

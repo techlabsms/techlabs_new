@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
@@ -12,15 +12,44 @@ import TalksCard from "../../components/talks/TalkCard"
 // styles
 import "../../styles/_main.scss"
 
+//create your forceUpdate hook
+function useForceUpdate() {
+  const [value, setValue] = useState(0) // integer state
+  return () => setValue(value => value + 1) // update the state to force render
+}
+
 const All = props => {
   const [searchTerm, setSearchTerm] = useState("")
   const talks = props.data.allContentfulTalksPage.edges
+  const forceUpdate = useForceUpdate()
 
   const filteredTalks = talks.filter(talk => {
     return talk.node.subtitle
       .toLowerCase()
       .includes(searchTerm.toLocaleLowerCase())
   })
+
+  useEffect(() => {
+    async function getThumbnails() {
+      await talks.forEach(async talk => {
+        const vimeoID = talk.node.videoLink.split("/")[4]
+        const vimeoData = await fetch(
+          `http://vimeo.com/api/v2/video/${vimeoID}.json`
+        )
+        const vimeoJSON = await vimeoData.json()
+        const talksIndex = talks.findIndex(
+          talk => talk.node.videoLink.split("/")[4] === vimeoID
+        )
+
+        talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
+
+        forceUpdate()
+      })
+    }
+
+    getThumbnails()
+  }, [filteredTalks, forceUpdate, talks])
+
   return (
     <Layout>
       <div className="talks-container">
@@ -44,8 +73,10 @@ const All = props => {
             return (
               <Link to={`/talks/${talk.node.slug}`}>
                 <TalksCard
+                  key={talk.node.videoLink}
                   title={talk.node.subtitle}
                   speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
                 />
               </Link>
             )
@@ -65,6 +96,7 @@ export const pageQuery = graphql`
         node {
           subtitle
           slug
+          videoLink
           speakers {
             company
           }
