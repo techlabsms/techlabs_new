@@ -5,14 +5,14 @@ import { graphql } from "gatsby"
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
-import Layout from "../components/Layout/Layout"
-import TalksHero from "../components/talks/TalksHero"
-import TalksCard from "../components/talks/TalkCard"
+import Layout from "../../components/Layout/Layout"
+import TalksHero from "../../components/talks/TalksHero"
+import TalksCard from "../../components/talks/TalkCard"
 
 // styles
-import "../styles/_main.scss"
+import "../../styles/_main.scss"
 
-const Talks = props => {
+const All = props => {
   const [searchTerm, setSearchTerm] = useState("")
   const talks = props.data.allContentfulTalksPage.edges
 
@@ -56,7 +56,7 @@ const Talks = props => {
   )
 }
 
-export default injectIntl(Talks)
+export default injectIntl(All)
 
 export const pageQuery = graphql`
   query($locale: String) {
