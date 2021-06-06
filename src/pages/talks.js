@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
@@ -12,8 +12,15 @@ import TalksCard from "../components/talks/TalkCard"
 // styles
 import "../styles/_main.scss"
 
-const talks = props => {
+const Talks = props => {
+  const [searchTerm, setSearchTerm] = useState("")
   const talks = props.data.allContentfulTalksPage.edges
+
+  const filteredTalks = talks.filter(talk => {
+    return talk.node.subtitle
+      .toLowerCase()
+      .includes(searchTerm.toLocaleLowerCase())
+  })
   return (
     <Layout>
       <div className="talks-container">
@@ -24,12 +31,16 @@ const talks = props => {
           </h4>
           <input
             placeholder="Search"
-            onFocus={e => (e.target.placeholder = "")}
-            onBlur={e => (e.target.placeholder = "Search")}
+            type="search"
+            aria-label="Search location"
+            className="locations--search mb-4 align-self-center"
+            onChange={e => {
+              setSearchTerm(e.target.value)
+            }}
           ></input>
         </div>
         <div className="talks-cards">
-          {talks.map(talk => {
+          {filteredTalks.map(talk => {
             return (
               <Link to={talk.node.slug}>
                 <TalksCard
@@ -45,7 +56,7 @@ const talks = props => {
   )
 }
 
-export default injectIntl(talks)
+export default injectIntl(Talks)
 
 export const pageQuery = graphql`
   query($locale: String) {
