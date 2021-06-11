@@ -18,6 +18,7 @@ const TalksCard = props => {
   const companies = createCompaniesArray(props.speakers)
   return (
     <div className="talks-card">
+      <img src={playSymbol} alt="play" className="talks-card-play-symbol"/>
       <div className="talks-card-img">
         <img src={props.image} />
       </div>

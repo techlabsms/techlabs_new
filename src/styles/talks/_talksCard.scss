@@ -9,6 +9,13 @@
   position: relative;
   transition: all .2s ease-in-out;
 
+  .talks-card-play-symbol {
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    z-index: 1;
+  }
+
   .talks-card-img {
     position: absolute;
     top: 0;
