@@ -2,7 +2,7 @@ import React from "react"
 
 //assets
 
-import logo from "../../assets/tl-logo.png"
+import playSymbol from "../../assets/talks/play_symbol.png"
 
 const createCompaniesArray = speakers => {
   const companies = []
@@ -19,7 +19,7 @@ const TalksCard = props => {
   return (
     <div className="talks-card">
       <div className="talks-card-img">
-        <img src={props.image} className="w-100" />
+        <img src={props.image} />
       </div>
       <div className="talks-card-bottom">
         <h1>{props.title}</h1>

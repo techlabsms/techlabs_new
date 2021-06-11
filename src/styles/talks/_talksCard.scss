@@ -7,17 +7,19 @@
   min-height: 15rem;
   background-color: #fff;
   position: relative;
+  transition: all .2s ease-in-out;
 
   .talks-card-img {
     position: absolute;
-    top: 0%;
+    top: 0;
     width: 100%;
-    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      margin: 0.5rem auto;
+      max-width: 11rem;
+      margin-top: 1.5rem;
+      filter: opacity(60%);
     }
   }
 
@@ -35,11 +37,13 @@
     h1 {
       font-size: 1.5rem;
       line-height: 0.8rem;
-      padding-top: 1.3rem;
+      padding-top: 1.1rem;
     }
     p {
       font-size: 0.8rem;
-      padding-bottom: 1rem;
     }
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }

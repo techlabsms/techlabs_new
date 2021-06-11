@@ -28,7 +28,6 @@ const All = props => {
       .toLowerCase()
       .includes(searchTerm.toLocaleLowerCase())
   })
-
   useEffect(() => {
     async function getThumbnails() {
       await talks.forEach(async talk => {
@@ -69,6 +68,162 @@ const All = props => {
           ></input>
         </div>
         <div className="talks-cards">
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
+          {filteredTalks.map(talk => {
+            return (
+              <Link to={`/talks/${talk.node.slug}`}>
+                <TalksCard
+                  key={talk.node.videoLink}
+                  title={talk.node.subtitle}
+                  speakers={talk.node.speakers}
+                  image={talk.node.thumbnail}
+                />
+              </Link>
+            )
+          })}
           {filteredTalks.map(talk => {
             return (
               <Link to={`/talks/${talk.node.slug}`}>

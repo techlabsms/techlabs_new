@@ -192,6 +192,7 @@
   "navbar.about": "About",
   "navbar.blog": "Blog",
   "navbar.slack": "Join our Slack",
+  "navbar.talks": "Talks",
   "footer.about_us": "About us",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -555,5 +556,5 @@
   "talks.previous": "Previous talks",
   "talks.heroTitle": "Discover our",
   "talks.heroSpan": "TechLabs Talks",
-  "talks.heroText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. "
+  "talks.heroText": "Discover the TechLabs Talks that we have done in the past. "
 }
