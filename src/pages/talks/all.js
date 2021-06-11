@@ -8,6 +8,8 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Layout from "../../components/Layout/Layout"
 import TalksHero from "../../components/talks/TalksHero"
 import TalksCard from "../../components/talks/TalkCard"
+import MobileTalks from "../../components/talks/MobileTalks"
+import Button from "../../components/smallComponents/Button"
 
 // styles
 import "../../styles/_main.scss"
@@ -82,6 +84,25 @@ const All = props => {
           })}
         </div>
       </div>
+      <MobileTalks>
+        {filteredTalks.map(talk => {
+              return (
+                <Link to={`/talks/${talk.node.slug}`}>
+                  <TalksCard
+                    key={talk.node.videoLink}
+                    title={talk.node.subtitle}
+                    speakers={talk.node.speakers}
+                    image={talk.node.thumbnail}
+                  />
+                </Link>
+              )
+            })}
+      </MobileTalks>
+      <Button 
+      text="More talks"
+      primary="true"
+      className="more-talks-button" 
+      onClick={handleShowMorePosts}/>
     </Layout>
   )
 }

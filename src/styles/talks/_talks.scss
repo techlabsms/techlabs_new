@@ -46,4 +46,26 @@
   @media (max-width: 767px) {
     display: none;
   }
+
+  .mobile-talks {
+    > * {
+      width: 85vw;
+      height: 18rem;
+      margin: 1.5rem auto;
+      p {
+        margin-bottom: 0.4rem;
+      }
+    }
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+
+  .more-talks-button {
+    position: absolute;
+    left: 33%;
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
 }
