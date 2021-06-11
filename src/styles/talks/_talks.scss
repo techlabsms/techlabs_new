@@ -12,6 +12,12 @@
 .talks-searchbar {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $xs) {
+      flex-direction: column;
+      input {
+        margin-top: 1rem;
+      }
+    }
 }
 
 .talks-cards {

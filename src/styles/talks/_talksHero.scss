@@ -60,10 +60,21 @@
     }
   }
   @media (max-width: 600px) {
-    display: unset;
+    flex-direction: column-reverse;
   }
 
   @media (max-width: $xs) {
-      display: unset;
+    flex-direction: column-reverse;
+    .talks-hero-img {
+      img {
+        max-height: 14rem;
+        max-width: 14rem;
+      }
+    }
   }
+  @media (max-width: 375px) {
+    .talks-hero-img {
+        display: none;
+    }
+  } 
 }
