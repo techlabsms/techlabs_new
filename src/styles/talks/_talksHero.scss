@@ -47,6 +47,10 @@
       }
     }
   }
+  @media (max-width: 1024px) {
+    height: 40vh;
+  }
+
   @media (max-width: 768px) {
     > .talks-hero-text span {
       display: unset;
@@ -64,6 +68,7 @@
   }
 
   @media (max-width: $xs) {
+    height: 60vh;
     flex-direction: column-reverse;
     .talks-hero-img {
       img {
@@ -73,6 +78,7 @@
     }
   }
   @media (max-width: 375px) {
+    height: 40vh;
     .talks-hero-img {
         display: none;
     }
