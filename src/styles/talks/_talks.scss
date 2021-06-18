@@ -1,0 +1,63 @@
+@import "../variables";
+@import "./_talksHero.scss";
+@import "./talksCard.scss";
+
+.talks-container {
+    > * {
+        max-width: 85vw;
+        margin: 1rem auto;
+    }
+}
+
+.talks-searchbar {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $xs) {
+      flex-direction: column;
+      input {
+        margin-top: 1rem;
+      }
+    }
+}
+
+.talks-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  > a:hover {
+      color: white;
+      text-decoration: none;
+  }
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    > * {
+      width: 26vw;
+      height: 15rem;
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3rem;
+    > * {
+      width: 40vw;
+      height: 14rem;
+    }
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-talks {
+  > * {
+    width: 85vw;
+    height: 18rem;
+    margin: 1.5rem auto;
+    p {
+      margin-bottom: 0.4rem;
+    }
+  }
+  @media (min-width: 767px) {
+    display: none;
+  }
+}

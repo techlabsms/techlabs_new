@@ -48,6 +48,7 @@
 @import "./program/remote/hero";
 @import "./program/remote/keyFacts";
 @import "./talks/talk";
+@import "./talks/talks";
 
 h1,
 h2,
@@ -91,7 +92,7 @@ body {
 }
 
 .navbar-add {
-  max-width: 1140px;
+  max-width: 85vw;
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;

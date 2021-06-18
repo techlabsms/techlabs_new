@@ -210,6 +210,7 @@
   "navbar.about": "Sobre",
   "navbar.blog": "Blog",
   "navbar.slack": "Junte-se ao nosso Slack",
+  "navbar.talks": "Talks",
   "footer.about_us": "Sobre nós",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -534,5 +535,10 @@
   "talk.where": "Onde?",
   "talk.interested": "Interesse?",
   "talk.notified": "Seja notificado sobre os futuros TechLabs Talks",
-  "talk.register": "Registe-se aqui"
+  "talk.register": "Registe-se aqui",
+
+  "talks.previous": "Previous talks",
+  "talks.heroTitle": "Discover our",
+  "talks.heroSpan": "TechLabs Talks",
+  "talks.heroText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. "
 }

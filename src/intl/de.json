@@ -370,6 +370,7 @@
   "navbar.about": "Über uns",
   "navbar.blog": "Blog",
   "navbar.slack": "Unser Slack",
+  "navbar.talks": "Talks",
   "footer.about_us": "Über uns",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -552,5 +553,10 @@
   "talk.contact.subheading": "Finde deinen nächsten Traumjob",
   "talk.positions.heading": "Jobs",
   "talk.positions.subheading": "Bereit für eine neue Herausforderung?",
-  "talk.positions.learnmore": "Mehr dazu"
+  "talk.positions.learnmore": "Mehr dazu",
+
+  "talks.previous": "Previous talks",
+  "talks.heroTitle": "Discover our",
+  "talks.heroSpan": "TechLabs Talks",
+  "talks.heroText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. "
 }
