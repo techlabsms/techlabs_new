@@ -41,7 +41,7 @@ const Index = ({ data }) => {
             </div>
             <div className="row mb-4">
               <div className="col talk__speaker--names">
-                <h5>Maren Greywe</h5>
+                <h5>Marsha Maxwell</h5>
                 <h5 className="talk__tl">Your Host</h5>
               </div>
             </div>
