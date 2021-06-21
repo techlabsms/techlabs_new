@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout"
 const Index = ({ data }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      navigate("logistics")
+      navigate("neuroscience")
     }
   })
   return <Layout></Layout>
