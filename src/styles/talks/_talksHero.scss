@@ -1,0 +1,86 @@
+@import "../variables";
+
+.talks-hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  > .talks-hero-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 3%;
+    h1 {
+      font-size: 3.5rem;
+    }
+    span {
+      padding: .6rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: .2rem;
+      margin-left: .5rem;
+      background-color: $pink-background;
+      color: $color-p;
+    }
+    p {
+      margin-top: 2rem;
+      line-height: 1.5rem;
+    }
+  }
+  .talks-hero-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 4%;
+    img {
+        max-width: 33rem;
+    }
+    }
+  @media (max-width: 1280px) {
+    > .talks-hero-text {
+      h1 {
+        font-size: 2.9rem;
+      }
+      span {
+        margin-left: -.5rem;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    height: 40vh;
+  }
+
+  @media (max-width: 768px) {
+    > .talks-hero-text span {
+      display: unset;
+      padding: .3rem;
+      margin-left: 1rem;
+    }
+    .talks-hero-img {
+        img {
+            max-width: 20rem;
+        }
+    }
+  }
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: $xs) {
+    height: 60vh;
+    flex-direction: column-reverse;
+    .talks-hero-img {
+      img {
+        max-height: 14rem;
+        max-width: 14rem;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    height: 40vh;
+    .talks-hero-img {
+        display: none;
+    }
+  } 
+}

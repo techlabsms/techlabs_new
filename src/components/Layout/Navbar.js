@@ -180,7 +180,15 @@ class Navbar extends React.Component {
                     <FormattedMessage id="layout.openPositions" />
                   </a>
                 </li>
-
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/talks/all"
+                    activeClassName="navLink--active"
+                  >
+                    <FormattedMessage id="navbar.talks" />
+                  </Link>
+                </li>
                 <li className="nav-item ml-3">
                   <Link
                     className="nav-button"
