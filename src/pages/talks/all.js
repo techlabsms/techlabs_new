@@ -8,6 +8,7 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Layout from "../../components/Layout/Layout"
 import TalksHero from "../../components/talks/TalksHero"
 import TalksCard from "../../components/talks/TalkCard"
+import Seo from "../../components/Layout/Seo"
 
 // styles
 import "../../styles/_main.scss"
@@ -52,6 +53,7 @@ const All = props => {
   const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
   return (
     <Layout>
+      <Seo title="TechLabs Talks" />
       <div className="talks-container">
         <TalksHero />
         <div className="talks-searchbar">
