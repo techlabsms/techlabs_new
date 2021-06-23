@@ -12,8 +12,11 @@
   .talks-card-play-symbol {
     position: absolute;
     top: 28%;
-    right: 43%;
+    right: 41%;
     z-index: 1;
+    @media (max-width: $xs) {
+      right: 43%;
+    }
   }
 
   .talks-card-img {
