@@ -8,6 +8,7 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Layout from "../../components/Layout/Layout"
 import TalksHero from "../../components/talks/TalksHero"
 import TalksCard from "../../components/talks/TalkCard"
+import Seo from "../../components/Layout/Seo"
 
 // styles
 import "../../styles/_main.scss"
@@ -49,9 +50,10 @@ const All = props => {
     getThumbnails()
   }, [filteredTalks, forceUpdate, talks])
 
-  
+  const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
   return (
     <Layout>
+      <Seo title="TechLabs Talks" />
       <div className="talks-container">
         <TalksHero />
         <div className="talks-searchbar">
@@ -59,7 +61,7 @@ const All = props => {
             <FormattedMessage id="talks.previous" /> ({talks.length})
           </h4>
           <input
-            placeholder="Search"
+            placeholder={searchPlaceholder}
             type="search"
             aria-label="Search location"
             className="locations--search mb-4 align-self-center"

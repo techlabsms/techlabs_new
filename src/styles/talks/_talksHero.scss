@@ -68,8 +68,16 @@
   }
 
   @media (max-width: $xs) {
-    height: 60vh;
+    height: 85vh;
     flex-direction: column-reverse;
+    .talks-hero-text {
+      h1 {
+        font-size: 1.9rem;
+      }
+      span {
+        margin-left: .5rem;
+      }
+    }
     .talks-hero-img {
       img {
         max-height: 14rem;
@@ -78,7 +86,7 @@
     }
   }
   @media (max-width: 375px) {
-    height: 40vh;
+    height: 72vh;
     .talks-hero-img {
         display: none;
     }
