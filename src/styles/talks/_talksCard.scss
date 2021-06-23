@@ -11,8 +11,12 @@
 
   .talks-card-play-symbol {
     position: absolute;
-    top: 30%;
-    right: 40%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 28%;
+    right: 43%;
     z-index: 1;
   }
 
