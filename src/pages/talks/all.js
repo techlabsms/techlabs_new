@@ -49,7 +49,7 @@ const All = props => {
     getThumbnails()
   }, [filteredTalks, forceUpdate, talks])
 
-  
+  const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
   return (
     <Layout>
       <div className="talks-container">
@@ -59,7 +59,7 @@ const All = props => {
             <FormattedMessage id="talks.previous" /> ({talks.length})
           </h4>
           <input
-            placeholder="Search"
+            placeholder={searchPlaceholder}
             type="search"
             aria-label="Search location"
             className="locations--search mb-4 align-self-center"
