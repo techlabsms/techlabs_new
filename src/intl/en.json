@@ -557,5 +557,9 @@
   "talks.heroTitle": "Discover our",
   "talks.heroSpan": "TechLabs Talks",
   "talks.heroText": "Browse through our discussions and interviews with exciting interviewees. We talk to successful startups and innovative companies from a wide range of industries. Our moderation always provides plenty to talk about and picks up questions on currently relevant topics.",
-  "talks.search": "Search"
+  "talks.search": "Search",
+
+  "newsroom.heroTitle": "Welcome to the",
+  "newsroom.heroSpan": "TechLabs Newsroom",
+  "newsroom.heroText": "In our newsroom you can find all the exciting talks, podcasts and projects from TechLabs."
 }
