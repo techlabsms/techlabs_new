@@ -6,12 +6,15 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import Layout from "../../components/Layout/Layout"
-import TalksHero from "../../components/talks/TalksHero"
+import Hero from "../../components/shared/Hero"
 import TalksCard from "../../components/talks/TalkCard"
 import Seo from "../../components/Layout/Seo"
 
 // styles
 import "../../styles/_main.scss"
+
+// assets
+import heroImage from "../../assets/talks/talksHero.png"
 
 //create your forceUpdate hook
 function useForceUpdate() {
@@ -53,9 +56,13 @@ const All = props => {
   const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
   return (
     <Layout>
-      <Seo title="TechLabs Talks" />
+      <Seo title="Talks" />
       <div className="talks-container">
-        <TalksHero />
+        <Hero 
+        heroImage={heroImage}
+        heroTitle="talks.heroTitle"
+        heroSpan="talks.heroSpan"
+        heroText="talks.heroText"/>
         <div className="talks-searchbar">
           <h4>
             <FormattedMessage id="talks.previous" /> ({talks.length})
