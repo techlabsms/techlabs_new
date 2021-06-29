@@ -192,6 +192,7 @@
   "navbar.about": "About",
   "navbar.blog": "Blog",
   "navbar.slack": "Join our Slack",
+  "navbar.talks": "Talks",
   "footer.about_us": "About us",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -550,5 +551,11 @@
   "talk.contact.subheading": "Find your next dream job in tech",
   "talk.positions.heading": "Open Positions",
   "talk.positions.subheading": "Looking for a new challenge?",
-  "talk.positions.learnmore": "Learn More"
+  "talk.positions.learnmore": "Learn More",
+
+  "talks.previous": "Previous talks",
+  "talks.heroTitle": "Discover our",
+  "talks.heroSpan": "TechLabs Talks",
+  "talks.heroText": "Browse through our discussions and interviews with exciting interviewees. We talk to successful startups and innovative companies from a wide range of industries. Our moderation always provides plenty to talk about and picks up questions on currently relevant topics.",
+  "talks.search": "Search"
 }

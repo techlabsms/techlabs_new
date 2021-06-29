@@ -156,9 +156,18 @@ class MobileNav extends Component {
                 </h3>
               </li>
             </a>
+            <Link to="/talks/all" activeClassName="navLink--active">
+              <li className="nav-item">
+                <h3 className="nav-link mobileNav--link">
+                  <FormattedMessage id="navbar.talks" />
+                </h3>
+              </li>
+            </Link>
             <Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
-                <h3 className="nav-link mobileNav--link">Apply Now</h3>
+                <h3 className="nav-link mobileNav--link">
+                  <FormattedMessage id="callToAction.button"/>
+                </h3>
               </li>
             </Link>
           </ul>

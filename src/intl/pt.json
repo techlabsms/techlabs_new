@@ -210,6 +210,7 @@
   "navbar.about": "Sobre",
   "navbar.blog": "Blog",
   "navbar.slack": "Junte-se ao nosso Slack",
+  "navbar.talks": "Talks",
   "footer.about_us": "Sobre nós",
   "footer.tracks": "Tracks",
   "footer.faq": "FAQ",
@@ -534,5 +535,11 @@
   "talk.where": "Onde?",
   "talk.interested": "Interesse?",
   "talk.notified": "Seja notificado sobre os futuros TechLabs Talks",
-  "talk.register": "Registe-se aqui"
+  "talk.register": "Registe-se aqui",
+
+  "talks.previous": "Talks anteriores",
+  "talks.heroTitle": "Descubra nossos",
+  "talks.heroSpan": "TechLabs Talks",
+  "talks.heroText": "Navegue por nossas discussões e entrevistas com entrevistados empolgantes. Para você, nós conversamos com empresas iniciantes e inovadoras de sucesso de uma ampla gama de indústrias. Nossa moderação sempre proporciona muito sobre o que falar e captar perguntas sobre tópicos atualmente relevantes.",
+  "talks.search": "Buscar"
 }
