@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import PLACEHOLDER from "../../assets/talks/talksHero.png"
 
 // components
 import Layout from "../../components/Layout/Layout"
@@ -31,17 +32,23 @@ const All = props => {
   })
   useEffect(() => {
     async function getThumbnails() {
-      await talks.forEach(async talk => {
+      await talks.forEach(async (talk, index) => {
         const vimeoID = talk.node.videoLink.split("/")[4]
-        const vimeoData = await fetch(
-          `http://vimeo.com/api/v2/video/${vimeoID}.json`
-        )
-        const vimeoJSON = await vimeoData.json()
-        const talksIndex = talks.findIndex(
-          talk => talk.node.videoLink.split("/")[4] === vimeoID
-        )
+        try {
+          const vimeoData = await fetch(
+            `http://vimeo.com/api/v2/video/${vimeoID}.json`
+          )
+          if (vimeoData) {
+            const vimeoJSON = await vimeoData.json()
+            const talksIndex = talks.findIndex(
+              talk => talk.node.videoLink.split("/")[4] === vimeoID
+            )
 
-        talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
+            talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
+          }
+        } catch (error) {
+          talks[index].node["thumbnail"] = PLACEHOLDER
+        }
 
         forceUpdate()
       })
@@ -50,7 +57,7 @@ const All = props => {
     getThumbnails()
   }, [filteredTalks, forceUpdate, talks])
 
-  const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
+  const searchPlaceholder = props.intl.formatMessage({ id: "talks.search" })
   return (
     <Layout>
       <Seo title="TechLabs Talks" />
@@ -86,19 +93,19 @@ const All = props => {
         </div>
       </div>
       <div className="mobile-talks">
-            {filteredTalks.map(talk => {
-              return (
-                <Link to={`/talks/${talk.node.slug}`}>
-                  <TalksCard
-                    key={talk.node.videoLink}
-                    title={talk.node.subtitle}
-                    speakers={talk.node.speakers}
-                    image={talk.node.thumbnail}
-                  />
-                </Link>
-              )
-            })}
-        </div>
+        {filteredTalks.map(talk => {
+          return (
+            <Link to={`/talks/${talk.node.slug}`}>
+              <TalksCard
+                key={talk.node.videoLink}
+                title={talk.node.subtitle}
+                speakers={talk.node.speakers}
+                image={talk.node.thumbnail}
+              />
+            </Link>
+          )
+        })}
+      </div>
     </Layout>
   )
 }
