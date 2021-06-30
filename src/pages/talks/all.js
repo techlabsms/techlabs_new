@@ -14,48 +14,15 @@ import Seo from "../../components/Layout/Seo"
 // styles
 import "../../styles/_main.scss"
 
-//create your forceUpdate hook
-function useForceUpdate() {
-  const [value, setValue] = useState(0) // integer state
-  return () => setValue(value => value + 1) // update the state to force render
-}
-
 const All = props => {
   const [searchTerm, setSearchTerm] = useState("")
   const talks = props.data.allContentfulTalksPage.edges
-  const forceUpdate = useForceUpdate()
 
   const filteredTalks = talks.filter(talk => {
     return talk.node.subtitle
       .toLowerCase()
       .includes(searchTerm.toLocaleLowerCase())
   })
-  useEffect(() => {
-    async function getThumbnails() {
-      await talks.forEach(async (talk, index) => {
-        const vimeoID = talk.node.videoLink.split("/")[4]
-        try {
-          const vimeoData = await fetch(
-            `http://vimeo.com/api/v2/video/${vimeoID}.json`
-          )
-          if (vimeoData) {
-            const vimeoJSON = await vimeoData.json()
-            const talksIndex = talks.findIndex(
-              talk => talk.node.videoLink.split("/")[4] === vimeoID
-            )
-
-            talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
-          }
-        } catch (error) {
-          talks[index].node["thumbnail"] = PLACEHOLDER
-        }
-
-        forceUpdate()
-      })
-    }
-
-    getThumbnails()
-  }, [filteredTalks, forceUpdate, talks])
 
   const searchPlaceholder = props.intl.formatMessage({ id: "talks.search" })
   return (
@@ -85,7 +52,7 @@ const All = props => {
                   key={talk.node.videoLink}
                   title={talk.node.subtitle}
                   speakers={talk.node.speakers}
-                  image={talk.node.thumbnail}
+                  image={PLACEHOLDER}
                 />
               </Link>
             )
