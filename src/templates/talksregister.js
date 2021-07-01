@@ -141,6 +141,47 @@ const Index = ({ data, intl }) => {
                       </div>
                     </div>
                     <div className="form-group">
+                      <label for="exampleInputEmail1">
+                        <FormattedMessage id={"talk.register.participated.question"}/>
+                      </label>
+                      <div>
+                        <ul className="newsletter-checkbox mt-0">
+                          <li>
+                            <input
+                              type="checkbox"
+                              value="yes"
+                              name="group[13885][1]"
+                              className="form-check-input"
+                              id="mce-group[13885]-13885-0"
+                              required
+                            />
+                            <label
+                              for="mce-group[13885]-13885-0"
+                              className="form-check-label"
+                            >
+                               <FormattedMessage id={"talk.register.participated.answer"}/>
+                            </label>
+                            <input
+                              type="checkbox"
+                              value="no"
+                              name="group[13885][1]"
+                              className="form-check-input"
+                              id="mce-group[13885]-13885-0"
+                              required
+                            />
+                            <label
+                              for="mce-group[13885]-13885-0"
+                              className="form-check-label"
+                            >
+                               <FormattedMessage id={"talk.register.participated.answer"}/>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                          
+                        
+                    </div>
+                    <div className="form-group">
                       <ul className="newsletter-checkbox">
                         <li>
                           <input
