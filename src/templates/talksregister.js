@@ -75,73 +75,18 @@ const Index = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="container mb-5 py-5 talk text-center">
-        <h1>
-          <span className="talk__tl">Live</span>Talk
-        </h1>
-        <div className="talk-video">
-          <iframe
-            title="video"
-            src={data.content.videoLink}
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      {data.content.openPositions && (
-        <OpenPositions jobs={data.content.openPositions}> </OpenPositions>
-      )}
-      <div className="container my-5">
-        <div className="row">
-          <div className="col">
-            <Heading
-              heading={<FormattedMessage id={"talk.contact.heading"} />}
-              subheading={<FormattedMessage id={"talk.contact.subheading"} />}
-            ></Heading>
-            <div className="row">
-              {data.content.hrContacts.map(contacts => (
-                <div
-                  className="col-md-6 my-4 d-flex flex-column align-items-center text-center"
-                  key={contacts.hrName}
-                >
-                  <img
-                    src={contacts.hrLogo.file.url}
-                    alt="picnic"
-                    width="50px"
-                  />
-                  <h4 className="my-3">{contacts.hrName}</h4>
-                  <a
-                    href={`${hrmailto}${contacts.hrMail}`}
-                    className="talk__hr"
-                  >
-                    <FormattedMessage id={"talk.contact"}>
-                      Get in contact
-                    </FormattedMessage>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="container-fluid talk__newsletter">
         <div className="container">
           <div className="row py-5">
-            <div className="col-md-12 text-white text-center">
+            <div className="col-md-12 text-white">
               <h2>
-                <FormattedMessage id={"talk.notified"}>
-                  Get notified about future TechLabs Talks
-                </FormattedMessage>
+                Interested?
               </h2>
               <a
-                className="btn btn-secondary my-4"
+                className="btn btn-secondary my-2"
                 href="http://eepurl.com/hjx355"
               >
-                <FormattedMessage id={"talk.register"}>
-                  Register here
-                </FormattedMessage>
+                Submit
               </a>
             </div>
           </div>
