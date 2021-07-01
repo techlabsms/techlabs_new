@@ -550,5 +550,12 @@
   "talk.contact.subheading": "Find your next dream job in tech",
   "talk.positions.heading": "Open Positions",
   "talk.positions.subheading": "Looking for a new challenge?",
-  "talk.positions.learnmore": "Learn More"
+  "talk.positions.learnmore": "Learn More",
+  "talk.register.name.label": "First Name*",
+  "talk.register.name.placeholder": "Your Name",
+  "talk.register.email.label": "Email Address*",
+  "talk.register.email.placeholder": "Your Email",
+  "talk.register.location.label": "TechLabs Location close to you",
+  "talk.register.privacy": "I agree that TechLabs could use my information to stay in contact, send news and information.",
+  "talk.register.button": "Register"
 }

@@ -33,6 +33,21 @@
       color: white !important;
     }
   }
+  &__register {
+    p {
+      font-size: 30px;
+      width: 70%;
+      color: white;
+    }
+    .container-fluid {
+      background-color: $color-p;
+    }
+    .form-group input {
+      border: 1px solid white;
+      background-color: $color-p;
+      color: white !important;
+    }
+  }
   &-video {
     position: relative;
     overflow: hidden;
@@ -150,4 +165,8 @@
       }
     }
   }
+}
+
+#mce-FNAME::placeholder, #mce-EMAIL::placeholder {
+  color:white;
 }
