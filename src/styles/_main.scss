@@ -169,7 +169,7 @@ body {
 }
 
 .dropdown-locations {
-  width: 450px;
+  width: 500px;
 }
 
 .dropdown-cta {
@@ -196,7 +196,7 @@ body {
 
 .dropdown-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 12px;
   padding: 20px 0px;
   > li {

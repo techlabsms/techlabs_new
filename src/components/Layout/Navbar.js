@@ -25,13 +25,11 @@ import favicon64 from "../../assets/tl-favicon64.png"
 
 // styles
 import "../../styles/_main.scss"
-import { useEffect } from "react"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [countries, setCountries] = useState([])
-  const [activeCountry, setActiveCountry] = useState("")
-  const [locations, setLocations] = useState([])
+  const [activeCountry, setActiveCountry] = useState("Deutschland")
 
   const data = useStaticQuery(graphql`
     query($locale: String) {
@@ -45,6 +43,11 @@ const Navbar = () => {
             applicationLink
             slug
             node_locale
+            icon {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -61,14 +64,6 @@ const Navbar = () => {
     if (!countries.includes(data.node.country))
       setCountries([...countries, data.node.country])
   })
-
-  const setLocationsByCountry = country => {
-    const locationsInCountry = filteredData.filter(data => {
-      return data.node.country === country
-    })
-
-    setLocations(locationsInCountry)
-  }
 
   return (
     <>
@@ -124,7 +119,6 @@ const Navbar = () => {
                               }
                               onClick={() => {
                                 setActiveCountry(country)
-                                setLocationsByCountry(country)
                               }}
                             >
                               <strong>{country}</strong>
@@ -134,11 +128,21 @@ const Navbar = () => {
                       </div>
                       <div className="col-md-8">
                         <div className="dropdown-container">
-                          {locations.length === 0 && (
-                            <p className="dropdown-cta">Choose your country</p>
-                          )}
-                          {locations.map(location => (
-                            <li key={location.node.heading}>
+                          {filteredData.map(location => (
+                            <li
+                              key={location.node.heading}
+                              className={
+                                location.node.country === activeCountry
+                                  ? "d-block text-nowrap"
+                                  : "d-none"
+                              }
+                            >
+                              <img
+                                src={location.node.icon.file.url}
+                                alt=""
+                                width="30"
+                                className="mr-2"
+                              />
                               <Link to={`/location/${location.node.slug}`}>
                                 {location.node.heading}
                               </Link>
