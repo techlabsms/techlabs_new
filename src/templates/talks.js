@@ -41,7 +41,7 @@ const Index = ({ data }) => {
             </div>
             <div className="row mb-4">
               <div className="col talk__speaker--names">
-                <h5>Maren Greywe</h5>
+                <h5>Marsha Maxwell</h5>
                 <h5 className="talk__tl">Your Host</h5>
               </div>
             </div>
@@ -92,39 +92,41 @@ const Index = ({ data }) => {
       {data.content.openPositions && (
         <OpenPositions jobs={data.content.openPositions}> </OpenPositions>
       )}
-      <div className="container my-5">
-        <div className="row">
-          <div className="col">
-            <Heading
-              heading={<FormattedMessage id={"talk.contact.heading"} />}
-              subheading={<FormattedMessage id={"talk.contact.subheading"} />}
-            ></Heading>
-            <div className="row">
-              {data.content.hrContacts.map(contacts => (
-                <div
-                  className="col-md-6 my-4 d-flex flex-column align-items-center text-center"
-                  key={contacts.hrName}
-                >
-                  <img
-                    src={contacts.hrLogo.file.url}
-                    alt="picnic"
-                    width="50px"
-                  />
-                  <h4 className="my-3">{contacts.hrName}</h4>
-                  <a
-                    href={`${hrmailto}${contacts.hrMail}`}
-                    className="talk__hr"
+      {data.content.hrContacts && (
+        <div className="container my-5">
+          <div className="row">
+            <div className="col">
+              <Heading
+                heading={<FormattedMessage id={"talk.contact.heading"} />}
+                subheading={<FormattedMessage id={"talk.contact.subheading"} />}
+              ></Heading>
+              <div className="row">
+                {data.content.hrContacts.map(contacts => (
+                  <div
+                    className="col-md-6 my-4 d-flex flex-column align-items-center text-center"
+                    key={contacts.hrName}
                   >
-                    <FormattedMessage id={"talk.contact"}>
-                      Get in contact
-                    </FormattedMessage>
-                  </a>
-                </div>
-              ))}
+                    <img
+                      src={contacts.hrLogo.file.url}
+                      alt="picnic"
+                      width="50px"
+                    />
+                    <h4 className="my-3">{contacts.hrName}</h4>
+                    <a
+                      href={`${hrmailto}${contacts.hrMail}`}
+                      className="talk__hr"
+                    >
+                      <FormattedMessage id={"talk.contact"}>
+                        Get in contact
+                      </FormattedMessage>
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="container-fluid talk__newsletter">
         <div className="container">
