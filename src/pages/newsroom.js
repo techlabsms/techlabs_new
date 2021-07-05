@@ -15,7 +15,7 @@ import heroImage from "../assets/newsroom/newsroomHero.png"
 
 const Newsroom = ({data}) => {
   const talks = data.allContentfulTalksPage.edges
-  // const podcasts = 
+  // const podcasts = TO DO
   return (
     <Layout>
       <Seo title="Newsroom" />
@@ -33,9 +33,10 @@ const Newsroom = ({data}) => {
             buttonLink="/talks/all"
             content={talks}
         />
+        {/* to do - podcasts in Contentful */}
         {/* <GridContainer
-            title="newsroom.talksTitle"
-            description="newsroom.talksDescription"
+            title="newsroom.podcastTitle"
+            description="newsroom.podcastDescription"
             button="newsroom.talksButton"
             content={podcasts}
         /> */}
