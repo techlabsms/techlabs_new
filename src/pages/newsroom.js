@@ -9,6 +9,7 @@ import Layout from "../components/Layout/Layout"
 import Hero from "../components/shared/Hero"
 import Seo from "../components/Layout/Seo"
 import GridContainer from "../components/newsroom/GridContainer"
+import MobileGridContainer from "../components/newsroom/MobileGridContainer"
 
 // assets
 import heroImage from "../assets/newsroom/newsroomHero.png"
@@ -40,6 +41,13 @@ const Newsroom = ({data}) => {
             button="newsroom.talksButton"
             content={podcasts}
         /> */}
+        <MobileGridContainer
+            title="newsroom.talksTitle"
+            description="newsroom.talksDescription"
+            button="newsroom.talksButton"
+            buttonLink="/talks/all"
+            content={talks}
+        />
       </div>
     </Layout>
   )

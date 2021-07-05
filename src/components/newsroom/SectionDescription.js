@@ -17,13 +17,13 @@ const SectionDescription = (props) => {
             <p>
                 <FormattedMessage id={props.description}/>
             </p>
-            <p>
+            
                 <Button
                     text={<FormattedMessage id={props.button}/>}
                     primary="true"
                     link={props.buttonLink}
                 />
-            </p>
+           
         </div>
     )
 }

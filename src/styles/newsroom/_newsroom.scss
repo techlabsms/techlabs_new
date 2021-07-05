@@ -20,6 +20,9 @@
         @media (max-width: 768px) {
           display: none;
         }
+        @media (max-width: 1024px) {
+            grid-auto-rows: 27vh;
+        }
         .newsroom-section-description {
             padding: 12% 4%;
             margin-right: 3rem;
@@ -30,7 +33,55 @@
             }
             p {
                 margin-bottom: 5rem;
+            }            
+        }
+    }
+
+    .newsroom-mobile-grid-container {
+        .newsroom-mobile-card-scroll {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            margin-bottom: 2rem;
+            @media (min-width: 730px) {
+                height: 44vh;
             }
+            @media (max-width: 320px) {
+                height: 55vh;
+            }
+            .talks-card {
+                min-width: 57vw;
+                max-height: 34vh;
+                .talks-card-bottom {
+                    > * {
+                        max-width: 100%;
+                        overflow-x: hidden;
+                    }
+                }
+                h1 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .newsroom-section-description {
+            a:last-child {
+                display: none !important;
+            }
+            h2 {
+                color: $color-p;
+            }
+        }
+
+        a.btn {
+            display: inline-block !important;
+            margin: 0 25vw;
+        }
+        
+        @media (min-width: 769px) {
+            display: none;
         }
     }
 }
