@@ -21,7 +21,7 @@ const SectionDescription = (props) => {
                 <Button
                     text={<FormattedMessage id={props.button}/>}
                     primary="true"
-                    link="#"
+                    link={props.buttonLink}
                 />
             </p>
         </div>

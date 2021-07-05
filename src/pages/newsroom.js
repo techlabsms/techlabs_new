@@ -13,7 +13,9 @@ import GridContainer from "../components/newsroom/GridContainer"
 // assets
 import heroImage from "../assets/newsroom/newsroomHero.png"
 
-const Newsroom = props => {
+const Newsroom = ({data}) => {
+  const talks = data.allContentfulTalksPage.edges
+  // const podcasts = 
   return (
     <Layout>
       <Seo title="Newsroom" />
@@ -28,12 +30,15 @@ const Newsroom = props => {
             title="newsroom.talksTitle"
             description="newsroom.talksDescription"
             button="newsroom.talksButton"
+            buttonLink="/talks/all"
+            content={talks}
         />
-        <GridContainer
+        {/* <GridContainer
             title="newsroom.talksTitle"
             description="newsroom.talksDescription"
             button="newsroom.talksButton"
-        />
+            content={podcasts}
+        /> */}
       </div>
     </Layout>
   )

@@ -1,6 +1,36 @@
+@import "../variables";
+
 .newsroom-container {
     > * {
         max-width: 85vw;
         margin: 1rem auto;
+    }
+
+    .newsroom-grid-container {
+        margin: 0 12vw 10vh 12vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 48vh;
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+        @media (min-width: 1400px) {
+            margin: 0 16vw 10vh;
+            grid-auto-rows: 40vh;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+        .newsroom-section-description {
+            padding: 12% 4%;
+            margin-right: 3rem;
+            max-width: 23rem;
+            h2 {
+                color: $color-p;
+                margin-bottom: 3rem;
+            }
+            p {
+                margin-bottom: 5rem;
+            }
+        }
     }
 }
