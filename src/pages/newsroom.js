@@ -8,11 +8,10 @@ import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/shared/Hero"
 import Seo from "../components/Layout/Seo"
+import GridContainer from "../components/newsroom/GridContainer"
 
 // assets
 import heroImage from "../assets/newsroom/newsroomHero.png"
-
-
 
 const Newsroom = props => {
   return (
@@ -20,10 +19,21 @@ const Newsroom = props => {
       <Seo title="Newsroom" />
       <div className="newsroom-container">
         <Hero 
-        heroImage={heroImage}
-        heroTitle="newsroom.heroTitle"
-        heroSpan="newsroom.heroSpan"
-        heroText="newsroom.heroText"/>
+            heroImage={heroImage}
+            heroTitle="newsroom.heroTitle"
+            heroSpan="newsroom.heroSpan"
+            heroText="newsroom.heroText"
+        />
+        <GridContainer
+            title="newsroom.talksTitle"
+            description="newsroom.talksDescription"
+            button="newsroom.talksButton"
+        />
+        <GridContainer
+            title="newsroom.talksTitle"
+            description="newsroom.talksDescription"
+            button="newsroom.talksButton"
+        />
       </div>
     </Layout>
   )
