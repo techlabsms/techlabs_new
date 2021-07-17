@@ -81,8 +81,8 @@ const Index = ({ data, intl }) => {
       <div className="container-fluid">
         <div className="container">
           <div className="row py-5">
-            <div className="col-md-12 text-white text-center">
-              <h2>
+            <div className="col-md-12 text-white">
+              <h2 className="text-center">
               <FormattedMessage id={"talk.interested"}/>
               </h2>
               <div className="row align-items-center justify-content-center">
@@ -128,7 +128,7 @@ const Index = ({ data, intl }) => {
                       <label for="">
                         <FormattedMessage id={"talk.register.location.label"}/>
                       </label>
-                      <div style={{paddingTop: "5px", marginLeft: "30%", marginRight: "30%"}}>
+                      <div style={{paddingTop: "5px", marginRight: "40%"}}>
                         <select
                           className="dropdown-select"
                         >
@@ -147,7 +147,7 @@ const Index = ({ data, intl }) => {
                       <div>
                         <ul className="newsletter-checkbox mt-0">
                           <li>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-around">
                               <div class="col-3">
                                 <input
                                   type="checkbox"
@@ -164,7 +164,7 @@ const Index = ({ data, intl }) => {
                                   <FormattedMessage id={"talk.register.participated.answer.y"}/>
                                 </label>
                               </div>
-                              <div class="col-3">
+                              <div class="col-5">
                                 <input
                                   type="checkbox"
                                   value="no"
@@ -217,13 +217,13 @@ const Index = ({ data, intl }) => {
                         style={{ display: "none" }}
                       ></div>
                     </div>
-                    <input
-                      type="submit"
-                      value={submitButton}
-                      name="submit"
-                      id="mc-embedded-subscribe"
-                      class="btn btn-secondary"
-                    />
+                      <input
+                        type="submit"
+                        value={submitButton}
+                        name="submit"
+                        id="mc-embedded-subscribe"
+                        className="btn btn-secondary"
+                      />
                   </form>
                 </div>
               </div>
