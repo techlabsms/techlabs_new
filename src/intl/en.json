@@ -556,8 +556,9 @@
   "talk.register.email.label": "Email Address*",
   "talk.register.email.placeholder": "Your Email",
   "talk.register.location.label": "TechLabs Location close to you",
-  "talk.register.participated.question": "Have you already participated in a TechLabs program?",
-  "talk.register.participated.answer": "Yes",
+  "talk.register.participated.question": "Have you already participated in a TechLabs program?*",
+  "talk.register.participated.answer.y": "Yes",
+  "talk.register.participated.answer.n": "No",
   "talk.register.privacy": "I agree that TechLabs could use my information to stay in contact, send news and information.",
   "talk.register.button": "Register"
 }
