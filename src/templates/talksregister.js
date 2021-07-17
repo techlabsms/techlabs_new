@@ -81,12 +81,12 @@ const Index = ({ data, intl }) => {
       <div className="container-fluid">
         <div className="container">
           <div className="row py-5">
-            <div className="col-md-12 text-white">
+            <div className="col-md-12 text-white text-center">
               <h2>
               <FormattedMessage id={"talk.interested"}/>
               </h2>
-              <div className="row">
-                <div className="col-md-6 order-2 order-md-1 py-3 d-flex align-items-center">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-md-6 py-3 d-flex align-items-center">
                   <form
                     action={"https://techlabs.org"}
                     method="post"
@@ -128,7 +128,7 @@ const Index = ({ data, intl }) => {
                       <label for="">
                         <FormattedMessage id={"talk.register.location.label"}/>
                       </label>
-                      <div style={{paddingTop: "5px"}}>
+                      <div style={{paddingTop: "5px", marginLeft: "30%", marginRight: "30%"}}>
                         <select
                           className="dropdown-select"
                         >
@@ -141,45 +141,49 @@ const Index = ({ data, intl }) => {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputEmail1">
+                      <label for="">
                         <FormattedMessage id={"talk.register.participated.question"}/>
                       </label>
                       <div>
                         <ul className="newsletter-checkbox mt-0">
                           <li>
-                            <input
-                              type="checkbox"
-                              value="yes"
-                              name="group[13885][1]"
-                              className="form-check-input"
-                              id="mce-group[13885]-13885-0"
-                              required
-                            />
-                            <label
-                              for="mce-group[13885]-13885-0"
-                              className="form-check-label"
-                            >
-                               <FormattedMessage id={"talk.register.participated.answer"}/>
-                            </label>
-                            <input
-                              type="checkbox"
-                              value="no"
-                              name="group[13885][1]"
-                              className="form-check-input"
-                              id="mce-group[13885]-13885-0"
-                              required
-                            />
-                            <label
-                              for="mce-group[13885]-13885-0"
-                              className="form-check-label"
-                            >
-                               <FormattedMessage id={"talk.register.participated.answer"}/>
-                            </label>
+                            <div class="row justify-content-center">
+                              <div class="col-3">
+                                <input
+                                  type="checkbox"
+                                  value="yes"
+                                  name="group[13885][1]"
+                                  className="form-check-input"
+                                  id="mce-group[13885]-13885-0"
+                                  required
+                                />
+                                <label
+                                  for="mce-group[13885]-13885-0"
+                                  className="form-check-label"
+                                >
+                                  <FormattedMessage id={"talk.register.participated.answer.y"}/>
+                                </label>
+                              </div>
+                              <div class="col-3">
+                                <input
+                                  type="checkbox"
+                                  value="no"
+                                  name="group[13885][1]"
+                                  className="form-check-input"
+                                  id="mce-group[13885]-13885-0"
+                                  required
+                                />
+                                <label
+                                  for="mce-group[13885]-13885-0"
+                                  className="form-check-label"
+                                >
+                                  <FormattedMessage id={"talk.register.participated.answer.n"}/>
+                                </label>
+                              </div>
+                            </div>
                           </li>
                         </ul>
                       </div>
-                          
-                        
                     </div>
                     <div className="form-group">
                       <ul className="newsletter-checkbox">
