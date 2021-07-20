@@ -45,9 +45,6 @@ class Navbar extends React.Component {
         </Helmet>
         <Headroom
           style={{
-            webkitTransition: "all .2s ease-in-out",
-            mozTransition: "all .2s ease-in-out",
-            oTransition: "all .2s ease-in-out",
             transition: "all .2s ease-in-out",
           }}
         >
