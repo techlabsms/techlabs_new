@@ -6,4 +6,4 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
-    Permission-Policy = "microphone 'none'; geolocation 'none'"
+    Permissions-Policy = microphone=(), geolocation=()
