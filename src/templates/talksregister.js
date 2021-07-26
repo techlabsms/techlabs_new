@@ -275,10 +275,10 @@ export const pageQuery = graphql`
     ) {
       ...fluidImage
     }
-    location: allContentfulLocationPage {
-      nodes {
-        heading
-      }
+    location: allContentfulLocationPage(filter: {node_locale: {eq: $locale}}) {
+    nodes {
+      heading
     }
+  }
   }
 `
