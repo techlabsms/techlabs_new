@@ -5,7 +5,6 @@ import Layout from "../components/Layout/Layout"
 import Img from "gatsby-image"
 import{ injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import LearnMore from "../components/landingpage/learnMore"
-import Heading from "../components/smallComponents/Heading"
 import Seo from "../components/Layout/Seo"
 
 const Index = ({ data, intl }) => {
@@ -148,38 +147,38 @@ const Index = ({ data, intl }) => {
                         <ul className="newsletter-checkbox mt-0">
                           <li>
                             <div class="row justify-content-around">
-                              <div class="col-3">
+                              <div class="col-2">
                                 <input
-                                  type="checkbox"
+                                  type="radio"
                                   value="yes"
-                                  name="group[13885][1]"
+                                  name="Participation"
                                   className="form-check-input"
                                   id="mce-group[13885]-13885-0"
-                                  required
                                 />
                                 <label
-                                  for="mce-group[13885]-13885-0"
+                                  for="yes"
                                   className="form-check-label"
                                 >
                                   <FormattedMessage id={"talk.register.participated.answer.y"}/>
                                 </label>
                               </div>
-                              <div class="col-5">
+                              <div class="col-2">
                                 <input
-                                  type="checkbox"
+                                  type="radio"
                                   value="no"
-                                  name="group[13885][1]"
+                                  name="Participation"
                                   className="form-check-input"
                                   id="mce-group[13885]-13885-0"
-                                  required
+                                  checked
                                 />
                                 <label
-                                  for="mce-group[13885]-13885-0"
+                                  for="no"
                                   className="form-check-label"
                                 >
                                   <FormattedMessage id={"talk.register.participated.answer.n"}/>
                                 </label>
                               </div>
+                              <div class="col-6"></div>
                             </div>
                           </li>
                         </ul>
