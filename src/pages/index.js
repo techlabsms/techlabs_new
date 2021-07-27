@@ -439,7 +439,7 @@ export const pageQuery = graphql`
     ) {
       ...fluidImage
     }
-    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }, sort: {fields:[country, heading], order: [DESC, ASC]}) {
       edges {
         node {
           heading
