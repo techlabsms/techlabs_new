@@ -87,12 +87,11 @@ const Index = ({ data, intl }) => {
               <div className="row align-items-center justify-content-center">
                 <div className="col-md-6 py-3 d-flex align-items-center">
                   <form
-                    action={"https://techlabs.org"}
+                    action="https://techlabs.us7.list-manage.com/subscribe/post?u=967a8f4afdf27d50c6b2fa557&amp;id=83e2ef691a"
                     method="post"
                     id="mc-embedded-subscribe-form"
                     name="mc-embedded-subscribe-form"
                     class="validate"
-                    target="_blank"
                     novalidate
                     className="w-100"
                   >
@@ -129,10 +128,12 @@ const Index = ({ data, intl }) => {
                       </label>
                       <div style={{paddingTop: "5px", marginRight: "40%"}}>
                         <select
+                          id="MERGE2"
+                          name="MERGE2"
                           className="dropdown-select"
                         >
                           {data.location.nodes.map(locationoption => (
-                            <option key={locationoption.heading} value={locationoption.heading}>
+                            <option key={locationoption.heading} value={locationoption.heading === "Remote Program" ? "None of the ones listed" : `${locationoption.heading} (${locationoption.country})`}>
                               {locationoption.heading}
                             </option>
                           ))}
@@ -150,13 +151,13 @@ const Index = ({ data, intl }) => {
                               <div class="col-2">
                                 <input
                                   type="radio"
-                                  value="yes"
-                                  name="Participation"
+                                  value="Yes"
+                                  name="MERGE3"
                                   className="form-check-input"
-                                  id="mce-group[13885]-13885-0"
+                                  id="MERGE3"
                                 />
                                 <label
-                                  for="yes"
+                                  for="Yes"
                                   className="form-check-label"
                                 >
                                   <FormattedMessage id={"talk.register.participated.answer.y"}/>
@@ -165,14 +166,14 @@ const Index = ({ data, intl }) => {
                               <div class="col-2">
                                 <input
                                   type="radio"
-                                  value="no"
-                                  name="Participation"
+                                  value="No"
+                                  name="MERGE3"
                                   className="form-check-input"
-                                  id="mce-group[13885]-13885-0"
+                                  id="MERGE3"
                                   checked
                                 />
                                 <label
-                                  for="no"
+                                  for="No"
                                   className="form-check-label"
                                 >
                                   <FormattedMessage id={"talk.register.participated.answer.n"}/>
@@ -189,14 +190,14 @@ const Index = ({ data, intl }) => {
                         <li>
                           <input
                             type="checkbox"
-                            value="1"
-                            name="group[13885][1]"
+                            value="Y"
+                            name="gdpr[43494]"
                             className="form-check-input"
-                            id="mce-group[13885]-13885-0"
+                            id="gdpr_43494"
                             required
                           />
                           <label
-                            for="mce-group[13885]-13885-0"
+                            for="gdpr_43494"
                             className="form-check-label"
                           >
                             <FormattedMessage id={"talk.register.privacy"}/>
@@ -275,9 +276,10 @@ export const pageQuery = graphql`
     ) {
       ...fluidImage
     }
-    location: allContentfulLocationPage(filter: {node_locale: {eq: $locale}}) {
+    location: allContentfulLocationPage(filter: {node_locale: {eq: "en"}}) {
     nodes {
       heading
+      country
     }
   }
   }
