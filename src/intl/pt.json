@@ -539,7 +539,7 @@
 
   "talk.register.name.label": "Primeiro nome*",
   "talk.register.name.placeholder": "Seu nome",
-  "talk.register.email.label": "Endereço de email*",
+  "talk.register.email.label": "Endereço de Email*",
   "talk.register.email.placeholder": "Seu correio electrónico",
   "talk.register.location.label": "TechLabs Locais perto de si",
   "talk.register.participated.question": "Já participou num programa TechLabs?*",
