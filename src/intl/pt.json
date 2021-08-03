@@ -537,6 +537,17 @@
   "talk.notified": "Seja notificado sobre os futuros TechLabs Talks",
   "talk.register": "Registe-se aqui",
 
+  "talk.register.name.label": "Primeiro nome*",
+  "talk.register.name.placeholder": "Seu nome",
+  "talk.register.email.label": "Endereço de email*",
+  "talk.register.email.placeholder": "Seu correio electrónico",
+  "talk.register.location.label": "TechLabs Locais perto de si",
+  "talk.register.participated.question": "Já participou num programa TechLabs?*",
+  "talk.register.participated.answer.y": "Sim",
+  "talk.register.participated.answer.n": "Não",
+  "talk.register.privacy": "Concordo que o TechLabs poderia utilizar as minhas informações para permanecer em contacto, enviar notícias e informações.",
+  "talk.register.button": "Registe-se",
+
   "talks.previous": "Talks anteriores",
   "talks.heroTitle": "Descubra nossos",
   "talks.heroSpan": "TechLabs Talks",
