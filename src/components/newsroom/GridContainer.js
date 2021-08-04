@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
 import SectionDescription from "./SectionDescription"
@@ -21,13 +21,17 @@ const GridContainer = (props) => {
                 sectionId={props.type}
             />
             {props.type === "talks" && content
-            .map(element => (
-            <Card
-                image={element.node.thumbnail}
-                title={element.node.subtitle}
-                speakers={element.node.speakers}
-            ></Card>
-            ))}
+            .map(element => {
+                return(
+                    <Link to={`/talks/${element.node.slug}`}>
+                        <Card
+                            image={element.node.thumbnail}
+                            title={element.node.subtitle}
+                            speakers={element.node.speakers}
+                        />
+                    </Link>
+                )
+            })}
             {props.type === "podcasts" && content.map(element => (
                 <PodcastCard
                 title={element.title}

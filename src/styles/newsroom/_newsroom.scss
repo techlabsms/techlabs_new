@@ -62,16 +62,19 @@
             @media (max-width: 320px) {
                 height: 55vh;
             }
-            .talks-card {
+            .talks-card, .podcast-card {
                 min-width: 57vw;
                 max-height: 34vh;
-                .talks-card-bottom {
+                .talks-card-bottom, .podcast-card-bottom {
                     > * {
                         max-width: 100%;
                         overflow-x: hidden;
                     }
                 }
-                h1 {
+                .podcast-card-bottom {
+                    display: none;
+                }
+                    h1 {
                     font-size: 1.1rem;
                 }
             }
@@ -85,9 +88,11 @@
             }
         }
 
-        a.btn {
-            display: inline-block !important;
-            margin: 0 25vw;
+        .newsroom-mobile-button {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            margin-bottom: 3rem;
         }
         
         @media (min-width: 769px) {

@@ -7,6 +7,7 @@ import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import SectionDescription from "./SectionDescription"
 import Card from "../talks/TalkCard"
 import Button from "../smallComponents/Button"
+import PodcastCard from "./PodcastCard"
 
 
 const MobileGridContainer = (props) => {
@@ -19,11 +20,8 @@ const MobileGridContainer = (props) => {
                 button={props.button}
                 buttonLink={props.buttonLink}
             />
-            {/* TO DO:
-            image is always same podcasts
-            add scroll section for podcasts */}
             <div className="newsroom-mobile-card-scroll">
-                {content
+                {props.type === "talks" && content
                 .map(element => (
                 <Card
                     image={element.node.thumbnail}
@@ -31,12 +29,22 @@ const MobileGridContainer = (props) => {
                     speakers={element.node.speakers}
                 ></Card>
                 ))}
+                {props.type === "podcasts" && content
+                .map(element => (
+                <PodcastCard
+                    title={element.title}
+                    thumbnail={element.thumbnail}
+                    url={element.link}
+                ></PodcastCard>
+                ))}
             </div>
+            <div className="newsroom-mobile-button">
             <Button
                     text={<FormattedMessage id={props.button}/>}
                     primary="true"
                     link={props.buttonLink}
                 />
+            </div> 
         </div>
     )
 }

@@ -52,13 +52,23 @@ const Newsroom = ({data}) => {
             type="podcasts"
             buttonLink="#"
             content={podcasts}
-        />         
+        />      
+        {/* mobile displays    */}
         <MobileGridContainer
             title="newsroom.talksTitle"
             description="newsroom.talksDescription"
             button="newsroom.talksButton"
+            type="talks"
             buttonLink="/talks/all"
             content={talks}
+        />
+        <MobileGridContainer
+            title="newsroom.podcastTitle"
+            description="newsroom.podcastDescription"
+            button="newsroom.podcastButton"
+            type="podcasts"
+            buttonLink="#"
+            content={podcasts}
         />
       </div>
     </Layout>
