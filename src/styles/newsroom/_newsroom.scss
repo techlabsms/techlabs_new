@@ -1,4 +1,5 @@
 @import "../variables";
+@import "./podcastCard";
 
 .newsroom-container {
     > * {
@@ -12,7 +13,7 @@
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 48vh;
         grid-column-gap: 3vw;
-        grid-row-gap: 3vw;
+        grid-row-gap: 5.5vw;
         @media (min-width: 1400px) {
             margin: 0 16vw 10vh;
             grid-auto-rows: 40vh;
@@ -34,6 +35,15 @@
             p {
                 margin-bottom: 5rem;
             }            
+        }
+
+        #podcasts {
+            p {
+                margin-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 2rem;
+            }
         }
     }
 

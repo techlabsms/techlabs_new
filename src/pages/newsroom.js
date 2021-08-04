@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
@@ -16,7 +16,17 @@ import heroImage from "../assets/newsroom/newsroomHero.png"
 
 const Newsroom = ({data}) => {
   const talks = data.allContentfulTalksPage.edges
-  // const podcasts = TO DO
+  const anchorRSS = "https://anchor.fm/s/47019a04/podcast/rss"
+  const rssToJSON = "https://api.rss2json.com/v1/api.json?rss_url="
+  const [podcasts, setPodcasts] = useState([])
+  useEffect(() => {
+    // get data from Anchor RSS feed, as JSON and not XML
+    fetch(`${rssToJSON}${anchorRSS}`)
+      .then(response => response.json()) // parse JSON from request
+      .then(resultData => {
+        setPodcasts(resultData.items)
+      }) 
+  }, [])
   return (
     <Layout>
       <Seo title="Newsroom" />
@@ -32,15 +42,17 @@ const Newsroom = ({data}) => {
             description="newsroom.talksDescription"
             button="newsroom.talksButton"
             buttonLink="/talks/all"
+            type="talks"
             content={talks}
         />
-        {/* to do - podcasts in Contentful */}
-        {/* <GridContainer
+        <GridContainer
             title="newsroom.podcastTitle"
             description="newsroom.podcastDescription"
-            button="newsroom.talksButton"
+            button="newsroom.podcastButton"
+            type="podcasts"
+            buttonLink="#"
             content={podcasts}
-        /> */}
+        />         
         <MobileGridContainer
             title="newsroom.talksTitle"
             description="newsroom.talksDescription"

@@ -10,7 +10,7 @@ import Button from "../smallComponents/Button"
 const SectionDescription = (props) => {
     
     return(
-        <div className="newsroom-section-description">
+        <div className="newsroom-section-description" id={props.sectionId}>
             <h2>
                 <FormattedMessage id={props.title}/>
             </h2>
