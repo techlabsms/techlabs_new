@@ -68,7 +68,7 @@
   }
 
   @media (max-width: $xs) {
-    height: 85vh;
+    height: 60vh;
     flex-direction: column-reverse;
     .new-hero-text {
       h1 {
@@ -86,7 +86,7 @@
     }
   }
   @media (max-width: 375px) {
-    height: 72vh;
+    height: 40vh;
     .new-hero-img {
         display: none;
     }
