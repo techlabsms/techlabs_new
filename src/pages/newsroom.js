@@ -14,8 +14,15 @@ import MobileGridContainer from "../components/newsroom/MobileGridContainer"
 // assets
 import heroImage from "../assets/newsroom/newsroomHero.png"
 
+function useForceUpdate() {
+  const [value, setValue] = useState(0) // integer state
+  return () => setValue(value => value + 1) // update the state to force render
+}
+
 const Newsroom = ({data}) => {
+
   const talks = data.allContentfulTalksPage.edges
+  const forceUpdate = useForceUpdate()
   const anchorRSS = "https://anchor.fm/s/47019a04/podcast/rss"
   const rssToJSON = "https://api.rss2json.com/v1/api.json?rss_url="
   const [podcasts, setPodcasts] = useState([])
@@ -27,6 +34,27 @@ const Newsroom = ({data}) => {
         setPodcasts(resultData.items)
       }) 
   }, [])
+
+  // useEffect(() => {
+  //   async function getThumbnails() {
+  //     await talks.forEach(async talk => {
+  //       const vimeoID = talk.node.videoLink.split("/")[4]
+  //       const vimeoData = await fetch(
+  //         `http://vimeo.com/api/v2/video/${vimeoID}.json`
+  //       )
+  //       const vimeoJSON = await vimeoData.json()
+  //       const talksIndex = talks.findIndex(
+  //         talk => talk.node.videoLink.split("/")[4] === vimeoID
+  //       )
+
+  //       talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
+
+  //       forceUpdate()
+  //     })
+  //   }
+
+  //   getThumbnails()
+  // }, [talks, forceUpdate, talks])
   return (
     <Layout>
       <Seo title="Newsroom" />
