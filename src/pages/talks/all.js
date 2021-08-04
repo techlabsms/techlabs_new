@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import PLACEHOLDER from "../../assets/talks/talksHero.png"
 
 // components
 import Layout from "../../components/Layout/Layout"
@@ -13,47 +14,17 @@ import Seo from "../../components/Layout/Seo"
 // styles
 import "../../styles/_main.scss"
 
-// assets
-import heroImage from "../../assets/talks/talksHero.png"
-
-//create your forceUpdate hook
-function useForceUpdate() {
-  const [value, setValue] = useState(0) // integer state
-  return () => setValue(value => value + 1) // update the state to force render
-}
-
 const All = props => {
   const [searchTerm, setSearchTerm] = useState("")
   const talks = props.data.allContentfulTalksPage.edges
-  const forceUpdate = useForceUpdate()
 
   const filteredTalks = talks.filter(talk => {
     return talk.node.subtitle
       .toLowerCase()
       .includes(searchTerm.toLocaleLowerCase())
   })
-  useEffect(() => {
-    async function getThumbnails() {
-      await talks.forEach(async talk => {
-        const vimeoID = talk.node.videoLink.split("/")[4]
-        const vimeoData = await fetch(
-          `http://vimeo.com/api/v2/video/${vimeoID}.json`
-        )
-        const vimeoJSON = await vimeoData.json()
-        const talksIndex = talks.findIndex(
-          talk => talk.node.videoLink.split("/")[4] === vimeoID
-        )
 
-        talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
-
-        forceUpdate()
-      })
-    }
-
-    getThumbnails()
-  }, [filteredTalks, forceUpdate, talks])
-
-  const searchPlaceholder = props.intl.formatMessage({id: 'talks.search'})
+  const searchPlaceholder = props.intl.formatMessage({ id: "talks.search" })
   return (
     <Layout>
       <Seo title="Talks" />
@@ -85,7 +56,7 @@ const All = props => {
                   key={talk.node.videoLink}
                   title={talk.node.subtitle}
                   speakers={talk.node.speakers}
-                  image={talk.node.thumbnail}
+                  image={PLACEHOLDER}
                 />
               </Link>
             )
@@ -93,19 +64,19 @@ const All = props => {
         </div>
       </div>
       <div className="mobile-talks">
-            {filteredTalks.map(talk => {
-              return (
-                <Link to={`/talks/${talk.node.slug}`}>
-                  <TalksCard
-                    key={talk.node.videoLink}
-                    title={talk.node.subtitle}
-                    speakers={talk.node.speakers}
-                    image={talk.node.thumbnail}
-                  />
-                </Link>
-              )
-            })}
-        </div>
+        {filteredTalks.map(talk => {
+          return (
+            <Link to={`/talks/${talk.node.slug}`}>
+              <TalksCard
+                key={talk.node.videoLink}
+                title={talk.node.subtitle}
+                speakers={talk.node.speakers}
+                image={talk.node.thumbnail}
+              />
+            </Link>
+          )
+        })}
+      </div>
     </Layout>
   )
 }

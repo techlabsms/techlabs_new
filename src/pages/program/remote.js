@@ -194,7 +194,7 @@ export const pageQuery = graphql`
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
-    remote: file(relativePath: { eq: "remote.png" }) {
+    remote: file(relativePath: { eq: "remote-sticker.png" }) {
       ...fluidImage
     }
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {

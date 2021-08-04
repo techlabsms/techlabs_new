@@ -12,7 +12,7 @@
 We use Gatsby.js to build our Site
 
 1. Clone the Repo
-2. Install the Gatsby CLI `npm install -g gatsby-cli`G
+2. Install the Gatsby CLI `npm install -g gatsby-cli`
 3. Run `npm install`
 4. Get the contentful access token from passbolt and add it as `.env` file
 5. Run `gatsby develop` to start the project locally
@@ -57,9 +57,9 @@ You found something that has to be different? Something is broken? Please report
 
 ![lighthouse staging](https://github.com/techlabsms/techlabs_new/workflows/lighthouse%20staging/badge.svg)
 
-## Passbolt 
+## Passbolt
 
-If you want to work on the website please consider to become a part of the techlabs organisation. Currently only TechLabs-Members could support this project. Either message <a href="mailto:richard.menning@techlabs.org">Richard</a> or get in contact with our HR department. 
+If you want to work on the website please consider to become a part of the techlabs organisation. Currently only TechLabs-Members could support this project. Either message <a href="mailto:richard.menning@techlabs.org">Richard</a> or get in contact with our HR department.
 
 ## Questions?
 
