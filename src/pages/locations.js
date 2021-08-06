@@ -164,7 +164,7 @@ export default injectIntl(Locations)
 
 export const pageQuery = graphql`
   query LocationPageQuery($locale: String) {
-    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }) {
+    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }, sort: {fields:[heading], order: ASC}) {
       edges {
         node {
           slug

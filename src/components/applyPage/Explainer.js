@@ -140,6 +140,7 @@ const Explainer = () => {
         <div className="c-explainer-mobile__progress">
           {steps.map((step, i) => (
             <div
+              key={i}
               className={
                 currentStep === i
                   ? "c-explainer-mobile__circle c-explainer-mobile__circle--active"
