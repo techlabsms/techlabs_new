@@ -563,13 +563,13 @@
 
   "newsroom.heroTitle": "Willkommen zur",
   "newsroom.heroSpan": "TechLabs Newsroom",
-  "newsroom.heroText": "In our newsroom you can find all the exciting talks, podcasts and projects from TechLabs.",
+  "newsroom.heroText": "Hier kannst du all unsere spannenden Techlabs Talks, Podcasts und Projekte entdecken.",
 
-  "newsroom.talksTitle": "Our latest TechLabs Talks",
-  "newsroom.talksDescription": "Check out our TechLabs Talks and learn something new and get in contact with our panelists!",
-  "newsroom.talksButton": "All Talks",
+  "newsroom.talksTitle": "Unsere neuesten TechLabs Talks",
+  "newsroom.talksDescription": "Sieh dir unsere Talks an, erhalte Einblicke in interessante Tech-Themen und lerne Diskussionsteilnehmer der eingeladenen Unternehmen kennen.",
+  "newsroom.talksButton": "Alle Talks",
 
-  "newsroom.podcastTitle": "Our Digital Shapers Podcast",
-  "newsroom.podcastDescription": "Digital Shapers is a podcast produced in cooperation between TechLabs and DigitalMente, two NGOs with the same goal, creating a more equal society using technology and tech skills to democratize education and solve today's world challenges.",
+  "newsroom.podcastTitle": "Unser Digital Shapers Podcast",
+  "newsroom.podcastDescription": "Digital Shapers ist ein Podcast in Kooperation zwischen TechLabs und DigitalMente. Die beiden NGOs teilen eine Mission: Möglichst vielen Menschen ermöglichen, sich modernste technische Fähigkeiten anzueignen, um die heutigen Probleme auf digitale Weise zu lösen.",
   "newsroom.podcastButton": "Alle Podcasts"
 }
