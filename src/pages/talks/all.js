@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import PLACEHOLDER from "../../assets/talks/talksHero.png"
+
+// assets
+import heroImage from "../../assets/talks/talksHero.png"
 
 // components
 import Layout from "../../components/Layout/Layout"
