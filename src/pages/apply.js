@@ -194,9 +194,6 @@ const Apply = props => {
         }
         stepThree={
           <TypeFormEmbedd
-            heading={
-              <FormattedMessage id={"applypage.typeformembedd.heading"} />
-            }
             subheading={
               <FormattedMessage id={"applypage.typeformembedd.subheading"} />
             }

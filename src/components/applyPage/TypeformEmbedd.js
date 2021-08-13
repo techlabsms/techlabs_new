@@ -3,11 +3,11 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
-const TypeformEmbedd = ({ url, isMobile, heading, subheading, city }) => {
+const TypeformEmbedd = ({ url, isMobile, subheading, city }) => {
   return (
     <div className="pt-5 mt-3">
       <div className="container relative c-typformEmbedd">
-        <Heading heading={`${heading} ${city}`} subheading={subheading} />
+        <Heading heading={`${city}`} subheading={subheading} />
 
         <div
           style={{

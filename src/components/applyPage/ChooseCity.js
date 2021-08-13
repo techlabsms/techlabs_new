@@ -94,8 +94,8 @@ const ChooseCity = ({
           <ApplyCard
             cityValues={country.node}
             key={country.node.heading}
-            handleClick={(isClicked, value, available, link) => {
-              handleClick(isClicked, value, available, link)
+            handleClick={(isClicked, value, available, open, link) => {
+              handleClick(isClicked, value, available, open, link)
             }}
             clickedCityValue={clickedCityValue}
           />
