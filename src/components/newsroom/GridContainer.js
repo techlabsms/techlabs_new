@@ -8,6 +8,9 @@ import SectionDescription from "./SectionDescription"
 import Card from "../talks/TalkCard"
 import PodcastCard from "./PodcastCard"
 
+// assets
+import placeholderImage from '../../assets/newsroom/newsroomHero.png'
+
 const GridContainer = (props) => {
     const content = props.content.sort(() => 0.5 - Math.random()).slice(0, 3)
 
@@ -25,7 +28,7 @@ const GridContainer = (props) => {
                 return(
                     <Link to={`/talks/${element.node.slug}`}>
                         <Card
-                            image={element.node.thumbnail}
+                            image={placeholderImage}
                             title={element.node.subtitle}
                             speakers={element.node.speakers}
                         />

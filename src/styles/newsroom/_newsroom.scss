@@ -13,7 +13,7 @@
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 48vh;
         grid-column-gap: 3vw;
-        grid-row-gap: 5.5vw;
+        grid-row-gap: 11vw;
         @media (min-width: 1400px) {
             margin: 0 16vw 10vh;
             grid-auto-rows: 40vh;
@@ -33,7 +33,7 @@
                 margin-bottom: 3rem;
             }
             p {
-                margin-bottom: 5rem;
+                margin-bottom: 2rem;
             }            
         }
 
@@ -42,7 +42,7 @@
                 margin-bottom: 2rem;
             }
             .btn {
-                margin-bottom: 2rem;
+                margin-bottom: 5rem;
             }
         }
     }

@@ -22,7 +22,6 @@ function useForceUpdate() {
 const Newsroom = ({data}) => {
 
   const talks = data.allContentfulTalksPage.edges
-  const forceUpdate = useForceUpdate()
   const anchorRSS = "https://anchor.fm/s/47019a04/podcast/rss"
   const rssToJSON = "https://api.rss2json.com/v1/api.json?rss_url="
   const [podcasts, setPodcasts] = useState([])
@@ -32,29 +31,9 @@ const Newsroom = ({data}) => {
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         setPodcasts(resultData.items)
-      }) 
+      });
   }, [])
 
-  // useEffect(() => {
-  //   async function getThumbnails() {
-  //     await talks.forEach(async talk => {
-  //       const vimeoID = talk.node.videoLink.split("/")[4]
-  //       const vimeoData = await fetch(
-  //         `http://vimeo.com/api/v2/video/${vimeoID}.json`
-  //       )
-  //       const vimeoJSON = await vimeoData.json()
-  //       const talksIndex = talks.findIndex(
-  //         talk => talk.node.videoLink.split("/")[4] === vimeoID
-  //       )
-
-  //       talks[talksIndex].node["thumbnail"] = vimeoJSON[0].thumbnail_medium
-
-  //       forceUpdate()
-  //     })
-  //   }
-
-  //   getThumbnails()
-  // }, [talks, forceUpdate, talks])
   return (
     <Layout>
       <Seo title="Newsroom" />
@@ -78,7 +57,7 @@ const Newsroom = ({data}) => {
             description="newsroom.podcastDescription"
             button="newsroom.podcastButton"
             type="podcasts"
-            buttonLink="#"
+            buttonLink="https://anchor.fm/digital-shapers-podcast"
             content={podcasts}
         />      
         {/* mobile displays    */}
@@ -95,7 +74,7 @@ const Newsroom = ({data}) => {
             description="newsroom.podcastDescription"
             button="newsroom.podcastButton"
             type="podcasts"
-            buttonLink="#"
+            buttonLink="https://anchor.fm/digital-shapers-podcast"
             content={podcasts}
         />
       </div>

@@ -9,6 +9,9 @@ import Card from "../talks/TalkCard"
 import Button from "../smallComponents/Button"
 import PodcastCard from "./PodcastCard"
 
+// assets
+import placeholderImage from '../../assets/newsroom/newsroomHero.png'
+
 
 const MobileGridContainer = (props) => {
     const content = props.content.sort(() => 0.5 - Math.random()).slice(0, 3)
@@ -24,7 +27,7 @@ const MobileGridContainer = (props) => {
                 {props.type === "talks" && content
                 .map(element => (
                 <Card
-                    image={element.node.thumbnail}
+                    image={placeholderImage}
                     title={element.node.subtitle}
                     speakers={element.node.speakers}
                 ></Card>
