@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 import PLACEHOLDER from "../../assets/talks/talksHero.png"
 
+// assets
+import heroImage from "../../assets/talks/talksHero.png"
+
 // components
 import Layout from "../../components/Layout/Layout"
-import TalksHero from "../../components/talks/TalksHero"
+import Hero from "../../components/shared/Hero"
 import TalksCard from "../../components/talks/TalkCard"
 import Seo from "../../components/Layout/Seo"
 
@@ -27,9 +30,13 @@ const All = props => {
   const searchPlaceholder = props.intl.formatMessage({ id: "talks.search" })
   return (
     <Layout>
-      <Seo title="TechLabs Talks" />
+      <Seo title="Talks" />
       <div className="talks-container">
-        <TalksHero />
+        <Hero 
+        heroImage={heroImage}
+        heroTitle="talks.heroTitle"
+        heroSpan="talks.heroSpan"
+        heroText="talks.heroText"/>
         <div className="talks-searchbar">
           <h4>
             <FormattedMessage id="talks.previous" /> ({talks.length})

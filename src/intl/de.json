@@ -568,5 +568,17 @@
   "talks.heroTitle": "Entdecke unsere",
   "talks.heroSpan": "TechLabs Talks",
   "talks.heroText": "Durchstöbere unsere Diskussionen und Interviews mit spannenden Gesprächspartnern. Für euch sprechen wir mit erfolgreichen Startups und innovativen Unternehmen aus den verschiedensten Branchen. Unsere Moderation sorgt dabei immer für reichlich Gesprächsstoff und greift Fragestellungen zu aktuell relevanten Themen auf.",
-  "talks.search": "Suchen"
+  "talks.search": "Suchen",
+
+  "newsroom.heroTitle": "Willkommen zur",
+  "newsroom.heroSpan": "TechLabs Newsroom",
+  "newsroom.heroText": "Hier kannst du all unsere spannenden Techlabs Talks, Podcasts und Projekte entdecken.",
+
+  "newsroom.talksTitle": "Unsere neuesten TechLabs Talks",
+  "newsroom.talksDescription": "Sieh dir unsere Talks an, erhalte Einblicke in interessante Tech-Themen und lerne Diskussionsteilnehmer der eingeladenen Unternehmen kennen.",
+  "newsroom.talksButton": "Alle Talks",
+
+  "newsroom.podcastTitle": "Unser Digital Shapers Podcast",
+  "newsroom.podcastDescription": "Digital Shapers ist ein Podcast in Kooperation zwischen TechLabs und DigitalMente. Die beiden NGOs teilen eine Mission: Möglichst vielen Menschen ermöglichen, sich modernste technische Fähigkeiten anzueignen, um die heutigen Probleme auf digitale Weise zu lösen.",
+  "newsroom.podcastButton": "Alle Podcasts"
 }

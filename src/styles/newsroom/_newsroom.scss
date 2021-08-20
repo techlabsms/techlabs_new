@@ -1,0 +1,102 @@
+@import "../variables";
+@import "./podcastCard";
+
+.newsroom-container {
+    > * {
+        max-width: 85vw;
+        margin: 1rem auto;
+    }
+
+    .newsroom-grid-container {
+        margin: 0 12vw 10vh 12vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 48vh;
+        grid-column-gap: 3vw;
+        grid-row-gap: 11vw;
+        @media (min-width: 1400px) {
+            margin: 0 16vw 10vh;
+            grid-auto-rows: 40vh;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+        @media (max-width: 1024px) {
+            grid-auto-rows: 27vh;
+        }
+        .newsroom-section-description {
+            padding: 12% 4%;
+            margin-right: 3rem;
+            max-width: 23rem;
+            h2 {
+                color: $color-p;
+                margin-bottom: 3rem;
+            }
+            p {
+                margin-bottom: 2rem;
+            }            
+        }
+
+        #podcasts {
+            p {
+                margin-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    .newsroom-mobile-grid-container {
+        .newsroom-mobile-card-scroll {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            margin-bottom: 2rem;
+            @media (min-width: 730px) {
+                height: 44vh;
+            }
+            @media (max-width: 320px) {
+                height: 55vh;
+            }
+            .talks-card, .podcast-card {
+                min-width: 57vw;
+                max-height: 34vh;
+                .talks-card-bottom, .podcast-card-bottom {
+                    > * {
+                        max-width: 100%;
+                        overflow-x: hidden;
+                    }
+                }
+                .podcast-card-bottom {
+                    display: none;
+                }
+                    h1 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .newsroom-section-description {
+            a:last-child {
+                display: none !important;
+            }
+            h2 {
+                color: $color-p;
+            }
+        }
+
+        .newsroom-mobile-button {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+}
