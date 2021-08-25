@@ -180,10 +180,10 @@ class Navbar extends React.Component {
                 <li className="nav-item">
                   <Link
                     className="nav-link"
-                    to="/talks/all"
+                    to="/newsroom"
                     activeClassName="navLink--active"
                   >
-                    <FormattedMessage id="navbar.talks" />
+                    <FormattedMessage id="navbar.newsroom" />
                   </Link>
                 </li>
                 <li className="nav-item ml-3">
