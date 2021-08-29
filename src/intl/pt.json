@@ -537,9 +537,32 @@
   "talk.notified": "Seja notificado sobre os futuros TechLabs Talks",
   "talk.register": "Registe-se aqui",
 
+  "talk.register.name.label": "Primeiro nome*",
+  "talk.register.name.placeholder": "Seu nome",
+  "talk.register.email.label": "Endereço de Email*",
+  "talk.register.email.placeholder": "Seu correio electrónico",
+  "talk.register.location.label": "TechLabs Locais perto de si",
+  "talk.register.participated.question": "Já participou num programa TechLabs?*",
+  "talk.register.participated.answer.y": "Sim",
+  "talk.register.participated.answer.n": "Não",
+  "talk.register.privacy": "Concordo que o TechLabs poderia utilizar as minhas informações para permanecer em contacto, enviar notícias e informações.",
+  "talk.register.button": "Registe-se",
+
   "talks.previous": "Talks anteriores",
   "talks.heroTitle": "Descubra nossos",
   "talks.heroSpan": "TechLabs Talks",
   "talks.heroText": "Navegue por nossas discussões e entrevistas com entrevistados empolgantes. Para você, nós conversamos com empresas iniciantes e inovadoras de sucesso de uma ampla gama de indústrias. Nossa moderação sempre proporciona muito sobre o que falar e captar perguntas sobre tópicos atualmente relevantes.",
-  "talks.search": "Buscar"
+  "talks.search": "Buscar",
+
+  "newsroom.heroTitle": "Bem-vindo ao",
+  "newsroom.heroSpan": "TechLabs Newsroom",
+  "newsroom.heroText": "Em nossa Newsroom você pode encontrar todos os interessantes talks, podcasts e projetos do TechLabs.",
+
+  "newsroom.talksTitle": "Nossos últimos TechLabs Talks",
+  "newsroom.talksDescription": "Confira nossas TechLabs Talks e aprenda algo novo e entre em contato com nossos painelistas!",
+  "newsroom.talksButton": "Todos os Talks",
+
+  "newsroom.podcastTitle": "Nosso Digital Shapers Podcast",
+  "newsroom.podcastDescription": "Digital Shapers é um podcast produzido em cooperação entre TechLabs e DigitalMente, duas ONGs com o mesmo objetivo, criando uma sociedade mais igualitária usando tecnologia e habilidades tecnológicas para democratizar a educação e resolver os desafios mundiais de hoje.",
+  "newsroom.podcastButton": "Todos os Podcasts"
 }

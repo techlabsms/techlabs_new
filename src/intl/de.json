@@ -554,10 +554,31 @@
   "talk.positions.heading": "Jobs",
   "talk.positions.subheading": "Bereit für eine neue Herausforderung?",
   "talk.positions.learnmore": "Mehr dazu",
-
+  "talk.register.name.label": "Vorname*",
+  "talk.register.name.placeholder": "Dein Vorname",
+  "talk.register.email.label": "E-Mail Adresse*",
+  "talk.register.email.placeholder": "Deine Mail",
+  "talk.register.location.label": "TechLabs Standort in deiner Nähe",
+  "talk.register.participated.question": "Hast du schon mal an einem TechLabs Programm teilgenommen?*",
+  "talk.register.participated.answer.y": "Ja",
+  "talk.register.participated.answer.n": "Nein",
+  "talk.register.privacy": "Ich stimme zu, dass TechLabs meine Daten zur Kontaktaufnahme und Zusendung von Neuigkeiten sowie Informationen verwendet.",
+  "talk.register.button": "Registrieren",
   "talks.previous": "Bisherige Talks",
   "talks.heroTitle": "Entdecke unsere",
   "talks.heroSpan": "TechLabs Talks",
   "talks.heroText": "Durchstöbere unsere Diskussionen und Interviews mit spannenden Gesprächspartnern. Für euch sprechen wir mit erfolgreichen Startups und innovativen Unternehmen aus den verschiedensten Branchen. Unsere Moderation sorgt dabei immer für reichlich Gesprächsstoff und greift Fragestellungen zu aktuell relevanten Themen auf.",
-  "talks.search": "Suchen"
+  "talks.search": "Suchen",
+
+  "newsroom.heroTitle": "Willkommen zur",
+  "newsroom.heroSpan": "TechLabs Newsroom",
+  "newsroom.heroText": "Hier kannst du all unsere spannenden Techlabs Talks, Podcasts und Projekte entdecken.",
+
+  "newsroom.talksTitle": "Unsere neuesten TechLabs Talks",
+  "newsroom.talksDescription": "Sieh dir unsere Talks an, erhalte Einblicke in interessante Tech-Themen und lerne Diskussionsteilnehmer der eingeladenen Unternehmen kennen.",
+  "newsroom.talksButton": "Alle Talks",
+
+  "newsroom.podcastTitle": "Unser Digital Shapers Podcast",
+  "newsroom.podcastDescription": "Digital Shapers ist ein Podcast in Kooperation zwischen TechLabs und DigitalMente. Die beiden NGOs teilen eine Mission: Möglichst vielen Menschen ermöglichen, sich modernste technische Fähigkeiten anzueignen, um die heutigen Probleme auf digitale Weise zu lösen.",
+  "newsroom.podcastButton": "Alle Podcasts"
 }

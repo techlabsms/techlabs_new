@@ -552,10 +552,32 @@
   "talk.positions.heading": "Open Positions",
   "talk.positions.subheading": "Looking for a new challenge?",
   "talk.positions.learnmore": "Learn More",
-
+  "talk.register.name.label": "First Name*",
+  "talk.register.name.placeholder": "Your Name",
+  "talk.register.email.label": "Email Address*",
+  "talk.register.email.placeholder": "Your Email",
+  "talk.register.location.label": "TechLabs Location close to you",
+  "talk.register.participated.question": "Have you already participated in a TechLabs program?*",
+  "talk.register.participated.answer.y": "Yes",
+  "talk.register.participated.answer.n": "No",
+  "talk.register.privacy": "I agree that TechLabs could use my information to stay in contact, send news and information.",
+  "talk.register.button": "Register",
   "talks.previous": "Previous talks",
   "talks.heroTitle": "Discover our",
   "talks.heroSpan": "TechLabs Talks",
   "talks.heroText": "Browse through our discussions and interviews with exciting interviewees. We talk to successful startups and innovative companies from a wide range of industries. Our moderation always provides plenty to talk about and picks up questions on currently relevant topics.",
-  "talks.search": "Search"
+  "talks.search": "Search",
+
+  "newsroom.heroTitle": "Welcome to the",
+  "newsroom.heroSpan": "TechLabs Newsroom",
+  "newsroom.heroText": "In our newsroom you can find all the exciting talks, podcasts and projects from TechLabs.",
+
+  "newsroom.talksTitle": "Our latest TechLabs Talks",
+  "newsroom.talksDescription": "Check out our TechLabs Talks and learn something new and get in contact with our panelists!",
+  "newsroom.talksButton": "All Talks",
+
+  "newsroom.podcastTitle": "Our Digital Shapers Podcast",
+  "newsroom.podcastDescription": "Digital Shapers is a podcast produced in cooperation between TechLabs and DigitalMente, two NGOs with the same goal, creating a more equal society using technology and tech skills to democratize education and solve today's world challenges.",
+  "newsroom.podcastButton": "All Podcasts"
+
 }
