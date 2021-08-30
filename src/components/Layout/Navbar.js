@@ -257,12 +257,11 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to="/talks/all"
-                  activeClassName="navLink--active"
-                >
-                  <FormattedMessage id="navbar.talks" />
+              <Link className="nav-link"
+                    to="/newsroom"
+                    activeClassName="navLink--active"
+                  >
+                    <FormattedMessage id="navbar.newsroom" />
                 </Link>
               </li>
               <li className="nav-item ml-3">

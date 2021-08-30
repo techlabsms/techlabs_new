@@ -156,10 +156,10 @@ class MobileNav extends Component {
                 </h3>
               </li>
             </a>
-            <Link to="/talks/all" activeClassName="navLink--active">
+            <Link to="/newsroom" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="navbar.talks" />
+                  <FormattedMessage id="navbar.newsroom" />
                 </h3>
               </li>
             </Link>
