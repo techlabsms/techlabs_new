@@ -327,19 +327,17 @@ body {
   font-size: 16px;
   padding-bottom: 1.7rem !important;
   padding-top: 1.7rem !important;
-  background: linear-gradient(
-    90.01deg,
-    rgba(251, 29, 92, 0.69) -0.55%,
-    $color-p 100%
-  );
+  background: $color-p;
   font-family: $font-pp;
   position: relative;
   width: 100%;
   top: 0px;
   z-index: 500;
   color: white;
-  &-close {
-    cursor: pointer;
+  &-btn {
+    color: white !important;
+    margin-left: 20px;
+    text-decoration: underline;
   }
 }
 
