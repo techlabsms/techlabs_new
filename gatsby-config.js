@@ -70,7 +70,7 @@ module.exports = {
         icon: `src/assets/tl-favicon.svg`, // This path is relative to the root of the site
       },
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-eslint`,
     "gatsby-plugin-next-seo",
   ],
