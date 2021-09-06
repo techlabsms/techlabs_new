@@ -105,7 +105,7 @@ const Navbar = () => {
                 >
                   <FormattedMessage id="layout.locations" />
                 </Link>
-                <div className="dropdown-menu dropdown-locations">
+                {/* <div className="dropdown-menu dropdown-locations">
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4">
@@ -167,7 +167,7 @@ const Navbar = () => {
                   >
                     <FormattedMessage id="navbar.locations.becomeFounder" />
                   </Link>
-                </div>
+                </div> */}
               </li>
               <li className="nav-item dropdown">
                 <Link
@@ -257,11 +257,12 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-              <Link className="nav-link"
-                    to="/newsroom"
-                    activeClassName="navLink--active"
-                  >
-                    <FormattedMessage id="navbar.newsroom" />
+                <Link
+                  className="nav-link"
+                  to="/newsroom"
+                  activeClassName="navLink--active"
+                >
+                  <FormattedMessage id="navbar.newsroom" />
                 </Link>
               </li>
               <li className="nav-item ml-3">

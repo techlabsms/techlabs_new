@@ -75,7 +75,7 @@
     "react-transition-group": "^4.4.1",
     "react-typeform-embed": "^0.2.1",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.38.0",
+    "node-sass": "^4.14.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
