@@ -346,7 +346,7 @@ class location extends Component {
                     }}
                   ></div>
                 </div>
-                {location.officeText ? (
+                {/* {location.officeText ? (
                   <div className="col-md-5">
                     <div className="office--card">
                       <h3 className="office--heading">
@@ -379,7 +379,7 @@ class location extends Component {
                       </p>
                     </div>
                   </div>
-                ) : null}
+                ) : null} */}
               </div>
             </Container>
           )}
@@ -489,9 +489,9 @@ export const pageQuery = graphql`
         }
       }
       officeAdress
-      officeText {
-        json
-      }
+      # officeText {
+      #   json
+      # }
       officeLink
       applicationLink
       applicationStart

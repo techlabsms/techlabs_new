@@ -53,7 +53,7 @@ class remote extends Component {
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}
           headingIntro={heroHeading}
-          intro={intro.content[0].content[0].value}
+          intro={""}
           applicationStart={this.startDateString(startDate)}
           nextBootcampStart={this.startDateString(nextDate)}
           img={data.remote.childImageSharp.fluid}
@@ -167,7 +167,7 @@ class remote extends Component {
             return (
               <FaqQuestion
                 question={faq.question}
-                answer={faq.answer.json.content[0].content[0].value}
+                answer={"allo"}
               />
             )
           })}
@@ -207,13 +207,13 @@ export const pageQuery = graphql`
             }
           }
           heroHeading
-          intro {
-            content {
-              content {
-                value
-              }
-            }
-          }
+          # intro {
+          #   content {
+          #     content {
+          #       value
+          #     }
+          #   }
+          # }
           tracks {
             tracks {
               heading
@@ -277,9 +277,9 @@ export const pageQuery = graphql`
           }
           faq {
             question
-            answer {
-              json
-            }
+            # answer {
+            #   json
+            # }
           }
         }
       }
