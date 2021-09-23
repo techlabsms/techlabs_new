@@ -1,18 +1,19 @@
-import React, { Component } from "react"
+import React from "react"
 
 // plugins & external
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 // components
-import ProgrammHero from "../components/program/ProgrammHero"
-import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
-import RightImageSection from "../components/shared/RightImageSection"
-import LeftImageSection from "../components/shared/LeftImageSection"
-import Projects from "../components/program/Projects"
 import CallToAction from "../components/shared/CallToAction"
 import FaqQuestion from "../components/shared/FaqQuestion"
 import Faq from "../components/shared/Faq"
 import Layout from "../components/Layout/Layout"
+import LeftImageSection from "../components/shared/LeftImageSection"
+import ProgrammHero from "../components/program/ProgrammHero"
+import Projects from "../components/program/Projects"
+import RightImageSection from "../components/shared/RightImageSection"
+import Seo from "../components/Layout/Seo"
+import WhatYouWillLearn from "../components/program/WhatYouWillLearn"
 
 // assets
 import ai_cover from "../assets/ai_cover.png"
@@ -20,9 +21,8 @@ import david from "../assets/david.png"
 import robot from "../assets/ai-robot.png"
 import background from "../assets/ds_background.png"
 import backgroundMobil from "../assets/courseMobil.png"
-import Seo from "../components/Layout/Seo"
 
-class ai extends Component {
+class ai extends React.Component {
   render() {
     return (
       <Layout>
