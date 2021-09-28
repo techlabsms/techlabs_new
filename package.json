@@ -24,7 +24,6 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "dependencies": {
-    "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
     "@csstools/normalize.css": "^12.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -51,11 +50,9 @@
     "gatsby-plugin-next-seo": "^1.7.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sass": "^4.14.0",
-    "gatsby-plugin-sharp": "^3.14.0",
     "gatsby-source-contentful": "^5.14.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
-    "gatsby-transformer-sharp": "^3.14.0",
     "jquery": "^3.5.1",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
