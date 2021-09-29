@@ -494,8 +494,8 @@ export const pageQuery = graphql`
       }
       officeLink
       applicationLink
-      applicationStart
-      applicationEnd
+      applicationStart(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
+      applicationEnd(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
       email
       usesTeam
       hasCalendar

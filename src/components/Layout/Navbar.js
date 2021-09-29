@@ -38,8 +38,8 @@ const Navbar = () => {
           node {
             heading
             country
-            applicationStart
-            applicationEnd
+            applicationStart(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
+            applicationEnd(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
             applicationLink
             slug
             node_locale
