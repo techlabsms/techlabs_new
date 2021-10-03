@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
 // components
 import SectionDescription from "./SectionDescription"

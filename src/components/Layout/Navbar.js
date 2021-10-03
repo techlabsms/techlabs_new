@@ -29,7 +29,7 @@ import "../../styles/_main.scss"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [countries, setCountries] = useState([])
-  const [activeCountry, setActiveCountry] = useState("Deutschland")
+  //const [activeCountry, setActiveCountry] = useState("Deutschland")
 
   const data = useStaticQuery(graphql`
     query($locale: String) {
