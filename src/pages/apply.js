@@ -223,8 +223,8 @@ export const pageQuery = graphql`
         node {
           heading
           country
-          applicationStart(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
-          applicationEnd(formatString: "YYYY-MM-DDThh:mm:ssZ[Z]")
+          applicationStart(formatString: "YYYY-MM-DDThh:mm:ss")
+          applicationEnd(formatString: "YYYY-MM-DDThh:mm:ss")
           applicationLink
           avaiableTracks {
             ai
