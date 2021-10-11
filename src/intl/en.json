@@ -293,7 +293,7 @@
   "location.newsletter.button": "Subscribe",
 
   "applypage.choose.your.city.title": "Choose Your City",
-  "applypage.choose.your.city.subtitle": "Please click on the location you would like to apply at.",
+  "applypage.choose.your.city.subtitle": "Please click on the location you would like to apply at. Consider that the countdown refers to CEST/CET.",
   "applypage.applyCard.availableTracks": "Available Tracks",
   "applypage.headline.ApplicationHero.headingFirst": "Application",
   "applypage.headline.ApplicationHero.intro": "Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program.",

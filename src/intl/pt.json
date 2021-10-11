@@ -310,7 +310,7 @@
   "location.newsletter.button": "Subscribe",
 
   "applypage.choose.your.city.title": "Escolha sua cidade",
-  "applypage.choose.your.city.subtitle": "No momento, estamos nestes locais!",
+  "applypage.choose.your.city.subtitle": "No momento, estamos nestes locais! Fuso horário do temporizador de contagem decrescente: hora da europa central (CEST/CET)",
   "applypage.applyCard.availableTracks": "Trilhas disponíveis",
   "applypage.headline.ApplicationHero.headingFirst": "Inscrições",
   "applypage.headline.ApplicationHero.intro": "Você quer aprender tecnologia de ponta? Você quer fazer parte de uma comunidade crescente? Inscreva-se agora para o TechLabs Digital Shaper Program.",
