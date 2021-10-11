@@ -49,7 +49,7 @@
   "app.landingpage.applicationperiod.deadline.start.short": "Application starts in:",
   "app.landingpage.applicationperiod.header": "Our Application Deadlines",
   "app.landingpage.applicationperiod.no.deadline": "Next Batch will be announced soon",
-  "app.landingpage.applicationperiod.subheader": "Check out when you can apply for each location!",
+  "app.landingpage.applicationperiod.subheader": "Check out when you can apply for each location! Consider that the countdown refers to Central European Time (CEST/CET).",
 
   "ai.ai.programmhero.headingFirst": "Artificial",
   "ai.ai.programmhero.headingSecond": " Intelligence",
