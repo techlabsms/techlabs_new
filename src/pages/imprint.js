@@ -10,7 +10,7 @@ class imprint extends Component {
         <div className="container">
           <h1 className="mt-3">Impressum</h1>
           <p>
-            Angaben gem. § 5 TMG <br />
+            Angaben gem. § 5 TMG. <br />
             <br />
             Betreiber und Kontakt: <br />
             <br />
