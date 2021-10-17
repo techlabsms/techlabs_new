@@ -149,24 +149,24 @@ const Index = ({ data }) => {
           </div>
         </div>
       </div>
-      <LearnMore
+      {/* <LearnMore
         backgroundImage={data.background_location.childImageSharp.fluid}
-      />
+      /> */}
     </Layout>
   )
 }
 
 export default Index
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const fluidImage = graphql`
+//   fragment fluidImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
 export const pageQuery = graphql`
   query($slug: String!, $locale: String) {
     content: contentfulTalksPage(
@@ -206,10 +206,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    background_location: file(
-      relativePath: { eq: "background_locations.png" }
-    ) {
-      ...fluidImage
-    }
+    # background_location: file(
+    #   relativePath: { eq: "background_locations.png" }
+    # ) {
+    #   ...fluidImage
+    # }
   }
 `
