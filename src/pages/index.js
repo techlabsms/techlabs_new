@@ -360,86 +360,89 @@ class index extends React.Component {
 
 export default injectIntl(index)
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-export const fixedImage = graphql`
-  fragment fixedImage on File {
-    childImageSharp {
-      fixed(width: 50, height: 50) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
+// export const fluidImage = graphql`
+//   fragment fluidImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
+// export const fixedImage = graphql`
+//   fragment fixedImage on File {
+//     childImageSharp {
+//       fixed(width: 50, height: 50) {
+//         ...GatsbyImageSharpFixed
+//       }
+//     }
+//   }
+// `
 
 export const pageQuery = graphql`
-  query($locale: String) {
-    imageOne: file(relativePath: { eq: "startPage.png" }) {
-      ...fluidImage
-    }
-    accint: file(relativePath: { eq: "accint.png" }) {
-      ...fluidImage
-    }
-    sopra: file(relativePath: { eq: "sopra.png" }) {
-      ...fluidImage
-    }
-    westfalen: file(relativePath: { eq: "westfalen.png" }) {
-      ...fluidImage
-    }
-    ey: file(relativePath: { eq: "ey.png" }) {
-      ...fluidImage
-    }
-    wwo: file(relativePath: { eq: "wwo.png" }) {
-      ...fluidImage
-    }
-    wave: file(relativePath: { eq: "wave.png" }) {
-      ...fluidImage
-    }
-    jin: file(relativePath: { eq: "jinrhee.png" }) {
-      ...fluidImage
-    }
-    jin_mobil: file(relativePath: { eq: "jinrhee_mobil.png" }) {
-      ...fixedImage
-    }
-    jin_mobil_thumbnail: file(relativePath: { eq: "jin_mobil.png" }) {
-      ...fluidImage
-    }
-    huemeyra: file(relativePath: { eq: "humeyra.png" }) {
-      ...fluidImage
-    }
-    huemeyra_mobil: file(relativePath: { eq: "humeyra_mobil.png" }) {
-      ...fixedImage
-    }
-    miriam: file(relativePath: { eq: "miriam.png" }) {
-      ...fluidImage
-    }
-    miriam_mobil: file(relativePath: { eq: "miriam_mobil.png" }) {
-      ...fixedImage
-    }
-    miriam_mobil_thumbnail: file(
-      relativePath: { eq: "miriam_mobil_thumbnail.png" }
+  query ($locale: String) {
+    # imageOne: file(relativePath: { eq: "startPage.png" }) {
+    #   ...fluidImage
+    # }
+    # accint: file(relativePath: { eq: "accint.png" }) {
+    #   ...fluidImage
+    # }
+    # sopra: file(relativePath: { eq: "sopra.png" }) {
+    #   ...fluidImage
+    # }
+    # westfalen: file(relativePath: { eq: "westfalen.png" }) {
+    #   ...fluidImage
+    # }
+    # ey: file(relativePath: { eq: "ey.png" }) {
+    #   ...fluidImage
+    # }
+    # wwo: file(relativePath: { eq: "wwo.png" }) {
+    #   ...fluidImage
+    # }
+    # wave: file(relativePath: { eq: "wave.png" }) {
+    #   ...fluidImage
+    # }
+    # jin: file(relativePath: { eq: "jinrhee.png" }) {
+    #   ...fluidImage
+    # }
+    # jin_mobil: file(relativePath: { eq: "jinrhee_mobil.png" }) {
+    #   ...fixedImage
+    # }
+    # jin_mobil_thumbnail: file(relativePath: { eq: "jin_mobil.png" }) {
+    #   ...fluidImage
+    # }
+    # huemeyra: file(relativePath: { eq: "humeyra.png" }) {
+    #   ...fluidImage
+    # }
+    # huemeyra_mobil: file(relativePath: { eq: "humeyra_mobil.png" }) {
+    #   ...fixedImage
+    # }
+    # miriam: file(relativePath: { eq: "miriam.png" }) {
+    #   ...fluidImage
+    # }
+    # miriam_mobil: file(relativePath: { eq: "miriam_mobil.png" }) {
+    #   ...fixedImage
+    # }
+    # miriam_mobil_thumbnail: file(
+    #   relativePath: { eq: "miriam_mobil_thumbnail.png" }
+    # ) {
+    #   ...fluidImage
+    # }
+    # nils: file(relativePath: { eq: "nils.png" }) {
+    #   ...fixedImage
+    # }
+    # gic: file(relativePath: { eq: "gic_team.png" }) {
+    #   ...fluidImage
+    # }
+    # background_location: file(
+    #   relativePath: { eq: "background_locations.png" }
+    # ) {
+    #   ...fluidImage
+    # }
+    allContentfulLocationPage(
+      filter: { node_locale: { eq: $locale } }
+      sort: { fields: [country, heading], order: [DESC, ASC] }
     ) {
-      ...fluidImage
-    }
-    nils: file(relativePath: { eq: "nils.png" }) {
-      ...fixedImage
-    }
-    gic: file(relativePath: { eq: "gic_team.png" }) {
-      ...fluidImage
-    }
-    background_location: file(
-      relativePath: { eq: "background_locations.png" }
-    ) {
-      ...fluidImage
-    }
-    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }, sort: {fields:[country, heading], order: [DESC, ASC]}) {
       edges {
         node {
           heading

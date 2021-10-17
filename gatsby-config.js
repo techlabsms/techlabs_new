@@ -14,9 +14,9 @@ module.exports = {
     image: `/assets/tl-favicon.svg`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sass`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,7 +31,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `@contentful/gatsby-transformer-contentful-richtext`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-gdpr-cookies`,

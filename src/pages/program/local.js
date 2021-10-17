@@ -167,10 +167,9 @@ class local extends Component {
               <FormattedMessage id={"program.local.testimonial.subheading"} />
             }
             text={<FormattedMessage id={"program.local.timothee.quote"} />}
-            testimonialAvatar={data.timothee.childImageSharp.fluid}
             testimonialName="Timothée Clolus"
             testimonialTagline="Front end Developer @"
-            testimonialLogo={data.accenture.childImageSharp.fluid}
+            // testimonialLogo={data.accenture.childImageSharp.fluid}
           />
           <Process />
           <LearnMore
@@ -226,24 +225,24 @@ class local extends Component {
 
 export default local
 
-export const fluidImageLocal = graphql`
-  fragment fluidImageLocal on File {
-    childImageSharp {
-      fluid(maxWidth: 200) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const fluidImageLocal = graphql`
+//   fragment fluidImageLocal on File {
+//     childImageSharp {
+//       fluid(maxWidth: 200) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
 
 export const pageQuery = graphql`
   query($locale: String) {
-    timothee: file(relativePath: { eq: "timothee.png" }) {
-      ...fluidImageLocal
-    }
-    accenture: file(relativePath: { eq: "accint.png" }) {
-      ...fluidImageLocal
-    }
+    # timothee: file(relativePath: { eq: "timothee.png" }) {
+    #   ...fluidImageLocal
+    # }
+    # accenture: file(relativePath: { eq: "accint.png" }) {
+    #   ...fluidImageLocal
+    # }
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {

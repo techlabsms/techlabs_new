@@ -228,12 +228,12 @@ class location extends Component {
               </div>
             </div>
           </section>
-          {location.newsletterActive && (
+          {/* {location.newsletterActive && (
             <Newsletter
               image={data.data.newsletterImage.childImageSharp.fluid}
               actionLink={location.newsletterLink}
             />
-          )}
+          )} */}
           <section className="container location">
             {location.hasCalendar && hasCalendarType !== undefined ? (
               <DatesCalendar
@@ -346,7 +346,7 @@ class location extends Component {
                     }}
                   ></div>
                 </div>
-                {location.officeText ? (
+                {/* {location.officeText ? (
                   <div className="col-md-5">
                     <div className="office--card">
                       <h3 className="office--heading">
@@ -379,7 +379,7 @@ class location extends Component {
                       </p>
                     </div>
                   </div>
-                ) : null}
+                ) : null} */}
               </div>
             </Container>
           )}
@@ -400,21 +400,21 @@ class location extends Component {
 
 export default injectIntl(location)
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const fluidImage = graphql`
+//   fragment fluidImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
 
 export const pageQuery = graphql`
   query LocationByHeading($heading: String!, $locale: String) {
-    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
-      ...fluidImage
-    }
+    # newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+    #   ...fluidImage
+    # }
     site {
       siteMetadata {
         title
@@ -489,9 +489,9 @@ export const pageQuery = graphql`
         }
       }
       officeAdress
-      officeText {
-        json
-      }
+      # officeText {
+      #   json
+      # }
       officeLink
       applicationLink
       applicationStart

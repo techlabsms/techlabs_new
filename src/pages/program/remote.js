@@ -49,23 +49,23 @@ class remote extends Component {
     return (
       <Layout>
         <Seo title="Remote Program" />
-        <Hero
+        {/* <Hero
           headingFirst={pageTitle.pageTitle.heading1}
           headingSecond={pageTitle.pageTitle.heading2}
           headingIntro={heroHeading}
-          intro={intro.content[0].content[0].value}
+          intro={""}
           applicationStart={this.startDateString(startDate)}
           nextBootcampStart={this.startDateString(nextDate)}
           img={data.remote.childImageSharp.fluid}
           link="https://techlabsorg.typeform.com/to/tSKG8BBE"
-        />
+        /> */}
         <KeyFacts facts={keyFacts.facts} />
-        {newsletterVisible && (
+        {/* {newsletterVisible && (
           <Newsletter
             image={data.newsletterImage.childImageSharp.fluid}
             actionLink="https://techlabs.us10.list-manage.com/subscribe/post?u=ba719a6a0ef0ac12e51aa3ba2&amp;id=8987774d41"
           />
-        )}
+        )} */}
         <div className="container">
           <ThreeComponents
             heading={
@@ -164,12 +164,7 @@ class remote extends Component {
 
         <Faq>
           {faq.map(faq => {
-            return (
-              <FaqQuestion
-                question={faq.question}
-                answer={faq.answer.json.content[0].content[0].value}
-              />
-            )
+            return <FaqQuestion question={faq.question} answer={"allo"} />
           })}
         </Faq>
       </Layout>
@@ -179,15 +174,15 @@ class remote extends Component {
 
 export default remote
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const fluidImage = graphql`
+//   fragment fluidImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
 
 export const pageQuery = graphql`
   query($locale: String) {
@@ -207,13 +202,13 @@ export const pageQuery = graphql`
             }
           }
           heroHeading
-          intro {
-            content {
-              content {
-                value
-              }
-            }
-          }
+          # intro {
+          #   content {
+          #     content {
+          #       value
+          #     }
+          #   }
+          # }
           tracks {
             tracks {
               heading
@@ -277,9 +272,9 @@ export const pageQuery = graphql`
           }
           faq {
             question
-            answer {
-              json
-            }
+            # answer {
+            #   json
+            # }
           }
         }
       }

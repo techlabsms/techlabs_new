@@ -7,17 +7,18 @@ import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 
 const Quote = ({ heading, subheading, text, photo, name, job }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      Quoteicon: file(relativePath: { eq: "quote.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
+  // FIXME: use gatsby image
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     Quoteicon: file(relativePath: { eq: "quote.png" }) {
+  //       childImageSharp {
+  //         fixed {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -33,14 +34,14 @@ const Quote = ({ heading, subheading, text, photo, name, job }) => {
         <div className="col-md-10">
           <div className="row mt-4">
             <div className="col-3 text-left d-flex justify-content-center align-content-center">
-              <Img
+              {/* <Img
                 fixed={photo}
                 alt={name}
                 style={{
                   marginTop: "auto",
                   marginBottom: "auto",
                 }}
-              />
+              /> */}
             </div>
             <div className="col-9">
               <p className="mt-4 whatWeOffer--nils">

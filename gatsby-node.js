@@ -23,7 +23,9 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const locationTemplate = path.resolve("./src/templates/location.js")
     const talksTemplate = path.resolve("./src/templates/talks.js")
-    const talksregisterTemplate = path.resolve("./src/templates/talksregister.js")
+    const talksregisterTemplate = path.resolve(
+      "./src/templates/talksregister.js"
+    )
     resolve(
       graphql(
         `
@@ -45,14 +47,14 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           reject(result.errors)
         }
 
         const { location, talks } = result.data
 
-        location.edges.forEach(edge => {
+        location.edges.forEach((edge) => {
           const heading = edge.node.heading
           const slug = edge.node.slug
           createPage({
@@ -64,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        talks.edges.forEach(edge => {
+        talks.edges.forEach((edge) => {
           const slug = edge.node.slug
           createPage({
             path: `/talks/${slug}`,
@@ -75,7 +77,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        talks.edges.forEach(edge => {
+        talks.edges.forEach((edge) => {
           const slug = edge.node.slug
           createPage({
             path: `/talks/${slug}/register`,
