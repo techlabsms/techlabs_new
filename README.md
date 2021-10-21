@@ -14,7 +14,8 @@ We use Gatsby.js to build our Site
 1. Clone the Repo
 2. Install the Gatsby CLI `npm install -g gatsby-cli`
 3. Run `npm install`
-4. Get the contentful access token from passbolt and add it as `.env` file
+3. Create a `.env.development` file
+4. Get the contentful access token from passbolt and add a line to the `.env.development` file, replacing the XXX with the contentful token: `CONTENTFUL_ACCESS_TOKEN=XXX`
 5. Run `gatsby develop` to start the project locally
 
 ## Publish Changes
