@@ -188,6 +188,9 @@ class location extends Component {
                       ) : (
                         <p className="batch-text">
                           <FormattedMessage id="location.nextBatch" />
+                          <span className="a-black">
+                            {location.nextBatchDate}
+                          </span>
                         </p>
                       )}
                     </div>
