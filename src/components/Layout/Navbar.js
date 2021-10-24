@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import "jquery"
 
 // plugins
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 // components
 import MobileNav from "./MobileNav"

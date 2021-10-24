@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Container from "../smallComponents/Container"
@@ -14,57 +14,60 @@ const CoreValues = () => {
         <div className="row coreValues d-none d-lg-flex">
           <div className="col-md-12 col-lg-4 d-flex justify-content-center align-items-center">
             <h1 className="text-right coreValues--heading">
-              <span>  
-                <FormattedMessage id="corevalues.heading.1"/>
-              </span> <FormattedMessage id="corevalues.heading.2"/>
+              <span>
+                <FormattedMessage id="corevalues.heading.1" />
+              </span>{" "}
+              <FormattedMessage id="corevalues.heading.2" />
             </h1>
           </div>
           <div className="col-md-12 col-lg-8 pl-3 mt-auto mb-auto">
             <div className="row w-75">
               <div className="col">
                 <h2>
-                  <FormattedMessage id="corevalues.impact.heading"/>
+                  <FormattedMessage id="corevalues.impact.heading" />
                 </h2>
                 <p>
-                  <FormattedMessage id="corevalues.impact.text"/>
-                </p>
-              </div>
-            </div>
-            <div className="row w-75">
-              <div className="col">
-                <h2><FormattedMessage id="corevalues.passion.heading"/></h2>
-                <p>
-                  <FormattedMessage id="corevalues.passion.text"/>
+                  <FormattedMessage id="corevalues.impact.text" />
                 </p>
               </div>
             </div>
             <div className="row w-75">
               <div className="col">
                 <h2>
-                  <FormattedMessage id="corevalues.learning.heading"/>
+                  <FormattedMessage id="corevalues.passion.heading" />
                 </h2>
                 <p>
-                  <FormattedMessage id="corevalues.learning.text"/>
+                  <FormattedMessage id="corevalues.passion.text" />
                 </p>
               </div>
             </div>
             <div className="row w-75">
               <div className="col">
                 <h2>
-                  <FormattedMessage id="corevalues.self.heading"/>
+                  <FormattedMessage id="corevalues.learning.heading" />
                 </h2>
                 <p>
-                  <FormattedMessage id="corevalues.self.text"/>
+                  <FormattedMessage id="corevalues.learning.text" />
                 </p>
               </div>
             </div>
             <div className="row w-75">
               <div className="col">
                 <h2>
-                  <FormattedMessage id="corevalues.respect.heading"/>
+                  <FormattedMessage id="corevalues.self.heading" />
                 </h2>
                 <p>
-                  <FormattedMessage id="corevalues.respect.text"/>
+                  <FormattedMessage id="corevalues.self.text" />
+                </p>
+              </div>
+            </div>
+            <div className="row w-75">
+              <div className="col">
+                <h2>
+                  <FormattedMessage id="corevalues.respect.heading" />
+                </h2>
+                <p>
+                  <FormattedMessage id="corevalues.respect.text" />
                 </p>
               </div>
             </div>
@@ -79,48 +82,50 @@ const CoreValues = () => {
           <div className="row">
             <div className="col-8 offset-2 mb-4">
               <h2>
-                <FormattedMessage id="corevalues.impact.heading"/>
+                <FormattedMessage id="corevalues.impact.heading" />
               </h2>
               <p>
-                <FormattedMessage id="corevalues.impact.text"/>
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-8 offset-2 mb-4">
-              <h2><FormattedMessage id="corevalues.passion.heading"/></h2>
-              <p>
-                <FormattedMessage id="corevalues.passion.text"/>
+                <FormattedMessage id="corevalues.impact.text" />
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col-8 offset-2 mb-4">
               <h2>
-                <FormattedMessage id="corevalues.learning.heading"/>
+                <FormattedMessage id="corevalues.passion.heading" />
               </h2>
               <p>
-                <FormattedMessage id="corevalues.learning.text"/>
+                <FormattedMessage id="corevalues.passion.text" />
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col-8 offset-2 mb-4">
               <h2>
-                <FormattedMessage id="corevalues.self.heading"/>
+                <FormattedMessage id="corevalues.learning.heading" />
               </h2>
               <p>
-                <FormattedMessage id="corevalues.self.text"/>
+                <FormattedMessage id="corevalues.learning.text" />
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col-8 offset-2 mb-4">
               <h2>
-                <FormattedMessage id="corevalues.respect.heading"/>
+                <FormattedMessage id="corevalues.self.heading" />
               </h2>
               <p>
-                <FormattedMessage id="corevalues.respect.text"/>
+                <FormattedMessage id="corevalues.self.text" />
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-8 offset-2 mb-4">
+              <h2>
+                <FormattedMessage id="corevalues.respect.heading" />
+              </h2>
+              <p>
+                <FormattedMessage id="corevalues.respect.text" />
               </p>
             </div>
           </div>

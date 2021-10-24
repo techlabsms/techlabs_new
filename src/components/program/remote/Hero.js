@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 import Heading from "../../smallComponents/Heading"
 import Img from "gatsby-image"
 

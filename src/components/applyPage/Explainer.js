@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react"
 import Checkmark from "../../assets/apply/checkmark.svg"
 import Application from "../../assets/apply/Icon-Application.svg"
 import Feedback from "../../assets/apply/Icon-Feedback.svg"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 import { Link } from "gatsby"
 import { useSwipeable } from "react-swipeable"
 

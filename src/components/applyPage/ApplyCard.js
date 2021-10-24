@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 import dayjs from "dayjs"
 
 // components

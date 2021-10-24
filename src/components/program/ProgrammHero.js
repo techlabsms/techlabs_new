@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins && external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import ArrowButton from "../smallComponents/ArrowButton"

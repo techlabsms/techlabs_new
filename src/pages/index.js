@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
@@ -85,11 +85,11 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
-                  <Img
+                  {/* <Img
                     alt="commmunity"
                     fluid={data.imageOne.childImageSharp.fluid}
                     fadeIn={false}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ class index extends React.Component {
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
-            <PartnerLogos
+            {/* <PartnerLogos
               logoOne={data.accint.childImageSharp.fluid}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
               logoTwo={data.sopra.childImageSharp.fluid}
@@ -108,11 +108,11 @@ class index extends React.Component {
               linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
               logoFour={data.ey.childImageSharp.fluid}
               linkPartnerFour="https://www.ey.com/de_de"
-            />
+            /> */}
           </section>
           {/* what we offer */}
           <section className="mt-5">
-            <BackgroundImage
+            {/* <BackgroundImage
               fluid={data.wwo.childImageSharp.fluid}
               fadeIn={false}
               style={{
@@ -255,16 +255,16 @@ class index extends React.Component {
                   </div>
                 </div>
               </div>
-            </BackgroundImage>
+            </BackgroundImage> */}
           </section>
           {/* application deadlines                       */}
-          <ApplicationPeriod
+          {/* <ApplicationPeriod
             wave={data.wave.childImageSharp.fluid}
             locationData={allCountries}
             locale={intl.locale}
-          />
+          /> */}
           {/* our community slider */}
-          <Slider
+          {/* <Slider
             quoteOne={<FormattedMessage id={"landingpage.slider.jin.text"} />}
             imageOne={data.jin.childImageSharp.fluid}
             imageOneMobil={data.jin_mobil.childImageSharp.fixed}
@@ -282,9 +282,9 @@ class index extends React.Component {
             imageThreeThumbnail={
               data.miriam_mobil_thumbnail.childImageSharp.fluid
             }
-          />
+          /> */}
 
-          <RightImageSectionHeading
+          {/* <RightImageSectionHeading
             heading={
               <FormattedMessage id={"landingpage.googlechallenge.heading"} />
             }
@@ -308,7 +308,7 @@ class index extends React.Component {
             photo={data.nils.childImageSharp.fixed}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
-          />
+          /> */}
           <KeyBenefits
             heading={
               <FormattedMessage id={"program.local.keyBenefits.heading"} />
@@ -349,9 +349,9 @@ class index extends React.Component {
               <FormattedMessage id={"program.local.keyBenefits.fourth.text"} />
             }
           />
-          <LearnMore
+          {/* <LearnMore
             backgroundImage={data.background_location.childImageSharp.fluid}
-          />
+          /> */}
         </div>
       </Layout>
     )
@@ -380,7 +380,7 @@ export default injectIntl(index)
 // `
 
 export const pageQuery = graphql`
-  query ($locale: String) {
+  query($locale: String) {
     # imageOne: file(relativePath: { eq: "startPage.png" }) {
     #   ...fluidImage
     # }

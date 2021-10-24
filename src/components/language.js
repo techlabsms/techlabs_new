@@ -1,11 +1,11 @@
 import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { IntlContextConsumer, changeLocale } from "gatsby-plugin-react-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 const languageName = {
   en: "English",
   de: "Deutsch",
-  pt: "Português"
+  pt: "Português",
 }
 
 const Language = () => (

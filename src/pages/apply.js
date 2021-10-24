@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Layout from "../components/Layout/Layout"

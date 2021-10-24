@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/Layout/Layout"
 
 import Img from "gatsby-image"
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 import LearnMore from "../components/landingpage/learnMore"
 import Seo from "../components/Layout/Seo"
 
@@ -284,11 +284,11 @@ export const pageQuery = graphql`
         company
       }
     }
-    background_location: file(
-      relativePath: { eq: "background_locations.png" }
-    ) {
-      ...fluidImage
-    }
+    # background_location: file(
+    #   relativePath: { eq: "background_locations.png" }
+    # ) {
+    #   ...fluidImage
+    # }
     location: allContentfulLocationPage(filter: { node_locale: { eq: "en" } }) {
       nodes {
         heading

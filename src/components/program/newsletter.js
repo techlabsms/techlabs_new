@@ -2,28 +2,29 @@ import React from "react"
 import Img from "gatsby-image"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 
-
 const Newsletter = ({ image, actionLink, intl }) => {
   // translate placeholders with injectIntl
-  const namePlaceholder = intl.formatMessage({id: 'location.newsletter.name.placeholder'})
-  const emailPlaceholder = intl.formatMessage({id: 'location.newsletter.email.placeholder'})
-  const subscribeButton = intl.formatMessage({id: 'location.newsletter.button'})
+  const namePlaceholder = intl.formatMessage({
+    id: "location.newsletter.name.placeholder",
+  })
+  const emailPlaceholder = intl.formatMessage({
+    id: "location.newsletter.email.placeholder",
+  })
+  const subscribeButton = intl.formatMessage({
+    id: "location.newsletter.button",
+  })
   return (
     <Container>
-      <Heading 
-      heading={
-        <FormattedMessage id={"location.newsletter.title"} />
-      }
-      subheading={
-        <FormattedMessage id={"location.newsletter.subtitle"} />
-      }>
-      </Heading>
+      <Heading
+        heading={<FormattedMessage id={"location.newsletter.title"} />}
+        subheading={<FormattedMessage id={"location.newsletter.subtitle"} />}
+      ></Heading>
       <div className="row">
         <div className="col-md-6 order-2 order-md-1 py-5 d-flex align-items-center">
           <form
@@ -38,7 +39,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
           >
             <div className="form-group">
               <label for="mce-FNAME">
-                <FormattedMessage id={"location.newsletter.name.label"}/>
+                <FormattedMessage id={"location.newsletter.name.label"} />
               </label>
               <input
                 type="text"
@@ -51,7 +52,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">
-                <FormattedMessage id={"location.newsletter.email.label"}/>
+                <FormattedMessage id={"location.newsletter.email.label"} />
               </label>
               <input
                 type="email"
@@ -78,7 +79,7 @@ const Newsletter = ({ image, actionLink, intl }) => {
                     for="mce-group[13885]-13885-0"
                     className="form-check-label"
                   >
-                    <FormattedMessage id={"location.newsletter.privacy"}/>
+                    <FormattedMessage id={"location.newsletter.privacy"} />
                   </label>
                 </li>
               </ul>

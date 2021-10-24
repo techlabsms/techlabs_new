@@ -7,7 +7,7 @@ import ArrowsLeft from "../assets/arrows.png"
 import ArrowsRight from "../assets/arrowsRight.png"
 import Layout from "../components/Layout/Layout"
 import Seo from "../components/Layout/Seo"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 class foundYourOwn extends Component {
   render() {

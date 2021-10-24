@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
 import PLACEHOLDER from "../../assets/talks/talksHero.png"
 
 // assets
@@ -32,11 +32,12 @@ const All = props => {
     <Layout>
       <Seo title="Talks" />
       <div className="talks-container">
-        <Hero 
-        heroImage={heroImage}
-        heroTitle="talks.heroTitle"
-        heroSpan="talks.heroSpan"
-        heroText="talks.heroText"/>
+        <Hero
+          heroImage={heroImage}
+          heroTitle="talks.heroTitle"
+          heroSpan="talks.heroSpan"
+          heroText="talks.heroText"
+        />
         <div className="talks-searchbar">
           <h4>
             <FormattedMessage id="talks.previous" /> ({talks.length})

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 // plugins & external
-import { injectIntl } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-react-intl"
 
 // components
 import FaqQuestion from "../components/shared/FaqQuestion"

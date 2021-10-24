@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -9,7 +9,6 @@ import Container from "../smallComponents/Container"
 
 // assets
 import locationsImg from "../../assets/locations.png"
-
 
 const Requirements = ({ heading, subheading, link, isOpen }) => {
   return (
@@ -20,47 +19,52 @@ const Requirements = ({ heading, subheading, link, isOpen }) => {
           <ol className="requirements--list">
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-              <FormattedMessage id="applypage.requirements.motivation.1"/> 
+                <FormattedMessage id="applypage.requirements.motivation.1" />
               </span>{" "}
-              <FormattedMessage id="applypage.requirements.motivation.2"/>  <br />
-              <FormattedMessage id="applypage.requirements.motivation.3"/> 
+              <FormattedMessage id="applypage.requirements.motivation.2" />{" "}
+              <br />
+              <FormattedMessage id="applypage.requirements.motivation.3" />
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-              <FormattedMessage id="applypage.requirements.drive.1"/> 
+                <FormattedMessage id="applypage.requirements.drive.1" />
               </span>{" "}
-              <FormattedMessage id="applypage.requirements.drive.2"/><br />
-              <FormattedMessage id="applypage.requirements.drive.3"/> 
+              <FormattedMessage id="applypage.requirements.drive.2" />
+              <br />
+              <FormattedMessage id="applypage.requirements.drive.3" />
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-              <FormattedMessage id="applypage.requirements.community.1"/> 
+                <FormattedMessage id="applypage.requirements.community.1" />
               </span>{" "}
-              <FormattedMessage id="applypage.requirements.community.2"/><br />
-              <FormattedMessage id="applypage.requirements.community.3"/> 
+              <FormattedMessage id="applypage.requirements.community.2" />
+              <br />
+              <FormattedMessage id="applypage.requirements.community.3" />
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-              <FormattedMessage id="applypage.requirements.english.1"/> 
+                <FormattedMessage id="applypage.requirements.english.1" />
               </span>{" "}
-              <FormattedMessage id="applypage.requirements.english.2"/><br />
-              <FormattedMessage id="applypage.requirements.english.3"/> 
+              <FormattedMessage id="applypage.requirements.english.2" />
+              <br />
+              <FormattedMessage id="applypage.requirements.english.3" />
             </li>
             <li className="requirements--list_item py-2">
               <span className="highlighted requirements--text_first">
-              <FormattedMessage id="applypage.requirements.time.1"/> 
+                <FormattedMessage id="applypage.requirements.time.1" />
               </span>{" "}
-              <FormattedMessage id="applypage.requirements.time.2"/><br />
-              <FormattedMessage id="applypage.requirements.time.3"/> 
+              <FormattedMessage id="applypage.requirements.time.2" />
+              <br />
+              <FormattedMessage id="applypage.requirements.time.3" />
             </li>
           </ol>
           {isOpen ? (
             <a href={link} className="a-white btn btn-primary mt-4">
-              <FormattedMessage id={"callToAction.button"}/>
+              <FormattedMessage id={"callToAction.button"} />
             </a>
           ) : (
             <button className="btn btn-primary mt-4" disabled>
-              <FormattedMessage id="callToAction.button.closed"/>
+              <FormattedMessage id="callToAction.button.closed" />
             </button>
           )}
         </div>

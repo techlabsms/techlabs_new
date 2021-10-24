@@ -3,7 +3,7 @@ import CookieConsent from "react-cookie-consent"
 import CurrentYear from "../smallComponents/CurrentYear"
 
 // plugins
-import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 // components
 import Language from "../language"

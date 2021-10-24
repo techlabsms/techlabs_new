@@ -2,7 +2,7 @@ import React from "react"
 
 // plugin & external
 
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Container from "../smallComponents/Container"
@@ -11,7 +11,6 @@ import Button from "../smallComponents/Button"
 // assets
 import ArrowsLeft from "../../assets/arrows.png"
 import ArrowsRight from "../../assets/arrowsRight.png"
-
 
 const CallToAction = () => {
   return (
@@ -27,9 +26,9 @@ const CallToAction = () => {
           </div>
           <div className="col-6 col-md-6">
             <h1 className="foundYourOwn--last text-center text-md-left  callToAction--text">
-              <FormattedMessage id={"callToAction.first"}/>{" "}
+              <FormattedMessage id={"callToAction.first"} />{" "}
               <span className="foundYourOwn--cta">
-                <FormattedMessage id={"callToAction.second"}/>
+                <FormattedMessage id={"callToAction.second"} />
               </span>
               <img
                 src={ArrowsRight}
@@ -56,9 +55,9 @@ const CallToAction = () => {
           </div>
           <div className="col-6 col-md-4">
             <h1 className="foundYourOwn--last text-center callToAction--text">
-              <FormattedMessage id={"callToAction.third"}/> 
+              <FormattedMessage id={"callToAction.third"} />
               <span className="foundYourOwn--cta">
-                <FormattedMessage id={"callToAction.fourth"}/>
+                <FormattedMessage id={"callToAction.fourth"} />
               </span>
             </h1>
           </div>
@@ -74,10 +73,11 @@ const CallToAction = () => {
         <div className="container my-5 pb-5">
           <div className="row text-center mt-5">
             <div className="col-12">
-              <Button 
-              text={<FormattedMessage id={"callToAction.button"}/>} 
-              primary={true} 
-              link="/apply" />
+              <Button
+                text={<FormattedMessage id={"callToAction.button"} />}
+                primary={true}
+                link="/apply"
+              />
             </div>
           </div>
         </div>

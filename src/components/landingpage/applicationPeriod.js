@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 import dayjs from "dayjs"
 import Img from "gatsby-image"
 

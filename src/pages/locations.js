@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import get from "lodash/get"
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import LocationCard from "../components/locations/LocationCard"
@@ -164,7 +164,10 @@ export default injectIntl(Locations)
 
 export const pageQuery = graphql`
   query LocationPageQuery($locale: String) {
-    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }, sort: {fields:[heading], order: ASC}) {
+    allContentfulLocationPage(
+      filter: { node_locale: { eq: $locale } }
+      sort: { fields: [heading], order: ASC }
+    ) {
       edges {
         node {
           slug

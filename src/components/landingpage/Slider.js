@@ -3,7 +3,7 @@ import React, { Component } from "react"
 // plugin & external
 import Modal from "react-modal"
 import Img from "gatsby-image"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -106,12 +106,10 @@ class Slider extends Component {
         <Container>
           <div className="d-none d-md-block">
             <Heading
-              heading={<FormattedMessage
-                id={"landingpage.slider.heading"}
-              />}
-              subheading={<FormattedMessage
-                id={"landingpage.slider.subheading"}
-              />}
+              heading={<FormattedMessage id={"landingpage.slider.heading"} />}
+              subheading={
+                <FormattedMessage id={"landingpage.slider.subheading"} />
+              }
             />
             <div className="row">
               <div
@@ -160,14 +158,10 @@ class Slider extends Component {
               </div>
               <div className="col-12 col-lg-6">
                 <p className="slider--pre">
-                {<FormattedMessage
-                  id={"landingpage.slider.pre"}
-                />}
+                  {<FormattedMessage id={"landingpage.slider.pre"} />}
                 </p>
                 <h2 className="slider--title mt-4">
-                {<FormattedMessage
-                  id={"landingpage.slider.title"}
-                />}
+                  {<FormattedMessage id={"landingpage.slider.title"} />}
                 </h2>
 
                 <p className="slider--text mt-5 pb-5">
@@ -189,12 +183,14 @@ class Slider extends Component {
                     <span role="img" aria-label="thumbs up">
                       👍🏻
                     </span>
-                    {<FormattedMessage
-                      id={"landingpage.slider.button"}
-                      values={{
-                        name: testimonials[number].name
-                      }}
-                    />}
+                    {
+                      <FormattedMessage
+                        id={"landingpage.slider.button"}
+                        values={{
+                          name: testimonials[number].name,
+                        }}
+                      />
+                    }
                     {/* {` read about ${testimonials[number].name}´s project`} */}
                   </a>
                 )}

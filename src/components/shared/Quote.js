@@ -24,7 +24,7 @@ const Quote = ({ heading, subheading, text, photo, name, job }) => {
       <Heading heading={heading} subheading={subheading} />
       <div className="row">
         <div className="d-none col-md-2 d-md-flex justify-content-end align-content-center">
-          <Img fixed={data.Quoteicon.childImageSharp.fixed} alt={"Quote"} />
+          {/* <Img fixed={data.Quoteicon.childImageSharp.fixed} alt={"Quote"} /> */}
         </div>
         <div className="col-sm-12 col-md-10">
           <p className="mt-2 text-justify whatWeOffer--text">{text}</p>

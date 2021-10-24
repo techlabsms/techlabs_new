@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout"
 import OpenPositions from "../components/talks/OpenPositions"
 
 import Img from "gatsby-image"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 import LearnMore from "../components/landingpage/learnMore"
 import Heading from "../components/smallComponents/Heading"
 import Seo from "../components/Layout/Seo"

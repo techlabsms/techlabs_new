@@ -3,7 +3,7 @@ import { Component } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Academy from "../../components/program/Academy"
@@ -186,12 +186,12 @@ export default remote
 
 export const pageQuery = graphql`
   query($locale: String) {
-    newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
-      ...fluidImage
-    }
-    remote: file(relativePath: { eq: "remote.png" }) {
-      ...fluidImage
-    }
+    # newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
+    #   ...fluidImage
+    # }
+    # remote: file(relativePath: { eq: "remote.png" }) {
+    #   ...fluidImage
+    # }
     page: allContentfulCodeAtHome(filter: { node_locale: { eq: $locale } }) {
       edges {
         node {

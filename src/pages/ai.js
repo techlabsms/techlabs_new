@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 // components
 import CallToAction from "../components/shared/CallToAction"

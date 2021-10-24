@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 
 // plugins & external
-import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 // components
 import Layout from "../components/Layout/Layout"
@@ -19,8 +19,7 @@ function useForceUpdate() {
   return () => setValue(value => value + 1) // update the state to force render
 }
 
-const Newsroom = ({data}) => {
-
+const Newsroom = ({ data }) => {
   const talks = data.allContentfulTalksPage.edges
   const anchorRSS = "https://anchor.fm/s/47019a04/podcast/rss"
   const rssToJSON = "https://api.rss2json.com/v1/api.json?rss_url="
@@ -31,51 +30,51 @@ const Newsroom = ({data}) => {
       .then(response => response.json()) // parse JSON from request
       .then(resultData => {
         setPodcasts(resultData.items)
-      });
+      })
   }, [])
 
   return (
     <Layout>
       <Seo title="Newsroom" />
       <div className="newsroom-container">
-        <Hero 
-            heroImage={heroImage}
-            heroTitle="newsroom.heroTitle"
-            heroSpan="newsroom.heroSpan"
-            heroText="newsroom.heroText"
+        <Hero
+          heroImage={heroImage}
+          heroTitle="newsroom.heroTitle"
+          heroSpan="newsroom.heroSpan"
+          heroText="newsroom.heroText"
         />
         <GridContainer
-            title="newsroom.talksTitle"
-            description="newsroom.talksDescription"
-            button="newsroom.talksButton"
-            buttonLink="/talks/all"
-            type="talks"
-            content={talks}
+          title="newsroom.talksTitle"
+          description="newsroom.talksDescription"
+          button="newsroom.talksButton"
+          buttonLink="/talks/all"
+          type="talks"
+          content={talks}
         />
         <GridContainer
-            title="newsroom.podcastTitle"
-            description="newsroom.podcastDescription"
-            button="newsroom.podcastButton"
-            type="podcasts"
-            buttonLink="https://anchor.fm/digital-shapers-podcast"
-            content={podcasts}
-        />      
+          title="newsroom.podcastTitle"
+          description="newsroom.podcastDescription"
+          button="newsroom.podcastButton"
+          type="podcasts"
+          buttonLink="https://anchor.fm/digital-shapers-podcast"
+          content={podcasts}
+        />
         {/* mobile displays    */}
         <MobileGridContainer
-            title="newsroom.talksTitle"
-            description="newsroom.talksDescription"
-            button="newsroom.talksButton"
-            type="talks"
-            buttonLink="/talks/all"
-            content={talks}
+          title="newsroom.talksTitle"
+          description="newsroom.talksDescription"
+          button="newsroom.talksButton"
+          type="talks"
+          buttonLink="/talks/all"
+          content={talks}
         />
         <MobileGridContainer
-            title="newsroom.podcastTitle"
-            description="newsroom.podcastDescription"
-            button="newsroom.podcastButton"
-            type="podcasts"
-            buttonLink="https://anchor.fm/digital-shapers-podcast"
-            content={podcasts}
+          title="newsroom.podcastTitle"
+          description="newsroom.podcastDescription"
+          button="newsroom.podcastButton"
+          type="podcasts"
+          buttonLink="https://anchor.fm/digital-shapers-podcast"
+          content={podcasts}
         />
       </div>
     </Layout>

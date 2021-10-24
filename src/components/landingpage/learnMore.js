@@ -1,6 +1,6 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"

@@ -3,7 +3,7 @@ import React, { Component } from "react"
 // plugins & external
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-react-intl"
 
 // assets
 import ds from "../../assets/ds.png"
@@ -166,7 +166,7 @@ class MobileNav extends Component {
             <Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="callToAction.button"/>
+                  <FormattedMessage id="callToAction.button" />
                 </h3>
               </li>
             </Link>

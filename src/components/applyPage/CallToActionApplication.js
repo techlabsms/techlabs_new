@@ -1,7 +1,7 @@
 import React from "react"
 
 // plugins & external
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Container from "../smallComponents/Container"
@@ -24,9 +24,9 @@ const CallToActionApplication = ({ isOpen, link }) => {
           </div>
           <div className="col-6 col-md-6">
             <h1 className="foundYourOwn--last text-center text-md-left  callToAction--text">
-            <FormattedMessage id={"callToAction.first"}/>{" "}
+              <FormattedMessage id={"callToAction.first"} />{" "}
               <span className="foundYourOwn--cta">
-                <FormattedMessage id={"callToAction.second"}/>
+                <FormattedMessage id={"callToAction.second"} />
               </span>
             </h1>
           </div>
@@ -48,9 +48,9 @@ const CallToActionApplication = ({ isOpen, link }) => {
           </div>
           <div className="col-6">
             <h1 className="foundYourOwn--last text-center callToAction--text">
-              <FormattedMessage id={"callToAction.third"}/> 
+              <FormattedMessage id={"callToAction.third"} />
               <span className="foundYourOwn--cta">
-                <FormattedMessage id={"callToAction.fourth"}/>
+                <FormattedMessage id={"callToAction.fourth"} />
               </span>
             </h1>
           </div>
@@ -69,12 +69,12 @@ const CallToActionApplication = ({ isOpen, link }) => {
               {isOpen ? (
                 <button className="btn btn-primary mt-4">
                   <a href={link} className="a-white">
-                    <FormattedMessage id={"callToAction.button"}/>
+                    <FormattedMessage id={"callToAction.button"} />
                   </a>
                 </button>
               ) : (
                 <button className="btn btn-primary mt-4" disabled>
-                  <FormattedMessage id={"callToAction.button.closed"}/>
+                  <FormattedMessage id={"callToAction.button.closed"} />
                 </button>
               )}
             </div>

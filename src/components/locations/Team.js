@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Heading from "../smallComponents/Heading"

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 
 // plugins & external
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 import dayjs from "dayjs"
 
 // components

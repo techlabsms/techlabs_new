@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
 
-const Testimonial = (props) => {
+const Testimonial = props => {
   // FIXME: use gatsby image
   // const data = useStaticQuery(graphql`
   //   query {
@@ -24,7 +24,7 @@ const Testimonial = (props) => {
     <Container>
       <Heading heading={props.heading} subheading={props.subheading} />
       <div className="testimonial-quote">
-        <Img fixed={data.quotes.childImageSharp.fixed} alt="quotes" />
+        {/* <Img fixed={data.quotes.childImageSharp.fixed} alt="quotes" /> */}
         <p>{props.text}</p>
       </div>
       <div className="testimonial-info">

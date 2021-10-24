@@ -1,9 +1,9 @@
 import React from "react"
 
 // plugins
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-react-intl"
 
-// components 
+// components
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
@@ -29,7 +29,9 @@ const LearnMore = ({
   fourthProjectImage,
   externalLink,
 }) => {
-  const learnMoreButton = <FormattedMessage id={"program.local.learn_more.button"}/>
+  const learnMoreButton = (
+    <FormattedMessage id={"program.local.learn_more.button"} />
+  )
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
