@@ -72,5 +72,8 @@ module.exports = {
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-eslint`,
     "gatsby-plugin-next-seo",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
