@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 // components
 import Container from "../smallComponents/Container"
@@ -34,7 +33,7 @@ const Testimonial = props => {
           </p>
           <div className="testimonial-info-work">
             <p>{props.testimonialTagline}</p>
-            <Img fluid={props.testimonialLogo} />
+            {/* <Img fluid={props.testimonialLogo} /> */}
           </div>
         </div>
         <div>

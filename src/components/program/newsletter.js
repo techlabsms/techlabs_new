@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 
 // plugins & external
 import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
@@ -106,13 +105,13 @@ const Newsletter = ({ image, actionLink, intl }) => {
           </form>
         </div>
         <div className="col-md-6 order-1 order-md-2 py-5">
-          <Img
+          {/* <Img
             fluid={image}
             style={{
               width: "300px",
               margin: "auto",
             }}
-          />
+          /> */}
         </div>
       </div>
     </Container>

@@ -1,7 +1,6 @@
 import React from "react"
 import Container from "../smallComponents/Container"
 import Heading from "../smallComponents/Heading"
-import Img from "gatsby-image"
 
 const logoStyles = {
   width: "120px",
@@ -26,11 +25,11 @@ const PartnerLogos = ({ heading, subheading, partners }) => {
               >
                 <div className="partner--card mb-4 h-100 d-flex justify-content-center">
                   <h6 className="mb-3">{partner.name}</h6>
-                  <Img
+                  {/* <Img
                     fluid={partner.logo.fluid}
                     alt={partner.logo.title}
                     style={logoStyles}
-                  />
+                  /> */}
                 </div>
               </a>
             </div>

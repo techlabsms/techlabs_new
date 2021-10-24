@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 
 // plugins
 import { FormattedMessage } from "gatsby-plugin-react-intl"
@@ -30,11 +29,11 @@ const Team = ({ city, team }) => {
         {team &&
           team.map(teamMember => (
             <div className="col-12 col-md-3" key={teamMember.name}>
-              <Img
+              {/* <Img
                 fluid={teamMember.image.fluid}
                 alt={teamMember.image.title}
                 style={circleImage}
-              />
+              /> */}
               <h3 className="team--name">
                 <span>{teamMember.name}</span>
               </h3>

@@ -1,7 +1,6 @@
 import React from "react"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
-import Img from "gatsby-image"
 
 const RightImageSectionHeading = ({
   heading,
@@ -41,11 +40,11 @@ const RightImageSectionHeading = ({
             className={`col-lg-${rightSize ||
               6} text-center  order-1 mb-3 d-flex`}
           >
-            <Img
+            {/* <Img
               fluid={image}
               alt=""
               className="w-100 mb-3 align-self-center"
-            />
+            /> */}
           </div>
         </div>
       </div>

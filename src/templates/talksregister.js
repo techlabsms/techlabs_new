@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import React, { useEffect, useState } from "react"
 import Layout from "../components/Layout/Layout"
 
-import Img from "gatsby-image"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 import LearnMore from "../components/landingpage/learnMore"
 import Seo from "../components/Layout/Seo"
@@ -58,23 +57,23 @@ const Index = ({ data, intl }) => {
           <div className="col-md-6">
             <div className="talk__speaker">
               <div className="talk__speaker--card">
-                <Img
+                {/* <Img
                   alt={data.content.speakers[0].name}
                   fluid={data.content.speakers[0].image.fluid}
                   className="talk__speaker"
                   style={{
                     width: width > 600 ? "250px" : "150px",
                   }}
-                />
+                /> */}
               </div>
               <div className="talk__speaker--card">
-                <Img
+                {/* <Img
                   alt={data.content.speakers[1].name}
                   fluid={data.content.speakers[1].image.fluid}
                   style={{
                     width: width > 600 ? "250px" : "150px",
                   }}
-                />
+                /> */}
               </div>
             </div>
           </div>

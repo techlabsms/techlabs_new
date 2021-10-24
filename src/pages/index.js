@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 // plugins & external
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
-import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 // components
 import Slider from "../components/landingpage/Slider"
@@ -56,8 +56,7 @@ class index extends React.Component {
                   <h1 className="display-4">
                     We Build.
                     <br />
-                    <span className="highlighted lh-90">Digital. </span>
-                    <span className="highlighted lh-90">Shapers.</span>
+                    <span className="highlighted lh-90">Digital. Shapers.</span>
                   </h1>
                   <p className="index--lead mb-4 margin-top-15 margin-bottom-2 text-justify">
                     <FormattedMessage id={"landingpage.digital.shaper.part1"} />
@@ -85,11 +84,11 @@ class index extends React.Component {
                   </div>
                 </div>
                 <div className="col-md-7 d-none d-lg-block">
-                  {/* <Img
+                  <StaticImage
                     alt="commmunity"
-                    fluid={data.imageOne.childImageSharp.fluid}
-                    fadeIn={false}
-                  /> */}
+                    src="../assets/images/startPage.png"
+                    placeholder="tracedSVG"
+                  />
                 </div>
               </div>
             </div>
@@ -99,16 +98,16 @@ class index extends React.Component {
             <div className="container center">
               <img className="gic-badge" src={GIC} alt="gic" />
             </div>
-            {/* <PartnerLogos
-              logoOne={data.accint.childImageSharp.fluid}
+            <PartnerLogos
+              logoOne={data.accint}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
-              logoTwo={data.sopra.childImageSharp.fluid}
+              logoTwo={data.accint}
               linkPartnerTwo="https://www.soprasteria.de/de"
-              logoThree={data.westfalen.childImageSharp.fluid}
+              logoThree={data.accint}
               linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
-              logoFour={data.ey.childImageSharp.fluid}
+              logoFour={data.accint}
               linkPartnerFour="https://www.ey.com/de_de"
-            /> */}
+            />
           </section>
           {/* what we offer */}
           <section className="mt-5">
@@ -384,9 +383,11 @@ export const pageQuery = graphql`
     # imageOne: file(relativePath: { eq: "startPage.png" }) {
     #   ...fluidImage
     # }
-    # accint: file(relativePath: { eq: "accint.png" }) {
-    #   ...fluidImage
-    # }
+    accint: file(relativePath: { eq: "accint.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 200)
+      }
+    }
     # sopra: file(relativePath: { eq: "sopra.png" }) {
     #   ...fluidImage
     # }

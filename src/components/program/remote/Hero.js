@@ -1,7 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-react-intl"
 import Heading from "../../smallComponents/Heading"
-import Img from "gatsby-image"
 
 const Hero = ({
   headingFirst,
@@ -62,7 +61,7 @@ const Hero = ({
           </div>
         </div>
         <div className="col-md-6 my-auto">
-          <Img alt="codeathome hero" fluid={img} />
+          {/* <Img alt="codeathome hero" fluid={img} /> */}
         </div>
       </div>
     </div>

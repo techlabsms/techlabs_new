@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 // plugins & external
 import { FormattedMessage } from "gatsby-plugin-react-intl"
 import dayjs from "dayjs"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -192,7 +192,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
         </div>
       </div>
       <div className="images">
-        <Img fluid={wave} style={wave_style} alt="wave" />
+        {/* <StaticImage src={wave} style={wave_style} alt="wave" /> */}
       </div>
     </section>
   )

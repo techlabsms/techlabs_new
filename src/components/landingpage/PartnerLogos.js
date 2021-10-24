@@ -1,11 +1,11 @@
 import React from "react"
 
 // plugin & external
-import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
 import Container from "../smallComponents/Container"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const PartnerLogos = ({
   logoOne,
@@ -17,6 +17,11 @@ const PartnerLogos = ({
   logoFour,
   linkPartnerFour,
 }) => {
+  const imageOne = getImage(logoOne)
+  const imageTwo = getImage(logoTwo)
+  const imageThree = getImage(logoThree)
+  const imageFour = getImage(logoFour)
+
   return (
     <Container>
       <div className="row my-5 d-flex h-100 partnerLogos">
@@ -27,9 +32,9 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerOne}>
-            <Img
+            <GatsbyImage
               alt="partner logo"
-              fluid={logoOne}
+              src={imageOne}
               imgStyle={{
                 width: "90%",
                 objectFit: "contain",
@@ -42,8 +47,8 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">
           <a href={linkPartnerTwo}>
-            <Img
-              fluid={logoTwo}
+            <GatsbyImage
+              src={imageTwo}
               alt="partner logo"
               className="partnerLogos--img img-fluid"
             />
@@ -51,8 +56,8 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerThree}>
-            <Img
-              fluid={logoThree}
+            <GatsbyImage
+              src={imageThree}
               alt="partner logo"
               className="partnerLogos--img img-fluid"
               imgStyle={{
@@ -66,8 +71,8 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerFour}>
-            <Img
-              fluid={logoFour}
+            <GatsbyImage
+              src={imageFour}
               alt="partner logo"
               className="partnerLogos--img img-fluid  text-center"
               imgStyle={{ width: "40%", objectFit: "contain" }}

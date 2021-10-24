@@ -2,7 +2,6 @@ import React, { Component } from "react"
 
 // plugin & external
 import Modal from "react-modal"
-import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-react-intl"
 
 // components
@@ -125,7 +124,7 @@ class Slider extends Component {
                   role="button"
                   tabIndex={0}
                 >
-                  <Img fluid={testimonials[number].image} alt="" />
+                  {/* <Img fluid={testimonials[number].image} alt="" /> */}
                 </div>
 
                 <Modal
@@ -259,10 +258,10 @@ class Slider extends Component {
                       role="button"
                       tabIndex={0}
                     >
-                      <Img
+                      {/* <Img
                         fluid={testimonials[number].image_mobil_thumbnail}
                         alt="img thumbnail"
-                      />
+                      /> */}
                     </div>
                   </div>
                 ) : (
@@ -274,14 +273,14 @@ class Slider extends Component {
             </div>
             <div className="row">
               <div className="col-4 text-center">
-                <Img
+                {/* <Img
                   fixed={testimonials[number].image_mobil}
                   alt="img"
                   style={{
                     marginLeft: "auto",
                     marginTop: "auto",
                   }}
-                />
+                /> */}
               </div>
               <div className="col-8">
                 <p className="slider--name-mobil">
