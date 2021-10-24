@@ -47,14 +47,14 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then((result) => {
+      ).then(result => {
         if (result.errors) {
           reject(result.errors)
         }
 
         const { location, talks } = result.data
 
-        location.edges.forEach((edge) => {
+        location.edges.forEach(edge => {
           const heading = edge.node.heading
           const slug = edge.node.slug
           createPage({
@@ -66,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        talks.edges.forEach((edge) => {
+        talks.edges.forEach(edge => {
           const slug = edge.node.slug
           createPage({
             path: `/talks/${slug}`,
@@ -77,7 +77,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        talks.edges.forEach((edge) => {
+        talks.edges.forEach(edge => {
           const slug = edge.node.slug
           createPage({
             path: `/talks/${slug}/register`,
@@ -92,4 +92,42 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+}
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  actions,
+  getConfig,
+  loaders,
+  plugins,
+}) => {
+  const config = getConfig()
+  const miniCssExtractPluginIndex = config.plugins.findIndex(
+    plugin => plugin.constructor.name === "MiniCssExtractPlugin"
+  )
+
+  if (miniCssExtractPluginIndex > -1) {
+    // remove miniCssExtractPlugin from plugins list
+    config.plugins.splice(miniCssExtractPluginIndex, 1)
+
+    // re-add mini-css-extract-plugin
+    if (stage === "build-javascript") {
+      config.plugins.push(
+        plugins.extractText({
+          filename: `[name].[contenthash].css`,
+          chunkFilename: `[name].[contenthash].css`,
+          ignoreOrder: true,
+        })
+      )
+    } else {
+      config.plugins.push(
+        plugins.extractText({
+          filename: `[name].css`,
+          chunkFilename: `[id].css`,
+          ignoreOrder: true,
+        })
+      )
+    }
+  }
+  actions.replaceWebpackConfig(config)
 }
