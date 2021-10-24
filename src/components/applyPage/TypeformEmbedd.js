@@ -1,6 +1,6 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-react-intl"
-import { ReactTypeformEmbed } from "react-typeform-embed"
+import { Widget } from "react-typeform-embed"
 import Heading from "../smallComponents/Heading"
 
 const TypeformEmbedd = ({ url, isMobile, subheading, city }) => {
@@ -22,7 +22,7 @@ const TypeformEmbedd = ({ url, isMobile, subheading, city }) => {
             borderRadius: "5px",
           }}
         >
-          <ReactTypeformEmbed url={url}></ReactTypeformEmbed>
+          <Widget url={url}></Widget>
           <p
             style={{
               position: "relative",
