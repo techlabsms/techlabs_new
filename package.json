@@ -39,7 +39,7 @@
     "env": "0.0.2",
     "gatsby": "^3.14.0",
     "gatsby-background-image": "^1.5.3",
-    "gatsby-cli": "^3.14.0",
+    "gatsby-cli": "^4.0.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-gdpr-cookies": "^2.0.0",
     "gatsby-plugin-google-tagmanager": "^3.14.0",
