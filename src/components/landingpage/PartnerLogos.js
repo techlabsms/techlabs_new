@@ -32,51 +32,22 @@ const PartnerLogos = ({
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerOne}>
-            <GatsbyImage
-              alt="partner logo"
-              src={imageOne}
-              imgStyle={{
-                width: "90%",
-                objectFit: "contain",
-                margin: "0px 5px",
-                alignSelf: "center",
-              }}
-              className="partnerLogos--img img-fluid"
-            />
+            <GatsbyImage alt="partner logo" image={imageOne} />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5   text-center justify-content-center align-self-center">
           <a href={linkPartnerTwo}>
-            <GatsbyImage
-              src={imageTwo}
-              alt="partner logo"
-              className="partnerLogos--img img-fluid"
-            />
+            <GatsbyImage image={imageTwo} />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerThree}>
-            <GatsbyImage
-              src={imageThree}
-              alt="partner logo"
-              className="partnerLogos--img img-fluid"
-              imgStyle={{
-                width: "80%",
-                objectFit: "contain",
-                margin: "0px 10px",
-                alignSelf: "center",
-              }}
-            />
+            <GatsbyImage image={imageThree} alt="partner logo" />
           </a>
         </div>
         <div className="col-md-2 col-6 my-5 text-center  justify-content-center align-self-center">
           <a href={linkPartnerFour}>
-            <GatsbyImage
-              src={imageFour}
-              alt="partner logo"
-              className="partnerLogos--img img-fluid  text-center"
-              imgStyle={{ width: "40%", objectFit: "contain" }}
-            />
+            <GatsbyImage image={imageFour} alt="partner logo" />
           </a>
         </div>
       </div>

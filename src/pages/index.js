@@ -101,11 +101,11 @@ class index extends React.Component {
             <PartnerLogos
               logoOne={data.accint}
               linkPartnerOne="https://www.accenture.com/de-de/interactive-index"
-              logoTwo={data.accint}
+              logoTwo={data.sopra}
               linkPartnerTwo="https://www.soprasteria.de/de"
-              logoThree={data.accint}
+              logoThree={data.westfalen}
               linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
-              logoFour={data.accint}
+              logoFour={data.ey}
               linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
@@ -379,24 +379,30 @@ export default injectIntl(index)
 // `
 
 export const pageQuery = graphql`
-  query($locale: String) {
+  query ($locale: String) {
     # imageOne: file(relativePath: { eq: "startPage.png" }) {
     #   ...fluidImage
     # }
     accint: file(relativePath: { eq: "accint.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 200)
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    # sopra: file(relativePath: { eq: "sopra.png" }) {
-    #   ...fluidImage
-    # }
-    # westfalen: file(relativePath: { eq: "westfalen.png" }) {
-    #   ...fluidImage
-    # }
-    # ey: file(relativePath: { eq: "ey.png" }) {
-    #   ...fluidImage
-    # }
+    sopra: file(relativePath: { eq: "sopra.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    westfalen: file(relativePath: { eq: "westfalen.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    ey: file(relativePath: { eq: "ey.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
     # wwo: file(relativePath: { eq: "wwo.png" }) {
     #   ...fluidImage
     # }
