@@ -49,7 +49,7 @@
   "app.landingpage.applicationperiod.deadline.start.short": "Application starts in:",
   "app.landingpage.applicationperiod.header": "Our Application Deadlines",
   "app.landingpage.applicationperiod.no.deadline": "Next Batch will be announced soon",
-  "app.landingpage.applicationperiod.subheader": "Check out when you can apply for each location!",
+  "app.landingpage.applicationperiod.subheader": "Check out when you can apply for each location! Consider that the countdown refers to Central European Time (CEST/CET).",
 
   "ai.ai.programmhero.headingFirst": "Artificial",
   "ai.ai.programmhero.headingSecond": " Intelligence",
@@ -293,7 +293,7 @@
   "location.newsletter.button": "Subscribe",
 
   "applypage.choose.your.city.title": "Choose Your City",
-  "applypage.choose.your.city.subtitle": "Please click on the location you would like to apply at.",
+  "applypage.choose.your.city.subtitle": "Please click on the location you would like to apply at. Consider that the countdown refers to CEST/CET.",
   "applypage.applyCard.availableTracks": "Available Tracks",
   "applypage.headline.ApplicationHero.headingFirst": "Application",
   "applypage.headline.ApplicationHero.intro": "Do you want to learn state-of-the-art tech? Do you want to be part of a thriving community? Apply now for the TechLabs Digital Shaper Program.",
