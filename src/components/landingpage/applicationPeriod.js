@@ -193,7 +193,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
       </div>
       <div className="images">
         <StaticImage
-          src="../assets/images/wave.png"
+          src="../../assets/images/wave.png"
           style={wave_style}
           alt="wave"
         />

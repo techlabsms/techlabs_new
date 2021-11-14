@@ -257,7 +257,7 @@ class Slider extends Component {
                       tabIndex={0}
                     >
                       <GatsbyImage
-                        src={testimonials[number].image_mobil_thumbnail}
+                        image={testimonials[number].image_mobil_thumbnail}
                         alt="img thumbnail"
                       />
                     </div>
@@ -272,7 +272,7 @@ class Slider extends Component {
             <div className="row">
               <div className="col-4 text-center">
                 <GatsbyImage
-                  src={testimonials[number].image_mobil}
+                  image={testimonials[number].image_mobil}
                   alt="img"
                   style={{
                     marginLeft: "auto",

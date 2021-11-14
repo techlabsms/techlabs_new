@@ -266,23 +266,23 @@ class index extends React.Component {
           {/* our community slider */}
           <Slider
             quoteOne={<FormattedMessage id={"landingpage.slider.jin.text"} />}
-            imageOne={data.jin.childImageSharp}
-            imageOneMobil={data.jin_mobil.childImageSharp}
-            imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp}
+            imageOne={data.jin}
+            imageOneMobil={data.jin_mobil}
+            imageOneThumbnail={data.jin_mobil_thumbnail}
             quoteTwo={
               <FormattedMessage id={"landingpage.slider.hümeyra.text"} />
             }
-            imageTwo={data.huemeyra.childImageSharp}
-            imageTwoMobil={data.huemeyra_mobil.childImageSharp}
+            imageTwo={data.huemeyra}
+            imageTwoMobil={data.huemeyra_mobil}
             quoteThree={
               <FormattedMessage id={"landingpage.slider.miriam.text"} />
             }
-            imageThree={data.miriam.childImageSharp}
-            imageThreeMobil={data.miriam_mobil.childImageSharp}
-            imageThreeThumbnail={data.miriam_mobil_thumbnail.childImageSharp}
+            imageThree={data.miriam}
+            imageThreeMobil={data.miriam_mobil}
+            imageThreeThumbnail={data.miriam_mobil_thumbnail}
           />
 
-          {/* <RightImageSectionHeading
+          <RightImageSectionHeading
             heading={
               <FormattedMessage id={"landingpage.googlechallenge.heading"} />
             }
@@ -290,7 +290,7 @@ class index extends React.Component {
               <FormattedMessage id={"landingpage.googlechallenge.subheading"} />
             }
             text={<FormattedMessage id={"landingpage.googlechallenge.text"} />}
-            image={data.gic.childImageSharp.fluid}
+            image={data.gic}
             hasButton={true}
             buttonText={
               <FormattedMessage id={"landingpage.button.read_more"} />
@@ -303,10 +303,10 @@ class index extends React.Component {
               <FormattedMessage id={"landingpage.quote.nils.subheading"} />
             }
             text={<FormattedMessage id={"landingpage.quote.nils.text"} />}
-            photo={data.nils.childImageSharp.fixed}
+            photo={data.nils}
             name="Nils Bahr"
             job="Head of Product @ TechLabs"
-          /> */}
+          />
           <KeyBenefits
             heading={
               <FormattedMessage id={"program.local.keyBenefits.heading"} />
@@ -463,12 +463,16 @@ export const pageQuery = graphql`
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    # nils: file(relativePath: { eq: "nils.png" }) {
-    #   ...fixedImage
-    # }
-    # gic: file(relativePath: { eq: "gic_team.png" }) {
-    #   ...fluidImage
-    # }
+    nils: file(relativePath: { eq: "nils.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    gic: file(relativePath: { eq: "gic_team.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
     # background_location: file(
     #   relativePath: { eq: "background_locations.png" }
     # ) {

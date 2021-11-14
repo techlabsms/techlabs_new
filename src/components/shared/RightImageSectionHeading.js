@@ -1,6 +1,7 @@
 import React from "react"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const RightImageSectionHeading = ({
   heading,
@@ -15,6 +16,8 @@ const RightImageSectionHeading = ({
   topText,
   infoText,
 }) => {
+  const imageSource = getImage(image)
+
   return (
     <Container>
       <div className="mt-5">
@@ -37,14 +40,15 @@ const RightImageSectionHeading = ({
             {infoText && <p className="highlighted my-4">{infoText}</p>}
           </div>
           <div
-            className={`col-lg-${rightSize ||
-              6} text-center  order-1 mb-3 d-flex`}
+            className={`col-lg-${
+              rightSize || 6
+            } text-center  order-1 mb-3 d-flex`}
           >
-            {/* <Img
-              fluid={image}
+            <GatsbyImage
+              image={imageSource}
               alt=""
               className="w-100 mb-3 align-self-center"
-            /> */}
+            />
           </div>
         </div>
       </div>
