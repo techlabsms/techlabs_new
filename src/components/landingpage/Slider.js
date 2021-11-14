@@ -3,6 +3,7 @@ import React, { Component } from "react"
 // plugin & external
 import Modal from "react-modal"
 import { FormattedMessage } from "gatsby-plugin-react-intl"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 // components
 import Heading from "../smallComponents/Heading"
@@ -34,11 +35,10 @@ class Slider extends Component {
           name: "Jin Rhee",
           role: "Business Administration",
           text: this.props.quoteOne,
-          image: this.props.imageOne,
-          image_mobil: this.props.imageOneMobil,
-          image_mobil_thumbnail: this.props.imageOneThumbnail,
-          link:
-            "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
+          image: getImage(this.props.imageOne),
+          image_mobil: getImage(this.props.imageOneMobil),
+          image_mobil_thumbnail: getImage(this.props.imageOneThumbnail),
+          link: "https://medium.com/techlabsms/schulabgaengerwebsite-undnun-bc8909604733",
           width: "33%",
           youtube: "https://www.youtube.com/embed/rlMgA98IAFE",
           hasProject: false,
@@ -49,10 +49,9 @@ class Slider extends Component {
           name: "Hümeyra Husseini",
           role: "Student Molecular Biomedicine",
           text: this.props.quoteTwo,
-          image: this.props.imageTwo,
-          link:
-            "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
-          image_mobil: this.props.imageTwoMobil,
+          image: getImage(this.props.imageTwo),
+          link: "https://medium.com/techlabsms/bone-age-prediction-through-x-ray-images-6e181d900a7a",
+          image_mobil: getImage(this.props.imageTwoMobil),
           width: "66%",
           hasProject: true,
           video: false,
@@ -62,11 +61,10 @@ class Slider extends Component {
           name: "Miriam Gercken",
           role: "Student Marketing",
           text: this.props.quoteThree,
-          image: this.props.imageThree,
-          image_mobil: this.props.imageThreeMobil,
-          image_mobil_thumbnail: this.props.imageThreeThumbnail,
-          link:
-            "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
+          image: getImage(this.props.imageThree),
+          image_mobil: getImage(this.props.imageThreeMobil),
+          image_mobil_thumbnail: getImage(this.props.imageThreeThumbnail),
+          link: "https://medium.com/techlabsms/why-is-there-always-so-much-month-left-at-the-end-of-the-money-453ba6a5f256",
           width: "100%",
           youtube: "https://www.youtube.com/embed/TSXyJbCmGto",
           hasProject: false,
@@ -124,7 +122,7 @@ class Slider extends Component {
                   role="button"
                   tabIndex={0}
                 >
-                  {/* <Img fluid={testimonials[number].image} alt="" /> */}
+                  <GatsbyImage src={testimonials[number].image} alt="" />
                 </div>
 
                 <Modal
@@ -258,10 +256,10 @@ class Slider extends Component {
                       role="button"
                       tabIndex={0}
                     >
-                      {/* <Img
-                        fluid={testimonials[number].image_mobil_thumbnail}
+                      <GatsbyImage
+                        src={testimonials[number].image_mobil_thumbnail}
                         alt="img thumbnail"
-                      /> */}
+                      />
                     </div>
                   </div>
                 ) : (
@@ -273,14 +271,14 @@ class Slider extends Component {
             </div>
             <div className="row">
               <div className="col-4 text-center">
-                {/* <Img
-                  fixed={testimonials[number].image_mobil}
+                <GatsbyImage
+                  src={testimonials[number].image_mobil}
                   alt="img"
                   style={{
                     marginLeft: "auto",
                     marginTop: "auto",
                   }}
-                /> */}
+                />
               </div>
               <div className="col-8">
                 <p className="slider--name-mobil">

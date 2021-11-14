@@ -39,13 +39,13 @@ const ApplicationPeriod = ({ locationData, wave }) => {
   }
 
   // locale functions
-  const updateAvailableCities = country => {
+  const updateAvailableCities = (country) => {
     const cities = locationData.filter(
-      c => c.node.country.toLowerCase() === country.toLowerCase()
+      (c) => c.node.country.toLowerCase() === country.toLowerCase()
     )
     let cityValues = []
 
-    cities.forEach(c => {
+    cities.forEach((c) => {
       cityValues = [...cityValues, c.node.heading]
     })
     setCityOptions(cityValues)
@@ -53,16 +53,16 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     updateCityData(cityValues[0])
   }
 
-  const updateCityData = city => {
+  const updateCityData = (city) => {
     const choosenCityData = locationData.filter(
-      c => c.node.heading.toLowerCase() === city.toLowerCase()
+      (c) => c.node.heading.toLowerCase() === city.toLowerCase()
     )
 
     setCityData(choosenCityData)
     updateDate(choosenCityData)
   }
 
-  const updateDate = cityData => {
+  const updateDate = (cityData) => {
     const now = dayjs(Date.now())
 
     if (!cityData || cityData[0].node.applicationStart === null) {
@@ -87,7 +87,7 @@ const ApplicationPeriod = ({ locationData, wave }) => {
     }
   }
 
-  locationData.forEach(c => {
+  locationData.forEach((c) => {
     const { country } = c.node
     if (countryOptions.includes(country)) {
       return
@@ -121,14 +121,14 @@ const ApplicationPeriod = ({ locationData, wave }) => {
                 <Dropdown
                   options={countryOptions}
                   style={dropdown_style}
-                  onSelect={country => {
+                  onSelect={(country) => {
                     updateAvailableCities(country)
                   }}
                 />
                 <Dropdown
                   options={cityOptions}
                   style={dropdown_style}
-                  onSelect={city => {
+                  onSelect={(city) => {
                     setCity(city)
                     updateCityData(city)
                   }}
@@ -192,7 +192,11 @@ const ApplicationPeriod = ({ locationData, wave }) => {
         </div>
       </div>
       <div className="images">
-        {/* <StaticImage src={wave} style={wave_style} alt="wave" /> */}
+        <StaticImage
+          src="../assets/images/wave.png"
+          style={wave_style}
+          alt="wave"
+        />
       </div>
     </section>
   )

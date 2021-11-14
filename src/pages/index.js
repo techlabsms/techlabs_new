@@ -5,6 +5,8 @@ import { graphql } from "gatsby"
 import { injectIntl, FormattedMessage, Link } from "gatsby-plugin-react-intl"
 import BackgroundImage from "gatsby-background-image"
 import { StaticImage } from "gatsby-plugin-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 // components
 import Slider from "../components/landingpage/Slider"
@@ -44,6 +46,9 @@ class index extends React.Component {
     const { data, intl } = this.props
 
     const allCountries = this.props.data.allContentfulLocationPage.edges
+
+    const wwoBackground = getImage(data.wwo.childImageSharp)
+    const wwoBackgroundImage = convertToBgImage(wwoBackground)
     return (
       <Layout>
         <Seo locale={intl.locale} image={OGImage} />
@@ -105,14 +110,14 @@ class index extends React.Component {
               linkPartnerTwo="https://www.soprasteria.de/de"
               logoThree={data.westfalen}
               linkPartnerThree="https://westfalen.com/de/de/privatkunden/"
-              logoFour={data.ey}
+              logoFour={data.eyj}
               linkPartnerFour="https://www.ey.com/de_de"
             />
           </section>
           {/* what we offer */}
           <section className="mt-5">
-            {/* <BackgroundImage
-              fluid={data.wwo.childImageSharp.fluid}
+            <BackgroundImage
+              {...wwoBackgroundImage}
               fadeIn={false}
               style={{
                 backgroundPosition: "center",
@@ -254,34 +259,28 @@ class index extends React.Component {
                   </div>
                 </div>
               </div>
-            </BackgroundImage> */}
+            </BackgroundImage>
           </section>
           {/* application deadlines                       */}
-          {/* <ApplicationPeriod
-            wave={data.wave.childImageSharp.fluid}
-            locationData={allCountries}
-            locale={intl.locale}
-          /> */}
+          <ApplicationPeriod locationData={allCountries} locale={intl.locale} />
           {/* our community slider */}
-          {/* <Slider
+          <Slider
             quoteOne={<FormattedMessage id={"landingpage.slider.jin.text"} />}
-            imageOne={data.jin.childImageSharp.fluid}
-            imageOneMobil={data.jin_mobil.childImageSharp.fixed}
-            imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp.fluid}
+            imageOne={data.jin.childImageSharp}
+            imageOneMobil={data.jin_mobil.childImageSharp}
+            imageOneThumbnail={data.jin_mobil_thumbnail.childImageSharp}
             quoteTwo={
               <FormattedMessage id={"landingpage.slider.hümeyra.text"} />
             }
-            imageTwo={data.huemeyra.childImageSharp.fluid}
-            imageTwoMobil={data.huemeyra_mobil.childImageSharp.fixed}
+            imageTwo={data.huemeyra.childImageSharp}
+            imageTwoMobil={data.huemeyra_mobil.childImageSharp}
             quoteThree={
               <FormattedMessage id={"landingpage.slider.miriam.text"} />
             }
-            imageThree={data.miriam.childImageSharp.fluid}
-            imageThreeMobil={data.miriam_mobil.childImageSharp.fixed}
-            imageThreeThumbnail={
-              data.miriam_mobil_thumbnail.childImageSharp.fluid
-            }
-          /> */}
+            imageThree={data.miriam.childImageSharp}
+            imageThreeMobil={data.miriam_mobil.childImageSharp}
+            imageThreeThumbnail={data.miriam_mobil_thumbnail.childImageSharp}
+          />
 
           {/* <RightImageSectionHeading
             heading={
@@ -380,61 +379,90 @@ export default injectIntl(index)
 
 export const pageQuery = graphql`
   query ($locale: String) {
-    # imageOne: file(relativePath: { eq: "startPage.png" }) {
-    #   ...fluidImage
-    # }
     accint: file(relativePath: { eq: "accint.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 150
+        )
       }
     }
     sopra: file(relativePath: { eq: "sopra.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 150
+        )
       }
     }
     westfalen: file(relativePath: { eq: "westfalen.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 100
+        )
       }
     }
     ey: file(relativePath: { eq: "ey.png" }) {
       childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 50
+        )
+      }
+    }
+    wwo: file(relativePath: { eq: "wwo.png" }) {
+      childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    # wwo: file(relativePath: { eq: "wwo.png" }) {
-    #   ...fluidImage
-    # }
-    # wave: file(relativePath: { eq: "wave.png" }) {
-    #   ...fluidImage
-    # }
-    # jin: file(relativePath: { eq: "jinrhee.png" }) {
-    #   ...fluidImage
-    # }
-    # jin_mobil: file(relativePath: { eq: "jinrhee_mobil.png" }) {
-    #   ...fixedImage
-    # }
-    # jin_mobil_thumbnail: file(relativePath: { eq: "jin_mobil.png" }) {
-    #   ...fluidImage
-    # }
-    # huemeyra: file(relativePath: { eq: "humeyra.png" }) {
-    #   ...fluidImage
-    # }
-    # huemeyra_mobil: file(relativePath: { eq: "humeyra_mobil.png" }) {
-    #   ...fixedImage
-    # }
-    # miriam: file(relativePath: { eq: "miriam.png" }) {
-    #   ...fluidImage
-    # }
-    # miriam_mobil: file(relativePath: { eq: "miriam_mobil.png" }) {
-    #   ...fixedImage
-    # }
-    # miriam_mobil_thumbnail: file(
-    #   relativePath: { eq: "miriam_mobil_thumbnail.png" }
-    # ) {
-    #   ...fluidImage
-    # }
+
+    jin: file(relativePath: { eq: "jinrhee.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    jin_mobil: file(relativePath: { eq: "jinrhee_mobil.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    jin_mobil_thumbnail: file(relativePath: { eq: "jin_mobil.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    huemeyra: file(relativePath: { eq: "humeyra.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    huemeyra_mobil: file(relativePath: { eq: "humeyra_mobil.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    miriam: file(relativePath: { eq: "miriam.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    miriam_mobil: file(relativePath: { eq: "miriam_mobil.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    miriam_mobil_thumbnail: file(
+      relativePath: { eq: "miriam_mobil_thumbnail.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
     # nils: file(relativePath: { eq: "nils.png" }) {
     #   ...fixedImage
     # }
