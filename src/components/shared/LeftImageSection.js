@@ -1,6 +1,7 @@
 import React from "react"
 import Heading from "../smallComponents/Heading"
 import Container from "../smallComponents/Container"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const LeftImageSection = ({
   heading,
@@ -12,6 +13,7 @@ const LeftImageSection = ({
   html = false,
   rightPartSize,
 }) => {
+  const imageSource = getImage(image)
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -20,8 +22,8 @@ const LeftImageSection = ({
           <div className="d-none d-md-block row mt-5">
             <div className="col">
               {image && (
-                <img
-                  src={image}
+                <GatsbyImage
+                  image={imageSource}
                   alt=""
                   className="w-50 img-fluid float-left pr-3 pb-2 pt-2 mr-3"
                 />
@@ -49,7 +51,7 @@ const LeftImageSection = ({
       <div className={float ? "row mt-5 d-md-none" : "row mt-5"}>
         {image && (
           <div className={`col-md-${leftPartSize || 5} text-center mb-3`}>
-            <img src={image} alt="" className="w-100" />
+            <GatsbyImage image={imageSource} alt="" className="w-100" />
           </div>
         )}
         <div className={`col-md-${rightPartSize || 7}`}>

@@ -27,15 +27,17 @@ const Quote = ({ heading, subheading, text, photo, name, job }) => {
       <div className="row">
         <div className="col-md-10">
           <div className="row mt-4">
-            <div className="col-3 text-left d-flex justify-content-center align-content-center">
-              <GatsbyImage
-                image={photoSource}
-                alt={name}
-                style={{
-                  marginTop: "auto",
-                  marginBottom: "auto",
-                }}
-              />
+            <div className="col-3 text-right">
+              <div className="mt-4">
+                <GatsbyImage
+                  image={photoSource}
+                  alt={name}
+                  style={{
+                    marginTop: "auto",
+                    marginBottom: "auto",
+                  }}
+                />
+              </div>
             </div>
             <div className="col-9">
               <p className="mt-4 whatWeOffer--nils">

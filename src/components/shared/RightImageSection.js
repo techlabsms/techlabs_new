@@ -2,6 +2,7 @@ import React from "react"
 
 // components
 import Heading from "../smallComponents/Heading"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Container from "../smallComponents/Container"
 import Button from "../smallComponents/Button"
 
@@ -18,6 +19,8 @@ const RightImageSection = ({
   leftPartSize,
   rightPartSize,
 }) => {
+  const imageSource = getImage(image)
+
   return (
     <Container>
       <Heading heading={heading} subheading={subheading} />
@@ -25,11 +28,9 @@ const RightImageSection = ({
         <div className="d-none d-md-block mt-5 row">
           <div className="col">
             {image && (
-              <img
-                src={image}
-                alt=""
-                className="w-50 img-fluid float-right pl-3 pb-2 pt-2 ml-3"
-              />
+              <div className="w-50 img-fluid float-right pl-3 pb-2 pt-2 ml-3">
+                <GatsbyImage image={imageSource} alt="" />
+              </div>
             )}
             {html ? (
               <div
@@ -75,10 +76,11 @@ const RightImageSection = ({
         </div>
         {image && (
           <div
-            className={`col-md-${rightPartSize ||
-              5} text-center  order-1 order-md-1 mb-3`}
+            className={`col-md-${
+              rightPartSize || 5
+            } text-center  order-1 order-md-1 mb-3`}
           >
-            <img src={image} alt="" className="w-100 mb-3" />
+            <GatsbyImage image={imageSource} alt="" />
           </div>
         )}
       </div>

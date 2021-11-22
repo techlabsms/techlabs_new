@@ -54,7 +54,7 @@ class about extends Component {
           text={
             <FormattedMessage id="about.why.RightImageSectionHeading.text" />
           }
-          // image={data.whyWeDo.childImageSharp.fluid}
+          image={data.whyWeDo}
           leftSize="5"
           rightSize="7"
         />
@@ -82,7 +82,7 @@ class about extends Component {
           text={
             <FormattedMessage id="about.mission.RightImageSectionHeading.text" />
           }
-          // image={data.mission.childImageSharp.fluid}
+          image={data.mission}
           leftSize="5"
           rightSize="7"
         />
@@ -115,7 +115,7 @@ class about extends Component {
           text={<FormattedMessage id="quote.headofmarketing.text" />}
           name="Julian Junghöfer"
           job={<FormattedMessage id="quote.headofmarketing.job" />}
-          photo={data.julian.childImageSharp.fixed}
+          photo={data.julian}
         />
         <CoreValues />
         <LeftImageSectionHeading
@@ -128,7 +128,7 @@ class about extends Component {
           text={
             <FormattedMessage id="about.who.LeftImageSectionHeading.text" />
           }
-          // image={teamStairs}
+          image={teamStairs}
           leftSize="7"
           rightSize="5"
         />
@@ -142,7 +142,7 @@ class about extends Component {
           text={
             <FormattedMessage id="about.join.RightImageSectionHeading.text" />
           }
-          // image={data.join.childImageSharp.fluid}
+          image={data.join}
           hasButton={true}
           buttonText={
             <FormattedMessage id="about.join.RightImageSectionHeading.buttonText" />
@@ -175,38 +175,31 @@ class about extends Component {
 
 export default about
 
-// export const fluidImage = graphql`
-//   fragment fluidImage on File {
-//     childImageSharp {
-//       fluid(maxWidth: 1000) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `
-// export const fixedImage = graphql`
-//   fragment fixedImage on File {
-//     childImageSharp {
-//       fixed(width: 50, height: 50) {
-//         ...GatsbyImageSharpFixed
-//       }
-//     }
-//   }
-// `
-
-// export const pageQuery = graphql`
-//   query {
-//     whyWeDo: file(relativePath: { eq: "wwd.png" }) {
-//       ...fluidImage
-//     }
-//     mission: file(relativePath: { eq: "mission.png" }) {
-//       ...fluidImage
-//     }
-//     join: file(relativePath: { eq: "join.png" }) {
-//       ...fluidImage
-//     }
-//     julian: file(relativePath: { eq: "julian.png" }) {
-//       ...fixedImage
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query {
+    whyWeDo: file(relativePath: { eq: "wwd.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    mission: file(relativePath: { eq: "mission.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    join: file(relativePath: { eq: "join.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    julian: file(relativePath: { eq: "julian.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 60
+        )
+      }
+    }
+  }
+`

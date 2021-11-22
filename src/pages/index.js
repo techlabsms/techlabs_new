@@ -465,7 +465,11 @@ export const pageQuery = graphql`
     }
     nils: file(relativePath: { eq: "nils.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 60
+        )
       }
     }
     gic: file(relativePath: { eq: "gic_team.png" }) {
