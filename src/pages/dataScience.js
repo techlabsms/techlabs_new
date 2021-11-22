@@ -121,10 +121,10 @@ class dataScience extends Component {
               <FormattedMessage id={"dataScience.testimonial.subheading"} />
             }
             text={<FormattedMessage id={"dataScience.katharina.quote"} />}
-            // testimonialAvatar={data.katharina.childImageSharp.fluid}
+            testimonialAvatar={data.katharina}
             testimonialName="Katharina Schamber"
             testimonialTagline="Application Development Specialist @"
-            // testimonialLogo={data.accenture.childImageSharp.fluid}
+            testimonialLogo={data.accenture}
           />
           <Projects />
           <CallToAction />
@@ -148,25 +148,23 @@ class dataScience extends Component {
   }
 }
 
-// export default dataScience
+export default dataScience
 
-// export const fluidImageLocal = graphql`
-//   fragment fluidImageLocal on File {
-//     childImageSharp {
-//       fluid(maxWidth: 200) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `
-
-// export const pageQuery = graphql`
-//   query {
-//     katharina: file(relativePath: { eq: "katharina.png" }) {
-//       ...fluidImageLocal
-//     }
-//     accenture: file(relativePath: { eq: "accint.png" }) {
-//       ...fluidImageLocal
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query {
+    katharina: file(relativePath: { eq: "katharina.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    accenture: file(relativePath: { eq: "accint.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          width: 150
+        )
+      }
+    }
+  }
+`
