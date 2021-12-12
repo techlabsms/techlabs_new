@@ -6,7 +6,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    labels: "dependencies"
+    labels: 
+    - "dependencies"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -19,4 +20,5 @@ updates:
       # Prefix all commit messages with "npm"
       prefix: "npm"
       include: "scope"
-    labels: "dependencies"
+    labels: 
+    - "dependencies"
