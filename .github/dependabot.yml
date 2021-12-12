@@ -12,12 +12,13 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      time: "08:00"
+      timezone: "Europe/Berlin"
     commit-message:
       # Prefix all commit messages with "npm"
       prefix: "npm"
       include: "scope"
-      time: "08:00"
-      timezone: "Europe/Berlin"
+      
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
