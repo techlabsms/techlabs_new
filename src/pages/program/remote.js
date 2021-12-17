@@ -26,18 +26,16 @@ import UX from "../../assets/ux-image.png"
 import Seo from "../../components/Layout/Seo"
 
 class remote extends Component {
-  startDateString = date => {
-    const newDate = date.split("-")
-    return `${newDate[2]}.${newDate[1]}.${newDate[0]}`
-  }
+  // startDateString = (date) => {
+  //   const newDate = date.split("-")
+  //   return `${newDate[2]}.${newDate[1]}.${newDate[0]}`
+  // }
   render() {
     const { data } = this.props
     const {
       pageTitle,
       heroHeading,
       intro,
-      startDate,
-      nextDate,
       newsletterVisible,
       keyFacts,
       concept,
@@ -54,8 +52,8 @@ class remote extends Component {
           headingSecond={pageTitle.pageTitle.heading2}
           headingIntro={heroHeading}
           intro={intro.content[0].content[0].value}
-          applicationStart={this.startDateString(startDate)}
-          nextBootcampStart={this.startDateString(nextDate)}
+          // applicationStart={this.startDateString(startDate)}
+          // nextBootcampStart={this.startDateString(nextDate)}
           img={data.remote.childImageSharp.fluid}
           link="https://techlabsorg.typeform.com/to/tSKG8BBE"
         />
@@ -163,7 +161,7 @@ class remote extends Component {
         </div>
 
         <Faq>
-          {faq.map(faq => {
+          {faq.map((faq) => {
             return (
               <FaqQuestion
                 question={faq.question}
@@ -190,7 +188,7 @@ export const fluidImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query($locale: String) {
+  query ($locale: String) {
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
@@ -221,8 +219,7 @@ export const pageQuery = graphql`
               text
             }
           }
-          nextDate
-          startDate
+
           newsletterVisible
           keyFacts {
             facts {
