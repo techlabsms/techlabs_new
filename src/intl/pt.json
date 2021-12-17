@@ -49,7 +49,7 @@
   "app.landingpage.applicationperiod.deadline.start.short": "Começa em:",
   "app.landingpage.applicationperiod.header": "Período de Inscrição",
   "app.landingpage.applicationperiod.no.deadline": "Novas turmas serão anunciadas em breve",
-  "app.landingpage.applicationperiod.subheader": "Confira o período de inscrição em cada local!",
+  "app.landingpage.applicationperiod.subheader": "Confira o período de inscrição em cada local! Fuso horário do temporizador de contagem decrescente: hora da europa central (CEST/CET).",
 
   "ai.ai.programmhero.headingFirst": "Inteligência",
   "ai.ai.programmhero.headingSecond": " Artificial",
@@ -310,7 +310,7 @@
   "location.newsletter.button": "Subscribe",
 
   "applypage.choose.your.city.title": "Escolha sua cidade",
-  "applypage.choose.your.city.subtitle": "No momento, estamos nestes locais!",
+  "applypage.choose.your.city.subtitle": "No momento, estamos nestes locais! Fuso horário do temporizador de contagem decrescente: hora da europa central (CEST/CET)",
   "applypage.applyCard.availableTracks": "Trilhas disponíveis",
   "applypage.headline.ApplicationHero.headingFirst": "Inscrições",
   "applypage.headline.ApplicationHero.intro": "Você quer aprender tecnologia de ponta? Você quer fazer parte de uma comunidade crescente? Inscreva-se agora para o TechLabs Digital Shaper Program.",
@@ -373,7 +373,7 @@
   "faqpage.question2": "O que devo escrever na minha inscrição para ser aceito?",
   "faqpage.answer2": "Na TechLabs, queremos conhecer você melhor e sua motivação. Por isso, não há resposta certa ou errada para as perguntas. Certifique-se apenas de que sua resposta realmente se refira à pergunta . Infelizmente, não podemos avaliar respostas que não estejam relacionadas com a questão. ",
   "faqpage.question3": "Quem posso contatar se tiver alguma dúvida?",
-  "faqpage.answer3": "Entre em contato diretamente com a TechLabs da sua localidade ou escreva para contact@techlabs.org.",
+  "faqpage.answer3": "Entre em contato diretamente com a TechLabs da sua localidade ou escreva para info@techlabs.org.",
   "faqpage.question4": "Ainda posso me inscrever para o próximo semestre?",
   "faqpage.answer4": "Sua inscrição será bem-vinda a qualquer momento! Nossas fases de inscrição sempre começam no início do semestre.",
   "faqpage.question5": "Quanto tempo terei que investir?",
