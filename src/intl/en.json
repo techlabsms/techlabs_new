@@ -383,7 +383,7 @@
   "faqpage.question2": "What should I write in my application to be accepted?",
   "faqpage.answer2": "At TechLabs we want to get to know you and your motivation better. That is why its generally true that there is no right or wrong answer to the questions. Please only make sure that your answer really refers to the question. Unfortunately, we cannot evaluate important aspects that do not relate to the question.",
   "faqpage.question3": "Who can I contact if I have any questions?",
-  "faqpage.answer3": "Please contact your location directly or write to us at contact@techlabs.org.",
+  "faqpage.answer3": "Please contact your location directly or write to us at info@techlabs.org.",
   "faqpage.question4": "Can I still apply in the next semester?",
   "faqpage.answer4": "We welcome your application at any time! Our application phases always start at the beginning of the semester.",
   "faqpage.question5": "How much time will I have to invest?",
@@ -579,5 +579,4 @@
   "newsroom.podcastTitle": "Our Digital Shapers Podcast",
   "newsroom.podcastDescription": "Digital Shapers is a podcast produced in cooperation between TechLabs and DigitalMente, two NGOs with the same goal, creating a more equal society using technology and tech skills to democratize education and solve today's world challenges.",
   "newsroom.podcastButton": "All Podcasts"
-
 }
