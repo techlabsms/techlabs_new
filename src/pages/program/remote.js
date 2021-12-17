@@ -26,7 +26,7 @@ import UX from "../../assets/ux-image.png"
 import Seo from "../../components/Layout/Seo"
 
 class remote extends Component {
-  startDateString = date => {
+  startDateString = (date) => {
     const newDate = date.split("-")
     return `${newDate[2]}.${newDate[1]}.${newDate[0]}`
   }
@@ -163,7 +163,7 @@ class remote extends Component {
         </div>
 
         <Faq>
-          {faq.map(faq => {
+          {faq.map((faq) => {
             return (
               <FaqQuestion
                 question={faq.question}
@@ -190,7 +190,7 @@ export const fluidImage = graphql`
 `
 
 export const pageQuery = graphql`
-  query($locale: String) {
+  query ($locale: String) {
     newsletterImage: file(relativePath: { eq: "Newsletter.png" }) {
       ...fluidImage
     }
@@ -221,8 +221,7 @@ export const pageQuery = graphql`
               text
             }
           }
-          nextDate
-          startDate
+
           newsletterVisible
           keyFacts {
             facts {
