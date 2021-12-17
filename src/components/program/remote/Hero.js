@@ -36,7 +36,7 @@ const Hero = ({
               <p className="basicSection--text">{intro}</p>
             </div>
           </div>
-          <div className="row">
+          {/* <div className="row">
             <div className="col-md-9">
               <p className="hero-remote-date">
                 <FormattedMessage id="program.remote.hero.applicationStart" />{" "}
@@ -51,15 +51,15 @@ const Hero = ({
                 </span>
               </p>
             </div>
-            {/* <div className="col-md-3 d-flex justify-content-center align-items-center">
+            <div className="col-md-3 d-flex justify-content-center align-items-center">
               <Button
-                text={<FormattedMessage id="program.remote.hero.button"/>}
+                text={<FormattedMessage id="program.remote.hero.button" />}
                 isExternal={true}
                 link={link}
                 primary={true}
               ></Button>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
         </div>
         <div className="col-md-6 my-auto">
           <Img alt="codeathome hero" fluid={img} />
