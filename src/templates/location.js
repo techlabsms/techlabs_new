@@ -187,7 +187,10 @@ class location extends Component {
                         </p>
                       ) : (
                         <p className="batch-text">
-                          <FormattedMessage id="location.nextBatch" />
+                          <FormattedMessage id="location.nextBatch" />{" "}
+                          <span className="a-black">
+                            {location.nextBatchDate}
+                          </span>
                         </p>
                       )}
                     </div>
@@ -494,8 +497,8 @@ export const pageQuery = graphql`
       }
       officeLink
       applicationLink
-      applicationStart
-      applicationEnd
+      applicationStart(formatString: "YYYY-MM-DDThh:mm:ss")
+      applicationEnd(formatString: "YYYY-MM-DDThh:mm:ss")
       email
       usesTeam
       hasCalendar

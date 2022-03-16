@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react"
 import ApplyCard from "./ApplyCard"
 import Dropdown from "../shared/dropdown"
 import Heading from "../smallComponents/Heading"
-import dayjs from "dayjs"
 
 // assets
 

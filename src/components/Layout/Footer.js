@@ -43,12 +43,13 @@ const Footer = props => {
           🍪
         </span>{" "}
         <br />
-        <Link
-          to="/privacyPolicy"
-          style={{ color: "white", textDecoration: "underline" }}
+        <a
+          className="foot-a"
+          href="https://www.notion.so/techlabs/Privacy-Policy-f33607f9dd7b44a1b0d6e22661ebd28e"
+          target="_blank"
         >
           <FormattedMessage id="footer.cookies.more" />
-        </Link>
+        </a>
       </CookieConsent>
       <div className="footer-tl">
         <div className="container-ft">
@@ -143,9 +144,13 @@ const Footer = props => {
                   <h5 className="line-height-0 white-font my-2">
                     <FormattedMessage id="footer.terms" />
                   </h5>
-                  <Link className="foot-a" to="/privacyPolicy">
+                  <a
+                    className="foot-a"
+                    href="https://www.notion.so/techlabs/Privacy-Policy-f33607f9dd7b44a1b0d6e22661ebd28e"
+                    target="_blank"
+                  >
                     <FormattedMessage id="footer.terms.privacy" />
-                  </Link>
+                  </a>
                   <br />
                   <Link className="foot-a" to="/imprint">
                     <FormattedMessage id="footer.terms.imprint" />

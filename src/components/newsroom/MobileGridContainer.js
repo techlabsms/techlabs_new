@@ -25,19 +25,21 @@ const MobileGridContainer = (props) => {
             />
             <div className="newsroom-mobile-card-scroll">
                 {props.type === "talks" && content
-                .map(element => (
+                .map((element, i) => (
                 <Card
                     image={placeholderImage}
                     title={element.node.subtitle}
                     speakers={element.node.speakers}
+                    key={i}
                 ></Card>
                 ))}
                 {props.type === "podcasts" && content
-                .map(element => (
+                .map((element, i) => (
                 <PodcastCard
                     title={element.title}
                     thumbnail={element.thumbnail}
                     url={element.link}
+                    key={i}
                 ></PodcastCard>
                 ))}
             </div>

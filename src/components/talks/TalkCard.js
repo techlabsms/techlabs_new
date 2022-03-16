@@ -6,7 +6,7 @@ import playSymbol from "../../assets/talks/play_symbol.png"
 
 const createCompaniesArray = speakers => {
   const companies = []
-  speakers.map(speaker => {
+  speakers.forEach(speaker => {
     companies.push(speaker.company)
     companies.push(", ")
   })
@@ -20,7 +20,7 @@ const TalksCard = props => {
     <div className="talks-card">
       <img src={playSymbol} alt="play" className="talks-card-play-symbol"/>
       <div className="talks-card-img">
-        <img src={props.image} />
+        <img src={props.image} alt={props.title}/>
       </div>
       <div className="talks-card-bottom">
         <h1>{props.title}</h1>

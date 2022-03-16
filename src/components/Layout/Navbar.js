@@ -29,7 +29,7 @@ import "../../styles/_main.scss"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [countries, setCountries] = useState([])
-  const [activeCountry, setActiveCountry] = useState("Deutschland")
+  //const [activeCountry, setActiveCountry] = useState("Deutschland")
 
   const data = useStaticQuery(graphql`
     query($locale: String) {
@@ -38,8 +38,8 @@ const Navbar = () => {
           node {
             heading
             country
-            applicationStart
-            applicationEnd
+            applicationStart(formatString: "YYYY-MM-DDThh:mm:ss")
+            applicationEnd(formatString: "YYYY-MM-DDThh:mm:ss")
             applicationLink
             slug
             node_locale
@@ -81,10 +81,10 @@ const Navbar = () => {
       </Helmet>
       <Headroom
         style={{
-          webkitTransition: "all .2s ease-in-out",
-          mozTransition: "all .2s ease-in-out",
-          oTransition: "all .2s ease-in-out",
-          transition: "all .2s ease-in-out",
+          WebkitTransition: "all .2s ease-in-out",
+          MozTransition: "all .2s ease-in-out",
+          OTransition: "all .2s ease-in-out",
+          Transition: "all .2s ease-in-out",
         }}
       >
         <nav className="navbar navbar-expand-lg navbar-light navbar-add">
