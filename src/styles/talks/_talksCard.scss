@@ -7,7 +7,7 @@
   min-height: 15rem;
   background-color: #fff;
   position: relative;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   .talks-card-play-symbol {
     position: absolute;
@@ -38,6 +38,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+
     color: white;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -48,6 +49,7 @@
       font-size: 1.2rem;
       line-height: 0.8rem;
       padding-top: 1.1rem;
+      min-height: 40px;
     }
     p {
       font-size: 0.8rem;
