@@ -76,8 +76,7 @@ const Navbar = () => {
           sizes="64x64"
           href={favicon64}
         />
-
-        <script src="https://embed.small.chat/TG9SCN33JGHR17BPSR.js" async />
+        
       </Helmet>
       <Headroom
         style={{
