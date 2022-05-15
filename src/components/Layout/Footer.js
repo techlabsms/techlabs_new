@@ -33,7 +33,7 @@ const Footer = props => {
         }}
         expires={90}
         enableDeclineButton={true}
-        buttonText="I understand"
+        buttonText="I agree"
         declineButtonText="I decline"
         setDeclineCookie={true}
         cookieName="gatsby-gdpr-google-tagmanager"
