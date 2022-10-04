@@ -26,6 +26,7 @@ import pin2 from "../assets/pin2.png"
 import getDirection from "../assets/get-directions-button.png"
 import ds from "../assets/ds.png"
 import ai from "../assets/ai.png"
+import dl from "../assets/dl.png"
 import web from "../assets/web.png"
 import ux from "../assets/ux-icon.png"
 import Seo from "../components/Layout/Seo"
@@ -160,6 +161,26 @@ class location extends Component {
                             this.handleOpenToolTip(e, "UX Design")
                           }
                           onFocus={e => this.handleOpenToolTip(e, "UX Design")}
+                          onMouseLeave={() =>
+                            this.setState({
+                              modalIsOpen: false,
+                            })
+                          }
+                          role="presentation"
+                        />
+                      )}
+                      {location.avaiableTracks.dl && (
+                        <img
+                          src={dl}
+                          width="25"
+                          className="mr-3"
+                          alt="ux"
+                          onMouseOver={e =>
+                            this.handleOpenToolTip(e, "Deep Learning")
+                          }
+                          onFocus={e =>
+                            this.handleOpenToolTip(e, "Deep Learning")
+                          }
                           onMouseLeave={() =>
                             this.setState({
                               modalIsOpen: false,

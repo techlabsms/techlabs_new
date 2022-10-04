@@ -15,7 +15,7 @@ import MobileNav from "./MobileNav"
 // assets
 import logo from "../../assets/tl-logo.png"
 import ds from "../../assets/ds.png"
-import ai from "../../assets/ai.png"
+import dl from "../../assets/dl.png"
 import web from "../../assets/web.png"
 import ux from "../../assets/ux-icon.png"
 import "jquery"
@@ -76,7 +76,6 @@ const Navbar = () => {
           sizes="64x64"
           href={favicon64}
         />
-        
       </Helmet>
       <Headroom
         style={{
@@ -222,7 +221,7 @@ const Navbar = () => {
                     to="/ai"
                     activeClassName="navLink--active"
                   >
-                    <img src={ai} alt="ai" className="mr-3 track-logo" />
+                    <img src={dl} alt="ai" className="mr-3 track-logo" />
                     <FormattedMessage id="layout.ai" />
                   </Link>
                   <Link
