@@ -12,7 +12,9 @@ import ds from "../../assets/ds.png"
 import ai from "../../assets/ai.png"
 import web from "../../assets/web.png"
 import ux from "../../assets/ux-icon.png"
+import dl from "../../assets/dl.png"
 import dswhite from "../../assets/ds_white.png"
+import dlwhite from "../../assets/dl_white.png"
 import aiwhite from "../../assets/ai_white.png"
 import webwhite from "../../assets/web_white.png"
 import uxwhite from "../../assets/ux_white.png"
@@ -132,6 +134,25 @@ const ApplyCard = ({ cityValues, handleClick, clickedCityValue }) => {
                     </p>
                   </div>
                 )}
+
+                {!cityValues.avaiableTracks.ai && cityValues.avaiableTracks.dl && (
+                  <div className="row">
+                    <img
+                      src={
+                        isClicked &&
+                        clickedCityValue === cityValues.heading.toLowerCase()
+                          ? dlwhite
+                          : dl
+                      }
+                      alt="Artificial Intelligence"
+                      width="15"
+                      height="15"
+                      className="mr-2"
+                    />
+                    <p className="chooseCity--subject">Deep Learning</p>
+                  </div>
+                )}
+
                 {cityValues.avaiableTracks.data && (
                   <div className="row">
                     <img
