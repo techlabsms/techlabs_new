@@ -175,7 +175,7 @@
   "callToAction.button.closed": "Application currently closed",
 
   "datesCalendar.heading": "Important Dates",
-  "datesCalendar.subheading": "Get an overview all Events and Deadlines in {city}",
+  "datesCalendar.subheading": "Get an overview of all Events and Deadlines in {city}",
   "datesCalendar.noEvents": "There are no events scheduled for this month",
 
   "layout.locations": "Locations",
