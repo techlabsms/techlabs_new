@@ -218,7 +218,10 @@ export default injectIntl(Apply)
 
 export const pageQuery = graphql`
   query($locale: String) {
-    allContentfulLocationPage(filter: { node_locale: { eq: $locale } }, sort: {fields:[country, heading], order: [DESC, ASC]}) {
+    allContentfulLocationPage(
+      filter: { node_locale: { eq: $locale } }
+      sort: { fields: [country, heading], order: [DESC, ASC] }
+    ) {
       edges {
         node {
           heading
@@ -231,6 +234,7 @@ export const pageQuery = graphql`
             web
             data
             ux
+            dl
           }
         }
       }

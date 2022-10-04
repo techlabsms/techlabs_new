@@ -539,6 +539,7 @@ export const pageQuery = graphql`
         data
         ux
         web
+        dl
       }
       partners {
         name
