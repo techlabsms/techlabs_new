@@ -249,7 +249,7 @@ const Navbar = () => {
                   className="nav-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.notion.so/techlabs/Volunteer-at-TechLabs-9004464ef2a0420cb587aab9ba03037d"
+                  href="https://techlabs.notion.site/techlabs/Become-a-Volunteer-at-TechLabs-e5fd0a5550f84236ac49ae238a565ad2"
                 >
                   <FormattedMessage id="layout.openPositions" />
                 </a>
