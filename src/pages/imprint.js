@@ -21,8 +21,7 @@ class imprint extends Component {
             <br />
             E-Mail-Adresse: info@techlabs.org <br />
             <br />
-            Vorstand: David Middelbeck, Marius Vennemann, Rebecca Janßen, Jana
-            Jeggle, Eric Grunenberg
+            Vorstand: Henrik Kobus, Ranjini Kishen Kumar
             <br />
             Register und Registernummer: Amtsgericht Münster VR 5787 <br />
             <br />
