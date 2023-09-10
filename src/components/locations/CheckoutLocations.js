@@ -89,14 +89,14 @@ const CheckoutLocations = () => {
               </div>
             </div>
           </Link>
-          <Link to="/location/Dortmund" className="noDec color-black">
+          <Link to="/location/ruhr" className="noDec color-black">
             <div className="learn--card mb-4">
               <div className="row">
                 <div className="col-1">
                   <div className="learn--color" />
                 </div>
                 <div className="col-11 mt-3">
-                  <p>Dortmund</p>
+                  <p>Ruhr</p>
                 </div>
               </div>
             </div>
