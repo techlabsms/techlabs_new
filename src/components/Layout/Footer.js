@@ -115,7 +115,7 @@ const Footer = props => {
                     <FormattedMessage id="layout.dsp" />
                   </Link>
                   <br />
-                  <Link to="/program/remote" className="foot-a">
+                  <Link to="http://codeathome.techlabs.org/" className="foot-a">
                     <FormattedMessage id="layout.codeathome" />
                   </Link>
                 </div>

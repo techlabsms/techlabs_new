@@ -13,7 +13,7 @@ const Table = ({
   activeProgram,
   hasButton,
   buttonLink,
-  codeathome
+  codeathome,
 }) => {
   return (
     <Container>
@@ -36,43 +36,39 @@ const Table = ({
           <tr>
             <td>
               <strong>
-                <FormattedMessage
-                id={"program.local.table.row1.col1"}/>
+                <FormattedMessage id={"program.local.table.row1.col1"} />
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               <p>
                 {codeathome.whatIsIncluded[0].time.month}
-                <br />{codeathome.whatIsIncluded[0].time.hours}
+                <br />
+                {codeathome.whatIsIncluded[0].time.hours}
               </p>
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <p>
-              <FormattedMessage
-                id={"program.local.table.row1.col3"}/>
+                <FormattedMessage id={"program.local.table.row1.col3"} />
               </p>
             </td>
           </tr>
           <tr>
             <td>
               <strong>
-              <FormattedMessage
-                id={"program.local.table.row2.col1"}/>
+                <FormattedMessage id={"program.local.table.row2.col1"} />
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
               {codeathome.whatIsIncluded[1].who}
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
-            <FormattedMessage
-                id={"program.local.table.row2.col3"}/>
+              <FormattedMessage id={"program.local.table.row2.col3"} />
             </td>
           </tr>
           <tr>
             <td>
               <strong>
-              <FormattedMessage
-                id={"program.local.table.row3.col1"}/>
+                <FormattedMessage id={"program.local.table.row3.col1"} />
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
@@ -94,20 +90,16 @@ const Table = ({
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                    id={"program.local.table.row3.col3.1"}/>
+                  <FormattedMessage id={"program.local.table.row3.col3.1"} />
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                    id={"program.local.table.row3.col3.2"}/>
+                  <FormattedMessage id={"program.local.table.row3.col3.2"} />
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                    id={"program.local.table.row3.col3.3"}/>
+                  <FormattedMessage id={"program.local.table.row3.col3.3"} />
                 </li>
                 <li className="tableComponent--checkmark">
-                  <FormattedMessage
-                    id={"program.local.table.row3.col3.4"}/>
+                  <FormattedMessage id={"program.local.table.row3.col3.4"} />
                 </li>
               </ul>
             </td>
@@ -115,8 +107,7 @@ const Table = ({
           <tr>
             <td>
               <strong>
-                <FormattedMessage
-                  id={"program.local.table.row4.col1"}/>
+                <FormattedMessage id={"program.local.table.row4.col1"} />
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
@@ -129,18 +120,25 @@ const Table = ({
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li><FormattedMessage id={"program.local.table.row4.col3.1"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col3.2"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col3.3"}/></li>
-                <li><FormattedMessage id={"program.local.table.row4.col3.4"}/></li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row4.col3.1"} />
+                </li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row4.col3.2"} />
+                </li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row4.col3.3"} />
+                </li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row4.col3.4"} />
+                </li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
               <strong>
-              <FormattedMessage
-                  id={"program.local.table.row5.col1"}/>
+                <FormattedMessage id={"program.local.table.row5.col1"} />
               </strong>
             </td>
             <td className={activeProgram === "remote" ? "active" : ""}>
@@ -152,9 +150,15 @@ const Table = ({
             </td>
             <td className={activeProgram === "local" ? "active-right" : ""}>
               <ul>
-                <li><FormattedMessage id={"program.local.table.row5.col3.1"}/></li>
-                <li><FormattedMessage id={"program.local.table.row5.col3.2"}/></li>
-                <li><FormattedMessage id={"program.local.table.row5.col3.3"}/></li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row5.col3.1"} />
+                </li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row5.col3.2"} />
+                </li>
+                <li>
+                  <FormattedMessage id={"program.local.table.row5.col3.3"} />
+                </li>
               </ul>
             </td>
           </tr>
@@ -186,7 +190,7 @@ const Table = ({
                         ? "btn btn-secondary"
                         : "btn btn-primary"
                     }
-                    to="/program/remote"
+                    to="http://codeathome.techlabs.org/"
                   >
                     Learn more
                   </Link>

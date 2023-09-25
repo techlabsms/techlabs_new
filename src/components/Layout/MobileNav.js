@@ -71,7 +71,7 @@ class MobileNav extends Component {
                     </li>
                   </Link>
                   <Link
-                    to="/program/remote"
+                    to="http://codeathome.techlabs.org/"
                     className="color-gl"
                     activeClassName="navLink--active"
                   >
@@ -166,7 +166,7 @@ class MobileNav extends Component {
             <Link to="/apply" activeClassName="navLink--active">
               <li className="nav-item">
                 <h3 className="nav-link mobileNav--link">
-                  <FormattedMessage id="callToAction.button"/>
+                  <FormattedMessage id="callToAction.button" />
                 </h3>
               </li>
             </Link>
