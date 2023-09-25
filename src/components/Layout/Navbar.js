@@ -186,7 +186,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     className="dropdown-item-corr dropdown-item"
-                    to="/program/remote"
+                    to="http://codeathome.techlabs.org/"
                     activeClassName="navLink--active"
                   >
                     <FormattedMessage id="layout.codeathome" />
