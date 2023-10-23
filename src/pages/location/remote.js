@@ -1,10 +1,11 @@
-import React, { Component } from "react"
-import { Redirect } from "@reach/router"
+import { navigate } from "gatsby-link"
+import { useEffect } from "react"
 
-class Dortmund extends Component {
-  render() {
-    return <Redirect noThrow to="https://www.codeathome.techlabs.org/" />
-  }
+const Remote = () => {
+  useEffect(() => {
+    navigate("https://www.codeathome.techlabs.org/")
+  })
+  return null
 }
 
-export default Dortmund
+export default Remote
