@@ -21,7 +21,8 @@ class imprint extends Component {
             <br />
             E-Mail-Adresse: info@techlabs.org <br />
             <br />
-            Vorstand: Henrik Kobus, Ranjini Kishen Kumar
+            Vorstand: Peter Fessel, Sabrina Engling, Ranjini Kishen Kumar, Flora
+            Maria Wegemann
             <br />
             Register und Registernummer: Amtsgericht Münster VR 5787 <br />
             <br />
